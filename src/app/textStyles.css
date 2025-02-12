@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.bold-text {
+  font-weight: bold;
+}
+
+.title-text {
+  color: #c40d2e;
+  font-size: 1.5rem;
+}
+
+.border-bottom-text {
+  border-bottom-width: 0.1rem;
+  border-bottom-color: "black";
+  position: relative;
+}
