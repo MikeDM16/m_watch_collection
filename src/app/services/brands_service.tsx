@@ -35,9 +35,9 @@ function getAllBrands(): Record<string, Brand[]> {
   });
 
   // sort keys by alphabetical order
-  const sortedEntries =  Object.entries(allBrands).sort(([ka, ], [kb, ]) => ka.localeCompare(kb));
+  const sortedEntries = Object.entries(allBrands).sort(([ka], [kb]) => ka.localeCompare(kb));
 
-  // after the sort, return back the dict in the Record<> structure 
+  // after the sort, return back the dict in the Record<> structure
   return Object.fromEntries(sortedEntries);
 }
 

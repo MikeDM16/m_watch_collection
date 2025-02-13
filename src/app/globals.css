@@ -25,3 +25,24 @@ body {
 .bottom-margin {
   margin-bottom: 1rem;
 }
+
+.header-navbar-entry {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-navbar-entry:hover {
+  color: #c40d2e;
+}
+
+.centered-text {
+  text-align: center;
+  position: relative;
+}
+
+.centered-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

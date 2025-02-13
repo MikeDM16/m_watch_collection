@@ -6,7 +6,7 @@
   font-weight: bold;
 }
 
-.title-text {
+.feature-text {
   color: #c40d2e;
   font-size: 1.5rem;
 }
@@ -15,4 +15,40 @@
   border-bottom-width: 0.1rem;
   border-bottom-color: "black";
   position: relative;
+}
+
+.info-text {
+  color: black;
+  text-decoration: none;
+}
+
+.header-navbar-title {
+  font-family: "Goudy old Style";
+  font-style: italic;
+  font-weight: bold;
+  color: white;
+}
+
+.header-navbar-link {
+  color: rgb(180, 180, 180);
+}
+
+.page-title {
+  font-family: "Quatro Slab W03 Medium", sans-serif;
+  /* For the watch features list  */
+  /*font-family: Verdana, sans-serif;*/
+  font-size: 1.6rem;
+  color: #c40d2e;
+}
+
+.header-title {
+  font-family: "Goudy old Style";
+  font-weight: bold;
+  font-style: italic;
+  font-size: 10rem; /* -60px */
+  color: #c40d2e;
+}
+
+.text-margin-left {
+  margin-left: 0.4rem;
 }

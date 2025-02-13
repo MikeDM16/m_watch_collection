@@ -1,17 +1,12 @@
-"use server";
+"use client";
 
-export default async function Page({
-  params,
-  searchParams,
-}: {
-  params: Promise<{ brand: string }>;
-  searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
-}) {
-  const brand = (await params).brand;
+import HeaderNavBar from "@/app/components/header/header";
 
+export default function Page() {
   return (
-    <h1>
-      My Page: {brand} {JSON.stringify(await searchParams)}{" "}
-    </h1>
+    <div>
+      {HeaderNavBar()}
+      <h1>My Page: </h1>
+    </div>
   );
 }
