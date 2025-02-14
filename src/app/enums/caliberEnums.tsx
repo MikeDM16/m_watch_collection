@@ -1,5 +1,6 @@
 export const CaliberBrandsEnum = {
   ETA: "ETA",
+  EBERHARD: "Eberhard",
   UNITAS: "Unitas",
   VALJOUX: "Valjoux",
   LANDERON: "Landeron",
