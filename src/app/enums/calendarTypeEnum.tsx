@@ -1,0 +1,17 @@
+export const CalendarWatchTypeEnum = {
+  WITHOUT: "Without Calendar",
+  DAY_DATE_AT_3_OCLOCK: "Day/Date display at 3 o'clock position",
+  DAY_DATE_SUBDIALS: "Day/Date sub dials",
+  AT_3_OCLOCK: "Date display at 3 o'clock position",
+  AT_4_OCLOCK: "Date display at 4 o'clock position",
+  AT_6_OCLOCK: "Date display at 6 o'clock position",
+  AT_12_OCLOCK: "Date display at 12 o'clock position",
+  AT_4_5_OCLOCK: "Date display between 4 and 5 o'clock position",
+  CALENDAR_POINTER: "Calendar pointer around the dial",
+  INNER_BEZEL: "Display around the inner bezels",
+  ANUAL: "Anual Calendar (day, date and month)",
+  PERPETUAL: "Perpetual Calendar (day, date, month and year)",
+  DATE: "Date",
+  DAY: "Day",
+  CYCLOPS_LENS: " (Cyclops Lens)",
+};
