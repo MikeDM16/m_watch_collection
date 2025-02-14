@@ -1,4 +1,4 @@
-import { BrandsEnum } from "../enums/brands_enum";
+import { BrandsEnum } from "../enums/brandsEnum";
 
 export interface Brand {
   name: string;

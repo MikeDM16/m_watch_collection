@@ -63,3 +63,8 @@ body {
   border: #ffffff;
   --bs-btn-hover-bg: #c40d2f44;
 }
+
+.container {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}

@@ -25,7 +25,7 @@ export default function AboutMeContainer() {
             </div>
           </Col>
           <Col className="col-10">
-            <div className="page-title">
+            <div className="container-title">
               <p>
                 {"They don't only tell the the time."}
                 <br></br>

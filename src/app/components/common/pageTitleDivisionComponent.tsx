@@ -2,7 +2,8 @@ import { getExternalResource } from "@/app/services/common_functions";
 
 export interface TitleDivisionProps {
   title: string;
-  src_image?: string;
+  srcImage?: string;
+  textAlignement?: string;
 }
 
 export default function PageTitleDivisionComponent(props: TitleDivisionProps) {
@@ -12,14 +13,16 @@ export default function PageTitleDivisionComponent(props: TitleDivisionProps) {
     "public/assets/Backgrouds/TagHeuer_BG3.JPG",
     "public/assets/Backgrouds/macro_mov_bg.JPG",
   ];
+  props.textAlignement = "left";
+  const textClassName = props.textAlignement == "left" ? "left-text" : "centered-text";
 
   return (
     <div
-      className="page-title-division"
+      className="header-title page-title-division"
       style={{ backgroundImage: `url(${getExternalResource(imagesPaths[0])})` }}
     >
-      <div className="page-title-overlay-aligned">
-        <div className="page-title centered-text">{props.title}</div>
+      <div className={`page-title-overlay-aligned ${textClassName}`}>
+        <div>{props.title}</div>
       </div>
     </div>
   );

@@ -26,7 +26,10 @@ export default function Page() {
     // Single row with all the columns in 1 line. boostrap table will adjust the table based on the provided sizes
     return (
       <div>
-        <div id="CollectionItems">{PageTitleDivisionComponent({ title: "Main Brands" })}</div>
+        <Container>
+          <div className="container-title centered-container">Main Brands</div>
+        </Container>
+
         <Container>
           <Row key="single_main_brands_row" {...{ xs: 2, sm: 4, md: 4, lg: 5, xl: 6 }}>
             {mainBrands.map((entry) => (
@@ -99,6 +102,7 @@ export default function Page() {
   return (
     <div>
       {HeaderNavBar()}
+      <div>{PageTitleDivisionComponent({ title: "M Watch Collection" })}</div>
       {mainBrandsTable()}
       {ListAllBrandsGroupByLetter()}
       {AboutMeContainer()}

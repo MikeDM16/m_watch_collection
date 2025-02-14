@@ -9,7 +9,7 @@ export default function ContactsComponent() {
     <div>
       <div id="Contacts">{PageTitleDivisionComponent({ title: "Contacts" })}</div>
       <Container className="centered-text">
-        <div className="page-title">Where to find me</div>
+        <div className="container-title">Where to find me</div>
         <div>
           <p>
             If you are interested in some piece, want more information or share a correction, please
