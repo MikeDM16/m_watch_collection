@@ -11,7 +11,7 @@ export function getIconWithTextCentered(Icon: IconType, text: string) {
     <div key={`main_div_icon${text}`} className="centered-container">
       <div key={`centered_div_icon${text}`} className="centered-container gap-1">
         <Icon />
-        <b>{text}</b>
+        <div>{text}</div>
       </div>
     </div>
   );
