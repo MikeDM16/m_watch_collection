@@ -4,6 +4,7 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import { IconType } from "react-icons";
 import { FaArchive } from "react-icons/fa";
+import { MdEmail, MdPerson } from "react-icons/md";
 import { PiMagnifyingGlassPlus } from "react-icons/pi";
 
 interface NavBarItem {
@@ -24,14 +25,25 @@ export default function HeaderNavBar() {
       icon: PiMagnifyingGlassPlus,
       text: "All Brands",
     },
+    {
+      reference: "#AboutMe",
+      icon: MdPerson,
+      text: "About Me",
+    },
+    {
+      reference: "#Contants",
+      icon: MdEmail,
+      text: "Contants",
+    },
   ];
   return (
-    <Navbar expand="lg" className="bg-dark" fixed="top" sticky="top">
+    <Navbar expand="lg" className="navbar-dark bg-dark" fixed="top" sticky="top">
       <Container fluid>
         <Navbar.Brand href="#">
           <div className="header-navbar-title">M Watch Collection</div>
         </Navbar.Brand>
-        <Navbar.Collapse id="navbarScroll">
+        <Navbar.Toggle aria-controls="navbarScroll" />
+        <Navbar.Collapse id="navbarScroll" className="header-navbar-entry header-navbar-link">
           <Nav className="my-lg-0 my-2 me-auto" style={{ maxHeight: "100px" }} navbarScroll>
             {references.map((entry) => {
               return (

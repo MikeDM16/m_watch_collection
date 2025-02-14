@@ -36,13 +36,30 @@ body {
   color: #c40d2e;
 }
 
-.centered-text {
-  text-align: center;
-  position: relative;
-}
-
 .centered-container {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.page-title-division {
+  position: relative;
+  width: 100vw;
+  height: 10rem;
+  background-position: center;
+  background-size: cover;
+}
+
+.page-title-overlay-aligned {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.btn-outline-danger {
+  border: #ffffff;
+  --bs-btn-hover-bg: #c40d2f44;
 }
