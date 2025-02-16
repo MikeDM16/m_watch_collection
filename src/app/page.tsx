@@ -4,14 +4,14 @@ import Image from "next/image";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import brands_service from "./services/brands_service";
+import brands_service from "./services/brandsService";
 import { useState } from "react";
 import { Brand } from "./data/brands";
 import Link from "next/link";
 import HeaderNavBar from "./components/header/header";
 import ContactsComponent from "./components/contacts/contacts";
 import AboutMeContainer from "./components/aboutMe/aboutMe";
-import { getExternalResource } from "./services/common_functions";
+import { getExternalResource } from "./services/commonFunctions";
 import PageTitleDivisionComponent from "./components/common/pageTitleDivisionComponent";
 
 export default function Page() {

@@ -1,4 +1,4 @@
-import { getExternalResource } from "@/app/services/common_functions";
+import { getExternalResource } from "@/app/services/commonFunctions";
 
 export interface TitleDivisionProps {
   title: string;

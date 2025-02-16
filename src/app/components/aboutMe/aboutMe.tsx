@@ -1,4 +1,4 @@
-import { getExternalResource, getIconWithTextCentered } from "@/app/services/common_functions";
+import { getExternalResource, getIconWithTextCentered } from "@/app/services/commonFunctions";
 import Container from "react-bootstrap/Container";
 import { IoMdPerson } from "react-icons/io";
 import Row from "react-bootstrap/Row";

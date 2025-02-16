@@ -1,4 +1,4 @@
-import { getIconWithTextCentered } from "@/app/services/common_functions";
+import { getIconWithTextCentered } from "@/app/services/commonFunctions";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
@@ -39,7 +39,7 @@ export default function HeaderNavBar() {
   return (
     <Navbar expand="lg" className="navbar-dark bg-dark" fixed="top" sticky="top">
       <Container fluid>
-        <Navbar.Brand href="#">
+        <Navbar.Brand href="../#">
           <div className="header-navbar-title">M Watch Collection</div>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />

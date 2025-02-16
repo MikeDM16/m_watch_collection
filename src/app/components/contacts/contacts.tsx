@@ -1,4 +1,4 @@
-import { getIconWithTextCentered } from "@/app/services/common_functions";
+import { getIconWithTextCentered } from "@/app/services/commonFunctions";
 import Container from "react-bootstrap/Container";
 import { IoIosPin } from "react-icons/io";
 import { MdEmail } from "react-icons/md";
