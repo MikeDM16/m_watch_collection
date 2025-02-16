@@ -4,8 +4,8 @@ import Image from "next/image";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import brands_service from "./services/brandsService";
-import { useState } from "react";
+import brandsService from "./services/brandsService";
+import React, { useState } from "react";
 import { Brand } from "./data/brands";
 import Link from "next/link";
 import HeaderNavBar from "./components/header/header";
@@ -15,11 +15,11 @@ import { getExternalResource } from "./services/commonFunctions";
 import PageTitleDivisionComponent from "./components/common/pageTitleDivisionComponent";
 
 export default function Page() {
-  const [mainBrands] = useState(brands_service.getMainBrands());
-  const [allBrands] = useState(brands_service.getAllBrands());
+  const [mainBrands] = useState(brandsService.getMainBrands());
+  const [allBrands] = useState(brandsService.getAllBrands());
 
   const brandColOnClickHandler = (brandName: string): string => {
-    return `collection/${brandName}`;
+    return `collection/${brandName.replaceAll(" ", "-")}`;
   };
 
   const mainBrandsTable = () => {
@@ -31,14 +31,13 @@ export default function Page() {
         </Container>
 
         <Container>
-          <Row key="single_main_brands_row" {...{ xs: 2, sm: 4, md: 4, lg: 5, xl: 6 }}>
+          <Row key="single_main_brands_row" {...{ xs: 2, sm: 3, md: 4, lg: 5, xl: 6 }}>
             {mainBrands.map((entry) => (
               // For each brand the is a colum with a image and a click callback
-              <Col key={`brand_icon_${entry.name}`}>
+              <Col key={`brand_icon_${entry.name}`} className="centered-container">
                 <Link href={brandColOnClickHandler(entry.name)}>
                   <Image
                     key={`brand_icon_image_${entry.name}`}
-                    className=""
                     src={getExternalResource(entry.logo_img)}
                     alt="Next.js logo"
                     width={180}

@@ -13,13 +13,13 @@ export default function PageTitleDivisionComponent(props: TitleDivisionProps) {
     "public/assets/Backgrouds/TagHeuer_BG3.JPG",
     "public/assets/Backgrouds/macro_mov_bg.JPG",
   ];
-  props.textAlignement = "left";
-  const textClassName = props.textAlignement == "left" ? "left-text" : "centered-text";
+
+  const textClassName = props.textAlignement == "left" ? "left-padded-text" : "centered-text";
 
   return (
     <div
-      className="header-title page-title-division"
-      style={{ backgroundImage: `url(${getExternalResource(imagesPaths[0])})` }}
+      className="header-title page-title-division title-white-color"
+      style={{ backgroundImage: `url(${getExternalResource(props.srcImage || imagesPaths[0])})` }}
     >
       <div className={`page-title-overlay-aligned ${textClassName}`}>
         <div>{props.title}</div>

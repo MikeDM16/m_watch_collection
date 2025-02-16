@@ -48,7 +48,10 @@
 }
 .header-title {
   font-family: "Quatro Slab W03 Medium", sans-serif;
-  font-size: 2.5rem; /* -60px */
+  font-size: 3rem; /* -60px */
+}
+
+.title-white-color {
   color: rgb(214, 214, 214);
 }
 
@@ -59,4 +62,15 @@
 .centered-text {
   text-align: center;
   position: relative;
+  justify-content: center;
+}
+
+.left-padded-text {
+  text-align: left;
+  position: relative;
+  padding-left: 10%;
+}
+
+.upper-text {
+  text-transform: uppercase;
 }

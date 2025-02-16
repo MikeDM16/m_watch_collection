@@ -5,6 +5,7 @@ export function getCollectionModelsByBrand(brand: string): CollectionEntry[] {
     [],
     Object.entries(CollectionItemsDB)
       .filter(([, entry]) => entry.brand == brand)
+      .sort(([, va], [, vb]) => vb.year - va.year) // DESC order
       .map(([, entry]) => entry),
   );
 }

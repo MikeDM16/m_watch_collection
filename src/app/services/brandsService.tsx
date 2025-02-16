@@ -1,4 +1,5 @@
 import { Brand, brandsDB } from "../data/brands";
+import CollectionItemsDB from "../data/collectionData";
 
 function getMainBrands(): Brand[] {
   /**
@@ -19,14 +20,27 @@ function getSecondaryBrands(): Brand[] {
   return brandsDB.filter((entry) => entry.display_order == undefined);
 }
 
+function getBrandInformation(brandName: string): Brand | undefined {
+  return brandsDB.find((entry) => entry.name == brandName);
+}
+
 function getAllBrands(): Record<string, Brand[]> {
   /**
    * Get a Mapping of all brands by first letter
    */
+  let usedBrands = Object.entries(CollectionItemsDB).map(([, entry]) => {
+    if (entry.href.technicalData) {
+      return entry.href.technicalData.information.brand;
+    }
+  });
+  usedBrands = [...new Set(usedBrands)];
 
   const allBrands: Record<string, Brand[]> = {};
   brandsDB.map((entry) => {
     const key: string = entry.name[0];
+    if (!usedBrands.indexOf(key)) {
+      return;
+    }
     if (key in allBrands) {
       allBrands[key].push(entry);
     } else {
@@ -42,6 +56,6 @@ function getAllBrands(): Record<string, Brand[]> {
   return Object.fromEntries(sortedEntries);
 }
 
-const brand_service = { getMainBrands, getSecondaryBrands, getAllBrands };
+const brandsService = { getMainBrands, getSecondaryBrands, getAllBrands, getBrandInformation };
 
-export default brand_service;
+export default brandsService;

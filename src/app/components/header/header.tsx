@@ -31,9 +31,9 @@ export default function HeaderNavBar() {
       text: "About Me",
     },
     {
-      reference: "#Contants",
+      reference: "#Contacts",
       icon: MdEmail,
-      text: "Contants",
+      text: "Contacts",
     },
   ];
   return (

@@ -1,5 +1,6 @@
 import { BrandsEnum } from "@/app/enums/brandsEnum";
 import { WatchTypeEnum } from "@/app/enums/watchTypeEnum";
+import { WatchDetails } from "./watchDetails";
 
 export interface CollectionEntry {
   brand: string;
@@ -7,12 +8,12 @@ export interface CollectionEntry {
   legend: string;
   year: number;
   srcImage: string;
-  href: string;
+  href: WatchDetails;
   specialCollectionItem?: boolean | undefined;
   collectionSet?: boolean | undefined;
 }
 
-let CollectionItemsDB: Record<string, CollectionEntry> = {
+const todo: Record<string, CollectionEntry> = {
   "Zenith Collection": {
     brand: BrandsEnum.ZENITH,
     legend: "Zenith Collection",
@@ -85,10 +86,14 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     specialCollectionItem: true,
     collectionSet: true,
   },
+};
 
-  "2022 Celsus Heritage Chronograph": {
+console.debug(todo);
+
+let CollectionItemsDB: Record<string, CollectionEntry> = {
+  "Celsus Heritage Chronograph": {
     brand: BrandsEnum.CELSUS,
-    legend: "2022 Celsus Heritage Chronograph",
+    legend: "Celsus Heritage Chronograph",
     year: 2022,
     type: WatchTypeEnum.SPORTS,
     srcImage: "public/assets/Images/Celsus/2022_Celsus_9168_Heritage/IMG_0399.JPG",
@@ -96,27 +101,27 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     specialCollectionItem: false,
   },
 
-  "2021 Maurice Lacroix Aikon Chrono": {
+  "Maurice Lacroix Aikon Chrono": {
     brand: BrandsEnum.MAURICE_LACROIX,
-    legend: "2021 Maurice Lacroix Aikon Chrono",
+    legend: "Maurice Lacroix Aikon Chrono",
     year: 2021,
     type: WatchTypeEnum.SPORTS,
     srcImage: "public/assets/Images/Maurice_Lacroix/2021_Maurice_Lacroix_Aikon_Chrono/IMG_2092.JPG",
     href: require("./watchModels/Maurice_Lacroix/Maurice_Lacroix_Aikon_2021"),
     specialCollectionItem: false,
   },
-  "2021 Tissot T-Classic Tradition": {
+  "Tissot T-Classic Tradition": {
     brand: BrandsEnum.TISSOT,
-    legend: "2021 Tissot T-Classic Tradition",
+    legend: "Tissot T-Classic Tradition",
     year: 2021,
     type: WatchTypeEnum.CASUAL,
     srcImage: "public/assets/Images/Tissot/2021_Tissot_T_Classic_Tradition/IMG_1629.JPG",
     href: require("./watchModels/Tissot/Tissot_TClassic_Tradition_2021"),
     specialCollectionItem: false,
   },
-  "2021 Maurice Lacroix 8724 Masterpiece": {
+  "Maurice Lacroix 8724 Masterpiece": {
     brand: BrandsEnum.MAURICE_LACROIX,
-    legend: "2021 Maurice Lacroix 8724 Masterpiece",
+    legend: "Maurice Lacroix 8724 Masterpiece",
     year: 2021,
     type: WatchTypeEnum.DRESS,
     srcImage:
@@ -124,18 +129,18 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     href: require("./watchModels/Maurice_Lacroix/Maurice_Lacroix_8724_MasterPiece_2010"),
     specialCollectionItem: false,
   },
-  "2020 Tissot T-Touch Expert Solar Titanium": {
+  "Tissot T-Touch Expert Solar Titanium": {
     brand: BrandsEnum.TISSOT,
-    legend: "2020 Tissot T-Touch Expert Solar Titanium",
+    legend: "Tissot T-Touch Expert Solar Titanium",
     year: 2020,
     type: WatchTypeEnum.SPORTS,
     srcImage: "public/assets/Images/Tissot/2020_Tissot_T_Touch_Expert_Solar/IMG_0413.JPG",
     href: require("./watchModels/Tissot/Tissot_T-Touch_Expert_Solar_2020"),
     specialCollectionItem: false,
   },
-  "2019 Maurice Lacroix 8899 Masterpiece": {
+  "Maurice Lacroix 8899 Masterpiece": {
     brand: BrandsEnum.MAURICE_LACROIX,
-    legend: "2019 Maurice Lacroix 8899 Masterpiece",
+    legend: "Maurice Lacroix 8899 Masterpiece",
     year: 2019,
     type: WatchTypeEnum.SPORTS,
     srcImage:
@@ -143,27 +148,27 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     href: require("./watchModels/Maurice_Lacroix/Maurice_Lacroix_8899_MasterPiece_2019"),
     specialCollectionItem: false,
   },
-  "2019 Tissot Fetes Des Vignerons Ltd. Edition": {
+  "Tissot Fetes Des Vignerons Ltd. Edition": {
     brand: BrandsEnum.TISSOT,
-    legend: "2019 Tissot Fetes Des Vignerons Ltd. Edition",
+    legend: "Tissot Fetes Des Vignerons Ltd. Edition",
     year: 2019,
     type: WatchTypeEnum.DRESS,
     srcImage: "public/assets/Images/Tissot/2019_Tissot_Fetes_Des_Vignerons_2/IMG_7571.JPG",
     href: require("./watchModels/Tissot/Tissot_Fetes_Des_Vignerons_2019_2"),
     specialCollectionItem: false,
   },
-  "2019 Tissot Fetes Des Vignerons Limited Edition": {
+  "Tissot Fetes Des Vignerons Limited Edition": {
     brand: BrandsEnum.TISSOT,
-    legend: "2019 Tissot Fetes Des Vignerons Limited Edition",
+    legend: "Tissot Fetes Des Vignerons Limited Edition",
     year: 2019,
     type: WatchTypeEnum.DRESS,
     srcImage: "public/assets/Images/Tissot/2019_Tissot_Fetes_Des_Vignerons/IMG_6259.JPG",
     href: require("./watchModels/Tissot/Tissot_Fetes_Des_Vignerons_2019"),
     specialCollectionItem: false,
   },
-  "2016 Porsche Design Drivers Collection Cayenne": {
+  "Porsche Design Drivers Collection Cayenne": {
     brand: BrandsEnum.PORSCHE_DESIGN,
-    legend: "2016 Porsche Design Drivers Collection Cayenne",
+    legend: "Porsche Design Drivers Collection Cayenne",
     year: 2016,
     type: WatchTypeEnum.SPORTS,
     srcImage:
@@ -171,18 +176,18 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     href: require("./watchModels/Porsche_Design/Porsche_Design_Drivers_Collection_Cayenne_2016"),
     specialCollectionItem: false,
   },
-  "2016 Raymond Weil Jazzmaster Maestro Automatic": {
+  "Raymond Weil Jazzmaster Maestro Automatic": {
     brand: BrandsEnum.RAYMOND_WEIL,
-    legend: "2016 Raymond Weil Jazzmaster Maestro Automatic",
+    legend: "Raymond Weil Jazzmaster Maestro Automatic",
     year: 2016,
     type: WatchTypeEnum.DRESS,
     srcImage: "public/assets/Images/Raymond_Weil/2016_Raymond_Weil_Maestro_Automatic/IMG_7047.JPG",
     href: require("./watchModels/Raymond_Weil/Raymond_Weil_Maestro_2847_Automatic_2016"),
     specialCollectionItem: false,
   },
-  "2016 Tag Heuer Formula-1 Indy 500 Limited Ed. 529/1000": {
+  "Tag Heuer Formula-1 Indy 500 Limited Ed. 529/1000": {
     brand: BrandsEnum.TAG_HEUER,
-    legend: "2016 Tag Heuer Formula-1 Indy 500 Limited Ed. 529/1000",
+    legend: "Tag Heuer Formula-1 Indy 500 Limited Ed. 529/1000",
     year: 2016,
     type: WatchTypeEnum.SPORTS,
     srcImage: "public/assets/Images/Tag_Heuer/2016_Tag_Heuer_formula_1_Indy_500/IMG_5409.JPG",
@@ -190,9 +195,9 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     specialCollectionItem: true,
   },
 
-  "2016 Lorus VD53 Sports Chronograph": {
+  "Lorus VD53 Sports Chronograph": {
     brand: BrandsEnum.LORUS,
-    legend: "2016 Lorus VD53 Sports Chronograph",
+    legend: "Lorus VD53 Sports Chronograph",
     year: 2016,
     type: WatchTypeEnum.SPORTS,
     srcImage: "public/assets/Images/Lorus/2016_Lorus_VD53/IMG_3176.JPG",
@@ -200,27 +205,27 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     specialCollectionItem: false,
   },
 
-  "2015 Celsus Classic PP-AA782XG": {
+  "Celsus Classic PP-AA782XG": {
     brand: BrandsEnum.CELSUS,
-    legend: "2015 Celsus Classic PP-AA782XG",
+    legend: "Celsus Classic PP-AA782XG",
     year: 2015,
     type: WatchTypeEnum.DRESS,
     srcImage: "public/assets/Images/Celsus/2015_Celsus_GM10/IMG_6020.JPG",
     href: require("./watchModels/Celsus/Celsus_PPAA782XG_2015"),
     specialCollectionItem: false,
   },
-  "2015 Celsus Classic PP-AB942G": {
+  "Celsus Classic PP-AB942G": {
     brand: BrandsEnum.CELSUS,
-    legend: "2015 Celsus Classic PP-AB942G",
+    legend: "Celsus Classic PP-AB942G",
     year: 2015,
     type: WatchTypeEnum.DRESS,
     srcImage: "public/assets/Images/Celsus/2020_Celsus_AB942G/IMG_5999.JPG",
     href: require("./watchModels/Celsus/Celsus_PPAB942G_2020"),
     specialCollectionItem: false,
   },
-  "2015 Tissot T-Sports GMT Titanium": {
+  "Tissot T-Sports GMT Titanium": {
     brand: BrandsEnum.TISSOT,
-    legend: "2015 Tissot T-Sports GMT Titanium",
+    legend: "Tissot T-Sports GMT Titanium",
     year: 2015,
     type: WatchTypeEnum.DRESS,
     srcImage: "public/assets/Images/Tissot/2015_Tissot_T_Sports_GMT_Titanium/IMG_5961.JPG",
@@ -228,45 +233,45 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     specialCollectionItem: false,
   },
 
-  "2014 Tissot T-Classic Dream": {
+  "Tissot T-Classic Dream": {
     brand: BrandsEnum.TISSOT,
-    legend: "2014 Tissot T-Classic Dream",
+    legend: "Tissot T-Classic Dream",
     year: 2014,
     type: WatchTypeEnum.DRESS,
     srcImage: "public/assets/Images/Tissot/2014_Tissot_T_Classic_Dream/IMG_0913.JPG",
     href: require("./watchModels/Tissot/Tissot_TClassic_Dream_2014"),
     specialCollectionItem: false,
   },
-  "2014 Tissot V8 S762/862N": {
+  "Tissot V8 S762/862N": {
     brand: BrandsEnum.TISSOT,
-    legend: "2014 Tissot V8 S762/862N",
+    legend: "Tissot V8 S762/862N",
     year: 2014,
     type: WatchTypeEnum.SPORTS,
     srcImage: "public/assets/Images/Tissot/2014_Tissot_V8/IMG_3615.JPG",
     href: require("./watchModels/Tissot/Tissot_V8_S792862N_2014"),
     specialCollectionItem: false,
   },
-  "2014 One Voyager Chronograph": {
+  "One Voyager Chronograph": {
     brand: BrandsEnum.ONE,
-    legend: "2014 One Voyager Chronograph",
+    legend: "One Voyager Chronograph",
     year: 2014,
     type: WatchTypeEnum.SPORTS,
     srcImage: "public/assets/Images/One/2014_One_Voyager/IMG_3163.JPG",
     href: require("./watchModels/One/One_Voyager_Chrono_2014"),
     specialCollectionItem: false,
   },
-  "2014 Zodiac Sea Dragon ZO2237": {
+  "Zodiac Sea Dragon ZO2237": {
     brand: BrandsEnum.ZODIAC,
-    legend: "2014 Zodiac Sea Dragon ZO2237",
+    legend: "Zodiac Sea Dragon ZO2237",
     year: 2014,
     type: WatchTypeEnum.DIVE,
     srcImage: "public/assets/Images/Zodiac/2004_Zodiac_SeaDragon/IMG_1288.JPG",
     href: require("./watchModels/Zodiac/Zodiac_Sea_Dragon_ZO2237_2014"),
     specialCollectionItem: false,
   },
-  "2012 Porsche Design Dashboard P6612/17 Titanium": {
+  "Porsche Design Dashboard P6612/17 Titanium": {
     brand: BrandsEnum.PORSCHE_DESIGN,
-    legend: "2012 Porsche Design Dashboard P6612/17 Titanium",
+    legend: "Porsche Design Dashboard P6612/17 Titanium",
     year: 2012,
     type: WatchTypeEnum.SPORTS,
     srcImage:
@@ -275,54 +280,54 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     specialCollectionItem: true,
   },
 
-  "2012 Tissot Heritage Visodate Automatic": {
+  "Tissot Heritage Visodate Automatic": {
     brand: BrandsEnum.TISSOT,
-    legend: "2012 Tissot Heritage Visodate Automatic",
+    legend: "Tissot Heritage Visodate Automatic",
     year: 2012,
     type: WatchTypeEnum.DRESS,
     srcImage: "public/assets/Images/Tissot/2012_Tissot_Heritage_Visodate/IMG_0975.JPG",
     href: require("./watchModels/Tissot/Tissot_Heritage_Visodate_2012"),
     specialCollectionItem: false,
   },
-  "2012 Tissot T-Classic Luxury Powermartic 80": {
+  "Tissot T-Classic Luxury Powermartic 80": {
     brand: BrandsEnum.TISSOT,
-    legend: "2012 Tissot T-Classic Luxury Powermartic 80",
+    legend: "Tissot T-Classic Luxury Powermartic 80",
     year: 2012,
     type: WatchTypeEnum.DRESS,
     srcImage: "public/assets/Images/Tissot/2012_Tissot_Luxury_Powermatic/IMG_0929.JPG",
     href: require("./watchModels/Tissot/Tissot_Luxury_Powermatic_2012"),
     specialCollectionItem: false,
   },
-  "2012 Sector 250 Chronograph Alarm": {
+  "Sector 250 Chronograph Alarm": {
     brand: BrandsEnum.SECTOR,
-    legend: "2012 Sector 250 Chronograph Alarm",
+    legend: "Sector 250 Chronograph Alarm",
     year: 2012,
     type: WatchTypeEnum.SPORTS,
     srcImage: "public/assets/Images/Sector/2012_Sector_250/IMG_1618.JPG",
     href: require("./watchModels/Sector/Sector_250_Chrono_Alarm_2012"),
     specialCollectionItem: false,
   },
-  "2012 Tissot Ballade Chronograph Two Tone": {
+  "Tissot Ballade Chronograph Two Tone": {
     brand: BrandsEnum.TISSOT,
-    legend: "2012 Tissot Ballade Chronograph Two Tone",
+    legend: "Tissot Ballade Chronograph Two Tone",
     year: 2012,
     type: WatchTypeEnum.DRESS,
     srcImage: "public/assets/Images/Tissot/2012_Tissot_Ballade_Chrono_Two_Tone/IMG_4585.JPG",
     href: require("./watchModels/Tissot/Tissot_Ballade_Chrono_2012_two_tone"),
     specialCollectionItem: false,
   },
-  "2012 Tissot Ballade Chronograph": {
+  "Tissot Ballade Chronograph": {
     brand: BrandsEnum.TISSOT,
-    legend: "2012 Tissot Ballade Chronograph",
+    legend: "Tissot Ballade Chronograph",
     year: 2012,
     type: WatchTypeEnum.DRESS,
     srcImage: "public/assets/Images/Tissot/2012_Tissot_Ballade_Chrono/IMG_0358.JPG",
     href: require("./watchModels/Tissot/Tissot_Ballade_Chrono_2012"),
     specialCollectionItem: false,
   },
-  "2012 Tissot PRS 200 T362/462": {
+  "Tissot PRS 200 Blue T362/462": {
     brand: BrandsEnum.TISSOT,
-    legend: "2012 Tissot PRS 200 T362/462",
+    legend: "Tissot PRS 200 Blue T362/462",
     year: 2012,
     type: WatchTypeEnum.DIVE,
     srcImage: "public/assets/Images/Tissot/2012_Tissot_PRS_200_T362462/IMG_4792.JPG",
@@ -330,9 +335,9 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     specialCollectionItem: false,
   },
 
-  "2011 Tissot Heritage 1944 COSC Limited Edition": {
+  "Tissot Heritage 1944 COSC Limited Edition": {
     brand: BrandsEnum.TISSOT,
-    legend: "2011 Tissot Heritage 1944 COSC Limited Edition",
+    legend: "Tissot Heritage 1944 COSC Limited Edition",
     year: 2011,
     type: WatchTypeEnum.DRESS,
     srcImage: "public/assets/Images/Tissot/2011_Tissot_Heritage_1944_150th/IMG_3831.JPG",
@@ -340,9 +345,9 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     specialCollectionItem: true,
   },
 
-  "2011 Tissot PRS 516 Valjoux 7750": {
+  "Tissot PRS 516 Valjoux 7750": {
     brand: BrandsEnum.TISSOT,
-    legend: "2011 Tissot PRS 516 Valjoux 7750",
+    legend: "Tissot PRS 516 Valjoux 7750",
     year: 2011,
     type: WatchTypeEnum.SPORTS,
     srcImage: "public/assets/Images/Tissot/2011_Tissot_PRS_516_Valjoux/IMG_6069.JPG",
@@ -350,9 +355,9 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     specialCollectionItem: false,
   },
 
-  "2011 Tissot PRS 200 T362/462": {
+  "Tissot PRS 200 Silver T362/462": {
     brand: BrandsEnum.TISSOT,
-    legend: "2011 Tissot PRS 200 T362/462",
+    legend: "Tissot PRS 200 Silver T362/462",
     year: 2011,
     type: WatchTypeEnum.DIVE,
     srcImage: "public/assets/Images/Tissot/2011_Tissot_PRS_200_T362246/IMG_0601.JPG",
@@ -360,9 +365,9 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     specialCollectionItem: false,
   },
 
-  "2011 Tonino Lamborghini Bologna II": {
+  "Tonino Lamborghini Bologna II": {
     brand: BrandsEnum.MOTORSPORT_BRANDS,
-    legend: "2011 Tonino Lamborghini Bologna II",
+    legend: "Tonino Lamborghini Bologna II",
     year: 2011,
     type: WatchTypeEnum.SPORTS,
     srcImage:
@@ -370,63 +375,63 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     href: require("./watchModels/Tonino_Lamborghini/Tonino_Lamborghini_Bologna_II_2011"),
     specialCollectionItem: false,
   },
-  "2010 Tissot PRC 200 T461": {
+  "Tissot PRC 200 T461": {
     brand: BrandsEnum.TISSOT,
-    legend: "2010 Tissot PRC 200 T461",
+    legend: "Tissot PRC 200 T461",
     year: 2010,
     type: WatchTypeEnum.SPORTS,
     srcImage: "public/assets/Images/Tissot/2010_Tissot_PRC_200/IMG_3644.JPG",
     href: require("./watchModels/Tissot/Tissot_PRC_200_T461_2010"),
     specialCollectionItem: false,
   },
-  "2010 Zenith El Primero ChronoMaster": {
+  "Zenith El Primero ChronoMaster": {
     brand: BrandsEnum.ZENITH,
-    legend: "2010 Zenith El Primero ChronoMaster",
+    legend: "Zenith El Primero ChronoMaster",
     year: 2010,
     type: WatchTypeEnum.DIVE,
     srcImage: "public/assets/Images/Zenith/2010_Zenith_El_Primero_ChronoMaster/IMG_3466.JPG",
     href: require("./watchModels/Zenith/Zenith_El_Primero_ChronoMaster_2010"),
     specialCollectionItem: true,
   },
-  "2010 Tag Heuer Aquaracer Grande Date": {
+  "Tag Heuer Aquaracer Grande Date": {
     brand: BrandsEnum.TAG_HEUER,
-    legend: "2010 Tag Heuer Aquaracer Grande Date",
+    legend: "Tag Heuer Aquaracer Grande Date",
     year: 2010,
     type: WatchTypeEnum.SPORTS,
     srcImage: "public/assets/Images/Tag_Heuer/2010_Tag_Heuer_Aquaracer_WAF1010/IMG_6047.JPG",
     href: require("./watchModels/Tag_Heuer/Tag_Heuer_Aquaracer_WAF1010_2010"),
     specialCollectionItem: true,
   },
-  "2010 Tissot PRS 200 T362/462K": {
+  "Tissot PRS 200 Black T362/462K": {
     brand: BrandsEnum.TISSOT,
-    legend: "2010 Tissot PRS 200 T362/462K",
+    legend: "Tissot PRS 200 Black T362/462K",
     year: 2010,
     type: WatchTypeEnum.DIVE,
     srcImage: "public/assets/Images/Tissot/2010_Tissot_PRS_200/IMG_2376.JPG",
     href: require("./watchModels/Tissot/Tissot_PRS_200_T362462K_2010"),
     specialCollectionItem: false,
   },
-  "2009 Tissot PRS 516 Valjoux 7750": {
+  "Tissot PRS 516 Carbon": {
     brand: BrandsEnum.TISSOT,
-    legend: "2009 Tissot PRS 516 Valjoux 7750",
+    legend: "Tissot PRS 516 Carbon",
     year: 2009,
     type: WatchTypeEnum.SPORTS,
     srcImage: "public/assets/Images/Tissot/2014_Tissot_PRS_516_Valjoux/IMG_4520.JPG",
     href: require("./watchModels/Tissot/Tissot_PRS_516_Valjoux_2009"),
     specialCollectionItem: true,
   },
-  "2009 Tissot T-Touch Titanium": {
+  "Tissot T-Touch Titanium": {
     brand: BrandsEnum.TISSOT,
-    legend: "2009 Tissot T-Touch Titanium",
+    legend: "Tissot T-Touch Titanium",
     year: 2009,
     type: WatchTypeEnum.SPORTS,
     srcImage: "public/assets/Images/Tissot/2016_Tissot_T-Touch/IMG_9930.JPG",
     href: require("./watchModels/Tissot/Tissot_T-Touch_2009"),
     specialCollectionItem: false,
   },
-  "2008 Breitling Chronomat Evolution A13356 COSC": {
+  "Breitling Chronomat Evolution A13356 COSC": {
     brand: BrandsEnum.BREITLING,
-    legend: "2008 Breitling Chronomat Evolution A13356 COSC",
+    legend: "Breitling Chronomat Evolution A13356 COSC",
     year: 2008,
     type: WatchTypeEnum.SPORTS,
     srcImage:
@@ -435,18 +440,18 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     specialCollectionItem: true,
   },
 
-  "2008 Tag Heuer Formula-1 WAC1212": {
+  "Tag Heuer Formula-1 WAC1212": {
     brand: BrandsEnum.TAG_HEUER,
-    legend: "2008 Tag Heuer Formula-1 WAC1212",
+    legend: "Tag Heuer Formula-1 WAC1212",
     year: 2008,
     type: WatchTypeEnum.DIVE,
     srcImage: "public/assets/Images/Tag_Heuer/2008_Tag_Heuer_F1_WAC1212/IMG_3214.JPG",
     href: require("./watchModels/Tag_Heuer/Tag_Heuer_Formula_1_WAC1212_2008"),
     specialCollectionItem: false,
   },
-  "2008 Tag Heuer Formula-1 WAC1210": {
+  "Tag Heuer Formula-1 WAC1210": {
     brand: BrandsEnum.TAG_HEUER,
-    legend: "2008 Tag Heuer Formula-1 WAC1210",
+    legend: "Tag Heuer Formula-1 WAC1210",
     year: 2008,
     type: WatchTypeEnum.DIVE,
     srcImage: "public/assets/Images/Tag_Heuer/2008_Tag_Heuer_F1_WAC1210/IMG_4158.JPG",
@@ -454,45 +459,45 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     specialCollectionItem: false,
   },
 
-  "2007 Tissot Le Locle Automatic": {
+  "Tissot Le Locle Automatic": {
     brand: BrandsEnum.TISSOT,
-    legend: "2007 Tissot Le Locle Automatic",
+    legend: "Tissot Le Locle Automatic",
     year: 2007,
     type: WatchTypeEnum.DRESS,
     srcImage: "public/assets/Images/Tissot/2007_Tissot_Le_Locle_Auto/IMG_5769.JPG",
     href: require("./watchModels/Tissot/Tissot_Le_Locle_Auto_2007"),
     specialCollectionItem: false,
   },
-  "2007 Raymond Weil Tango 5563": {
+  "Raymond Weil Tango 5563": {
     brand: BrandsEnum.RAYMOND_WEIL,
-    legend: "2007 Raymond Weil Tango 5563",
+    legend: "Raymond Weil Tango 5563",
     year: 2007,
     type: WatchTypeEnum.DIVE,
     srcImage: "public/assets/Images/Raymond_Weil/2007_Raymond_Weil_Tango_5563_Diver/IMG_0495.JPG",
     href: require("./watchModels/Raymond_Weil/Raymond_Weil_Tango_Diver_2007"),
     specialCollectionItem: false,
   },
-  "2007 Raymond Weil Saxo 9520": {
+  "Raymond Weil Saxo 9520": {
     brand: BrandsEnum.RAYMOND_WEIL,
-    legend: "2007 Raymond Weil Saxo 9520",
+    legend: "Raymond Weil Saxo 9520",
     year: 2007,
     type: WatchTypeEnum.DRESS,
     srcImage: "public/assets/Images/Raymond_Weil/2007_Reymond_Weil_Saxo_9520/IMG_1545.JPG",
     href: require("./watchModels/Raymond_Weil/Raymond_Weil_Saxo_9520_2007"),
     specialCollectionItem: false,
   },
-  "2005 Zenith El Primero Port Royal V": {
+  "Zenith El Primero Port Royal V": {
     brand: BrandsEnum.ZENITH,
-    legend: "2005 Zenith El Primero Port Royal V",
+    legend: "Zenith El Primero Port Royal V",
     year: 2005,
     type: WatchTypeEnum.DRESS,
     srcImage: "public/assets/Images/Zenith/2005_Zenith_El_Primero_Port_Royal/IMG_4614.JPG",
     href: require("./watchModels/Zenith/Zenith_El_Primero_Port_Royal_V_2005"),
     specialCollectionItem: true,
   },
-  "2005 Porsche Design Dashboard P6612 Titanium": {
+  "Porsche Design Dashboard P6612 Titanium": {
     brand: BrandsEnum.PORSCHE_DESIGN,
-    legend: "2005 Porsche Design Dashboard P6612 Titanium",
+    legend: "Porsche Design Dashboard P6612 Titanium",
     year: 2005,
     type: WatchTypeEnum.SPORTS,
     srcImage:
@@ -500,9 +505,9 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     href: require("./watchModels/Porsche_Design/Porsche_Design_P6612_Titanium_2005"),
     specialCollectionItem: true,
   },
-  "2005 Porsche Design Dashboard P6612/10 Titanium": {
+  "Porsche Design Dashboard P6612/10 Titanium": {
     brand: BrandsEnum.PORSCHE_DESIGN,
-    legend: "2005 Porsche Design Dashboard P6612/10 Titanium",
+    legend: "Porsche Design Dashboard P6612/10 Titanium",
     year: 2005,
     type: WatchTypeEnum.SPORTS,
     srcImage:
@@ -510,162 +515,162 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     href: require("./watchModels/Porsche_Design/Porsche_Design_P6612_10_1_Black_Titanium_2005"),
     specialCollectionItem: false,
   },
-  "2005 Tag Heuer Aquaracer Exclusive CN2111": {
+  "Tag Heuer Aquaracer Exclusive CN2111": {
     brand: BrandsEnum.TAG_HEUER,
-    legend: "2005 Tag Heuer Aquaracer Exclusive CN2111",
+    legend: "Tag Heuer Aquaracer Exclusive CN2111",
     year: 2005,
     type: WatchTypeEnum.SPORTS,
     srcImage: "public/assets/Images/Tag_Heuer/2005_Tag_Heuer_Aquaracer_CN2111/IMG_0153.JPG",
     href: require("./watchModels/Tag_Heuer/Tag_Heuer_Aquaracer_CN2111_2005"),
     specialCollectionItem: true,
   },
-  "2005 Raymond Weil Amadeus 200 7750": {
+  "Raymond Weil Amadeus 200 7750": {
     brand: BrandsEnum.RAYMOND_WEIL,
-    legend: "2005 Raymond Weil Amadeus 200 7750",
+    legend: "Raymond Weil Amadeus 200 7750",
     year: 2005,
     type: WatchTypeEnum.DRESS,
     srcImage: "public/assets/Images/Raymond_Weil/2005_Raymond_Weil_Amadeus_200/IMG_1953.JPG",
     href: require("./watchModels/Raymond_Weil/Raymond_Weil_Amadeus_200_2005"),
     specialCollectionItem: false,
   },
-  "2005 Emes Chronograph OS60": {
+  "Emes Chronograph OS60": {
     brand: BrandsEnum.EMES,
-    legend: "2005 Emes Chronograph OS60",
+    legend: "Emes Chronograph OS60",
     year: 2005,
     type: WatchTypeEnum.SPORTS,
     srcImage: "public/assets/Images/Emes/2005_Emes_Chrono_OS60/IMG_2102.JPG",
     href: require("./watchModels/Emes/Emes_Chrono_OS60_2005"),
     specialCollectionItem: false,
   },
-  "2005 Tissot PRS 516 J565/665 Retrograde": {
+  "Tissot PRS 516 J565/665 Retrograde": {
     brand: BrandsEnum.TISSOT,
-    legend: "2005 Tissot PRS 516 J565/665 Retrograde",
+    legend: "Tissot PRS 516 J565/665 Retrograde",
     year: 2005,
     type: WatchTypeEnum.SPORTS,
     srcImage: "public/assets/Images/Tissot/2009_Tissot_PRS_516_Retrograde/IMG_0657.JPG",
     href: require("./watchModels/Tissot/Tissot_PRS_516_Retrograde_2005"),
     specialCollectionItem: false,
   },
-  "2005 Tissot PRS 516 J562/662": {
+  "Tissot PRS 516 J562/662": {
     brand: BrandsEnum.TISSOT,
-    legend: "2005 Tissot PRS 516 J562/662",
+    legend: "Tissot PRS 516 J562/662",
     year: 2005,
     type: WatchTypeEnum.SPORTS,
     srcImage: "public/assets/Images/Tissot/2005_Tissot_PRS_516_Chrono/IMG_4808.JPG",
     href: require("./watchModels/Tissot/Tissot_PRS_516_J562662_2005"),
     specialCollectionItem: false,
   },
-  "2005 Ferrari Modena Red Chronograph": {
+  "Ferrari Modena Red Chronograph": {
     brand: BrandsEnum.MOTORSPORT_BRANDS,
-    legend: "2005 Ferrari Modena Red Chronograph",
+    legend: "Ferrari Modena Red Chronograph",
     year: 2005,
     type: WatchTypeEnum.SPORTS,
     srcImage: "public/assets/Images/Ferrari/2005_Ferrari_Modena_Chrono/IMG_2597.JPG",
     href: require("./watchModels/Ferrari/Ferrari_Modena_Chronograph_2005"),
     specialCollectionItem: false,
   },
-  "2005 Tissot Ballade Lady C229/339C": {
+  "Tissot Ballade Lady C229/339C": {
     brand: BrandsEnum.TISSOT,
-    legend: "2005 Tissot Ballade Lady C229/339C",
+    legend: "Tissot Ballade Lady C229/339C",
     year: 2005,
     type: WatchTypeEnum.DRESS,
     srcImage: "public/assets/Images/Tissot/2005_Tissot_Ballada_Lady_C229_329C/IMG_8836.JPG",
     href: require("./watchModels/Tissot/Tissot_Ballade_C229399C_Lady_Auto_2005"),
     specialCollectionItem: false,
   },
-  "2004 Mercedes Benz SLK Limited Edition": {
+  "Mercedes Benz SLK Limited Edition": {
     brand: BrandsEnum.MOTORSPORT_BRANDS,
-    legend: "2004 Mercedes Benz SLK Limited Edition",
+    legend: "Mercedes Benz SLK Limited Edition",
     year: 2004,
     type: WatchTypeEnum.SPORTS,
     srcImage: "public/assets/Images/Mercedes/2004_Mercedes_SLK_Chrono_I/IMG_1717.JPG",
     href: require("./watchModels/Mercedes/Mercedes_Benz_SLK_Chrono_I_2004"),
     specialCollectionItem: false,
   },
-  "2004 Mercedes Benz SLK Design Chronograph": {
+  "Mercedes Benz SLK Design Chronograph": {
     brand: BrandsEnum.MOTORSPORT_BRANDS,
-    legend: "2004 Mercedes Benz SLK Design Chronograph",
+    legend: "Mercedes Benz SLK Design Chronograph",
     year: 2004,
     type: WatchTypeEnum.SPORTS,
     srcImage: "public/assets/Images/Mercedes/2004_Mercedes_SLK_Chrono_II/IMG_1736.JPG",
     href: require("./watchModels/Mercedes/Mercedes_Benz_SLK_Chrono_II_2004"),
     specialCollectionItem: false,
   },
-  "2003 Tissot Heritage COSC Limited Edition": {
+  "Tissot Heritage COSC Limited Edition": {
     brand: BrandsEnum.TISSOT,
-    legend: "2003 Tissot Heritage COSC Limited Edition",
+    legend: "Tissot Heritage COSC Limited Edition",
     year: 2003,
     type: WatchTypeEnum.DRESS,
     srcImage: "public/assets/Images/Tissot/2003_Tissot_150th_Heritage/IMG_5855.JPG",
     href: require("./watchModels/Tissot/Tissot_Heritage_150th_COSC_2003"),
     specialCollectionItem: true,
   },
-  "2002 Tissot Ballade Automatic C279/379C": {
+  "Tissot Ballade Automatic C279/379C": {
     brand: BrandsEnum.TISSOT,
-    legend: "2002 Tissot Ballade Automatic C279/379C",
+    legend: "Tissot Ballade Automatic C279/379C",
     year: 2002,
     type: WatchTypeEnum.DRESS,
     srcImage: "public/assets/Images/Tissot/2002_Tissot_Ballade_Auto/IMG_4637.JPG",
     href: require("./watchModels/Tissot/Tissot_Ballade_C279379_Auto_2002"),
     specialCollectionItem: false,
   },
-  "2002 Breitling Chronomat B13050.1": {
+  "Breitling Chronomat B13050.1": {
     brand: BrandsEnum.BREITLING,
-    legend: "2002 Breitling Chronomat B13050.1",
+    legend: "Breitling Chronomat B13050.1",
     year: 2002,
     type: WatchTypeEnum.SPORTS,
     srcImage: "public/assets/Images/Breitling/2002_Breitling_Chronomat_B13050/IMG_5090.JPG",
     href: require("./watchModels/Breitling/Breitling_Chronomat_B13050_2002"),
     specialCollectionItem: true,
   },
-  "2002 Mercedes Benz Chronograph": {
+  "Mercedes Benz Chronograph": {
     brand: BrandsEnum.MOTORSPORT_BRANDS,
-    legend: "2002 Mercedes Benz Chronograph",
+    legend: "Mercedes Benz Chronograph",
     year: 2002,
     type: WatchTypeEnum.SPORTS,
     srcImage: "public/assets/Images/Mercedes/1996_Mercedes_Chrono_OS60/IMG_0478.JPG",
     href: require("./watchModels/Mercedes/Mercedes_Benz_OS60_Chrono_2002"),
     specialCollectionItem: false,
   },
-  "2001 Camel Trophy L2 M810.2080-2089": {
+  "Camel Trophy L2 M810.2080-2089": {
     brand: BrandsEnum.CAMEL_TROPHY,
-    legend: "2001 Camel Trophy L2 M810.2080-2089",
+    legend: "Camel Trophy L2 M810.2080-2089",
     year: 2001,
     type: WatchTypeEnum.SPORTS,
     srcImage: "public/assets/Images/Camel/2001_Camel_Trophy_L2_Chronograph/IMG_148.JPG",
     href: require("./watchModels/Camel_Trophy/Camel_Trophy_M81020802089_2001"),
     specialCollectionItem: false,
   },
-  "2001 Pryngeps CR763 Chronograph": {
+  "Pryngeps CR763 Chronograph": {
     brand: BrandsEnum.PRYNGEPS,
-    legend: "2001 Pryngeps CR763 Chronograph",
+    legend: "Pryngeps CR763 Chronograph",
     year: 2001,
     type: WatchTypeEnum.CASUAL,
     srcImage: "public/assets/Images/Pryngeps/2001_Pryngeps_CR763/IMG_3229.JPG",
     href: require("./watchModels/Pryngeps/Pryngeps_CR763_OS60_2001"),
     specialCollectionItem: false,
   },
-  "2000 Tissot E662/762M Chronograph": {
+  "Tissot Sport Chrono Black Chronograph": {
     brand: BrandsEnum.TISSOT,
-    legend: "2000 Tissot E662/762M Chronograph",
+    legend: "Tissot Sport Chrono Black Chronograph",
     year: 2000,
     type: WatchTypeEnum.SPORTS,
     srcImage: "public/assets/Images/Tissot/2000_Tissot_Sport_E662762M/IMG_1076.JPG",
     href: require("./watchModels/Tissot/Tissot_Sports_E662_2000"),
     specialCollectionItem: false,
   },
-  "2000 Chopard Mille Miglia Titanium": {
+  "Chopard Mille Miglia Titanium": {
     brand: BrandsEnum.CHOPARD,
-    legend: "2000 Chopard Mille Miglia Titanium",
+    legend: "Chopard Mille Miglia Titanium",
     year: 2000,
     type: WatchTypeEnum.SPORTS,
     srcImage: "public/assets/Images/Chopard/2000_Chopard_Mille_Miglia_Titanium/IMG_8038.JPG",
     href: require("./watchModels/Chopard/Chopard_Mille_Miglia_2000_Titanium"),
     specialCollectionItem: true,
   },
-  "2000 Tissot Sports E662/762M": {
+  "Tissot Sports Chronograph E662/762M": {
     brand: BrandsEnum.TISSOT,
-    legend: "2000 Tissot Sports E662/762M",
+    legend: "Tissot Sports Chronograph E662/762M",
     year: 2000,
     type: WatchTypeEnum.SPORTS,
     srcImage: "public/assets/Images/Tissot/2000_Tissot_Sport_Chrono/IMG_0506.JPG",
@@ -673,9 +678,9 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     specialCollectionItem: false,
   },
 
-  "1999 Tag Heuer Professional 2000": {
+  "Tag Heuer Professional 2000 Quartz": {
     brand: BrandsEnum.TAG_HEUER,
-    legend: "1999 Tag Heuer Professional 2000",
+    legend: "Tag Heuer Professional 2000 Quartz",
     year: 1999,
     type: WatchTypeEnum.DIVE,
     srcImage: "public/assets/Images/Tag_Heuer/1999_Tag_Heuer_Pro2000/IMG_4644.JPG",
@@ -693,9 +698,9 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     specialCollectionItem: true,
   },
 
-  "1998 Breitling Chronomat Vitesse B13050": {
+  "Breitling Chronomat Vitesse B13050": {
     brand: BrandsEnum.BREITLING,
-    legend: "1998 Breitling Chronomat Vitesse B13050",
+    legend: "Breitling Chronomat Vitesse B13050",
     year: 1998,
     type: WatchTypeEnum.SPORTS,
     srcImage: "public/assets/Images/Breitling/1998_Breitling_Chronomat_Vitesse_B13050/IMG_3632.JPG",
@@ -703,36 +708,36 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     specialCollectionItem: true,
   },
 
-  "1998 Breitling Colt A53035 Chronograph": {
+  "Breitling Colt A53035 Chronograph": {
     brand: BrandsEnum.BREITLING,
-    legend: "1998 Breitling Colt A53035 Chronograph",
+    legend: "Breitling Colt A53035 Chronograph",
     year: 1998,
     type: WatchTypeEnum.SPORTS,
     srcImage: "public/assets/Images/Breitling/1998_Breitling_Colt_A53035_Chronograph/IMG_6294.JPG",
     href: require("./watchModels/Breitling/Breitling_Colt_A53035_1998"),
     specialCollectionItem: false,
   },
-  "1998 Calypso Chronograph OS60": {
+  "Calypso Chronograph OS60": {
     brand: BrandsEnum.FESTINA_GROUP,
-    legend: "1998 Calypso Chronograph OS60",
+    legend: "Calypso Chronograph OS60",
     year: 1998,
     type: WatchTypeEnum.SPORTS,
     srcImage: "public/assets/Images/Calypso/2001_Calypso_Chrono_OS10/IMG_2956.JPG",
     href: require("./watchModels/Calypso/Calypso_OS10_Chrono_2001"),
     specialCollectionItem: false,
   },
-  "1998 Orient Multi Year Calendar": {
+  "Orient Multi Year Calendar": {
     brand: BrandsEnum.ORIENT,
-    legend: "1998 Orient Multi Year Calendar",
+    legend: "Orient Multi Year Calendar",
     year: 1998,
     type: WatchTypeEnum.CASUAL,
     srcImage: "public/assets/Images/Orient/1998_Orient_Multi_Year_Calendar_EU03B0/IMG_5734.JPG",
     href: require("./watchModels/Orient/Orient_Multi_year_calendar_EU3B0_1998"),
     specialCollectionItem: false,
   },
-  "1998 Camel Trophy Time Date M661.2000-2009": {
+  "Camel Trophy Time Date M661.2000-2009": {
     brand: BrandsEnum.CAMEL_TROPHY,
-    legend: "1998 Camel Trophy Time Date M661.2000-2009",
+    legend: "Camel Trophy Time Date M661.2000-2009",
     year: 1998,
     type: WatchTypeEnum.CASUAL,
     srcImage: "public/assets/Images/Camel/1998_Camel_Trophy_Time_Date/8.JPG",
@@ -740,18 +745,18 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     specialCollectionItem: false,
   },
 
-  "1997 Tag Heuer Professional 1500": {
+  "Tag Heuer Professional 1500": {
     brand: BrandsEnum.TAG_HEUER,
-    legend: "1997 Tag Heuer Professional 1500",
+    legend: "Tag Heuer Professional 1500",
     year: 1997,
     type: WatchTypeEnum.SPORTS,
     srcImage: "public/assets/Images/Tag_Heuer/1997_Tag_Heuer_1500_Granite/IMG_0739.JPG",
     href: require("./watchModels/Tag_Heuer/Tag_Heuer_Professional_1500_1997"),
     specialCollectionItem: false,
   },
-  "1996 Maurice Lacroix 5872 Monza Chrono": {
+  "Maurice Lacroix 5872 Monza Chrono": {
     brand: BrandsEnum.MAURICE_LACROIX,
-    legend: "1996 Maurice Lacroix 5872 Monza Chrono",
+    legend: "Maurice Lacroix 5872 Monza Chrono",
     year: 1996,
     type: WatchTypeEnum.DRESS,
     srcImage: "public/assets/Images/Maurice_Lacroix/2021_Maurice_Lacroix_5872_Chrono/IMG_8026.JPG",
@@ -759,9 +764,9 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     specialCollectionItem: false,
   },
 
-  "1996 Maurice Lacroix 5393 Chrono": {
+  "Maurice Lacroix 5393 Chrono": {
     brand: BrandsEnum.MAURICE_LACROIX,
-    legend: "1996 Maurice Lacroix 5393 Chrono",
+    legend: "Maurice Lacroix 5393 Chrono",
     year: 1996,
     type: WatchTypeEnum.DRESS,
     srcImage: "public/assets/Images/Maurice_Lacroix/2021_Maurice_Lacroix_5393_Chrono/IMG_8970.JPG",
@@ -769,9 +774,9 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     specialCollectionItem: false,
   },
 
-  "1996 Philip Watch AQ 1000 Chrono": {
+  "Philip Watch AQ 1000 Chrono": {
     brand: BrandsEnum.PHILIP_WATCH,
-    legend: "1996 Philip Watch AQ 1000 Chrono",
+    legend: "Philip Watch AQ 1000 Chrono",
     year: 1996,
     type: WatchTypeEnum.SPORTS,
     srcImage: "public/assets/Images/Philip_Watch/1996_Philip_Watch_AQ_1000/IMG_0086.JPG",
@@ -779,27 +784,27 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     specialCollectionItem: false,
   },
 
-  "1995 Tissot E662/762M Chronograph": {
+  "Tissot Sport Chronograph Panda E662/762M": {
     brand: BrandsEnum.TISSOT,
-    legend: "1995 Tissot E662/762M Chronograph",
+    legend: "Tissot Sport Chronograph Panda E662/762M",
     year: 1995,
     type: WatchTypeEnum.SPORTS,
     srcImage: "public/assets/Images/Tissot/1995_Tissot_Chrono_E662762M/IMG_1302.JPG",
     href: require("./watchModels/Tissot/Tissot_Sports_E662_Chrono_1995"),
     specialCollectionItem: false,
   },
-  "1995 Jaguar Fragrances Chrono Limited Edition": {
+  "Jaguar Fragrances Chrono Limited Edition": {
     brand: BrandsEnum.MOTORSPORT_BRANDS,
-    legend: "1995 Jaguar Fragrances Chrono Limited Edition",
+    legend: "Jaguar Fragrances Chrono Limited Edition",
     year: 1995,
     type: WatchTypeEnum.SPORTS,
     srcImage: "public/assets/Images/Jaguar/1995_Jaguar_Fragrances_Chrono/IMG_3459.JPG",
     href: require("./watchModels/Jaguar/Jaguar_Frag_Chromed_OS10_1995"),
     specialCollectionItem: false,
   },
-  "1995 Jaguar Fragrances Chrono Limited Edit.": {
+  "Jaguar Fragrances Chrono Limited Edit.": {
     brand: BrandsEnum.MOTORSPORT_BRANDS,
-    legend: "1995 Jaguar Fragrances Chrono Limited Edit.",
+    legend: "Jaguar Fragrances Chrono Limited Edit.",
     year: 1995,
     type: WatchTypeEnum.SPORTS,
     srcImage: "public/assets/Images/Jaguar/1995_Jaguar_Fragrances_Chrono_III/IMG_6385.JPG",
@@ -807,72 +812,72 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     specialCollectionItem: false,
   },
 
-  "1995 Jaguar Fragrances Chrono Limited Ed.": {
+  "Jaguar Fragrances Chrono Limited Ed.": {
     brand: BrandsEnum.MOTORSPORT_BRANDS,
-    legend: "1995 Jaguar Fragrances Chrono Limited Ed.",
+    legend: "Jaguar Fragrances Chrono Limited Ed.",
     year: 1995,
     type: WatchTypeEnum.SPORTS,
     srcImage: "public/assets/Images/Jaguar/1995_Jaguar_Fragrances_Chrono_II/IMG_6631.JPG",
     href: require("./watchModels/Jaguar/Jaguar_Frag_Chromed_OS10_II_1995"),
     specialCollectionItem: false,
   },
-  "1995 Camel Trophy Top Chrono M136.831-839": {
+  "Camel Trophy Top Chrono M136.831-839": {
     brand: BrandsEnum.CAMEL_TROPHY,
-    legend: "1995 Camel Trophy Top Chrono M136.831-839",
+    legend: "Camel Trophy Top Chrono M136.831-839",
     year: 1995,
     type: WatchTypeEnum.SPORTS,
     srcImage: "public/assets/Images/Camel/1999_Camel_Trophy_TopChrono/IMG_1342.JPG",
     href: require("./watchModels/Camel_Trophy/Camel_Trophy_M136831839_1995"),
     specialCollectionItem: false,
   },
-  "1995 Tag Heuer Professional Formula-1 WA1219": {
+  "Tag Heuer Professional Formula-1 WA1219": {
     brand: BrandsEnum.TAG_HEUER,
-    legend: "1995 Tag Heuer Professional Formula-1 WA1219",
+    legend: "Tag Heuer Professional Formula-1 WA1219",
     year: 1995,
     type: WatchTypeEnum.SPORTS,
     srcImage: "public/assets/Images/Tag_Heuer/1995_Tag_Heuer_F1_WA1219/IMG_2591.JPG",
     href: require("./watchModels/Tag_Heuer/Tag_Heuer_Formula_1_WA1219_1995"),
     specialCollectionItem: false,
   },
-  "1995 Tag Heuer Professional Formula-1 WA1218": {
+  "Tag Heuer Professional Formula-1 WA1218": {
     brand: BrandsEnum.TAG_HEUER,
-    legend: "1995 Tag Heuer Professional Formula-1 WA1218",
+    legend: "Tag Heuer Professional Formula-1 WA1218",
     year: 1995,
     type: WatchTypeEnum.SPORTS,
     srcImage: "public/assets/Images/Tag_Heuer/1995_Tag_Heuer_F1_WA1218/IMG_2557.JPG",
     href: require("./watchModels/Tag_Heuer/Tag_Heuer_Formula_1_WA1218_1995"),
     specialCollectionItem: false,
   },
-  "1995 Tag Heuer Professional Formula-1 WA1212 (Tritium Dial)": {
+  "Tag Heuer Professional Formula-1 WA1212 (Tritium Dial)": {
     brand: BrandsEnum.TAG_HEUER,
-    legend: "1995 Tag Heuer Professional Formula-1 WA1212 (Tritium Dial)",
+    legend: "Tag Heuer Professional Formula-1 WA1212 (Tritium Dial)",
     year: 1995,
     type: WatchTypeEnum.SPORTS,
     srcImage: "public/assets/Images/Tag_Heuer/1998_Tag_Heuer_F1_WA1212/IMG_5027.JPG",
     href: require("./watchModels/Tag_Heuer/Tag_Heuer_Formula_1_WA1212_Tritium_1995"),
     specialCollectionItem: false,
   },
-  "1995 Tag Heuer Professional Formula-1 WA1219 (Rubber)": {
+  "Tag Heuer Professional Formula-1 WA1219 (Rubber)": {
     brand: BrandsEnum.TAG_HEUER,
-    legend: "1995 Tag Heuer Professional Formula-1 WA1219 (Rubber)",
+    legend: "Tag Heuer Professional Formula-1 WA1219 (Rubber)",
     year: 1995,
     type: WatchTypeEnum.SPORTS,
     srcImage: "public/assets/Images/Tag_Heuer/1998_Tag_Heuer_F1_WA1219/IMG_4771.JPG",
     href: require("./watchModels/Tag_Heuer/Tag_Heuer_Formula_1_WA1219_R_1995"),
     specialCollectionItem: false,
   },
-  "1995 Tag Heuer Professional Formula-1 WA1211 (Tritium Dial)": {
+  "Tag Heuer Professional Formula-1 WA1211 (Tritium Dial)": {
     brand: BrandsEnum.TAG_HEUER,
-    legend: "1995 Tag Heuer Professional Formula-1 WA1211 (Tritium Dial)",
+    legend: "Tag Heuer Professional Formula-1 WA1211 (Tritium Dial)",
     year: 1995,
     type: WatchTypeEnum.SPORTS,
     srcImage: "public/assets/Images/Tag_Heuer/1994_Tag_Heuer_F1_WA1211/IMG_0351.JPG",
     href: require("./watchModels/Tag_Heuer/Tag_Heuer_Formula_1_WA1211_Tritium_1995"),
     specialCollectionItem: false,
   },
-  "1994 Breitling Chronomat 10ht Anniversary Limitd Edition A13050": {
+  "Breitling Chronomat 10ht Anniversary Limitd Edition A13050": {
     brand: BrandsEnum.BREITLING,
-    legend: "1994 Breitling Chronomat 10ht Anniversary Limitd Edition A13050",
+    legend: "Breitling Chronomat 10ht Anniversary Limitd Edition A13050",
     year: 1994,
     type: WatchTypeEnum.SPORTS,
     srcImage:
@@ -881,72 +886,72 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     specialCollectionItem: true,
   },
 
-  "1994 Seiko 6M13 Perpetual Calendar": {
+  "Seiko 6M13 Perpetual Calendar": {
     brand: BrandsEnum.SEIKO,
-    legend: "1994 Seiko 6M13 Perpetual Calendar",
+    legend: "Seiko 6M13 Perpetual Calendar",
     year: 1994,
     type: WatchTypeEnum.DRESS,
     srcImage: "public/assets/Images/Seiko/1994_Seiko_6M13_Perpetual_Calendar/IMG_8180.JPG",
     href: require("./watchModels/Seiko/Seiko_6M13_Perpetual_Calendar_1994"),
     specialCollectionItem: false,
   },
-  "1993 Tissot L395 Chronograph": {
+  "Tissot L395 Chronograph": {
     brand: BrandsEnum.TISSOT,
-    legend: "1993 Tissot L395 Chronograph",
+    legend: "Tissot L395 Chronograph",
     year: 1993,
     type: WatchTypeEnum.SPORTS,
     srcImage: "public/assets/Images/Tissot/1993_Tissot_L936_Chrono/IMG_7482.JPG",
     href: require("./watchModels/Tissot/Tissot_L396_Chrono_1993"),
     specialCollectionItem: false,
   },
-  "1993 Eletta Chronograph OS60": {
+  "Eletta Chronograph OS60": {
     brand: BrandsEnum.PORTUGUESE_BRANDS,
-    legend: "1993 Eletta Chronograph OS60",
+    legend: "Eletta Chronograph OS60",
     year: 1993,
     type: WatchTypeEnum.SPORTS,
     srcImage: "public/assets/Images/Elleta/Eletta_Chrono_OS60_1993/IMG_7372.JPG",
     href: require("./watchModels/Eletta/Eletta_OS60_Chrono_1993"),
     specialCollectionItem: false,
   },
-  "1996 Royal Geographical Society": {
+  "Royal Geographical Society": {
     brand: BrandsEnum.ROYAL_GEOGRAPHICAL_SOCIETY,
-    legend: "1996 Royal Geographical Society",
+    legend: "Royal Geographical Society",
     year: 1996,
     type: WatchTypeEnum.DRESS,
     srcImage: "public/assets/Images/Delma/1996_Delma_Royal_Geographical/IMG_7005.JPG",
     href: require("./watchModels/Delma/Delma_RoyalGeographical_1996"),
     specialCollectionItem: false,
   },
-  "1996 Royal Geographical Society Chronograph": {
+  "Royal Geographical Society Chronograph": {
     brand: BrandsEnum.ROYAL_GEOGRAPHICAL_SOCIETY,
-    legend: "1996 Royal Geographical Society Chronograph",
+    legend: "Royal Geographical Society Chronograph",
     year: 1996,
     type: WatchTypeEnum.DRESS,
     srcImage: "public/assets/Images/Delma/1995_Delma_RoyalGeographical/IMG_4734.JPG",
     href: require("./watchModels/Delma/Delma_RoyalGeographical_ETA251_1996"),
     specialCollectionItem: false,
   },
-  "1996 Mercedes Benz SLK Edition Chrono": {
+  "Mercedes Benz SLK Edition Chrono": {
     brand: BrandsEnum.MOTORSPORT_BRANDS,
-    legend: "1996 Mercedes Benz SLK Edition Chrono",
+    legend: "Mercedes Benz SLK Edition Chrono",
     year: 1996,
     type: WatchTypeEnum.SPORTS,
     srcImage: "public/assets/Images/Mercedes/1996_Mercedes_SLK_Edition_ISA818/IMG_0498.JPG",
     href: require("./watchModels/Mercedes/Mercedes_Benz_SLK_Edition_1996"),
     specialCollectionItem: false,
   },
-  "1995 Greenwich Premier Chronograph": {
+  "Greenwich Premier Chronograph": {
     brand: BrandsEnum.GREENWICH,
-    legend: "1995 Greenwich Premier Chronograph",
+    legend: "Greenwich Premier Chronograph",
     year: 1995,
     type: WatchTypeEnum.SPORTS,
     srcImage: "public/assets/Images/Greenwich/1995_Greenwich_Premier/IMG_1761.JPG",
     href: require("./watchModels/Greenwich/Greenwich_Premier_ETA251_Chrono_1995"),
     specialCollectionItem: false,
   },
-  "1995 Latino Excellence": {
+  "Latino Excellence": {
     brand: BrandsEnum.PORTUGUESE_BRANDS,
-    legend: "1995 Latino Excellence",
+    legend: "Latino Excellence",
     year: 1995,
     type: WatchTypeEnum.CASUAL,
     srcImage: "public/assets/Images/Latino/1995_Latino_ETA/IMG_6042.JPG",
@@ -954,153 +959,153 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     specialCollectionItem: false,
   },
 
-  "1995 Tissot Ballade Seastar": {
+  "Tissot Ballade Seastar": {
     brand: BrandsEnum.TISSOT,
-    legend: "1995 Tissot Ballade Seastar",
+    legend: "Tissot Ballade Seastar",
     year: 1995,
     type: WatchTypeEnum.DRESS,
     srcImage: "public/assets/Images/Tissot/1995_Tissot_Seastar/IMG_1051.JPG",
     href: require("./watchModels/Tissot/Tissot_Ballade_Seastar_1995"),
     specialCollectionItem: false,
   },
-  "1993 Tissot PRX P376 Valjoux 7750": {
+  "Tissot PRX P376 Valjoux 7750": {
     brand: BrandsEnum.TISSOT,
-    legend: "1993 Tissot PRX P376 Valjoux 7750",
+    legend: "Tissot PRX P376 Valjoux 7750",
     year: 1993,
     type: WatchTypeEnum.DRESS,
     srcImage: "public/assets/Images/Tissot/1993_Tissot_PRX_P376_7750/IMG_6397.JPG",
     href: require("./watchModels/Tissot/Tissot_PRX_P376_Auto_7750_1993"),
     specialCollectionItem: false,
   },
-  "1993 Festina F6602 Titanium": {
+  "Festina F6602 Titanium": {
     brand: BrandsEnum.FESTINA_GROUP,
-    legend: "1993 Festina F6602 Titanium",
+    legend: "Festina F6602 Titanium",
     year: 1993,
     type: WatchTypeEnum.SPORTS,
     srcImage: "public/assets/Images/Festina/1993_Festina_F6602_Titanium/IMG_3149.JPG",
     href: require("./watchModels/Festina/Festina_F6602_MultiFunction_1993"),
     specialCollectionItem: false,
   },
-  "1993 Lorus N945 7A10 Multi-Function Chronograph": {
+  "Lorus N945 7A10 Multi-Function Chronograph": {
     brand: BrandsEnum.LORUS,
-    legend: "1993 Lorus N945 7A10 Multi-Function Chronograph",
+    legend: "Lorus N945 7A10 Multi-Function Chronograph",
     year: 1993,
     type: WatchTypeEnum.SPORTS,
     srcImage: "public/assets/Images/Lorus/1993_Lorus_N945_7A10/IMG_2023.JPG",
     href: require("./watchModels/Lorus/Lorus_N945_7A10_MultiFunction_1993"),
     specialCollectionItem: false,
   },
-  "1993 Lorus N945 7A90 Multi-Function Chronograph": {
+  "Lorus N945 7A90 Multi-Function Chronograph": {
     brand: BrandsEnum.LORUS,
-    legend: "1993 Lorus N945 7A90 Multi-Function Chronograph",
+    legend: "Lorus N945 7A90 Multi-Function Chronograph",
     year: 1993,
     type: WatchTypeEnum.SPORTS,
     srcImage: "public/assets/Images/Lorus/1993_Lorus_N945_7A90/IMG_0698.JPG",
     href: require("./watchModels/Lorus/Lorus_N945_7A90_MultiFunction_1993"),
     specialCollectionItem: false,
   },
-  "1992 Omega Olympia Winter Olympics Albertville Ltd. 305/499": {
+  "Omega Olympia Winter Olympics Albertville Ltd. 305/499": {
     brand: BrandsEnum.OMEGA,
-    legend: "1992 Omega Olympia Winter Olympics Albertville Ltd. 305/499",
+    legend: "Omega Olympia Winter Olympics Albertville Ltd. 305/499",
     year: 1992,
     type: WatchTypeEnum.SPORTS,
     srcImage: "public/assets/Images/Omega/1992_Polaris_Albertville_386_1031_500/IMG_8770.JPG",
     href: require("./watchModels/Omega/Omega_Olympia_Albertville_500_386_1031_1992"),
     specialCollectionItem: true,
   },
-  "1992 Omega Olympia Winter Olympics Albertville Ltd. 820/3000": {
+  "Omega Olympia Winter Olympics Albertville Ltd. 820/3000": {
     brand: BrandsEnum.OMEGA,
-    legend: "1992 Omega Olympia Winter Olympics Albertville Ltd. 820/3000",
+    legend: "Omega Olympia Winter Olympics Albertville Ltd. 820/3000",
     year: 1992,
     type: WatchTypeEnum.SPORTS,
     srcImage: "public/assets/Images/Omega/1992_Polaris_Albertville_386_1031_3000/IMG_8710.JPG",
     href: require("./watchModels/Omega/Omega_Olympia_Albertville_3000_386_1031_1992"),
     specialCollectionItem: true,
   },
-  "1992 Seiko 8M25 Age of Discovery": {
+  "Seiko 8M25 Age of Discovery": {
     brand: BrandsEnum.SEIKO,
-    legend: "1992 Seiko 8M25 Age of Discovery",
+    legend: "Seiko 8M25 Age of Discovery",
     year: 1992,
     type: WatchTypeEnum.DRESS,
     srcImage: "public/assets/Images/Seiko/1992_Seiko_8M25_Age_Of_Discoveries/IMG_6682.JPG",
     href: require("./watchModels/Seiko/Seiko_8M25_Age_Of_Discoveries.1992"),
     specialCollectionItem: false,
   },
-  "1992 Seiko 6M13 Age of Discovery": {
+  "Seiko 6M13 Age of Discovery": {
     brand: BrandsEnum.SEIKO,
-    legend: "1992 Seiko 6M13 Age of Discovery",
+    legend: "Seiko 6M13 Age of Discovery",
     year: 1992,
     type: WatchTypeEnum.DRESS,
     srcImage: "public/assets/Images/Seiko/1992_Seiko_6M13_0010_Perpetual_Calendar/IMG_3177.JPG",
     href: require("./watchModels/Seiko/Seiko_6M13_0010_Perpetual_Calendar_1992"),
     specialCollectionItem: false,
   },
-  "1992 Seiko 6M25 Dancing Hands Chrono": {
+  "Seiko 6M25 Dancing Hands Chrono": {
     brand: BrandsEnum.SEIKO,
-    legend: "1992 Seiko 6M25 Dancing Hands Chrono",
+    legend: "Seiko 6M25 Dancing Hands Chrono",
     year: 1992,
     type: WatchTypeEnum.CASUAL,
     srcImage: "public/assets/Images/Seiko/1992_Seiko_6M25/IMG_1843.JPG",
     href: require("./watchModels/Seiko/Seiko_6M25_Chronograph_1992"),
     specialCollectionItem: false,
   },
-  "1991 Seiko 7T36 Moonphase Chrono - Age of Discoveries": {
+  "Seiko 7T36 Moonphase Chrono - Age of Discoveries": {
     brand: BrandsEnum.SEIKO,
-    legend: "1991 Seiko 7T36 Moonphase Chrono - Age of Discoveries",
+    legend: "Seiko 7T36 Moonphase Chrono - Age of Discoveries",
     year: 1991,
     type: WatchTypeEnum.CASUAL,
     srcImage: "public/assets/Images/Seiko/1991_Seiko_7T36_7410_Moonphase_chrono/IMG_3430.JPG",
     href: require("./watchModels/Seiko/Seiko_7T32_7410_Moonphase_1991"),
     specialCollectionItem: false,
   },
-  "1991 Pryngeps Regolo 1467": {
+  "Pryngeps Regolo 1467": {
     brand: BrandsEnum.PRYNGEPS,
-    legend: "1991 Pryngeps Regolo 1467",
+    legend: "Pryngeps Regolo 1467",
     year: 1991,
     type: WatchTypeEnum.CASUAL,
     srcImage: "public/assets/Images/Pryngeps/1990_Pryngeps_Regolo/IMG_1605.JPG",
     href: require("./watchModels/Pryngeps/Pryngeps_Regolo_1467_1991"),
     specialCollectionItem: false,
   },
-  "1991 Tag Heuer Professional 875-206 Chronograph": {
+  "Tag Heuer Professional 875-206 Chronograph": {
     brand: BrandsEnum.TAG_HEUER,
-    legend: "1991 Tag Heuer Professional 875-206 Chronograph",
+    legend: "Tag Heuer Professional 875-206 Chronograph",
     year: 1991,
     type: WatchTypeEnum.DIVE,
     srcImage: "public/assets/Images/Tag_Heuer/1991_Tag_Heuer_DD2000_875_206/IMG_6794.JPG",
     href: require("./watchModels/Tag_Heuer/Tag_Heuer_LWO_283_875206_1991"),
     specialCollectionItem: true,
   },
-  "1991 Tag Heuer Professional 2000": {
+  "Tag Heuer Professional 2000 Automatic": {
     brand: BrandsEnum.TAG_HEUER,
-    legend: "1991 Tag Heuer Professional 2000",
+    legend: "Tag Heuer Professional 2000 Automatic",
     year: 1991,
     type: WatchTypeEnum.DIVE,
     srcImage: "public/assets/Images/Tag_Heuer/1991_Tag_Heuer_2000_Automatic_WE2211/IMG_6690.JPG",
     href: require("./watchModels/Tag_Heuer/Tag_Heuer_Professional_2000_Auto_1991"),
     specialCollectionItem: false,
   },
-  "1991 Tissot PRX P475 Chronograph": {
+  "Tissot PRX P475 Chronograph": {
     brand: BrandsEnum.TISSOT,
-    legend: "1991 Tissot PRX P475 Chronograph",
+    legend: "Tissot PRX P475 Chronograph",
     year: 1991,
     type: WatchTypeEnum.SPORTS,
     srcImage: "public/assets/Images/Tissot/1991_Tissot_PRX_P475_Chrono/IMG_6881.JPG",
     href: require("./watchModels/Tissot/Tissot_PRX_P475_Chrono_1991"),
     specialCollectionItem: false,
   },
-  "1990 Pryngeps Regolo 1467": {
+  "Pryngeps Regolo Prepetual 1467": {
     brand: BrandsEnum.PRYNGEPS,
-    legend: "1990 Pryngeps Regolo 1467",
+    legend: "Pryngeps Regolo Prepetual 1467",
     year: 1990,
     type: WatchTypeEnum.CASUAL,
     srcImage: "public/assets/Images/Pryngeps/1990_Pryngeps_Regolo_II/IMG_0656.JPG",
     href: require("./watchModels/Pryngeps/Pryngeps_Regolo_1467_1990"),
     specialCollectionItem: false,
   },
-  "1990 Seiko Two Tone 0390": {
+  "Seiko Two Tone 0390": {
     brand: BrandsEnum.SEIKO,
-    legend: "1990 Seiko Two Tone 0390",
+    legend: "Seiko Two Tone 0390",
     year: 1990,
     type: WatchTypeEnum.CASUAL,
     srcImage: "public/assets/Images/Seiko/1990_Seiko_V732_0390/IMG_3871.JPG",
@@ -1108,45 +1113,45 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     specialCollectionItem: false,
   },
 
-  "1990 Raymond Weil Tradition Mécanique": {
+  "Raymond Weil Tradition Mécanique": {
     brand: BrandsEnum.RAYMOND_WEIL,
-    legend: "1990 Raymond Weil Tradition Mécanique",
+    legend: "Raymond Weil Tradition Mécanique",
     year: 1990,
     type: WatchTypeEnum.DRESS,
     srcImage: "public/assets/Images/Raymond_Weil/1990_Raymond_Weil_7760/IMG_2019.JPG",
     href: require("./watchModels/Raymond_Weil/Raymond_Weil_Tradition_Mecanique_7760_1990"),
     specialCollectionItem: true,
   },
-  "1988 Raymond Weil Automatic 2809": {
+  "Raymond Weil Automatic 2809": {
     brand: BrandsEnum.RAYMOND_WEIL,
-    legend: "1988 Raymond Weil Automatic 2809",
+    legend: "Raymond Weil Automatic 2809",
     year: 1988,
     type: WatchTypeEnum.DRESS,
     srcImage: "public/assets/Images/Raymond_Weil/1988_Raymond_Weil_2809_Auto/IMG_4659.JPG",
     href: require("./watchModels/Raymond_Weil/Raymond_Weil_2809_Automatic_1988"),
     specialCollectionItem: false,
   },
-  "1988 Omega Olympia Winter Olympics Calgary And Seoul Limited 457/1000": {
+  "Omega Olympia Winter Olympics Calgary And Seoul Limited 457/1000": {
     brand: BrandsEnum.OMEGA,
-    legend: "1988 Omega Olympia Winter Olympics Calgary And Seoul Limited 457/1000",
+    legend: "Omega Olympia Winter Olympics Calgary And Seoul Limited 457/1000",
     year: 1988,
     type: WatchTypeEnum.SPORTS,
     srcImage: "public/assets/Images/Omega/1988_Polaris_Calgary_Seoul_386_1232_1000/IMG_8702.JPG",
     href: require("./watchModels/Omega/Omega_Olympia_Calgary_Seoul_1988"),
     specialCollectionItem: true,
   },
-  "1988 Omega Polaris Multifunction 386.0826": {
+  "Omega Polaris Multifunction 386.0826": {
     brand: BrandsEnum.OMEGA,
-    legend: "1988 Omega Polaris Multifunction 386.0826",
+    legend: "Omega Polaris Multifunction 386.0826",
     year: 1988,
     type: WatchTypeEnum.CASUAL,
     srcImage: "public/assets/Images/Omega/1988_Polaris_AnaDigi_Black_386_0826/IMG_1428.JPG",
     href: require("./watchModels/Omega/Omega_Polaris_MultiFunction_386_0826_1988"),
     specialCollectionItem: false,
   },
-  "1988 Omega Polaris Multifunction 386.0822": {
+  "Omega Polaris Multifunction Gray LCD 386.0822": {
     brand: BrandsEnum.OMEGA,
-    legend: "1988 Omega Polaris Multifunction 386.0822",
+    legend: "Omega Polaris Multifunction Gray LCD 386.0822",
     year: 1988,
     type: WatchTypeEnum.CASUAL,
     srcImage:
@@ -1154,54 +1159,54 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     href: require("./watchModels/Omega/Omega_Polaris_MultiFunction_386_0826_plated_1988"),
     specialCollectionItem: false,
   },
-  "1987 Omega Seamaster Polaris 396.1022": {
+  "Omega Seamaster Polaris 396.1022": {
     brand: BrandsEnum.OMEGA,
-    legend: "1987 Omega Seamaster Polaris 396.1022",
+    legend: "Omega Seamaster Polaris 396.1022",
     year: 1987,
     type: WatchTypeEnum.CASUAL,
     srcImage: "public/assets/Images/Omega/1987_Polaris_396_1022/IMG_1339.JPG",
     href: require("./watchModels/Omega/Omega_Polaris_396_1022_1987"),
     specialCollectionItem: false,
   },
-  "1987 Omega Seamaster GMT 396.1122": {
+  "Omega Seamaster GMT 396.1122": {
     brand: BrandsEnum.OMEGA,
-    legend: "1987 Omega Seamaster GMT 396.1122",
+    legend: "Omega Seamaster GMT 396.1122",
     year: 1987,
     type: WatchTypeEnum.CASUAL,
     srcImage: "public/assets/Images/Omega/1987_Polaris_GMT_396_1122/IMG_7199.JPG",
     href: require("./watchModels/Omega/Omega_Polaris_GMT_396_1122_1987"),
     specialCollectionItem: false,
   },
-  "1987 Omega Polaris Calendar 396.1222": {
+  "Omega Polaris Calendar 396.1222": {
     brand: BrandsEnum.OMEGA,
-    legend: "1987 Omega Polaris Calendar 396.1222",
+    legend: "Omega Polaris Calendar 396.1222",
     year: 1987,
     type: WatchTypeEnum.CASUAL,
     srcImage: "public/assets/Images/Omega/1987_Polaris_Calendar_396_1222/IMG_1300.JPG",
     href: require("./watchModels/Omega/Omega_Polaris_Calendar_396_1222_1987"),
     specialCollectionItem: false,
   },
-  "1987 Lorenz Montecarlo Sub 666ft": {
+  "Lorenz Montecarlo Sub 666ft": {
     brand: BrandsEnum.LORENZ,
-    legend: "1987 Lorenz Montecarlo Sub 666ft",
+    legend: "Lorenz Montecarlo Sub 666ft",
     year: 1987,
     type: WatchTypeEnum.DIVE,
     srcImage: "public/assets/Images/Lorenz/1987_Lorenz_Montecarlo_600ft/IMG_0686.JPG",
     href: require("./watchModels/Lorenz/Lorenz_Montecarlo_600ft_1987"),
     specialCollectionItem: false,
   },
-  "1987 Tag Heuer Professional 262.006-1 Chronograph": {
+  "Tag Heuer Professional 262.006-1 Chronograph": {
     brand: BrandsEnum.TAG_HEUER,
-    legend: "1987 Tag Heuer Professional 262.006-1 Chronograph",
+    legend: "Tag Heuer Professional 262.006-1 Chronograph",
     year: 1987,
     type: WatchTypeEnum.SPORTS,
     srcImage: "public/assets/Images/Tag_Heuer/1987_Tag_Heuer_DD2000_262_0061/IMG_6720.JPG",
     href: require("./watchModels/Tag_Heuer/Tag_Heuer_ProChrono_2620061_1987"),
     specialCollectionItem: true,
   },
-  "1986 Omega Polaris Multifunction 386.0822": {
+  "Omega Polaris Multifunction Black LCD 386.0822": {
     brand: BrandsEnum.OMEGA,
-    legend: "1986 Omega Polaris Multifunction 386.0822",
+    legend: "Omega Polaris Multifunction Black LCD 386.0822",
     year: 1986,
     type: WatchTypeEnum.CASUAL,
     srcImage: "public/assets/Images/Omega/1988_Polaris_AnaDigi_386_0820/IMG_7116.JPG",
@@ -1209,63 +1214,63 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     specialCollectionItem: false,
   },
 
-  "1985 Tag Heuer Professional 272.006-1 Chronograph": {
+  "Tag Heuer Professional 272.006-1 Chronograph": {
     brand: BrandsEnum.TAG_HEUER,
-    legend: "1985 Tag Heuer Professional 272.006-1 Chronograph",
+    legend: "Tag Heuer Professional 272.006-1 Chronograph",
     year: 1985,
     type: WatchTypeEnum.SPORTS,
     srcImage: "public/assets/Images/Tag_Heuer/1985_Tag_Heuer_2000_Chrono/IMG_0535.JPG",
     href: require("./watchModels/Tag_Heuer/Tag_Heuer_ProChrono_2720061_1985"),
     specialCollectionItem: true,
   },
-  "1985 Heuer Airline Professional 895.513": {
+  "Heuer Airline Professional 895.513": {
     brand: BrandsEnum.TAG_HEUER,
-    legend: "1985 Heuer Airline Professional 895.513",
+    legend: "Heuer Airline Professional 895.513",
     year: 1985,
     type: WatchTypeEnum.SPORTS,
     srcImage: "public/assets/Images/Tag_Heuer/1985_Heuer_Airline/IMG_2798.JPG",
     href: require("./watchModels/Tag_Heuer/Heuer_Airline_Professional_895513_1985"),
     specialCollectionItem: true,
   },
-  "1985 Tissot Le Locle Seastar": {
+  "Tissot Le Locle Seastar": {
     brand: BrandsEnum.TISSOT,
-    legend: "1985 Tissot Le Locle Seastar",
+    legend: "Tissot Le Locle Seastar",
     year: 1985,
     type: WatchTypeEnum.DRESS,
     srcImage: "public/assets/Images/Tissot/1985_Tissot_Le_Locle/IMG_4351.JPG",
     href: require("./watchModels/Tissot/Tissot_Le_Locle_Seastar_1985"),
     specialCollectionItem: false,
   },
-  "1984 Omega Seamaster Polaris Titanium 396.1100": {
+  "Omega Seamaster Polaris Titanium 396.1100": {
     brand: BrandsEnum.OMEGA,
-    legend: "1984 Omega Seamaster Polaris Titanium 396.1100",
+    legend: "Omega Seamaster Polaris Titanium 396.1100",
     year: 1984,
     type: WatchTypeEnum.CASUAL,
     srcImage: "public/assets/Images/Omega/1984_Polaris_Titanium_396_1100/IMG_1580.JPG",
     href: require("./watchModels/Omega/Omega_Polaris_Titanium_396_1100_1984"),
     specialCollectionItem: false,
   },
-  "1982 Omega De Ville 191.0077 Cal. 1365": {
+  "Omega De Ville 191.0077 Cal. 1365": {
     brand: BrandsEnum.OMEGA,
-    legend: "1982 Omega De Ville 191.0077 Cal. 1365",
+    legend: "Omega De Ville 191.0077 Cal. 1365",
     year: 1982,
     type: WatchTypeEnum.DRESS,
     srcImage: "public/assets/Images/Omega/1982_Omega_1910077_DeVille/IMG_2181.JPG",
     href: require("./watchModels/Omega/Omega_DeVille_1910077_Cal_1365_1982"),
     specialCollectionItem: false,
   },
-  "1980 Timex Marlim": {
+  "Timex Marlim": {
     brand: BrandsEnum.TIMEX,
-    legend: "1980 Timex Marlim",
+    legend: "Timex Marlim",
     year: 1980,
     type: WatchTypeEnum.DRESS,
     srcImage: "public/assets/Images/Timex/1980_Timex_Marlin_M100/IMG_0917.JPG",
     href: require("./watchModels/Timex/Timex_Marlin_1980"),
     specialCollectionItem: false,
   },
-  "1979 Tissot PR 516 Quartz": {
+  "Tissot PR 516 Quartz": {
     brand: BrandsEnum.TISSOT,
-    legend: "1979 Tissot PR 516 Quartz",
+    legend: "Tissot PR 516 Quartz",
     year: 1979,
     type: WatchTypeEnum.SPORTS,
     srcImage: "public/assets/Images/Tissot/1979_Tissot_PR_516_Quartz/IMG_4797.JPG",
@@ -1273,243 +1278,243 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     specialCollectionItem: false,
   },
 
-  "1979 Tissot Seastar LeLocle Cal.2031": {
+  "Tissot Seastar LeLocle Cal.2031": {
     brand: BrandsEnum.TISSOT,
-    legend: "1979 Tissot Seastar LeLocle Cal.2031",
+    legend: "Tissot Seastar LeLocle Cal.2031",
     year: 1979,
     type: WatchTypeEnum.CASUAL,
     srcImage: "public/assets/Images/Tissot/1979_Tissot_Seastar_LeLocle/IMG_0215.JPG",
     href: require("./watchModels/Tissot/Tissot_SeaStar_LeLocle_1979"),
     specialCollectionItem: false,
   },
-  "1979 Tissot Quartz Cal.2031": {
+  "Tissot Quartz Cal.2031": {
     brand: BrandsEnum.TISSOT,
-    legend: "1979 Tissot Quartz Cal.2031",
+    legend: "Tissot Quartz Cal.2031",
     year: 1979,
     type: WatchTypeEnum.DRESS,
     srcImage: "public/assets/Images/Tissot/1979_Tissot_Quartz/IMG_4669.JPG",
     href: require("./watchModels/Tissot/Tissot_Quartz_1979"),
     specialCollectionItem: false,
   },
-  "1978 Tissot Seastar Quartz Cal.2031": {
+  "Tissot Seastar Quartz Cal.2031": {
     brand: BrandsEnum.TISSOT,
-    legend: "1978 Tissot Seastar Quartz Cal.2031",
+    legend: "Tissot Seastar Quartz Cal.2031",
     year: 1978,
     type: WatchTypeEnum.CASUAL,
     srcImage: "public/assets/Images/Tissot/1978_Tissot_Seastar_Quartz/IMG_0982.JPG",
     href: require("./watchModels/Tissot/Tissot_SeaStar_Quartz_1978"),
     specialCollectionItem: false,
   },
-  "1977 Omega Seamaster 196.0079 Cal. 1342": {
+  "Omega Seamaster 196.0079 Cal. 1342": {
     brand: BrandsEnum.OMEGA,
-    legend: "1977 Omega Seamaster 196.0079 Cal. 1342",
+    legend: "Omega Seamaster 196.0079 Cal. 1342",
     year: 1977,
     type: WatchTypeEnum.CASUAL,
     srcImage: "public/assets/Images/Omega/1977_Omega_1960079_Seamaster/IMG_1911.JPG",
     href: require("./watchModels/Omega/Omega_Seamaster_1960079_1977"),
     specialCollectionItem: false,
   },
-  "1977 Omega 196.0122 Cal. 1370": {
+  "Omega 196.0122 Cal. 1370": {
     brand: BrandsEnum.OMEGA,
-    legend: "1977 Omega 196.0122 Cal. 1370",
+    legend: "Omega 196.0122 Cal. 1370",
     year: 1977,
     type: WatchTypeEnum.CASUAL,
     srcImage: "public/assets/Images/Omega/1977_Omega_1960122/IMG_0225.JPG",
     href: require("./watchModels/Omega/Omega_1960122_Cal_1370_1977"),
     specialCollectionItem: false,
   },
-  "1976 Omega De Ville 191.0167 Cal. 1365": {
+  "Omega De Ville 191.0167 Cal. 1365": {
     brand: BrandsEnum.OMEGA,
-    legend: "1976 Omega De Ville 191.0167 Cal. 1365",
+    legend: "Omega De Ville 191.0167 Cal. 1365",
     year: 1976,
     type: WatchTypeEnum.DRESS,
     srcImage: "public/assets/Images/Omega/1976_Omega_1910167_DeVille/IMG_1301.JPG",
     href: require("./watchModels/Omega/Omega_DeVille_1910167_Cal_1365_1976"),
     specialCollectionItem: false,
   },
-  "1976 Seiko 6306-7001": {
+  "Seiko 6306-7001": {
     brand: BrandsEnum.SEIKO,
-    legend: "1976 Seiko 6306-7001",
+    legend: "Seiko 6306-7001",
     year: 1976,
     type: WatchTypeEnum.DIVE,
     srcImage: "public/assets/Images/Seiko/1976_Seiko_6306_7001/IMG_6479.JPG",
     href: require("./watchModels/Seiko/Seiko_6306_7001_1976"),
     specialCollectionItem: true,
   },
-  "1976 Seiko Type II 4004": {
+  "Seiko Type II 4004": {
     brand: BrandsEnum.SEIKO,
-    legend: "1976 Seiko Type II 4004",
+    legend: "Seiko Type II 4004",
     year: 1976,
     type: WatchTypeEnum.CASUAL,
     srcImage: "public/assets/Images/Seiko/1976_Seiko_4004/IMG_4093.JPG",
     href: require("./watchModels/Seiko/Seiko_4004_1976"),
     specialCollectionItem: false,
   },
-  "1976 Romar Incabloc Green 17 Jewels": {
+  "Romar Incabloc Green 17 Jewels": {
     brand: BrandsEnum.PORTUGUESE_BRANDS,
-    legend: "1976 Romar Incabloc Green 17 Jewels",
+    legend: "Romar Incabloc Green 17 Jewels",
     year: 1976,
     type: WatchTypeEnum.CASUAL,
     srcImage: "public/assets/Images/Romar/1976_Romar_Incabloc_Green_U6380/IMG_5648.JPG",
     href: require("./watchModels/Romar/Romar_Incabloc_17Jewels_Green_1976"),
     specialCollectionItem: false,
   },
-  "1976 Romar Incabloc 17 Jewels": {
+  "Romar Incabloc 17 Jewels": {
     brand: BrandsEnum.PORTUGUESE_BRANDS,
-    legend: "1976 Romar Incabloc 17 Jewels",
+    legend: "Romar Incabloc 17 Jewels",
     year: 1976,
     type: WatchTypeEnum.CASUAL,
     srcImage: "public/assets/Images/Romar/1976_Romar_Incabloc_U6380/IMG_7999.JPG",
     href: require("./watchModels/Romar/Romar_Incabloc_17Jewels_1976"),
     specialCollectionItem: false,
   },
-  "1976 Novart Incabloc 17 Jewels": {
+  "Novart Incabloc 17 Jewels": {
     brand: BrandsEnum.NOVART,
-    legend: "1976 Novart Incabloc 17 Jewels",
+    legend: "Novart Incabloc 17 Jewels",
     year: 1976,
     type: WatchTypeEnum.CASUAL,
     srcImage: "public/assets/Images/Novart/1976_Novart_Incabloc_White/IMG_3959.JPG",
     href: require("./watchModels/Novart/Novart_Incabloc_white_17Jewels_1976"),
     specialCollectionItem: false,
   },
-  "1975 Lucerne Automatic 25 Jewels": {
+  "Lucerne Automatic 25 Jewels": {
     brand: BrandsEnum.LUCERNE,
-    legend: "1975 Lucerne Automatic 25 Jewels",
+    legend: "Lucerne Automatic 25 Jewels",
     year: 1975,
     type: WatchTypeEnum.DIVE,
     srcImage: "public/assets/Images/Lucerne/1975_Lucerne_Dive/IMG_0443.JPG",
     href: require("./watchModels/Lucerne/Lucerne_Automatic_27J_1975"),
     specialCollectionItem: false,
   },
-  "1975 Lucerne Three Stars": {
+  "Lucerne Three Stars": {
     brand: BrandsEnum.LUCERNE,
-    legend: "1975 Lucerne Three Stars",
+    legend: "Lucerne Three Stars",
     year: 1975,
     type: WatchTypeEnum.CASUAL,
     srcImage: "public/assets/Images/Lucerne/1975_Lucerne_PR/IMG_1472.JPG",
     href: require("./watchModels/Lucerne/Lucerne_Three_Stars_1975"),
     specialCollectionItem: false,
   },
-  "1975 Martini Special 17 Rubis NOS": {
+  "Martini Special 17 Rubis NOS": {
     brand: BrandsEnum.PORTUGUESE_BRANDS,
-    legend: "1975 Martini Special 17 Rubis NOS",
+    legend: "Martini Special 17 Rubis NOS",
     year: 1975,
     type: WatchTypeEnum.CASUAL,
     srcImage: "public/assets/Images/Martini/1975_Martini_Special/IMG_2787.JPG",
     href: require("./watchModels/Martini/Martini_Special_17Rubis_1975"),
     specialCollectionItem: false,
   },
-  "1975 Miura Calendar 17 Rubis": {
+  "Miura Calendar 17 Rubis": {
     brand: BrandsEnum.PORTUGUESE_BRANDS,
-    legend: "1975 Miura Calendar 17 Rubis",
+    legend: "Miura Calendar 17 Rubis",
     year: 1975,
     type: WatchTypeEnum.CASUAL,
     srcImage: "public/assets/Images/Miura/1975_Miura/IMG_2764.JPG",
     href: require("./watchModels/Miura/Miura_Calendar_17Rubis_1975"),
     specialCollectionItem: false,
   },
-  "1975 Monumental Automatic Dive 200M": {
+  "Monumental Automatic Dive 200M": {
     brand: BrandsEnum.PORTUGUESE_BRANDS,
-    legend: "1975 Monumental Automatic Dive 200M",
+    legend: "Monumental Automatic Dive 200M",
     year: 1975,
     type: WatchTypeEnum.DIVE,
     srcImage: "public/assets/Images/Monumental/1975_Monumental_Swiss/IMG_0327.JPG",
     href: require("./watchModels/Monumental/Monumental_Automatic_200M_1975"),
     specialCollectionItem: false,
   },
-  "1975 Pryngeps Autavia Chronograph": {
+  "Pryngeps Autavia Chronograph": {
     brand: BrandsEnum.PRYNGEPS,
-    legend: "1975 Pryngeps Autavia Chronograph",
+    legend: "Pryngeps Autavia Chronograph",
     year: 1975,
     type: WatchTypeEnum.CASUAL,
     srcImage: "public/assets/Images/Pryngeps/1975_Pryngeps_7750/IMG_1989.JPG",
     href: require("./watchModels/Pryngeps/Pryngeps_Automatic_Chronograph_Valjoux_7750"),
     specialCollectionItem: true,
   },
-  "1974 Hipco Incabloc 17 Jewels": {
+  "Hipco Incabloc 17 Jewels": {
     brand: BrandsEnum.PORTUGUESE_BRANDS,
-    legend: "1974 Hipco Incabloc 17 Jewels",
+    legend: "Hipco Incabloc 17 Jewels",
     year: 1974,
     type: WatchTypeEnum.CASUAL,
     srcImage: "public/assets/Images/Hipco/1974_HIPCO_Incabloc_U6380/IMG_7965.JPG",
     href: require("./watchModels/Hipco/Hipco_Incabloc_17Jewels_1974"),
     specialCollectionItem: false,
   },
-  "1974 Novart Tides 17 Jewels": {
+  "Novart Tides 17 Jewels": {
     brand: BrandsEnum.NOVART,
-    legend: "1974 Novart Tides 17 Jewels",
+    legend: "Novart Tides 17 Jewels",
     year: 1974,
     type: WatchTypeEnum.CASUAL,
     srcImage: "public/assets/Images/Novart/1974_Novart_U6380_Date_Blue/IMG_5643.JPG",
     href: require("./watchModels/Novart/Novart_Blue_17Jewels_1974"),
     specialCollectionItem: false,
   },
-  "1974 Novart Green Borealis 17 Jewels": {
+  "Novart Green Borealis 17 Jewels": {
     brand: BrandsEnum.NOVART,
-    legend: "1974 Novart Green Borealis 17 Jewels",
+    legend: "Novart Green Borealis 17 Jewels",
     year: 1974,
     type: WatchTypeEnum.CASUAL,
     srcImage: "public/assets/Images/Novart/1974_Novart_U6380_Green_Borealis/IMG_4839.JPG",
     href: require("./watchModels/Novart/Novart_Green_Borealis_17Jewels_1974"),
     specialCollectionItem: false,
   },
-  "1974 Novart Blue Borealis 17 Jewels": {
+  "Novart Blue Borealis 17 Jewels": {
     brand: BrandsEnum.NOVART,
-    legend: "1974 Novart Blue Borealis 17 Jewels",
+    legend: "Novart Blue Borealis 17 Jewels",
     year: 1974,
     type: WatchTypeEnum.CASUAL,
     srcImage: "public/assets/Images/Novart/1974_Novart_U6380_Blue_Borealis/IMG_0623.JPG",
     href: require("./watchModels/Novart/Novart_Blue_Borealis_17Jewels_1974"),
     specialCollectionItem: false,
   },
-  "1974 Novart Tides Blue": {
+  "Novart Tides Blue": {
     brand: BrandsEnum.NOVART,
-    legend: "1974 Novart Tides Blue",
+    legend: "Novart Tides Blue",
     year: 1974,
     type: WatchTypeEnum.CASUAL,
     srcImage: "public/assets/Images/Novart/1974_Novart_U6380_Tides_Blue/IMG_5889.JPG",
     href: require("./watchModels/Novart/Novart_Tides_Blue_17Jewels_1974"),
     specialCollectionItem: false,
   },
-  "1974 Novart Incabloc": {
+  "Novart Incabloc": {
     brand: BrandsEnum.NOVART,
-    legend: "1974 Novart Incabloc",
+    legend: "Novart Incabloc",
     year: 1974,
     type: WatchTypeEnum.CASUAL,
     srcImage: "public/assets/Images/Novart/1974_Novart_U6380_Blue/IMG_6228.JPG",
     href: require("./watchModels/Novart/Novart_Incabloc_17Jewels_1974"),
     specialCollectionItem: false,
   },
-  "1974 Novart Golden Linen 17 Jewels": {
+  "Novart Golden Linen 17 Jewels": {
     brand: BrandsEnum.NOVART,
-    legend: "1974 Novart Golden Linen 17 Jewels",
+    legend: "Novart Golden Linen 17 Jewels",
     year: 1974,
     type: WatchTypeEnum.CASUAL,
     srcImage: "public/assets/Images/Novart/1974_Novart_U6380_Golden_Linen/IMG_5933.JPG",
     href: require("./watchModels/Novart/Novart_Golden_Linen_17Jewels_1974"),
     specialCollectionItem: false,
   },
-  "1974 Novart Desert Sand 17 Jewels": {
+  "Novart Desert Sand 17 Jewels": {
     brand: BrandsEnum.NOVART,
-    legend: "1974 Novart Desert Sand 17 Jewels",
+    legend: "Novart Desert Sand 17 Jewels",
     year: 1974,
     type: WatchTypeEnum.CASUAL,
     srcImage: "public/assets/Images/Novart/1974_Novart_U6380_Desert_Sand/IMG_5816.JPG",
     href: require("./watchModels/Novart/Novart_Desert_Sand_17Jewels_197"),
     specialCollectionItem: false,
   },
-  "1974 Novart Vitesse 17 Jewels": {
+  "Novart Vitesse 17 Jewels": {
     brand: BrandsEnum.NOVART,
-    legend: "1974 Novart Vitesse 17 Jewels",
+    legend: "Novart Vitesse 17 Jewels",
     year: 1974,
     type: WatchTypeEnum.CASUAL,
     srcImage: "public/assets/Images/Novart/1974_Novart_U6380_Red/IMG_6266.JPG",
     href: require("./watchModels/Novart/Novart_Red_17Jewels_1974"),
     specialCollectionItem: false,
   },
-  "1974 Novart Vitesse Blue 17 Jewels": {
+  "Novart Vitesse Blue 17 Jewels": {
     brand: BrandsEnum.NOVART,
-    legend: "1974 Novart Vitesse Blue 17 Jewels",
+    legend: "Novart Vitesse Blue 17 Jewels",
     year: 1974,
     type: WatchTypeEnum.CASUAL,
     srcImage: "public/assets/Images/Novart/1974_Novart_U6380_Monza_Blue/IMG_5989.JPG",
@@ -1517,9 +1522,9 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     specialCollectionItem: false,
   },
 
-  "1974 Novart Monza Red 17 Jewels": {
+  "Novart Monza Red 17 Jewels": {
     brand: BrandsEnum.NOVART,
-    legend: "1974 Novart Monza Red 17 Jewels",
+    legend: "Novart Monza Red 17 Jewels",
     year: 1974,
     type: WatchTypeEnum.CASUAL,
     srcImage: "public/assets/Images/Novart/1974_Novart_U6380_Monza_Red/IMG_6018.JPG",
@@ -1527,18 +1532,18 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     specialCollectionItem: false,
   },
 
-  "1974 Tissot Seastar Navigator Chronograph": {
+  "Tissot Seastar Navigator Chronograph": {
     brand: BrandsEnum.TISSOT,
-    legend: "1974 Tissot Seastar Navigator Chronograph",
+    legend: "Tissot Seastar Navigator Chronograph",
     year: 1974,
     type: WatchTypeEnum.SPORTS,
     srcImage: "public/assets/Images/Tissot/1974_Tissot_Seastar_Navigator_Chrono/IMG_6412.JPG",
     href: require("./watchModels/Tissot/Tissot_Seastar_Navigator_Chrono_1974"),
     specialCollectionItem: true,
   },
-  "1974 Tissot Seastar Automatic": {
+  "Tissot Seastar Automatic": {
     brand: BrandsEnum.TISSOT,
-    legend: "1974 Tissot Seastar Automatic",
+    legend: "Tissot Seastar Automatic",
     year: 1974,
     type: WatchTypeEnum.DRESS,
     srcImage: "public/assets/Images/Tissot/1974_Tissot_Seastar_Automatic/IMG_4692.JPG",
@@ -1554,180 +1559,180 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     href: require("./watchModels/Tissot/Tissot_Seastar_Lobster_Automatic_1974"),
     specialCollectionItem: false,
   },
-  "1971 Tissot PR 516 GL": {
+  "Tissot PR 516 GL": {
     brand: BrandsEnum.TISSOT,
-    legend: "1971 Tissot PR 516 GL",
+    legend: "Tissot PR 516 GL",
     year: 1971,
     type: WatchTypeEnum.SPORTS,
     srcImage: "public/assets/Images/Tissot/1971_Tissot_PR_516_GL/IMG_5020.JPG",
     href: require("./watchModels/Tissot/Tissot_Seastar_PR516_GL_1971"),
     specialCollectionItem: true,
   },
-  "1970 Kelton M24 Sub-Dive": {
+  "Kelton M24 Sub-Dive": {
     brand: BrandsEnum.TIMEX, //_TIMEX_GROUP
-    legend: "1970 Kelton M24 Sub-Dive",
+    legend: "Kelton M24 Sub-Dive",
     year: 1970,
     type: WatchTypeEnum.DIVE,
     srcImage: "public/assets/Images/Kelton/1970_Kelton_M24/IMG_1946.JPG",
     href: require("./watchModels/Timex/Kelton_M24_Sub_Dive_1970"),
     specialCollectionItem: false,
   },
-  "1970 Titus Tuning Fork F300Hz": {
+  "Titus Tuning Fork F300Hz": {
     brand: BrandsEnum.SOLVIL_ET_TITUS,
-    legend: "1970 Titus Tuning Fork F300Hz",
+    legend: "Titus Tuning Fork F300Hz",
     year: 1970,
     type: WatchTypeEnum.CASUAL,
     srcImage: "public/assets/Images/Titus/1970_Titus_Tuning_Fork/IMG_1254.JPG",
     href: require("./watchModels/Titus/Titus_Tuning_Fork_F300Hz_1970"),
     specialCollectionItem: false,
   },
-  "1970 Tissot Seastar Eletronic": {
+  "Tissot Seastar Eletronic": {
     brand: BrandsEnum.TISSOT,
-    legend: "1970 Tissot Seastar Eletronic",
+    legend: "Tissot Seastar Eletronic",
     year: 1970,
     type: WatchTypeEnum.DRESS,
     srcImage: "public/assets/Images/Tissot/1970_Tissot_Seastar_Eletronic/IMG_2236.JPG",
     href: require("./watchModels/Tissot/Tissot_Seastar_Eletronic_1970"),
     specialCollectionItem: false,
   },
-  "1970 Tissot PR 516": {
+  "Tissot PR 516": {
     brand: BrandsEnum.TISSOT,
-    legend: "1970 Tissot PR 516",
+    legend: "Tissot PR 516",
     year: 1970,
     type: WatchTypeEnum.CASUAL,
     srcImage: "public/assets/Images/Tissot/1970_Tissot_PR_516/IMG_1635.JPG",
     href: require("./watchModels/Tissot/Tissot_Seastar_PR516_1970"),
     specialCollectionItem: false,
   },
-  "1969 Provita Automatic": {
+  "Provita Automatic": {
     brand: BrandsEnum.PROVITA,
-    legend: "1969 Provita Automatic",
+    legend: "Provita Automatic",
     year: 1969,
     type: WatchTypeEnum.CASUAL,
     srcImage: "public/assets/Images/Provita/1969_Provita_Automatic/IMG_0456.JPG",
     href: require("./watchModels/Provita/Provita_Automatic_25J_1969"),
     specialCollectionItem: false,
   },
-  "1968 Tissot PR 516 GL": {
+  "Tissot PR-516 GL": {
     brand: BrandsEnum.TISSOT,
-    legend: "1968 Tissot PR 516 GL",
+    legend: "Tissot PR-516 GL",
     year: 1968,
     type: WatchTypeEnum.SPORTS,
     srcImage: "public/assets/Images/Tissot/1968_Tissot_Seastar_PR516_GL/IMG_4177.JPG",
     href: require("./watchModels/Tissot/Tissot_Seastar_PR516_GL_1968"),
     specialCollectionItem: false,
   },
-  "1967 Tissot Seastar PR 516": {
+  "Tissot Seastar PR 516": {
     brand: BrandsEnum.TISSOT,
-    legend: "1967 Tissot Seastar PR 516",
+    legend: "Tissot Seastar PR 516",
     year: 1967,
     type: WatchTypeEnum.CASUAL,
     srcImage: "public/assets/Images/Tissot/1967_Tissot_PR_516/IMG_0576.JPG",
     href: require("./watchModels/Tissot/Tissot_Seastar_PR516_1967"),
     specialCollectionItem: false,
   },
-  "1967 Cauny Prima Calendario": {
+  "Cauny Prima Calendario": {
     brand: BrandsEnum.CAUNY,
-    legend: "1967 Cauny Prima Calendario",
+    legend: "Cauny Prima Calendario",
     year: 1967,
     type: WatchTypeEnum.CASUAL,
     srcImage: "public/assets/Images/Cauny/1967_CaunyPrimaCalendario/IMG_1818.JPG",
     href: require("./watchModels/Cauny/Cauny_Prima_Calendario_17Rubis_1967"),
     specialCollectionItem: false,
   },
-  "1965 Cauny Prima Swiss 17 Rubis": {
+  "Cauny Prima Swiss 17 Rubis": {
     brand: BrandsEnum.CAUNY,
-    legend: "1965 Cauny Prima Swiss 17 Rubis",
+    legend: "Cauny Prima Swiss 17 Rubis",
     year: 1965,
     type: WatchTypeEnum.CASUAL,
     srcImage: "public/assets/Images/Cauny/1965_CaunyPrima/IMG_2104.JPG",
     href: require("./watchModels/Cauny/Cauny_Prima_17Rubis_1965"),
     specialCollectionItem: false,
   },
-  "1965 Fontaine ETA 2472 Automatic": {
+  "Fontaine ETA 2472 Automatic": {
     brand: BrandsEnum.FONTAINE,
-    legend: "1965 Fontaine ETA 2472 Automatic",
+    legend: "Fontaine ETA 2472 Automatic",
     year: 1965,
     type: WatchTypeEnum.DRESS,
     srcImage: "public/assets/Images/Fontaine/1965_Fontaine_Auto/IMG_4704.JPG",
     href: require("./watchModels/Fontaine/Fontaine_ETA2472_Auto_1965"),
     specialCollectionItem: false,
   },
-  "1965 Tissot Seastar PR 516 Automatic": {
+  "Tissot Seastar PR 516 Automatic": {
     brand: BrandsEnum.TISSOT,
-    legend: "1965 Tissot Seastar PR 516 Automatic",
+    legend: "Tissot Seastar PR 516 Automatic",
     year: 1965,
     type: WatchTypeEnum.CASUAL,
     srcImage: "public/assets/Images/Tissot/1965_Tissot_PR_516_Automatic/IMG_7767.JPG",
     href: require("./watchModels/Tissot/Tissot_Seastar_PR516_Auto_1965"),
     specialCollectionItem: false,
   },
-  "1965 Belex Precision 17 Jewels": {
+  "Belex Precision 17 Jewels": {
     brand: BrandsEnum.PORTUGUESE_BRANDS,
-    legend: "1965 Belex Precision 17 Jewels",
+    legend: "Belex Precision 17 Jewels",
     year: 1965,
     type: WatchTypeEnum.CASUAL,
     srcImage: "public/assets/Images/Belex/1965_Belex_17_Jewels/IMG_2443.JPG",
     href: require("./watchModels/Belex/Belex_Precision_17Jewels_1965"),
     specialCollectionItem: false,
   },
-  "1963 Tissot Seastar Seven": {
+  "Tissot Seastar Seven": {
     brand: BrandsEnum.TISSOT,
-    legend: "1963 Tissot Seastar Seven",
+    legend: "Tissot Seastar Seven",
     year: 1963,
     type: WatchTypeEnum.DRESS,
     srcImage: "public/assets/Images/Tissot/1963_Tissot_Seastar_Seven/IMG_7956.JPG",
     href: require("./watchModels/Tissot/Tissot_Seastar_Seven_1963"),
     specialCollectionItem: false,
   },
-  "1961 Omega Geneve Honeycomb Cal. 268": {
+  "Omega Geneve Honeycomb Cal. 268": {
     brand: BrandsEnum.OMEGA,
-    legend: "1961 Omega Geneve Honeycomb Cal. 268",
+    legend: "Omega Geneve Honeycomb Cal. 268",
     year: 1961,
     type: WatchTypeEnum.DRESS,
     srcImage: "public/assets/Images/Omega/1961_Omega_Geneve_Cal_268/IMG_6636.JPG",
     href: require("./watchModels/Omega/Omega_Geneve_Cal_268_1961"),
     specialCollectionItem: true,
   },
-  "1960 Lanco Cal. 1305": {
+  "Lanco Cal. 1305": {
     brand: BrandsEnum.LANCO,
-    legend: "1960 Lanco Cal. 1305",
+    legend: "Lanco Cal. 1305",
     year: 1960,
     type: WatchTypeEnum.DRESS,
     srcImage: "public/assets/Images/Lanco/1960_Lanco/IMG_2467.JPG",
     href: require("./watchModels/Lanco/Lanco_Cal1305_1960"),
     specialCollectionItem: false,
   },
-  "1960 Bergeon Incabloc FE233/69": {
+  "Bergeon Incabloc FE233/69": {
     brand: BrandsEnum.BERGEON,
-    legend: "1960 Bergeon Incabloc FE233/69",
+    legend: "Bergeon Incabloc FE233/69",
     year: 1960,
     type: WatchTypeEnum.CASUAL,
     srcImage: "public/assets/Images/Bergeon/1960_Bergeon_Incabloc_FE_233/IMG_3926.JPG",
     href: require("./watchModels/Bergeon/Bergeon_Incabloc_1960"),
     specialCollectionItem: false,
   },
-  "1958 Tissot Visodate Automatic": {
+  "Tissot Visodate Automatic": {
     brand: BrandsEnum.TISSOT,
-    legend: "1958 Tissot Visodate Automatic",
+    legend: "Tissot Visodate Automatic",
     year: 1958,
     type: WatchTypeEnum.DRESS,
     srcImage: "public/assets/Images/Tissot/1958_Tissot_Visodate/IMG_0426.JPG",
     href: require("./watchModels/Tissot/Tissot_Visodate_Automatic_1958"),
     specialCollectionItem: false,
   },
-  "1957 Tissot Visodate": {
+  "Tissot Visodate": {
     brand: BrandsEnum.TISSOT,
-    legend: "1957 Tissot Visodate",
+    legend: "Tissot Visodate",
     year: 1957,
     type: WatchTypeEnum.DRESS,
     srcImage: "public/assets/Images/Tissot/1957_Tissot_Visodate/IMG_1667.JPG",
     href: require("./watchModels/Tissot/Tissot_Visodate_1957"),
     specialCollectionItem: true,
   },
-  "1957 Cauny Swiss Apollon 17 Rubis": {
+  "Cauny Swiss Apollon 17 Rubis": {
     brand: BrandsEnum.CAUNY,
-    legend: "1957 Cauny Swiss Apollon 17 Rubis",
+    legend: "Cauny Swiss Apollon 17 Rubis",
     year: 1957,
     type: WatchTypeEnum.CASUAL,
     srcImage: "public/assets/Images/Cauny/1957_CaunyApollon/IMG_1589.JPG",
@@ -1735,108 +1740,108 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     specialCollectionItem: false,
   },
 
-  "1956 Omega Seamaster Cal. 267": {
+  "Omega Seamaster Cal. 267": {
     brand: BrandsEnum.OMEGA,
-    legend: "1956 Omega Seamaster Cal. 267",
+    legend: "Omega Seamaster Cal. 267",
     year: 1956,
     type: WatchTypeEnum.DRESS,
     srcImage: "public/assets/Images/Omega/1956_Omega_Seamaster_2891_Cal_267/IMG_3769.JPG",
     href: require("./watchModels/Omega/Omega_Seamaster_Cal_267_1956"),
     specialCollectionItem: false,
   },
-  "1956 Cauny Prima de Luxe": {
+  "Cauny Prima de Luxe": {
     brand: BrandsEnum.CAUNY,
-    legend: "1956 Cauny Prima de Luxe",
+    legend: "Cauny Prima de Luxe",
     year: 1956,
     type: WatchTypeEnum.DRESS,
     srcImage: "public/assets/Images/Cauny/1956_CaunyDeLuxe/IMG_2291.JPG",
     href: require("./watchModels/Cauny/Cauny_Prima_DeLuxe_1956"),
     specialCollectionItem: false,
   },
-  "1955 Helma Cal. AS 1130": {
+  "Helma Cal. AS 1130": {
     brand: BrandsEnum.HELMA,
-    legend: "1955 Helma Cal. AS 1130",
+    legend: "Helma Cal. AS 1130",
     year: 1955,
     type: WatchTypeEnum.CASUAL,
     srcImage: "public/assets/Images/Helma/1955_Helma AS1130/IMG_1677.JPG",
     href: require("./watchModels/Helma/Helma_AS1130_1955"),
     specialCollectionItem: false,
   },
-  "1955 Hermes Landerom 51 Chronograph": {
-    brand: BrandsEnum.HELMA,
-    legend: "1955 Hermes Landerom 51 Chronograph",
+  "Hermes Landerom 51 Chronograph": {
+    brand: BrandsEnum.HERMES,
+    legend: "Hermes Landerom 51 Chronograph",
     year: 1955,
     type: WatchTypeEnum.DRESS,
     srcImage: "public/assets/Images/Hermes/1955_Hermes_Chronograph/IMG_1904.JPG",
     href: require("./watchModels/Hermes/Hermes_Landeron_51_Chrono_1955"),
     specialCollectionItem: true,
   },
-  "1955 Tissot Visodate": {
+  "Tissot Visodate Mechanical": {
     brand: BrandsEnum.TISSOT,
-    legend: "1955 Tissot Visodate",
+    legend: "Tissot Visodate Mechanical",
     year: 1954,
     type: WatchTypeEnum.DRESS,
     srcImage: "public/assets/Images/Tissot/1954_Tissot_Visodate/IMG_3355.JPG",
     href: require("./watchModels/Tissot/Tissot_Visodate_1955"),
     specialCollectionItem: false,
   },
-  "1950 Automatic Admes ETA 1246": {
+  "Automatic Admes ETA 1246": {
     brand: BrandsEnum.ADMES,
-    legend: "1950 Automatic Admes ETA 1246",
+    legend: "Automatic Admes ETA 1246",
     year: 1950,
     type: WatchTypeEnum.DRESS,
     srcImage: "public/assets/Images/Admes/1950_Admes_Automatic/IMG_1443.JPG",
     href: require("./watchModels/Admes/Admes_ETA1246_Automatic_1950"),
     specialCollectionItem: false,
   },
-  "1950 Titus Geneve Chronograph 18K Gold Landeron 48": {
+  "Titus Geneve Chronograph 18K Gold Landeron 48": {
     brand: BrandsEnum.SOLVIL_ET_TITUS,
-    legend: "1950 Titus Geneve Chronograph 18K Gold Landeron 48",
+    legend: "Titus Geneve Chronograph 18K Gold Landeron 48",
     year: 1950,
     type: WatchTypeEnum.DRESS,
     srcImage: "public/assets/Images/Titus/1950_Titus_Chronograph_18K_L48/IMG_8093.JPG",
     href: require("./watchModels/Titus/Titus_Chronograph_L48_1950"),
     specialCollectionItem: true,
   },
-  "1950 Omodox Precision 17 Rubis": {
+  "Omodox Precision 17 Rubis": {
     brand: BrandsEnum.OMODOX,
-    legend: "1950 Omodox Precision 17 Rubis",
+    legend: "Omodox Precision 17 Rubis",
     year: 1950,
     type: WatchTypeEnum.CASUAL,
     srcImage: "public/assets/Images/Omodox/1950_Omodox_Precision/IMG_2378.JPG",
     href: require("./watchModels/Omodox/Omodox_Precision_17Rubis_1950"),
     specialCollectionItem: false,
   },
-  "1950 Rone Calendar Pointer": {
+  "Rone Calendar Pointer": {
     brand: BrandsEnum.RONE,
-    legend: "1950 Rone Calendar Pointer",
+    legend: "Rone Calendar Pointer",
     year: 1950,
     type: WatchTypeEnum.CASUAL,
     srcImage: "public/assets/Images/Rone/1950_Rone_Calendar_Pointer/IMG_3537.JPG",
     href: require("./watchModels/Rone/Rone_Calendar_Pointer_1950"),
     specialCollectionItem: false,
   },
-  "1950 Tourist Ancre 17 Rubis": {
+  "Tourist Ancre 17 Rubis": {
     brand: BrandsEnum.TOURIST,
-    legend: "1950 Tourist Ancre 17 Rubis",
+    legend: "Tourist Ancre 17 Rubis",
     year: 1950,
     type: WatchTypeEnum.CASUAL,
     srcImage: "public/assets/Images/Tourist/1950_Tourist/IMG_2545.JPG",
     href: require("./watchModels/Tourist/Tourist_Ancre_17Rubis_1950"),
     specialCollectionItem: false,
   },
-  "1950 Eberhard Extra-Fort 18K Gold": {
+  "Eberhard Extra-Fort 18K Gold": {
     brand: BrandsEnum.EBERHARD,
-    legend: "1950 Eberhard Extra-Fort 18K Gold",
+    legend: "Eberhard Extra-Fort 18K Gold",
     year: 1950,
     type: WatchTypeEnum.DRESS,
     srcImage: "public/assets/Images/Eberhard/1950_Eberhard_Extra_Fort/IMG_0882.JPG",
     href: require("./watchModels/Eberhard/Eberhard_Extra_Fort_1950"),
     specialCollectionItem: true,
   },
-  "1950 Omega Seamaster Jumbo Cal. 265": {
+  "Omega Seamaster Jumbo Cal. 265": {
     brand: BrandsEnum.OMEGA,
-    legend: "1950 Omega Seamaster Jumbo Cal. 265",
+    legend: "Omega Seamaster Jumbo Cal. 265",
     year: 1950,
     type: WatchTypeEnum.DRESS,
     srcImage: "public/assets/Images/Omega/1950_Omega_Seamaster_Jumbo_CK2544/IMG_5768.JPG",
@@ -1844,36 +1849,36 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     specialCollectionItem: true,
   },
 
-  "1947 Signo Small Seconds - AS 1130": {
+  "Signo Small Seconds - AS 1130": {
     brand: BrandsEnum.PORTUGUESE_BRANDS,
-    legend: "1947 Signo Small Seconds - AS 1130",
+    legend: "Signo Small Seconds - AS 1130",
     year: 1947,
     type: WatchTypeEnum.CASUAL,
     srcImage: "public/assets/Images/Signo/1947_Signo_Small_Seconds/IMG_0653.JPG",
     href: require("./watchModels/Signo/Signo_Small_Seconds_1947"),
     specialCollectionItem: true,
   },
-  "1946 Tissot Antimagnetic": {
+  "Tissot Antimagnetic": {
     brand: BrandsEnum.TISSOT,
-    legend: "1946 Tissot Antimagnetic",
+    legend: "Tissot Antimagnetic",
     year: 1946,
     type: WatchTypeEnum.DRESS,
     srcImage: "public/assets/Images/Tissot/1946_Tissot_Antimagnetic/IMG_1032.JPG",
     href: require("./watchModels/Tissot/Tissot_Antimagnetic_1946"),
     specialCollectionItem: false,
   },
-  "1945 Zenith Pilot P12": {
+  "Zenith Pilot P12": {
     brand: BrandsEnum.ZENITH,
-    legend: "1945 Zenith Pilot P12",
+    legend: "Zenith Pilot P12",
     year: 1945,
     type: WatchTypeEnum.DRESS,
     srcImage: "public/assets/Images/Zenith/1945_Zenith_Pilot_P12_4_50/IMG_4676.JPG",
     href: require("./watchModels/Zenith/Zenith_Pilot_P12_1945"),
     specialCollectionItem: false,
   },
-  "1943 Natalis WWII German Watch": {
+  "Natalis WWII German Watch": {
     brand: BrandsEnum.NATALIS,
-    legend: "1943 Natalis WWII German Watch",
+    legend: "Natalis WWII German Watch",
     year: 1943,
     type: WatchTypeEnum.CASUAL,
     srcImage: "public/assets/Images/Natalis/1943_Natalis_German/IMG_2548.JPG",
@@ -1896,6 +1901,12 @@ function sortCollection(items: Record<string, CollectionEntry>) {
     .filter(([, v]) => v.collectionSet != true)
     .map(([k, v]) => (modelItems[k] = v));
 
+  const temp = { ...collectionItems, ...modelItems };
+  Object.entries(temp).map(([k, value]) => {
+    if (k != value.legend) {
+      console.log(`Key is diferent from legend: ${k}`);
+    }
+  });
   return { ...collectionItems, ...modelItems };
 }
 
