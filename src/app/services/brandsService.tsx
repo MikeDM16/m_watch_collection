@@ -29,8 +29,8 @@ function getAllBrands(): Record<string, Brand[]> {
    * Get a Mapping of all brands by first letter
    */
   let usedBrands = Object.entries(CollectionItemsDB).map(([, entry]) => {
-    if (entry.href.technicalData) {
-      return entry.href.technicalData.information.brand;
+    if (entry.href.default.technicalData) {
+      return entry.href.default.technicalData.information.brand;
     }
   });
   usedBrands = [...new Set(usedBrands)];

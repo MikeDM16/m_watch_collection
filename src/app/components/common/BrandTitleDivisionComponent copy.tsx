@@ -29,7 +29,7 @@ export default function BrandTitleDivisionComponent(props: BrandTitleDivisionPro
           <em>{props.description}</em>
           <div>{props.founded}</div>
           <a className="info-text title-white-color" href={props.website}>
-            <b>Website</b>
+            <b>{`${props.website ? "Website" : ""}`}</b>
           </a>
         </div>
       </div>

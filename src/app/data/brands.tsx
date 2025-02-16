@@ -11,6 +11,7 @@ export interface Brand {
   website?: string;
   description?: string;
   foundedInformation?: ReleaseDetails;
+  displayBySeries?: boolean;
 }
 
 export const brandsDB: Brand[] = [
@@ -48,6 +49,7 @@ export const brandsDB: Brand[] = [
       year: 1884,
       details: "Founded in Saint-Imier, Switzerland",
     },
+    displayBySeries: true,
   },
   {
     name: BrandsEnum.OMEGA,

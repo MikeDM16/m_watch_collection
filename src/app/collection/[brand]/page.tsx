@@ -26,7 +26,10 @@ export default function Page() {
     return <div>NOT FOUND</div>;
   }
 
-  const brandModels: CollectionEntry[] = getCollectionModelsByBrand(brand as string);
+  const brandModels: Record<string, CollectionEntry[]> = getCollectionModelsByBrand(
+    brand as string,
+    brandDetails.displayBySeries,
+  );
 
   const brandPageTitle = () => {
     let foundedText = undefined;
@@ -53,19 +56,45 @@ export default function Page() {
 
   const renderCollectionItem = () => {
     return (
-      <Container key={`brand_container_${brand}`}>
-        <Row key={`brand_row_${brand}`} {...{ xs: 2, sm: 4, md: 4, lg: 5, xl: 6 }}>
-          {brandModels.map((entry, index) => (
-            <Col key={`brand_model_${brand}_${index}`} className="item">
-              <div>
-                <ImageComponent src={getExternalResource(entry.srcImage)} alt={`${entry.legend}`} />
-                <div className="upper-text">{entry.brand}</div>
-                <b>{entry.legend}</b>
-                <div>{entry.year}</div>
+      <Container key={`brand_container_${brand}`} style={{ maxWidth: "80%" }}>
+        {Object.entries(brandModels).map(([seriesName, seriesModels]) => {
+          return (
+            <div key={`brand_${brand}_series_${seriesName}`}>
+              <div key={`brand_${brand}_series_${seriesName}_title`} className="container-title">
+                <p className="border-bottom-text">{seriesName}</p>
               </div>
-            </Col>
-          ))}
-        </Row>
+
+              <Row
+                key={`brand_row_${brand}`}
+                {...{ xs: 2, sm: 3, md: 4, lg: 4, xl: 5 }}
+                className="centered-container"
+              >
+                {Object.values(seriesModels).map((entry, idx) => {
+                  return (
+                    <Col key={`brand_${brand}_series_${seriesName}_model_${idx}`}>
+                      <ImageComponent
+                        src={getExternalResource(entry.srcImage)}
+                        alt={`${entry.legend}`}
+                      />
+                      <div
+                        key={`brand_${brand}_series_${seriesName}_model_${idx}_title1`}
+                        className="upper-text"
+                      >
+                        {entry.brand}
+                      </div>
+                      <em key={`brand_${brand}_series_${seriesName}_model_${idx}_title2`}>
+                        {entry.legend}
+                      </em>
+                      <div key={`brand_${brand}_series_${seriesName}_model_${idx}_title3`}>
+                        <b>{entry.year}</b>
+                      </div>
+                    </Col>
+                  );
+                })}
+              </Row>
+            </div>
+          );
+        })}
       </Container>
     );
   };

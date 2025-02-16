@@ -1,11 +1,37 @@
 import CollectionItemsDB, { CollectionEntry } from "../data/collectionData";
 
-export function getCollectionModelsByBrand(brand: string): CollectionEntry[] {
-  return Object.assign(
-    [],
+export function getCollectionModelsByBrand(
+  brand: string,
+  displayBySeries?: boolean,
+): Record<string, CollectionEntry[]> {
+  let seriesKey: string | undefined = undefined;
+  const brandModels: Record<string, CollectionEntry[]> = {};
+  const defaultSeriesKey = "";
+  brandModels[defaultSeriesKey] = [];
+
+  Object.assign(
+    {},
     Object.entries(CollectionItemsDB)
       .filter(([, entry]) => entry.brand == brand)
       .sort(([, va], [, vb]) => vb.year - va.year) // DESC order
-      .map(([, entry]) => entry),
+      .map(([, entry]) => {
+        seriesKey = entry.href.default.technicalData.information.series;
+        if (seriesKey in brandModels) {
+          // key in BrandModels imples we already processed this series before
+          brandModels[seriesKey].push(entry);
+        } else if (displayBySeries == true) {
+          // 1st entry if filtering by series
+          brandModels[seriesKey] = [entry];
+        } else {
+          // if not filtering by series, simply add to default key
+          brandModels[defaultSeriesKey].push(entry);
+        }
+      }),
   );
+
+  if (brandModels[defaultSeriesKey].length == 0) {
+    delete brandModels[defaultSeriesKey];
+  }
+
+  return brandModels;
 }

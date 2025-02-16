@@ -9,7 +9,7 @@ export function getExternalResource(image_url: string) {
 export function getIconWithTextCentered(Icon: IconType, text: string) {
   return (
     <div key={`main_div_icon${text}`} className="centered-container">
-      <div key={`centered_div_icon${text}`} className="centered-container gap-1">
+      <div key={`centered_div_icon${text}`} className="centered-container align-center gap-1">
         <Icon />
         <div>{text}</div>
       </div>

@@ -2,13 +2,16 @@ import { BrandsEnum } from "@/app/enums/brandsEnum";
 import { WatchTypeEnum } from "@/app/enums/watchTypeEnum";
 import { WatchDetails } from "./watchDetails";
 
+export interface ScopedWatchDetails {
+  default: WatchDetails;
+}
 export interface CollectionEntry {
   brand: string;
   type: string;
   legend: string;
   year: number;
   srcImage: string;
-  href: WatchDetails;
+  href: ScopedWatchDetails;
   specialCollectionItem?: boolean | undefined;
   collectionSet?: boolean | undefined;
 }
