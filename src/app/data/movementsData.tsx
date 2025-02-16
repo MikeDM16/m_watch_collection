@@ -81,7 +81,7 @@ export interface Caliber {
   usefullLinks?: Record<string, string>;
 }
 
-export const MovementsData: Record<string, Caliber> = {
+export const MovementsDataDB: Record<string, Caliber> = {
   AS_1130: AS_1130,
 
   ETA_1256: ETA_1256,

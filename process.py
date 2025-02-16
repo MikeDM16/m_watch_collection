@@ -10,5 +10,5 @@ def rename_js_to_tsx(directory):
                 print(f"Renamed: {old_path} -> {new_path}")
 
 # Replace 'your_directory_path' with the actual path
-folder_path = "./src/app/data/movements"
+folder_path = "./src/app/data/watchModels"
 rename_js_to_tsx(folder_path)

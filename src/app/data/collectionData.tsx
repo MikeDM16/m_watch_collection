@@ -1,7 +1,7 @@
-import { BrandsEnum } from "../enums/brandsEnum";
-import { WatchTypeEnum } from "../enums/watchTypeEnum";
+import { BrandsEnum } from "@/app/enums/brandsEnum";
+import { WatchTypeEnum } from "@/app/enums/watchTypeEnum";
 
-export interface WatchModel {
+export interface CollectionEntry {
   brand: string;
   type: string;
   legend: string;
@@ -12,7 +12,7 @@ export interface WatchModel {
   collectionSet?: boolean | undefined;
 }
 
-const CollectionItems: Record<string, WatchModel> = {
+let CollectionItemsDB: Record<string, CollectionEntry> = {
   "Zenith Collection": {
     brand: BrandsEnum.ZENITH,
     legend: "Zenith Collection",
@@ -1882,9 +1882,9 @@ const CollectionItems: Record<string, WatchModel> = {
   },
 };
 
-function sortCollection(items: Record<string, WatchModel>) {
-  const collectionItems: Record<string, WatchModel> = {};
-  const modelItems: Record<string, WatchModel> = {};
+function sortCollection(items: Record<string, CollectionEntry>) {
+  const collectionItems: Record<string, CollectionEntry> = {};
+  const modelItems: Record<string, CollectionEntry> = {};
 
   Object.entries(items)
     .sort(([, va], [, vb]) => va.year - vb.year)
@@ -1899,4 +1899,4 @@ function sortCollection(items: Record<string, WatchModel>) {
   return { ...collectionItems, ...modelItems };
 }
 
-export default sortCollection(CollectionItems);
+export default CollectionItemsDB = sortCollection(CollectionItemsDB);
