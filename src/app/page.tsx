@@ -11,7 +11,7 @@ import Link from "next/link";
 import HeaderNavBar from "./components/header/header";
 import ContactsComponent from "./components/contacts/contacts";
 import AboutMeContainer from "./components/aboutMe/aboutMe";
-import { getExternalResource } from "./services/commonFunctions";
+import { getExternalResource, routeToCollectionBrandPage } from "./services/commonFunctions";
 import PageTitleDivisionComponent from "./components/common/pageTitleDivisionComponent";
 
 export default function Page() {
@@ -19,7 +19,7 @@ export default function Page() {
   const [allBrands] = useState(brandsService.getAllBrands());
 
   const brandColOnClickHandler = (brandName: string): string => {
-    return `collection/${brandName.replaceAll(" ", "-")}`;
+    return routeToCollectionBrandPage(brandName);
   };
 
   const mainBrandsTable = () => {
@@ -79,7 +79,7 @@ export default function Page() {
       <div>
         <div id="AllBrandsItems">{PageTitleDivisionComponent({ title: "All Brands" })}</div>
 
-        <Container id="AllBrandsItems">
+        <Container>
           <Row {...{ xs: 2, xl: 4 }}>
             {[0, 1, 2, 3].map((idx) => {
               return (

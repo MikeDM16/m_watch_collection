@@ -16,3 +16,27 @@ export function getIconWithTextCentered(Icon: IconType, text: string) {
     </div>
   );
 }
+
+export function getPathParameter(value: string): string {
+  return value.replaceAll("-", " ");
+}
+
+export function setPathParameter(value: string): string {
+  return value.replaceAll(" ", "-");
+}
+
+export function routeToMainPageHeader() {
+  return "/#";
+}
+
+export function routeToMainPageAllBrandListing() {
+  return "/#AllBrandsItems";
+}
+
+export function routeToCollectionBrandPage(brandName: string): string {
+  return `/collection/${setPathParameter(brandName)}`;
+}
+
+export function routeToCollectionBrandModelPage(brandName: string, modelName: string): string {
+  return `/collection/${setPathParameter(brandName)}/${setPathParameter(modelName)}`;
+}

@@ -1,4 +1,4 @@
-import { getExternalResource } from "@/app/services/commonFunctions";
+import { getExternalResource, routeToCollectionBrandPage } from "@/app/services/commonFunctions";
 import Link from "next/link";
 
 export interface BrandTitleDivisionProps {
@@ -41,13 +41,26 @@ export default function BrandTitleDivisionComponent(props: BrandTitleDivisionPro
       style={{ backgroundImage: `url(${getExternalResource(props.srcImage || imagesPaths[0])})` }}
     >
       <div className={`page-title-overlay-aligned`}>
+        {/** Layout need to be inside this div, because of the previous overlay */}
         <div className={`${textClassName}`}>
           <div className="">{navigation}</div>
 
-          <div className="header-title upper-text">{props.title}</div>
+          <div className="header-title upper-text">
+            <Link
+              key={`ref_navigation_brand`}
+              className="info-text title-white-color link"
+              href={routeToCollectionBrandPage(props.title)}
+            >
+              {props.title}
+            </Link>
+          </div>
           <em>{props.description}</em>
           <div>{props.founded}</div>
-          <Link className="info-text title-white-color link" href={props.website ?? ""} target="_blank">
+          <Link
+            className="info-text title-white-color link"
+            href={props.website ?? ""}
+            target="_blank"
+          >
             <b>{`${props.website ? "Website" : ""}`}</b>
           </Link>
         </div>

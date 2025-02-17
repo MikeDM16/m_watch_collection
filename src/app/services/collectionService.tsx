@@ -1,6 +1,6 @@
 import CollectionItemsDB, { CollectionEntry } from "../data/collectionData";
 
-export function getCollectionModelsByBrand(
+function getCollectionModelsByBrand(
   brand: string,
   displayBySeries?: boolean,
 ): Record<string, CollectionEntry[]> {
@@ -35,3 +35,11 @@ export function getCollectionModelsByBrand(
 
   return brandModels;
 }
+
+function getModelInformationByKey(key: string): CollectionEntry | undefined {
+  return CollectionItemsDB[key];
+}
+
+const collectionService = { getCollectionModelsByBrand, getModelInformationByKey };
+
+export default collectionService;

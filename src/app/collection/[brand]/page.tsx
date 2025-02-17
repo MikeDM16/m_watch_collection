@@ -3,56 +3,35 @@
 import ImageComponent from "@/app/components/common/ImageComponent";
 import HeaderNavBar from "@/app/components/header/header";
 import { CollectionEntry } from "@/app/data/collectionData";
-import { getCollectionModelsByBrand } from "@/app/services/collectionService";
-import { getExternalResource } from "@/app/services/commonFunctions";
+import {
+  getExternalResource,
+  getPathParameter,
+  routeToCollectionBrandModelPage,
+} from "@/app/services/commonFunctions";
 import { useParams } from "next/navigation";
 import { Col, Row } from "react-bootstrap";
 import Container from "react-bootstrap/Container";
-import { useState } from "react";
+import React, { useState } from "react";
 import brandsService from "@/app/services/brandsService";
-import BrandTitleDivisionComponent from "@/app/components/common/BrandTitleDivisionComponent";
+import Link from "next/link";
+import BrandPageTitleComponent from "@/app/components/brandPage/BrandPageTitleComponent";
+import collectionService from "@/app/services/collectionService";
 
 export default function Page() {
   let { brand } = useParams();
 
-  const getBrandFromPathParameter = (brand: string): string => {
-    return brand.replaceAll("-", " ");
-  };
-
-  brand = getBrandFromPathParameter(brand as string);
+  brand = getPathParameter(brand as string);
   const [brandDetails] = useState(brandsService.getBrandInformation(brand));
 
   if (!brand || !brandDetails) {
     return <div>NOT FOUND</div>;
   }
 
-  const brandModels: Record<string, CollectionEntry[]> = getCollectionModelsByBrand(
-    brand as string,
-    brandDetails.displayBySeries,
-  );
+  const brandModels: Record<string, CollectionEntry[]> =
+    collectionService.getCollectionModelsByBrand(brand as string, brandDetails.displayBySeries);
 
-  const brandPageTitle = () => {
-    let foundedText = undefined;
-    if (brandDetails.foundedInformation) {
-      foundedText = `${brandDetails.foundedInformation.year}`;
-
-      if (brandDetails.foundedInformation.details) {
-        foundedText = `${foundedText}, ${brandDetails.foundedInformation.details}`;
-      }
-    }
-
-    return (
-      <div>
-        {BrandTitleDivisionComponent({
-          title: `${brand}`,
-          textAlignement: "left",
-          description: brandDetails.description,
-          founded: foundedText,
-          website: brandDetails.website,
-          navigationPath: { MWatchCollection: "../#", "All Brands": "../#AllBrandsItems" },
-        })}
-      </div>
-    );
+  const brandModelOnClickHandler = (brandName: string, modelName: string): string => {
+    return routeToCollectionBrandModelPage(brandName, modelName);
   };
 
   const renderCollectionItem = () => {
@@ -76,22 +55,27 @@ export default function Page() {
                       key={`brand_${brand}_series_${seriesName}_model_${idx}`}
                       className="hover-animation"
                     >
-                      <ImageComponent
-                        src={getExternalResource(entry.srcImage)}
-                        alt={`${entry.legend}`}
-                      />
-                      <div
-                        key={`brand_${brand}_series_${seriesName}_model_${idx}_title1`}
-                        className="upper-text"
+                      <Link
+                        href={brandModelOnClickHandler(brand, entry.legend)}
+                        className="info-text link"
                       >
-                        {entry.brand}
-                      </div>
-                      <em key={`brand_${brand}_series_${seriesName}_model_${idx}_title2`}>
-                        {entry.legend}
-                      </em>
-                      <div key={`brand_${brand}_series_${seriesName}_model_${idx}_title3`}>
-                        <b>{entry.year}</b>
-                      </div>
+                        <ImageComponent
+                          src={getExternalResource(entry.srcImage)}
+                          alt={`${entry.legend}`}
+                        />
+                        <div
+                          key={`brand_${brand}_series_${seriesName}_model_${idx}_title1`}
+                          className="upper-text"
+                        >
+                          {entry.brand}
+                        </div>
+                        <em key={`brand_${brand}_series_${seriesName}_model_${idx}_title2`}>
+                          {entry.legend}
+                        </em>
+                        <div key={`brand_${brand}_series_${seriesName}_model_${idx}_title3`}>
+                          <b>{entry.year}</b>
+                        </div>
+                      </Link>
                     </Col>
                   );
                 })}
@@ -105,7 +89,7 @@ export default function Page() {
   return (
     <div>
       {HeaderNavBar()}
-      {brandPageTitle()}
+      {BrandPageTitleComponent(brandDetails)}
       {renderCollectionItem()}
     </div>
   );
