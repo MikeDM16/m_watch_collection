@@ -12,6 +12,7 @@ import { MovementWatchTypeEnum } from "@/app/enums/movementWatchTypeEnum";
 import { WatchStyleEnum } from "@/app/enums/watchStyleEnum";
 import { WaterResistanceEnum } from "@/app/enums/waterResistanceEnum";
 import { WatchDetails } from "../../watchDetails";
+import { TagHeuerBrandSeries } from "./TagHeuerBrandSeries";
 
 const details: WatchDetails = {
   title: "1999 Tag Heuer Professional 2000 WK1213",
@@ -70,7 +71,7 @@ const details: WatchDetails = {
 
     information: {
       brand: BrandsEnum.TAG_HEUER,
-      series: "Professional 2000 Series",
+      series: TagHeuerBrandSeries.PROFESSIONAL_2000_SERIES,
       catalogueReference: "WK1213",
       productionYear: "1999",
       movementType: MovementWatchTypeEnum.QUARTZ,

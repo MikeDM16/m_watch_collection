@@ -12,6 +12,7 @@ import { MovementWatchTypeEnum } from "@/app/enums/movementWatchTypeEnum";
 import { WatchStyleEnum } from "@/app/enums/watchStyleEnum";
 import { WaterResistanceEnum } from "@/app/enums/waterResistanceEnum";
 import { WatchDetails } from "../../watchDetails";
+import { ChopardBrandSeries } from "./ChopardBrandSeries";
 
 const details: WatchDetails = {
   title: "2000 Chopard Mille Miglia Titanium",
@@ -102,7 +103,7 @@ const details: WatchDetails = {
 
     information: {
       brand: BrandsEnum.CHOPARD,
-      series: "Dashboard",
+      series: ChopardBrandSeries.MILLE_MIGLIA,
       catalogueReference: "8407 (779035)",
       productionYear: "2000",
       movementType: MovementWatchTypeEnum.AUTOMATIC,

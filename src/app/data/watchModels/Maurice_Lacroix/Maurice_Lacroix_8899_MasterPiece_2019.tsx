@@ -12,6 +12,7 @@ import { MovementWatchTypeEnum } from "@/app/enums/movementWatchTypeEnum";
 import { WatchStyleEnum } from "@/app/enums/watchStyleEnum";
 import { WaterResistanceEnum } from "@/app/enums/waterResistanceEnum";
 import { WatchDetails } from "../../watchDetails";
+import { MauriceLacroixBrandSeries } from "./MauriceLacroixBrandSeries";
 
 const details: WatchDetails = {
   title: "2019 Maurice Lacroix 8899 Masterpiece Valjoux 7750",
@@ -80,7 +81,7 @@ const details: WatchDetails = {
 
     information: {
       brand: BrandsEnum.MAURICE_LACROIX,
-      series: "Automatic",
+      series: MauriceLacroixBrandSeries.MASTERPIECE,
       catalogueReference: "8899",
       productionYear: "2019",
       movementType: MovementWatchTypeEnum.AUTOMATIC,

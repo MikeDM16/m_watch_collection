@@ -12,6 +12,7 @@ import { MovementWatchTypeEnum } from "@/app/enums/movementWatchTypeEnum";
 import { WatchStyleEnum } from "@/app/enums/watchStyleEnum";
 import { WaterResistanceEnum } from "@/app/enums/waterResistanceEnum";
 import { WatchDetails } from "../../watchDetails";
+import { EberhardBrandSeries } from "./EberhardBrandSeries";
 
 const details: WatchDetails = {
   title: "1950 Eberhard Extra-Fort 18K Gold",
@@ -95,7 +96,7 @@ const details: WatchDetails = {
 
     information: {
       brand: BrandsEnum.EBERHARD,
-      series: "Extra-Fort",
+      series: EberhardBrandSeries.EXTRA_FORT_VINTAGE,
       catalogueReference: "14007-516 140",
       productionYear: "1950",
       movementType: MovementWatchTypeEnum.MECHANIQUE,

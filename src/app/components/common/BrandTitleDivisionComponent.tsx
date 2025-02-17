@@ -27,7 +27,6 @@ export default function BrandTitleDivisionComponent(props: BrandTitleDivisionPro
           key={`ref_navigation_${path}`}
           className="info-text title-white-color link"
           href={reference}
-          target="_blank"
         >
           {`${path}`}
         </Link>
@@ -48,9 +47,9 @@ export default function BrandTitleDivisionComponent(props: BrandTitleDivisionPro
           <div className="header-title upper-text">{props.title}</div>
           <em>{props.description}</em>
           <div>{props.founded}</div>
-          <a className="info-text title-white-color link" href={props.website}>
+          <Link className="info-text title-white-color link" href={props.website ?? ""} target="_blank">
             <b>{`${props.website ? "Website" : ""}`}</b>
-          </a>
+          </Link>
         </div>
       </div>
     </section>

@@ -12,6 +12,7 @@ import { MovementWatchTypeEnum } from "@/app/enums/movementWatchTypeEnum";
 import { WatchStyleEnum } from "@/app/enums/watchStyleEnum";
 import { WaterResistanceEnum } from "@/app/enums/waterResistanceEnum";
 import { WatchDetails } from "../../watchDetails";
+import { TagHeuerBrandSeries } from "./TagHeuerBrandSeries";
 
 const details: WatchDetails = {
   title: "2010 Tag Heuer Aquaracer Grande Date WAF1010",
@@ -90,7 +91,7 @@ const details: WatchDetails = {
 
     information: {
       brand: BrandsEnum.TAG_HEUER,
-      series: "Aquaracer Series",
+      series: TagHeuerBrandSeries.AQUARACER,
       catalogueReference: "Grande Date (WAF1010)",
       productionYear: "2010",
       movementType: MovementWatchTypeEnum.QUARTZ,

@@ -12,6 +12,7 @@ import { MovementWatchTypeEnum } from "@/app/enums/movementWatchTypeEnum";
 import { WatchStyleEnum } from "@/app/enums/watchStyleEnum";
 import { WaterResistanceEnum } from "@/app/enums/waterResistanceEnum";
 import { WatchDetails } from "../../watchDetails";
+import { PorscheDesignBrandSeries } from "./PorscheDesignBrandSeries";
 
 const details: WatchDetails = {
   title: "2016 Porsche Design Drivers Collection Cayenne",
@@ -72,7 +73,7 @@ const details: WatchDetails = {
 
     information: {
       brand: BrandsEnum.PORSCHE_DESIGN,
-      series: "Drivers Collection",
+      series: PorscheDesignBrandSeries.DRIVER_COLLECTION_CAYENNE,
       catalogueReference: "Cayenne",
       productionYear: "2016",
       movementType: MovementWatchTypeEnum.QUARTZ,

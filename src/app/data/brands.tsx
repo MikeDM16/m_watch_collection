@@ -25,6 +25,7 @@ export const brandsDB: Brand[] = [
       year: 1865,
       details: "Founded in Le Locle, Neuchâtel, Switzerland",
     },
+    displayBySeries: true,
   },
   {
     name: BrandsEnum.EBERHARD,
@@ -37,6 +38,7 @@ export const brandsDB: Brand[] = [
       year: 1887,
       details: "Founded in La Chaux-de-Fonds, Switzerland",
     },
+    displayBySeries: true,
   },
   {
     name: BrandsEnum.BREITLING,
@@ -73,6 +75,7 @@ export const brandsDB: Brand[] = [
       year: 1860,
       details: "Founded in Sonvilier, Switzerland",
     },
+    displayBySeries: true,
   },
   {
     name: BrandsEnum.TAG_HEUER,
@@ -85,6 +88,7 @@ export const brandsDB: Brand[] = [
       year: 1860,
       details: "Founded in Saint-Imier, Switzerland",
     },
+    displayBySeries: true,
   },
   {
     name: BrandsEnum.PORSCHE_DESIGN,
@@ -97,6 +101,7 @@ export const brandsDB: Brand[] = [
       year: 1972,
       details: "Founded in Stuttgart, Germany",
     },
+    displayBySeries: true,
   },
   {
     name: BrandsEnum.MAURICE_LACROIX,
@@ -109,6 +114,7 @@ export const brandsDB: Brand[] = [
       year: 1975,
       details: "Founded in Saignelégier, Switzerland",
     },
+    displayBySeries: true,
   },
   {
     name: BrandsEnum.RAYMOND_WEIL,

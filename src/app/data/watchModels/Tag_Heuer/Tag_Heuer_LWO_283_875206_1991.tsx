@@ -12,6 +12,7 @@ import { MovementWatchTypeEnum } from "@/app/enums/movementWatchTypeEnum";
 import { WatchStyleEnum } from "@/app/enums/watchStyleEnum";
 import { WaterResistanceEnum } from "@/app/enums/waterResistanceEnum";
 import { WatchDetails } from "../../watchDetails";
+import { TagHeuerBrandSeries } from "./TagHeuerBrandSeries";
 
 const details: WatchDetails = {
   title: "1991 Tag Heuer Professional 875-206 Chronograph",
@@ -117,7 +118,7 @@ const details: WatchDetails = {
 
     information: {
       brand: BrandsEnum.TAG_HEUER,
-      series: "Professional 2000 Series",
+      series: TagHeuerBrandSeries.PROFESSIONAL_2000_SERIES,
       catalogueReference: "875-206",
       productionYear: "1991",
       movementType: MovementWatchTypeEnum.AUTOMATIC,

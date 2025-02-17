@@ -12,6 +12,7 @@ import { MovementWatchTypeEnum } from "@/app/enums/movementWatchTypeEnum";
 import { WatchStyleEnum } from "@/app/enums/watchStyleEnum";
 import { WaterResistanceEnum } from "@/app/enums/waterResistanceEnum";
 import { WatchDetails } from "../../watchDetails";
+import { TagHeuerBrandSeries } from "./TagHeuerBrandSeries";
 
 const details: WatchDetails = {
   title: "1997 Tag Heuer Professional 1500",
@@ -68,7 +69,7 @@ const details: WatchDetails = {
 
     information: {
       brand: BrandsEnum.TAG_HEUER,
-      series: "Professional 1500 Series",
+      series: TagHeuerBrandSeries.PROFESSIONAL_1500_SERIES,
       catalogueReference: "955.713K",
       productionYear: "1997",
       movementType: MovementWatchTypeEnum.QUARTZ,

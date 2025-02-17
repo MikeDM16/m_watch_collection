@@ -11,6 +11,7 @@ import { MovementWatchTypeEnum } from "@/app/enums/movementWatchTypeEnum";
 import { WatchStyleEnum } from "@/app/enums/watchStyleEnum";
 import { WaterResistanceEnum } from "@/app/enums/waterResistanceEnum";
 import { WatchDetails } from "../../watchDetails";
+import { MauriceLacroixBrandSeries } from "./MauriceLacroixBrandSeries";
 
 const details: WatchDetails = {
   title: "2021 Maurice Lacroix Aikon Chronograph",
@@ -61,8 +62,8 @@ const details: WatchDetails = {
 
     information: {
       brand: BrandsEnum.MAURICE_LACROIX,
-      series: "Aikon Qartz Chrono",
-      catalogueReference: "AI 1018",
+      series: MauriceLacroixBrandSeries.AIKON,
+      catalogueReference: "Aikon Chronograph - AI 1018",
       productionYear: "2021",
       movementType: MovementWatchTypeEnum.QUARTZ,
       style: WatchStyleEnum.SPORTS,

@@ -12,6 +12,7 @@ import { WatchStyleEnum } from "@/app/enums/watchStyleEnum";
 import { WaterResistanceEnum } from "@/app/enums/waterResistanceEnum";
 import { WatchDetails } from "../../watchDetails";
 import { MovementsDataDB } from "../../movementsData";
+import { ZenithBrandSeries } from "./ZenithBrandSeries";
 
 const details: WatchDetails = {
   title: "1945 Zenith Pilot P12",
@@ -65,8 +66,8 @@ const details: WatchDetails = {
 
     information: {
       brand: BrandsEnum.ZENITH,
-      series: "Pilot P12",
-      catalogueReference: "-",
+      series: ZenithBrandSeries.VINTAGE_PILOT,
+      catalogueReference: "Pilot P12",
       productionYear: "1945",
       movementType: MovementWatchTypeEnum.MECHANIQUE,
       style: WatchStyleEnum.DRESS,

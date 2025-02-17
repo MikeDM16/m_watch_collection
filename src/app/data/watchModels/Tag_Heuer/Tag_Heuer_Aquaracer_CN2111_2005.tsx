@@ -12,6 +12,7 @@ import { MovementWatchTypeEnum } from "@/app/enums/movementWatchTypeEnum";
 import { WatchStyleEnum } from "@/app/enums/watchStyleEnum";
 import { WaterResistanceEnum } from "@/app/enums/waterResistanceEnum";
 import { WatchDetails } from "../../watchDetails";
+import { TagHeuerBrandSeries } from "./TagHeuerBrandSeries";
 
 const details: WatchDetails = {
   title: "2005 Tag Heuer Aquaracer Exclusive CN2111",
@@ -89,7 +90,7 @@ const details: WatchDetails = {
 
     information: {
       brand: BrandsEnum.TAG_HEUER,
-      series: "Aquaracer Series",
+      series: TagHeuerBrandSeries.AQUARACER,
       catalogueReference: "Exclusive CN2111",
       productionYear: "2005",
       movementType: MovementWatchTypeEnum.AUTOMATIC,

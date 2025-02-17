@@ -12,6 +12,7 @@ import { MovementWatchTypeEnum } from "@/app/enums/movementWatchTypeEnum";
 import { WatchStyleEnum } from "@/app/enums/watchStyleEnum";
 import { WaterResistanceEnum } from "@/app/enums/waterResistanceEnum";
 import { WatchDetails } from "../../watchDetails";
+import { ZenithBrandSeries } from "./ZenithBrandSeries";
 
 const details: WatchDetails = {
   title: "2005 Zenith El Primero Port Royal V",
@@ -100,7 +101,7 @@ const details: WatchDetails = {
 
     information: {
       brand: BrandsEnum.ZENITH,
-      series: "El Primero",
+      series: ZenithBrandSeries.EL_PRIMERO,
       catalogueReference: "Port Royal V - 01/02.0451.400",
       productionYear: "2005",
       movementType: MovementWatchTypeEnum.AUTOMATIC,

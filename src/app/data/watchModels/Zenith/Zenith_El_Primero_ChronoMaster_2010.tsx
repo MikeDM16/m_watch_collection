@@ -12,6 +12,7 @@ import { MovementWatchTypeEnum } from "@/app/enums/movementWatchTypeEnum";
 import { WatchStyleEnum } from "@/app/enums/watchStyleEnum";
 import { WaterResistanceEnum } from "@/app/enums/waterResistanceEnum";
 import { WatchDetails } from "../../watchDetails";
+import { ZenithBrandSeries } from "./ZenithBrandSeries";
 
 const details: WatchDetails = {
   title: "2010 Zenith El Primero ChronoMaster",
@@ -74,7 +75,7 @@ const details: WatchDetails = {
 
     information: {
       brand: BrandsEnum.ZENITH,
-      series: "El Primero",
+      series: ZenithBrandSeries.EL_PRIMERO,
       catalogueReference: "ChronoMaster - 03 1260 4021",
       productionYear: "2010",
       movementType: MovementWatchTypeEnum.AUTOMATIC,

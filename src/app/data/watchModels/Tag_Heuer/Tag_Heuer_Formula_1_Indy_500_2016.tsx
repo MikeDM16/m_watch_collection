@@ -12,6 +12,7 @@ import { MovementWatchTypeEnum } from "@/app/enums/movementWatchTypeEnum";
 import { WatchStyleEnum } from "@/app/enums/watchStyleEnum";
 import { WaterResistanceEnum } from "@/app/enums/waterResistanceEnum";
 import { WatchDetails } from "../../watchDetails";
+import { TagHeuerBrandSeries } from "./TagHeuerBrandSeries";
 
 const details: WatchDetails = {
   title: "2016 Tag Heuer Formula-1 Indy 500 Limited Ed. 529/1000",
@@ -96,8 +97,8 @@ const details: WatchDetails = {
 
     information: {
       brand: BrandsEnum.TAG_HEUER,
-      series: "Formula-1 Indy 500 - Limited Edition 529/1000",
-      catalogueReference: "CAZ1016.EB0058",
+      series: TagHeuerBrandSeries.FORMULA_1_6RD_GEN,
+      catalogueReference: "Formula-1 Indy 500 - Limited Edition 529/1000 CAZ1016.EB0058",
       productionYear: "2016",
       movementType: MovementWatchTypeEnum.QUARTZ,
       style: WatchStyleEnum.SPORTS,

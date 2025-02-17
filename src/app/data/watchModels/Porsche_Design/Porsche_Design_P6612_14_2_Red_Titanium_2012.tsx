@@ -12,6 +12,7 @@ import { MovementWatchTypeEnum } from "@/app/enums/movementWatchTypeEnum";
 import { WatchStyleEnum } from "@/app/enums/watchStyleEnum";
 import { WaterResistanceEnum } from "@/app/enums/waterResistanceEnum";
 import { WatchDetails } from "../../watchDetails";
+import { PorscheDesignBrandSeries } from "./PorscheDesignBrandSeries";
 
 const details: WatchDetails = {
   title: "2005 Porsche Design Dashboard P6612 Titanium",
@@ -111,7 +112,7 @@ const details: WatchDetails = {
 
     information: {
       brand: BrandsEnum.PORSCHE_DESIGN,
-      series: "Dashboard",
+      series: PorscheDesignBrandSeries.DASHBOARD_P6612,
       catalogueReference: "P6612.17/2 160.182",
       productionYear: "2012",
       movementType: MovementWatchTypeEnum.AUTOMATIC,

@@ -12,6 +12,7 @@ import { MovementWatchTypeEnum } from "@/app/enums/movementWatchTypeEnum";
 import { WatchStyleEnum } from "@/app/enums/watchStyleEnum";
 import { WaterResistanceEnum } from "@/app/enums/waterResistanceEnum";
 import { WatchDetails } from "../../watchDetails";
+import { TagHeuerBrandSeries } from "./TagHeuerBrandSeries";
 
 const details: WatchDetails = {
   title: "1985 Tag Heuer Professional 272.006/1 Chronograph",
@@ -82,7 +83,7 @@ const details: WatchDetails = {
 
     information: {
       brand: BrandsEnum.TAG_HEUER,
-      series: "Professional 2000 Series",
+      series: TagHeuerBrandSeries.PROFESSIONAL_2000_SERIES,
       catalogueReference: "272.0061-1",
       productionYear: "1985",
       movementType: MovementWatchTypeEnum.QUARTZ,

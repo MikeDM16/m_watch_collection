@@ -12,6 +12,7 @@ import { MovementWatchTypeEnum } from "@/app/enums/movementWatchTypeEnum";
 import { WatchStyleEnum } from "@/app/enums/watchStyleEnum";
 import { WaterResistanceEnum } from "@/app/enums/waterResistanceEnum";
 import { WatchDetails } from "../../watchDetails";
+import { TagHeuerBrandSeries } from "./TagHeuerBrandSeries";
 
 const details: WatchDetails = {
   title: "1995 Tag Heuer Professional Formula-1 WA1218",
@@ -61,7 +62,7 @@ const details: WatchDetails = {
 
     information: {
       brand: BrandsEnum.TAG_HEUER,
-      series: "Professional Formula-1 Series",
+      series: TagHeuerBrandSeries.FORMULA_1_2RD_GEN,
       catalogueReference: "WA1218",
       productionYear: "1995",
       movementType: MovementWatchTypeEnum.QUARTZ,

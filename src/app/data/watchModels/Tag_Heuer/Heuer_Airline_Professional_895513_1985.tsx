@@ -11,6 +11,7 @@ import { MovementWatchTypeEnum } from "@/app/enums/movementWatchTypeEnum";
 import { WatchStyleEnum } from "@/app/enums/watchStyleEnum";
 import { WaterResistanceEnum } from "@/app/enums/waterResistanceEnum";
 import { WatchDetails } from "../../watchDetails";
+import { TagHeuerBrandSeries } from "./TagHeuerBrandSeries";
 
 const details: WatchDetails = {
   title: "1985 Heuer Airline Professional 895.513",
@@ -65,7 +66,7 @@ const details: WatchDetails = {
 
     information: {
       brand: BrandsEnum.HEUER,
-      series: "Airline Professional Series",
+      series: TagHeuerBrandSeries.AIRLINE_HEUER,
       catalogueReference: "985.513",
       productionYear: "1985 - 1988",
       movementType: MovementWatchTypeEnum.QUARTZ,

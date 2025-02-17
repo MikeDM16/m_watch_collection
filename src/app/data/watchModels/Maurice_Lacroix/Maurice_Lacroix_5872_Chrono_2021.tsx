@@ -12,6 +12,7 @@ import { MovementWatchTypeEnum } from "@/app/enums/movementWatchTypeEnum";
 import { WatchStyleEnum } from "@/app/enums/watchStyleEnum";
 import { WaterResistanceEnum } from "@/app/enums/waterResistanceEnum";
 import { WatchDetails } from "../../watchDetails";
+import { MauriceLacroixBrandSeries } from "./MauriceLacroixBrandSeries";
 
 const details: WatchDetails = {
   title: "1996 Maurice Lacroix 5872 Monza Chrono",
@@ -63,7 +64,7 @@ const details: WatchDetails = {
 
     information: {
       brand: BrandsEnum.MAURICE_LACROIX,
-      series: "Chronograph",
+      series: MauriceLacroixBrandSeries.MONZA_CHRONOGRAPH,
       catalogueReference: "5872",
       productionYear: "1996",
       movementType: MovementWatchTypeEnum.QUARTZ,
