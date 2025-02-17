@@ -34,7 +34,7 @@ export default function Page() {
           <Row key="single_main_brands_row" {...{ xs: 2, sm: 3, md: 4, lg: 5, xl: 6 }}>
             {mainBrands.map((entry) => (
               // For each brand the is a colum with a image and a click callback
-              <Col key={`brand_icon_${entry.name}`} className="centered-container">
+              <Col key={`brand_icon_${entry.name}`} className="centered-container hover-animation">
                 <Link href={brandColOnClickHandler(entry.name)}>
                   <Image
                     key={`brand_icon_image_${entry.name}`}

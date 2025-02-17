@@ -39,6 +39,7 @@ body {
 .centered-container {
   display: flex;
   justify-content: center;
+  align-content: center;
 }
 
 .align-center {
@@ -77,4 +78,23 @@ body {
 .brand-model-item {
   min-width: 20%;
   padding-top: 1rem;
+}
+
+.link {
+  text-decoration: none; /* Optional: Remove underline */
+  transition: color 0.3s ease; /* Smooth transition */
+}
+
+.link:hover {
+  color: #c40d2e; /* Hover color */
+}
+
+.hover-animation {
+  text-decoration: none; /* Optional: Remove underline */
+  transition: color 0.3s ease; /* Smooth transition */
+}
+
+.hover-animation:hover {
+  color: #c40d2e; /* Hover color */
+  background-color: #c5718044;
 }

@@ -10,7 +10,7 @@ import { Col, Row } from "react-bootstrap";
 import Container from "react-bootstrap/Container";
 import { useState } from "react";
 import brandsService from "@/app/services/brandsService";
-import BrandTitleDivisionComponent from "@/app/components/common/BrandTitleDivisionComponent copy";
+import BrandTitleDivisionComponent from "@/app/components/common/BrandTitleDivisionComponent";
 
 export default function Page() {
   let { brand } = useParams();
@@ -49,6 +49,7 @@ export default function Page() {
           description: brandDetails.description,
           founded: foundedText,
           website: brandDetails.website,
+          navigationPath: { MWatchCollection: "../#", "All Brands": "../#AllBrandsItems" },
         })}
       </div>
     );
@@ -71,7 +72,10 @@ export default function Page() {
               >
                 {Object.values(seriesModels).map((entry, idx) => {
                   return (
-                    <Col key={`brand_${brand}_series_${seriesName}_model_${idx}`}>
+                    <Col
+                      key={`brand_${brand}_series_${seriesName}_model_${idx}`}
+                      className="hover-animation"
+                    >
                       <ImageComponent
                         src={getExternalResource(entry.srcImage)}
                         alt={`${entry.legend}`}

@@ -183,12 +183,6 @@ export const brandsDB: Brand[] = [
   },
 
   {
-    name: BrandsEnum.MOTORSPORT_BRANDS,
-    logo_img: "public/assets/Images/Brands_Logos/MotorSport.PNG",
-    display_order: 33,
-  },
-
-  {
     name: BrandsEnum.NOVART,
     logo_img: "public/assets/Images/Brands_Logos/novart_logo.PNG",
     display_order: 34,
@@ -242,12 +236,6 @@ export const brandsDB: Brand[] = [
   },
 
   {
-    name: BrandsEnum.PORTUGUESE_BRANDS,
-    logo_img: "public/assets/Images/Brands_Logos/portuguese_brands_logo.PNG",
-    display_order: 50,
-  },
-
-  {
     name: BrandsEnum.CAMEL_TROPHY,
     logo_img: "public/assets/Images/Brands_Logos/camel_logo.PNG",
     display_order: undefined,
@@ -274,6 +262,7 @@ export const brandsDB: Brand[] = [
     name: BrandsEnum.BELEX,
     logo_img: "public/assets/Images/Brands_Logos/belex_logo.PNG",
     display_order: undefined,
+    description: "Vintage Portuguese brand with Swiss Made parts and assembly.",
   },
   {
     name: BrandsEnum.BERGEON,
@@ -375,6 +364,7 @@ export const brandsDB: Brand[] = [
     name: BrandsEnum.LATINO,
     logo_img: "public/assets/Images/Brands_Logos/latino_logo.PNG",
     display_order: undefined,
+    description: "Vintage Portuguese brand with Swiss Made parts and assembly.",
   },
   {
     name: BrandsEnum.LORENZ,
@@ -392,6 +382,7 @@ export const brandsDB: Brand[] = [
     name: BrandsEnum.MARTINI,
     logo_img: "public/assets/Images/Brands_Logos/martini_logo.PNG",
     display_order: undefined,
+    description: "Vintage Portuguese brand with Swiss Made parts and assembly.",
   },
   {
     name: BrandsEnum.MERCEDES_BENZ,
@@ -402,11 +393,13 @@ export const brandsDB: Brand[] = [
     name: BrandsEnum.MIURA,
     logo_img: "public/assets/Images/Brands_Logos/miura_logo.PNG",
     display_order: undefined,
+    description: "Vintage Portuguese brand with Swiss Made parts and assembly.",
   },
   {
     name: BrandsEnum.MONUMENTAL,
     logo_img: "public/assets/Images/Brands_Logos/monumental_logo.PNG",
     display_order: undefined,
+    description: "Vintage Portuguese brand with Swiss Made parts and assembly.",
   },
   {
     name: BrandsEnum.NATALIS,
@@ -448,11 +441,13 @@ export const brandsDB: Brand[] = [
     name: BrandsEnum.ROMAR,
     logo_img: "public/assets/Images/Brands_Logos/romar_logo.PNG",
     display_order: undefined,
+    description: "Vintage Portuguese brand with Swiss Made parts and assembly.",
   },
   {
     name: BrandsEnum.SIGNO,
     logo_img: "public/assets/Images/Brands_Logos/signo_logo.PNG",
     display_order: undefined,
+    description: "Vintage Portuguese brand with Swiss Made parts and assembly.",
   },
   {
     name: BrandsEnum.SECTOR,

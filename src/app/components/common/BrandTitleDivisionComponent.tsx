@@ -1,4 +1,5 @@
 import { getExternalResource } from "@/app/services/commonFunctions";
+import Link from "next/link";
 
 export interface BrandTitleDivisionProps {
   title: string;
@@ -7,6 +8,7 @@ export interface BrandTitleDivisionProps {
   website?: string;
   srcImage?: string;
   textAlignement?: string;
+  navigationPath?: Record<string, string>;
 }
 
 export default function BrandTitleDivisionComponent(props: BrandTitleDivisionProps) {
@@ -18,6 +20,22 @@ export default function BrandTitleDivisionComponent(props: BrandTitleDivisionPro
   ];
   const textClassName = props.textAlignement == "left" ? "left-padded-text" : "centered-text";
 
+  const navigation = Object.entries(props.navigationPath ?? {}).map(([path, reference]) => {
+    return (
+      <span key={`span_navigation_${path}`}>
+        <Link
+          key={`ref_navigation_${path}`}
+          className="info-text title-white-color link"
+          href={reference}
+          target="_blank"
+        >
+          {`${path}`}
+        </Link>
+        <span>{" / "}</span>
+      </span>
+    );
+  });
+
   return (
     <section
       className="page-title-division title-white-color"
@@ -25,10 +43,12 @@ export default function BrandTitleDivisionComponent(props: BrandTitleDivisionPro
     >
       <div className={`page-title-overlay-aligned`}>
         <div className={`${textClassName}`}>
+          <div className="">{navigation}</div>
+
           <div className="header-title upper-text">{props.title}</div>
           <em>{props.description}</em>
           <div>{props.founded}</div>
-          <a className="info-text title-white-color" href={props.website}>
+          <a className="info-text title-white-color link" href={props.website}>
             <b>{`${props.website ? "Website" : ""}`}</b>
           </a>
         </div>

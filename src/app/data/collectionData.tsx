@@ -369,7 +369,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
   },
 
   "Tonino Lamborghini Bologna II": {
-    brand: BrandsEnum.MOTORSPORT_BRANDS,
+    brand: BrandsEnum.TONINO_LAMBORGHINI,
     legend: "Tonino Lamborghini Bologna II",
     year: 2011,
     type: WatchTypeEnum.SPORTS,
@@ -564,7 +564,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     specialCollectionItem: false,
   },
   "Ferrari Modena Red Chronograph": {
-    brand: BrandsEnum.MOTORSPORT_BRANDS,
+    brand: BrandsEnum.FERRARI,
     legend: "Ferrari Modena Red Chronograph",
     year: 2005,
     type: WatchTypeEnum.SPORTS,
@@ -582,7 +582,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     specialCollectionItem: false,
   },
   "Mercedes Benz SLK Limited Edition": {
-    brand: BrandsEnum.MOTORSPORT_BRANDS,
+    brand: BrandsEnum.MERCEDES_BENZ,
     legend: "Mercedes Benz SLK Limited Edition",
     year: 2004,
     type: WatchTypeEnum.SPORTS,
@@ -591,7 +591,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     specialCollectionItem: false,
   },
   "Mercedes Benz SLK Design Chronograph": {
-    brand: BrandsEnum.MOTORSPORT_BRANDS,
+    brand: BrandsEnum.MERCEDES_BENZ,
     legend: "Mercedes Benz SLK Design Chronograph",
     year: 2004,
     type: WatchTypeEnum.SPORTS,
@@ -627,7 +627,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     specialCollectionItem: true,
   },
   "Mercedes Benz Chronograph": {
-    brand: BrandsEnum.MOTORSPORT_BRANDS,
+    brand: BrandsEnum.MERCEDES_BENZ,
     legend: "Mercedes Benz Chronograph",
     year: 2002,
     type: WatchTypeEnum.SPORTS,
@@ -797,7 +797,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     specialCollectionItem: false,
   },
   "Jaguar Fragrances Chrono Limited Edition": {
-    brand: BrandsEnum.MOTORSPORT_BRANDS,
+    brand: BrandsEnum.JAGUAR_FRAGRANCES,
     legend: "Jaguar Fragrances Chrono Limited Edition",
     year: 1995,
     type: WatchTypeEnum.SPORTS,
@@ -806,7 +806,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     specialCollectionItem: false,
   },
   "Jaguar Fragrances Chrono Limited Edit.": {
-    brand: BrandsEnum.MOTORSPORT_BRANDS,
+    brand: BrandsEnum.JAGUAR_FRAGRANCES,
     legend: "Jaguar Fragrances Chrono Limited Edit.",
     year: 1995,
     type: WatchTypeEnum.SPORTS,
@@ -816,7 +816,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
   },
 
   "Jaguar Fragrances Chrono Limited Ed.": {
-    brand: BrandsEnum.MOTORSPORT_BRANDS,
+    brand: BrandsEnum.JAGUAR_FRAGRANCES,
     legend: "Jaguar Fragrances Chrono Limited Ed.",
     year: 1995,
     type: WatchTypeEnum.SPORTS,
@@ -908,7 +908,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     specialCollectionItem: false,
   },
   "Eletta Chronograph OS60": {
-    brand: BrandsEnum.PORTUGUESE_BRANDS,
+    brand: BrandsEnum.ELETTA,
     legend: "Eletta Chronograph OS60",
     year: 1993,
     type: WatchTypeEnum.SPORTS,
@@ -935,7 +935,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     specialCollectionItem: false,
   },
   "Mercedes Benz SLK Edition Chrono": {
-    brand: BrandsEnum.MOTORSPORT_BRANDS,
+    brand: BrandsEnum.MERCEDES_BENZ,
     legend: "Mercedes Benz SLK Edition Chrono",
     year: 1996,
     type: WatchTypeEnum.SPORTS,
@@ -953,7 +953,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     specialCollectionItem: false,
   },
   "Latino Excellence": {
-    brand: BrandsEnum.PORTUGUESE_BRANDS,
+    brand: BrandsEnum.LATINO,
     legend: "Latino Excellence",
     year: 1995,
     type: WatchTypeEnum.CASUAL,
@@ -1354,7 +1354,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     specialCollectionItem: false,
   },
   "Romar Incabloc Green 17 Jewels": {
-    brand: BrandsEnum.PORTUGUESE_BRANDS,
+    brand: BrandsEnum.ROMAR,
     legend: "Romar Incabloc Green 17 Jewels",
     year: 1976,
     type: WatchTypeEnum.CASUAL,
@@ -1363,7 +1363,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     specialCollectionItem: false,
   },
   "Romar Incabloc 17 Jewels": {
-    brand: BrandsEnum.PORTUGUESE_BRANDS,
+    brand: BrandsEnum.ROMAR,
     legend: "Romar Incabloc 17 Jewels",
     year: 1976,
     type: WatchTypeEnum.CASUAL,
@@ -1399,7 +1399,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     specialCollectionItem: false,
   },
   "Martini Special 17 Rubis NOS": {
-    brand: BrandsEnum.PORTUGUESE_BRANDS,
+    brand: BrandsEnum.MARTINI,
     legend: "Martini Special 17 Rubis NOS",
     year: 1975,
     type: WatchTypeEnum.CASUAL,
@@ -1408,7 +1408,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     specialCollectionItem: false,
   },
   "Miura Calendar 17 Rubis": {
-    brand: BrandsEnum.PORTUGUESE_BRANDS,
+    brand: BrandsEnum.MIURA,
     legend: "Miura Calendar 17 Rubis",
     year: 1975,
     type: WatchTypeEnum.CASUAL,
@@ -1417,7 +1417,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     specialCollectionItem: false,
   },
   "Monumental Automatic Dive 200M": {
-    brand: BrandsEnum.PORTUGUESE_BRANDS,
+    brand: BrandsEnum.MONUMENTAL,
     legend: "Monumental Automatic Dive 200M",
     year: 1975,
     type: WatchTypeEnum.DIVE,
@@ -1435,7 +1435,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     specialCollectionItem: true,
   },
   "Hipco Incabloc 17 Jewels": {
-    brand: BrandsEnum.PORTUGUESE_BRANDS,
+    brand: BrandsEnum.HIPCO,
     legend: "Hipco Incabloc 17 Jewels",
     year: 1974,
     type: WatchTypeEnum.CASUAL,
@@ -1671,7 +1671,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     specialCollectionItem: false,
   },
   "Belex Precision 17 Jewels": {
-    brand: BrandsEnum.PORTUGUESE_BRANDS,
+    brand: BrandsEnum.BELEX,
     legend: "Belex Precision 17 Jewels",
     year: 1965,
     type: WatchTypeEnum.CASUAL,
@@ -1853,7 +1853,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
   },
 
   "Signo Small Seconds - AS 1130": {
-    brand: BrandsEnum.PORTUGUESE_BRANDS,
+    brand: BrandsEnum.SIGNO,
     legend: "Signo Small Seconds - AS 1130",
     year: 1947,
     type: WatchTypeEnum.CASUAL,
