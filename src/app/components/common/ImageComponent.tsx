@@ -22,7 +22,7 @@ export default function ImageComponent(props: ImageProps) {
       width={0}
       height={0}
       sizes="100vw"
-      loading="lazy"
+      loading={props.loading || "lazy"}
       style={merged_styles} // optional
     />
   );

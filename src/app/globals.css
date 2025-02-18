@@ -98,3 +98,11 @@ body {
   color: #c40d2e; /* Hover color */
   background-color: #c5718044;
 }
+
+.swiper-transition {
+  .swiper-wrapper {
+    -webkit-transition-timing-function: linear;
+    -o-transition-timing-function: linear;
+    transition-timing-function: linear;
+  }
+}

@@ -878,9 +878,9 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     href: require("./watchModels/Tag_Heuer/Tag_Heuer_Formula_1_WA1211_Tritium_1995"),
     specialCollectionItem: false,
   },
-  "Breitling Chronomat 10ht Anniversary Limitd Edition A13050": {
+  "Breitling Chronomat 10th Anniversary Limitd Edition A13050": {
     brand: BrandsEnum.BREITLING,
-    legend: "Breitling Chronomat 10ht Anniversary Limitd Edition A13050",
+    legend: "Breitling Chronomat 10th Anniversary Limitd Edition A13050",
     year: 1994,
     type: WatchTypeEnum.SPORTS,
     srcImage:

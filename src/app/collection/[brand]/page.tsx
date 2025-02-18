@@ -5,8 +5,10 @@ import HeaderNavBar from "@/app/components/header/header";
 import { CollectionEntry } from "@/app/data/collectionData";
 import {
   getExternalResource,
+  getImgURLForSizeType,
   getPathParameter,
   routeToCollectionBrandModelPage,
+  SizeType,
 } from "@/app/services/commonFunctions";
 import { useParams } from "next/navigation";
 import { Col, Row } from "react-bootstrap";
@@ -60,7 +62,9 @@ export default function Page() {
                         className="info-text link"
                       >
                         <ImageComponent
-                          src={getExternalResource(entry.srcImage)}
+                          src={getExternalResource(
+                            getImgURLForSizeType(entry.srcImage, SizeType.GALLERY),
+                          )}
                           alt={`${entry.legend}`}
                         />
                         <div
