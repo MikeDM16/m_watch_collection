@@ -6,6 +6,15 @@ export interface SellReport {
   url: string;
 }
 
+export const ModelInformationKeyToDisplayTextMapping: Record<string, string> = {
+  brand: "Brand",
+  series: "Series",
+  catalogueReference: "Catalogue Reference",
+  movementType: "Movement Type",
+  productionYear: "Production Year",
+  style: "Style",
+};
+
 export interface ModelInformation {
   brand: string;
   series: string;
@@ -14,6 +23,18 @@ export interface ModelInformation {
   movementType: string;
   style: string;
 }
+
+export const CaseInformationKeyToDisplayTextMapping: Record<string, string> = {
+  diameter: "Diameter",
+  thickness: "Thickness",
+  material: "Material",
+  waterResistance: "Water Resistance",
+  finishingDetails: "Finishing Details",
+  bezel: "Bezel",
+  crownType: "Crown Type",
+  crystal: "Crystal",
+  caseback: "Caseback",
+};
 
 export interface CaseInformation {
   diameter: string;
@@ -27,6 +48,14 @@ export interface CaseInformation {
   caseback: string;
 }
 
+export const DialInformationToDisplayTextMapping: Record<string, string> = {
+  color: "Color",
+  dialMarkers: "Dial Markers",
+  finishingDetails: "Finishing Details",
+  luminiscentIndexes: "Luminiscent Indexes",
+  calendar: "Calendar",
+};
+
 export interface DialInformation {
   color: string;
   dialMarkers: string;
@@ -34,6 +63,13 @@ export interface DialInformation {
   luminiscentIndexes: string;
   calendar: string;
 }
+
+export const BraceletInformationToDisplayTextMapping: Record<string, string> = {
+  material: "Material",
+  buckleType: "Buckle Type",
+  width: "Width",
+  color: "Color",
+};
 
 export interface BraceletInformation {
   material: string;

@@ -38,7 +38,7 @@ export default function Page() {
                 <Link href={brandColOnClickHandler(entry.name)}>
                   <Image
                     key={`brand_icon_image_${entry.name}`}
-                    src={getExternalResource(entry.logo_img)}
+                    src={getExternalResource(entry.logoImg)}
                     alt="Next.js logo"
                     width={180}
                     height={38}

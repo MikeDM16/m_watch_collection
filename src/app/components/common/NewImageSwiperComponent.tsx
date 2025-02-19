@@ -17,8 +17,14 @@ import {
   SizeType,
 } from "@/app/services/commonFunctions";
 
-export default function ImageGalleryComponent(galleryImages: string[]) {
-  const [index, setIndex] = useState(-1);
+export default function ImageSwiperComponent(galleryImages: string[]) {
+  const [, setOpen] = React.useState(false);
+  const [index, setIndex] = useState(0);
+
+  const openLightbox = (i: number) => {
+    setIndex(i);
+    setOpen(true);
+  };
 
   const items = galleryImages.map((entry) => {
     const srcImg = getExternalResource(entry);
@@ -43,14 +49,14 @@ export default function ImageGalleryComponent(galleryImages: string[]) {
       <RowsPhotoAlbum
         photos={items}
         targetRowHeight={150}
-        onClick={({ index: current }) => setIndex(current)}
+        onClick={({ index: current }) => openLightbox(current)}
       />
 
       <Lightbox
         index={index}
         slides={items}
-        open={index >= 0}
-        close={() => setIndex(-1)}
+        open={true}
+        close={() => setOpen(false)}
         plugins={[Fullscreen, Slideshow, Thumbnails, Counter, Zoom]}
         thumbnails={{
           showToggle: true,

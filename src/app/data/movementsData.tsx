@@ -62,6 +62,17 @@ import ETA_Valjoux_7751_25 from "./movements/ETA/ETA_Valjoux_7751_25J";
 import TISSOT_781 from "./movements/Tissot/781_17J";
 import ETA_2671 from "./movements/ETA/ETA_2671_25J";
 
+export const CaliberTechinicalDetailskeyToDisplayTextmappings: Record<string, string> = {
+  manufacturer: "Manufacturer",
+  modelReference: "Model",
+  type: "Type",
+  jewels: "Jewels",
+  frequency: "Frequency",
+  reserve: "Reserve",
+  functions: "Functions",
+  battery: "Battery",
+};
+
 export interface CaliberTechinicalDetails {
   manufacturer: string;
   modelReference: string;

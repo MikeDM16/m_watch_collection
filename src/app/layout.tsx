@@ -4,6 +4,7 @@ import "./globals.css";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import "swiper/css";
+import "react-photo-album/rows.css";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",

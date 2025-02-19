@@ -4,20 +4,20 @@ import CollectionItemsDB from "../data/collectionData";
 function getMainBrands(): Brand[] {
   /**
    * Get main brands
-   * Defined with display order. Returned ordered by display_order
+   * Defined with display order. Returned ordered by displayOrder
    */
   console.log("Returning main brands");
   return brandsDB
-    .filter((entry) => entry.display_order != undefined)
-    .sort((a, b) => (a.display_order ?? 0) - (b.display_order ?? 0));
+    .filter((entry) => entry.displayOrder != undefined)
+    .sort((a, b) => (a.displayOrder ?? 0) - (b.displayOrder ?? 0));
 }
 
 function getSecondaryBrands(): Brand[] {
   /**
-   * Get secondary brands, that don't have display_order
+   * Get secondary brands, that don't have displayOrder
    */
   console.log("Returning secondary brands");
-  return brandsDB.filter((entry) => entry.display_order == undefined);
+  return brandsDB.filter((entry) => entry.displayOrder == undefined);
 }
 
 function getBrandInformation(brandName: string): Brand | undefined {
