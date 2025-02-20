@@ -1,6 +1,6 @@
 "use client";
 
-import HeaderNavBar from "@/app/components/header/header";
+import HeaderNavBar from "@/app/components/header/headerComponent";
 import { getPathParameter } from "@/app/services/commonFunctions";
 import { useParams } from "next/navigation";
 import { useState } from "react";
@@ -20,6 +20,9 @@ import {
 import FeatureListingComponent from "@/app/components/common/FeaturesListingComponent";
 import { CaliberDetailComponent } from "@/app/components/caliber/CaliberDetailsComponent";
 import { Caliber } from "@/app/data/movementsData";
+import FooterComponent from "@/app/footer/footerComponent";
+import BrandPageNotFoundComponent from "@/app/components/notFound/BrandPageNotFoundComponent";
+import BrandModelPageNotFoundComponent from "@/app/components/notFound/BrandModelPageNotFoundComponent";
 
 export default function BrandModelPage() {
   let { brand, model } = useParams();
@@ -29,13 +32,11 @@ export default function BrandModelPage() {
   const [modelDetails] = useState(collectionService.getModelInformationByKey(model));
 
   if (!brand || !brandDetails) {
-    // TOOD
-    return <div>NOT FOUND for brand {brand}</div>;
+    return BrandPageNotFoundComponent(brand);
   }
 
   if (!model || !modelDetails) {
-    // TODO
-    return <div>NOT FOUND for model {model}</div>;
+    return BrandModelPageNotFoundComponent(brand, model);
   }
 
   const modelName: string = modelDetails.href.default.title;
@@ -99,6 +100,7 @@ export default function BrandModelPage() {
       {BrandPageTitleComponent(brandDetails)}
       {renderBrandItemTechnicalData()}
       {CaliberDetailComponent(caliberDetails)}
+      {FooterComponent()}
     </div>
   );
 }

@@ -18,6 +18,8 @@ import brandsService from "@/app/services/brandsService";
 import Link from "next/link";
 import BrandPageTitleComponent from "@/app/components/brandPage/BrandPageTitleComponent";
 import collectionService from "@/app/services/collectionService";
+import FooterComponent from "@/app/footer/footerComponent";
+import BrandPageNotFoundComponent from "@/app/components/notFound/BrandPageNotFoundComponent";
 
 export default function Page() {
   let { brand } = useParams();
@@ -26,7 +28,7 @@ export default function Page() {
   const [brandDetails] = useState(brandsService.getBrandInformation(brand));
 
   if (!brand || !brandDetails) {
-    return <div>NOT FOUND</div>;
+    return BrandPageNotFoundComponent(brand);
   }
 
   const brandModels: Record<string, CollectionEntry[]> =
