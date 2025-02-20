@@ -1,7 +1,7 @@
 "use client";
 
 import ImageComponent from "@/app/components/common/ImageComponent";
-import HeaderNavBar from "@/app/components/header/header";
+import HeaderNavBar from "@/app/components/header/headerComponent";
 import { CollectionEntry } from "@/app/data/collectionData";
 import {
   getExternalResource,
@@ -95,6 +95,7 @@ export default function Page() {
       {HeaderNavBar()}
       {BrandPageTitleComponent(brandDetails)}
       {renderCollectionItem()}
+      {FooterComponent()}
     </div>
   );
 }

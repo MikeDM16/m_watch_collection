@@ -33,11 +33,11 @@ export function getIconWithTextCentered(Icon: IconType, text: string) {
 }
 
 export function getPathParameter(value: string): string {
-  return value.replaceAll("-", " ");
+  return decodeURIComponent(value);
 }
 
 export function setPathParameter(value: string): string {
-  return value.replaceAll(" ", "-");
+  return encodeURIComponent(value);
 }
 
 export function routeToMainPageHeader() {

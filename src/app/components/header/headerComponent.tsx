@@ -20,7 +20,7 @@ interface NavBarItem {
 export default function HeaderNavBar() {
   const references: NavBarItem[] = [
     {
-      reference: "#CollectionItems",
+      reference: routeToMainPageHeader(),
       icon: FaArchive,
       text: "Collection",
     },
@@ -30,18 +30,18 @@ export default function HeaderNavBar() {
       text: "All Brands",
     },
     {
-      reference: "#AboutMe",
+      reference: "/#AboutMe",
       icon: MdPerson,
       text: "About Me",
     },
     {
-      reference: "#Contacts",
+      reference: "/#Contacts",
       icon: MdEmail,
       text: "Contacts",
     },
   ];
   return (
-    <Navbar expand="lg" className="navbar-dark bg-dark" fixed="top" sticky="top">
+    <Navbar id="start" expand="lg" className="navbar-dark bg-dark" fixed="top" sticky="top">
       <Container fluid>
         <Navbar.Brand href={routeToMainPageHeader()}>
           <div className="header-navbar-title">M Watch Collection</div>
@@ -51,7 +51,7 @@ export default function HeaderNavBar() {
           <Nav className="my-lg-0 my-2 me-auto" style={{ maxHeight: "100px" }} navbarScroll>
             {references.map((entry) => {
               return (
-                <Nav.Link key={`nav_link_${entry.reference}`} href={`../${entry.reference}`}>
+                <Nav.Link key={`nav_link_${entry.reference}`} href={`${entry.reference}`}>
                   {" "}
                   <div className="header-navbar-entry header-navbar-link">
                     {getIconWithTextCentered(entry.icon, entry.text)}

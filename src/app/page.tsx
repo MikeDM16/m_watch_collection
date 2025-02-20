@@ -8,11 +8,13 @@ import brandsService from "./services/brandsService";
 import React, { useState } from "react";
 import { Brand } from "./data/brands";
 import Link from "next/link";
-import HeaderNavBar from "./components/header/header";
+import HeaderNavBar from "@/app/components/header/headerComponent";
+
 import ContactsComponent from "./components/contacts/contacts";
 import AboutMeContainer from "./components/aboutMe/aboutMe";
 import { getExternalResource, routeToCollectionBrandPage } from "./services/commonFunctions";
 import PageTitleDivisionComponent from "./components/common/pageTitleDivisionComponent";
+import FooterComponent from "@/app/footer/footerComponent";
 
 export default function Page() {
   const [mainBrands] = useState(brandsService.getMainBrands());
@@ -106,6 +108,7 @@ export default function Page() {
       {ListAllBrandsGroupByLetter()}
       {AboutMeContainer()}
       {ContactsComponent()}
+      {FooterComponent()}
     </div>
   );
 }
