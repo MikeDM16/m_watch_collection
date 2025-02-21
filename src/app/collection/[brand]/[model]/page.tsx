@@ -20,7 +20,7 @@ import {
 import FeatureListingComponent from "@/app/components/common/FeaturesListingComponent";
 import { CaliberDetailComponent } from "@/app/components/caliber/CaliberDetailsComponent";
 import { Caliber } from "@/app/data/movementsData";
-import FooterComponent from "@/app/footer/footerComponent";
+import FooterComponent from "@/app/components/footer/footerComponent";
 import BrandPageNotFoundComponent from "@/app/components/notFound/BrandPageNotFoundComponent";
 import BrandModelPageNotFoundComponent from "@/app/components/notFound/BrandModelPageNotFoundComponent";
 

@@ -11,4 +11,5 @@ def rename_js_to_tsx(directory):
 
 # Replace 'your_directory_path' with the actual path
 folder_path = "./src/app/data/watchModels"
-rename_js_to_tsx(folder_path)
+
+# rename_js_to_tsx(folder_path)

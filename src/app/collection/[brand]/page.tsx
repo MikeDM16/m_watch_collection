@@ -18,7 +18,7 @@ import brandsService from "@/app/services/brandsService";
 import Link from "next/link";
 import BrandPageTitleComponent from "@/app/components/brandPage/BrandPageTitleComponent";
 import collectionService from "@/app/services/collectionService";
-import FooterComponent from "@/app/footer/footerComponent";
+import FooterComponent from "@/app/components/footer/footerComponent";
 import BrandPageNotFoundComponent from "@/app/components/notFound/BrandPageNotFoundComponent";
 
 export default function Page() {

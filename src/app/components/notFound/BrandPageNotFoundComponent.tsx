@@ -2,7 +2,7 @@ import HeaderNavBar from "@/app/components/header/headerComponent";
 
 import React from "react";
 import BrandPageTitleComponent from "@/app/components/brandPage/BrandPageTitleComponent";
-import FooterComponent from "@/app/footer/footerComponent";
+import FooterComponent from "@/app/components/footer/footerComponent";
 
 export default function BrandPageNotFoundComponent(unknownBrand: string) {
   return (
