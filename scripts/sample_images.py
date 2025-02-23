@@ -4,7 +4,7 @@ from tqdm import tqdm
 from PIL import Image
 
 main_folder_path = "C:/Users/migue/Documentos/GitHub/MWatchCollectionResources/public/assets/Images/Movements/Ronda/Ronda_5040D/"
-main_folder_path = "C:/Users/migue/Documentos/GitHub/MWatchCollectionResources/public/assets/Images/Brands_Backgrounds"
+main_folder_path = "C:/Users/migue/Documentos/GitHub/MWatchCollectionResources/public/assets/Images/"
 
 
 def remove_lower_extension_images():
@@ -82,7 +82,6 @@ def create_sub_images():
             else:
                 # print(source_path)
                 for size in [200, 500, 800, 1200]:
-                    continue
                     try:
                         new_name = (
                             ".".join(source_path.split(".")[0:1])
@@ -103,8 +102,8 @@ def create_sub_images():
                         print(e)
 
                 # compress main image
-                img = Image.open(source_path)
-                img.save(source_path, optimize=True, quality=70)
+                #img = Image.open(source_path)
+                #img.save(source_path, optimize=True, quality=70)
 
 
 # remove_lower_extension_images()

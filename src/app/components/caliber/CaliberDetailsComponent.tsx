@@ -8,19 +8,16 @@ import ImageGalleryComponent from "../common/ImageGalleryComponent";
 export const CaliberDetailComponent = (caliberDetails: Caliber) => {
   return (
     <Container>
-      <div className="upper-text container-title centered-container border-bottom-text">
-        Movement Details
-      </div>
       <Row>
         <Col className="col-md-4 col-sm-4 col-4 container">
           <div className="container">{ImageGalleryComponent(caliberDetails.sliderImages)}</div>
         </Col>
         <Col>
-          <div className="container">
-            <b className="info-text">{caliberDetails.title}</b>
+          <div>
+            <div className="info-text container-title">{caliberDetails.title}</div>
             <div>{caliberDetails.description}</div>
           </div>
-          <Row className="container">
+          <Row>
             {Object.entries(caliberDetails.details)
               .filter(([, value]) => value != undefined)
               .map(([key, value]) => {

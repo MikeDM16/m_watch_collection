@@ -2,9 +2,10 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
-import "bootstrap/dist/css/bootstrap.min.css";
 import "swiper/css";
+import "bootstrap/dist/css/bootstrap.min.css";
 import "react-photo-album/rows.css";
+import "react-light-accordion/demo/css/index.css";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",

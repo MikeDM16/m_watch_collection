@@ -1,0 +1,32 @@
+/* Accordion Title Button */
+.accordion-title {
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  color: black;
+  font-weight: normal;
+  display: flex;
+}
+
+/* Accordion Content Wrapper */
+.accordion-content-wrapper {
+  overflow: hidden;
+}
+
+/* Accordion Icon */
+.accordion-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Accordion Title Text */
+.accordion-title-text {
+  text-align: left;
+}
+
+.accordion-title:hover .accordion-icon {
+  transform: scale(1.1);
+}

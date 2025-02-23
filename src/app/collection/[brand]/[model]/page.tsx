@@ -23,6 +23,7 @@ import { Caliber } from "@/app/data/movementsData";
 import FooterComponent from "@/app/components/footer/footerComponent";
 import BrandPageNotFoundComponent from "@/app/components/notFound/BrandPageNotFoundComponent";
 import BrandModelPageNotFoundComponent from "@/app/components/notFound/BrandModelPageNotFoundComponent";
+import AccordionFunction, { AccordionEntry } from "@/app/components/accordion/AccordionComponent";
 
 export default function BrandModelPage() {
   let { brand, model } = useParams();
@@ -43,7 +44,49 @@ export default function BrandModelPage() {
   const technicalData: TechnicalData = modelDetails.href.default.technicalData;
   const caliberDetails: Caliber = modelDetails.href.default.technicalData.movement;
 
+  const getTechnicalInformation = () => {
+    return (
+      <Row className="container">
+        <Col>
+          {FeatureListingComponent(
+            "Case",
+            technicalData.case as unknown as Record<string, string>,
+            undefined,
+            CaseInformationKeyToDisplayTextMapping,
+          )}
+        </Col>
+        <Col>
+          {FeatureListingComponent(
+            "Dial",
+            technicalData.dial as unknown as Record<string, string>,
+            undefined,
+            DialInformationToDisplayTextMapping,
+          )}
+        </Col>
+        <Col>
+          {FeatureListingComponent(
+            "Bracelet",
+            technicalData.bracelet as unknown as Record<string, string>,
+            undefined,
+            BraceletInformationToDisplayTextMapping,
+          )}
+        </Col>
+      </Row>
+    );
+  };
+
   const renderBrandItemTechnicalData = () => {
+    const list: AccordionEntry[] = [
+      {
+        title: "Technical Information",
+        content: getTechnicalInformation(),
+      },
+      {
+        title: "Movement Details",
+        content: CaliberDetailComponent(caliberDetails),
+      },
+    ];
+
     return (
       <div>
         <Container>
@@ -56,39 +99,14 @@ export default function BrandModelPage() {
             </Col>
             <Col>
               {FeatureListingComponent(
-                "General Information",
+                "",
                 technicalData.information as unknown as Record<string, string>,
                 brandDetails.logoImg,
                 ModelInformationKeyToDisplayTextMapping,
               )}
             </Col>
           </Row>
-          <Row className="container">
-            <Col>
-              {FeatureListingComponent(
-                "Case",
-                technicalData.case as unknown as Record<string, string>,
-                undefined,
-                CaseInformationKeyToDisplayTextMapping,
-              )}
-            </Col>
-            <Col>
-              {FeatureListingComponent(
-                "Dial",
-                technicalData.dial as unknown as Record<string, string>,
-                undefined,
-                DialInformationToDisplayTextMapping,
-              )}
-            </Col>
-            <Col>
-              {FeatureListingComponent(
-                "Bracelet",
-                technicalData.bracelet as unknown as Record<string, string>,
-                undefined,
-                BraceletInformationToDisplayTextMapping,
-              )}
-            </Col>
-          </Row>
+          <Row>{AccordionFunction(list)}</Row>
         </Container>
       </div>
     );
@@ -99,7 +117,7 @@ export default function BrandModelPage() {
       {HeaderNavBar()}
       {BrandPageTitleComponent(brandDetails)}
       {renderBrandItemTechnicalData()}
-      {CaliberDetailComponent(caliberDetails)}
+      {/*CaliberDetailComponent(caliberDetails)*/}
       {FooterComponent({ backgroudImage: selectBackgroundImage(brandDetails.backgrounImages) })}
     </div>
   );

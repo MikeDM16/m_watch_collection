@@ -15,6 +15,7 @@
   border-bottom-width: 0.1rem;
   border-bottom-color: "black";
   position: relative;
+  margin-bottom: 1rem;
 }
 
 .info-text {

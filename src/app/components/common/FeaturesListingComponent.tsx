@@ -10,9 +10,7 @@ export default function FeatureListingComponent(
   const containerImage = imgSrc ? <ImageComponent src={getExternalResource(imgSrc)} /> : undefined;
   return (
     <div>
-      <div className="upper-text container-title centered-container border-bottom-text">
-        {title}
-      </div>
+      <div className="container-title centered-container border-bottom-text">{title}</div>
       {containerImage}
       {Object.entries(features).map(([key, value]) => {
         const displayText = keyToDisplayTextmappings?.[key] || key;
