@@ -5,6 +5,7 @@ import { CaseBackDetailsEnum } from "@/app/enums/caseBackDetailsEnum";
 import { CrowWatchTypeEnum } from "@/app/enums/crowWatchTypeEnum";
 import { CrystalMaterialEnum } from "@/app/enums/crystalMaterialEnum";
 import { DialMarketsEnum } from "@/app/enums/dialMarketsEnum";
+import { featuresEnum } from "@/app/enums/featuresEnum";
 import { FinishingDetailsEnum } from "@/app/enums/finishingDetailsEnum";
 import { LuminescentIndexesEnum } from "@/app/enums/luminescentIndexesEnum";
 import { MovementWatchTypeEnum } from "@/app/enums/movementWatchTypeEnum";
@@ -42,7 +43,7 @@ const details: WatchDetails = {
     url: "https://www.catawiki.com/l/38771563-watch-mercedes-benz-slk-limited-ed-n-1469-2004-mercedes-benz-after-2000",
   },
   technicalData: {
-    features: ["Date", "Chronograph", "50 meters"],
+    features: [featuresEnum.DATE, featuresEnum.CHRONOGRAPH, featuresEnum.WR_50_METERS],
 
     information: {
       brand: BrandsEnum.MERCEDES_BENZ,

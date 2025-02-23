@@ -5,6 +5,7 @@ import { CaseBackDetailsEnum } from "@/app/enums/caseBackDetailsEnum";
 import { CrowWatchTypeEnum } from "@/app/enums/crowWatchTypeEnum";
 import { CrystalMaterialEnum } from "@/app/enums/crystalMaterialEnum";
 import { DialMarketsEnum } from "@/app/enums/dialMarketsEnum";
+import { featuresEnum } from "@/app/enums/featuresEnum";
 import { FinishingDetailsEnum } from "@/app/enums/finishingDetailsEnum";
 import { LuminescentIndexesEnum } from "@/app/enums/luminescentIndexesEnum";
 import { MovementWatchTypeEnum } from "@/app/enums/movementWatchTypeEnum";
@@ -76,7 +77,13 @@ const details: WatchDetails = {
     url: "https://www.catawiki.pt/l/27822175-tissot-prc-200-t641-eta-caliber-homem-2011-presente",
   },
   technicalData: {
-    features: ["Date", "Chronograph", "Tachymeter", "200 meters", "Screw-in crown"],
+    features: [
+      featuresEnum.DATE,
+      featuresEnum.CHRONOGRAPH,
+      featuresEnum.TACHYMETER,
+      featuresEnum.WR_200_METERS,
+      featuresEnum.SCREWED_IN_CROWN,
+    ],
 
     information: {
       brand: BrandsEnum.TISSOT,

@@ -5,6 +5,7 @@ import { CaseBackDetailsEnum } from "@/app/enums/caseBackDetailsEnum";
 import { CrowWatchTypeEnum } from "@/app/enums/crowWatchTypeEnum";
 import { CrystalMaterialEnum } from "@/app/enums/crystalMaterialEnum";
 import { DialMarketsEnum } from "@/app/enums/dialMarketsEnum";
+import { featuresEnum } from "@/app/enums/featuresEnum";
 import { FinishingDetailsEnum } from "@/app/enums/finishingDetailsEnum";
 import { LuminescentIndexesEnum } from "@/app/enums/luminescentIndexesEnum";
 import { MovementWatchTypeEnum } from "@/app/enums/movementWatchTypeEnum";
@@ -85,7 +86,12 @@ const details: WatchDetails = {
     url: "https://www.catawiki.com/l/39337225-watch-motorsport-modena-red-chronograph-ferrari-1990-2000",
   },
   technicalData: {
-    features: ["Date", "Chronograph", "200 meters", "Screw-in crown"],
+    features: [
+      featuresEnum.DATE,
+      featuresEnum.CHRONOGRAPH,
+      featuresEnum.WR_200_METERS,
+      featuresEnum.SCREWED_IN_CROWN,
+    ],
 
     information: {
       brand: BrandsEnum.FERRARI,

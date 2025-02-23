@@ -5,6 +5,7 @@ import { CaseBackDetailsEnum } from "@/app/enums/caseBackDetailsEnum";
 import { CrowWatchTypeEnum } from "@/app/enums/crowWatchTypeEnum";
 import { CrystalMaterialEnum } from "@/app/enums/crystalMaterialEnum";
 import { DialMarketsEnum } from "@/app/enums/dialMarketsEnum";
+import { featuresEnum } from "@/app/enums/featuresEnum";
 import { FinishingDetailsEnum } from "@/app/enums/finishingDetailsEnum";
 import { LuminescentIndexesEnum } from "@/app/enums/luminescentIndexesEnum";
 import { MovementWatchTypeEnum } from "@/app/enums/movementWatchTypeEnum";
@@ -64,7 +65,12 @@ const details: WatchDetails = {
   },
 
   technicalData: {
-    features: ["Date", "100 meters", "Uni-directional rotating bezel", "Screw-in crown"],
+    features: [
+      featuresEnum.DATE,
+      featuresEnum.WR_100_METERS,
+      featuresEnum.UNI_DIRECTIONAL_BEZEL,
+      featuresEnum.SCREWED_IN_CROWN,
+    ],
 
     information: {
       brand: BrandsEnum.RAYMOND_WEIL,

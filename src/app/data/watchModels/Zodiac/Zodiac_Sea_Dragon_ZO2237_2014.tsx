@@ -5,6 +5,7 @@ import { CaseBackDetailsEnum } from "@/app/enums/caseBackDetailsEnum";
 import { CrowWatchTypeEnum } from "@/app/enums/crowWatchTypeEnum";
 import { CrystalMaterialEnum } from "@/app/enums/crystalMaterialEnum";
 import { DialMarketsEnum } from "@/app/enums/dialMarketsEnum";
+import { featuresEnum } from "@/app/enums/featuresEnum";
 import { FinishingDetailsEnum } from "@/app/enums/finishingDetailsEnum";
 import { LuminescentIndexesEnum } from "@/app/enums/luminescentIndexesEnum";
 import { MovementWatchTypeEnum } from "@/app/enums/movementWatchTypeEnum";
@@ -49,7 +50,7 @@ const details: WatchDetails = {
     url: "https://www.catawiki.pt/l/23906989-zodiac-sea-dragon-zo2237-homem-2014",
   },
   technicalData: {
-    features: ["Date", "100 meters"],
+    features: [featuresEnum.DATE, featuresEnum.WR_100_METERS],
 
     information: {
       brand: BrandsEnum.ZODIAC,

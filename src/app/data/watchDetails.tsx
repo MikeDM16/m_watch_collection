@@ -1,3 +1,4 @@
+import { FeatureStruct } from "../enums/featuresEnum";
 import { Caliber } from "./movementsData";
 
 export interface SellReport {
@@ -79,7 +80,7 @@ export interface BraceletInformation {
 }
 
 export interface TechnicalData {
-  features: string[];
+  features: (string | FeatureStruct)[];
   information: ModelInformation;
   case: CaseInformation;
   dial: DialInformation;

@@ -5,6 +5,7 @@ import { CaseBackDetailsEnum } from "@/app/enums/caseBackDetailsEnum";
 import { CrowWatchTypeEnum } from "@/app/enums/crowWatchTypeEnum";
 import { CrystalMaterialEnum } from "@/app/enums/crystalMaterialEnum";
 import { DialMarketsEnum } from "@/app/enums/dialMarketsEnum";
+import { featuresEnum } from "@/app/enums/featuresEnum";
 import { FinishingDetailsEnum } from "@/app/enums/finishingDetailsEnum";
 import { LuminescentIndexesEnum } from "@/app/enums/luminescentIndexesEnum";
 import { MovementWatchTypeEnum } from "@/app/enums/movementWatchTypeEnum";
@@ -70,7 +71,7 @@ const details: WatchDetails = {
   },
 
   technicalData: {
-    features: ["Date", "Chronograph"],
+    features: [featuresEnum.DATE, featuresEnum.AUTOMATIC_CHRONOGRAPH],
 
     information: {
       brand: BrandsEnum.PORSCHE_DESIGN,

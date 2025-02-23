@@ -5,6 +5,7 @@ import { CaseBackDetailsEnum } from "@/app/enums/caseBackDetailsEnum";
 import { CrowWatchTypeEnum } from "@/app/enums/crowWatchTypeEnum";
 import { CrystalMaterialEnum } from "@/app/enums/crystalMaterialEnum";
 import { DialMarketsEnum } from "@/app/enums/dialMarketsEnum";
+import { featuresEnum } from "@/app/enums/featuresEnum";
 import { FinishingDetailsEnum } from "@/app/enums/finishingDetailsEnum";
 import { LuminescentIndexesEnum } from "@/app/enums/luminescentIndexesEnum";
 import { MovementWatchTypeEnum } from "@/app/enums/movementWatchTypeEnum";
@@ -30,7 +31,12 @@ const details: WatchDetails = {
     "public/assets/Images/Lorus/2016_Lorus_VD53/IMG_3186.JPG",
   ],
   technicalData: {
-    features: ["Date", "Chronograph", "Tachymeter", "50 meters"],
+    features: [
+      featuresEnum.DATE,
+      featuresEnum.CHRONOGRAPH,
+      featuresEnum.TACHYMETER,
+      featuresEnum.WR_50_METERS,
+    ],
 
     information: {
       brand: BrandsEnum.LORUS,

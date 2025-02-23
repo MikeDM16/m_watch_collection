@@ -5,6 +5,7 @@ import { CaseBackDetailsEnum } from "@/app/enums/caseBackDetailsEnum";
 import { CrowWatchTypeEnum } from "@/app/enums/crowWatchTypeEnum";
 import { CrystalMaterialEnum } from "@/app/enums/crystalMaterialEnum";
 import { DialMarketsEnum } from "@/app/enums/dialMarketsEnum";
+import { featuresEnum } from "@/app/enums/featuresEnum";
 import { FinishingDetailsEnum } from "@/app/enums/finishingDetailsEnum";
 import { LuminescentIndexesEnum } from "@/app/enums/luminescentIndexesEnum";
 import { MovementWatchTypeEnum } from "@/app/enums/movementWatchTypeEnum";
@@ -39,7 +40,12 @@ const details: WatchDetails = {
     url: "https://www.catawiki.com/l/26524577-emes-german-12h-racing-chronograph-cal-os60-men-2000-2010",
   },
   technicalData: {
-    features: ["Date", "Tachymeter", "100 meters", "Screw-in crown"],
+    features: [
+      featuresEnum.DATE,
+      featuresEnum.TACHYMETER,
+      featuresEnum.WR_100_METERS,
+      featuresEnum.SCREWED_IN_CROWN,
+    ],
 
     information: {
       brand: BrandsEnum.EMES,

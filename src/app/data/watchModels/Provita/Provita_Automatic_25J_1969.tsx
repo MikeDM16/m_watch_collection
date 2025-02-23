@@ -5,6 +5,7 @@ import { CaseBackDetailsEnum } from "@/app/enums/caseBackDetailsEnum";
 import { CrowWatchTypeEnum } from "@/app/enums/crowWatchTypeEnum";
 import { CrystalMaterialEnum } from "@/app/enums/crystalMaterialEnum";
 import { DialMarketsEnum } from "@/app/enums/dialMarketsEnum";
+import { featuresEnum } from "@/app/enums/featuresEnum";
 import { FinishingDetailsEnum } from "@/app/enums/finishingDetailsEnum";
 import { LuminescentIndexesEnum } from "@/app/enums/luminescentIndexesEnum";
 import { MovementWatchTypeEnum } from "@/app/enums/movementWatchTypeEnum";
@@ -46,7 +47,7 @@ const details: WatchDetails = {
     url: "https://www.catawiki.pt/l/39599285-provita-sports-automatic-eta-2783-21600a-h-25j-homem-1960-1969",
   },
   technicalData: {
-    features: ["Date", "Automatic"],
+    features: [featuresEnum.DATE, featuresEnum.AUTOMATIC],
 
     information: {
       brand: BrandsEnum.PROVITA,

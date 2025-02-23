@@ -5,6 +5,7 @@ import { CaseBackDetailsEnum } from "@/app/enums/caseBackDetailsEnum";
 import { CrowWatchTypeEnum } from "@/app/enums/crowWatchTypeEnum";
 import { CrystalMaterialEnum } from "@/app/enums/crystalMaterialEnum";
 import { DialMarketsEnum } from "@/app/enums/dialMarketsEnum";
+import { featuresEnum } from "@/app/enums/featuresEnum";
 import { FinishingDetailsEnum } from "@/app/enums/finishingDetailsEnum";
 import { LuminescentIndexesEnum } from "@/app/enums/luminescentIndexesEnum";
 import { MovementWatchTypeEnum } from "@/app/enums/movementWatchTypeEnum";
@@ -57,12 +58,12 @@ const details: WatchDetails = {
   ],
   technicalData: {
     features: [
-      "Date",
-      "Open Case Back",
-      "Mechanique Chronograph",
-      "18K Gold Electroplated",
-      "10 meters",
-      "Tachymeter",
+      featuresEnum.DATE,
+      featuresEnum.MECHANIQUE_CHRONOGRAPH,
+      featuresEnum.ELETRO_GOLD_PLATED_18k,
+      featuresEnum.OPEN_CASE_BACK,
+      featuresEnum.WR_10_METERS,
+      featuresEnum.TACHYMETER,
     ],
 
     information: {

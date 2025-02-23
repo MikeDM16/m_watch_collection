@@ -5,6 +5,7 @@ import { CaseBackDetailsEnum } from "@/app/enums/caseBackDetailsEnum";
 import { CrowWatchTypeEnum } from "@/app/enums/crowWatchTypeEnum";
 import { CrystalMaterialEnum } from "@/app/enums/crystalMaterialEnum";
 import { DialMarketsEnum } from "@/app/enums/dialMarketsEnum";
+import { featuresEnum } from "@/app/enums/featuresEnum";
 import { FinishingDetailsEnum } from "@/app/enums/finishingDetailsEnum";
 import { LuminescentIndexesEnum } from "@/app/enums/luminescentIndexesEnum";
 import { MovementWatchTypeEnum } from "@/app/enums/movementWatchTypeEnum";
@@ -33,7 +34,14 @@ const details: WatchDetails = {
     "public/assets/Images/Festina/1993_Festina_F6602_Titanium/IMG_1927.JPG",
   ],
   technicalData: {
-    features: ["Date", "Tachymeter", "Chronograph", "100 meters", "Titanium", "Alarm"],
+    features: [
+      featuresEnum.TITANIUM,
+      featuresEnum.DATE,
+      featuresEnum.TACHYMETER,
+      featuresEnum.CHRONOGRAPH,
+      featuresEnum.WR_100_METERS,
+      featuresEnum.ALARM,
+    ],
 
     information: {
       brand: BrandsEnum.FESTINA,

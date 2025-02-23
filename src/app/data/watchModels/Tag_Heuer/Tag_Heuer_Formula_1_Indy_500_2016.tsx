@@ -5,6 +5,7 @@ import { CaseBackDetailsEnum } from "@/app/enums/caseBackDetailsEnum";
 import { CrowWatchTypeEnum } from "@/app/enums/crowWatchTypeEnum";
 import { CrystalMaterialEnum } from "@/app/enums/crystalMaterialEnum";
 import { DialMarketsEnum } from "@/app/enums/dialMarketsEnum";
+import { featuresEnum } from "@/app/enums/featuresEnum";
 import { FinishingDetailsEnum } from "@/app/enums/finishingDetailsEnum";
 import { LuminescentIndexesEnum } from "@/app/enums/luminescentIndexesEnum";
 import { MovementWatchTypeEnum } from "@/app/enums/movementWatchTypeEnum";
@@ -94,7 +95,7 @@ const details: WatchDetails = {
   },
 
   technicalData: {
-    features: ["Date", "Screw-in crown", "200 meters"],
+    features: [featuresEnum.DATE, featuresEnum.SCREWED_IN_CROWN, featuresEnum.WR_200_METERS],
 
     information: {
       brand: BrandsEnum.TAG_HEUER,

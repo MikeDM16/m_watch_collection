@@ -5,6 +5,7 @@ import { CaseBackDetailsEnum } from "@/app/enums/caseBackDetailsEnum";
 import { CrowWatchTypeEnum } from "@/app/enums/crowWatchTypeEnum";
 import { CrystalMaterialEnum } from "@/app/enums/crystalMaterialEnum";
 import { DialMarketsEnum } from "@/app/enums/dialMarketsEnum";
+import { featuresEnum } from "@/app/enums/featuresEnum";
 import { FinishingDetailsEnum } from "@/app/enums/finishingDetailsEnum";
 import { LuminescentIndexesEnum } from "@/app/enums/luminescentIndexesEnum";
 import { MovementWatchTypeEnum } from "@/app/enums/movementWatchTypeEnum";
@@ -56,7 +57,7 @@ const details: WatchDetails = {
     url: "https://www.catawiki.com/l/44308901",
   },
   technicalData: {
-    features: ["Date", "Gold Plated 10 \u339B"],
+    features: [featuresEnum.DATE, featuresEnum.GOLD_PLATED_10M],
 
     information: {
       brand: BrandsEnum.TISSOT,

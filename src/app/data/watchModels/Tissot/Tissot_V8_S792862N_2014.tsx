@@ -5,6 +5,7 @@ import { CaseBackDetailsEnum } from "@/app/enums/caseBackDetailsEnum";
 import { CrowWatchTypeEnum } from "@/app/enums/crowWatchTypeEnum";
 import { CrystalMaterialEnum } from "@/app/enums/crystalMaterialEnum";
 import { DialMarketsEnum } from "@/app/enums/dialMarketsEnum";
+import { featuresEnum } from "@/app/enums/featuresEnum";
 import { FinishingDetailsEnum } from "@/app/enums/finishingDetailsEnum";
 import { LuminescentIndexesEnum } from "@/app/enums/luminescentIndexesEnum";
 import { MovementWatchTypeEnum } from "@/app/enums/movementWatchTypeEnum";
@@ -49,7 +50,7 @@ const details: WatchDetails = {
     url: "https://www.catawiki.pt/l/27790361-tissot-v8-chronograph-special-edition-s762-862n-eta-caliber-homem-2011-presente",
   },
   technicalData: {
-    features: ["Date", "Chronograph", "Tachymeter"],
+    features: [featuresEnum.DATE, featuresEnum.CHRONOGRAPH, featuresEnum.TACHYMETER],
 
     information: {
       brand: BrandsEnum.TISSOT,

@@ -5,6 +5,7 @@ import { CaseBackDetailsEnum } from "@/app/enums/caseBackDetailsEnum";
 import { CrowWatchTypeEnum } from "@/app/enums/crowWatchTypeEnum";
 import { CrystalMaterialEnum } from "@/app/enums/crystalMaterialEnum";
 import { DialMarketsEnum } from "@/app/enums/dialMarketsEnum";
+import { featuresEnum } from "@/app/enums/featuresEnum";
 import { FinishingDetailsEnum } from "@/app/enums/finishingDetailsEnum";
 import { LuminescentIndexesEnum } from "@/app/enums/luminescentIndexesEnum";
 import { MovementWatchTypeEnum } from "@/app/enums/movementWatchTypeEnum";
@@ -50,11 +51,11 @@ const details: WatchDetails = {
   },
   technicalData: {
     features: [
-      "Date",
-      "Push-in crown",
-      "200 meters",
-      "Uni-directional rotating bezel",
-      "Tritium Dial",
+      featuresEnum.DATE,
+
+      featuresEnum.WR_200_METERS,
+      featuresEnum.UNI_DIRECTIONAL_BEZEL,
+      featuresEnum.TRITIUM_DIAL,
     ],
 
     information: {

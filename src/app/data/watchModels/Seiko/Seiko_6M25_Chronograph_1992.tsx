@@ -5,6 +5,7 @@ import { CaseBackDetailsEnum } from "@/app/enums/caseBackDetailsEnum";
 import { CrowWatchTypeEnum } from "@/app/enums/crowWatchTypeEnum";
 import { CrystalMaterialEnum } from "@/app/enums/crystalMaterialEnum";
 import { DialMarketsEnum } from "@/app/enums/dialMarketsEnum";
+import { featuresEnum } from "@/app/enums/featuresEnum";
 import { FinishingDetailsEnum } from "@/app/enums/finishingDetailsEnum";
 import { LuminescentIndexesEnum } from "@/app/enums/luminescentIndexesEnum";
 import { MovementWatchTypeEnum } from "@/app/enums/movementWatchTypeEnum";
@@ -69,7 +70,13 @@ const details: WatchDetails = {
     "public/assets/Images/Seiko/1992_Seiko_6M25/IMG_1657.JPG",
   ],
   technicalData: {
-    features: ["Date", "Chronograph", "Alarm", "150 meters", "Countdown Timer"],
+    features: [
+      featuresEnum.DATE,
+      featuresEnum.CHRONOGRAPH,
+      featuresEnum.ALARM,
+      featuresEnum.WR_150_METERS,
+      featuresEnum.COUNT_DOWN_TIMER,
+    ],
 
     information: {
       brand: BrandsEnum.SEIKO,

@@ -5,6 +5,7 @@ import { CaseBackDetailsEnum } from "@/app/enums/caseBackDetailsEnum";
 import { CrowWatchTypeEnum } from "@/app/enums/crowWatchTypeEnum";
 import { CrystalMaterialEnum } from "@/app/enums/crystalMaterialEnum";
 import { DialMarketsEnum } from "@/app/enums/dialMarketsEnum";
+import { featuresEnum } from "@/app/enums/featuresEnum";
 import { FinishingDetailsEnum } from "@/app/enums/finishingDetailsEnum";
 import { LuminescentIndexesEnum } from "@/app/enums/luminescentIndexesEnum";
 import { MovementWatchTypeEnum } from "@/app/enums/movementWatchTypeEnum";
@@ -63,7 +64,12 @@ const details: WatchDetails = {
     url: "https://www.catawiki.com/l/40034805-heuer-airline-gmt-professional-2000-895-513-men-1985",
   },
   technicalData: {
-    features: ["Date", "200 meters", "Uni-directional rotating bezel", "GMT Hand"],
+    features: [
+      featuresEnum.DATE,
+      featuresEnum.WR_200_METERS,
+      featuresEnum.GMT_HAND,
+      featuresEnum.UNI_DIRECTIONAL_BEZEL,
+    ],
 
     information: {
       brand: BrandsEnum.HEUER,

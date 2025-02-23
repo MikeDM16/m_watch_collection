@@ -5,6 +5,7 @@ import { CaseBackDetailsEnum } from "@/app/enums/caseBackDetailsEnum";
 import { CrowWatchTypeEnum } from "@/app/enums/crowWatchTypeEnum";
 import { CrystalMaterialEnum } from "@/app/enums/crystalMaterialEnum";
 import { DialMarketsEnum } from "@/app/enums/dialMarketsEnum";
+import { featuresEnum } from "@/app/enums/featuresEnum";
 import { FinishingDetailsEnum } from "@/app/enums/finishingDetailsEnum";
 import { LuminescentIndexesEnum } from "@/app/enums/luminescentIndexesEnum";
 import { MovementWatchTypeEnum } from "@/app/enums/movementWatchTypeEnum";
@@ -75,7 +76,7 @@ const details: WatchDetails = {
     url: "https://www.catawiki.pt/l/28387083-kelton-m24-sub-dive-countdown-homem-1960-1969",
   },
   technicalData: {
-    features: ["Date", "Mechanical", "Bi-directional count-down bezel"],
+    features: [featuresEnum.DATE, featuresEnum.MECHANICAL, featuresEnum.BI_DIRECTIONAL_BEZEL],
 
     information: {
       brand: BrandsEnum.KELTON,

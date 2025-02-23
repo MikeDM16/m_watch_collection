@@ -5,6 +5,7 @@ import { CaseBackDetailsEnum } from "@/app/enums/caseBackDetailsEnum";
 import { CrowWatchTypeEnum } from "@/app/enums/crowWatchTypeEnum";
 import { CrystalMaterialEnum } from "@/app/enums/crystalMaterialEnum";
 import { DialMarketsEnum } from "@/app/enums/dialMarketsEnum";
+import { featuresEnum } from "@/app/enums/featuresEnum";
 import { FinishingDetailsEnum } from "@/app/enums/finishingDetailsEnum";
 import { LuminescentIndexesEnum } from "@/app/enums/luminescentIndexesEnum";
 import { MovementWatchTypeEnum } from "@/app/enums/movementWatchTypeEnum";
@@ -39,7 +40,7 @@ const details: WatchDetails = {
     "public/assets/Images/Seiko/1990_Seiko_V732_0390/IMG_3889.JPG",
   ],
   technicalData: {
-    features: ["Date"],
+    features: [featuresEnum.DATE],
 
     information: {
       brand: BrandsEnum.SEIKO,

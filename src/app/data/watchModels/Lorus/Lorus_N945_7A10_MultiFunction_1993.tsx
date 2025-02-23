@@ -5,6 +5,7 @@ import { CaseBackDetailsEnum } from "@/app/enums/caseBackDetailsEnum";
 import { CrowWatchTypeEnum } from "@/app/enums/crowWatchTypeEnum";
 import { CrystalMaterialEnum } from "@/app/enums/crystalMaterialEnum";
 import { DialMarketsEnum } from "@/app/enums/dialMarketsEnum";
+import { featuresEnum } from "@/app/enums/featuresEnum";
 import { FinishingDetailsEnum } from "@/app/enums/finishingDetailsEnum";
 import { LuminescentIndexesEnum } from "@/app/enums/luminescentIndexesEnum";
 import { MovementWatchTypeEnum } from "@/app/enums/movementWatchTypeEnum";
@@ -71,7 +72,12 @@ const details: WatchDetails = {
     "public/assets/Images/Lorus/1993_Lorus_N945_7A10/IMG_1802.JPG",
   ],
   technicalData: {
-    features: ["Date", "Chronograph", "Tachymeter", "Alarm"],
+    features: [
+      featuresEnum.DATE,
+      featuresEnum.CHRONOGRAPH,
+      featuresEnum.TACHYMETER,
+      featuresEnum.ALARM,
+    ],
 
     information: {
       brand: BrandsEnum.LORUS,

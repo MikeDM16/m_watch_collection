@@ -5,6 +5,7 @@ import { CaseBackDetailsEnum } from "@/app/enums/caseBackDetailsEnum";
 import { CrowWatchTypeEnum } from "@/app/enums/crowWatchTypeEnum";
 import { CrystalMaterialEnum } from "@/app/enums/crystalMaterialEnum";
 import { DialMarketsEnum } from "@/app/enums/dialMarketsEnum";
+import { featuresEnum } from "@/app/enums/featuresEnum";
 import { FinishingDetailsEnum } from "@/app/enums/finishingDetailsEnum";
 import { LuminescentIndexesEnum } from "@/app/enums/luminescentIndexesEnum";
 import { MovementWatchTypeEnum } from "@/app/enums/movementWatchTypeEnum";
@@ -45,7 +46,7 @@ const details: WatchDetails = {
     url: "https://www.catawiki.com/l/38930303-fontaine-polerouter-style-men-1960-1969",
   },
   technicalData: {
-    features: ["Date", "Automatic", "Gold Plated 20 \u339B"],
+    features: [featuresEnum.DATE, featuresEnum.AUTOMATIC, featuresEnum.GOLD_PLATED_20M],
 
     information: {
       brand: BrandsEnum.FONTAINE,

@@ -5,6 +5,7 @@ import { CaseBackDetailsEnum } from "@/app/enums/caseBackDetailsEnum";
 import { CrowWatchTypeEnum } from "@/app/enums/crowWatchTypeEnum";
 import { CrystalMaterialEnum } from "@/app/enums/crystalMaterialEnum";
 import { DialMarketsEnum } from "@/app/enums/dialMarketsEnum";
+import { featuresEnum } from "@/app/enums/featuresEnum";
 import { FinishingDetailsEnum } from "@/app/enums/finishingDetailsEnum";
 import { LuminescentIndexesEnum } from "@/app/enums/luminescentIndexesEnum";
 import { MovementWatchTypeEnum } from "@/app/enums/movementWatchTypeEnum";
@@ -48,7 +49,13 @@ const details: WatchDetails = {
     url: "https://www.catawiki.com/l/26885215-tissot-prs-200-t362-462k-men-2011-present",
   },
   technicalData: {
-    features: ["Date", "Chronograph", "Tachymeter", "200 meters", "Screw-in crown"],
+    features: [
+      featuresEnum.DATE,
+      featuresEnum.CHRONOGRAPH,
+      featuresEnum.TACHYMETER,
+      featuresEnum.WR_200_METERS,
+      featuresEnum.SCREWED_IN_CROWN,
+    ],
 
     information: {
       brand: BrandsEnum.TISSOT,

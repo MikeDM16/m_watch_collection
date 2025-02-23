@@ -5,6 +5,7 @@ import { CaseBackDetailsEnum } from "@/app/enums/caseBackDetailsEnum";
 import { CrowWatchTypeEnum } from "@/app/enums/crowWatchTypeEnum";
 import { CrystalMaterialEnum } from "@/app/enums/crystalMaterialEnum";
 import { DialMarketsEnum } from "@/app/enums/dialMarketsEnum";
+import { featuresEnum } from "@/app/enums/featuresEnum";
 import { FinishingDetailsEnum } from "@/app/enums/finishingDetailsEnum";
 import { LuminescentIndexesEnum } from "@/app/enums/luminescentIndexesEnum";
 import { MovementWatchTypeEnum } from "@/app/enums/movementWatchTypeEnum";
@@ -59,7 +60,7 @@ const details: WatchDetails = {
     url: "https://www.catawiki.com/en/l/76479139",
   },
   technicalData: {
-    features: ["Date", "Push-in crown", "200 meters", "Uni-directional rotating bezel"],
+    features: [featuresEnum.DATE, featuresEnum.WR_200_METERS, featuresEnum.UNI_DIRECTIONAL_BEZEL],
 
     information: {
       brand: BrandsEnum.TAG_HEUER,

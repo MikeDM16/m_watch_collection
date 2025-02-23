@@ -5,6 +5,7 @@ import { CaseBackDetailsEnum } from "@/app/enums/caseBackDetailsEnum";
 import { CrowWatchTypeEnum } from "@/app/enums/crowWatchTypeEnum";
 import { CrystalMaterialEnum } from "@/app/enums/crystalMaterialEnum";
 import { DialMarketsEnum } from "@/app/enums/dialMarketsEnum";
+import { featuresEnum } from "@/app/enums/featuresEnum";
 import { FinishingDetailsEnum } from "@/app/enums/finishingDetailsEnum";
 import { LuminescentIndexesEnum } from "@/app/enums/luminescentIndexesEnum";
 import { MovementWatchTypeEnum } from "@/app/enums/movementWatchTypeEnum";
@@ -67,7 +68,7 @@ const details: WatchDetails = {
     "public/assets/Images/Omodox/1950_Omodox_Precision/IMG_2365.JPG",
   ],
   technicalData: {
-    features: ["Mechanical", "Gold Plated 10 \u339B"],
+    features: [featuresEnum.MECHANICAL, featuresEnum.GOLD_PLATED_10M],
 
     information: {
       brand: BrandsEnum.OMODOX,

@@ -5,6 +5,7 @@ import { CaseBackDetailsEnum } from "@/app/enums/caseBackDetailsEnum";
 import { CrowWatchTypeEnum } from "@/app/enums/crowWatchTypeEnum";
 import { CrystalMaterialEnum } from "@/app/enums/crystalMaterialEnum";
 import { DialMarketsEnum } from "@/app/enums/dialMarketsEnum";
+import { featuresEnum } from "@/app/enums/featuresEnum";
 import { FinishingDetailsEnum } from "@/app/enums/finishingDetailsEnum";
 import { LuminescentIndexesEnum } from "@/app/enums/luminescentIndexesEnum";
 import { MovementWatchTypeEnum } from "@/app/enums/movementWatchTypeEnum";
@@ -89,7 +90,7 @@ const details: WatchDetails = {
     "public/assets/Images/Titus/1970_Titus_Tuning_Fork/8.JPG",
   ],
   technicalData: {
-    features: ["Date", "30 meters"],
+    features: [featuresEnum.DATE, featuresEnum.WR_30_METERS],
 
     information: {
       brand: BrandsEnum.SOLVIL_ET_TITUS,

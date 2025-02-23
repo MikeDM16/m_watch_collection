@@ -5,6 +5,7 @@ import { CaseBackDetailsEnum } from "@/app/enums/caseBackDetailsEnum";
 import { CrowWatchTypeEnum } from "@/app/enums/crowWatchTypeEnum";
 import { CrystalMaterialEnum } from "@/app/enums/crystalMaterialEnum";
 import { DialMarketsEnum } from "@/app/enums/dialMarketsEnum";
+import { featuresEnum } from "@/app/enums/featuresEnum";
 import { FinishingDetailsEnum } from "@/app/enums/finishingDetailsEnum";
 import { LuminescentIndexesEnum } from "@/app/enums/luminescentIndexesEnum";
 import { MovementWatchTypeEnum } from "@/app/enums/movementWatchTypeEnum";
@@ -45,7 +46,7 @@ const details: WatchDetails = {
     url: "https://www.catawiki.pt/l/34320459-omega-de-ville-191-0167-cal-1365-9-jewels-homem-1970-1979",
   },
   technicalData: {
-    features: ["Date", "Water Resistant", "14K Gold Plated 20 \u339B"],
+    features: [featuresEnum.DATE, featuresEnum.WATER_RESIST, featuresEnum.GOLD_PLATED_20M],
 
     information: {
       brand: BrandsEnum.OMEGA,

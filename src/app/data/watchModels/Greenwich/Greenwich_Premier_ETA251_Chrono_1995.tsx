@@ -5,6 +5,7 @@ import { CaseBackDetailsEnum } from "@/app/enums/caseBackDetailsEnum";
 import { CrowWatchTypeEnum } from "@/app/enums/crowWatchTypeEnum";
 import { CrystalMaterialEnum } from "@/app/enums/crystalMaterialEnum";
 import { DialMarketsEnum } from "@/app/enums/dialMarketsEnum";
+import { featuresEnum } from "@/app/enums/featuresEnum";
 import { FinishingDetailsEnum } from "@/app/enums/finishingDetailsEnum";
 import { LuminescentIndexesEnum } from "@/app/enums/luminescentIndexesEnum";
 import { MovementWatchTypeEnum } from "@/app/enums/movementWatchTypeEnum";
@@ -49,7 +50,13 @@ const details: WatchDetails = {
     url: "https://www.catawiki.com/l/25007081-greenwich-premier-gold-eta-251-272-shapphire-crystal-men-1990-1999",
   },
   technicalData: {
-    features: ["Date", "Chronograph", "100 meters", "Screw-in crown", "Gold Plated 20 \u339B"],
+    features: [
+      featuresEnum.DATE,
+      featuresEnum.CHRONOGRAPH,
+      featuresEnum.WR_100_METERS,
+      featuresEnum.SCREWED_IN_CROWN,
+      featuresEnum.GOLD_PLATED_20M,
+    ],
 
     information: {
       brand: BrandsEnum.GREENWICH,

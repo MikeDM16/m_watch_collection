@@ -5,6 +5,7 @@ import { CaseBackDetailsEnum } from "@/app/enums/caseBackDetailsEnum";
 import { CrowWatchTypeEnum } from "@/app/enums/crowWatchTypeEnum";
 import { CrystalMaterialEnum } from "@/app/enums/crystalMaterialEnum";
 import { DialMarketsEnum } from "@/app/enums/dialMarketsEnum";
+import { featuresEnum } from "@/app/enums/featuresEnum";
 import { FinishingDetailsEnum } from "@/app/enums/finishingDetailsEnum";
 import { LuminescentIndexesEnum } from "@/app/enums/luminescentIndexesEnum";
 import { MovementWatchTypeEnum } from "@/app/enums/movementWatchTypeEnum";
@@ -41,7 +42,7 @@ const details: WatchDetails = {
     url: "https://www.catawiki.pt/l/26122123-belex-precision-17-jewels-homem-1950-1959",
   },
   technicalData: {
-    features: ["Mechanical"],
+    features: [featuresEnum.MECHANICAL],
 
     information: {
       brand: BrandsEnum.BELEX,

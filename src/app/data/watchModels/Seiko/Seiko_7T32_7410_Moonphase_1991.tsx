@@ -5,6 +5,7 @@ import { CaseBackDetailsEnum } from "@/app/enums/caseBackDetailsEnum";
 import { CrowWatchTypeEnum } from "@/app/enums/crowWatchTypeEnum";
 import { CrystalMaterialEnum } from "@/app/enums/crystalMaterialEnum";
 import { DialMarketsEnum } from "@/app/enums/dialMarketsEnum";
+import { featuresEnum } from "@/app/enums/featuresEnum";
 import { FinishingDetailsEnum } from "@/app/enums/finishingDetailsEnum";
 import { LuminescentIndexesEnum } from "@/app/enums/luminescentIndexesEnum";
 import { MovementWatchTypeEnum } from "@/app/enums/movementWatchTypeEnum";
@@ -54,7 +55,12 @@ const details: WatchDetails = {
     url: "https://www.catawiki.com/en/l/77571295-seiko-age-of-discoveries-nos-moonphase-chrono-jdm-7t36-men-1991",
   },
   technicalData: {
-    features: ["Date", "Moonphase", "Alarm", "30 meters"],
+    features: [
+      featuresEnum.DATE,
+      featuresEnum.MOONPHASE,
+      featuresEnum.ALARM,
+      featuresEnum.WR_30_METERS,
+    ],
 
     information: {
       brand: BrandsEnum.SEIKO,

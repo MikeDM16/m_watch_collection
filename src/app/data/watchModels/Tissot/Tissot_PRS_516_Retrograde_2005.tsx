@@ -5,6 +5,7 @@ import { CaseBackDetailsEnum } from "@/app/enums/caseBackDetailsEnum";
 import { CrowWatchTypeEnum } from "@/app/enums/crowWatchTypeEnum";
 import { CrystalMaterialEnum } from "@/app/enums/crystalMaterialEnum";
 import { DialMarketsEnum } from "@/app/enums/dialMarketsEnum";
+import { featuresEnum } from "@/app/enums/featuresEnum";
 import { FinishingDetailsEnum } from "@/app/enums/finishingDetailsEnum";
 import { LuminescentIndexesEnum } from "@/app/enums/luminescentIndexesEnum";
 import { MovementWatchTypeEnum } from "@/app/enums/movementWatchTypeEnum";
@@ -44,7 +45,12 @@ const details: WatchDetails = {
     url: "https://www.catawiki.com/l/22109423-tissot-prs-516-retrograde-chronograph-sapphire-glass-men-2011-present",
   },
   technicalData: {
-    features: ["Date", "Retrograde Chronograph", "Tachymeter", "50 meters"],
+    features: [
+      featuresEnum.DATE,
+      featuresEnum.RETROGRADE_CHRONOGRAPH,
+      featuresEnum.TACHYMETER,
+      featuresEnum.WR_50_METERS,
+    ],
 
     information: {
       brand: BrandsEnum.TISSOT,

@@ -5,6 +5,7 @@ import { CaseBackDetailsEnum } from "@/app/enums/caseBackDetailsEnum";
 import { CrowWatchTypeEnum } from "@/app/enums/crowWatchTypeEnum";
 import { CrystalMaterialEnum } from "@/app/enums/crystalMaterialEnum";
 import { DialMarketsEnum } from "@/app/enums/dialMarketsEnum";
+import { featuresEnum } from "@/app/enums/featuresEnum";
 import { FinishingDetailsEnum } from "@/app/enums/finishingDetailsEnum";
 import { LuminescentIndexesEnum } from "@/app/enums/luminescentIndexesEnum";
 import { MovementWatchTypeEnum } from "@/app/enums/movementWatchTypeEnum";
@@ -58,7 +59,13 @@ const details: WatchDetails = {
     url: "https://www.catawiki.com/en/l/58220069",
   },
   technicalData: {
-    features: ["Date", "Automatic Chronograph", "100 meters", "Screw-in crown", "Tachymeter"],
+    features: [
+      featuresEnum.DATE,
+      featuresEnum.AUTOMATIC_CHRONOGRAPH,
+      featuresEnum.WR_100_METERS,
+      featuresEnum.SCREWED_IN_CROWN,
+      featuresEnum.TACHYMETER,
+    ],
 
     information: {
       brand: BrandsEnum.TISSOT,

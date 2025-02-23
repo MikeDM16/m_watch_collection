@@ -5,6 +5,7 @@ import { CaseBackDetailsEnum } from "@/app/enums/caseBackDetailsEnum";
 import { CrowWatchTypeEnum } from "@/app/enums/crowWatchTypeEnum";
 import { CrystalMaterialEnum } from "@/app/enums/crystalMaterialEnum";
 import { DialMarketsEnum } from "@/app/enums/dialMarketsEnum";
+import { featuresEnum } from "@/app/enums/featuresEnum";
 import { FinishingDetailsEnum } from "@/app/enums/finishingDetailsEnum";
 import { LuminescentIndexesEnum } from "@/app/enums/luminescentIndexesEnum";
 import { MovementWatchTypeEnum } from "@/app/enums/movementWatchTypeEnum";
@@ -51,7 +52,7 @@ const details: WatchDetails = {
     url: "https://www.catawiki.com/l/29188643-raymond-weil-automatic-2809-eta-2892-21-jewels-men-1988",
   },
   technicalData: {
-    features: ["Date", "Automatic", "18K Gold Electroplated"],
+    features: [featuresEnum.DATE, featuresEnum.AUTOMATIC, featuresEnum.ELETRO_GOLD_PLATED_18k],
 
     information: {
       brand: BrandsEnum.RAYMOND_WEIL,

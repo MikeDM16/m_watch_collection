@@ -5,6 +5,7 @@ import { CaseBackDetailsEnum } from "@/app/enums/caseBackDetailsEnum";
 import { CrowWatchTypeEnum } from "@/app/enums/crowWatchTypeEnum";
 import { CrystalMaterialEnum } from "@/app/enums/crystalMaterialEnum";
 import { DialMarketsEnum } from "@/app/enums/dialMarketsEnum";
+import { featuresEnum } from "@/app/enums/featuresEnum";
 import { FinishingDetailsEnum } from "@/app/enums/finishingDetailsEnum";
 import { LuminescentIndexesEnum } from "@/app/enums/luminescentIndexesEnum";
 import { MovementWatchTypeEnum } from "@/app/enums/movementWatchTypeEnum";
@@ -45,7 +46,11 @@ const details: WatchDetails = {
     url: "https://www.catawiki.com/l/42625815",
   },
   technicalData: {
-    features: ["Tri-Compax Calendar", "Regolo Bezel", "30 meters"],
+    features: [
+      featuresEnum.TRI_COMPEX_CALENDAR,
+      featuresEnum.REGOLO_BEZEL,
+      featuresEnum.WR_30_METERS,
+    ],
 
     information: {
       brand: BrandsEnum.PRYNGEPS,

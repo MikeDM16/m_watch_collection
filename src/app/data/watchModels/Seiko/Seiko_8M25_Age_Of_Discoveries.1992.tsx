@@ -5,6 +5,7 @@ import { CaseBackDetailsEnum } from "@/app/enums/caseBackDetailsEnum";
 import { CrowWatchTypeEnum } from "@/app/enums/crowWatchTypeEnum";
 import { CrystalMaterialEnum } from "@/app/enums/crystalMaterialEnum";
 import { DialMarketsEnum } from "@/app/enums/dialMarketsEnum";
+import { featuresEnum } from "@/app/enums/featuresEnum";
 import { FinishingDetailsEnum } from "@/app/enums/finishingDetailsEnum";
 import { LuminescentIndexesEnum } from "@/app/enums/luminescentIndexesEnum";
 import { MovementWatchTypeEnum } from "@/app/enums/movementWatchTypeEnum";
@@ -69,7 +70,12 @@ const details: WatchDetails = {
   },
 
   technicalData: {
-    features: ["Date", "Perpetual Calendar", "Alarm", "30 meters"],
+    features: [
+      featuresEnum.DATE,
+      featuresEnum.PERPETUAL_CALENDAR,
+      featuresEnum.ALARM,
+      featuresEnum.WR_30_METERS,
+    ],
 
     information: {
       brand: BrandsEnum.SEIKO,

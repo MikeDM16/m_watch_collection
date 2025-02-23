@@ -5,6 +5,7 @@ import { CaseBackDetailsEnum } from "@/app/enums/caseBackDetailsEnum";
 import { CrowWatchTypeEnum } from "@/app/enums/crowWatchTypeEnum";
 import { CrystalMaterialEnum } from "@/app/enums/crystalMaterialEnum";
 import { DialMarketsEnum } from "@/app/enums/dialMarketsEnum";
+import { featuresEnum } from "@/app/enums/featuresEnum";
 import { FinishingDetailsEnum } from "@/app/enums/finishingDetailsEnum";
 import { LuminescentIndexesEnum } from "@/app/enums/luminescentIndexesEnum";
 import { MovementWatchTypeEnum } from "@/app/enums/movementWatchTypeEnum";
@@ -53,7 +54,7 @@ const details: WatchDetails = {
     url: "https://www.catawiki.com/en/l/72819739-eletta-orange-boy-chronograph-men-1987",
   },
   technicalData: {
-    features: ["Date", "50 meters", "Chronograph"],
+    features: [featuresEnum.DATE, featuresEnum.WR_50_METERS, featuresEnum.CHRONOGRAPH],
 
     information: {
       brand: BrandsEnum.ELETTA,

@@ -5,6 +5,7 @@ import { CaseBackDetailsEnum } from "@/app/enums/caseBackDetailsEnum";
 import { CrowWatchTypeEnum } from "@/app/enums/crowWatchTypeEnum";
 import { CrystalMaterialEnum } from "@/app/enums/crystalMaterialEnum";
 import { DialMarketsEnum } from "@/app/enums/dialMarketsEnum";
+import { featuresEnum } from "@/app/enums/featuresEnum";
 import { FinishingDetailsEnum } from "@/app/enums/finishingDetailsEnum";
 import { LuminescentIndexesEnum } from "@/app/enums/luminescentIndexesEnum";
 import { MovementWatchTypeEnum } from "@/app/enums/movementWatchTypeEnum";
@@ -72,7 +73,7 @@ const details: WatchDetails = {
     "public/assets/Images/Omega/1984_Polaris_Titanium_396_1100/IMG_1596.JPG",
   ],
   technicalData: {
-    features: ["Date", "120 meters"],
+    features: [featuresEnum.DATE, featuresEnum.WR_120_METERS],
 
     information: {
       brand: BrandsEnum.OMEGA,

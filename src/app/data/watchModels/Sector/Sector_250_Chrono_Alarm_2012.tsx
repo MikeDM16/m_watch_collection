@@ -5,6 +5,7 @@ import { CaseBackDetailsEnum } from "@/app/enums/caseBackDetailsEnum";
 import { CrowWatchTypeEnum } from "@/app/enums/crowWatchTypeEnum";
 import { CrystalMaterialEnum } from "@/app/enums/crystalMaterialEnum";
 import { DialMarketsEnum } from "@/app/enums/dialMarketsEnum";
+import { featuresEnum } from "@/app/enums/featuresEnum";
 import { FinishingDetailsEnum } from "@/app/enums/finishingDetailsEnum";
 import { LuminescentIndexesEnum } from "@/app/enums/luminescentIndexesEnum";
 import { MovementWatchTypeEnum } from "@/app/enums/movementWatchTypeEnum";
@@ -44,7 +45,12 @@ const details: WatchDetails = {
     "public/assets/Images/Sector/2012_Sector_250/IMG_0960.JPG",
   ],
   technicalData: {
-    features: ["Date", "Chronograph", "Tachymeter", "100 meters"],
+    features: [
+      featuresEnum.DATE,
+      featuresEnum.CHRONOGRAPH,
+      featuresEnum.TACHYMETER,
+      featuresEnum.WR_100_METERS,
+    ],
 
     information: {
       brand: BrandsEnum.SECTOR,

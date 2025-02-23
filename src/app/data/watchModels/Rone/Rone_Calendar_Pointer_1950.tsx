@@ -5,6 +5,7 @@ import { CaseBackDetailsEnum } from "@/app/enums/caseBackDetailsEnum";
 import { CrowWatchTypeEnum } from "@/app/enums/crowWatchTypeEnum";
 import { CrystalMaterialEnum } from "@/app/enums/crystalMaterialEnum";
 import { DialMarketsEnum } from "@/app/enums/dialMarketsEnum";
+import { featuresEnum } from "@/app/enums/featuresEnum";
 import { FinishingDetailsEnum } from "@/app/enums/finishingDetailsEnum";
 import { LuminescentIndexesEnum } from "@/app/enums/luminescentIndexesEnum";
 import { MovementWatchTypeEnum } from "@/app/enums/movementWatchTypeEnum";
@@ -48,7 +49,7 @@ const details: WatchDetails = {
     url: "https://www.catawiki.pt/l/27745963-rone-swiss-made-calender-pointer-cal-fhf-253-homem-1950-1959",
   },
   technicalData: {
-    features: ["Date", "Mechanical"],
+    features: [featuresEnum.DATE, featuresEnum.MECHANICAL],
 
     information: {
       brand: BrandsEnum.ONE,

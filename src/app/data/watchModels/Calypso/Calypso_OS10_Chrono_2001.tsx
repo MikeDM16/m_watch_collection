@@ -5,6 +5,7 @@ import { CaseBackDetailsEnum } from "@/app/enums/caseBackDetailsEnum";
 import { CrowWatchTypeEnum } from "@/app/enums/crowWatchTypeEnum";
 import { CrystalMaterialEnum } from "@/app/enums/crystalMaterialEnum";
 import { DialMarketsEnum } from "@/app/enums/dialMarketsEnum";
+import { featuresEnum } from "@/app/enums/featuresEnum";
 import { FinishingDetailsEnum } from "@/app/enums/finishingDetailsEnum";
 import { LuminescentIndexesEnum } from "@/app/enums/luminescentIndexesEnum";
 import { MovementWatchTypeEnum } from "@/app/enums/movementWatchTypeEnum";
@@ -46,7 +47,12 @@ const details: WatchDetails = {
     url: "https://www.catawiki.com/l/26584413-calypso-nos-12h-racing-chronograph-cal-citizen-os10-men-1990-1999",
   },
   technicalData: {
-    features: ["Date", "Chronograph", "Tachymeter", "30 meters"],
+    features: [
+      featuresEnum.DATE,
+      featuresEnum.CHRONOGRAPH,
+      featuresEnum.TACHYMETER,
+      featuresEnum.WR_30_METERS,
+    ],
 
     information: {
       brand: BrandsEnum.CALYPSO,

@@ -5,6 +5,7 @@ import { CaseBackDetailsEnum } from "@/app/enums/caseBackDetailsEnum";
 import { CrowWatchTypeEnum } from "@/app/enums/crowWatchTypeEnum";
 import { CrystalMaterialEnum } from "@/app/enums/crystalMaterialEnum";
 import { DialMarketsEnum } from "@/app/enums/dialMarketsEnum";
+import { featuresEnum } from "@/app/enums/featuresEnum";
 import { FinishingDetailsEnum } from "@/app/enums/finishingDetailsEnum";
 import { LuminescentIndexesEnum } from "@/app/enums/luminescentIndexesEnum";
 import { MovementWatchTypeEnum } from "@/app/enums/movementWatchTypeEnum";
@@ -57,7 +58,12 @@ const details: WatchDetails = {
     url: "https://www.catawiki.com/l/22975267-lucerne-swiss-automatic-25-jewels-dive-watch-men-1970-1979",
   },
   technicalData: {
-    features: ["Date", "Automatic", "50 meters", "Bi-directional rotating bezel"],
+    features: [
+      featuresEnum.DATE,
+      featuresEnum.AUTOMATIC,
+      featuresEnum.WR_50_METERS,
+      featuresEnum.BI_DIRECTIONAL_BEZEL,
+    ],
 
     information: {
       brand: BrandsEnum.LUCERNE,

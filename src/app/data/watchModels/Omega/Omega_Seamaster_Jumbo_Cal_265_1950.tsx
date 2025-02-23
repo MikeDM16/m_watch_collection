@@ -5,6 +5,7 @@ import { CaseBackDetailsEnum } from "@/app/enums/caseBackDetailsEnum";
 import { CrowWatchTypeEnum } from "@/app/enums/crowWatchTypeEnum";
 import { CrystalMaterialEnum } from "@/app/enums/crystalMaterialEnum";
 import { DialMarketsEnum } from "@/app/enums/dialMarketsEnum";
+import { featuresEnum } from "@/app/enums/featuresEnum";
 import { FinishingDetailsEnum } from "@/app/enums/finishingDetailsEnum";
 import { LuminescentIndexesEnum } from "@/app/enums/luminescentIndexesEnum";
 import { MovementWatchTypeEnum } from "@/app/enums/movementWatchTypeEnum";
@@ -77,8 +78,8 @@ const details: WatchDetails = {
 
   technicalData: {
     features: [
-      "Mechanical",
-      "Gold Plated 80 \u339B",
+      featuresEnum.MECHANICAL,
+      featuresEnum.GOLD_PLATED_80M,
       "Movement with production number 12034059, dating the watch back to 1950",
     ],
 
