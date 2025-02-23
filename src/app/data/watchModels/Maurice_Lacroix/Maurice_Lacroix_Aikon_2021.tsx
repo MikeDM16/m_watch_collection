@@ -10,6 +10,7 @@ import { LuminescentIndexesEnum } from "@/app/enums/luminescentIndexesEnum";
 import { MovementWatchTypeEnum } from "@/app/enums/movementWatchTypeEnum";
 import { WatchStyleEnum } from "@/app/enums/watchStyleEnum";
 import { WaterResistanceEnum } from "@/app/enums/waterResistanceEnum";
+
 import { WatchDetails } from "../../watchDetails";
 import { MauriceLacroixBrandSeries } from "./MauriceLacroixBrandSeries";
 

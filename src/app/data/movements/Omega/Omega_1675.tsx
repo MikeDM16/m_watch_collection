@@ -1,6 +1,7 @@
-import { Caliber } from "../../movementsData";
 import { CaliberBrandsEnum, JewelsNumberEnum } from "@/app/enums/caliberEnums";
 import { MovementWatchTypeEnum } from "@/app/enums/movementWatchTypeEnum";
+
+import { Caliber } from "../../movementsData";
 
 const OMEGA_1675: Caliber = {
   // Title

@@ -3,18 +3,16 @@ import {
   getImgURLForSizeType,
   SizeType,
 } from "@/app/services/commonFunctions";
-
 import {
   Autoplay,
   EffectFade,
+  FreeMode,
   Keyboard,
   Navigation,
+  Pagination,
   Thumbs,
   Zoom,
-  Pagination,
-  FreeMode,
 } from "swiper/modules";
-
 import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
@@ -26,10 +24,11 @@ import "swiper/css/keyboard";
 import "swiper/css/zoom";
 import "swiper/css/thumbs";
 
-// import required modules
-import ImageComponent from "./ImageComponent";
 import { useState } from "react";
 import { Swiper as SwiperInstance } from "swiper/types"; // Import Swiper type
+
+// import required modules
+import ImageComponent from "./ImageComponent";
 
 export interface ImageSwiperComponentProps {
   images: string[];

@@ -1,9 +1,9 @@
 "use client";
 
-import HeaderNavBar from "@/app/components/header/headerComponent";
-import React from "react";
 import BrandPageTitleComponent from "@/app/components/brandPage/BrandPageTitleComponent";
 import FooterComponent from "@/app/components/footer/footerComponent";
+import HeaderNavBar from "@/app/components/header/headerComponent";
+import React from "react";
 
 export default function BrandModelPageNotFoundComponent(Brand: string, unknownModel: string) {
   return (

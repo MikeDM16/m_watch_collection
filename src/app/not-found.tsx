@@ -1,8 +1,9 @@
 "use client";
-import { useSearchParams } from "next/navigation";
+
+import { redirect, useSearchParams } from "next/navigation";
 import { Suspense } from "react";
+
 import brandsService from "./services/brandsService";
-import { redirect } from "next/navigation";
 import { routeToCollectionBrandPage, routeToMainPageHeader } from "./services/commonFunctions";
 
 const NotFoundPage = () => {

@@ -1,8 +1,13 @@
 "use client";
 
+import BrandPageTitleComponent from "@/app/components/brandPage/BrandPageTitleComponent";
 import ImageComponent from "@/app/components/common/ImageComponent";
+import FooterComponent from "@/app/components/footer/footerComponent";
 import HeaderNavBar from "@/app/components/header/headerComponent";
+import BrandPageNotFoundComponent from "@/app/components/notFound/BrandPageNotFoundComponent";
 import { CollectionEntry } from "@/app/data/collectionData";
+import brandsService from "@/app/services/brandsService";
+import collectionService from "@/app/services/collectionService";
 import {
   getExternalResource,
   getImgURLForSizeType,
@@ -11,16 +16,11 @@ import {
   selectBackgroundImage,
   SizeType,
 } from "@/app/services/commonFunctions";
+import Link from "next/link";
 import { useParams } from "next/navigation";
+import React, { useState } from "react";
 import { Col, Row } from "react-bootstrap";
 import Container from "react-bootstrap/Container";
-import React, { useState } from "react";
-import brandsService from "@/app/services/brandsService";
-import Link from "next/link";
-import BrandPageTitleComponent from "@/app/components/brandPage/BrandPageTitleComponent";
-import collectionService from "@/app/services/collectionService";
-import FooterComponent from "@/app/components/footer/footerComponent";
-import BrandPageNotFoundComponent from "@/app/components/notFound/BrandPageNotFoundComponent";
 
 export default function Page() {
   let { brand } = useParams();

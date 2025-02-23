@@ -1,6 +1,6 @@
-import { ReactElement, useState } from "react";
 import { motion } from "framer-motion";
-import { FaPlus, FaMinus } from "react-icons/fa6";
+import { ReactElement, useState } from "react";
+import { FaMinus, FaPlus } from "react-icons/fa6";
 
 export interface AccordionEntry {
   title: string;
@@ -18,11 +18,8 @@ export default function AccordionFunction(items: AccordionEntry[]) {
     <div className="">
       {items.map((item, index) => (
         <div key={index} className="border-bottom-text">
-          <button
-            className="container-title accordion-title link"
-            onClick={() => toggleAccordion(index)}
-          >
-            <div className="accordion-title-text">{item.title}</div>
+          <button className="accordion-title link" onClick={() => toggleAccordion(index)}>
+            <div className="accordion-title-text ">{item.title}</div>
             <div className="accordion-icon" style={{ marginLeft: "auto" }}>
               {openIndex === index ? <FaMinus /> : <FaPlus />}
             </div>

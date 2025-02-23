@@ -1,5 +1,6 @@
 import { FrequencyEnum, JewelsNumberEnum } from "@/app/enums/caliberEnums";
 import { MovementWatchTypeEnum } from "@/app/enums/movementWatchTypeEnum";
+
 import DD_2000_ETA_955_232 from "./DD_2000_955";
 
 const DD_2000_ETA_2982 = Object.assign({}, DD_2000_ETA_955_232);

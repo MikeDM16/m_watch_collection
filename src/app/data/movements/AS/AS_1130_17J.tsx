@@ -1,11 +1,12 @@
-import { MovementWatchTypeEnum } from "@/app/enums/movementWatchTypeEnum";
-import { Caliber } from "../../movementsData";
 import {
   CaliberBrandsEnum,
   FrequencyEnum,
   JewelsNumberEnum,
   ReserveHoursEnum,
 } from "@/app/enums/caliberEnums";
+import { MovementWatchTypeEnum } from "@/app/enums/movementWatchTypeEnum";
+
+import { Caliber } from "../../movementsData";
 
 const AS_1130: Caliber = {
   // Title

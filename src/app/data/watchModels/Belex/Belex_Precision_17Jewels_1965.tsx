@@ -1,5 +1,3 @@
-import { WaterResistanceEnum } from "@/app/enums/waterResistanceEnum";
-import { WatchDetails } from "../../watchDetails";
 import { BrandsEnum } from "@/app/enums/brandsEnum";
 import { BuckleTypeEnum } from "@/app/enums/buckleTypeEnum";
 import { CalendarWatchTypeEnum } from "@/app/enums/calendarWatchTypeEnum";
@@ -9,9 +7,12 @@ import { CrystalMaterialEnum } from "@/app/enums/crystalMaterialEnum";
 import { DialMarketsEnum } from "@/app/enums/dialMarketsEnum";
 import { FinishingDetailsEnum } from "@/app/enums/finishingDetailsEnum";
 import { LuminescentIndexesEnum } from "@/app/enums/luminescentIndexesEnum";
-import { WatchStyleEnum } from "@/app/enums/watchStyleEnum";
 import { MovementWatchTypeEnum } from "@/app/enums/movementWatchTypeEnum";
+import { WatchStyleEnum } from "@/app/enums/watchStyleEnum";
+import { WaterResistanceEnum } from "@/app/enums/waterResistanceEnum";
+
 import { MovementsDataDB } from "../../movementsData";
+import { WatchDetails } from "../../watchDetails";
 
 const details: WatchDetails = {
   title: "1965 Belex Precision 17 Jewels",

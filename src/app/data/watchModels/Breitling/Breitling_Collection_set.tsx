@@ -1,5 +1,6 @@
 import { BrandsEnum } from "@/app/enums/brandsEnum";
 import { WatchTypeEnum } from "@/app/enums/watchTypeEnum";
+
 import { CollectionCatalogue } from "../../collectionCatalogue";
 
 const details: CollectionCatalogue = {

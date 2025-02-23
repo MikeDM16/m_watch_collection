@@ -1,4 +1,3 @@
-import { MovementsDataDB } from "../../movementsData";
 import { BrandsEnum } from "@/app/enums/brandsEnum";
 import { BuckleTypeEnum } from "@/app/enums/buckleTypeEnum";
 import { CalendarWatchTypeEnum } from "@/app/enums/calendarWatchTypeEnum";
@@ -11,6 +10,8 @@ import { LuminescentIndexesEnum } from "@/app/enums/luminescentIndexesEnum";
 import { MovementWatchTypeEnum } from "@/app/enums/movementWatchTypeEnum";
 import { WatchStyleEnum } from "@/app/enums/watchStyleEnum";
 import { WaterResistanceEnum } from "@/app/enums/waterResistanceEnum";
+
+import { MovementsDataDB } from "../../movementsData";
 import { WatchDetails } from "../../watchDetails";
 import { TissotBrandSeries } from "./TissotBrandSeries";
 

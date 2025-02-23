@@ -1,20 +1,20 @@
 "use client";
 
+import FooterComponent from "@/app/components/footer/footerComponent";
+import HeaderNavBar from "@/app/components/header/headerComponent";
 import Image from "next/image";
+import Link from "next/link";
+import React, { useState } from "react";
+import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
-import brandsService from "./services/brandsService";
-import React, { useState } from "react";
-import { Brand } from "./data/brands";
-import Link from "next/link";
-import HeaderNavBar from "@/app/components/header/headerComponent";
 
-import ContactsComponent from "./components/contacts/contacts";
 import AboutMeContainer from "./components/aboutMe/aboutMe";
-import { getExternalResource, routeToCollectionBrandPage } from "./services/commonFunctions";
 import PageTitleDivisionComponent from "./components/common/pageTitleDivisionComponent";
-import FooterComponent from "@/app/components/footer/footerComponent";
+import ContactsComponent from "./components/contacts/contacts";
+import { Brand } from "./data/brands";
+import brandsService from "./services/brandsService";
+import { getExternalResource, routeToCollectionBrandPage } from "./services/commonFunctions";
 
 export default function Page() {
   const [mainBrands] = useState(brandsService.getMainBrands());

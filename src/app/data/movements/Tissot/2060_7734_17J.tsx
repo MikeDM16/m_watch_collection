@@ -1,4 +1,3 @@
-import { Caliber } from "../../movementsData";
 import {
   CaliberBrandsEnum,
   FrequencyEnum,
@@ -6,6 +5,8 @@ import {
   ReserveHoursEnum,
 } from "@/app/enums/caliberEnums";
 import { MovementWatchTypeEnum } from "@/app/enums/movementWatchTypeEnum";
+
+import { Caliber } from "../../movementsData";
 
 const TISSOT_2060_7734_17J: Caliber = {
   // Title

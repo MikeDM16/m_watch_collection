@@ -1,15 +1,15 @@
 "use client";
 
-import HeaderNavBar from "@/app/components/header/headerComponent";
-import { getPathParameter, selectBackgroundImage } from "@/app/services/commonFunctions";
-import { useParams } from "next/navigation";
-import { useState } from "react";
-import brandsService from "@/app/services/brandsService";
+import AccordionFunction, { AccordionEntry } from "@/app/components/accordion/AccordionComponent";
 import BrandPageTitleComponent from "@/app/components/brandPage/BrandPageTitleComponent";
-import Container from "react-bootstrap/Container";
-import collectionService from "@/app/services/collectionService";
-import { Col, Row } from "react-bootstrap";
+import { CaliberDetailComponent } from "@/app/components/caliber/CaliberDetailsComponent";
+import FeatureListingComponent from "@/app/components/common/FeaturesListingComponent";
 import ImageSwiperComponent from "@/app/components/common/ImageSwiperComponent";
+import FooterComponent from "@/app/components/footer/footerComponent";
+import HeaderNavBar from "@/app/components/header/headerComponent";
+import BrandModelPageNotFoundComponent from "@/app/components/notFound/BrandModelPageNotFoundComponent";
+import BrandPageNotFoundComponent from "@/app/components/notFound/BrandPageNotFoundComponent";
+import { Caliber } from "@/app/data/movementsData";
 import {
   BraceletInformationToDisplayTextMapping,
   CaseInformationKeyToDisplayTextMapping,
@@ -17,13 +17,13 @@ import {
   ModelInformationKeyToDisplayTextMapping,
   TechnicalData,
 } from "@/app/data/watchDetails";
-import FeatureListingComponent from "@/app/components/common/FeaturesListingComponent";
-import { CaliberDetailComponent } from "@/app/components/caliber/CaliberDetailsComponent";
-import { Caliber } from "@/app/data/movementsData";
-import FooterComponent from "@/app/components/footer/footerComponent";
-import BrandPageNotFoundComponent from "@/app/components/notFound/BrandPageNotFoundComponent";
-import BrandModelPageNotFoundComponent from "@/app/components/notFound/BrandModelPageNotFoundComponent";
-import AccordionFunction, { AccordionEntry } from "@/app/components/accordion/AccordionComponent";
+import brandsService from "@/app/services/brandsService";
+import collectionService from "@/app/services/collectionService";
+import { getPathParameter, selectBackgroundImage } from "@/app/services/commonFunctions";
+import { useParams } from "next/navigation";
+import { useState } from "react";
+import { Col, Row } from "react-bootstrap";
+import Container from "react-bootstrap/Container";
 
 export default function BrandModelPage() {
   let { brand, model } = useParams();

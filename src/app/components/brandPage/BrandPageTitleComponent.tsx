@@ -1,10 +1,11 @@
 import { Brand } from "@/app/data/brands";
-import BrandTitleDivisionComponent from "./BrandTitleDivisionComponent";
 import {
   routeToMainPageAllBrandListing,
   routeToMainPageHeader,
   selectBackgroundImage,
 } from "@/app/services/commonFunctions";
+
+import BrandTitleDivisionComponent from "./BrandTitleDivisionComponent";
 
 export default function BrandPageTitleComponent(brandDetails: Brand) {
   const brandName = brandDetails.name;

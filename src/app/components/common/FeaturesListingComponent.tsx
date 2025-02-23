@@ -1,4 +1,5 @@
 import { getExternalResource } from "@/app/services/commonFunctions";
+
 import ImageComponent from "./ImageComponent";
 
 export default function FeatureListingComponent(

@@ -1,21 +1,26 @@
 import React, { useState } from "react";
-
 import Lightbox from "yet-another-react-lightbox";
 // import optional lightbox plugins
 import Counter from "yet-another-react-lightbox/plugins/counter";
+
 import "yet-another-react-lightbox/plugins/counter.css";
+
 import Fullscreen from "yet-another-react-lightbox/plugins/fullscreen";
 import Slideshow from "yet-another-react-lightbox/plugins/slideshow";
 import Thumbnails from "yet-another-react-lightbox/plugins/thumbnails";
+
 import "yet-another-react-lightbox/plugins/thumbnails.css";
+
 import Zoom from "yet-another-react-lightbox/plugins/zoom";
+
 import "yet-another-react-lightbox/styles.css";
-import { RowsPhotoAlbum } from "react-photo-album";
+
 import {
   getExternalResource,
   getImgURLForSizeType,
   SizeType,
 } from "@/app/services/commonFunctions";
+import { RowsPhotoAlbum } from "react-photo-album";
 
 export default function ImageGalleryComponent(galleryImages: string[]) {
   const [index, setIndex] = useState(-1);

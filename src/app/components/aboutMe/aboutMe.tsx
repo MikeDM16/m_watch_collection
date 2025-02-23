@@ -1,8 +1,9 @@
 import { getExternalResource, getIconWithTextCentered } from "@/app/services/commonFunctions";
-import Container from "react-bootstrap/Container";
-import { IoMdPerson } from "react-icons/io";
-import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
+import { IoMdPerson } from "react-icons/io";
+
 import ImageComponent from "../common/ImageComponent";
 import PageTitleDivisionComponent from "../common/pageTitleDivisionComponent";
 

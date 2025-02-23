@@ -1,4 +1,5 @@
 import { JewelsNumberEnum } from "@/app/enums/caliberEnums";
+
 import ETA_Valjoux_7750_17 from "./ETA_Valjoux_7750_17J";
 
 const ETA_Valjoux_7750_25 = Object.assign({}, ETA_Valjoux_7750_17);

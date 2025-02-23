@@ -2,6 +2,7 @@ import { getIconWithTextCentered } from "@/app/services/commonFunctions";
 import Container from "react-bootstrap/Container";
 import { IoIosPin } from "react-icons/io";
 import { MdEmail } from "react-icons/md";
+
 import PageTitleDivisionComponent from "../common/pageTitleDivisionComponent";
 
 export default function ContactsComponent() {

@@ -3,6 +3,7 @@ import {
   CaliberTechinicalDetailskeyToDisplayTextmappings,
 } from "@/app/data/movementsData";
 import { Col, Container, Row } from "react-bootstrap";
+
 import ImageGalleryComponent from "../common/ImageGalleryComponent";
 
 export const CaliberDetailComponent = (caliberDetails: Caliber) => {
