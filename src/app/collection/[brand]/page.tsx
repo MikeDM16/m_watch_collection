@@ -8,6 +8,7 @@ import {
   getImgURLForSizeType,
   getPathParameter,
   routeToCollectionBrandModelPage,
+  selectBackgroundImage,
   SizeType,
 } from "@/app/services/commonFunctions";
 import { useParams } from "next/navigation";
@@ -40,7 +41,11 @@ export default function Page() {
 
   const renderCollectionItem = () => {
     return (
-      <Container key={`brand_container_${brand}`} style={{ maxWidth: "80%" }}>
+      <Container
+        key={`brand_container_${brand}`}
+        style={{ maxWidth: "80%" }}
+        className="extended-screen-container"
+      >
         {Object.entries(brandModels).map(([seriesName, seriesModels]) => {
           return (
             <div key={`brand_${brand}_series_${seriesName}`}>
@@ -97,7 +102,7 @@ export default function Page() {
       {HeaderNavBar()}
       {BrandPageTitleComponent(brandDetails)}
       {renderCollectionItem()}
-      {FooterComponent()}
+      {FooterComponent({ backgroudImage: selectBackgroundImage(brandDetails.backgrounImages) })}
     </div>
   );
 }

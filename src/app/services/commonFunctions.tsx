@@ -7,6 +7,7 @@ export function getExternalResource(image_url: string) {
 }
 
 export const SizeType = {
+  FULL_HD: "1200x1200",
   GALLERY: "800x800",
   SLIDER: "500x500",
   THUMBNAIL: "200x200",
@@ -54,4 +55,14 @@ export function routeToCollectionBrandPage(brandName: string): string {
 
 export function routeToCollectionBrandModelPage(brandName: string, modelName: string): string {
   return `/collection/${setPathParameter(brandName)}/${setPathParameter(modelName)}`;
+}
+
+export function selectBackgroundImage(images: string[] | undefined): string | undefined {
+  if (!images || images.length == 0) {
+    return undefined;
+  }
+
+  const currentHour = new Date().getHours();
+  const selectedIdx = currentHour % images.length;
+  return images[selectedIdx];
 }

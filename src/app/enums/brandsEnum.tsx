@@ -9,7 +9,6 @@ export const BrandsEnum = {
   PRYNGEPS: "Pryngeps",
   TISSOT: "Tissot",
   SEIKO: "Seiko",
-  FESTINA_GROUP: "Festina Group",
   HEUER: "Heuer",
   MOTORSPORT_BRANDS: "MotorSport Brands",
   TIMEX: "Timex",

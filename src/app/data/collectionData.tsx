@@ -721,7 +721,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     specialCollectionItem: false,
   },
   "Calypso Chronograph OS60": {
-    brand: BrandsEnum.FESTINA_GROUP,
+    brand: BrandsEnum.CALYPSO,
     legend: "Calypso Chronograph OS60",
     year: 1998,
     type: WatchTypeEnum.SPORTS,
@@ -981,7 +981,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     specialCollectionItem: false,
   },
   "Festina F6602 Titanium": {
-    brand: BrandsEnum.FESTINA_GROUP,
+    brand: BrandsEnum.FESTINA,
     legend: "Festina F6602 Titanium",
     year: 1993,
     type: WatchTypeEnum.SPORTS,
@@ -1572,7 +1572,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     specialCollectionItem: true,
   },
   "Kelton M24 Sub-Dive": {
-    brand: BrandsEnum.TIMEX, //_TIMEX_GROUP
+    brand: BrandsEnum.KELTON, //_TIMEX_GROUP
     legend: "Kelton M24 Sub-Dive",
     year: 1970,
     type: WatchTypeEnum.DIVE,

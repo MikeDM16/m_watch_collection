@@ -12,6 +12,7 @@ export interface Brand {
   description?: string;
   foundedInformation?: ReleaseDetails;
   displayBySeries?: boolean;
+  backgrounImages?: string[];
 }
 
 export const brandsDB: Brand[] = [
@@ -20,12 +21,14 @@ export const brandsDB: Brand[] = [
     logoImg: "public/assets/Images/Brands_Logos/zenith_logo.PNG",
     displayOrder: 20,
     website: "https://www.zenith-watches.com",
-    description: "Zenith is a Swiss luxury watchmaker renowned for its precision and innovation.",
+    description:
+      " Zenith is renowned for its precision and innovation, especially the El Primero series, the world's first high-frequency automatic chronograph.",
     foundedInformation: {
       year: 1865,
       details: "Founded in Le Locle, Neuchâtel, Switzerland",
     },
     displayBySeries: true,
+    backgrounImages: ["public/assets/Images/Brands_Backgrounds/Zenith_1_Background.JPG"],
   },
   {
     name: BrandsEnum.EBERHARD,
@@ -39,6 +42,10 @@ export const brandsDB: Brand[] = [
       details: "Founded in La Chaux-de-Fonds, Switzerland",
     },
     displayBySeries: true,
+    backgrounImages: [
+      "public/assets/Images/Brands_Backgrounds/Eberhard_1_Background.JPG",
+      "public/assets/Images/Brands_Backgrounds/Eberhard_2_Background.JPG",
+    ],
   },
   {
     name: BrandsEnum.BREITLING,
@@ -52,6 +59,7 @@ export const brandsDB: Brand[] = [
       details: "Founded in Saint-Imier, Switzerland",
     },
     displayBySeries: true,
+    backgrounImages: ["public/assets/Images/Brands_Backgrounds/Breitling_1_Background.JPG"],
   },
   {
     name: BrandsEnum.OMEGA,
@@ -63,6 +71,11 @@ export const brandsDB: Brand[] = [
       year: 1848,
       details: "Founded in La Chaux-de-Fonds, Switzerland",
     },
+    backgrounImages: [
+      "public/assets/Images/Brands_Backgrounds/Omega_1_Background.JPG",
+      "public/assets/Images/Brands_Backgrounds/Omega_2_Background.JPG",
+    ],
+    displayBySeries: true,
   },
   {
     name: BrandsEnum.CHOPARD,
@@ -76,6 +89,10 @@ export const brandsDB: Brand[] = [
       details: "Founded in Sonvilier, Switzerland",
     },
     displayBySeries: true,
+    backgrounImages: [
+      "public/assets/Images/Brands_Backgrounds/Chopard_1_Background.JPG",
+      "public/assets/Images/Brands_Backgrounds/Chopard_2_Background.JPG",
+    ],
   },
   {
     name: BrandsEnum.TAG_HEUER,
@@ -89,6 +106,7 @@ export const brandsDB: Brand[] = [
       details: "Founded in Saint-Imier, Switzerland",
     },
     displayBySeries: true,
+    backgrounImages: ["public/assets/Images/Brands_Backgrounds/Tag_Heuer_1_Background.JPG"],
   },
   {
     name: BrandsEnum.PORSCHE_DESIGN,
@@ -102,6 +120,11 @@ export const brandsDB: Brand[] = [
       details: "Founded in Stuttgart, Germany",
     },
     displayBySeries: true,
+    backgrounImages: [
+      "public/assets/Images/Brands_Backgrounds/Porsche_Design_1_Background.JPG",
+      "public/assets/Images/Brands_Backgrounds/Porsche_Design_2_Background.JPG",
+      "public/assets/Images/Brands_Backgrounds/Porsche_Design_3_Background.JPG",
+    ],
   },
   {
     name: BrandsEnum.MAURICE_LACROIX,
@@ -115,6 +138,10 @@ export const brandsDB: Brand[] = [
       details: "Founded in Saignelégier, Switzerland",
     },
     displayBySeries: true,
+    backgrounImages: [
+      "public/assets/Images/Brands_Backgrounds/Maurice_Lacroix_1_Background.JPG",
+      "public/assets/Images/Brands_Backgrounds/Maurice_Lacroix_2_Background.JPG",
+    ],
   },
   {
     name: BrandsEnum.RAYMOND_WEIL,
@@ -127,6 +154,10 @@ export const brandsDB: Brand[] = [
       year: 1976,
       details: "Founded in Geneva, Switzerland",
     },
+    backgrounImages: [
+      "public/assets/Images/Brands_Backgrounds/Raymond_Weil_1_Background.JPG",
+      "public/assets/Images/Brands_Backgrounds/Raymond_Weil_2_Background.JPG",
+    ],
   },
   {
     name: BrandsEnum.TISSOT,
@@ -139,6 +170,12 @@ export const brandsDB: Brand[] = [
       year: 1853,
       details: "Founded in Le Locle, Switzerland",
     },
+    backgrounImages: [
+      "public/assets/Images/Brands_Backgrounds/Tissot_1_Background.JPG",
+      "public/assets/Images/Brands_Backgrounds/Tissot_2_Background.JPG",
+      "public/assets/Images/Brands_Backgrounds/Tissot_3_Background.JPG",
+      "public/assets/Images/Brands_Backgrounds/Tissot_4_Background.JPG",
+    ],
   },
   {
     name: BrandsEnum.SEIKO,
@@ -151,6 +188,11 @@ export const brandsDB: Brand[] = [
       year: 1881,
       details: "Founded in Tokyo, Japan",
     },
+    backgrounImages: [
+      "public/assets/Images/Brands_Backgrounds/Seiko_1_Background.JPG",
+      "public/assets/Images/Brands_Backgrounds/Seiko_2_Background.JPG",
+    ],
+    displayBySeries: true,
   },
   {
     name: BrandsEnum.PRYNGEPS,
@@ -177,16 +219,11 @@ export const brandsDB: Brand[] = [
       details: "Founded in La Chaux-de-Fonds, Switzerland",
     },
   },
-  {
-    name: BrandsEnum.FESTINA_GROUP,
-    logoImg: "public/assets/Images/Brands_Logos/Festina_Watches_logo.PNG",
-    displayOrder: undefined,
-  },
-  {
+  /*{
     name: BrandsEnum.HEUER,
     logoImg: "public/assets/Images/Brands_Logos/heuer_logo.PNG",
     displayOrder: undefined,
-  },
+  },*/
 
   {
     name: BrandsEnum.NOVART,
@@ -239,6 +276,7 @@ export const brandsDB: Brand[] = [
       year: 1927,
       details: "Founded in La Chaux-de-Fonds, Switzerland",
     },
+    displayBySeries: true,
   },
 
   {

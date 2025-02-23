@@ -1,7 +1,7 @@
 "use client";
 
 import HeaderNavBar from "@/app/components/header/headerComponent";
-import { getPathParameter } from "@/app/services/commonFunctions";
+import { getPathParameter, selectBackgroundImage } from "@/app/services/commonFunctions";
 import { useParams } from "next/navigation";
 import { useState } from "react";
 import brandsService from "@/app/services/brandsService";
@@ -100,7 +100,7 @@ export default function BrandModelPage() {
       {BrandPageTitleComponent(brandDetails)}
       {renderBrandItemTechnicalData()}
       {CaliberDetailComponent(caliberDetails)}
-      {FooterComponent()}
+      {FooterComponent({ backgroudImage: selectBackgroundImage(brandDetails.backgrounImages) })}
     </div>
   );
 }

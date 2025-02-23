@@ -2,7 +2,11 @@ import { getExternalResource, getIconWithTextCentered } from "@/app/services/com
 import Link from "next/link";
 import { IoMdArrowRoundUp } from "react-icons/io";
 
-export default function FooterComponent() {
+export interface FooterComponentProps {
+  backgroudImage?: string;
+}
+
+export default function FooterComponent(props?: FooterComponentProps) {
   const imagesPaths = [
     "public/assets/Backgrouds/Tissot_BG1.jpg",
     "public/assets/Backgrouds/Tissot_BG3.jpg",
@@ -13,7 +17,9 @@ export default function FooterComponent() {
   return (
     <section
       className="footer-division title-white-color"
-      style={{ backgroundImage: `url(${getExternalResource(imagesPaths[1])})` }}
+      style={{
+        backgroundImage: `url(${getExternalResource(props?.backgroudImage || imagesPaths[1])})`,
+      }}
     >
       <div className={`page-title-overlay-aligned centered-text`}>
         {/** Layout need to be inside this div, because of the previous overlay */}

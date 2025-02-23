@@ -3,6 +3,7 @@ import BrandTitleDivisionComponent from "./BrandTitleDivisionComponent";
 import {
   routeToMainPageAllBrandListing,
   routeToMainPageHeader,
+  selectBackgroundImage,
 } from "@/app/services/commonFunctions";
 
 export default function BrandPageTitleComponent(brandDetails: Brand) {
@@ -28,6 +29,7 @@ export default function BrandPageTitleComponent(brandDetails: Brand) {
         description: brandDetails.description,
         founded: getBrandFoundedText(),
         website: brandDetails.website,
+        srcImage: selectBackgroundImage(brandDetails.backgrounImages),
         navigationPath: {
           MWatchCollection: routeToMainPageHeader(),
           "All Brands": routeToMainPageAllBrandListing(),
