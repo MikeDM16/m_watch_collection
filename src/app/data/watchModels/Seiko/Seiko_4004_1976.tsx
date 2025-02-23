@@ -11,6 +11,7 @@ import { MovementWatchTypeEnum } from "@/app/enums/movementWatchTypeEnum";
 import { WatchStyleEnum } from "@/app/enums/watchStyleEnum";
 import { WaterResistanceEnum } from "@/app/enums/waterResistanceEnum";
 import { WatchDetails } from "../../watchDetails";
+import { SeikoBrandSeries } from "./SeikoBrandSeries";
 
 const details: WatchDetails = {
   title: "1976 Seiko Type II 4004",
@@ -100,7 +101,7 @@ const details: WatchDetails = {
 
     information: {
       brand: BrandsEnum.SEIKO,
-      series: "4004",
+      series: SeikoBrandSeries.TYPE_II,
       catalogueReference: "0903-8019 (661506)",
       productionYear: "1976",
       movementType: MovementWatchTypeEnum.QUARTZ,

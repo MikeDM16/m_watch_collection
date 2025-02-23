@@ -11,6 +11,7 @@ import { MovementWatchTypeEnum } from "@/app/enums/movementWatchTypeEnum";
 import { WatchStyleEnum } from "@/app/enums/watchStyleEnum";
 import { WaterResistanceEnum } from "@/app/enums/waterResistanceEnum";
 import { WatchDetails } from "../../watchDetails";
+import { TissotBrandSeries } from "./TissotBrandSeries";
 
 const details: WatchDetails = {
   title: "1974 Tissot Seastar Automatic",
@@ -72,7 +73,7 @@ const details: WatchDetails = {
 
     information: {
       brand: BrandsEnum.TISSOT,
-      series: "Seastar Automatic",
+      series: TissotBrandSeries.SEASTAR,
       catalogueReference: "44520-5",
       productionYear: "1974",
       movementType: MovementWatchTypeEnum.AUTOMATIC,

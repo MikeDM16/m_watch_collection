@@ -12,6 +12,7 @@ import { MovementWatchTypeEnum } from "@/app/enums/movementWatchTypeEnum";
 import { WatchStyleEnum } from "@/app/enums/watchStyleEnum";
 import { WaterResistanceEnum } from "@/app/enums/waterResistanceEnum";
 import { WatchDetails } from "../../watchDetails";
+import { OmegaBrandSeries } from "./OmegaBrandSeries";
 
 const details: WatchDetails = {
   title: "1987 Omega Seamaster Polaris Day Date 396.1222",
@@ -74,7 +75,7 @@ const details: WatchDetails = {
 
     information: {
       brand: BrandsEnum.OMEGA,
-      series: "Polaris",
+      series: OmegaBrandSeries.POLARIS,
       catalogueReference: "DR 396.1222",
       productionYear: "1987",
       movementType: MovementWatchTypeEnum.QUARTZ,

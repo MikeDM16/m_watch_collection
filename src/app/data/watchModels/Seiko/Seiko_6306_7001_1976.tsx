@@ -12,6 +12,7 @@ import { MovementWatchTypeEnum } from "@/app/enums/movementWatchTypeEnum";
 import { WatchStyleEnum } from "@/app/enums/watchStyleEnum";
 import { WaterResistanceEnum } from "@/app/enums/waterResistanceEnum";
 import { WatchDetails } from "../../watchDetails";
+import { SeikoBrandSeries } from "./SeikoBrandSeries";
 
 const details: WatchDetails = {
   title: "1976 Seiko 6306-7001",
@@ -80,7 +81,7 @@ const details: WatchDetails = {
 
     information: {
       brand: BrandsEnum.SEIKO,
-      series: "Automatic 150m Dive",
+      series: SeikoBrandSeries.TURTLE_6306,
       catalogueReference: "6306-7001 683364",
       productionYear: "1976",
       movementType: MovementWatchTypeEnum.AUTOMATIC,

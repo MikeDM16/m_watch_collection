@@ -12,6 +12,7 @@ import { MovementWatchTypeEnum } from "@/app/enums/movementWatchTypeEnum";
 import { WatchStyleEnum } from "@/app/enums/watchStyleEnum";
 import { WaterResistanceEnum } from "@/app/enums/waterResistanceEnum";
 import { WatchDetails } from "../../watchDetails";
+import { TissotBrandSeries } from "./TissotBrandSeries";
 
 const details: WatchDetails = {
   title: "2019 Tissot Fetes Des Vignerons Limited Edition",
@@ -90,7 +91,7 @@ const details: WatchDetails = {
 
     information: {
       brand: BrandsEnum.TISSOT,
-      series: "T-Classic",
+      series: TissotBrandSeries.T_CLASSIC,
       catalogueReference: "Fetes Des Vignerons Ltd. Ed. ",
       productionYear: "2019",
       movementType: MovementWatchTypeEnum.QUARTZ,

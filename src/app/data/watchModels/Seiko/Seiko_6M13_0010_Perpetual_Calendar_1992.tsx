@@ -11,6 +11,7 @@ import { MovementWatchTypeEnum } from "@/app/enums/movementWatchTypeEnum";
 import { WatchStyleEnum } from "@/app/enums/watchStyleEnum";
 import { WaterResistanceEnum } from "@/app/enums/waterResistanceEnum";
 import { WatchDetails } from "../../watchDetails";
+import { SeikoBrandSeries } from "./SeikoBrandSeries";
 
 const details: WatchDetails = {
   title: "1992 Seiko 6M13 Perpetual Calendar - Age of Discoveries",
@@ -83,7 +84,7 @@ const details: WatchDetails = {
 
     information: {
       brand: BrandsEnum.SEIKO,
-      series: "Age of Discoveries",
+      series: SeikoBrandSeries.AGE_OF_DISCOVERY_SERIES,
       catalogueReference: "6M13-0010 Perpetual Calendar (230834)",
       productionYear: "1992",
       movementType: MovementWatchTypeEnum.QUARTZ,

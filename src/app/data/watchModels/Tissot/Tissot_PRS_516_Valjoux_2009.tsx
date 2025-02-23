@@ -12,6 +12,7 @@ import { MovementWatchTypeEnum } from "@/app/enums/movementWatchTypeEnum";
 import { WatchStyleEnum } from "@/app/enums/watchStyleEnum";
 import { WaterResistanceEnum } from "@/app/enums/waterResistanceEnum";
 import { WatchDetails } from "../../watchDetails";
+import { TissotBrandSeries } from "./TissotBrandSeries";
 
 const details: WatchDetails = {
   title: "2009 Tissot PRS 516 Automatic Valjoux 7750",
@@ -66,8 +67,8 @@ const details: WatchDetails = {
 
     information: {
       brand: BrandsEnum.TISSOT,
-      series: "PRS 516 Valjoux",
-      catalogueReference: "J564/664",
+      series: TissotBrandSeries.PRS_516,
+      catalogueReference: "Valjoux J564/664",
       productionYear: "2009",
       movementType: MovementWatchTypeEnum.AUTOMATIC,
       style: WatchStyleEnum.SPORTS,

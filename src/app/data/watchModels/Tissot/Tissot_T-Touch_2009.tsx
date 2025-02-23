@@ -11,6 +11,7 @@ import { MovementWatchTypeEnum } from "@/app/enums/movementWatchTypeEnum";
 import { WatchStyleEnum } from "@/app/enums/watchStyleEnum";
 import { WaterResistanceEnum } from "@/app/enums/waterResistanceEnum";
 import { WatchDetails } from "../../watchDetails";
+import { TissotBrandSeries } from "./TissotBrandSeries";
 
 const details: WatchDetails = {
   title: "2009 Tissot T-Touch Titanium",
@@ -82,7 +83,7 @@ const details: WatchDetails = {
 
     information: {
       brand: BrandsEnum.TISSOT,
-      series: "T-Touch",
+      series: TissotBrandSeries.T_TOUCH,
       catalogueReference: "T001520 A",
       productionYear: "2009",
       movementType: MovementWatchTypeEnum.QUARTZ,

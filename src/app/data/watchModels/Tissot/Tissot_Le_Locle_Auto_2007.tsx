@@ -12,6 +12,7 @@ import { MovementWatchTypeEnum } from "@/app/enums/movementWatchTypeEnum";
 import { WatchStyleEnum } from "@/app/enums/watchStyleEnum";
 import { WaterResistanceEnum } from "@/app/enums/waterResistanceEnum";
 import { WatchDetails } from "../../watchDetails";
+import { TissotBrandSeries } from "./TissotBrandSeries";
 
 const details: WatchDetails = {
   title: "2007 Tissot Le Locle L164/264-1 Automatic",
@@ -86,7 +87,7 @@ const details: WatchDetails = {
 
     information: {
       brand: BrandsEnum.TISSOT,
-      series: "Le Locle",
+      series: TissotBrandSeries.LE_LOCLE,
       catalogueReference: "L164/264-1",
       productionYear: "2007",
       movementType: MovementWatchTypeEnum.AUTOMATIC,

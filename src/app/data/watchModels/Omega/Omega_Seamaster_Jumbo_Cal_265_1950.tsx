@@ -12,6 +12,7 @@ import { MovementWatchTypeEnum } from "@/app/enums/movementWatchTypeEnum";
 import { WatchStyleEnum } from "@/app/enums/watchStyleEnum";
 import { WaterResistanceEnum } from "@/app/enums/waterResistanceEnum";
 import { WatchDetails } from "../../watchDetails";
+import { OmegaBrandSeries } from "./OmegaBrandSeries";
 
 const details: WatchDetails = {
   title: "1950 Omega Seamaster Jumbo Cal. 265",
@@ -82,8 +83,8 @@ const details: WatchDetails = {
 
     information: {
       brand: BrandsEnum.OMEGA,
-      series: "Seamaster (Jumbo)",
-      catalogueReference: "CK 2544 - 1 (Caliber 12034059)",
+      series: OmegaBrandSeries.SEAMASTER_VINTAGE,
+      catalogueReference: "Jumpo CK2544-1 (Caliber 12034059)",
       productionYear: "1950",
       movementType: MovementWatchTypeEnum.MECHANIQUE,
       style: WatchStyleEnum.DRESS,

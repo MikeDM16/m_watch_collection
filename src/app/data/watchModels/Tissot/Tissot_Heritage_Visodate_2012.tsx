@@ -12,6 +12,7 @@ import { MovementWatchTypeEnum } from "@/app/enums/movementWatchTypeEnum";
 import { WatchStyleEnum } from "@/app/enums/watchStyleEnum";
 import { WaterResistanceEnum } from "@/app/enums/waterResistanceEnum";
 import { WatchDetails } from "../../watchDetails";
+import { TissotBrandSeries } from "./TissotBrandSeries";
 
 const details: WatchDetails = {
   title: "2012 Tissot Heritage Visodate Automatic",
@@ -71,8 +72,8 @@ const details: WatchDetails = {
 
     information: {
       brand: BrandsEnum.TISSOT,
-      series: "Visodate (Heritage)",
-      catalogueReference: "T019430.1603101",
+      series: TissotBrandSeries.HERITAGE,
+      catalogueReference: "Visodate T019430.1603101",
       productionYear: "2012",
       movementType: MovementWatchTypeEnum.AUTOMATIC,
       style: WatchStyleEnum.DRESS,

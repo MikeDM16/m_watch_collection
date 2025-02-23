@@ -12,6 +12,7 @@ import { MovementWatchTypeEnum } from "@/app/enums/movementWatchTypeEnum";
 import { WatchStyleEnum } from "@/app/enums/watchStyleEnum";
 import { WaterResistanceEnum } from "@/app/enums/waterResistanceEnum";
 import { WatchDetails } from "../../watchDetails";
+import { OmegaBrandSeries } from "./OmegaBrandSeries";
 
 const details: WatchDetails = {
   title: '1998 Omega Speedmaster MK40 Triple Date "Schumacher"',
@@ -116,8 +117,8 @@ const details: WatchDetails = {
 
     information: {
       brand: BrandsEnum.OMEGA,
-      series: "Speedmaster",
-      catalogueReference: 'MK40 Triple Date (175.0084 375.0084) "Schumacher"',
+      series: OmegaBrandSeries.SPEEDMASTER,
+      catalogueReference: 'MK40 Triple Date "Schumacher" (175.0084 375.0084)',
       productionYear: "1998",
       movementType: MovementWatchTypeEnum.AUTOMATIC,
       style: WatchStyleEnum.SPORTS,

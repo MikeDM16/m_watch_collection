@@ -12,6 +12,7 @@ import { MovementWatchTypeEnum } from "@/app/enums/movementWatchTypeEnum";
 import { WatchStyleEnum } from "@/app/enums/watchStyleEnum";
 import { WaterResistanceEnum } from "@/app/enums/waterResistanceEnum";
 import { WatchDetails } from "../../watchDetails";
+import { TissotBrandSeries } from "./TissotBrandSeries";
 
 const details: WatchDetails = {
   title: "2012 Tissot Ballade Chronograph",
@@ -76,7 +77,7 @@ const details: WatchDetails = {
 
     information: {
       brand: BrandsEnum.TISSOT,
-      series: "Ballade",
+      series: TissotBrandSeries.BALLADE,
       catalogueReference: "C288/388",
       productionYear: "2012",
       movementType: MovementWatchTypeEnum.QUARTZ,

@@ -12,6 +12,7 @@ import { MovementWatchTypeEnum } from "@/app/enums/movementWatchTypeEnum";
 import { WatchStyleEnum } from "@/app/enums/watchStyleEnum";
 import { WaterResistanceEnum } from "@/app/enums/waterResistanceEnum";
 import { WatchDetails } from "../../watchDetails";
+import { OmegaBrandSeries } from "./OmegaBrandSeries";
 
 const details: WatchDetails = {
   title: "1988 Omega Polaris Analogic/Digital 386.0826",
@@ -76,7 +77,7 @@ const details: WatchDetails = {
 
     information: {
       brand: BrandsEnum.OMEGA,
-      series: "Polaris",
+      series: OmegaBrandSeries.POLARIS,
       catalogueReference: "DB 386.0826",
       productionYear: "1988",
       movementType: MovementWatchTypeEnum.QUARTZ,

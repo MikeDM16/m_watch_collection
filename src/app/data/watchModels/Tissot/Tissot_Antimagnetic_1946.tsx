@@ -12,6 +12,7 @@ import { MovementWatchTypeEnum } from "@/app/enums/movementWatchTypeEnum";
 import { WatchStyleEnum } from "@/app/enums/watchStyleEnum";
 import { WaterResistanceEnum } from "@/app/enums/waterResistanceEnum";
 import { WatchDetails } from "../../watchDetails";
+import { TissotBrandSeries } from "./TissotBrandSeries";
 
 const details: WatchDetails = {
   title: "1946 Tissot Antimagnetic",
@@ -68,7 +69,7 @@ const details: WatchDetails = {
 
     information: {
       brand: BrandsEnum.TISSOT,
-      series: "Antimagnetic",
+      series: TissotBrandSeries.ANTIMAGINETIC,
       catalogueReference: "1267365",
       productionYear: "1946",
       movementType: MovementWatchTypeEnum.MECHANIQUE,

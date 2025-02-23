@@ -12,6 +12,7 @@ import { MovementWatchTypeEnum } from "@/app/enums/movementWatchTypeEnum";
 import { WatchStyleEnum } from "@/app/enums/watchStyleEnum";
 import { WaterResistanceEnum } from "@/app/enums/waterResistanceEnum";
 import { WatchDetails } from "../../watchDetails";
+import { SeikoBrandSeries } from "./SeikoBrandSeries";
 
 const details: WatchDetails = {
   title: "1992 Seiko 8M25 Dancing Hands - Age of Discoveries",
@@ -71,7 +72,7 @@ const details: WatchDetails = {
 
     information: {
       brand: BrandsEnum.SEIKO,
-      series: "Age of Discoveries",
+      series: SeikoBrandSeries.AGE_OF_DISCOVERY_SERIES,
       catalogueReference: "8M25-7100 (400001)",
       productionYear: "1992",
       movementType: MovementWatchTypeEnum.QUARTZ,

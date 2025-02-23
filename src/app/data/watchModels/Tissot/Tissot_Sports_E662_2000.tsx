@@ -12,6 +12,7 @@ import { MovementWatchTypeEnum } from "@/app/enums/movementWatchTypeEnum";
 import { WatchStyleEnum } from "@/app/enums/watchStyleEnum";
 import { WaterResistanceEnum } from "@/app/enums/waterResistanceEnum";
 import { WatchDetails } from "../../watchDetails";
+import { TissotBrandSeries } from "./TissotBrandSeries";
 
 const details: WatchDetails = {
   title: "2000 Tissot Sports E662/762M",
@@ -55,7 +56,7 @@ const details: WatchDetails = {
 
     information: {
       brand: BrandsEnum.TISSOT,
-      series: "Sports",
+      series: TissotBrandSeries.SPORTS,
       catalogueReference: "E662/762M",
       productionYear: "2000",
       movementType: MovementWatchTypeEnum.QUARTZ,

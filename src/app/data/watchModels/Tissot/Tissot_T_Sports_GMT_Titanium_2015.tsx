@@ -12,6 +12,7 @@ import { MovementWatchTypeEnum } from "@/app/enums/movementWatchTypeEnum";
 import { WatchStyleEnum } from "@/app/enums/watchStyleEnum";
 import { WaterResistanceEnum } from "@/app/enums/waterResistanceEnum";
 import { WatchDetails } from "../../watchDetails";
+import { TissotBrandSeries } from "./TissotBrandSeries";
 
 const details: WatchDetails = {
   title: "2015 Tissot T-Sports GMT Titanium",
@@ -78,7 +79,7 @@ const details: WatchDetails = {
 
     information: {
       brand: BrandsEnum.TISSOT,
-      series: "T-Sports",
+      series: TissotBrandSeries.T_SPORTS,
       catalogueReference: "GMT Titanium",
       productionYear: "2015",
       movementType: MovementWatchTypeEnum.QUARTZ,

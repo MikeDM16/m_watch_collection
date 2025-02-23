@@ -11,6 +11,7 @@ import { MovementWatchTypeEnum } from "@/app/enums/movementWatchTypeEnum";
 import { WatchStyleEnum } from "@/app/enums/watchStyleEnum";
 import { WaterResistanceEnum } from "@/app/enums/waterResistanceEnum";
 import { WatchDetails } from "../../watchDetails";
+import { TissotBrandSeries } from "./TissotBrandSeries";
 
 const details: WatchDetails = {
   title: "2021 Tissot T-Classic Tradition",
@@ -44,7 +45,7 @@ const details: WatchDetails = {
 
     information: {
       brand: BrandsEnum.TISSOT,
-      series: "T-Classic",
+      series: TissotBrandSeries.T_CLASSIC,
       catalogueReference: "Tradition",
       productionYear: "2021",
       movementType: MovementWatchTypeEnum.QUARTZ,

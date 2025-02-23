@@ -12,6 +12,7 @@ import { MovementWatchTypeEnum } from "@/app/enums/movementWatchTypeEnum";
 import { WatchStyleEnum } from "@/app/enums/watchStyleEnum";
 import { WaterResistanceEnum } from "@/app/enums/waterResistanceEnum";
 import { WatchDetails } from "../../watchDetails";
+import { OmegaBrandSeries } from "./OmegaBrandSeries";
 
 const details: WatchDetails = {
   title: "1992 Omega Olympia Winter Olympics Albertville Limited 820/3000",
@@ -70,7 +71,7 @@ const details: WatchDetails = {
 
     information: {
       brand: BrandsEnum.OMEGA,
-      series: "Olympia",
+      series: OmegaBrandSeries.OLYMPIA,
       catalogueReference: "Winter Olympics Albertville Limited 820/3000 (DB 386.1031)",
       productionYear: "1992",
       movementType: MovementWatchTypeEnum.QUARTZ,

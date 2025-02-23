@@ -11,6 +11,7 @@ import { MovementWatchTypeEnum } from "@/app/enums/movementWatchTypeEnum";
 import { WatchStyleEnum } from "@/app/enums/watchStyleEnum";
 import { WaterResistanceEnum } from "@/app/enums/waterResistanceEnum";
 import { WatchDetails } from "../../watchDetails";
+import { SeikoBrandSeries } from "./SeikoBrandSeries";
 
 const details: WatchDetails = {
   title: "1992 Seiko 6M25 Multi-Function Chronograph",
@@ -71,7 +72,7 @@ const details: WatchDetails = {
 
     information: {
       brand: BrandsEnum.SEIKO,
-      series: "Sports 150",
+      series: SeikoBrandSeries.SPORTS_150,
       catalogueReference: '6M25-6000 "Dancing Hands"',
       productionYear: "1992",
       movementType: MovementWatchTypeEnum.QUARTZ,

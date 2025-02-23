@@ -11,6 +11,7 @@ import { MovementWatchTypeEnum } from "@/app/enums/movementWatchTypeEnum";
 import { WatchStyleEnum } from "@/app/enums/watchStyleEnum";
 import { WaterResistanceEnum } from "@/app/enums/waterResistanceEnum";
 import { WatchDetails } from "../../watchDetails";
+import { TissotBrandSeries } from "./TissotBrandSeries";
 
 const details: WatchDetails = {
   title: "2020 Tissot T-Touch Expert Solar Titanium",
@@ -97,8 +98,9 @@ const details: WatchDetails = {
 
     information: {
       brand: BrandsEnum.TISSOT,
-      series: "T-Touch Expert Solar",
-      catalogueReference: "T091420 A",
+      series: TissotBrandSeries.T_TOUCH,
+
+      catalogueReference: "Expert Solar T091420 A",
       productionYear: "2020",
       movementType: MovementWatchTypeEnum.SOLAR,
       style: WatchStyleEnum.SPORTS,

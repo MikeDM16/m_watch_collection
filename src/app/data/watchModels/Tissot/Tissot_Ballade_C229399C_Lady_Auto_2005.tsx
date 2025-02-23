@@ -12,6 +12,7 @@ import { MovementWatchTypeEnum } from "@/app/enums/movementWatchTypeEnum";
 import { WatchStyleEnum } from "@/app/enums/watchStyleEnum";
 import { WaterResistanceEnum } from "@/app/enums/waterResistanceEnum";
 import { WatchDetails } from "../../watchDetails";
+import { TissotBrandSeries } from "./TissotBrandSeries";
 
 const details: WatchDetails = {
   title: "2005 Tissot Ballade Lady C229/329C Automatic",
@@ -64,7 +65,7 @@ const details: WatchDetails = {
 
     information: {
       brand: BrandsEnum.TISSOT,
-      series: "Ballade",
+      series: TissotBrandSeries.BALLADE,
       catalogueReference: "C229/329C",
       productionYear: "2005",
       movementType: MovementWatchTypeEnum.AUTOMATIC,

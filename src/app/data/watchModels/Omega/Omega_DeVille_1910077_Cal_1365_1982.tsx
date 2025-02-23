@@ -11,6 +11,7 @@ import { MovementWatchTypeEnum } from "@/app/enums/movementWatchTypeEnum";
 import { WatchStyleEnum } from "@/app/enums/watchStyleEnum";
 import { WaterResistanceEnum } from "@/app/enums/waterResistanceEnum";
 import { WatchDetails } from "../../watchDetails";
+import { OmegaBrandSeries } from "./OmegaBrandSeries";
 
 const details: WatchDetails = {
   title: "1982 Omega De Ville 191.0077 Cal. 1365",
@@ -44,8 +45,8 @@ const details: WatchDetails = {
 
     information: {
       brand: BrandsEnum.OMEGA,
-      series: "Classic De Ville Series",
-      catalogueReference: "191.0077",
+      series: OmegaBrandSeries.DE_VILLE_VINTAGE,
+      catalogueReference: "Classic 191.0077",
       productionYear: "1979 -1984 (1982)",
       movementType: MovementWatchTypeEnum.QUARTZ,
       style: WatchStyleEnum.DRESS,

@@ -176,6 +176,7 @@ export const brandsDB: Brand[] = [
       "public/assets/Images/Brands_Backgrounds/Tissot_3_Background.JPG",
       "public/assets/Images/Brands_Backgrounds/Tissot_4_Background.JPG",
     ],
+    displayBySeries: true,
   },
   {
     name: BrandsEnum.SEIKO,

@@ -12,6 +12,7 @@ import { MovementWatchTypeEnum } from "@/app/enums/movementWatchTypeEnum";
 import { WatchStyleEnum } from "@/app/enums/watchStyleEnum";
 import { WaterResistanceEnum } from "@/app/enums/waterResistanceEnum";
 import { WatchDetails } from "../../watchDetails";
+import { TissotBrandSeries } from "./TissotBrandSeries";
 
 const details: WatchDetails = {
   title: "2010 Tissot PRC 200 T461 Chronograph",
@@ -78,7 +79,7 @@ const details: WatchDetails = {
 
     information: {
       brand: BrandsEnum.TISSOT,
-      series: "PRC 200",
+      series: TissotBrandSeries.PRC_200,
       catalogueReference: "T461",
       productionYear: "2010",
       movementType: MovementWatchTypeEnum.QUARTZ,

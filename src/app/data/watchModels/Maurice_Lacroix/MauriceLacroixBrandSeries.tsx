@@ -1,5 +1,5 @@
 export const MauriceLacroixBrandSeries = {
-  AIKON: "AIKON",
+  AIKON: "Aikon",
   MASTERPIECE: "Masterpiece",
   MONZA_CHRONOGRAPH: 'Monza "Schumacher" Chronograph',
 };

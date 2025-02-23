@@ -11,6 +11,7 @@ import { MovementWatchTypeEnum } from "@/app/enums/movementWatchTypeEnum";
 import { WatchStyleEnum } from "@/app/enums/watchStyleEnum";
 import { WaterResistanceEnum } from "@/app/enums/waterResistanceEnum";
 import { WatchDetails } from "../../watchDetails";
+import { TissotBrandSeries } from "./TissotBrandSeries";
 
 const details: WatchDetails = {
   title: "1970 Tissot Seastar Eletronic",
@@ -59,8 +60,8 @@ const details: WatchDetails = {
 
     information: {
       brand: BrandsEnum.TISSOT,
-      series: "Visodate Eletronic",
-      catalogueReference: "652-40604-01",
+      series: TissotBrandSeries.SEASTAR,
+      catalogueReference: "Eletronic 652-40604-01",
       productionYear: "1970",
       movementType: MovementWatchTypeEnum.ELETRONIC_WITH_BALANCE,
       style: WatchStyleEnum.DRESS,

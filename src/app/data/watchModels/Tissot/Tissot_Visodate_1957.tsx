@@ -11,6 +11,7 @@ import { MovementWatchTypeEnum } from "@/app/enums/movementWatchTypeEnum";
 import { WatchStyleEnum } from "@/app/enums/watchStyleEnum";
 import { WaterResistanceEnum } from "@/app/enums/waterResistanceEnum";
 import { WatchDetails } from "../../watchDetails";
+import { TissotBrandSeries } from "./TissotBrandSeries";
 
 const details: WatchDetails = {
   title: "1957 Tissot Visodate",
@@ -61,7 +62,7 @@ const details: WatchDetails = {
 
     information: {
       brand: BrandsEnum.TISSOT,
-      series: "Visodate",
+      series: TissotBrandSeries.VISODATE,
       catalogueReference: "56000-1S",
       productionYear: "1957",
       movementType: MovementWatchTypeEnum.MECHANIQUE,

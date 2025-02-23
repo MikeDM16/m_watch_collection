@@ -12,6 +12,7 @@ import { MovementWatchTypeEnum } from "@/app/enums/movementWatchTypeEnum";
 import { WatchStyleEnum } from "@/app/enums/watchStyleEnum";
 import { WaterResistanceEnum } from "@/app/enums/waterResistanceEnum";
 import { WatchDetails } from "../../watchDetails";
+import { TissotBrandSeries } from "./TissotBrandSeries";
 
 const details: WatchDetails = {
   title: "1995 Tissot Ballade Seastar",
@@ -51,7 +52,7 @@ const details: WatchDetails = {
 
     information: {
       brand: BrandsEnum.TISSOT,
-      series: "Ballade Seastar",
+      series: TissotBrandSeries.BALLADE,
       catalogueReference: "A665/765K TKS-JA",
       productionYear: "1995",
       movementType: MovementWatchTypeEnum.QUARTZ,

@@ -11,6 +11,7 @@ import { MovementWatchTypeEnum } from "@/app/enums/movementWatchTypeEnum";
 import { WatchStyleEnum } from "@/app/enums/watchStyleEnum";
 import { WaterResistanceEnum } from "@/app/enums/waterResistanceEnum";
 import { WatchDetails } from "../../watchDetails";
+import { OmegaBrandSeries } from "./OmegaBrandSeries";
 
 const details: WatchDetails = {
   title: "1977 Omega Seamaster 196.0079 Cal. 1342",
@@ -59,7 +60,7 @@ const details: WatchDetails = {
 
     information: {
       brand: BrandsEnum.OMEGA,
-      series: "Vintage Seamaster Quartz",
+      series: OmegaBrandSeries.SEAMASTER_VINTAGE,
       catalogueReference: "SM 196.0079",
       productionYear: "1977",
       movementType: MovementWatchTypeEnum.QUARTZ,

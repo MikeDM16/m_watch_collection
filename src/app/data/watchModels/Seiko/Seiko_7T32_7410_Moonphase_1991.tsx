@@ -11,6 +11,7 @@ import { MovementWatchTypeEnum } from "@/app/enums/movementWatchTypeEnum";
 import { WatchStyleEnum } from "@/app/enums/watchStyleEnum";
 import { WaterResistanceEnum } from "@/app/enums/waterResistanceEnum";
 import { WatchDetails } from "../../watchDetails";
+import { SeikoBrandSeries } from "./SeikoBrandSeries";
 
 const details: WatchDetails = {
   title: "1991 Seiko 7T36 Moonphase Chronograph - Age of Discoveries",
@@ -56,8 +57,8 @@ const details: WatchDetails = {
 
     information: {
       brand: BrandsEnum.SEIKO,
-      series: "Age of Discoveries - Moonphase Chrono",
-      catalogueReference: "7T36-7410 (157436)",
+      series: SeikoBrandSeries.AGE_OF_DISCOVERY_SERIES,
+      catalogueReference: "Moonphase Chronograph - 7T36-7410 (157436)",
       productionYear: "1991",
       movementType: MovementWatchTypeEnum.QUARTZ,
       style: WatchStyleEnum.DRESS,

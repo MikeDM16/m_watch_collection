@@ -1,0 +1,17 @@
+export const TissotBrandSeries = {
+  HERITAGE: "Heritage",
+  T_CLASSIC: "T-Classic",
+  T_TOUCH: "T-Touch",
+  T_SPORTS: "T-Sports",
+  PRS_516: "PRS 516",
+  PRS_200: "PRS 200",
+  PRC_200: "PRC 200",
+  LE_LOCLE: "Le Locle",
+  BALLADE: "Ballade",
+  SPORTS: "Sports",
+  SEASTAR: "Seastar",
+  PRX: "PRX",
+  PR_516_VINTAGE: "PR 516 (Vintage)",
+  VISODATE: "Visodate (Vintage)",
+  ANTIMAGINETIC: "Antimagnetic",
+};

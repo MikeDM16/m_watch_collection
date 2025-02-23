@@ -11,6 +11,7 @@ import { MovementWatchTypeEnum } from "@/app/enums/movementWatchTypeEnum";
 import { WatchStyleEnum } from "@/app/enums/watchStyleEnum";
 import { WaterResistanceEnum } from "@/app/enums/waterResistanceEnum";
 import { WatchDetails } from "../../watchDetails";
+import { TissotBrandSeries } from "./TissotBrandSeries";
 
 const details: WatchDetails = {
   title: "2014 Tissot T-Classic Dream",
@@ -51,7 +52,7 @@ const details: WatchDetails = {
 
     information: {
       brand: BrandsEnum.TISSOT,
-      series: "T-Classic",
+      series: TissotBrandSeries.T_CLASSIC,
       catalogueReference: "Dream White - T0334101601301",
       productionYear: "2014",
       movementType: MovementWatchTypeEnum.QUARTZ,

@@ -12,6 +12,7 @@ import { MovementWatchTypeEnum } from "@/app/enums/movementWatchTypeEnum";
 import { WatchStyleEnum } from "@/app/enums/watchStyleEnum";
 import { WaterResistanceEnum } from "@/app/enums/waterResistanceEnum";
 import { WatchDetails } from "../../watchDetails";
+import { TissotBrandSeries } from "./TissotBrandSeries";
 
 const details: WatchDetails = {
   title: "2014 Tissot V8 S762/862N Chronograph",
@@ -51,7 +52,7 @@ const details: WatchDetails = {
 
     information: {
       brand: BrandsEnum.TISSOT,
-      series: "V8 Series",
+      series: TissotBrandSeries.T_SPORTS,
       catalogueReference: "S762/862N",
       productionYear: "2014",
       movementType: MovementWatchTypeEnum.QUARTZ,

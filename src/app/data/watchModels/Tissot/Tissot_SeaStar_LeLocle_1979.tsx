@@ -12,6 +12,7 @@ import { MovementWatchTypeEnum } from "@/app/enums/movementWatchTypeEnum";
 import { WatchStyleEnum } from "@/app/enums/watchStyleEnum";
 import { WaterResistanceEnum } from "@/app/enums/waterResistanceEnum";
 import { WatchDetails } from "../../watchDetails";
+import { TissotBrandSeries } from "./TissotBrandSeries";
 
 const details: WatchDetails = {
   title: "1979 Tissot Seastar LeLocle Cal.2031",
@@ -58,7 +59,7 @@ const details: WatchDetails = {
 
     information: {
       brand: BrandsEnum.TISSOT,
-      series: "Seastar LeLocle",
+      series: TissotBrandSeries.LE_LOCLE,
       catalogueReference: "40210",
       productionYear: "1979",
       movementType: MovementWatchTypeEnum.QUARTZ,

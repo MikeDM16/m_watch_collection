@@ -12,6 +12,7 @@ import { WatchStyleEnum } from "@/app/enums/watchStyleEnum";
 import { WaterResistanceEnum } from "@/app/enums/waterResistanceEnum";
 import { WatchDetails } from "../../watchDetails";
 import { MovementsDataDB } from "../../movementsData";
+import { TissotBrandSeries } from "./TissotBrandSeries";
 
 const details: WatchDetails = {
   title: "1968 Tissot Seastar PR 516 GL",
@@ -95,8 +96,8 @@ const details: WatchDetails = {
 
     information: {
       brand: BrandsEnum.TISSOT,
-      series: "Visodate PR 516 GL",
-      catalogueReference: "46572-3X",
+      series: TissotBrandSeries.PR_516_VINTAGE,
+      catalogueReference: "GL Visodate 46572-3X",
       productionYear: "1968",
       movementType: MovementWatchTypeEnum.AUTOMATIC,
       style: WatchStyleEnum.SPORTS,

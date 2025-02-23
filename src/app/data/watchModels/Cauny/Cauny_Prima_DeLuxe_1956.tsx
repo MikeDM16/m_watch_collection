@@ -11,6 +11,7 @@ import { MovementWatchTypeEnum } from "@/app/enums/movementWatchTypeEnum";
 import { WatchStyleEnum } from "@/app/enums/watchStyleEnum";
 import { WaterResistanceEnum } from "@/app/enums/waterResistanceEnum";
 import { WatchDetails } from "../../watchDetails";
+import { CaunyBrandSeries } from "./CaunyBrandSeries";
 
 const details: WatchDetails = {
   title: "1956 Cauny Prima De Luxe",
@@ -76,8 +77,8 @@ const details: WatchDetails = {
 
     information: {
       brand: BrandsEnum.CAUNY,
-      series: "Prima De Luxe",
-      catalogueReference: "315-1191/2B 290",
+      series: CaunyBrandSeries.PRIMA,
+      catalogueReference: "De Luxe (315-1191/2B 290)",
       productionYear: "1956",
       movementType: MovementWatchTypeEnum.MECHANIQUE,
       style: WatchStyleEnum.DRESS,

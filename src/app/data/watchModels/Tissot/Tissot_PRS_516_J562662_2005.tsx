@@ -12,6 +12,7 @@ import { MovementWatchTypeEnum } from "@/app/enums/movementWatchTypeEnum";
 import { WatchStyleEnum } from "@/app/enums/watchStyleEnum";
 import { WaterResistanceEnum } from "@/app/enums/waterResistanceEnum";
 import { WatchDetails } from "../../watchDetails";
+import { TissotBrandSeries } from "./TissotBrandSeries";
 
 const details: WatchDetails = {
   title: "2005 Tissot PRS 516 J562/662 Chronograph",
@@ -67,7 +68,7 @@ const details: WatchDetails = {
 
     information: {
       brand: BrandsEnum.TISSOT,
-      series: "PRS 516",
+      series: TissotBrandSeries.PRS_516,
       catalogueReference: "J562/662",
       productionYear: "2005",
       movementType: MovementWatchTypeEnum.QUARTZ,

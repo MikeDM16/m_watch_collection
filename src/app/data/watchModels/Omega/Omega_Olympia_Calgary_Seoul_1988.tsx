@@ -12,6 +12,7 @@ import { MovementWatchTypeEnum } from "@/app/enums/movementWatchTypeEnum";
 import { WatchStyleEnum } from "@/app/enums/watchStyleEnum";
 import { WaterResistanceEnum } from "@/app/enums/waterResistanceEnum";
 import { WatchDetails } from "../../watchDetails";
+import { OmegaBrandSeries } from "./OmegaBrandSeries";
 
 const details: WatchDetails = {
   title: "1988 Omega Olympia Winter Olympics Calgary And Seoul Limited 457/1000",
@@ -68,7 +69,7 @@ const details: WatchDetails = {
 
     information: {
       brand: BrandsEnum.OMEGA,
-      series: "Olympia",
+      series: OmegaBrandSeries.OLYMPIA,
       catalogueReference: "Winter Olympics Calgary Seoul 457/1000 (DB 386.1232)",
       productionYear: "1988",
       movementType: MovementWatchTypeEnum.QUARTZ,

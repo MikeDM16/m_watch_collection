@@ -12,6 +12,7 @@ import { MovementWatchTypeEnum } from "@/app/enums/movementWatchTypeEnum";
 import { WatchStyleEnum } from "@/app/enums/watchStyleEnum";
 import { WaterResistanceEnum } from "@/app/enums/waterResistanceEnum";
 import { WatchDetails } from "../../watchDetails";
+import { TissotBrandSeries } from "./TissotBrandSeries";
 
 const details: WatchDetails = {
   title: "2003 Tissot Heritage COSC Limited Edition",
@@ -89,8 +90,9 @@ const details: WatchDetails = {
 
     information: {
       brand: BrandsEnum.TISSOT,
-      series: "Heritage 150th Anniversary",
-      catalogueReference: "T66.1.721.31 0837/8888",
+      series: TissotBrandSeries.HERITAGE,
+
+      catalogueReference: "150th Anniversary T66.1.721.31 0837/8888",
       productionYear: "2003",
       movementType: MovementWatchTypeEnum.AUTOMATIC,
       style: WatchStyleEnum.DRESS,

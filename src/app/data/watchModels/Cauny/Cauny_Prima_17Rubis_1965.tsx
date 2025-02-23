@@ -11,6 +11,7 @@ import { MovementWatchTypeEnum } from "@/app/enums/movementWatchTypeEnum";
 import { WatchStyleEnum } from "@/app/enums/watchStyleEnum";
 import { WaterResistanceEnum } from "@/app/enums/waterResistanceEnum";
 import { WatchDetails } from "../../watchDetails";
+import { CaunyBrandSeries } from "./CaunyBrandSeries";
 
 const details: WatchDetails = {
   title: "1965 Cauny Prima 17 Rubis",
@@ -81,7 +82,7 @@ const details: WatchDetails = {
 
     information: {
       brand: BrandsEnum.CAUNY,
-      series: "Prima",
+      series: CaunyBrandSeries.PRIMA,
       catalogueReference: "504143",
       productionYear: "1965",
       movementType: MovementWatchTypeEnum.MECHANIQUE,

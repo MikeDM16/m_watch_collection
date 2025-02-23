@@ -12,6 +12,7 @@ import { MovementWatchTypeEnum } from "@/app/enums/movementWatchTypeEnum";
 import { WatchStyleEnum } from "@/app/enums/watchStyleEnum";
 import { WaterResistanceEnum } from "@/app/enums/waterResistanceEnum";
 import { WatchDetails } from "../../watchDetails";
+import { TissotBrandSeries } from "./TissotBrandSeries";
 
 const details: WatchDetails = {
   title: "1978 Tissot Seastar Quartz Cal.2031",
@@ -58,7 +59,7 @@ const details: WatchDetails = {
 
     information: {
       brand: BrandsEnum.TISSOT,
-      series: "Seastar Quartz",
+      series: TissotBrandSeries.PR_516_VINTAGE,
       catalogueReference: "40210",
       productionYear: "1978",
       movementType: MovementWatchTypeEnum.QUARTZ,
