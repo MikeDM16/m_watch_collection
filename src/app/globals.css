@@ -1,0 +1,123 @@
+@import url("styles/accordion.css");
+@import url("styles/textStyles.css");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.bottom-margin {
+  margin-bottom: 1rem;
+}
+
+.header-navbar-entry {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-navbar-entry:hover {
+  color: #c40d2e;
+}
+
+.centered-container {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.footer-division {
+  position: relative;
+  width: 100vw;
+  height: 10rem;
+  background-position: center;
+  background-size: cover;
+  margin: auto;
+}
+.page-title-division {
+  position: relative;
+  width: 100vw;
+  height: 20rem;
+  background-position: center;
+  background-size: cover;
+}
+
+.page-title-overlay-aligned {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.btn-outline-danger {
+  border: #ffffff;
+  --bs-btn-hover-bg: #c40d2f44;
+}
+
+.container {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.extended-container {
+  max-width: 80%;
+}
+.brand-model-item {
+  min-width: 20%;
+  padding-top: 1rem;
+}
+
+.link {
+  text-decoration: none; /* Optional: Remove underline */
+  transition: color 0.3s ease; /* Smooth transition */
+}
+
+.link:hover {
+  color: #c40d2e; /* Hover color */
+}
+
+.hover-animation {
+  text-decoration: none; /* Optional: Remove underline */
+  transition: color 0.3s ease; /* Smooth transition */
+}
+
+.hover-animation:hover {
+  color: #c40d2e; /* Hover color */
+  background-color: #c5718044;
+}
+
+.swiper-transition {
+  .swiper-wrapper {
+    -webkit-transition-timing-function: linear;
+    -o-transition-timing-function: linear;
+    transition-timing-function: linear;
+  }
+}
+
+.extended-screen-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 50vh; /* At least full screen height */
+}

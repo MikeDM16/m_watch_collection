@@ -1,0 +1,87 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.bold-text {
+  font-weight: bold;
+}
+
+.feature-text {
+  color: #c40d2e;
+  font-size: 1.5rem;
+}
+
+.border-bottom-text {
+  border-bottom-width: 0.1rem;
+  border-bottom-color: "black";
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.info-text {
+  color: black;
+  text-decoration: none;
+}
+
+.header-navbar-title {
+  font-family: "Goudy old Style";
+  font-style: italic;
+  font-weight: bold;
+  color: white;
+}
+
+.header-navbar-link {
+  color: rgb(180, 180, 180);
+}
+
+.container-title {
+  font-family: "Quatro Slab W03 Medium", sans-serif;
+  /* For the watch features list  */
+  /*font-family: Verdana, sans-serif;*/
+  font-size: 1.6rem;
+  color: #c40d2e;
+}
+
+.main-page-title {
+  font-family: "Goudy old Style";
+  font-weight: bold;
+  font-style: italic;
+}
+.header-title {
+  font-family: "Quatro Slab W03 Medium", sans-serif;
+  font-size: 3rem; /* -60px */
+}
+
+.title-white-color {
+  color: rgb(214, 214, 214);
+}
+
+.text-margin-left {
+  margin-left: 0.4rem;
+}
+
+.centered-text {
+  text-align: center;
+  position: relative;
+  justify-content: center;
+}
+
+.left-padded-text {
+  text-align: left;
+  position: relative;
+  padding-left: 10%;
+}
+
+.upper-text {
+  text-transform: uppercase;
+}
+
+.capitalize-text {
+  text-transform: capitalize;
+}
+
+.swiper-auction-info {
+  font-family: "ARIAL";
+  font-size: 100%;
+  color: #5cb85c;
+}

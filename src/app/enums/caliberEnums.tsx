@@ -1,0 +1,60 @@
+export const CaliberBrandsEnum = {
+  ETA: "ETA",
+  EBERHARD: "Eberhard",
+  UNITAS: "Unitas",
+  VALJOUX: "Valjoux",
+  LANDERON: "Landeron",
+  RONDA: "Ronda",
+  TISSOT: "Tissot",
+  TIMEX: "Timex",
+  OMEGA: "Omega",
+  AS: "A. Schild",
+  FE: "FE (France Ebauche)",
+  SEIKO: "Seiko",
+  SELLITA: "Sellita",
+  MIYOTA: "Miyota",
+  DUBOIS_DEPRAZ: "Dubois Depraz",
+  ZENITH: "Zenith",
+  ORIENT: "Orient",
+};
+
+export const FrequencyEnum = {
+  F_18000: "18000 A/h",
+  F_21600: "21600 A/h",
+  F_28800: "28800 A/h",
+  F_36600: "36600 A/h",
+};
+
+export const JewelsNumberEnum = {
+  J_0: "Zero (None) Jewels",
+  J_4: "4 (Four) Jewels",
+  J_5: "5 (Five) Jewels",
+  J_6: "6 (Six) Jewels",
+  J_7: "7 (Seven) Jewels",
+  J_13: "13 (Thirteen) Jewels",
+  J_15: "15 (Fifteen) Jewels",
+  J_17: "17 (Seventeen) Jewels",
+  J_21: "21 (Twenty-One) Jewels",
+  J_22: "22 (Twenty-Two) Jewels",
+  J_23: "23 (Twenty-Three) Jewels",
+  J_25: "25 (Twenty-Five) Jewels",
+  J_26: "26 (Twenty-Six) Jewels",
+  J_27: "27 (Twenty-Seven) Jewels",
+  J_30: "30 (Thirty) Jewels",
+  J_31: "31 (Thirty-One) Jewels",
+  J_37: "37 (Thirty-Seven) Jewels",
+  J_39: "39 (Thirty-Nine) Jewels",
+  J_40: "40 (Forty) Jewels",
+};
+
+export const ReserveHoursEnum = {
+  R_40: "40 Hours",
+  R_38: "38 Hours",
+  R_41: "41 Hours",
+  R_42: "42 Hours",
+  R_44: "44 Hours",
+  R_45: "45 Hours",
+  R_47: "47 Hours",
+  R_50: "50 Hours",
+  R_80: "80 Hours",
+};
