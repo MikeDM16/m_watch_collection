@@ -69,7 +69,7 @@ const details: WatchDetails = {
     "public/assets/Images/Kelton/1970_Kelton_M24/IMG_2600.JPG",
     "public/assets/Images/Kelton/1970_Kelton_M24/dial.JPG",
   ],
-  sellReport: {
+  saleReport: {
     price: 100,
     date: "02/08/2019",
     url: "https://www.catawiki.pt/l/28387083-kelton-m24-sub-dive-countdown-homem-1960-1969",

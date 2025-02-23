@@ -43,7 +43,7 @@ const details: WatchDetails = {
     "public/assets/Images/Zodiac/2004_Zodiac_SeaDragon/IMG_1287.JPG",
     "public/assets/Images/Zodiac/2004_Zodiac_SeaDragon/IMG_1277.JPG",
   ],
-  sellReport: {
+  saleReport: {
     price: 100,
     date: "29/01/2019",
     url: "https://www.catawiki.pt/l/23906989-zodiac-sea-dragon-zo2237-homem-2014",

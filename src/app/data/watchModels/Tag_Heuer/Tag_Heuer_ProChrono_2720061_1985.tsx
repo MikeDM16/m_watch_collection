@@ -68,7 +68,7 @@ const details: WatchDetails = {
     "public/assets/Images/Tag_Heuer/1985_Tag_Heuer_2000_Chrono/1990_catalogue_p11.PNG",
     "public/assets/Images/Tag_Heuer/1985_Tag_Heuer_2000_Chrono/1990_catalogue_p12.PNG",
   ],
-  sellReport: {
+  saleReport: {
     price: 470,
     date: "30/04/2021",
     url: "https://www.catawiki.com/en/l/47328697",

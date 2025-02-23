@@ -39,7 +39,7 @@ const details: WatchDetails = {
     "public/assets/Images/Fontaine/1965_Fontaine_Auto/IMG_4697.JPG",
     "public/assets/Images/Fontaine/1965_Fontaine_Auto/XCIZ2978.JPG",
   ],
-  sellReport: {
+  saleReport: {
     price: 97,
     date: "16/07/2020",
     url: "https://www.catawiki.com/l/38930303-fontaine-polerouter-style-men-1960-1969",

@@ -45,7 +45,7 @@ const details: WatchDetails = {
     "public/assets/Images/Raymond_Weil/1988_Raymond_Weil_2809_Auto/LVNP6105.JPG",
     "public/assets/Images/Raymond_Weil/1988_Raymond_Weil_2809_Auto/IMG_4719.JPG",
   ],
-  sellReport: {
+  saleReport: {
     price: 130,
     date: "15/09/2019",
     url: "https://www.catawiki.com/l/29188643-raymond-weil-automatic-2809-eta-2892-21-jewels-men-1988",

@@ -52,7 +52,7 @@ const details: WatchDetails = {
     "public/assets/Images/Tissot/1954_Tissot_Visodate/visodate-sell-add.JPG",
     "public/assets/Images/Tissot/1954_Tissot_Visodate/tissot_manufacturing_dates.JPG",
   ],
-  sellReport: {
+  saleReport: {
     price: 138,
     date: "25/09/2020",
     url: "https://www.catawiki.com/l/40821933",

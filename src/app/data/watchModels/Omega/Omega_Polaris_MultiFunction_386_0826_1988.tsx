@@ -53,7 +53,7 @@ const details: WatchDetails = {
     "public/assets/Images/Omega/1988_Polaris_AnaDigi_Black_386_0826/IMG_1509.JPG",
     "public/assets/Images/Omega/1988_Polaris_AnaDigi_Black_386_0826/IMG_1510.JPG",
   ],
-  sellReport: {
+  saleReport: {
     price: 600,
     date: "24/07/2024",
     url: "https://www.catawiki.com/en/l/86375731-omega-seamaster-polaris-chronograph-386-0826-cal-1665-7-jewles-multi-function-18k-gold-inlay-men-1988",

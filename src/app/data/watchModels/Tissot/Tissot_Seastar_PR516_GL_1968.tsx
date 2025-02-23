@@ -82,7 +82,7 @@ const details: WatchDetails = {
     "public/assets/Images/Tissot/1968_Tissot_Seastar_PR516_GL/serial_number.JPG",
   ],
 
-  sellReport: {
+  saleReport: {
     price: 240,
     date: "16/10/2024",
     url: "https://www.catawiki.com/en/l/89257329-tissot-pr-516-gl-seastar-automatic-no-reserve-price-cal-784-1-21-jewels-men-1968",

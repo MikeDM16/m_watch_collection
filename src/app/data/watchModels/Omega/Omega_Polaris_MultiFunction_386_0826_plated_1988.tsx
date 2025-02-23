@@ -67,7 +67,7 @@ const details: WatchDetails = {
     "public/assets/Images/Omega/1988_Polaris_AnaDigi_Black_386_0826_Gold_plated/IMG_8687.JPG",
   ],
 
-  sellReport: {
+  saleReport: {
     price: 650,
     date: "22/10/2024",
     url: "https://www.catawiki.com/en/l/89181149-omega-seamaster-polaris-chronograph-386-0826-cal-1665-multi-function-18k-gold-plated-men-1988",

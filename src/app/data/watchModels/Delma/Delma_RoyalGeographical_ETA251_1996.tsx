@@ -59,7 +59,7 @@ const details: WatchDetails = {
     "public/assets/Images/Delma/1995_Delma_RoyalGeographical/auction (1).JPG",
     "public/assets/Images/Delma/1995_Delma_RoyalGeographical/auction (3).JPG",
   ],
-  sellReport: {
+  saleReport: {
     price: 194,
     date: "05/01/2024",
     url: "https://www.catawiki.pt/l/78612355",

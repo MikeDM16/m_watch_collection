@@ -48,7 +48,7 @@ const details: WatchDetails = {
     "public/assets/Images/Seiko/1991_Seiko_7T36_7410_Moonphase_chrono/IMG_3451.JPG",
     "public/assets/Images/Seiko/1991_Seiko_7T36_7410_Moonphase_chrono/IMG_3442.JPG",
   ],
-  sellReport: {
+  saleReport: {
     price: 510,
     date: "06/12/2023",
     url: "https://www.catawiki.com/en/l/77571295-seiko-age-of-discoveries-nos-moonphase-chrono-jdm-7t36-men-1991",

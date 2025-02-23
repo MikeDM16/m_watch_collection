@@ -49,7 +49,7 @@ const details: WatchDetails = {
     "public/assets/Images/Tissot/1974_Tissot_Seastar/IMG_1039.JPG",
     "public/assets/Images/Tissot/1974_Tissot_Seastar/tissot_manufacturing_dates.JPG",
   ],
-  sellReport: {
+  saleReport: {
     price: 135,
     date: "20/12/2018",
     url: "https://www.catawiki.com/l/22969623-tissot-visodate-seastar-automatic-plaque-20microns-rare-cal-2571-men-1974",

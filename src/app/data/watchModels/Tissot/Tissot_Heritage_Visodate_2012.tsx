@@ -62,7 +62,7 @@ const details: WatchDetails = {
     "public/assets/Images/Tissot/2012_Tissot_Heritage_Visodate/IMG_0989.JPG",
     "public/assets/Images/Tissot/2012_Tissot_Heritage_Visodate/IMG_0990.JPG",
   ],
-  sellReport: {
+  saleReport: {
     price: 466,
     date: "07/11/2024",
     url: "https://www.catawiki.com/en/l/90002273-tissot-visodate-heritage-150th-anniversary-eta-2836-25-jewels-men-2012",

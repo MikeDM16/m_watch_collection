@@ -68,7 +68,7 @@ const details: WatchDetails = {
     "public/assets/Images/Philip_Watch/1996_Philip_Watch_AQ_1000/IMG_0467.JPG",
   ],
 
-  sellReport: {
+  saleReport: {
     price: 114,
     date: "11/09/2024",
     url: "https://www.catawiki.com/en/l/87939373",

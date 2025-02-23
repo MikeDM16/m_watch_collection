@@ -33,7 +33,7 @@ const details: WatchDetails = {
     "public/assets/Images/Miura/1975_Miura/IMG_2776.JPG",
     "public/assets/Images/Miura/1975_Miura/IMG_2777.JPG",
   ],
-  sellReport: {
+  saleReport: {
     price: 90,
     date: "30/07/2018",
     url: "https://www.catawiki.pt/l/20023879-miura-swiss-perpetual-calendar-double-crown-cal-fe-140-17-rubis-homem-1970-1979",

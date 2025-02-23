@@ -79,7 +79,7 @@ const details: WatchDetails = {
     "public/assets/Images/Ferrari/2005_Ferrari_Modena_Chrono/IMG_2656.JPG",
     "public/assets/Images/Ferrari/2005_Ferrari_Modena_Chrono/IMG_2660.JPG",
   ],
-  sellReport: {
+  saleReport: {
     price: 330,
     date: "27/07/2020",
     url: "https://www.catawiki.com/l/39337225-watch-motorsport-modena-red-chronograph-ferrari-1990-2000",

@@ -43,7 +43,7 @@ const details: WatchDetails = {
     "public/assets/Images/Tissot/2014_Tissot_T_Classic_Dream/Capturar.JPG",
     "public/assets/Images/Tissot/2014_Tissot_T_Classic_Dream/Capturar2.JPG",
   ],
-  sellReport: {
+  saleReport: {
     price: 100,
     date: "29/12/2018",
     url: "https://www.catawiki.com/l/23134883-tissot-classic-dream-shappire-crystal-heren-2017",

@@ -40,7 +40,7 @@ const details: WatchDetails = {
     "public/assets/Images/Tag_Heuer/1998_Tag_Heuer_F1_WA1219/KOCK7746.JPG",
     "public/assets/Images/Tag_Heuer/1998_Tag_Heuer_F1_WA1219/UXRO8574.JPG",
   ],
-  sellReport: {
+  saleReport: {
     price: 188,
     date: "08/11/2019",
     url: "https://www.catawiki.com/l/30587787-tag-heuer-formula-1-professional-200m-waa1219-men-1990-1999",

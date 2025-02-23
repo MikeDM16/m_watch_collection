@@ -61,7 +61,7 @@ const details: WatchDetails = {
     "public/assets/Images/Tag_Heuer/1999_Tag_Heuer_Pro2000/IMG_4682.JPG",
     "public/assets/Images/Tag_Heuer/1999_Tag_Heuer_Pro2000/IMG_4684.JPG",
   ],
-  sellReport: {
+  saleReport: {
     price: 480,
     date: "15/05/2024",
     url: "https://www.catawiki.com/en/l/83708237",

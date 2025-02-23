@@ -102,7 +102,7 @@ const details: WatchDetails = {
     "public/assets/Images/Tag_Heuer/1987_Tag_Heuer_DD2000_262_0061/1990_catalogue_p12.PNG",
   ],
 
-  sellReport: {
+  saleReport: {
     price: 949,
     date: "21/10/2024",
     url: "https://www.catawiki.com/en/l/89539963-tag-heuer-professional-200-nos-dubois-depraz-2000-40-jewels-chronograph-ref-875-206-men-1991",

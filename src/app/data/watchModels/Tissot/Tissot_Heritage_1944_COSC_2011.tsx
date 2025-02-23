@@ -86,7 +86,7 @@ const details: WatchDetails = {
     "public/assets/Images/Tissot/2011_Tissot_Heritage_1944_150th/IMG_3854.JPG",
   ],
 
-  sellReport: {
+  saleReport: {
     price: 1110,
     date: "25/11/2024",
     url: "https://www.catawiki.com/en/l/90472205-tissot-heritage-1944-cosc-27-jewels-limited-edition-0141-3333-men-2011",

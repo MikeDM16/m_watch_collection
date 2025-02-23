@@ -49,7 +49,7 @@ const details: WatchDetails = {
     "public/assets/Images/Tissot/1993_Tissot_L936_Chrono/IMG_7516.JPG",
     "public/assets/Images/Tissot/1993_Tissot_L936_Chrono/IMG_7517.JPG",
   ],
-  sellReport: {
+  saleReport: {
     price: 140,
     date: "10/06/2022",
     url: "",

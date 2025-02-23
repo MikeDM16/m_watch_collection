@@ -58,7 +58,7 @@ const details: WatchDetails = {
     "public/assets/Images/Tissot/2005_Tissot_PRS_516_Chrono/IMG_4836.JPG",
     "public/assets/Images/Tissot/2005_Tissot_PRS_516_Chrono/IMG_4837.JPG",
   ],
-  sellReport: {
+  saleReport: {
     price: 340,
     date: "13/07/2024",
     url: "https://www.catawiki.com/en/l/85967589-tissot-prs-516-limited-edition-pulsometer-chronograph-men-2005",

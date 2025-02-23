@@ -42,7 +42,7 @@ const details: WatchDetails = {
     "public/assets/Images/Tissot/2010_Tissot_PRS_200/IMG_2389.JPG",
     "public/assets/Images/Tissot/2010_Tissot_PRS_200/IMG_2390.JPG",
   ],
-  sellReport: {
+  saleReport: {
     price: 130,
     date: "17/05/2019",
     url: "https://www.catawiki.com/l/26885215-tissot-prs-200-t362-462k-men-2011-present",

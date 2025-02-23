@@ -48,7 +48,7 @@ const details: WatchDetails = {
     "public/assets/Images/Jaguar/1995_Jaguar_Fragrances_Chrono/IMG_3481.JPG",
     "public/assets/Images/Jaguar/1995_Jaguar_Fragrances_Chrono/IMG_3482.JPG",
   ],
-  sellReport: {
+  saleReport: {
     price: 340,
     date: "07/12/2023",
     url: "https://www.catawiki.com/en/l/77571631-jaguar-xj220-chronograph-nos-limited-edition-men-1995",

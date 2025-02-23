@@ -39,7 +39,7 @@ const details: WatchDetails = {
     "public/assets/Images/Pryngeps/1990_Pryngeps_Regolo_II/IMG_0659.JPG",
     "public/assets/Images/Pryngeps/1990_Pryngeps_Regolo_II/IMG_0640_1.JPG",
   ],
-  sellReport: {
+  saleReport: {
     price: 90,
     date: "23/11/2020",
     url: "https://www.catawiki.com/l/42625815",

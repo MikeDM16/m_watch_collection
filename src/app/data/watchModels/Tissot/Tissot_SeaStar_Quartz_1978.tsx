@@ -50,7 +50,7 @@ const details: WatchDetails = {
     "public/assets/Images/Tissot/1978_Tissot_Seastar_Quartz/IMG_1014.JPG",
     "public/assets/Images/Tissot/1978_Tissot_Seastar_Quartz/tissot_manufacturing_dates.JPG",
   ],
-  sellReport: {
+  saleReport: {
     price: 120,
     date: "14/01/2021",
     url: "https://www.catawiki.com/l/44308901",

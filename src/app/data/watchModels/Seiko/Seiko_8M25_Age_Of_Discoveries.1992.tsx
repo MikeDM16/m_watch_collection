@@ -62,7 +62,7 @@ const details: WatchDetails = {
     "public/assets/Images/Seiko/1992_Seiko_8M25_Age_Of_Discoveries/IMG_6714.JPG",
     "public/assets/Images/Seiko/1992_Seiko_8M25_Age_Of_Discoveries/IMG_6716.JPG",
   ],
-  sellReport: {
+  saleReport: {
     price: 412,
     date: "18/03/2024",
     url: "https://www.catawiki.com/en/l/81653557",

@@ -60,7 +60,7 @@ const details: WatchDetails = {
     "public/assets/Images/Tag_Heuer/1997_Tag_Heuer_1500_Granite/IMG_0788.JPG",
     "public/assets/Images/Tag_Heuer/1997_Tag_Heuer_1500_Granite/IMG_0789.JPG",
   ],
-  sellReport: {
+  saleReport: {
     price: 560,
     date: "11/10/2023",
     url: "https://www.catawiki.com/en/l/75220491-tag-heuer-1500-professional-nos-granite-dial-955-713-men-1997",

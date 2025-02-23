@@ -6,6 +6,12 @@ export function getExternalResource(image_url: string) {
   return image_url;
 }
 
+export function getSaleReportImage(baseImgSrc: string): string {
+  const imagePath = baseImgSrc.split("/");
+  imagePath.pop();
+  return imagePath.join("/") + "/saleReport.JPG";
+}
+
 export const SizeType = {
   FULL_HD: "1200x1200",
   GALLERY: "800x800",

@@ -31,7 +31,7 @@ const details: WatchDetails = {
     "public/assets/Images/Martini/1975_Martini_Special/IMG_2791.JPG",
     "public/assets/Images/Martini/1975_Martini_Special/IMG_2792.JPG",
   ],
-  sellReport: {
+  saleReport: {
     price: 70,
     date: "29/07/2018",
     url: "https://www.catawiki.pt/l/20023981-martini-swiss-special-17-rubis-nos-cal-fe-140-17-rubis-homem-1970-1979",

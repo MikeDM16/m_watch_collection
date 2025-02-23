@@ -43,7 +43,7 @@ const details: WatchDetails = {
     "public/assets/Images/Tissot/2014_Tissot_V8/IMG_3632.JPG",
     "public/assets/Images/Tissot/2014_Tissot_V8/IMG_3633.JPG",
   ],
-  sellReport: {
+  saleReport: {
     price: 145,
     date: "06/07/2019",
     url: "https://www.catawiki.pt/l/27790361-tissot-v8-chronograph-special-edition-s762-862n-eta-caliber-homem-2011-presente",

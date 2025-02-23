@@ -57,7 +57,7 @@ const details: WatchDetails = {
     "public/assets/Images/Jaguar/1995_Jaguar_Fragrances_Chrono_II/IMG_6636.JPG",
     "public/assets/Images/Jaguar/1995_Jaguar_Fragrances_Chrono_II/IMG_6637.JPG",
   ],
-  sellReport: {
+  saleReport: {
     price: 140,
     date: "21/04/2022",
     url: "https://www.catawiki.com/en/l/57915195",

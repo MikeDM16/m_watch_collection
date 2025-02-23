@@ -33,7 +33,7 @@ const details: WatchDetails = {
     "public/assets/Images/Emes/2005_Emes_Chrono_OS60/IMG_2113.JPG",
     "public/assets/Images/Emes/2005_Emes_Chrono_OS60/IMG_2114.JPG",
   ],
-  sellReport: {
+  saleReport: {
     price: 100,
     date: "18/05/2019",
     url: "https://www.catawiki.com/l/26524577-emes-german-12h-racing-chronograph-cal-os60-men-2000-2010",

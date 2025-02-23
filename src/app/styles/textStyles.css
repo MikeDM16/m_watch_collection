@@ -79,3 +79,9 @@
 .capitalize-text {
   text-transform: capitalize;
 }
+
+.swiper-auction-info {
+  font-family: "ARIAL";
+  font-size: 100%;
+  color: #5cb85c;
+}

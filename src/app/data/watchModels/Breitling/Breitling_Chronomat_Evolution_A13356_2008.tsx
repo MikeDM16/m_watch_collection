@@ -104,7 +104,7 @@ const details: WatchDetails = {
     "public/assets/Images/Breitling/2008_Breitling_Chronomat_Evolution_A13356/IMG_7146.JPG",
   ],
 
-  sellReport: {
+  saleReport: {
     price: 2900,
     date: "12/07/2024",
     url: "https://www.catawiki.com/en/l/85795637-breitling-chronomat-evolution-a13356-men-2008",

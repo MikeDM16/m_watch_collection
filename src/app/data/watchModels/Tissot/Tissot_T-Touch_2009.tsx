@@ -74,7 +74,7 @@ const details: WatchDetails = {
     "public/assets/Images/Tissot/2016_Tissot_T-Touch/IMG_9929.JPG",
     "public/assets/Images/Tissot/2016_Tissot_T-Touch/IMG_9930.JPG",
   ],
-  sellReport: {
+  saleReport: {
     price: 250,
     date: "14/09/2023",
     url: "https://www.catawiki.com/en/l/74330947-tissot-t-touch-ii-titanium-men-2016",

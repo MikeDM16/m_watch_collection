@@ -57,7 +57,7 @@ const details: WatchDetails = {
     "public/assets/Images/Tissot/2012_Tissot_PRS_200_T362462/IMG_4831.JPG",
     "public/assets/Images/Tissot/2012_Tissot_PRS_200_T362462/IMG_4832.JPG",
   ],
-  sellReport: {
+  saleReport: {
     price: 240,
     date: "28/05/2024",
     url: "https://www.catawiki.com/en/l/84216155",

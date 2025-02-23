@@ -65,7 +65,7 @@ const details: WatchDetails = {
     "public/assets/Images/Omega/1987_Polaris_Calendar_396_1222/IMG_1333.JPG",
     "public/assets/Images/Omega/1987_Polaris_Calendar_396_1222/IMG_1334.JPG",
   ],
-  sellReport: {
+  saleReport: {
     price: 565,
     date: "10/04/2024",
     url: "https://www.catawiki.com/en/l/82331781",

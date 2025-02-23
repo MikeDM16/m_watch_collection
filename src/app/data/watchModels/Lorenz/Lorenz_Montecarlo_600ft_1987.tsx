@@ -45,7 +45,7 @@ const details: WatchDetails = {
     "public/assets/Images/Lorenz/1987_Lorenz_Montecarlo_600ft/IMG_0687.JPG",
     "public/assets/Images/Lorenz/1987_Lorenz_Montecarlo_600ft/IMG_0689.JPG",
   ],
-  sellReport: {
+  saleReport: {
     price: 140,
     date: "23/11/2020",
     url: "https://www.catawiki.com/l/42628731",

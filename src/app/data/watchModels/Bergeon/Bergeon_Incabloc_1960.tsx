@@ -60,7 +60,7 @@ const details: WatchDetails = {
     "public/assets/Images/Bergeon/1960_Bergeon_Incabloc_FE_233/IMG_3949.JPG",
   ],
 
-  sellReport: {
+  saleReport: {
     price: 110,
     date: "11/11/2024",
     url: "https://www.catawiki.com/en/l/89180283-bergeon-vitesse-mechanique-no-reserve-price-fe-france-ebauche-cal-233-17-jewels-men-1976",

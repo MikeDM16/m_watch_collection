@@ -44,7 +44,7 @@ const details: WatchDetails = {
     "public/assets/Images/Lucerne/1975_Lucerne_PR/IMG_1416.JPG",
     "public/assets/Images/Lucerne/1975_Lucerne_PR/IMG_1419.JPG",
   ],
-  sellReport: {
+  saleReport: {
     price: 80,
     date: "14/02/2019",
     url: "https://www.catawiki.com/l/24263323-lucerne-pr-style-nos-model-gold-plated-case-and-back-men-1960-1969",

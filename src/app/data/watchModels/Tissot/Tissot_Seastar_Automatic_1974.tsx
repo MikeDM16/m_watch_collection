@@ -58,7 +58,7 @@ const details: WatchDetails = {
     "public/assets/Images/Tissot/1974_Tissot_Seastar_Automatic/tissot_manufacturing_dates.JPG",
   ],
 
-  sellReport: {
+  saleReport: {
     price: 221,
     date: "05/01/2024",
     url: "https://www.catawiki.com/en/l/78613199",

@@ -48,7 +48,7 @@ const details: WatchDetails = {
     "public/assets/Images/Novart/1976_Novart_Incabloc_White/IMG_3981.JPG",
   ],
 
-  sellReport: {
+  saleReport: {
     price: 163,
     date: "22/10/2024",
     url: "https://www.catawiki.com/en/l/89180477-novart-incabloc-nos-no-reserve-price-unitas-6389-17-jewels-men-1976",

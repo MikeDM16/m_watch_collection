@@ -102,7 +102,7 @@ const details: WatchDetails = {
     "public/assets/Images/Breitling/1998_Breitling_Colt_A53035_Chronograph/IMG_6260.JPG",
   ],
 
-  sellReport: {
+  saleReport: {
     price: 1005,
     date: "08/01/2025",
     url: "https://www.catawiki.com/en/l/92589175",

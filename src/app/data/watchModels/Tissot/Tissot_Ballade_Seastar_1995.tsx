@@ -43,7 +43,7 @@ const details: WatchDetails = {
     "public/assets/Images/Tissot/1995_Tissot_Seastar/IMG_1070.JPG",
     "public/assets/Images/Tissot/1995_Tissot_Seastar/IMG_1071.JPG",
   ],
-  sellReport: {
+  saleReport: {
     price: 155,
     date: "22/12/2018",
     url: "https://www.catawiki.com/l/22969801-tissot-t-classic-seastar-a665-765k-eta-men-2000-2010",

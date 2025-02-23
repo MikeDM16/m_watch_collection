@@ -52,7 +52,7 @@ const details: WatchDetails = {
     "public/assets/Images/Novart/1974_Novart_U6380_Date_Blue/IMG_5669.JPG",
   ],
 
-  sellReport: {
+  saleReport: {
     price: 176,
     date: "29/01/2024",
     url: "https://www.catawiki.pt/l/79481491",

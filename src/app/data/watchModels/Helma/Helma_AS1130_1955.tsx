@@ -41,7 +41,7 @@ const details: WatchDetails = {
     "public/assets/Images/Helma/1955_Helma AS1130/IMG_2826.JPG",
     "public/assets/Images/Helma/1955_Helma AS1130/IMG_2827.JPG",
   ],
-  sellReport: {
+  saleReport: {
     price: 85,
     date: "22/08/2019",
     url: "https://www.catawiki.pt/l/28809335-helma-cal-as-1130-homem-1950-1959",

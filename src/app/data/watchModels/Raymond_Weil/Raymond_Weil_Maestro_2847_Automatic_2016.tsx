@@ -53,7 +53,7 @@ const details: WatchDetails = {
     "public/assets/Images/Raymond_Weil/2016_Raymond_Weil_Maestro_Automatic/IMG_7076.JPG",
   ],
 
-  sellReport: {
+  saleReport: {
     price: 390,
     date: "24/07/2024",
     url: "https://www.catawiki.com/en/l/86336237-raymond-weil-jazzmaster-maestro-rw-4200-26-jewels-men-2016",

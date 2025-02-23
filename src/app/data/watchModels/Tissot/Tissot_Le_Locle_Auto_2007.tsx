@@ -77,7 +77,7 @@ const details: WatchDetails = {
     "public/assets/Images/Tissot/2007_Tissot_Le_Locle_Auto/IMG_5760.JPG",
   ],
 
-  sellReport: {
+  saleReport: {
     price: 462,
     date: "30/01/2024",
     url: "https://www.catawiki.pt/l/79482145",

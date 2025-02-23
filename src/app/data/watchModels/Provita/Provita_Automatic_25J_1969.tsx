@@ -40,7 +40,7 @@ const details: WatchDetails = {
     "public/assets/Images/Provita/1969_Provita_Automatic/IMG_0473.JPG",
     "public/assets/Images/Provita/1969_Provita_Automatic/IMG_0474.JPG",
   ],
-  sellReport: {
+  saleReport: {
     price: 85,
     date: "05/08/2020",
     url: "https://www.catawiki.pt/l/39599285-provita-sports-automatic-eta-2783-21600a-h-25j-homem-1960-1969",

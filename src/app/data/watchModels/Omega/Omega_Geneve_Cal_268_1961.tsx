@@ -71,7 +71,7 @@ const details: WatchDetails = {
     "public/assets/Images/Omega/1961_Omega_Geneve_Cal_268/IMG_6670.JPG",
   ],
 
-  sellReport: {
+  saleReport: {
     price: 751,
     date: "26/07/2024",
     url: "https://www.catawiki.com/en/l/86455107-omega-seamaster-honeycomb-dial-cal-268-17j-gold-plated-men-1961",

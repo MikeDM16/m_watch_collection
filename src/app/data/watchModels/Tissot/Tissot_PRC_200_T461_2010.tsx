@@ -70,7 +70,7 @@ const details: WatchDetails = {
     "public/assets/Images/Tissot/2010_Tissot_PRC_200/IMG_3805.JPG",
     "public/assets/Images/Tissot/2010_Tissot_PRC_200/IMG_3806.JPG",
   ],
-  sellReport: {
+  saleReport: {
     price: 170,
     date: "06/07/2019",
     url: "https://www.catawiki.pt/l/27822175-tissot-prc-200-t641-eta-caliber-homem-2011-presente",

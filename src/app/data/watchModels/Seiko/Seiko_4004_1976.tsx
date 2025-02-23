@@ -91,7 +91,7 @@ const details: WatchDetails = {
     "public/assets/Images/Seiko/1976_Seiko_4004/IMG_4121.JPG",
   ],
 
-  sellReport: {
+  saleReport: {
     price: 170,
     date: "15/10/2024",
     url: "https://www.catawiki.com/en/l/89258183-seiko-type-ii-snowflake-4004-men-1976",

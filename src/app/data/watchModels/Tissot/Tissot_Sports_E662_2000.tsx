@@ -47,7 +47,7 @@ const details: WatchDetails = {
     "public/assets/Images/Tissot/2000_Tissot_Sport_E662762M/IMG_1100.JPG",
     "public/assets/Images/Tissot/2000_Tissot_Sport_E662762M/IMG_1101.JPG",
   ],
-  sellReport: {
+  saleReport: {
     price: 140,
     date: "16/01/2020",
     url: "https://www.catawiki.com/l/33498283-tissot-sport-dive-chrono-e662-762m-eta-chronograph-men-2000-2010",

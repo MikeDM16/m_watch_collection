@@ -67,7 +67,7 @@ const details: WatchDetails = {
     "public/assets/Images/Omega/1956_Omega_Seamaster_2891_Cal_267/IMG_3794.JPG",
   ],
 
-  sellReport: {
+  saleReport: {
     price: 600,
     date: "21/11/2024",
     url: "https://www.catawiki.com/en/l/90756887-omega-seamaster-2891-1-cal-267-17-jewels-twisted-curved-lugs-men-1956",

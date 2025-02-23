@@ -68,7 +68,7 @@ const details: WatchDetails = {
     "public/assets/Images/Signo/1947_Signo_Small_Seconds/IMG_0686.JPG",
   ],
 
-  sellReport: {
+  saleReport: {
     price: 146,
     date: "26/09/2024",
     url: "https://www.catawiki.com/en/l/88397207",

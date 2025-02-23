@@ -38,7 +38,7 @@ const details: WatchDetails = {
     "public/assets/Images/Tissot/1985_Tissot_Le_Locle/IMG_4365.JPG",
     "public/assets/Images/Tissot/1985_Tissot_Le_Locle/tissot case.JPG",
   ],
-  sellReport: {
+  saleReport: {
     price: 180,
     date: "23/08/2019",
     url: "https://www.catawiki.com/l/28812081",

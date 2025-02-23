@@ -69,7 +69,7 @@ const details: WatchDetails = {
     "public/assets/Images/Tissot/2015_Tissot_T_Sports_GMT_Titanium/IMG_5990.JPG",
   ],
 
-  sellReport: {
+  saleReport: {
     price: 281,
     date: "05/02/2024",
     url: "https://www.catawiki.pt/l/79719259",

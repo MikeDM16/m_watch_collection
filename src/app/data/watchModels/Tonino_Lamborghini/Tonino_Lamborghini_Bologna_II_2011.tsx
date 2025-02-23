@@ -54,7 +54,7 @@ const details: WatchDetails = {
     "public/assets/Images/Tonino_Lamborghini/2011_Tonino_Lamborghini_Bologna_II/IMG_1431.JPG",
     "public/assets/Images/Tonino_Lamborghini/2011_Tonino_Lamborghini_Bologna_II/IMG_1432.JPG",
   ],
-  sellReport: {
+  saleReport: {
     price: 342,
     date: "31/01/2021",
     url: "https://www.catawiki.com/l/44549819",

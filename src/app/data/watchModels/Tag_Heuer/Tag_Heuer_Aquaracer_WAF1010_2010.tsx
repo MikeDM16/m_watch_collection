@@ -81,7 +81,7 @@ const details: WatchDetails = {
     "public/assets/Images/Tag_Heuer/2010_Tag_Heuer_Aquaracer_WAF1010/IMG_6090.JPG",
     "public/assets/Images/Tag_Heuer/2010_Tag_Heuer_Aquaracer_WAF1010/IMG_6091.JPG",
   ],
-  sellReport: {
+  saleReport: {
     price: 602,
     date: "18/02/2024",
     url: "https://www.catawiki.com/en/l/80172441",

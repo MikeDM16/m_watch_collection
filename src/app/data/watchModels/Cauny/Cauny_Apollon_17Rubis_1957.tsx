@@ -71,7 +71,7 @@ const details: WatchDetails = {
     "public/assets/Images/Cauny/1957_CaunyApollon/IMG_1593.JPG",
     "public/assets/Images/Cauny/1957_CaunyApollon/IMG_1594.JPG",
   ],
-  sellReport: {
+  saleReport: {
     price: 51,
     date: "16/04/2018",
     url: "https://www.catawiki.pt/l/17956057-cauny-prima-apollon-homem-1950-1959",

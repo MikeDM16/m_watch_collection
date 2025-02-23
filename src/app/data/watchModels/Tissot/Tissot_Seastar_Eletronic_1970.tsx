@@ -46,7 +46,7 @@ const details: WatchDetails = {
     "public/assets/Images/Tissot/1970_Tissot_Seastar_Eletronic/XJCT6047.JPG",
     "public/assets/Images/Tissot/1970_Tissot_Seastar_Eletronic/tissot_manufacturing_dates.JPG",
   ],
-  sellReport: {
+  saleReport: {
     price: 130,
     date: "11/04/2019",
     url: "https://www.catawiki.pt/l/25718049-tissot-seastar-eletronic-dynotron-gold-20microns-homem-1970",

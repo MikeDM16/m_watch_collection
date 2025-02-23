@@ -53,7 +53,7 @@ const details: WatchDetails = {
     "public/assets/Images/Tag_Heuer/1995_Tag_Heuer_F1_WA1219/IMG_2628.JPG",
     "public/assets/Images/Tag_Heuer/1995_Tag_Heuer_F1_WA1219/IMG_2629.JPG",
   ],
-  sellReport: {
+  saleReport: {
     price: 329,
     date: "12/11/2023",
     url: "https://www.catawiki.com/en/l/76479139",

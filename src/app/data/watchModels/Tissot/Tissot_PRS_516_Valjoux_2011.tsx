@@ -70,7 +70,7 @@ const details: WatchDetails = {
     "public/assets/Images/Tissot/2011_Tissot_PRS_516_Valjoux/IMG_6084.JPG",
   ],
 
-  sellReport: {
+  saleReport: {
     price: 780,
     date: "29/01/2025",
     url: "https://www.catawiki.com/en/l/93182326-tissot-prs-516-carbon-nascar-racing-limited-edition-valjoux-7750-25-jewels-men-2011",

@@ -57,7 +57,7 @@ const details: WatchDetails = {
     "public/assets/Images/Tag_Heuer/1985_Heuer_Airline/Heuer_Catalogue_6.JPG",
     "public/assets/Images/Tag_Heuer/1985_Heuer_Airline/Heuer_Catalogue_7.JPG",
   ],
-  sellReport: {
+  saleReport: {
     price: 460,
     date: "24/08/2020",
     url: "https://www.catawiki.com/l/40034805-heuer-airline-gmt-professional-2000-895-513-men-1985",

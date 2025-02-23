@@ -38,7 +38,7 @@ const details: WatchDetails = {
     "public/assets/Images/Mercedes/2004_Mercedes_SLK_Chrono_I/IMG_1651.JPG",
     "public/assets/Images/Mercedes/2004_Mercedes_SLK_Chrono_I/IMG_1652.JPG",
   ],
-  sellReport: {
+  saleReport: {
     price: 350,
     date: "08/07/2020",
     url: "https://www.catawiki.com/l/38771563-watch-mercedes-benz-slk-limited-ed-n-1469-2004-mercedes-benz-after-2000",

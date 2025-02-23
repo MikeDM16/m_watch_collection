@@ -35,7 +35,7 @@ const details: WatchDetails = {
     "public/assets/Images/Mercedes/1996_Mercedes_Chrono_OS60/IMG_0491.JPG",
     "public/assets/Images/Mercedes/1996_Mercedes_Chrono_OS60/IMG_0493.JPG",
   ],
-  sellReport: {
+  saleReport: {
     price: 170,
     date: "12/12/2019",
     url: "https://www.catawiki.com/l/32661279",

@@ -63,7 +63,7 @@ const details: WatchDetails = {
     "public/assets/Images/Monumental/1975_Monumental_Swiss/IMG_2843.JPG",
     "public/assets/Images/Monumental/1975_Monumental_Swiss/IMG_2844.JPG",
   ],
-  sellReport: {
+  saleReport: {
     price: 139,
     date: "27/09/2018",
     url: "https://www.catawiki.pt/l/21063013-monumental-swiss-n323-eta-2783-25-jewels-automatic-dive-200m-homem-1970-1979",

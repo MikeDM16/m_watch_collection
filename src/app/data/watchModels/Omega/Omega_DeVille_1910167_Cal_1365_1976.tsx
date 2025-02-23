@@ -39,7 +39,7 @@ const details: WatchDetails = {
     "public/assets/Images/Omega/1976_Omega_1910167_DeVille/IMG_1317.JPG",
     "public/assets/Images/Omega/1976_Omega_1910167_DeVille/IMG_1318.JPG",
   ],
-  sellReport: {
+  saleReport: {
     price: 240,
     date: "13/02/2020",
     url: "https://www.catawiki.pt/l/34320459-omega-de-ville-191-0167-cal-1365-9-jewels-homem-1970-1979",

@@ -88,7 +88,7 @@ const details: WatchDetails = {
     "public/assets/Images/Tissot/2020_Tissot_T_Touch_Expert_Solar/IMG_0459.JPG",
     "public/assets/Images/Tissot/2020_Tissot_T_Touch_Expert_Solar/IMG_0460.JPG",
   ],
-  sellReport: {
+  saleReport: {
     price: 450,
     date: "11/09/2024",
     url: "https://www.catawiki.com/en/l/87939911",

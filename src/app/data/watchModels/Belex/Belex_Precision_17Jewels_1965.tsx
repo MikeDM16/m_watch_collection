@@ -35,7 +35,7 @@ const details: WatchDetails = {
     "public/assets/Images/Belex/1965_Belex_17_Jewels/IMG_2451.JPG",
     "public/assets/Images/Belex/1965_Belex_17_Jewels/IMG_2452.JPG",
   ],
-  sellReport: {
+  saleReport: {
     price: 130,
     date: "22/04/2019",
     url: "https://www.catawiki.pt/l/26122123-belex-precision-17-jewels-homem-1950-1959",

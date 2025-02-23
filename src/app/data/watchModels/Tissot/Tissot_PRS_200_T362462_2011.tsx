@@ -48,7 +48,7 @@ const details: WatchDetails = {
     "public/assets/Images/Tissot/2011_Tissot_PRS_200_T362246/IMG_0628.JPG",
     "public/assets/Images/Tissot/2011_Tissot_PRS_200_T362246/IMG_0629.JPG",
   ],
-  sellReport: {
+  saleReport: {
     price: 190,
     date: "23/11/2020",
     url: "https://www.catawiki.com/l/42743199",

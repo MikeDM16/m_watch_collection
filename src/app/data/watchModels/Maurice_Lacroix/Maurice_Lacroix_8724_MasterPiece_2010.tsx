@@ -55,7 +55,7 @@ const details: WatchDetails = {
     "public/assets/Images/Maurice_Lacroix/2021_Maurice_Lacroix_8724_MasterPiece_Auto/IMG_1627.JPG",
     "public/assets/Images/Maurice_Lacroix/2021_Maurice_Lacroix_8724_MasterPiece_Auto/IMG_1628.JPG",
   ],
-  sellReport: {
+  saleReport: {
     price: 740,
     date: "02/01/2022",
     url: "https://www.catawiki.com/en/l/54044813",

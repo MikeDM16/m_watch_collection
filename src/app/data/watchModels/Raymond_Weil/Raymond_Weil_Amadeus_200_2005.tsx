@@ -57,7 +57,7 @@ const details: WatchDetails = {
     "public/assets/Images/Raymond_Weil/2005_Raymond_Weil_Amadeus_200/IMG_1580.JPG",
     "public/assets/Images/Raymond_Weil/2005_Raymond_Weil_Amadeus_200/IMG_1977.JPG",
   ],
-  sellReport: {
+  saleReport: {
     price: 425,
     date: "21/10/2023",
     url: "https://www.catawiki.com/en/l/75616609",

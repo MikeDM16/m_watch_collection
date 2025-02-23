@@ -53,7 +53,7 @@ const details: WatchDetails = {
     "public/assets/Images/Maurice_Lacroix/2021_Maurice_Lacroix_Aikon_Chrono/IMG_2095.JPG",
     "public/assets/Images/Maurice_Lacroix/2021_Maurice_Lacroix_Aikon_Chrono/IMG_2096.JPG",
   ],
-  sellReport: {
+  saleReport: {
     price: 650,
     date: "09/11/2023",
     url: "https://www.catawiki.com/en/l/76230157",

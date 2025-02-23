@@ -63,7 +63,7 @@ const details: WatchDetails = {
     "public/assets/Images/Porsche_Design/2016_Porsche_Design_Drivers_Collection_Cayenne/IMG_5713.JPG",
   ],
 
-  sellReport: {
+  saleReport: {
     price: 560,
     date: "13/12/2024",
     url: "https://www.catawiki.com/en/l/91343753",

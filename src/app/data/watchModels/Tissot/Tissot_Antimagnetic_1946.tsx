@@ -59,7 +59,7 @@ const details: WatchDetails = {
     "public/assets/Images/Tissot/1946_Tissot_Antimagnetic/tissot_manufacturing_dates.JPG",
   ],
 
-  sellReport: {
+  saleReport: {
     price: 402,
     date: "22/01/2025",
     url: "https://www.catawiki.com/en/l/92578955-tissot-antimagnetic-tuxedo-dial-bullseye-no-reserve-price-cal-tissot-27-3-15-jewels-men-1946",

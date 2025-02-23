@@ -63,7 +63,7 @@ const details: WatchDetails = {
     "public/assets/Images/Seiko/1994_Seiko_6M13_Perpetual_Calendar/IMG_8212.JPG",
     "public/assets/Images/Seiko/1994_Seiko_6M13_Perpetual_Calendar/IMG_8213.JPG",
   ],
-  sellReport: {
+  saleReport: {
     price: 490,
     date: "22/06/2022",
     url: "",

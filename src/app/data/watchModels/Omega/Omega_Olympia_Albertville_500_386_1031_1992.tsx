@@ -73,7 +73,7 @@ const details: WatchDetails = {
     "public/assets/Images/Omega/1992_Polaris_Albertville_386_1031_500/IMG_8800.JPG",
     "public/assets/Images/Omega/1992_Polaris_Albertville_386_1031_500/IMG_8801.JPG",
   ],
-  sellReport: {
+  saleReport: {
     price: 2230,
     date: "04/08/2024",
     url: "https://www.catawiki.com/en/l/86729993",

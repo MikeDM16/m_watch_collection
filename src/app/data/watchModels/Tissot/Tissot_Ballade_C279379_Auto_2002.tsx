@@ -39,7 +39,7 @@ const details: WatchDetails = {
     "public/assets/Images/Tissot/2002_Tissot_Ballade_Auto/IMG_4653.JPG",
     "public/assets/Images/Tissot/2002_Tissot_Ballade_Auto/IMG_4654.JPG",
   ],
-  sellReport: {
+  saleReport: {
     price: 200,
     date: "11/09/2019",
     url: "https://www.catawiki.com/l/29188501-tissot-ballade-automatic-c279-379c-eta-2824-25-jewels-men-2000-2010",

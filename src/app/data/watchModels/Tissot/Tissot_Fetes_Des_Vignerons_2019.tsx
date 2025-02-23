@@ -81,7 +81,7 @@ const details: WatchDetails = {
     "public/assets/Images/Tissot/2019_Tissot_Fetes_Des_Vignerons/IMG_6206.JPG",
     "public/assets/Images/Tissot/2019_Tissot_Fetes_Des_Vignerons/IMG_6208.JPG",
   ],
-  sellReport: {
+  saleReport: {
     price: 380,
     date: "26/06/2024",
     url: "https://www.catawiki.com/en/l/85435053-tissot-fetes-des-vignerons-limited-edition-no-reserve-price-men-2019",

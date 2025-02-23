@@ -69,7 +69,7 @@ const details: WatchDetails = {
     "public/assets/Images/Tissot/2012_Tissot_Luxury_Powermatic/IMG_1073.JPG",
   ],
 
-  sellReport: {
+  saleReport: {
     price: 345,
     date: "13/10/2024",
     url: "https://www.catawiki.com/en/l/88942997",

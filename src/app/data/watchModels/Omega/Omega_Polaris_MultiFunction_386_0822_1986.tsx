@@ -70,7 +70,7 @@ const details: WatchDetails = {
     "public/assets/Images/Omega/1988_Polaris_AnaDigi_386_0820/IMG_7243.JPG",
     "public/assets/Images/Omega/1988_Polaris_AnaDigi_386_0820/IMG_7244.JPG",
   ],
-  sellReport: {
+  saleReport: {
     price: 610,
     date: "30/04/2024",
     url: "https://www.catawiki.com/en/l/82735339",

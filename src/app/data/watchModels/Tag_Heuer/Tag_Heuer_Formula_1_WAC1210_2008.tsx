@@ -66,7 +66,7 @@ const details: WatchDetails = {
     "public/assets/Images/Tag_Heuer/2008_Tag_Heuer_F1_WAC1210/IMG_4196.JPG",
   ],
 
-  sellReport: {
+  saleReport: {
     price: 450,
     date: "30/12/2023",
     url: "https://www.catawiki.com/en/l/78350907",

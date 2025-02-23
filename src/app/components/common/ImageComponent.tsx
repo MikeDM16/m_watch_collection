@@ -3,15 +3,15 @@ import Image from "next/image";
 export interface ImageProps {
   src: string;
   alt?: string;
-  width?: number;
-  height?: number;
+  width?: number | string;
+  height?: number | string;
   loading?: "eager" | "lazy" | undefined;
   className?: string;
   style?: Record<string, string>;
 }
 export default function ImageComponent(props: ImageProps) {
   const merged_styles = {
-    ...{ width: "100%", height: "auto" },
+    ...{ width: props.width || "100%", height: props.height || "auto" },
   };
 
   return (

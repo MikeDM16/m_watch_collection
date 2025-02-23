@@ -61,7 +61,7 @@ const details: WatchDetails = {
     "public/assets/Images/Pryngeps/1975_Pryngeps_7750/IMG_4841.JPG",
     "public/assets/Images/Pryngeps/1975_Pryngeps_7750/IMG_4842.JPG",
   ],
-  sellReport: {
+  saleReport: {
     price: 550,
     date: "26/06/2024",
     url: "https://www.catawiki.com/en/l/85394479-pryngeps-autavia-nos-valjoux-7750-chrono-25-jewels-men-1980-1989",

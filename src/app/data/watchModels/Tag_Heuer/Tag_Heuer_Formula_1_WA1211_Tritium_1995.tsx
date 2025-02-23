@@ -57,7 +57,7 @@ const details: WatchDetails = {
     "public/assets/Images/Tag_Heuer/1994_Tag_Heuer_F1_WA1211/IMG_0335_1.JPG",
     "public/assets/Images/Tag_Heuer/1994_Tag_Heuer_F1_WA1211/IMG_0335.JPG",
   ],
-  sellReport: {
+  saleReport: {
     price: 280,
     date: "18/10/2020",
     url: "https://www.catawiki.com/l/30207381-tag-heuer-formula-1-professional-2000-wa1212-men-1990-1999",

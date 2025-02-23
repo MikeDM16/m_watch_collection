@@ -97,5 +97,5 @@ export interface WatchDetails {
   sliderImages: string[];
   technicalData: TechnicalData;
   description?: WathchDescription;
-  sellReport?: SellReport;
+  saleReport?: SellReport;
 }

@@ -36,7 +36,7 @@ const details: WatchDetails = {
     "public/assets/Images/Tissot/2000_Tissot_Sport_Chrono/back1.JPG",
     "public/assets/Images/Tissot/2000_Tissot_Sport_Chrono/back2.JPG",
   ],
-  sellReport: {
+  saleReport: {
     price: 145,
     date: "30/10/2018",
     url: "https://www.catawiki.pt/l/21734773-tissot-eta-chronograph-e662-762m-men-2000-2010",

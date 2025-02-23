@@ -52,7 +52,7 @@ const details: WatchDetails = {
     "public/assets/Images/Tissot/1993_Tissot_PRX_P376_7750/IMG_6427-1.JPG",
     "public/assets/Images/Tissot/1993_Tissot_PRX_P376_7750/IMG_6428.JPG",
   ],
-  sellReport: {
+  saleReport: {
     price: 370,
     date: "08/05/2022",
     url: "https://www.catawiki.com/en/l/58220069",

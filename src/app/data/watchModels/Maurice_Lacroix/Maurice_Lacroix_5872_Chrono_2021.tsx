@@ -55,7 +55,7 @@ const details: WatchDetails = {
     "public/assets/Images/Maurice_Lacroix/2021_Maurice_Lacroix_5872_Chrono/IMG_8056.JPG",
     "public/assets/Images/Maurice_Lacroix/2021_Maurice_Lacroix_5872_Chrono/IMG_8057.JPG",
   ],
-  sellReport: {
+  saleReport: {
     price: 500,
     date: "04/08/2023",
     url: "https://www.catawiki.com/en/l/72819585-maurice-lacroix-monza-chronograph-schumacher-eta-251-264-27j-men-1996",

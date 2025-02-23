@@ -51,7 +51,7 @@ const details: WatchDetails = {
     "public/assets/Images/Romar/1976_Romar_Incabloc_U6380/IMG_8026.JPG",
   ],
 
-  sellReport: {
+  saleReport: {
     price: 144,
     date: "25/07/2024",
     url: "https://www.catawiki.com/en/l/86454331-romar-blue-shades-nos-no-reserve-price-unitas-6389-17j-gold-plated-men-1976",

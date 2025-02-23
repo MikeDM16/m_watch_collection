@@ -41,7 +41,7 @@ const details: WatchDetails = {
     "public/assets/Images/Pryngeps/1990_Pryngeps_Regolo/IMG_1625.JPG",
     "public/assets/Images/Pryngeps/1990_Pryngeps_Regolo/IMG_1626.JPG",
   ],
-  sellReport: {
+  saleReport: {
     price: 110,
     date: "09/03/2020",
     url: "https://www.catawiki.com/l/35158771-pryngeps-regolo-tri-compax-prepetual-calendar-1467-b-new-old-stock-men-1980-1989",

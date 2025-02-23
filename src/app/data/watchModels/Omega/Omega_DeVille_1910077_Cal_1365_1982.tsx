@@ -36,7 +36,7 @@ const details: WatchDetails = {
     "public/assets/Images/Omega/1982_Omega_1910077_DeVille/omega_vintage_2.JPG",
     "public/assets/Images/Omega/1982_Omega_1910077_DeVille/omega_vintage_3.JPG",
   ],
-  sellReport: {
+  saleReport: {
     price: 360,
     date: "01/06/2019",
     url: "https://www.catawiki.com/l/27013881-omega-de-ville-191-0077-cal-1365-men-1980-1989",

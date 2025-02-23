@@ -68,7 +68,7 @@ const details: WatchDetails = {
     "public/assets/Images/Tissot/2012_Tissot_Ballade_Chrono/IMG_0348.JPG",
     "public/assets/Images/Tissot/2012_Tissot_Ballade_Chrono/IMG_0349.JPG",
   ],
-  sellReport: {
+  saleReport: {
     price: 222,
     date: "10/10/2023",
     url: "https://www.catawiki.com/en/l/75114057-tissot-ballade-chronograph-eta-251-272-25-jewels-men-2012",

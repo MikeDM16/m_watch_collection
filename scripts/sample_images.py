@@ -105,6 +105,31 @@ def create_sub_images():
                 #img = Image.open(source_path)
                 #img.save(source_path, optimize=True, quality=70)
 
+def create_sale_images():
+    idx = 0
+    slice = 40
+    #[idx*slice:idx*slice +slice]
+    folders = list(os.walk(main_folder_path, topdown=False))
+    for root, dirs, files in tqdm(folders):
+        for name in files:
+            source_path = os.path.join(root, name)
+            if "sell_report.jpg" in source_path.lower():
+                try:
+                    new_name = "saleReport.JPG"
+                    # img = cv2.imread(source_path)
+                    # resized =  cv2.resize(img, (size, size), interpolation=cv2.INTER_LANCZOS4)
+                    # cv2.imwrite(os.path.join(root, new_name), resized)
+                    img = Image.open(source_path)
+                    img.save(
+                        os.path.join(root, new_name), optimize=True, quality=100
+                    )
+
+                except Exception as e:
+                    print(source_path)
+                    print(e)
+
+     
+
 
 # remove_lower_extension_images()
 # make_all_default_images_upper_case_extension()

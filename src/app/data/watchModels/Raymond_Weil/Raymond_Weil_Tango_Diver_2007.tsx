@@ -57,7 +57,7 @@ const details: WatchDetails = {
     "public/assets/Images/Raymond_Weil/2007_Raymond_Weil_Tango_5563_Diver/IMG_0519.JPG",
     "public/assets/Images/Raymond_Weil/2007_Raymond_Weil_Tango_5563_Diver/IMG_0520.JPG",
   ],
-  sellReport: {
+  saleReport: {
     price: 200,
     date: "10/11/2020",
     url: "https://www.catawiki.com/l/42269249",

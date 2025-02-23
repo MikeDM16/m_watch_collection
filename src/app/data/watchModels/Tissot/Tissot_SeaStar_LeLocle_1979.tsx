@@ -50,7 +50,7 @@ const details: WatchDetails = {
     "public/assets/Images/Tissot/1979_Tissot_Seastar_LeLocle/IMG_0108.JPG",
     "public/assets/Images/Tissot/1979_Tissot_Seastar_LeLocle/tissot_manufacturing_dates.JPG",
   ],
-  sellReport: {
+  saleReport: {
     price: 120,
     date: "06/11/2020",
     url: "https://www.catawiki.com/l/42004487",

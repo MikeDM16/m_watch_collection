@@ -48,7 +48,7 @@ const details: WatchDetails = {
     "public/assets/Images/Hipco/1974_HIPCO_Incabloc_U6380/IMG_7993.JPG",
   ],
 
-  sellReport: {
+  saleReport: {
     price: 256,
     date: "05/08/2024",
     url: "https://www.catawiki.com/en/l/86729723",

@@ -42,7 +42,7 @@ const details: WatchDetails = {
     "public/assets/Images/Admes/1950_Admes_Automatic/QPFF1676.JPG",
     "public/assets/Images/Admes/1950_Admes_Automatic/YGIF5008.JPG",
   ],
-  sellReport: {
+  saleReport: {
     price: 110,
     date: "14/02/2019",
     url: "https://www.catawiki.com/l/24263071-admes-eta-1256-1-eta-automatic-cal-men-1950-1959",

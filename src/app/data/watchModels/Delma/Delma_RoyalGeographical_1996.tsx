@@ -62,7 +62,7 @@ const details: WatchDetails = {
     "public/assets/Images/Delma/1996_Delma_Royal_Geographical/IMG_7038.JPG",
   ],
 
-  sellReport: {
+  saleReport: {
     price: 190,
     date: "30/07/2024",
     url: "https://www.catawiki.com/en/l/86602483-delma-royal-geographical-limited-edition-no-reserve-price-eta-22j-251-272-chronograph-men-1996",

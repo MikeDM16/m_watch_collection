@@ -43,7 +43,7 @@ const details: WatchDetails = {
     "public/assets/Images/Greenwich/1995_Greenwich_Premier/IMG_1781.JPG",
     "public/assets/Images/Greenwich/1995_Greenwich_Premier/RTET3968.JPG",
   ],
-  sellReport: {
+  saleReport: {
     price: 180,
     date: "23/03/2019",
     url: "https://www.catawiki.com/l/25007081-greenwich-premier-gold-eta-251-272-shapphire-crystal-men-1990-1999",

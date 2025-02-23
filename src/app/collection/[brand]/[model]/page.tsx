@@ -9,6 +9,7 @@ import FooterComponent from "@/app/components/footer/footerComponent";
 import HeaderNavBar from "@/app/components/header/headerComponent";
 import BrandModelPageNotFoundComponent from "@/app/components/notFound/BrandModelPageNotFoundComponent";
 import BrandPageNotFoundComponent from "@/app/components/notFound/BrandPageNotFoundComponent";
+import saleReportComponent from "@/app/components/saleReport/saleReportComponent";
 import { Caliber } from "@/app/data/movementsData";
 import {
   BraceletInformationToDisplayTextMapping,
@@ -42,7 +43,7 @@ export default function BrandModelPage() {
 
   const modelName: string = modelDetails.href.default.title;
   const technicalData: TechnicalData = modelDetails.href.default.technicalData;
-  const caliberDetails: Caliber = modelDetails.href.default.technicalData.movement;
+  const caliberDetails: Caliber = technicalData.movement;
 
   const getTechnicalInformation = () => {
     return (
@@ -76,7 +77,7 @@ export default function BrandModelPage() {
   };
 
   const renderBrandItemTechnicalData = () => {
-    const list: AccordionEntry[] = [
+    const accordionEntriesList: AccordionEntry[] = [
       {
         title: "Technical Information",
         content: getTechnicalInformation(),
@@ -86,6 +87,15 @@ export default function BrandModelPage() {
         content: CaliberDetailComponent(caliberDetails),
       },
     ];
+
+    // If sale report exists, add them to the accordion items
+    if (modelDetails.href.default.saleReport) {
+      const baseImgSrc = modelDetails.srcImage;
+      accordionEntriesList.push({
+        title: "Sale Report",
+        content: saleReportComponent(modelDetails.href.default.saleReport, baseImgSrc),
+      });
+    }
 
     return (
       <div>
@@ -106,7 +116,7 @@ export default function BrandModelPage() {
               )}
             </Col>
           </Row>
-          <Row>{AccordionFunction(list)}</Row>
+          <Row>{AccordionFunction(accordionEntriesList)}</Row>
         </Container>
       </div>
     );

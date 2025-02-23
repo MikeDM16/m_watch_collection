@@ -39,7 +39,7 @@ const details: WatchDetails = {
     "public/assets/Images/Tissot/1970_Tissot_PR_516/UTTB4144.JPG",
     "public/assets/Images/Tissot/1970_Tissot_PR_516/tissot_manufacturing_dates.JPG",
   ],
-  sellReport: {
+  saleReport: {
     price: 90,
     date: "28/02/2019",
     url: "https://www.catawiki.pt/l/24623279-tissot-seastar-pr-516-cal-781-1-homem-1960-1969",

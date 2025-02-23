@@ -87,7 +87,7 @@ const details: WatchDetails = {
     "public/assets/Images/Tag_Heuer/2016_Tag_Heuer_formula_1_Indy_500/IMG_5389.JPG",
   ],
 
-  sellReport: {
+  saleReport: {
     price: 1501,
     date: "23/11/2024",
     url: "https://www.catawiki.com/en/l/90618037-tag-heuer-formula-1-indy-500-limited-529-1000-men-2016",

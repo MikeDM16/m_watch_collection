@@ -66,7 +66,7 @@ const details: WatchDetails = {
     "public/assets/Images/Lorus/1993_Lorus_N945_7A90/IMG_0697.JPG",
     "public/assets/Images/Lorus/1993_Lorus_N945_7A90/XGNQ2877.JPG",
   ],
-  sellReport: {
+  saleReport: {
     price: 53,
     date: "08/02/2018",
     url: "https://www.catawiki.com/l/16543867-lorus-seiko-n945-7a90-men-1980-1989",

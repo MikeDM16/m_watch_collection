@@ -51,7 +51,7 @@ const details: WatchDetails = {
     "public/assets/Images/Lucerne/1975_Lucerne_Dive/IMG_1795.JPG",
     "public/assets/Images/Lucerne/1975_Lucerne_Dive/BWAK2273.JPG",
   ],
-  sellReport: {
+  saleReport: {
     price: 150,
     date: "17/12/2018",
     url: "https://www.catawiki.com/l/22975267-lucerne-swiss-automatic-25-jewels-dive-watch-men-1970-1979",

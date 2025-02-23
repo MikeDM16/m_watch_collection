@@ -104,7 +104,7 @@ const details: WatchDetails = {
     "public/assets/Images/Tag_Heuer/1987_Tag_Heuer_DD2000_262_0061/1990_catalogue_p11.PNG",
     "public/assets/Images/Tag_Heuer/1987_Tag_Heuer_DD2000_262_0061/1990_catalogue_p12.PNG",
   ],
-  sellReport: {
+  saleReport: {
     price: 750,
     date: "26/07/2024",
     url: "https://www.catawiki.com/en/l/85968361-tag-heuer-professional-200-nos-dd2000-26-jewels-chronograph-ref-262-006-1-men-1987",

@@ -73,7 +73,7 @@ const details: WatchDetails = {
     "public/assets/Images/Cauny/1965_CaunyPrima/IMG_2112.JPG",
     "public/assets/Images/Cauny/1965_CaunyPrima/IMG_2113.JPG",
   ],
-  sellReport: {
+  saleReport: {
     price: 76,
     date: "26/04/2018",
     url: "https://www.catawiki.pt/l/18192125-cauny-swiss-prima-17-jewels-504143-homem-1950-1959",

@@ -85,7 +85,7 @@ const details: WatchDetails = {
     "public/assets/Images/Cauny/1967_CaunyPrimaCalendario/IMG_1832.JPG",
     "public/assets/Images/Cauny/1967_CaunyPrimaCalendario/XZIK1870.JPG",
   ],
-  sellReport: {
+  saleReport: {
     price: 135,
     date: "21/03/2019",
     url: "https://www.catawiki.pt/l/25161393-cauny-prima-calendario-cal-as-1950-homem-1960-1969",

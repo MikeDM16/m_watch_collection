@@ -48,7 +48,7 @@ const details: WatchDetails = {
     "public/assets/Images/Lanco/1960_Lanco/IMG_2663.JPG",
     "public/assets/Images/Lanco/1960_Lanco/IMG_2666.JPG",
   ],
-  sellReport: {
+  saleReport: {
     price: 102,
     date: "13/07/2018",
     url: "https://www.catawiki.com/l/19682073-lanco-men-1950-1959",

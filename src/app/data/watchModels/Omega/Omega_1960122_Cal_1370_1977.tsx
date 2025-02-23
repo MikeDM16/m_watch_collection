@@ -41,7 +41,7 @@ const details: WatchDetails = {
     "public/assets/Images/Omega/1977_Omega_1960122/IMG_0244.JPG",
     "public/assets/Images/Omega/1977_Omega_1960122/IMG_0245.JPG",
   ],
-  sellReport: {
+  saleReport: {
     price: 370,
     date: "08/11/2019",
     url: "https://www.catawiki.com/l/29855914-omega-196-0122-cal-1370-7-jewels-men-1970-1979",

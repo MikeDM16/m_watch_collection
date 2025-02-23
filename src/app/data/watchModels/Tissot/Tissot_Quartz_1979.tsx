@@ -66,7 +66,7 @@ const details: WatchDetails = {
     //"public/assets/Images/Tissot/1979_Tissot_Quartz/tissot_manufacturing_dates.JPG",
   ],
 
-  sellReport: {
+  saleReport: {
     price: 169,
     date: "05/01/2024",
     url: "https://www.catawiki.com/en/l/78613643",

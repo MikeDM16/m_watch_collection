@@ -80,7 +80,7 @@ const details: WatchDetails = {
     "public/assets/Images/Tag_Heuer/2005_Tag_Heuer_Aquaracer_CN2111/IMG_0144.JPG",
   ],
 
-  sellReport: {
+  saleReport: {
     price: 951,
     date: "07/11/2024",
     url: "https://www.catawiki.com/en/l/90081043-tag-heuer-aquaracer-professional-2000-clous-de-paris-chronograph-caliber-16-valjoux-7750-25-jewels-cn2111-men-2010-2020",

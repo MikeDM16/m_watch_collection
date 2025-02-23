@@ -46,7 +46,7 @@ const details: WatchDetails = {
     "public/assets/Images/Tissot/1995_Tissot_Chrono_E662762M/IMG_1322.JPG",
     "public/assets/Images/Tissot/1995_Tissot_Chrono_E662762M/IMG_1323.JPG",
   ],
-  sellReport: {
+  saleReport: {
     price: 110,
     date: "18/01/2021",
     url: "https://www.catawiki.com/l/44308675",

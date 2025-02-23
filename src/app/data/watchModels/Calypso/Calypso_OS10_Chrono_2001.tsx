@@ -40,7 +40,7 @@ const details: WatchDetails = {
     "public/assets/Images/Calypso/2001_Calypso_Chrono_OS10/MRRQ2327.JPG",
     "public/assets/Images/Calypso/2001_Calypso_Chrono_OS10/IMG_0781.JPG",
   ],
-  sellReport: {
+  saleReport: {
     price: 123,
     date: "13/05/2019",
     url: "https://www.catawiki.com/l/26584413-calypso-nos-12h-racing-chronograph-cal-citizen-os10-men-1990-1999",

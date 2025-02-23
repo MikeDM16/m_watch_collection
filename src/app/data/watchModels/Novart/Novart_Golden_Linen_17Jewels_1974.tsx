@@ -59,7 +59,7 @@ const details: WatchDetails = {
     "public/assets/Images/Novart/1974_Novart_U6380_Golden_Linen/IMG_5967.JPG",
   ],
 
-  sellReport: {
+  saleReport: {
     price: 190,
     date: "18/07/2024",
     url: "https://www.catawiki.com/en/l/85906777-novart-golden-linen-nos-no-reserve-price-unitas-6389-17-jewels-men-1974",

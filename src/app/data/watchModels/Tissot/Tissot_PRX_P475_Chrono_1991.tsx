@@ -72,7 +72,7 @@ const details: WatchDetails = {
     "public/assets/Images/Tissot/1991_Tissot_PRX_P475_Chrono/IMG_6914.JPG",
   ],
 
-  sellReport: {
+  saleReport: {
     price: 265,
     date: "01/07/2024",
     url: "https://www.catawiki.com/en/l/85556405-tissot-prx-waffle-dial-no-reserve-price-eta-22j-251-272-chronograph-men-1991",

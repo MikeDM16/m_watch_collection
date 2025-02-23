@@ -42,7 +42,7 @@ const details: WatchDetails = {
     "public/assets/Images/Rone/1950_Rone_Calendar_Pointer/IMG_3560.JPG",
     "public/assets/Images/Rone/1950_Rone_Calendar_Pointer/IMG_3561.JPG",
   ],
-  sellReport: {
+  saleReport: {
     price: 117,
     date: "03/07/2019",
     url: "https://www.catawiki.pt/l/27745963-rone-swiss-made-calender-pointer-cal-fhf-253-homem-1950-1959",

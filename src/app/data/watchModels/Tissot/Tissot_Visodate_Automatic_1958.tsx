@@ -47,7 +47,7 @@ const details: WatchDetails = {
     "public/assets/Images/Tissot/1958_Tissot_Visodate/visodate-sell-add.JPG",
     "public/assets/Images/Tissot/1958_Tissot_Visodate/tissot_manufacturing_dates.JPG",
   ],
-  sellReport: {
+  saleReport: {
     price: 320,
     date: "10/12/2019",
     url: "https://www.catawiki.com/l/32660783-tissot-visodate-gold-20microns-cal-28-5r-19800a-h-men-1958",

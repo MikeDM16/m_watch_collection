@@ -38,7 +38,7 @@ const details: WatchDetails = {
     "public/assets/Images/Tissot/2009_Tissot_PRS_516_Retrograde/tissot_catalogue.JPG",
     "public/assets/Images/Tissot/2009_Tissot_PRS_516_Retrograde/tissot_site.JPG",
   ],
-  sellReport: {
+  saleReport: {
     price: 190,
     date: "16/11/2018",
     url: "https://www.catawiki.com/l/22109423-tissot-prs-516-retrograde-chronograph-sapphire-glass-men-2011-present",

@@ -38,7 +38,7 @@ const details: WatchDetails = {
     "public/assets/Images/Tissot/1967_Tissot_PR_516/UEND1785.JPG",
     "public/assets/Images/Tissot/1967_Tissot_PR_516/tissot_manufacturing_dates.JPG",
   ],
-  sellReport: {
+  saleReport: {
     price: 181,
     date: "01/11/2018",
     url: "https://www.catawiki.com/l/21870059-tissot-visodate-seastar-pr-516-cal-782-1-men-1960-1969",

@@ -41,7 +41,7 @@ const details: WatchDetails = {
     "public/assets/Images/Mercedes/1996_Mercedes_SLK_Edition_ISA818/IMG_0540.JPG",
     "public/assets/Images/Mercedes/1996_Mercedes_SLK_Edition_ISA818/IMG_0541.JPG",
   ],
-  sellReport: {
+  saleReport: {
     price: 120,
     date: "12/12/2019",
     url: "https://www.catawiki.com/l/32701223-mercedes-benz-slk-edition-watch-cal-isa-8171-202-3-jewels-mechanical-chronograph-men-1996",

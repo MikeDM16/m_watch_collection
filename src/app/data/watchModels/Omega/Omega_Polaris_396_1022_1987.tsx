@@ -69,7 +69,7 @@ const details: WatchDetails = {
     "public/assets/Images/Omega/1987_Polaris_396_1022/IMG_1368.JPG",
     "public/assets/Images/Omega/1987_Polaris_396_1022/IMG_1369.JPG",
   ],
-  sellReport: {
+  saleReport: {
     price: 600,
     date: "10/05/2024",
     url: "https://www.catawiki.com/en/l/83421167",

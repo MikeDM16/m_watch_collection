@@ -52,7 +52,7 @@ const details: WatchDetails = {
     "public/assets/Images/Raymond_Weil/2007_Reymond_Weil_Saxo_9520/IMG_1575.JPG",
     "public/assets/Images/Raymond_Weil/2007_Reymond_Weil_Saxo_9520/IMG_1576.JPG",
   ],
-  sellReport: {
+  saleReport: {
     price: 190,
     date: "19/04/2024",
     url: "https://www.catawiki.com/en/l/82735777",

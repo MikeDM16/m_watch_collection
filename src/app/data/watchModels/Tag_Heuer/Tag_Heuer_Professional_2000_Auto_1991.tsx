@@ -76,7 +76,7 @@ const details: WatchDetails = {
     "public/assets/Images/Tag_Heuer/1991_Tag_Heuer_2000_Automatic_WE2211/IMG_6670.JPG",
     "public/assets/Images/Tag_Heuer/1991_Tag_Heuer_2000_Automatic_WE2211/IMG_6671.JPG",
   ],
-  sellReport: {
+  saleReport: {
     price: 500,
     date: "26/06/2024",
     url: "https://www.catawiki.com/en/l/85394175-tag-heuer-2000-professional-automatic-we2211-25-jewels-men-1991",

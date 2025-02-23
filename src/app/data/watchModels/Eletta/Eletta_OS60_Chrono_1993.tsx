@@ -47,7 +47,7 @@ const details: WatchDetails = {
     "public/assets/Images/Elleta/Eletta_Chrono_OS60_1993/IMG_7398.JPG",
     "public/assets/Images/Elleta/Eletta_Chrono_OS60_1993/IMG_7403.JPG",
   ],
-  sellReport: {
+  saleReport: {
     price: 59,
     date: "31/07/2023",
     url: "https://www.catawiki.com/en/l/72819739-eletta-orange-boy-chronograph-men-1987",

@@ -52,7 +52,7 @@ const details: WatchDetails = {
     "public/assets/Images/Maurice_Lacroix/2021_Maurice_Lacroix_5393_Chrono/IMG_8980.JPG",
     "public/assets/Images/Maurice_Lacroix/2021_Maurice_Lacroix_5393_Chrono/IMG_8981.JPG",
   ],
-  sellReport: {
+  saleReport: {
     price: 400,
     date: "24/07/2022",
     url: "",

@@ -103,7 +103,7 @@ const details: WatchDetails = {
     "public/assets/Images/Tissot/1979_Tissot_PR_516_Quartz/IMG_4025.JPG",
   ],
 
-  sellReport: {
+  saleReport: {
     price: 180,
     date: "06/11/2024",
     url: "https://www.catawiki.com/en/l/90103157-pr-516-le-locle-1st-gen-quartz-cal-2031-4-jewels-omega-1370-no-reserve-price-men-1979",

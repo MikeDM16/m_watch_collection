@@ -64,7 +64,7 @@ const details: WatchDetails = {
     "public/assets/Images/Romar/1976_Romar_Incabloc_Green_U6380/IMG_5687.JPG",
   ],
 
-  sellReport: {
+  saleReport: {
     price: 173,
     date: "26/11/2024",
     url: "https://www.catawiki.com/en/l/90879065-romar-vitesse-green-shades-nos-no-reserve-price-unitas-6380-17-jewels-men-1976",

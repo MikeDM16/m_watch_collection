@@ -36,7 +36,7 @@ const details: WatchDetails = {
     "public/assets/Images/Pryngeps/2001_Pryngeps_CR763/IMG_3280.JPG",
     "public/assets/Images/Pryngeps/2001_Pryngeps_CR763/IMG_3281.JPG",
   ],
-  sellReport: {
+  saleReport: {
     price: 132,
     date: "02/06/2019",
     url: "https://www.catawiki.pt/l/27028151-pryngeps-swiss-timonier-series-chronograph-cal-citizen-os60-homem-2000-2010",

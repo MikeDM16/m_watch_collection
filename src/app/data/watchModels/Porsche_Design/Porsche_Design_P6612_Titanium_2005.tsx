@@ -87,7 +87,7 @@ const details: WatchDetails = {
     "public/assets/Images/Porsche_Design/2005_Porsche Design_Dashboard_P662_Titanium/IMG_4329.JPG",
   ],
 
-  sellReport: {
+  saleReport: {
     price: 2450,
     date: "23/11/2024",
     url: "https://www.catawiki.com/en/l/90807963",
