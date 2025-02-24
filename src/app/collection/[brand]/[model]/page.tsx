@@ -18,6 +18,12 @@ import {
   ModelInformationKeyToDisplayTextMapping,
   TechnicalData,
 } from "@/app/data/watchDetails";
+import { FeatureStruct } from "@/app/enums/featuresEnum";
+import {
+  getColumnBraceletBackgroud,
+  getColumnCaseBackgroud,
+  getColumnDialBackgroud,
+} from "@/app/modelPage/technicalInformationUtils";
 import brandsService from "@/app/services/brandsService";
 import collectionService from "@/app/services/collectionService";
 import { getPathParameter, selectBackgroundImage } from "@/app/services/commonFunctions";
@@ -53,6 +59,7 @@ export default function BrandModelPage() {
             "Case",
             technicalData.case as unknown as Record<string, string>,
             undefined,
+            getColumnCaseBackgroud(technicalData),
             CaseInformationKeyToDisplayTextMapping,
           )}
         </Col>
@@ -61,6 +68,7 @@ export default function BrandModelPage() {
             "Dial",
             technicalData.dial as unknown as Record<string, string>,
             undefined,
+            getColumnDialBackgroud(technicalData),
             DialInformationToDisplayTextMapping,
           )}
         </Col>
@@ -69,6 +77,7 @@ export default function BrandModelPage() {
             "Bracelet",
             technicalData.bracelet as unknown as Record<string, string>,
             undefined,
+            getColumnBraceletBackgroud(technicalData.bracelet),
             BraceletInformationToDisplayTextMapping,
           )}
         </Col>
@@ -76,8 +85,39 @@ export default function BrandModelPage() {
     );
   };
 
+  const displayModelMainFeatures = (features: (string | FeatureStruct)[]) => {
+    return (
+      <div className="">
+        {features
+          .filter((entry) => entry != undefined)
+          .map((entry, idx) => {
+            if (typeof entry == "string") {
+              return (
+                <div key={`feature_model_${idx}`}>
+                  {" "}
+                  <b>{entry}</b>
+                  <p></p>
+                </div>
+              );
+            } else {
+              return (
+                <div key={`feature_model_${idx}`} className="bottom-margin">
+                  <b>{entry.name}</b>
+                  <div>{entry.description}</div>
+                </div>
+              );
+            }
+          })}
+      </div>
+    );
+  };
+
   const renderBrandItemTechnicalData = () => {
     const accordionEntriesList: AccordionEntry[] = [
+      {
+        title: "Features",
+        content: displayModelMainFeatures(technicalData.features),
+      },
       {
         title: "Technical Information",
         content: getTechnicalInformation(),
@@ -112,6 +152,7 @@ export default function BrandModelPage() {
                 "",
                 technicalData.information as unknown as Record<string, string>,
                 brandDetails.logoImg,
+                undefined,
                 ModelInformationKeyToDisplayTextMapping,
               )}
             </Col>

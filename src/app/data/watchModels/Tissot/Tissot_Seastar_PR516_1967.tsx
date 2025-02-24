@@ -2,7 +2,7 @@ import { BrandsEnum } from "@/app/enums/brandsEnum";
 import { BuckleTypeEnum } from "@/app/enums/buckleTypeEnum";
 import { CalendarWatchTypeEnum } from "@/app/enums/calendarWatchTypeEnum";
 import { CaseBackDetailsEnum } from "@/app/enums/caseBackDetailsEnum";
-import { CrowWatchTypeEnum } from "@/app/enums/crowWatchTypeEnum";
+import { CrownWatchTypeEnum } from "@/app/enums/crownWatchTypeEnum";
 import { CrystalMaterialEnum } from "@/app/enums/crystalMaterialEnum";
 import { DialMarketsEnum } from "@/app/enums/dialMarketsEnum";
 import { featuresEnum } from "@/app/enums/featuresEnum";
@@ -67,7 +67,7 @@ const details: WatchDetails = {
       waterResistance: WaterResistanceEnum.WATER_RESISTANT,
       finishingDetails: "Vertical brushed polishing",
       bezel: "Without bezel",
-      crownType: CrowWatchTypeEnum.PUSH_PULL,
+      crownType: CrownWatchTypeEnum.PUSH_PULL,
       crystal: CrystalMaterialEnum.ACRYLIC,
       caseback: CaseBackDetailsEnum.WITHOUT_DECORATION,
     },
