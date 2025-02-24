@@ -6,6 +6,7 @@ export default function FeatureListingComponent(
   title: string,
   features: Record<string, string>,
   imgSrc?: string,
+  backgroudImage?: string,
   keyToDisplayTextmappings?: Record<string, string>,
 ) {
   const containerImage = imgSrc ? <ImageComponent src={getExternalResource(imgSrc)} /> : undefined;
@@ -13,15 +14,22 @@ export default function FeatureListingComponent(
     <div>
       <div className="container-title centered-container border-bottom-text">{title}</div>
       {containerImage}
-      {Object.entries(features).map(([key, value]) => {
-        const displayText = keyToDisplayTextmappings?.[key] || key;
-        return (
-          <div className="capitalize-text" key={`model_information_${key}`}>
-            <b>{displayText}</b>
-            <p>{value}</p>
-          </div>
-        );
-      })}
+      <div
+        className="feature-information-background"
+        style={{
+          backgroundImage: `linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.9)), url(${backgroudImage})`,
+        }}
+      >
+        {Object.entries(features).map(([key, value]) => {
+          const displayText = keyToDisplayTextmappings?.[key] || key;
+          return (
+            <div key={`model_information_${key}`}>
+              <b className="capitalize-text">{displayText}</b>
+              <p>{value}</p>
+            </div>
+          );
+        })}
+      </div>
     </div>
   );
 }

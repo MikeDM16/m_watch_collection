@@ -155,7 +155,7 @@ export default function ImageSwiperComponent(props: ImageSwiperComponentProps) {
           <SwiperSlide key={index} className="swiper-zoom-target">
             <div className="swiper-zoom-container">
               <ImageComponent
-                src={getExternalResource(src)}
+                src={getExternalResource(getImgURLForSizeType(src, SizeType.FULL_HD))}
                 alt={`Thumbnail ${index + 1}`}
                 className="h-full w-full cursor-pointer object-cover"
                 loading="lazy"
