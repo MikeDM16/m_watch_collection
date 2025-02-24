@@ -18,6 +18,7 @@ import {
   ModelInformationKeyToDisplayTextMapping,
   TechnicalData,
 } from "@/app/data/watchDetails";
+import { FeatureStruct } from "@/app/enums/featuresEnum";
 import {
   getColumnBraceletBackgroud,
   getColumnCaseBackgroud,
@@ -84,8 +85,39 @@ export default function BrandModelPage() {
     );
   };
 
+  const displayModelMainFeatures = (features: (string | FeatureStruct)[]) => {
+    return (
+      <div className="">
+        {features
+          .filter((entry) => entry != undefined)
+          .map((entry, idx) => {
+            if (typeof entry == "string") {
+              return (
+                <div key={`feature_model_${idx}`}>
+                  {" "}
+                  <b>{entry}</b>
+                  <p></p>
+                </div>
+              );
+            } else {
+              return (
+                <div key={`feature_model_${idx}`} className="bottom-margin">
+                  <b>{entry.name}</b>
+                  <div>{entry.description}</div>
+                </div>
+              );
+            }
+          })}
+      </div>
+    );
+  };
+
   const renderBrandItemTechnicalData = () => {
     const accordionEntriesList: AccordionEntry[] = [
+      {
+        title: "Features",
+        content: displayModelMainFeatures(technicalData.features),
+      },
       {
         title: "Technical Information",
         content: getTechnicalInformation(),
