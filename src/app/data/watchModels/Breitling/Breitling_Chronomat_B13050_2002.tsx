@@ -2,7 +2,7 @@ import { BrandsEnum } from "@/app/enums/brandsEnum";
 import { BuckleTypeEnum } from "@/app/enums/buckleTypeEnum";
 import { CalendarWatchTypeEnum } from "@/app/enums/calendarWatchTypeEnum";
 import { CaseBackDetailsEnum } from "@/app/enums/caseBackDetailsEnum";
-import { CrowWatchTypeEnum } from "@/app/enums/crowWatchTypeEnum";
+import { CrownWatchTypeEnum } from "@/app/enums/crownWatchTypeEnum";
 import { CrystalMaterialEnum } from "@/app/enums/crystalMaterialEnum";
 import { DialMarketsEnum } from "@/app/enums/dialMarketsEnum";
 import { featuresEnum } from "@/app/enums/featuresEnum";
@@ -87,7 +87,7 @@ const details: WatchDetails = {
       waterResistance: WaterResistanceEnum.WATERPROOF_100M,
       finishingDetails: "Polished",
       bezel: "Chronomat Riders Tabs bezel",
-      crownType: CrowWatchTypeEnum.SCREW_DOWN,
+      crownType: CrownWatchTypeEnum.SCREW_DOWN,
       crystal: CrystalMaterialEnum.SAPPHIRE,
       caseback: CaseBackDetailsEnum.BRAND_DECORATION,
     },
