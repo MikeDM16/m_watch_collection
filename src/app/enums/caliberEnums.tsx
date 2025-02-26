@@ -56,5 +56,6 @@ export const ReserveHoursEnum = {
   R_45: "45 Hours",
   R_47: "47 Hours",
   R_50: "50 Hours",
+  R_60: "60 Hours",
   R_80: "80 Hours",
 };

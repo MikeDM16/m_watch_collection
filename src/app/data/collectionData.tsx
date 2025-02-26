@@ -142,6 +142,15 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     href: require("./watchModels/Tissot/Tissot_T-Touch_Expert_Solar_2020"),
     specialCollectionItem: false,
   },
+  "Tissot PRS 516 Alpine Limited Edition 444/516": {
+    brand: BrandsEnum.TISSOT,
+    legend: "Tissot PRS 516 Alpine Limited Edition 444/516",
+    year: 2019,
+    type: WatchTypeEnum.SPORTS,
+    srcImage: "public/assets/Images/Tissot/2019_Tissot_PRS_516_Alpine_Edition/IMG_9199.JPG",
+    href: require("./watchModels/Tissot/Tissot_PRS_516_Alpine_Edition_2019"),
+    specialCollectionItem: false,
+  },
   "Maurice Lacroix 8899 Masterpiece": {
     brand: BrandsEnum.MAURICE_LACROIX,
     legend: "Maurice Lacroix 8899 Masterpiece",

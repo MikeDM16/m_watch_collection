@@ -16,6 +16,7 @@ import ETA_2836 from "./movements/ETA/ETA_2836";
 import ETA_2894_2_37J from "./movements/ETA/ETA_2894_2_37J";
 import ETA_2895_1_30J from "./movements/ETA/ETA_2895_1_30J";
 import ETA_2895_2_27J from "./movements/ETA/ETA_2895_2_27J";
+import ETA_A05_H31_27 from "./movements/ETA/ETA_A05_H31_27J";
 import ETA_G10_211 from "./movements/ETA/ETA_G10_211";
 import ETA_G10_961 from "./movements/ETA/ETA_G10_961";
 import ETA_Valjoux_7750_17 from "./movements/ETA/ETA_Valjoux_7750_17J";
@@ -105,6 +106,7 @@ export const MovementsDataDB: Record<string, Caliber> = {
   ETA_C07_111: ETA_C07_111,
   ETA_G10_211: ETA_G10_211,
   ETA_G10_961: ETA_G10_961,
+  ETA_A05_H31_27: ETA_A05_H31_27,
 
   ETA_251_272: ETA_251_272,
   ETA_251_262: ETA_251_262,
