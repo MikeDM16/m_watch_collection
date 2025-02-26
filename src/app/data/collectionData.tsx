@@ -885,7 +885,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     year: 1994,
     type: WatchTypeEnum.SPORTS,
     srcImage:
-      "public/assets/Images/Breitling/1994_Breitling_Chronomat_10th_Anniversary_A13050/IMG_3597.JPG",
+      "public/assets/Images/Breitling/1994_Breitling_Chronomat_10th_Anniversary_A13050/IMG_9335.JPG",
     href: require("./watchModels/Breitling/Breitling_Chronomat_A13050_10th_Anniversary_1994"),
     specialCollectionItem: true,
   },

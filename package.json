@@ -17,6 +17,7 @@
     "@mui/styled-engine-sc": "^6.4.3",
     "bootstrap": "^5.3.3",
     "husky": "^9.1.7",
+    "lightgallery": "^2.8.2",
     "motion": "^12.4.7",
     "next": "15.1.7",
     "react": "^19.0.0",

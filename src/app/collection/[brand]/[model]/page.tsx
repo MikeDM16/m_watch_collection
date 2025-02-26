@@ -145,7 +145,9 @@ export default function BrandModelPage() {
         <Container>
           <Row className="container">
             <Col className="col-md-8 col-12">
+              {/*ImageSwiperComponent({ images: modelDetails.href.default.sliderImages })*/}
               {ImageSwiperComponent({ images: modelDetails.href.default.sliderImages })}
+              {/*ImageLigthGalleryComponent( modelDetails.href.default.sliderImages)*/}
             </Col>
             <Col>
               {FeatureListingComponent(

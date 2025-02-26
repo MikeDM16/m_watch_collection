@@ -4,7 +4,7 @@ from tqdm import tqdm
 from PIL import Image
 
 main_folder_path = "C:/Users/migue/Documentos/GitHub/MWatchCollectionResources/public/assets/Images/Movements/Ronda/Ronda_5040D/"
-main_folder_path = "C:/Users/migue/Documentos/GitHub/MWatchCollectionResources/public/assets/Images/"
+main_folder_path = "C:/Users/migue/Documentos/GitHub/MWatchCollectionResources/public/assets/Images/Tissot/2019_Tissot_PRS_516_Alpine_Edition"
 
 
 def remove_lower_extension_images():
@@ -103,7 +103,7 @@ def create_sub_images():
 
                 # compress main image
                 #img = Image.open(source_path)
-                #img.save(source_path, optimize=True, quality=70)
+                #img.save(source_path, optimize=True, quality=80)
 
 def create_sale_images():
     idx = 0
