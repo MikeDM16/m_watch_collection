@@ -18,7 +18,7 @@ export default function PageTitleDivisionComponent(props: TitleDivisionProps) {
 
   return (
     <div
-      className="header-title page-title-division title-white-color"
+      className="header-title page-division title-white-color"
       style={{ backgroundImage: `url(${getExternalResource(props.srcImage || imagesPaths[0])})` }}
     >
       <div className={`page-title-overlay-aligned ${textClassName}`}>

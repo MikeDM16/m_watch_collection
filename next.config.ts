@@ -5,9 +5,11 @@ const nextConfig: NextConfig = {
     remotePatterns: [
       {
         protocol: "https",
-        hostname: "github.com",
+        hostname: "raw.githubusercontent.com",
       },
     ],
+    domains: ["raw.githubusercontent.com"],
+    minimumCacheTTL: 2592000, // 30 days
   },
 
   eslint: {

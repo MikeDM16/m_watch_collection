@@ -24,8 +24,11 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-.bottom-margin {
+.bottom-margin-s {
   margin-bottom: 1rem;
+}
+.bottom-margin-m {
+  margin-bottom: 2rem;
 }
 
 .header-navbar-entry {
@@ -48,20 +51,13 @@ body {
   align-items: center;
 }
 
-.footer-division {
+.page-division {
   position: relative;
   width: 100vw;
-  height: 10rem;
+  height: 35vh;
   background-position: center;
   background-size: cover;
   margin: auto;
-}
-.page-title-division {
-  position: relative;
-  width: 100vw;
-  height: 20rem;
-  background-position: center;
-  background-size: cover;
 }
 
 .page-title-overlay-aligned {

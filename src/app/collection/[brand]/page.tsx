@@ -48,8 +48,8 @@ export default function Page() {
       >
         {Object.entries(brandModels).map(([seriesName, seriesModels]) => {
           return (
-            <div key={`brand_${brand}_series_${seriesName}`}>
-              <div key={`brand_${brand}_series_${seriesName}_title`} className="container-title">
+            <div key={`brand_${brand}_series_${seriesName}`} className="bottom-margin-m">
+              <div key={`brand_${brand}_series_${seriesName}_title`} className="container-title ">
                 <p className="border-bottom-text">{seriesName}</p>
               </div>
 

@@ -13,7 +13,7 @@ export default function saleReportComponent(saleReport: SellReport, baseImgSrc: 
         <ImageComponent
           src={getExternalResource(saleReportImg)}
           width="40%"
-          className="bottom-margin"
+          className="bottom-margin-s"
         />
         <div className="swiper-auction-info">
           <b>

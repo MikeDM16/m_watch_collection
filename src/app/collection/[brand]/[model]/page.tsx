@@ -101,7 +101,7 @@ export default function BrandModelPage() {
               );
             } else {
               return (
-                <div key={`feature_model_${idx}`} className="bottom-margin">
+                <div key={`feature_model_${idx}`} className="bottom-margin-s">
                   <b>{entry.name}</b>
                   <div>{entry.description}</div>
                 </div>

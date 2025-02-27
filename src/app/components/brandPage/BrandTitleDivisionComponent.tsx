@@ -37,7 +37,7 @@ export default function BrandTitleDivisionComponent(props: BrandTitleDivisionPro
 
   return (
     <section
-      className="page-title-division title-white-color"
+      className="page-division title-white-color"
       style={{ backgroundImage: `url(${getExternalResource(props.srcImage || imagesPaths[0])})` }}
     >
       <div className={`page-title-overlay-aligned`}>

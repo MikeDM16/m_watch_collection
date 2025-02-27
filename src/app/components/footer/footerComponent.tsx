@@ -16,7 +16,7 @@ export default function FooterComponent(props?: FooterComponentProps) {
 
   return (
     <section
-      className="footer-division title-white-color"
+      className="page-division title-white-color"
       style={{
         backgroundImage: `url(${getExternalResource(props?.backgroudImage || imagesPaths[1])})`,
       }}

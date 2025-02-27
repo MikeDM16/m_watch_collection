@@ -48,7 +48,7 @@ export default function HeaderNavBar() {
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll" className="header-navbar-entry header-navbar-link">
-          <Nav className="my-lg-0 my-2 me-auto" style={{ maxHeight: "100px" }} navbarScroll>
+          <Nav className="my-lg-0 my-2 me-auto" style={{ maxHeight: "200px" }} navbarScroll>
             {references.map((entry) => {
               return (
                 <Nav.Link key={`nav_link_${entry.reference}`} href={`${entry.reference}`}>

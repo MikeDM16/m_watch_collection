@@ -57,7 +57,7 @@ export default function Page() {
 
   const ListBrandsForLetter = (key_letter: string, brandNames: Brand[]) => {
     return (
-      <div key={`brand_list_for_letter_${key_letter}`} className="bottom-margin">
+      <div key={`brand_list_for_letter_${key_letter}`} className="bottom-margin-m">
         <div key={`brand_letter_prefix_${key_letter}`} className={"bold-text feature-text"}>
           {key_letter}
         </div>
@@ -85,7 +85,7 @@ export default function Page() {
           <Row {...{ xs: 2, xl: 4 }}>
             {[0, 1, 2, 3].map((idx) => {
               return (
-                <Col key={`brands_listing_${idx}`} className="bottom-margin">
+                <Col key={`brands_listing_${idx}`} className="">
                   {Object.entries(allBrands)
                     .slice(idx * offset, idx * offset + offset)
                     .map(([key_letter, brandNames]) => {
