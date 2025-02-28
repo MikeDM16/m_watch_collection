@@ -54,10 +54,14 @@ body {
 .page-division {
   position: relative;
   width: 100dvw;
-  min-height: 40dvh;
+  min-height: 20dvh;
   background-position: center;
   background-size: cover;
   margin: auto;
+}
+
+.main-title-division {
+  min-height: 35dvh;
 }
 
 .page-title-overlay-aligned {

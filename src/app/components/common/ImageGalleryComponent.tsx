@@ -27,16 +27,18 @@ export default function ImageGalleryComponent(galleryImages: string[]) {
 
   const items = galleryImages.map((entry) => {
     const srcImg = getExternalResource(entry);
-    const carouselImageUrl = getExternalResource(getImgURLForSizeType(entry, SizeType.GALLERY));
+    const fullhdImageUrl = getExternalResource(getImgURLForSizeType(entry, SizeType.FULL_HD));
+    const galleryImageUrl = getExternalResource(getImgURLForSizeType(entry, SizeType.GALLERY));
     const sliderImageUrl = getExternalResource(getImgURLForSizeType(entry, SizeType.SLIDER));
     const thumbnailImageUrl = getExternalResource(getImgURLForSizeType(entry, SizeType.THUMBNAIL));
     return {
       src: srcImg,
-      width: 1500,
-      height: 1500,
+      width: 2500, // size when opening the ligthbox modal
+      height: 2500,
       srcSet: [
         { src: srcImg, width: 2000, height: 2000 },
-        { src: carouselImageUrl, width: 800, height: 800 },
+        { src: fullhdImageUrl, width: 1200, height: 1200 },
+        { src: galleryImageUrl, width: 800, height: 800 },
         { src: sliderImageUrl, width: 500, height: 500 },
         { src: thumbnailImageUrl, width: 200, height: 200 },
       ],
@@ -67,9 +69,9 @@ export default function ImageGalleryComponent(galleryImages: string[]) {
           imageFit: "contain",
           vignette: true,
         }}
-        slideshow={{ autoplay: false, delay: 3500 }}
+        slideshow={{ autoplay: true, delay: 5000 }}
         zoom={{
-          maxZoomPixelRatio: 3,
+          maxZoomPixelRatio: 1,
           doubleClickMaxStops: 1,
           scrollToZoom: true,
         }}

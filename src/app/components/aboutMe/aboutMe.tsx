@@ -16,16 +16,12 @@ export default function AboutMeContainer() {
 
       <Container className="centered-text">
         <Row>
-          <Col className="col-2">
+          <Col className="">
             <div>
-              <ImageComponent
-                src={getExternalResource(aboutMe_photo)}
-                alt="Photo of Me"
-                style={{ maxHeight: "250px", width: "auto" }}
-              />
+              <ImageComponent src={getExternalResource(aboutMe_photo)} alt="Photo of Me" />
             </div>
           </Col>
-          <Col className="col-10">
+          <Col className="col-md-8 col-12 ">
             <div className="container-title">
               <p>
                 {"They don't only tell the the time."}

@@ -5,7 +5,7 @@ import AnalyticsReport from "@/app/components/analytics/analyticsReport";
 import BrandPageTitleComponent from "@/app/components/brandPage/BrandPageTitleComponent";
 import { CaliberDetailComponent } from "@/app/components/caliber/CaliberDetailsComponent";
 import FeatureListingComponent from "@/app/components/common/FeaturesListingComponent";
-import ImageSwiperComponent from "@/app/components/common/ImageSwiperComponent";
+import ImageGalleryComponent from "@/app/components/common/ImageGalleryComponent";
 import FooterComponent from "@/app/components/footer/footerComponent";
 import HeaderNavBar from "@/app/components/header/headerComponent";
 import BrandModelPageNotFoundComponent from "@/app/components/notFound/BrandModelPageNotFoundComponent";
@@ -44,6 +44,7 @@ export default function BrandModelPage() {
   const [brandDetails] = useState(brandsService.getBrandInformation(brand));
   const [modelDetails] = useState(collectionService.getModelInformationByKey(model));
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => {
     AnalyticsReport({ page: routeToCollectionBrandModelPage(brand, model), title: model });
   }, []);
@@ -153,10 +154,14 @@ export default function BrandModelPage() {
         </Container>
         <Container>
           <Row>
-            <Col className="col-md-8 col-12">
+            <Col className="col-md-8 col-12 bottom-margin-m">
               {/*ImageSwiperComponent({ images: modelDetails.href.default.sliderImages })*/}
-              {ImageSwiperComponent({ images: modelDetails.href.default.sliderImages })}
-              {/*ImageLigthGalleryComponent( modelDetails.href.default.sliderImages)*/}
+              {/*ImageGalleryComponent( modelDetails.href.default.sliderImages)*/}
+              <div id="div1" style={{ height: "50dvh" }}>
+                <div id="div2" style={{ height: "inherit", overflow: "auto" }}>
+                  {ImageGalleryComponent(modelDetails.href.default.sliderImages)}
+                </div>
+              </div>
             </Col>
             <Col>
               {FeatureListingComponent(
@@ -179,7 +184,6 @@ export default function BrandModelPage() {
       {HeaderNavBar()}
       {BrandPageTitleComponent(brandDetails)}
       {renderBrandItemTechnicalData()}
-      {/*CaliberDetailComponent(caliberDetails)*/}
       {FooterComponent({ backgroudImage: selectBackgroundImage(brandDetails.backgrounImages) })}
     </div>
   );

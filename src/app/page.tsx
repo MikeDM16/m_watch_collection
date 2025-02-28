@@ -10,12 +10,12 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 
 import AboutMeContainer from "./components/aboutMe/aboutMe";
+import AnalyticsReport from "./components/analytics/analyticsReport";
 import PageTitleDivisionComponent from "./components/common/pageTitleDivisionComponent";
 import ContactsComponent from "./components/contacts/contacts";
 import { Brand } from "./data/brands";
 import brandsService from "./services/brandsService";
 import { getExternalResource, routeToCollectionBrandPage } from "./services/commonFunctions";
-import AnalyticsReport from "./components/analytics/analyticsReport";
 
 export default function Page() {
   const [mainBrands] = useState(brandsService.getMainBrands());

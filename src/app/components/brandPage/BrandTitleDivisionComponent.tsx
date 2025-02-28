@@ -1,4 +1,8 @@
-import { getExternalResource, routeToCollectionBrandPage } from "@/app/services/commonFunctions";
+import {
+  background_images_paths,
+  getExternalResource,
+  routeToCollectionBrandPage,
+} from "@/app/services/commonFunctions";
 import Link from "next/link";
 
 export interface BrandTitleDivisionProps {
@@ -12,12 +16,6 @@ export interface BrandTitleDivisionProps {
 }
 
 export default function BrandTitleDivisionComponent(props: BrandTitleDivisionProps) {
-  const imagesPaths = [
-    "public/assets/Backgrouds/Tissot_BG1.jpg",
-    "public/assets/Backgrouds/Tissot_BG3.jpg",
-    "public/assets/Backgrouds/TagHeuer_BG3.JPG",
-    "public/assets/Backgrouds/macro_mov_bg.JPG",
-  ];
   const textClassName = props.textAlignement == "left" ? "left-padded-text" : "centered-text";
 
   const navigation = Object.entries(props.navigationPath ?? {}).map(([path, reference]) => {
@@ -37,10 +35,12 @@ export default function BrandTitleDivisionComponent(props: BrandTitleDivisionPro
 
   return (
     <section
-      className="page-division title-white-color"
-      style={{ backgroundImage: `url(${getExternalResource(props.srcImage || imagesPaths[0])})` }}
+      className="page-division main-title-division"
+      style={{
+        backgroundImage: `url(${getExternalResource(props.srcImage || background_images_paths[0])})`,
+      }}
     >
-      <div className={`page-title-overlay-aligned`}>
+      <div className={`page-title-overlay-aligned title-white-color`}>
         {/** Layout need to be inside this div, because of the previous overlay */}
         <div className={`${textClassName}`}>
           <div className="">{navigation}</div>

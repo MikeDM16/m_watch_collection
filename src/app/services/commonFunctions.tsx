@@ -73,3 +73,10 @@ export function selectBackgroundImage(images: string[] | undefined): string | un
   const selectedIdx = currentHour % images.length;
   return images[selectedIdx];
 }
+
+export const background_images_paths = [
+  "public/assets/Backgrouds/Tissot_BG1.jpg",
+  "public/assets/Backgrouds/Tissot_BG3.jpg",
+  "public/assets/Backgrouds/TagHeuer_BG3.JPG",
+  "public/assets/Backgrouds/macro_mov_bg.JPG",
+];

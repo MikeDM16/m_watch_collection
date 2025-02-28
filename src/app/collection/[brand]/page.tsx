@@ -30,6 +30,7 @@ export default function Page() {
   brand = getPathParameter(brand as string);
   const [brandDetails] = useState(brandsService.getBrandInformation(brand));
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => {
     AnalyticsReport({ page: routeToCollectionBrandPage(brand), title: brand });
   }, []);
