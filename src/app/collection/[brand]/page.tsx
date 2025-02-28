@@ -1,5 +1,6 @@
 "use client";
 
+import AnalyticsReport from "@/app/components/analytics/analyticsReport";
 import BrandPageTitleComponent from "@/app/components/brandPage/BrandPageTitleComponent";
 import ImageComponent from "@/app/components/common/ImageComponent";
 import FooterComponent from "@/app/components/footer/footerComponent";
@@ -13,12 +14,13 @@ import {
   getImgURLForSizeType,
   getPathParameter,
   routeToCollectionBrandModelPage,
+  routeToCollectionBrandPage,
   selectBackgroundImage,
   SizeType,
 } from "@/app/services/commonFunctions";
 import Link from "next/link";
 import { useParams } from "next/navigation";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Col, Row } from "react-bootstrap";
 import Container from "react-bootstrap/Container";
 
@@ -27,6 +29,10 @@ export default function Page() {
 
   brand = getPathParameter(brand as string);
   const [brandDetails] = useState(brandsService.getBrandInformation(brand));
+
+  useEffect(() => {
+    AnalyticsReport({ page: routeToCollectionBrandPage(brand), title: brand });
+  }, []);
 
   if (!brand || !brandDetails) {
     return BrandPageNotFoundComponent(brand);

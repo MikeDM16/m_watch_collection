@@ -4,7 +4,7 @@ import FooterComponent from "@/app/components/footer/footerComponent";
 import HeaderNavBar from "@/app/components/header/headerComponent";
 import Image from "next/image";
 import Link from "next/link";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
@@ -15,10 +15,15 @@ import ContactsComponent from "./components/contacts/contacts";
 import { Brand } from "./data/brands";
 import brandsService from "./services/brandsService";
 import { getExternalResource, routeToCollectionBrandPage } from "./services/commonFunctions";
+import AnalyticsReport from "./components/analytics/analyticsReport";
 
 export default function Page() {
   const [mainBrands] = useState(brandsService.getMainBrands());
   const [allBrands] = useState(brandsService.getAllBrands());
+
+  useEffect(() => {
+    AnalyticsReport({ page: "home", title: "MWatchCollection" });
+  }, []);
 
   const brandColOnClickHandler = (brandName: string): string => {
     return routeToCollectionBrandPage(brandName);

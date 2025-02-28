@@ -1,6 +1,7 @@
 "use client";
 
 import AccordionFunction, { AccordionEntry } from "@/app/components/accordion/AccordionComponent";
+import AnalyticsReport from "@/app/components/analytics/analyticsReport";
 import BrandPageTitleComponent from "@/app/components/brandPage/BrandPageTitleComponent";
 import { CaliberDetailComponent } from "@/app/components/caliber/CaliberDetailsComponent";
 import FeatureListingComponent from "@/app/components/common/FeaturesListingComponent";
@@ -26,9 +27,13 @@ import {
 } from "@/app/modelPage/technicalInformationUtils";
 import brandsService from "@/app/services/brandsService";
 import collectionService from "@/app/services/collectionService";
-import { getPathParameter, selectBackgroundImage } from "@/app/services/commonFunctions";
+import {
+  getPathParameter,
+  routeToCollectionBrandModelPage,
+  selectBackgroundImage,
+} from "@/app/services/commonFunctions";
 import { useParams } from "next/navigation";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Col, Row } from "react-bootstrap";
 import Container from "react-bootstrap/Container";
 
@@ -38,6 +43,10 @@ export default function BrandModelPage() {
   model = getPathParameter(model as string);
   const [brandDetails] = useState(brandsService.getBrandInformation(brand));
   const [modelDetails] = useState(collectionService.getModelInformationByKey(model));
+
+  useEffect(() => {
+    AnalyticsReport({ page: routeToCollectionBrandModelPage(brand, model), title: model });
+  }, []);
 
   if (!brand || !brandDetails) {
     return BrandPageNotFoundComponent(brand);
