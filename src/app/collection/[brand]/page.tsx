@@ -62,7 +62,7 @@ export default function Page() {
                   return (
                     <Col
                       key={`brand_${brand}_series_${seriesName}_model_${idx}`}
-                      className="hover-animation"
+                      className="hover-animation "
                     >
                       <Link
                         href={brandModelOnClickHandler(brand, entry.legend)}

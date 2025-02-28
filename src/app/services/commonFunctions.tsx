@@ -1,9 +1,10 @@
 import { IconType } from "react-icons";
 
 export function getExternalResource(image_url: string) {
-  const url_begin = "https://raw.githubusercontent.com/MikeDM16/MWatchCollectionResources/master"; //"https://github.com/MikeDM16/MWatchCollectionResources/raw/master";
-  image_url = url_begin + "/" + image_url;
-  return image_url;
+  //const url_begin = "https://github.com/MikeDM16/MWatchCollectionResources/raw/master";
+  const base_url = "https://raw.githubusercontent.com/MikeDM16/MWatchCollectionResources/master";
+  const proxy_url = `${encodeURI(base_url)}/${encodeURI(image_url)}`;
+  return proxy_url;
 }
 
 export function getSaleReportImage(baseImgSrc: string): string {

@@ -6,9 +6,9 @@ const nextConfig: NextConfig = {
       {
         protocol: "https",
         hostname: "raw.githubusercontent.com",
+        pathname: "/MikeDM16/MWatchCollectionResources/master/public/**",
       },
     ],
-    domains: ["raw.githubusercontent.com"],
     minimumCacheTTL: 2592000, // 30 days
   },
 

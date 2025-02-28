@@ -143,7 +143,7 @@ export default function BrandModelPage() {
           <div className="container-title centered-container">{modelName}</div>
         </Container>
         <Container>
-          <Row className="container">
+          <Row>
             <Col className="col-md-8 col-12">
               {/*ImageSwiperComponent({ images: modelDetails.href.default.sliderImages })*/}
               {ImageSwiperComponent({ images: modelDetails.href.default.sliderImages })}

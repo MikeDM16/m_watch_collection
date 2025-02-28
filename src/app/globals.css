@@ -53,8 +53,8 @@ body {
 
 .page-division {
   position: relative;
-  width: 100vw;
-  height: 35vh;
+  width: 100dvw;
+  min-height: 40dvh;
   background-position: center;
   background-size: cover;
   margin: auto;
@@ -116,7 +116,7 @@ body {
 .extended-screen-container {
   display: flex;
   flex-direction: column;
-  min-height: 50vh; /* At least full screen height */
+  min-height: 60dvh; /* At least full screen height */
 }
 
 .feature-information-background {

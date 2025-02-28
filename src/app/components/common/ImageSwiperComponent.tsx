@@ -38,18 +38,7 @@ export default function ImageSwiperComponent(props: ImageSwiperComponentProps) {
   const [thumbsSwiper, setThumbsSwiper] = useState<SwiperInstance | null>(null);
 
   const swiperSettings = {
-    modules: [
-      Navigation,
-      Autoplay,
-      Keyboard,
-      Zoom,
-      Thumbs,
-      EffectFade,
-      Pagination,
-      EffectFade,
-      FreeMode,
-      Thumbs,
-    ],
+    modules: [Navigation, Autoplay, Keyboard, Zoom, Thumbs, EffectFade, Pagination, FreeMode],
 
     // effect: "fade",
 
@@ -127,6 +116,7 @@ export default function ImageSwiperComponent(props: ImageSwiperComponentProps) {
         slidesPerView={4}
         spaceBetween={10}
         modules={[Thumbs]}
+        watchSlidesProgress
         className="h-[300px] w-32 sm:h-[400px] md:h-[500px] lg:h-[600px]" // Responsive height
       >
         {props.images.map((src, index) => (
