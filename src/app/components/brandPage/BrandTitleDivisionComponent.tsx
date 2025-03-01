@@ -34,7 +34,7 @@ export default function BrandTitleDivisionComponent(props: BrandTitleDivisionPro
   });
 
   return (
-    <section
+    <div
       className="page-division main-title-division"
       style={{
         backgroundImage: `url(${getExternalResource(props.srcImage || background_images_paths[0])})`,
@@ -65,6 +65,6 @@ export default function BrandTitleDivisionComponent(props: BrandTitleDivisionPro
           </Link>
         </div>
       </div>
-    </section>
+    </div>
   );
 }
