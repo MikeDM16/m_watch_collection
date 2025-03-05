@@ -63,6 +63,9 @@ body {
 .main-title-division {
   min-height: 35dvh;
 }
+.mobile-main-title-division {
+  min-height: 55dvh;
+}
 
 .page-title-overlay-aligned {
   position: absolute;

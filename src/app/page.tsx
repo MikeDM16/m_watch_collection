@@ -11,6 +11,7 @@ import Row from "react-bootstrap/Row";
 
 import AboutMeContainer from "./components/aboutMe/aboutMe";
 import AnalyticsReport from "./components/analytics/analyticsReport";
+import BrandTitleDivisionComponent from "./components/brandPage/BrandTitleDivisionComponent";
 import PageTitleDivisionComponent from "./components/common/pageTitleDivisionComponent";
 import ContactsComponent from "./components/contacts/contacts";
 import { Brand } from "./data/brands";
@@ -111,7 +112,10 @@ export default function Page() {
   return (
     <div>
       {HeaderNavBar()}
-      <div>{PageTitleDivisionComponent({ title: "M Watch Collection" })}</div>
+      {BrandTitleDivisionComponent({
+        title: `M Watch Collection`,
+        textAlignement: "center",
+      })}
       {mainBrandsTable()}
       {ListAllBrandsGroupByLetter()}
       {AboutMeContainer()}
