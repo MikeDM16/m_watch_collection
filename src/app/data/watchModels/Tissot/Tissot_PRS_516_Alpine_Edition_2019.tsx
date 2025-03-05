@@ -59,16 +59,26 @@ const details: WatchDetails = {
     "public/assets/Images/Tissot/2019_Tissot_PRS_516_Alpine_Edition/IMG_9213.JPG",
     "public/assets/Images/Tissot/2019_Tissot_PRS_516_Alpine_Edition/IMG_9235.JPG",
 
-    "public/assets/Images/Tissot/2019_Tissot_PRS_516_Alpine_Edition/IMG_9246.JPG",
-    "public/assets/Images/Tissot/2019_Tissot_PRS_516_Alpine_Edition/IMG_9247.JPG",
-    "public/assets/Images/Tissot/2019_Tissot_PRS_516_Alpine_Edition/IMG_9248.JPG",
-    "public/assets/Images/Tissot/2019_Tissot_PRS_516_Alpine_Edition/IMG_9249.JPG",
-
     "public/assets/Images/Tissot/2019_Tissot_PRS_516_Alpine_Edition/IMG_9252.JPG",
     "public/assets/Images/Tissot/2019_Tissot_PRS_516_Alpine_Edition/IMG_9254.JPG",
     "public/assets/Images/Tissot/2019_Tissot_PRS_516_Alpine_Edition/IMG_9255.JPG",
     "public/assets/Images/Tissot/2019_Tissot_PRS_516_Alpine_Edition/IMG_9259.JPG",
     "public/assets/Images/Tissot/2019_Tissot_PRS_516_Alpine_Edition/IMG_9260.JPG",
+
+    "public/assets/Images/Tissot/2019_Tissot_PRS_516_Alpine_Edition/IMG_9381.JPG",
+    "public/assets/Images/Tissot/2019_Tissot_PRS_516_Alpine_Edition/IMG_9382.JPG",
+    "public/assets/Images/Tissot/2019_Tissot_PRS_516_Alpine_Edition/IMG_9383.JPG",
+    "public/assets/Images/Tissot/2019_Tissot_PRS_516_Alpine_Edition/IMG_9384.JPG",
+    "public/assets/Images/Tissot/2019_Tissot_PRS_516_Alpine_Edition/IMG_9385.JPG",
+    "public/assets/Images/Tissot/2019_Tissot_PRS_516_Alpine_Edition/IMG_9386.JPG",
+    "public/assets/Images/Tissot/2019_Tissot_PRS_516_Alpine_Edition/IMG_9388.JPG",
+    "public/assets/Images/Tissot/2019_Tissot_PRS_516_Alpine_Edition/IMG_9390.JPG",
+    "public/assets/Images/Tissot/2019_Tissot_PRS_516_Alpine_Edition/IMG_9391.JPG",
+
+    "public/assets/Images/Tissot/2019_Tissot_PRS_516_Alpine_Edition/IMG_9246.JPG",
+    "public/assets/Images/Tissot/2019_Tissot_PRS_516_Alpine_Edition/IMG_9247.JPG",
+    "public/assets/Images/Tissot/2019_Tissot_PRS_516_Alpine_Edition/IMG_9248.JPG",
+    "public/assets/Images/Tissot/2019_Tissot_PRS_516_Alpine_Edition/IMG_9249.JPG",
 
     "public/assets/Images/Tissot/2019_Tissot_PRS_516_Alpine_Edition/IMG_9236.JPG",
     "public/assets/Images/Tissot/2019_Tissot_PRS_516_Alpine_Edition/IMG_9237.JPG",
