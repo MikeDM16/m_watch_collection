@@ -7,7 +7,7 @@ export interface TitleDivisionProps {
 }
 
 export default function PageTitleDivisionComponent(props: TitleDivisionProps) {
-  const textClassName = props.textAlignement == "left" ? "left-padded-text" : "centered-text";
+  const textClassName = props.textAlignement == "left" ? "left" : "centered-text";
 
   return (
     <div

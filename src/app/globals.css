@@ -31,6 +31,13 @@ body {
   margin-bottom: 2rem;
 }
 
+.min-padded-left {
+ padding-left: 2%;
+}
+.padded-left {
+ padding-left: 10%;
+}
+
 .header-navbar-entry {
   display: flex;
   align-items: center;
