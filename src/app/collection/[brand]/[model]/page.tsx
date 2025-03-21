@@ -155,10 +155,9 @@ export default function BrandModelPage() {
         <Container>
           <Row>
             <Col className="col-md-8 col-12 bottom-margin-m">
-              {/*ImageSwiperComponent({ images: modelDetails.href.default.sliderImages })*/}
-              {/*ImageGalleryComponent( modelDetails.href.default.sliderImages)*/}
               <div id="div1" style={{ height: "50dvh" }}>
                 <div id="div2" style={{ height: "inherit", overflow: "auto" }}>
+                  {/*SingleImageSwiperWithThumbnailComponent({images:modelDetails.href.default.sliderImages})*/}
                   {ImageGalleryComponent(modelDetails.href.default.sliderImages)}
                 </div>
               </div>

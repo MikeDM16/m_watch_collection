@@ -20,7 +20,7 @@ export default function BrandTitleDivisionComponent(props: BrandTitleDivisionPro
   const isMobile = useMediaQuery({ maxWidth: 768 });
 
   const textClassName = props.textAlignement == "left" ? "left-text" : "centered-text";
-  const paddedClassName = isMobile ? "min-padded-left" : "padded-left"
+  const paddedClassName = isMobile ? "min-padded-left" : "padded-left";
 
   const navigation = Object.entries(props.navigationPath ?? {}).map(([path, reference]) => {
     return (
@@ -41,7 +41,7 @@ export default function BrandTitleDivisionComponent(props: BrandTitleDivisionPro
   return (
     <div
       className={`page-division ${titleClassName} `}
-          style={{
+      style={{
         backgroundImage: `url(${getExternalResource(props.srcImage || background_images_paths[0])})`,
       }}
     >
@@ -54,7 +54,7 @@ export default function BrandTitleDivisionComponent(props: BrandTitleDivisionPro
             <Link
               key={`ref_navigation_brand`}
               className="info-text title-white-color link"
-              href={props.navigationPath ? routeToCollectionBrandPage(props.title): ""}
+              href={props.navigationPath ? routeToCollectionBrandPage(props.title) : ""}
             >
               {props.title}
             </Link>

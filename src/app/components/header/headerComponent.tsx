@@ -12,6 +12,7 @@ import { IconType } from "react-icons";
 import { FaArchive } from "react-icons/fa";
 import { MdEmail, MdPerson } from "react-icons/md";
 import { PiMagnifyingGlassPlus } from "react-icons/pi";
+import { RiAuctionLine } from "react-icons/ri";
 
 interface NavBarItem {
   reference: string;
@@ -38,6 +39,11 @@ export default function HeaderNavBar() {
       reference: routeToMainPageAllBrandListing(),
       icon: PiMagnifyingGlassPlus,
       text: "All Brands",
+    },
+    {
+      reference: "/#PreviousSales",
+      icon: RiAuctionLine,
+      text: "Auctions",
     },
     {
       reference: "/#AboutMe",

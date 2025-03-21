@@ -14,6 +14,7 @@ import AnalyticsReport from "./components/analytics/analyticsReport";
 import BrandTitleDivisionComponent from "./components/brandPage/BrandTitleDivisionComponent";
 import PageTitleDivisionComponent from "./components/common/pageTitleDivisionComponent";
 import ContactsComponent from "./components/contacts/contacts";
+import PreviousSalesContainer from "./components/previousSales/previousSalesComponent";
 import { Brand } from "./data/brands";
 import brandsService from "./services/brandsService";
 import { getExternalResource, routeToCollectionBrandPage } from "./services/commonFunctions";
@@ -119,6 +120,7 @@ export default function Page() {
       {mainBrandsTable()}
       {ListAllBrandsGroupByLetter()}
       {AboutMeContainer()}
+      {PreviousSalesContainer()}
       {ContactsComponent()}
       {FooterComponent()}
     </div>

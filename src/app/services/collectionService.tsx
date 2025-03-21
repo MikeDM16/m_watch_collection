@@ -40,6 +40,29 @@ function getModelInformationByKey(key: string): CollectionEntry | undefined {
   return CollectionItemsDB[key];
 }
 
-const collectionService = { getCollectionModelsByBrand, getModelInformationByKey };
+function getSoldModels(): CollectionEntry[] {
+  return Object.assign(
+    {},
+    Object.entries(CollectionItemsDB)
+      .filter(([, v]) => {
+        return v.href.default.saleReport != undefined;
+      })
+      .sort(([, a], [, b]) => {
+        // Convert "DD/MM/YYYY" to a proper Date object
+        const parseDate = (dateStr: string): number => {
+          const [day, month, year] = dateStr.split("/").map(Number);
+          return new Date(year, month - 1, day).getTime(); // Convert to timestamp
+        };
+
+        return (
+          parseDate(b.href.default.saleReport?.date || "") -
+          parseDate(a.href.default.saleReport?.date || "")
+        );
+      }) // DESC order
+      .map(([, v]) => v),
+  );
+}
+
+const collectionService = { getCollectionModelsByBrand, getModelInformationByKey, getSoldModels };
 
 export default collectionService;

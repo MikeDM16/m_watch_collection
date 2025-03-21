@@ -32,10 +32,10 @@ body {
 }
 
 .min-padded-left {
- padding-left: 2%;
+  padding-left: 2%;
 }
 .padded-left {
- padding-left: 10%;
+  padding-left: 10%;
 }
 
 .header-navbar-entry {
@@ -130,7 +130,7 @@ body {
 .extended-screen-container {
   display: flex;
   flex-direction: column;
-  min-height: 60dvh; /* At least full screen height */
+  min-height: 70dvh; /* At least full screen height */
 }
 
 .feature-information-background {

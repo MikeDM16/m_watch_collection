@@ -50,8 +50,7 @@ export default function Page() {
     return (
       <Container
         key={`brand_container_${brand}`}
-        style={{ maxWidth: "80%" }}
-        className="extended-screen-container"
+        className="extended-screen-container centered-text"
       >
         {Object.entries(brandModels).map(([seriesName, seriesModels]) => {
           return (

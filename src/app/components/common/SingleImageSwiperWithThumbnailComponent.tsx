@@ -30,11 +30,13 @@ import { Swiper as SwiperInstance } from "swiper/types"; // Import Swiper type
 // import required modules
 import ImageComponent from "./ImageComponent";
 
-export interface ImageSwiperComponentProps {
+export interface SingleImageSwiperWithThumbnailComponentProps {
   images: string[];
 }
 
-export default function ImageSwiperComponent(props: ImageSwiperComponentProps) {
+export default function SingleImageSwiperWithThumbnailComponent(
+  props: SingleImageSwiperWithThumbnailComponentProps,
+) {
   const [thumbsSwiper, setThumbsSwiper] = useState<SwiperInstance | null>(null);
 
   const swiperSettings = {
