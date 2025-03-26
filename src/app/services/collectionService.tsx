@@ -1,4 +1,5 @@
 import CollectionItemsDB, { CollectionEntry } from "../data/collectionData";
+import brandsService from "./brandsService";
 
 function getCollectionModelsByBrand(
   brand: string,
@@ -63,6 +64,29 @@ function getSoldModels(): CollectionEntry[] {
   );
 }
 
-const collectionService = { getCollectionModelsByBrand, getModelInformationByKey, getSoldModels };
+function getCollectionStatistic(): Record<string, number | string> {
+  const brandByLetter = brandsService.getAllBrands();
+
+  const numModels = Object.keys(CollectionItemsDB).length;
+  const numSoldModels = Object.values(getSoldModels()).length;
+
+  let numBrands = 0;
+  Object.values(brandByLetter).map((brands) => {
+    numBrands += brands.length;
+  });
+
+  return {
+    "Watch Brands": numBrands,
+    "Models Handled": numModels,
+    Sales: numSoldModels,
+  };
+}
+
+const collectionService = {
+  getCollectionModelsByBrand,
+  getModelInformationByKey,
+  getSoldModels,
+  getCollectionStatistic,
+};
 
 export default collectionService;

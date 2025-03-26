@@ -50,7 +50,7 @@ function getAllBrands(): Record<string, Brand[]> {
 
   // sort keys by alphabetical order
   const sortedEntries = Object.entries(allBrands).sort(([ka], [kb]) => ka.localeCompare(kb));
-  console.log("Returning all brands map");
+  console.debug("Returning all brands map");
 
   // after the sort, return back the dict in the Record<> structure
   return Object.fromEntries(sortedEntries);

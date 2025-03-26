@@ -7,7 +7,6 @@ import PageTitleDivisionComponent from "../common/pageTitleDivisionComponent";
 
 export default function PreviousSalesContainer() {
   const previousSoldModels = collectionService.getSoldModels();
-  console.log(previousSoldModels);
 
   const swiperItems: ImageSliderEntry[] = Object.values(previousSoldModels).map((entry) => {
     const saleData = entry.href.default.saleReport;

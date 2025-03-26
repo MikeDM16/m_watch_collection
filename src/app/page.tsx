@@ -17,6 +17,7 @@ import ContactsComponent from "./components/contacts/contacts";
 import PreviousSalesContainer from "./components/previousSales/previousSalesComponent";
 import { Brand } from "./data/brands";
 import brandsService from "./services/brandsService";
+import collectionService from "./services/collectionService";
 import { getExternalResource, routeToCollectionBrandPage } from "./services/commonFunctions";
 
 export default function Page() {
@@ -87,15 +88,28 @@ export default function Page() {
 
   const ListAllBrandsGroupByLetter = () => {
     const offset = 5;
+    const collectionStats = collectionService.getCollectionStatistic();
+
     return (
       <div>
         <div id="AllBrandsItems">{PageTitleDivisionComponent({ title: "All Brands" })}</div>
 
         <Container>
+          <Row className="centered-text bottom-margin-m feature-text ">
+            {Object.entries(collectionStats).map(([statKey, statValue], idx) => {
+              return (
+                <Col key={`stat_listing_${idx}`}>
+                  <b>{statValue}+</b>
+                  <br />
+                  <a>{statKey}</a>
+                </Col>
+              );
+            })}
+          </Row>
           <Row {...{ xs: 2, xl: 4 }}>
             {[0, 1, 2, 3].map((idx) => {
               return (
-                <Col key={`brands_listing_${idx}`} className="">
+                <Col key={`brands_listing_${idx}`}>
                   {Object.entries(allBrands)
                     .slice(idx * offset, idx * offset + offset)
                     .map(([key_letter, brandNames]) => {
