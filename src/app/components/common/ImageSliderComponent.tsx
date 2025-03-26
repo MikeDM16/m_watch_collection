@@ -21,12 +21,12 @@ import "swiper/css/zoom";
 import "swiper/css/thumbs";
 
 import { ReactElement } from "react";
-import { Container } from "react-bootstrap";
 
 export interface ImageSliderEntry {
   image_src: string;
   href?: string;
   href_text?: string;
+  target?: string;
   alt?: string | ReactElement;
 }
 
@@ -40,8 +40,8 @@ export default function ImageSliderComponent(props: ImageSliderEntry[]) {
 
     breakpoints: {
       1920: {
-        slidesPerView: 4,
-        slidesPerGroup: 4,
+        slidesPerView: 5,
+        slidesPerGroup: 5,
         spaceBetween: 20,
       },
       1440: {
@@ -103,19 +103,23 @@ export default function ImageSliderComponent(props: ImageSliderEntry[]) {
   return (
     <Swiper {...swiper_settings}>
       {props.map((entry, idx) => {
-        const link_div = entry.href ? (
-          <Link className="link" href={entry.href} target="_blank">
-            {`${entry.href_text || ""}`}
-          </Link>
-        ) : undefined;
-
         return (
-          <SwiperSlide key={`swiper_slide${idx}`}>
-            <ImageComponent src={entry.image_src} />
-            <Container>
-              {link_div}
-              {entry.alt}
-            </Container>
+          <SwiperSlide key={`swiper_slide${idx}`} className="hover-animation bottom-margin-m">
+            <Link
+              className="info-text link"
+              href={entry.href || ""}
+              target={entry.target || undefined}
+            >
+              <ImageComponent src={entry.image_src} />
+              <br />
+              <em key={`swiper_slide_legend_${idx}`}>
+                {/** Use href text hs main alt legend */}
+                {entry.href_text || undefined}
+                <br />
+                {/** Only render a alt text if it difers from the url text */}
+                {entry.alt != entry.href_text ? entry.alt : undefined}
+              </em>
+            </Link>
           </SwiperSlide>
         );
       })}

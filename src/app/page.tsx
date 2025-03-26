@@ -14,7 +14,8 @@ import AnalyticsReport from "./components/analytics/analyticsReport";
 import BrandTitleDivisionComponent from "./components/brandPage/BrandTitleDivisionComponent";
 import PageTitleDivisionComponent from "./components/common/pageTitleDivisionComponent";
 import ContactsComponent from "./components/contacts/contacts";
-import PreviousSalesContainer from "./components/previousSales/previousSalesComponent";
+import PreviousSalesComponent from "./components/previousSales/previousSalesComponent";
+import SpecialItemsComponent from "./components/specialItems/specialItemsComponent";
 import { Brand } from "./data/brands";
 import brandsService from "./services/brandsService";
 import collectionService from "./services/collectionService";
@@ -36,6 +37,8 @@ export default function Page() {
     // Single row with all the columns in 1 line. boostrap table will adjust the table based on the provided sizes
     return (
       <div>
+        {SpecialItemsComponent()}
+
         <Container>
           <div className="container-title centered-container">Main Brands</div>
         </Container>
@@ -134,7 +137,7 @@ export default function Page() {
       {mainBrandsTable()}
       {ListAllBrandsGroupByLetter()}
       {AboutMeContainer()}
-      {PreviousSalesContainer()}
+      {PreviousSalesComponent()}
       {ContactsComponent()}
       {FooterComponent()}
     </div>

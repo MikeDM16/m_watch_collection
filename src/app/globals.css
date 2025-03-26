@@ -87,19 +87,6 @@ body {
   --bs-btn-hover-bg: #c40d2f44;
 }
 
-.container {
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-}
-
-.extended-container {
-  max-width: 80%;
-}
-.brand-model-item {
-  min-width: 20%;
-  padding-top: 1rem;
-}
-
 .link {
   text-decoration: none; /* Optional: Remove underline */
   transition: color 0.3s ease; /* Smooth transition */

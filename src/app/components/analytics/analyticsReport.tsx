@@ -13,7 +13,7 @@ export default function AnalyticsReport(props: AnalyticsDetails) {
       title: props.title,
     });
   } else {
-    console.log(`Local analytics: page ${props.page} ${props.title}`);
+    console.debug(`Local analytics: page ${props.page} ${props.title}`);
   }
 
   return <></>;

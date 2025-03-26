@@ -6,7 +6,7 @@ function getMainBrands(): Brand[] {
    * Get main brands
    * Defined with display order. Returned ordered by displayOrder
    */
-  console.log("Returning main brands");
+  console.debug("Returning main brands");
   return brandsDB
     .filter((entry) => entry.displayOrder != undefined)
     .sort((a, b) => (a.displayOrder ?? 0) - (b.displayOrder ?? 0));
@@ -16,7 +16,7 @@ function getSecondaryBrands(): Brand[] {
   /**
    * Get secondary brands, that don't have displayOrder
    */
-  console.log("Returning secondary brands");
+  console.debug("Returning secondary brands");
   return brandsDB.filter((entry) => entry.displayOrder == undefined);
 }
 

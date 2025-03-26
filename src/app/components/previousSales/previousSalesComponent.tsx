@@ -5,7 +5,7 @@ import Container from "react-bootstrap/Container";
 import ImageSliderComponent, { ImageSliderEntry } from "../common/ImageSliderComponent";
 import PageTitleDivisionComponent from "../common/pageTitleDivisionComponent";
 
-export default function PreviousSalesContainer() {
+export default function PreviousSalesComponent() {
   const previousSoldModels = collectionService.getSoldModels();
 
   const swiperItems: ImageSliderEntry[] = Object.values(previousSoldModels).map((entry) => {
@@ -26,9 +26,11 @@ export default function PreviousSalesContainer() {
       image_src: getExternalResource(saleReportImg),
       href: saleData?.url,
       href_text: entry.legend,
+      target: "_blank",
       alt: alt,
     };
   });
+
   return (
     <div>
       <div id="PreviousSales">

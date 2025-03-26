@@ -701,9 +701,9 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     specialCollectionItem: false,
   },
 
-  '1998 Omega Speedmaster MK40 Triple Date "Schumacher"': {
+  'Omega Speedmaster MK40 Triple Date "Schumacher"': {
     brand: BrandsEnum.OMEGA,
-    legend: '1998 Omega Speedmaster MK40 Triple Date "Schumacher"',
+    legend: 'Omega Speedmaster MK40 Triple Date "Schumacher"',
     year: 1998,
     type: WatchTypeEnum.SPORTS,
     srcImage: "public/assets/Images/Omega/1998_Omega_Speedmaster_MK40_triple_date/IMG_7806.JPG",
@@ -1563,9 +1563,9 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     href: require("./watchModels/Tissot/Tissot_Seastar_Automatic_1974"),
     specialCollectionItem: false,
   },
-  '1974 Tissot Seastar "Lobster" Automatic': {
+  'Tissot Seastar "Lobster" Automatic': {
     brand: BrandsEnum.TISSOT,
-    legend: '1974 Tissot Seastar "Lobster" Automatic',
+    legend: 'Tissot Seastar "Lobster" Automatic',
     year: 1974,
     type: WatchTypeEnum.CASUAL,
     srcImage: "public/assets/Images/Tissot/1974_Tissot_Seastar/IMG_1006.JPG",
@@ -1917,7 +1917,7 @@ function sortCollection(items: Record<string, CollectionEntry>) {
   const temp = { ...collectionItems, ...modelItems };
   Object.entries(temp).map(([k, value]) => {
     if (k != value.legend) {
-      console.log(`Key is diferent from legend: ${k}`);
+      console.debug(`Key is diferent from legend: ${k}`);
     }
   });
   return { ...collectionItems, ...modelItems };
