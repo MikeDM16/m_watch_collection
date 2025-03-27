@@ -15,11 +15,9 @@ export default function AboutMeContainer() {
       <div id="AboutMe">{PageTitleDivisionComponent({ title: "About Me" })}</div>
 
       <Container className="centered-text">
-        <Row>
-          <Col className="">
-            <div>
-              <ImageComponent src={getExternalResource(aboutMe_photo)} alt="Photo of Me" />
-            </div>
+        <Row >
+          <Col className="centered-container">
+              <ImageComponent src={getExternalResource(aboutMe_photo)} alt="Photo of Me" width={"50%"} />
           </Col>
           <Col className="col-md-8 col-12 ">
             <div className="container-title">

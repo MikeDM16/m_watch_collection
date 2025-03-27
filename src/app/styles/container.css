@@ -3,3 +3,9 @@
   margin-bottom: 2rem;
   max-width: 80%;
 }
+
+@media (max-width: 640px) {
+  .container {
+    max-width: 100%;
+  }
+}
