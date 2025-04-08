@@ -51,6 +51,13 @@ const details: WatchDetails = {
     //"public/assets/Images/Tissot/1963_Tissot_Seastar_Seven/tissot_manufacturing_dates.JPG",
   ],
 
+  saleReport: {
+    price: 285,
+    date: "31/01/2025",
+    url: "https://www.catawiki.com/en/l/92453189-tissot-seastar-seven-no-reserve-price-monocoque-gold-20-microns-cal-tissot-781-17-jewels-men-1963",
+  },
+
+
   technicalData: {
     features: [
       featuresEnum.MECHANICAL,

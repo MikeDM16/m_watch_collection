@@ -62,6 +62,12 @@ const details: WatchDetails = {
     "public/assets/Images/Tissot/2005_Tissot_Ballada_Lady_C229_329C/IMG_8860.JPG",
   ],
 
+  saleReport: {
+    price: 220,
+    date: "07/03/2025",
+    url: "https://www.catawiki.com/en/l/94001352-tissot-ballade-lady-automatic-no-reserve-price-eta-2671-25-jewels-women-2005",
+  },
+
   technicalData: {
     features: [featuresEnum.DATE, featuresEnum.OPEN_CASE_BACK, featuresEnum.AUTOMATIC],
 

@@ -92,6 +92,12 @@ const details: WatchDetails = {
     "public/assets/Images/Tissot/2019_Tissot_PRS_516_Alpine_Edition/IMG_9245.JPG",
   ],
 
+  saleReport: {
+    price: 1101,
+    date: "21/03/2025",
+    url: "https://www.catawiki.com/en/l/94214712-tissot-prs-516-alpine-limited-edition-444-of-516-carbon-fiber-dial-27-jewels-valjoux-7753-men-2020",
+  },
+
   technicalData: {
     features: [
       featuresEnum.DATE,
