@@ -524,7 +524,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     year: 2005,
     type: WatchTypeEnum.SPORTS,
     srcImage:
-      "public/assets/Images/Porsche_Design/2005_Porsche Design_Dashboard_P662_10_1_Black_Titanium/IMG_6988.JPG",
+      "public/assets/Images/Porsche_Design/2005_Porsche Design_Dashboard_P662_10_1_Black_Titanium/IMG_0204.JPG",
     href: require("./watchModels/Porsche_Design/Porsche_Design_P6612_10_1_Black_Titanium_2005"),
     specialCollectionItem: false,
   },
@@ -571,6 +571,15 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     type: WatchTypeEnum.SPORTS,
     srcImage: "public/assets/Images/Tissot/2005_Tissot_PRS_516_Chrono/IMG_4808.JPG",
     href: require("./watchModels/Tissot/Tissot_PRS_516_J562662_2005"),
+    specialCollectionItem: false,
+  },
+  "2005 tissot T-Tracx Mother of Pearl Lady Chronograph": {
+    brand: BrandsEnum.TISSOT,
+    legend: "2005 tissot T-Tracx Mother of Pearl Lady Chronograph",
+    year: 2005,
+    type: WatchTypeEnum.SPORTS,
+    srcImage: "public/assets/Images/Tissot/2005_Tissot_T_Tracx_MOP/IMG_0298.JPG",
+    href: require("./watchModels/Tissot/Tissot_T_Tracx_MOP_2005"),
     specialCollectionItem: false,
   },
   "Ferrari Modena Red Chronograph": {
@@ -1170,6 +1179,15 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     srcImage:
       "public/assets/Images/Omega/1988_Polaris_AnaDigi_Black_386_0826_Gold_plated/IMG_8655.JPG",
     href: require("./watchModels/Omega/Omega_Polaris_MultiFunction_386_0826_plated_1988"),
+    specialCollectionItem: false,
+  },
+  "1988 Omega De Ville Longchamp 191.0198 Cal. 1340": {
+    brand: BrandsEnum.OMEGA,
+    legend: "1988 Omega De Ville Longchamp 191.0198 Cal. 1340",
+    year: 1988,
+    type: WatchTypeEnum.DRESS,
+    srcImage: "public/assets/Images/Omega/1988_Omega_1910198_DeVille_longchamp/IMG_0265.JPG",
+    href: require("./watchModels/Omega/Omega_DeVille_Lomgchamp_1910198_Cal_1430_1988"),
     specialCollectionItem: false,
   },
   "Omega Seamaster Polaris 396.1022": {

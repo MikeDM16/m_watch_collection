@@ -57,7 +57,6 @@ const details: WatchDetails = {
     url: "https://www.catawiki.com/en/l/92453189-tissot-seastar-seven-no-reserve-price-monocoque-gold-20-microns-cal-tissot-781-17-jewels-men-1963",
   },
 
-
   technicalData: {
     features: [
       featuresEnum.MECHANICAL,

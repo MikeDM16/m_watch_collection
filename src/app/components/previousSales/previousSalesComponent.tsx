@@ -1,5 +1,9 @@
 import collectionService from "@/app/services/collectionService";
-import { getExternalResource, getSaleReportImage } from "@/app/services/commonFunctions";
+import {
+  getExternalResource,
+  getSaleReportImage,
+  routeToCollectionBrandModelPage,
+} from "@/app/services/commonFunctions";
 import Container from "react-bootstrap/Container";
 
 import ImageSliderComponent, { ImageSliderEntry } from "../common/ImageSliderComponent";
@@ -22,9 +26,13 @@ export default function PreviousSalesComponent() {
       </div>
     );
 
+    const url = saleData?.url
+      ? saleData?.url
+      : routeToCollectionBrandModelPage(entry.brand, entry.legend);
+
     return {
       image_src: getExternalResource(saleReportImg),
-      href: saleData?.url,
+      href: url,
       href_text: entry.legend,
       target: "_blank",
       alt: alt,

@@ -7,6 +7,11 @@ import ImageComponent from "../common/ImageComponent";
 
 export default function saleReportComponent(saleReport: SellReport, baseImgSrc: string) {
   const saleReportImg = getSaleReportImage(baseImgSrc);
+  const linkDiv = saleReport.url ? (
+    <Link target="_blank" href={saleReport.url}>
+      Original auction link
+    </Link>
+  ) : undefined;
   return (
     <Container>
       <Row className="centered-container centered-text">
@@ -21,9 +26,7 @@ export default function saleReportComponent(saleReport: SellReport, baseImgSrc: 
           </b>
           {"  -  " + saleReport.date}
         </div>
-        <Link target="_blank" href={saleReport.url}>
-          Original auction link
-        </Link>
+        {linkDiv}
       </Row>
     </Container>
   );

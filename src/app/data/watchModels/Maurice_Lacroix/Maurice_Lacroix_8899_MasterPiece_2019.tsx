@@ -77,7 +77,10 @@ const details: WatchDetails = {
     "public/assets/Images/Maurice_Lacroix/2019_Maurice_Lacroix_8899_MasterPiece_Auto/IMG_0387.JPG",
     "public/assets/Images/Maurice_Lacroix/2019_Maurice_Lacroix_8899_MasterPiece_Auto/IMG_0389.JPG",
   ],
-
+  saleReport: {
+    price: 650,
+    date: "17/09/2024",
+  },
   technicalData: {
     features: [
       featuresEnum.DATE,

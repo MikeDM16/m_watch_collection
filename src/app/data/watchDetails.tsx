@@ -4,7 +4,7 @@ import { Caliber } from "./movementsData";
 export interface SellReport {
   price: number;
   date: string;
-  url: string;
+  url?: string;
 }
 
 export const ModelInformationKeyToDisplayTextMapping: Record<string, string> = {
