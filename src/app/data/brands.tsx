@@ -304,6 +304,11 @@ export const brandsDB: Brand[] = [
     displayOrder: undefined,
   },
   {
+    name: BrandsEnum.ARGUS,
+    logoImg: "public/assets/Images/Brands_Logos/argus_logo.PNG",
+    displayOrder: undefined,
+  },
+  {
     name: BrandsEnum.BELEX,
     logoImg: "public/assets/Images/Brands_Logos/belex_logo.PNG",
     displayOrder: undefined,

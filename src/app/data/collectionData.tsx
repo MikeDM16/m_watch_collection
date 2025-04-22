@@ -897,9 +897,9 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     href: require("./watchModels/Tag_Heuer/Tag_Heuer_Formula_1_WA1211_Tritium_1995"),
     specialCollectionItem: false,
   },
-  "Breitling Chronomat 10th Anniversary Limitd Edition A13050": {
+  "Breitling Chronomat 10th Anniversary Limited Edition A13050": {
     brand: BrandsEnum.BREITLING,
-    legend: "Breitling Chronomat 10th Anniversary Limitd Edition A13050",
+    legend: "Breitling Chronomat 10th Anniversary Limited Edition A13050",
     year: 1994,
     type: WatchTypeEnum.SPORTS,
     srcImage:
@@ -1905,6 +1905,15 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     type: WatchTypeEnum.DRESS,
     srcImage: "public/assets/Images/Zenith/1945_Zenith_Pilot_P12_4_50/IMG_4676.JPG",
     href: require("./watchModels/Zenith/Zenith_Pilot_P12_1945"),
+    specialCollectionItem: false,
+  },
+  "1945 Argus Tuxedo Militare Cal. AS1130": {
+    brand: BrandsEnum.ARGUS,
+    legend: "1945 Argus Tuxedo Militare Cal. AS1130",
+    year: 1945,
+    type: WatchTypeEnum.CASUAL,
+    srcImage: "public/assets/Images/Argus/1945_Argus_Tuxedo_Militare_AS_1130/IMG_0557.JPG",
+    href: require("./watchModels/Argus/Argus_Tuxedo_Militare_1945"),
     specialCollectionItem: false,
   },
   "Natalis WWII German Watch": {

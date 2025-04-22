@@ -1,5 +1,6 @@
 export const BrandsEnum = {
   EBERHARD: "Eberhard",
+  ARGUS: "Argus",
   CHOPARD: "Chopard",
   OMEGA: "Omega",
   BREITLING: "Breitling",
