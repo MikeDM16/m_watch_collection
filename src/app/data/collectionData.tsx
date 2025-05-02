@@ -471,6 +471,15 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     href: require("./watchModels/Tag_Heuer/Tag_Heuer_Formula_1_WAC1210_2008"),
     specialCollectionItem: false,
   },
+  "2008 Timex Power Reserve T2M515": {
+    brand: BrandsEnum.TIMEX,
+    legend: "2008 Timex Power Reserve T2M515",
+    year: 2008,
+    type: WatchTypeEnum.CASUAL,
+    srcImage: "public/assets/Images/Timex/2008_Timex_T2M515_Power_Reserve/IMG_0323.JPG",
+    href: require("./watchModels/Timex/Timex_T2M515_Power_Reserve_2008"),
+    specialCollectionItem: false,
+  },
 
   "Tissot Le Locle Automatic": {
     brand: BrandsEnum.TISSOT,
@@ -813,6 +822,15 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     type: WatchTypeEnum.SPORTS,
     srcImage: "public/assets/Images/Tissot/1995_Tissot_Chrono_E662762M/IMG_1302.JPG",
     href: require("./watchModels/Tissot/Tissot_Sports_E662_Chrono_1995"),
+    specialCollectionItem: false,
+  },
+  "1995 Universal Geneve 875.214 Chrono": {
+    brand: BrandsEnum.UNIVERSAL_GENEVE,
+    legend: "1995 Universal Geneve 875.214 Chrono",
+    year: 1995,
+    type: WatchTypeEnum.SPORTS,
+    srcImage: "public/assets/Images/Universal_Geneve/1995_Universal_Geneve_875_214/IMG_6690.JPG",
+    href: require("./watchModels/Universal_Geneve/Universal_Geneve_Chrono_875214_1995"),
     specialCollectionItem: false,
   },
   "Jaguar Fragrances Chrono Limited Edition": {
@@ -1334,6 +1352,15 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     type: WatchTypeEnum.CASUAL,
     srcImage: "public/assets/Images/Tissot/1978_Tissot_Seastar_Quartz/IMG_0982.JPG",
     href: require("./watchModels/Tissot/Tissot_SeaStar_Quartz_1978"),
+    specialCollectionItem: false,
+  },
+  "1977 Tarus Calendar 17 Rubis": {
+    brand: BrandsEnum.TAUNUS,
+    legend: "1977 Tarus Calendar 17 Rubis",
+    year: 1977,
+    type: WatchTypeEnum.CASUAL,
+    srcImage: "public/assets/Images/Taunus/1977_Taunus_Calendar/IMG_0345.JPG",
+    href: require("./watchModels/Taunus/Taunus_Calendar_17Rubis_1975"),
     specialCollectionItem: false,
   },
   "Omega Seamaster 196.0079 Cal. 1342": {

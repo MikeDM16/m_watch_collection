@@ -57,6 +57,8 @@ export const BrandsEnum = {
   SECTOR: "Sector",
   SIGNO: "Signo",
   TONINO_LAMBORGHINI: "Tonino Lamborghini",
+  TAUNUS: "Taunus",
   TOURIST: "Tourist",
   ZENITH: "Zenith",
+  UNIVERSAL_GENEVE: "Universal Geneve",
 };

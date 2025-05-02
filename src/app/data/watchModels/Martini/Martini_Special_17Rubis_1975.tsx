@@ -12,6 +12,7 @@ import { MovementWatchTypeEnum } from "@/app/enums/movementWatchTypeEnum";
 import { WatchStyleEnum } from "@/app/enums/watchStyleEnum";
 import { WaterResistanceEnum } from "@/app/enums/waterResistanceEnum";
 
+import { MovementsDataDB } from "../../movementsData";
 import { WatchDetails } from "../../watchDetails";
 
 const details: WatchDetails = {
@@ -76,28 +77,7 @@ const details: WatchDetails = {
       color: "Brown",
     },
 
-    movement: {
-      title: "FE 140",
-      description: "",
-      usefullLinks: {
-        "Ranfft FE 140": "http://www.ranfft.de/cgi-bin/bidfun-db.cgi?10&ranfft&&2uswk&FE_140_1",
-      },
-      sliderImages: [
-        "public/assets/Images/Martini/1975_Martini_Special/mov1.PNG",
-        "public/assets/Images/Martini/1975_Martini_Special/mov2.PNG",
-        "public/assets/Images/Martini/1975_Martini_Special/mov3.PNG",
-        "public/assets/Images/Martini/1975_Martini_Special/mov4.PNG",
-      ],
-      details: {
-        manufacturer: "France Ebouches [FE]",
-        modelReference: "140",
-        type: "Mechanical",
-        frequency: "21600 A/h",
-        jewels: "17 (Seventeen) Jewels ",
-        reserve: "47 Hours",
-        functions: "Date, Hours, Minutes, Sweep Seconds, Quick date set",
-      },
-    },
+    movement: MovementsDataDB.FE_140,
   },
 };
 

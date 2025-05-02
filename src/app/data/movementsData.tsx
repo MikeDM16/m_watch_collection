@@ -22,6 +22,7 @@ import ETA_G10_961 from "./movements/ETA/ETA_G10_961";
 import ETA_Valjoux_7750_17 from "./movements/ETA/ETA_Valjoux_7750_17J";
 import ETA_Valjoux_7750_25 from "./movements/ETA/ETA_Valjoux_7750_25J";
 import ETA_Valjoux_7751_25 from "./movements/ETA/ETA_Valjoux_7751_25J";
+import FE_140 from "./movements/FE/FE_140_17J";
 import FE_233_69 from "./movements/FE/FE_233_69_17J";
 import Landeron_48_17J from "./movements/Landeron/Landeron_48_17J";
 import Landeron_51_17J from "./movements/Landeron/Landeron_51_17J_";
@@ -43,6 +44,7 @@ import RW_4200 from "./movements/Raymond_Weil/RW_4200";
 import RONDA_5030D from "./movements/Ronda/Ronda_5030D";
 import RONDA_5040D from "./movements/Ronda/Ronda_5040D";
 import RONDA_6004B from "./movements/Ronda/Ronda_6004B";
+import SEAGULL_ST2505 from "./movements/Seagull/Seagull_ST2505";
 import SEIKO_8M25 from "./movements/Seiko/8M25";
 import SEIKO_6306A from "./movements/Seiko/6306A";
 import SELLITA_SW200 from "./movements/Sellita/SW200";
@@ -127,7 +129,10 @@ export const MovementsDataDB: Record<string, Caliber> = {
   DD_2000_ETA_2982: DD_2000_ETA_2982,
 
   UNITAS_6380: UNITAS_6380,
+
   FE_233_69: FE_233_69,
+  FE_140: FE_140,
+
   EBERHARD_16000_17J: EBERHARD_16000_17J,
   LANDERON_48_17J: Landeron_48_17J,
   LANDERON_51_17J: Landeron_51_17J,
@@ -160,6 +165,7 @@ export const MovementsDataDB: Record<string, Caliber> = {
 
   SELLITA_SW200: SELLITA_SW200,
 
+  SEAGULL_ST2505: SEAGULL_ST2505,
   RAYMON_WEIL_4200: RW_4200,
   MIYOTA_OS10: MIYOTA_OS10,
 

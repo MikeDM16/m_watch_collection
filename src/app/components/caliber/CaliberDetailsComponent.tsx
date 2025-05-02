@@ -34,6 +34,7 @@ export const CaliberDetailComponent = (caliberDetails: Caliber) => {
                   >
                     <b>{displayText}</b>
                     <p>{value}</p>
+                    <p></p>
                   </Col>
                 );
               })}

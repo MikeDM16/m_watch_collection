@@ -227,6 +227,11 @@ export const brandsDB: Brand[] = [
   },*/
 
   {
+    name: BrandsEnum.UNIVERSAL_GENEVE,
+    logoImg: "public/assets/Images/Brands_Logos/universal_geneve_logo.PNG",
+    displayOrder: undefined,
+  },
+  {
     name: BrandsEnum.NOVART,
     logoImg: "public/assets/Images/Brands_Logos/novart_logo.PNG",
     displayOrder: 34,
@@ -512,6 +517,11 @@ export const brandsDB: Brand[] = [
   {
     name: BrandsEnum.TOURIST,
     logoImg: "public/assets/Images/Brands_Logos/tourist_logo.PNG",
+    displayOrder: undefined,
+  },
+  {
+    name: BrandsEnum.TAUNUS,
+    logoImg: "public/assets/Images/Brands_Logos/taunus_logo.PNG",
     displayOrder: undefined,
   },
 ];

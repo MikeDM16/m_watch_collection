@@ -3,8 +3,8 @@ import cv2
 from tqdm import tqdm
 from PIL import Image
 
-main_folder_path = "C:/Users/migue/Documentos/GitHub/MWatchCollectionResources/public/assets/Images/Tissot/2019_Tissot_PRS_516_Alpine_Edition"
-main_folder_path = "C:/Users/migue/Documentos/GitHub/MWatchCollectionResources/public/assets/Images/Movements/ETA/ETA_A05_H31/"
+main_folder_path = "C:/Users/migue/Documentos/GitHub/MWatchCollectionResources/public/assets/Images/Argus/1945_Argus_Tuxedo_Militare_AS_1130"
+main_folder_path = "C:/Users/migue/Documentos/GitHub/MWatchCollectionResources/public/assets/Images/Movements/Seagull/Seagull_ST2505/"
 
 
 def remove_lower_extension_images():
@@ -103,7 +103,7 @@ def create_sub_images():
 
                 # compress main image
                 #img = Image.open(source_path)
-                #img.save(source_path, optimize=True, quality=80)
+                #img.save(source_path, optimize=True, quality=70)
 
 def create_sale_images():
     idx = 0

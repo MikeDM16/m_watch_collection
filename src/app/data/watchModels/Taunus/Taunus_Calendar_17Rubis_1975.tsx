@@ -16,48 +16,51 @@ import { MovementsDataDB } from "../../movementsData";
 import { WatchDetails } from "../../watchDetails";
 
 const details: WatchDetails = {
-  title: "1975 Miura Calendar 17 Rubis",
+  title: "1977 Tarus Calendar 17 Rubis",
   sliderImages: [
-    "public/assets/Images/Miura/1975_Miura/IMG_2762.JPG",
-    "public/assets/Images/Miura/1975_Miura/IMG_2763.JPG",
-    "public/assets/Images/Miura/1975_Miura/IMG_2764.JPG",
-    "public/assets/Images/Miura/1975_Miura/IMG_2765.JPG",
-    "public/assets/Images/Miura/1975_Miura/IMG_2766.JPG",
-    "public/assets/Images/Miura/1975_Miura/IMG_2767.JPG",
-    "public/assets/Images/Miura/1975_Miura/IMG_2768.JPG",
-    "public/assets/Images/Miura/1975_Miura/IMG_2769.JPG",
-    "public/assets/Images/Miura/1975_Miura/IMG_2770.JPG",
-    "public/assets/Images/Miura/1975_Miura/IMG_2771.JPG",
-    "public/assets/Images/Miura/1975_Miura/IMG_2772.JPG",
-    "public/assets/Images/Miura/1975_Miura/IMG_2773.JPG",
-    "public/assets/Images/Miura/1975_Miura/IMG_2774.JPG",
-    "public/assets/Images/Miura/1975_Miura/IMG_2775.JPG",
-    "public/assets/Images/Miura/1975_Miura/IMG_2776.JPG",
-    "public/assets/Images/Miura/1975_Miura/IMG_2777.JPG",
+    "public/assets/Images/Taunus/1977_Taunus_Calendar/IMG_0341.JPG",
+    "public/assets/Images/Taunus/1977_Taunus_Calendar/IMG_0342.JPG",
+    "public/assets/Images/Taunus/1977_Taunus_Calendar/IMG_0343.JPG",
+    "public/assets/Images/Taunus/1977_Taunus_Calendar/IMG_0344.JPG",
+    "public/assets/Images/Taunus/1977_Taunus_Calendar/IMG_0345.JPG",
+    "public/assets/Images/Taunus/1977_Taunus_Calendar/IMG_0346.JPG",
+
+    "public/assets/Images/Taunus/1977_Taunus_Calendar/IMG_0356.JPG",
+    "public/assets/Images/Taunus/1977_Taunus_Calendar/IMG_0357.JPG",
+    "public/assets/Images/Taunus/1977_Taunus_Calendar/IMG_0359.JPG",
+    "public/assets/Images/Taunus/1977_Taunus_Calendar/IMG_0360.JPG",
+    "public/assets/Images/Taunus/1977_Taunus_Calendar/IMG_0362.JPG",
+
+    "public/assets/Images/Taunus/1977_Taunus_Calendar/IMG_0347.JPG",
+    "public/assets/Images/Taunus/1977_Taunus_Calendar/IMG_0348.JPG",
+    "public/assets/Images/Taunus/1977_Taunus_Calendar/IMG_0349.JPG",
+    "public/assets/Images/Taunus/1977_Taunus_Calendar/IMG_0350.JPG",
+    "public/assets/Images/Taunus/1977_Taunus_Calendar/IMG_0351.JPG",
+
+    "public/assets/Images/Taunus/1977_Taunus_Calendar/IMG_0352.JPG",
+    "public/assets/Images/Taunus/1977_Taunus_Calendar/IMG_0353.JPG",
+    "public/assets/Images/Taunus/1977_Taunus_Calendar/IMG_0354.JPG",
+    "public/assets/Images/Taunus/1977_Taunus_Calendar/IMG_0355.JPG",
   ],
-  saleReport: {
-    price: 90,
-    date: "30/07/2018",
-    url: "https://www.catawiki.pt/l/20023879-miura-swiss-perpetual-calendar-double-crown-cal-fe-140-17-rubis-homem-1970-1979",
-  },
+
   technicalData: {
     features: [featuresEnum.DATE, featuresEnum.MECHANICAL],
 
     information: {
-      brand: BrandsEnum.MIURA,
+      brand: BrandsEnum.TAUNUS,
       series: "Calendar",
       catalogueReference: "17 rubis",
-      productionYear: "1975",
+      productionYear: "1977",
       movementType: MovementWatchTypeEnum.MECHANIQUE,
       style: WatchStyleEnum.CASUAL,
     },
 
     case: {
-      diameter: "38 mm",
-      thickness: "12 mm",
-      material: "Stainless Steel - Chrome plated",
+      diameter: "45 mm",
+      thickness: "14 mm",
+      material: "Stainless Steel - Chromed",
       waterResistance: WaterResistanceEnum.WATER_RESISTANT,
-      finishingDetails: "Polished",
+      finishingDetails: "Chromed",
       bezel: "Inner Calendar Bezel",
       crownType: CrownWatchTypeEnum.PUSH_PULL,
       crystal: CrystalMaterialEnum.ACRYLIC,
@@ -65,18 +68,18 @@ const details: WatchDetails = {
     },
 
     dial: {
-      color: "Blue",
-      dialMarkers: DialMarketsEnum.DAGGER,
+      color: "Red",
+      dialMarkers: DialMarketsEnum.BATTON,
       finishingDetails: FinishingDetailsEnum.METALLIC_COLOR,
-      luminiscentIndexes: LuminescentIndexesEnum.HANDS + LuminescentIndexesEnum.TRITIUM,
-      calendar: CalendarWatchTypeEnum.DAY_DATE_AT_3_OCLOCK,
+      luminiscentIndexes: LuminescentIndexesEnum.NONE,
+      calendar: CalendarWatchTypeEnum.DATE,
     },
 
     bracelet: {
       material: "Leather",
       buckleType: BuckleTypeEnum.STANDARD_BUCKLE,
       width: "22 mm",
-      color: "Black",
+      color: "Brown",
     },
 
     movement: MovementsDataDB.FE_140,

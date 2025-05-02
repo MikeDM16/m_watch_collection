@@ -12,6 +12,7 @@ export const CaliberBrandsEnum = {
   FE: "FE (France Ebauche)",
   SEIKO: "Seiko",
   SELLITA: "Sellita",
+  SEAGULL: "Seagull",
   MIYOTA: "Miyota",
   DUBOIS_DEPRAZ: "Dubois Depraz",
   ZENITH: "Zenith",

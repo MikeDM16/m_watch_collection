@@ -79,7 +79,7 @@ const details: WatchDetails = {
       material: "Stainless Steel",
       waterResistance: WaterResistanceEnum.WATERPROOF_50M,
       finishingDetails: "Brushed",
-      bezel: "Polshed bezel",
+      bezel: "Polished bezel",
       crownType: CrownWatchTypeEnum.PUSH_PULL,
       crystal: CrystalMaterialEnum.MINERAL,
       caseback: CaseBackDetailsEnum.BRAND_DECORATION,
