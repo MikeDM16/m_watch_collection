@@ -1,4 +1,5 @@
 import AS_1130 from "./movements/AS/AS_1130_17J";
+import AS_1950 from "./movements/AS/AS_1950_17J";
 import DD_2000_ETA_955_232 from "./movements/Debois_Depraz/DD_2000_955";
 import DD_2000_ETA_2982 from "./movements/Debois_Depraz/DD_2000_2892";
 import EBERHARD_16000_17J from "./movements/Eberhard/Eberhard_16000_17J";
@@ -11,6 +12,7 @@ import ETA_955_112 from "./movements/ETA/ETA_955_112";
 import ETA_955_114 from "./movements/ETA/ETA_955_114";
 import ETA_1256 from "./movements/ETA/ETA_1256";
 import ETA_2671 from "./movements/ETA/ETA_2671_25J";
+import ETA_2783 from "./movements/ETA/ETA_2783";
 import ETA_2824 from "./movements/ETA/ETA_2824";
 import ETA_2836 from "./movements/ETA/ETA_2836";
 import ETA_2894_2_37J from "./movements/ETA/ETA_2894_2_37J";
@@ -24,6 +26,7 @@ import ETA_Valjoux_7750_25 from "./movements/ETA/ETA_Valjoux_7750_25J";
 import ETA_Valjoux_7751_25 from "./movements/ETA/ETA_Valjoux_7751_25J";
 import FE_140 from "./movements/FE/FE_140_17J";
 import FE_233_69 from "./movements/FE/FE_233_69_17J";
+import FHF_96_4 from "./movements/FHF/FHF_96_4_17J";
 import Landeron_48_17J from "./movements/Landeron/Landeron_48_17J";
 import Landeron_51_17J from "./movements/Landeron/Landeron_51_17J_";
 import MIYOTA_OS10 from "./movements/Miyota/OS10";
@@ -98,11 +101,13 @@ export interface Caliber {
 
 export const MovementsDataDB: Record<string, Caliber> = {
   AS_1130: AS_1130,
+  AS_1950: AS_1950,
 
   ETA_1256: ETA_1256,
   ETA_2824: ETA_2824,
   ETA_2836: ETA_2836,
   ETA_2671: ETA_2671,
+  ETA_2783: ETA_2783,
   ETA_2894_2: ETA_2894_2_37J,
   ETA_2895_1: ETA_2895_1_30J,
   ETA_2895_2: ETA_2895_2_27J,
@@ -133,6 +138,7 @@ export const MovementsDataDB: Record<string, Caliber> = {
   FE_233_69: FE_233_69,
   FE_140: FE_140,
 
+  FHF_96_4: FHF_96_4,
   EBERHARD_16000_17J: EBERHARD_16000_17J,
   LANDERON_48_17J: Landeron_48_17J,
   LANDERON_51_17J: Landeron_51_17J,

@@ -25,6 +25,7 @@ const FE_233_69: Caliber = {
     "public/assets/Images/Movements/FE/FE_233_69/FE_233_69_1.JPG",
     "public/assets/Images/Movements/FE/FE_233_69/FE_233_69_2.JPG",
     "public/assets/Images/Movements/FE/FE_233_69/FE_233_69_3.JPG",
+    "public/assets/Images/Movements/FE/FE_233_69/FE_233_69_4.JPG",
   ],
   // Details
   details: {

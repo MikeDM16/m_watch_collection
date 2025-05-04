@@ -12,6 +12,7 @@ import { MovementWatchTypeEnum } from "@/app/enums/movementWatchTypeEnum";
 import { WatchStyleEnum } from "@/app/enums/watchStyleEnum";
 import { WaterResistanceEnum } from "@/app/enums/waterResistanceEnum";
 
+import { MovementsDataDB } from "../../movementsData";
 import { WatchDetails } from "../../watchDetails";
 
 const details: WatchDetails = {
@@ -113,29 +114,7 @@ const details: WatchDetails = {
       color: "Black",
     },
 
-    movement: {
-      title: "ETA 2783",
-      description: " Quick date-set by date: set by changing around 22:30-24h.",
-      usefullLinks: {
-        "Ranfft ETA 2783": "http://www.ranfft.de/cgi-bin/bidfun-db.cgi?10&ranfft&&2uswk&ETA_2783",
-        "17Jewels ETA 2783": "https://17jewels.info/movements/e/eta/eta-2783/",
-        "ETA 2783 Vintage Parts Catalogue": "../Files/496_ETA2750,1,2,6,4.pdf",
-      },
-      sliderImages: [
-        "public/assets/Images/Monumental/1975_Monumental_Swiss/mov1.PNG",
-        "public/assets/Images/Monumental/1975_Monumental_Swiss/mov2.PNG",
-        "public/assets/Images/Monumental/1975_Monumental_Swiss/mov3.PNG",
-      ],
-      details: {
-        manufacturer: "ETA",
-        modelReference: "2783",
-        type: "Automatic wind",
-        frequency: "21600 A/h",
-        jewels: "25 (Twenty-five) Jewels ",
-        reserve: "47 Hours",
-        functions: "Date, Hours, Minutes, Sweep Seconds, Quick date set",
-      },
-    },
+    movement: MovementsDataDB.ETA_2783,
   },
 };
 

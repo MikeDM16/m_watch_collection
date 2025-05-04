@@ -16,7 +16,9 @@ export const CaliberDetailComponent = (caliberDetails: Caliber) => {
         <Col>
           <div>
             <div className="info-text container-title">{caliberDetails.title}</div>
-            <div style={{ whiteSpace: "pre-line" }}>{caliberDetails.description}</div>
+            <div  className="bottom-margin-m" style={{ whiteSpace: "pre-line" }}>
+              {caliberDetails.description}
+            </div>
           </div>
           <Row>
             {Object.entries(caliberDetails.details)
@@ -34,7 +36,6 @@ export const CaliberDetailComponent = (caliberDetails: Caliber) => {
                   >
                     <b>{displayText}</b>
                     <p>{value}</p>
-                    <p></p>
                   </Col>
                 );
               })}

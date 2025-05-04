@@ -12,6 +12,7 @@ import { MovementWatchTypeEnum } from "@/app/enums/movementWatchTypeEnum";
 import { WatchStyleEnum } from "@/app/enums/watchStyleEnum";
 import { WaterResistanceEnum } from "@/app/enums/waterResistanceEnum";
 
+import { MovementsDataDB } from "../../movementsData";
 import { WatchDetails } from "../../watchDetails";
 import { CaunyBrandSeries } from "./CaunyBrandSeries";
 
@@ -118,28 +119,7 @@ const details: WatchDetails = {
       color: "Brown",
     },
 
-    movement: {
-      title: "AS 1950",
-      description: "",
-      usefullLinks: {
-        "Ranfft AS 1950/51": "http://www.ranfft.de/cgi-bin/bidfun-db.cgi?10&ranfft&&2uswk&AS_1950",
-        "AS 1950 Parts Catalogue": "../Files/AS_1951.pdf",
-      },
-      sliderImages: [
-        "public/assets/Images/Cauny/1965_CaunyPrima/mov (1).JPG",
-        "public/assets/Images/Cauny/1965_CaunyPrima/mov (2).JPG",
-        "public/assets/Images/Cauny/1965_CaunyPrima/mov (3).JPG",
-      ],
-      details: {
-        manufacturer: "Adolf Schild [AS]",
-        modelReference: "1950/52",
-        type: "Mechanical",
-        frequency: "21600 A/h",
-        jewels: "17 (Seventeen) Jewels ",
-        reserve: "46 Hours",
-        functions: "Hours, Minutes, Sweep Seconds",
-      },
-    },
+    movement: MovementsDataDB.AS_1950,
   },
 };
 

@@ -10,6 +10,7 @@ export const CaliberBrandsEnum = {
   OMEGA: "Omega",
   AS: "A. Schild",
   FE: "FE (France Ebauche)",
+  FHF: "FHF (Fabrique d'Horlogerie de Fontainemelon)",
   SEIKO: "Seiko",
   SELLITA: "Sellita",
   SEAGULL: "Seagull",
