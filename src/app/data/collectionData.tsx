@@ -1698,6 +1698,15 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     href: require("./watchModels/Cauny/Cauny_Prima_Calendario_17Rubis_1967"),
     specialCollectionItem: false,
   },
+  "1967 Cauny Prima Calendario 17 Jewels": {
+    brand: BrandsEnum.CAUNY,
+    legend: "1967 Cauny Prima Calendario 17 Jewels",
+    year: 1967,
+    type: WatchTypeEnum.CASUAL,
+    srcImage: "public/assets/Images/Cauny/1967_Cauny_Prima_Calendario/IMG_1760.JPG",
+    href: require("./watchModels/Cauny/Cauny_Prima_Calendario_17_Jewels_1967"),
+    specialCollectionItem: false,
+  },
   "Cauny Prima Swiss 17 Rubis": {
     brand: BrandsEnum.CAUNY,
     legend: "Cauny Prima Swiss 17 Rubis",
@@ -1714,6 +1723,15 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     type: WatchTypeEnum.DRESS,
     srcImage: "public/assets/Images/Fontaine/1965_Fontaine_Auto/IMG_4704.JPG",
     href: require("./watchModels/Fontaine/Fontaine_ETA2472_Auto_1965"),
+    specialCollectionItem: false,
+  },
+  "1965 Cauny Apollon Calendario 17 Rubis": {
+    brand: BrandsEnum.CAUNY,
+    legend: "1965 Cauny Apollon Calendario 17 Rubis",
+    year: 1965,
+    type: WatchTypeEnum.CASUAL,
+    srcImage: "public/assets/Images/Cauny/1965_Cauny_Apollon_Calendario/IMG_1902.JPG",
+    href: require("./watchModels/Cauny/Cauny_Apollon_17_jewels_1965"),
     specialCollectionItem: false,
   },
   "Tissot Seastar PR 516 Automatic": {

@@ -89,7 +89,7 @@ const details: WatchDetails = {
     case: {
       diameter: "36 mm",
       thickness: "10 mm",
-      material: "Gold Plated 20 \u339B - SS Case back",
+      material: "Gold Plated 20 \u339B - Stainless Steel backcase",
       waterResistance: WaterResistanceEnum.WATERPROOF_100M,
       finishingDetails: "Polished",
       bezel: "Coin detail bezel",

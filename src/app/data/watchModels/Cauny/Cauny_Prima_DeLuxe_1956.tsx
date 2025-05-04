@@ -88,7 +88,7 @@ const details: WatchDetails = {
 
     case: {
       diameter: "34 mm",
-      thickness: "-",
+      thickness: "8 mm",
       material: "Stainless Steel - Chromed",
       waterResistance: WaterResistanceEnum.WATER_RESISTANT,
       finishingDetails: "Polished",

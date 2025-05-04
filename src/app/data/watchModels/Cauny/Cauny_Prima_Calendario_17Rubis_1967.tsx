@@ -107,8 +107,8 @@ const details: WatchDetails = {
     case: {
       diameter: "38 mm",
       thickness: "12 mm",
-      material: "Gold Plated (10 \u339B) - SS case back",
-      waterResistance: WaterResistanceEnum.WATER_RESISTANT,
+      material: "Gold Plated (10 \u339B) - Stainless Steel backcase",
+      waterResistance: WaterResistanceEnum.WATERPROOF_50M,
       finishingDetails: "Vertical brushed",
       bezel: "Without bezel",
       crownType: CrownWatchTypeEnum.PUSH_PULL,
@@ -127,7 +127,7 @@ const details: WatchDetails = {
     bracelet: {
       material: "Leather",
       buckleType: BuckleTypeEnum.STANDARD_BUCKLE,
-      width: "19 mm",
+      width: "18 mm",
       color: "Brown",
     },
 
