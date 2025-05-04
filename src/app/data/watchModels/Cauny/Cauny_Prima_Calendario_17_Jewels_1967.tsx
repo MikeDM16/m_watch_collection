@@ -90,7 +90,7 @@ const details: WatchDetails = {
     },
 
     dial: {
-      color: "White",
+      color: "Champagne",
       dialMarkers: DialMarketsEnum.BATTON,
       finishingDetails: FinishingDetailsEnum.RADIAL_BRUSHED_EFFECT,
       luminiscentIndexes: LuminescentIndexesEnum.HANDS + LuminescentIndexesEnum.TRITIUM,
