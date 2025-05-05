@@ -17,7 +17,7 @@ import { WatchDetails } from "../../watchDetails";
 import { TissotBrandSeries } from "./TissotBrandSeries";
 
 const details: WatchDetails = {
-  title: "2005 tissot T-Tracx Mother of Pearl Lady Chronograph",
+  title: "2005 Tissot T-Tracx Mother of Pearl Lady Chronograph",
   sliderImages: [
     "public/assets/Images/Tissot/2005_Tissot_T_Tracx_MOP/IMG_0294.JPG",
     "public/assets/Images/Tissot/2005_Tissot_T_Tracx_MOP/IMG_0295.JPG",

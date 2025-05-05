@@ -235,6 +235,7 @@ export const brandsDB: Brand[] = [
     name: BrandsEnum.NOVART,
     logoImg: "public/assets/Images/Brands_Logos/novart_logo.PNG",
     displayOrder: 34,
+    description: "Vintage Portuguese brand with Swiss Made parts and assembly.",
   },
 
   {
@@ -289,6 +290,12 @@ export const brandsDB: Brand[] = [
     name: BrandsEnum.CAMEL_TROPHY,
     logoImg: "public/assets/Images/Brands_Logos/camel_logo.PNG",
     displayOrder: undefined,
+  },
+  {
+    name: BrandsEnum.CORTICIMA,
+    logoImg: "public/assets/Images/Brands_Logos/corticima_logo.PNG",
+    displayOrder: undefined,
+    description: "Vintage Portuguese brand with Swiss Made parts and assembly.",
   },
 
   {
@@ -461,6 +468,12 @@ export const brandsDB: Brand[] = [
     logoImg: "public/assets/Images/Brands_Logos/natalis_logo.PNG",
     displayOrder: undefined,
   },
+  {
+    name: BrandsEnum.NOBREZA,
+    logoImg: "public/assets/Images/Brands_Logos/nobreza_logo.PNG",
+    displayOrder: undefined,
+    description: "Vintage Portuguese brand with Swiss Made parts and assembly.",
+  },
 
   {
     name: BrandsEnum.ONE,
@@ -523,5 +536,6 @@ export const brandsDB: Brand[] = [
     name: BrandsEnum.TAUNUS,
     logoImg: "public/assets/Images/Brands_Logos/taunus_logo.PNG",
     displayOrder: undefined,
+    description: "Vintage Portuguese brand with Swiss Made parts and assembly.",
   },
 ];

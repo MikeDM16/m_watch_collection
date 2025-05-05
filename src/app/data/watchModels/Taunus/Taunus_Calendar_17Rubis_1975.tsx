@@ -16,7 +16,7 @@ import { MovementsDataDB } from "../../movementsData";
 import { WatchDetails } from "../../watchDetails";
 
 const details: WatchDetails = {
-  title: "1977 Tarus Calendar 17 Rubis",
+  title: "1977 Taunus Calendar 17 Rubis",
   sliderImages: [
     "public/assets/Images/Taunus/1977_Taunus_Calendar/IMG_0341.JPG",
     "public/assets/Images/Taunus/1977_Taunus_Calendar/IMG_0342.JPG",

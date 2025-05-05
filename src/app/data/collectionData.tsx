@@ -471,9 +471,9 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     href: require("./watchModels/Tag_Heuer/Tag_Heuer_Formula_1_WAC1210_2008"),
     specialCollectionItem: false,
   },
-  "2008 Timex Power Reserve T2M515": {
+  "Timex Power Reserve T2M515": {
     brand: BrandsEnum.TIMEX,
-    legend: "2008 Timex Power Reserve T2M515",
+    legend: "Timex Power Reserve T2M515",
     year: 2008,
     type: WatchTypeEnum.CASUAL,
     srcImage: "public/assets/Images/Timex/2008_Timex_T2M515_Power_Reserve/IMG_0323.JPG",
@@ -582,9 +582,9 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     href: require("./watchModels/Tissot/Tissot_PRS_516_J562662_2005"),
     specialCollectionItem: false,
   },
-  "2005 tissot T-Tracx Mother of Pearl Lady Chronograph": {
+  "Tissot T-Tracx Mother of Pearl Lady Chronograph": {
     brand: BrandsEnum.TISSOT,
-    legend: "2005 tissot T-Tracx Mother of Pearl Lady Chronograph",
+    legend: "Tissot T-Tracx Mother of Pearl Lady Chronograph",
     year: 2005,
     type: WatchTypeEnum.SPORTS,
     srcImage: "public/assets/Images/Tissot/2005_Tissot_T_Tracx_MOP/IMG_0298.JPG",
@@ -824,9 +824,9 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     href: require("./watchModels/Tissot/Tissot_Sports_E662_Chrono_1995"),
     specialCollectionItem: false,
   },
-  "1995 Universal Geneve 875.214 Chrono": {
+  "Universal Geneve 875.214 Chrono": {
     brand: BrandsEnum.UNIVERSAL_GENEVE,
-    legend: "1995 Universal Geneve 875.214 Chrono",
+    legend: "Universal Geneve 875.214 Chrono",
     year: 1995,
     type: WatchTypeEnum.SPORTS,
     srcImage: "public/assets/Images/Universal_Geneve/1995_Universal_Geneve_875_214/IMG_6690.JPG",
@@ -1199,9 +1199,9 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     href: require("./watchModels/Omega/Omega_Polaris_MultiFunction_386_0826_plated_1988"),
     specialCollectionItem: false,
   },
-  "1988 Omega De Ville Longchamp 191.0198 Cal. 1340": {
+  "Omega De Ville Longchamp 191.0198 Cal. 1340": {
     brand: BrandsEnum.OMEGA,
-    legend: "1988 Omega De Ville Longchamp 191.0198 Cal. 1340",
+    legend: "Omega De Ville Longchamp 191.0198 Cal. 1340",
     year: 1988,
     type: WatchTypeEnum.DRESS,
     srcImage: "public/assets/Images/Omega/1988_Omega_1910198_DeVille_longchamp/IMG_0265.JPG",
@@ -1354,9 +1354,9 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     href: require("./watchModels/Tissot/Tissot_SeaStar_Quartz_1978"),
     specialCollectionItem: false,
   },
-  "1977 Tarus Calendar 17 Rubis": {
+  "Taunus Calendar 17 Rubis": {
     brand: BrandsEnum.TAUNUS,
-    legend: "1977 Tarus Calendar 17 Rubis",
+    legend: "Taunus Calendar 17 Rubis",
     year: 1977,
     type: WatchTypeEnum.CASUAL,
     srcImage: "public/assets/Images/Taunus/1977_Taunus_Calendar/IMG_0345.JPG",
@@ -1379,6 +1379,15 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     type: WatchTypeEnum.CASUAL,
     srcImage: "public/assets/Images/Omega/1977_Omega_1960122/IMG_0225.JPG",
     href: require("./watchModels/Omega/Omega_1960122_Cal_1370_1977"),
+    specialCollectionItem: false,
+  },
+  "Nobreza Automatic ETA 2783 25 Jewels": {
+    brand: BrandsEnum.NOBREZA,
+    legend: "Nobreza Automatic ETA 2783 25 Jewels",
+    year: 1977,
+    type: WatchTypeEnum.CASUAL,
+    srcImage: "public/assets/Images/Nobreza/1977_Nobreza_Automatic_25_jewels/IMG_1814.JPG",
+    href: require("./watchModels/Nobreza/Nobreza_Automatic_1977"),
     specialCollectionItem: false,
   },
   "Omega De Ville 191.0167 Cal. 1365": {
@@ -1644,6 +1653,15 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     href: require("./watchModels/Titus/Titus_Tuning_Fork_F300Hz_1970"),
     specialCollectionItem: false,
   },
+  "Corticima Dress 17 Jewels": {
+    brand: BrandsEnum.CORTICIMA,
+    legend: "Corticima Dress 17 Jewels",
+    year: 1970,
+    type: WatchTypeEnum.CASUAL,
+    srcImage: "public/assets/Images/Corticima/1970_Corticima_Dress_17_jewels/IMG_1849.JPG",
+    href: require("./watchModels/Corticima/Corticima_Dress_17Jewels_1970"),
+    specialCollectionItem: false,
+  },
   "Tissot Seastar Eletronic": {
     brand: BrandsEnum.TISSOT,
     legend: "Tissot Seastar Eletronic",
@@ -1698,9 +1716,9 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     href: require("./watchModels/Cauny/Cauny_Prima_Calendario_17Rubis_1967"),
     specialCollectionItem: false,
   },
-  "1967 Cauny Prima Calendario 17 Jewels": {
+  "Cauny Prima Calendario 17 Jewels": {
     brand: BrandsEnum.CAUNY,
-    legend: "1967 Cauny Prima Calendario 17 Jewels",
+    legend: "Cauny Prima Calendario 17 Jewels",
     year: 1967,
     type: WatchTypeEnum.CASUAL,
     srcImage: "public/assets/Images/Cauny/1967_Cauny_Prima_Calendario/IMG_1760.JPG",
@@ -1725,9 +1743,9 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     href: require("./watchModels/Fontaine/Fontaine_ETA2472_Auto_1965"),
     specialCollectionItem: false,
   },
-  "1965 Cauny Apollon Calendario 17 Rubis": {
+  "Cauny Apollon Calendario 17 Rubis": {
     brand: BrandsEnum.CAUNY,
-    legend: "1965 Cauny Apollon Calendario 17 Rubis",
+    legend: "Cauny Apollon Calendario 17 Rubis",
     year: 1965,
     type: WatchTypeEnum.CASUAL,
     srcImage: "public/assets/Images/Cauny/1965_Cauny_Apollon_Calendario/IMG_1902.JPG",
@@ -1952,9 +1970,9 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     href: require("./watchModels/Zenith/Zenith_Pilot_P12_1945"),
     specialCollectionItem: false,
   },
-  "1945 Argus Tuxedo Militare Cal. AS1130": {
+  "Argus Tuxedo Militare Cal. AS1130": {
     brand: BrandsEnum.ARGUS,
-    legend: "1945 Argus Tuxedo Militare Cal. AS1130",
+    legend: "Argus Tuxedo Militare Cal. AS1130",
     year: 1945,
     type: WatchTypeEnum.CASUAL,
     srcImage: "public/assets/Images/Argus/1945_Argus_Tuxedo_Militare_AS_1130/IMG_0557.JPG",
