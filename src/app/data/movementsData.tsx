@@ -33,6 +33,7 @@ import MIYOTA_OS10 from "./movements/Miyota/OS10";
 import OMEGA_265 from "./movements/Omega/Omega_265_15J";
 import OMEGA_267 from "./movements/Omega/Omega_267_17J";
 import OMEGA_268 from "./movements/Omega/Omega_268_17J";
+import OMEGA_410 from "./movements/Omega/Omega_410_17J";
 import OMEGA_1151 from "./movements/Omega/Omega_1151";
 import OMEGA_1370 from "./movements/Omega/Omega_1370";
 import OMEGA_1430 from "./movements/Omega/Omega_1430";
@@ -42,6 +43,7 @@ import OMEGA_1449 from "./movements/Omega/Omega_1449";
 import OMEGA_1665 from "./movements/Omega/Omega_1665";
 import OMEGA_1670 from "./movements/Omega/Omega_1670";
 import OMEGA_1675 from "./movements/Omega/Omega_1675";
+import OMEGA_T17 from "./movements/Omega/Omega_T17_15J";
 import ORIENT_46D40 from "./movements/Orient/Orient_46D40";
 import RW_4200 from "./movements/Raymond_Weil/RW_4200";
 import RONDA_5030D from "./movements/Ronda/Ronda_5030D";
@@ -151,9 +153,11 @@ export const MovementsDataDB: Record<string, Caliber> = {
   RONDA_5040D: RONDA_5040D,
   RONDA_5030D: RONDA_5030D,
 
+  OMEGA_T17: OMEGA_T17,
   OMEGA_265: OMEGA_265,
   OMEGA_268: OMEGA_268,
   OMEGA_267: OMEGA_267,
+  OMEGA_410: OMEGA_410,
   OMEGA_1370: OMEGA_1370,
   OMEGA_1430: OMEGA_1430,
   OMEGA_1675: OMEGA_1675,

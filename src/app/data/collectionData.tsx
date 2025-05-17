@@ -246,6 +246,16 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     specialCollectionItem: false,
   },
 
+  "Tissot PRS 516 NASCAR Racing Chronograph": {
+    brand: BrandsEnum.TISSOT,
+    legend: "Tissot PRS 516 NASCAR Racing Chronograph",
+    year: 2014,
+    type: WatchTypeEnum.SPORTS,
+    srcImage: "public/assets/Images/Tissot/2014_Tissot_NASCAR_Racing_V7750/IMG_0130.JPG",
+    href: require("./watchModels/Tissot/Tissot_PRS_516_Valjoux_2009"),
+    specialCollectionItem: true,
+  },
+
   "Tissot T-Classic Dream": {
     brand: BrandsEnum.TISSOT,
     legend: "Tissot T-Classic Dream",
@@ -424,15 +434,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     href: require("./watchModels/Tissot/Tissot_PRS_200_T362462K_2010"),
     specialCollectionItem: false,
   },
-  "Tissot PRS 516 Carbon": {
-    brand: BrandsEnum.TISSOT,
-    legend: "Tissot PRS 516 Carbon",
-    year: 2009,
-    type: WatchTypeEnum.SPORTS,
-    srcImage: "public/assets/Images/Tissot/2014_Tissot_PRS_516_Valjoux/IMG_4520.JPG",
-    href: require("./watchModels/Tissot/Tissot_PRS_516_Valjoux_2009"),
-    specialCollectionItem: true,
-  },
+
   "Tissot T-Touch Titanium": {
     brand: BrandsEnum.TISSOT,
     legend: "Tissot T-Touch Titanium",
@@ -1879,9 +1881,18 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     href: require("./watchModels/Tissot/Tissot_Visodate_1955"),
     specialCollectionItem: false,
   },
-  "Automatic Admes ETA 1246": {
+  "Omega StayBrite Honeycomb": {
+    brand: BrandsEnum.OMEGA,
+    legend: "Omega StayBrite Honeycomb",
+    year: 1952,
+    type: WatchTypeEnum.CASUAL,
+    srcImage: "public/assets/Images/Omega/1952_Omega_Staybrite_410/IMG_0034.JPG",
+    href: require("./watchModels/Omega/Omega_StayBrite_Honeycomb_1952"),
+    specialCollectionItem: false,
+  },
+  "Admes Automatic ETA 1246": {
     brand: BrandsEnum.ADMES,
-    legend: "Automatic Admes ETA 1246",
+    legend: "Admes Automatic ETA 1246",
     year: 1950,
     type: WatchTypeEnum.DRESS,
     srcImage: "public/assets/Images/Admes/1950_Admes_Automatic/IMG_1443.JPG",
@@ -1950,7 +1961,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     type: WatchTypeEnum.CASUAL,
     srcImage: "public/assets/Images/Signo/1947_Signo_Small_Seconds/IMG_0653.JPG",
     href: require("./watchModels/Signo/Signo_Small_Seconds_1947"),
-    specialCollectionItem: true,
+    specialCollectionItem: false,
   },
   "Tissot Antimagnetic": {
     brand: BrandsEnum.TISSOT,
@@ -1987,6 +1998,15 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     srcImage: "public/assets/Images/Natalis/1943_Natalis_German/IMG_2548.JPG",
     href: require("./watchModels/Natalis/Natalis_AS1130_1943"),
     specialCollectionItem: false,
+  },
+  'Omega StayBrite "Tank" CK3416': {
+    brand: BrandsEnum.OMEGA,
+    legend: 'Omega StayBrite "Tank" CK3416',
+    year: 1934,
+    type: WatchTypeEnum.CASUAL,
+    srcImage: "public/assets/Images/Omega/1934_OmegaStaybrite_Tank_CK3516/IMG_0061.JPG",
+    href: require("./watchModels/Omega/Omega_StayBrite_CK3416_T17_1934"),
+    specialCollectionItem: true,
   },
 };
 

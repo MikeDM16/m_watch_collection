@@ -6,5 +6,5 @@ export const DialMarketsEnum = {
   ROUND: "Round Indeces",
   DAGGER: "Dagger Indeces",
   BATTON: "Baton Indeces",
-  ARROW: "Arrow Marker",
+  ARROW: "Arrow Indeces",
 };
