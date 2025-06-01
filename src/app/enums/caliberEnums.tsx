@@ -18,6 +18,7 @@ export const CaliberBrandsEnum = {
   DUBOIS_DEPRAZ: "Dubois Depraz",
   ZENITH: "Zenith",
   ORIENT: "Orient",
+  POLJOT: "Poljot",
 };
 
 export const FrequencyEnum = {

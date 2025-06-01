@@ -63,7 +63,11 @@ const details: WatchDetails = {
     "public/assets/Images/Corticima/1970_Corticima_Dress_17_jewels/IMG_1874.JPG",
     "public/assets/Images/Corticima/1970_Corticima_Dress_17_jewels/IMG_1875.JPG",
   ],
-
+  saleReport: {
+    price: 181,
+    date: "26/05/2025",
+    url: "https://www.catawiki.com/en/l/95627432-corticima-tuxedo-fe-233-17-jewels-no-reserve-price-269-men-1977",
+  },
   technicalData: {
     features: [featuresEnum.MECHANICAL],
 

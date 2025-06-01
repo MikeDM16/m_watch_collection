@@ -62,7 +62,11 @@ const details: WatchDetails = {
     "public/assets/Images/Argus/1945_Argus_Tuxedo_Militare_AS_1130/IMG_0577.JPG",
     "public/assets/Images/Argus/1945_Argus_Tuxedo_Militare_AS_1130/IMG_0578.JPG",
   ],
-
+  saleReport: {
+    price: 124,
+    date: "01/05/2025",
+    url: "https://www.catawiki.com/en/l/95113742",
+  },
   technicalData: {
     features: [featuresEnum.MECHANICAL, featuresEnum.INCABLOC],
 

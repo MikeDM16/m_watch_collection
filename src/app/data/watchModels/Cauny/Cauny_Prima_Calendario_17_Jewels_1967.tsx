@@ -64,7 +64,11 @@ const details: WatchDetails = {
     "public/assets/Images/Cauny/1967_Cauny_Prima_Calendario/IMG_1776.JPG",
     "public/assets/Images/Cauny/1967_Cauny_Prima_Calendario/IMG_1777.JPG",
   ],
-
+  saleReport: {
+    price: 113,
+    date: "10/05/2025",
+    url: "https://www.catawiki.com/en/l/95357825",
+  },
   technicalData: {
     features: [featuresEnum.DATE, featuresEnum.MECHANICAL, featuresEnum.GOLD_PLATED_10M],
 

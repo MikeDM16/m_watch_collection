@@ -168,7 +168,11 @@ const details: WatchDetails = {
     "public/assets/Images/Breitling/1994_Breitling_Chronomat_10th_Anniversary_A13050/IMG_9317.JPG",
     "public/assets/Images/Breitling/1994_Breitling_Chronomat_10th_Anniversary_A13050/IMG_9318.JPG",
   ],
-
+  saleReport: {
+    price: 1981,
+    date: "30/03/2025",
+    url: "https://www.catawiki.com/en/l/94443117",
+  },
   technicalData: {
     features: [
       featuresEnum.DATE,
