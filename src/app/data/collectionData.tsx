@@ -179,6 +179,15 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     href: require("./watchModels/Tissot/Tissot_Fetes_Des_Vignerons_2019"),
     specialCollectionItem: false,
   },
+  "2018 Poljot Jet Fighter Limited Edition 129/600": {
+    brand: BrandsEnum.POLJOT,
+    legend: "2018 Poljot Jet Fighter Limited Edition 129/600",
+    year: 2018,
+    type: WatchTypeEnum.SPORTS,
+    srcImage: "public/assets/Images/Poljot/2018_Poljot_JetFighter_3133/IMG_0478.JPG",
+    href: require("./watchModels/Poljot/Poljot_Jetfighter_Limited_2018"),
+    specialCollectionItem: true,
+  },
   "Porsche Design Drivers Collection Cayenne": {
     brand: BrandsEnum.PORSCHE_DESIGN,
     legend: "Porsche Design Drivers Collection Cayenne",
@@ -444,6 +453,16 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     href: require("./watchModels/Tissot/Tissot_T-Touch_2009"),
     specialCollectionItem: false,
   },
+  "2008 Tissot T-Race T472S Chronograph": {
+    brand: BrandsEnum.TISSOT,
+    legend: "2008 Tissot T-Race T472S Chronograph",
+    year: 2008,
+    type: WatchTypeEnum.SPORTS,
+    srcImage: "public/assets/Images/Tissot/2008_Tissot_T_Race_T472S/IMG_0411.JPG",
+    href: require("./watchModels/Tissot/Tissot_T-Race_T472S_2008"),
+    specialCollectionItem: false,
+  },
+
   "Breitling Chronomat Evolution A13356 COSC": {
     brand: BrandsEnum.BREITLING,
     legend: "Breitling Chronomat Evolution A13356 COSC",

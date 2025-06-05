@@ -10,12 +10,12 @@ import { Caliber } from "../../movementsData";
 
 const POLJOT_3133_25J: Caliber = {
   // Title
-  title: "Eberhard 16000",
+  title: "Poljot 3133",
   //Description
   description:
     "In the 1970s, Valjoux sold the chronograph caliber 7734 patent and machinery to the USSR. \
     The Russian factory Poljot then used this rigths to produce the chronograph movement 3133. \
-    Most of the parts of the Poljot 3133 are identical to the Valjoux 7734.\n\
+    Most of the parts of the Poljot 3133 are identical to the Valjoux 7734.\n\n\
     Different from the original ETA-Valjoux 7734 movement, all chronograph related gears run in jewels, and the Glucydur balance swings in a shock protection system that was developed by Poljot. \n\
     The balance was modified to a smaller diameter that makes the 3133 beating at a higher 21,600H/h. (ETA 7734 runs runs at 18.000 vph). \n\
     The Russian caliber is renowned for being robust, precise and reliable.",
@@ -29,16 +29,15 @@ const POLJOT_3133_25J: Caliber = {
   sliderImages: [
     "public/assets/Images/Movements/Landeron/Landeron_48_17J/Landeron_48_17J_3.JPG",
     "public/assets/Images/Movements/Poljot/Poljot_3133/Poljot_3133_1.JPG",
-    "public/assets/Images/Movements/Poljot/Poljot_3133/Poljot_3133_1.JPG",
-    "public/assets/Images/Movements/Poljot/Poljot_3133/Poljot_3133_1.JPG",
-    "public/assets/Images/Movements/Poljot/Poljot_3133/Poljot_3133_1.JPG",
+    "public/assets/Images/Movements/Poljot/Poljot_3133/Poljot_3133_2.JPG",
+    "public/assets/Images/Movements/Poljot/Poljot_3133/Poljot_3133_3.JPG",
   ],
   // Details
   details: {
     // Manufacturer
     manufacturer: CaliberBrandsEnum.POLJOT,
     // ModelReference
-    modelReference: "3133",
+    modelReference: "3133 (ETA 7734 Base)",
     // Type
     type: MovementWatchTypeEnum.MECHANIQUE,
     // Frequency

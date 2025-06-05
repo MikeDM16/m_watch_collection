@@ -58,6 +58,7 @@ export const BrandsEnum = {
   ROMAR: "Romar",
   SECTOR: "Sector",
   SIGNO: "Signo",
+  POLJOT: "Poljot",
   TONINO_LAMBORGHINI: "Tonino Lamborghini",
   TAUNUS: "Taunus",
   TOURIST: "Tourist",

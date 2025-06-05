@@ -496,6 +496,11 @@ export const brandsDB: Brand[] = [
     displayOrder: undefined,
   },
   {
+    name: BrandsEnum.POLJOT,
+    logoImg: "public/assets/Images/Brands_Logos/poljot_logo.PNG",
+    displayOrder: 50,
+  },
+  {
     name: BrandsEnum.PHILIP_WATCH,
     logoImg: "public/assets/Images/Brands_Logos/philipe_watch_logo.PNG",
     displayOrder: undefined,

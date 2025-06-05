@@ -45,7 +45,7 @@ import OMEGA_1670 from "./movements/Omega/Omega_1670";
 import OMEGA_1675 from "./movements/Omega/Omega_1675";
 import OMEGA_T17 from "./movements/Omega/Omega_T17_15J";
 import ORIENT_46D40 from "./movements/Orient/Orient_46D40";
-import POLJOT_3133_25J from "./movements/Poljot/Polot_3133_25_Jewles";
+import POLJOT_3133_25J from "./movements/Poljot/Polot_3133_25_Jewels";
 import RW_4200 from "./movements/Raymond_Weil/RW_4200";
 import RONDA_5030D from "./movements/Ronda/Ronda_5030D";
 import RONDA_5040D from "./movements/Ronda/Ronda_5040D";
@@ -193,5 +193,5 @@ export const MovementsDataDB: Record<string, Caliber> = {
   ZENITH_EL_PRIMERO_400Z: ZENITH_EL_PRIMERO_400Z,
   ZENITH_EL_PRIMERO_4021: ZENITH_EL_PRIMERO_4021,
 
-  Poljot_3133_25J: POLJOT_3133_25J,
+  POLJOT_3133_25J: POLJOT_3133_25J,
 };
