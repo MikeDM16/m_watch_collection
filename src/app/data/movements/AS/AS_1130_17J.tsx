@@ -23,12 +23,11 @@ const AS_1130: Caliber = {
   },
   // sliderImages
   sliderImages: [
-    "public/assets/Images/Movements/AS/AS_1130/AS_1130_1.JPG",
-    "public/assets/Images/Movements/AS/AS_1130/AS_1130_2.JPG",
     "public/assets/Images/Movements/AS/AS_1130/AS_1130_3.JPG",
     "public/assets/Images/Movements/AS/AS_1130/AS_1130_4.JPG",
     "public/assets/Images/Movements/AS/AS_1130/AS_1130_5.JPG",
     "public/assets/Images/Movements/AS/AS_1130/AS_1130_6.JPG",
+    "public/assets/Images/Movements/AS/AS_1130/AS_1130_7.JPG",
     "public/assets/Images/Movements/AS/AS_1130/mov_1130.PNG",
     "public/assets/Images/Movements/AS/AS_1130/mov_1130-GP.PNG",
     "public/assets/Images/Movements/AS/AS_1130/mov_1130-GP2.PNG",

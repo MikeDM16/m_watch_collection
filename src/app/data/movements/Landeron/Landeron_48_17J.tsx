@@ -10,7 +10,7 @@ import { Caliber } from "../../movementsData";
 
 const Landeron_48_17J: Caliber = {
   // Title
-  title: "Landeron 51",
+  title: "Landeron 48",
   //Description
   description:
     "The Landeron Cal. 48 is one of a family of chronograph movements produced by Landeron from 1937 through the 1970s. \n\

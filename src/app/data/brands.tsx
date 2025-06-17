@@ -321,6 +321,12 @@ export const brandsDB: Brand[] = [
     displayOrder: undefined,
   },
   {
+    name: BrandsEnum.AMYRIA,
+    logoImg: "public/assets/Images/Brands_Logos/amyria_logo.PNG",
+    displayOrder: undefined,
+    description: "Vintage Portuguese brand with Swiss Made parts and assembly.",
+  },
+  {
     name: BrandsEnum.BELEX,
     logoImg: "public/assets/Images/Brands_Logos/belex_logo.PNG",
     displayOrder: undefined,
@@ -483,6 +489,11 @@ export const brandsDB: Brand[] = [
   {
     name: BrandsEnum.OMODOX,
     logoImg: "public/assets/Images/Brands_Logos/omodox_logo.PNG",
+    displayOrder: undefined,
+  },
+  {
+    name: BrandsEnum.OLMA,
+    logoImg: "public/assets/Images/Brands_Logos/olma_logo.PNG",
     displayOrder: undefined,
   },
   {
