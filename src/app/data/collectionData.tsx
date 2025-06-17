@@ -2014,7 +2014,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     legend: "1946 Omega 2504-5 Cal. 30T2",
     year: 1946,
     type: WatchTypeEnum.DRESS,
-    srcImage: "public/assets/Images/Omega/1946_Omega_166_041_30T2/IMG_0873.JPG",
+    srcImage: "public/assets/Images/Omega/1946_Omega_2404_5_30T2/IMG_0873.JPG",
     href: require("./watchModels/Omega/Omega_166041_Cal_30T2_1946"),
     specialCollectionItem: false,
   },
