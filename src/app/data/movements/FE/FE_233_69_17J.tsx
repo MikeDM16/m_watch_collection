@@ -42,7 +42,7 @@ const FE_233_69: Caliber = {
     // Reserve
     reserve: ReserveHoursEnum.R_41,
     // Functions
-    functions: "Day, Hours, Minutes, Sweep Seconds at 6 o'clock",
+    functions: "Day, Hours, Minutes, Sub Seconds at 6 o'clock",
     // Battery
     battery: undefined,
   },

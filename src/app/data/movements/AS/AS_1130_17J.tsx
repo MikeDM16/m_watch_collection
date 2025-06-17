@@ -47,7 +47,7 @@ const AS_1130: Caliber = {
     // Reserve
     reserve: ReserveHoursEnum.R_45,
     // Functions
-    functions: "Hours, Minutes, Sweep Seconds at 6 o'clock",
+    functions: "Hours, Minutes, Sub Seconds at 6 o'clock",
     // Battery
     battery: undefined,
   },

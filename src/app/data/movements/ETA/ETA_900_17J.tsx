@@ -8,34 +8,39 @@ import { MovementWatchTypeEnum } from "@/app/enums/movementWatchTypeEnum";
 
 import { Caliber } from "../../movementsData";
 
-const OMEGA_30T2: Caliber = {
+const ETA_900: Caliber = {
   // Title
-  title: "Omega Cal. 30T2",
+  title: "ETA 900",
   //Description
-  description: "In-house Omega movement produced around 1939 until 1963.",
-
+  description:
+    "Description\n\
+  - 900: 10.5, sub second \n\
+  - 901: 10.5, sweep second \n\
+  - 930: 11.5, sub second \n\
+  - 932: 11.5, sweep second \n",
   // UsefullLinks
-  usefullLinks: {},
+  usefullLinks: {
+    "Emmy Watch ETA 900": "https://www.emmywatch.com/db/movement/eta--900/",
+  },
   // sliderImages
   sliderImages: [
-    "public/assets/Images/Movements/Omega/cal_30T2/Omega_cal_30T2_1.JPG",
-    "public/assets/Images/Movements/Omega/cal_30T2/Omega_cal_30T2_2.JPG",
-    "public/assets/Images/Movements/Omega/cal_30T2/Omega_cal_30T2_3.JPG",
+    "public/assets/Images/Movements/ETA/ETA_900/ETA_900_1.JPG",
+    "public/assets/Images/Movements/ETA/ETA_900/ETA_900_2.JPG",
   ],
   // Details
   details: {
     // Manufacturer
-    manufacturer: CaliberBrandsEnum.OMEGA,
+    manufacturer: CaliberBrandsEnum.ETA,
     // ModelReference
-    modelReference: "Cal. 30T2",
+    modelReference: "Cal. 900",
     // Type
     type: MovementWatchTypeEnum.MECHANIQUE,
     // Frequency
     frequency: FrequencyEnum.F_18000,
     // Jewels
-    jewels: JewelsNumberEnum.J_15,
+    jewels: JewelsNumberEnum.J_17,
     // Reserve
-    reserve: ReserveHoursEnum.R_44,
+    reserve: ReserveHoursEnum.R_41,
     // Functions
     functions: "Hours, Minutes, Sub Seconds at 6 o'clock",
     // Battery
@@ -43,4 +48,4 @@ const OMEGA_30T2: Caliber = {
   },
 };
 
-export default OMEGA_30T2;
+export default ETA_900;

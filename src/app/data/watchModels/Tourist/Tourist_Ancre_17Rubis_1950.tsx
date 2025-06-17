@@ -123,7 +123,7 @@ const details: WatchDetails = {
         frequency: "18000 A/h",
         jewels: "17 (Seventeen) Jewels ",
         reserve: "44 Hours",
-        functions: "Hours, Minutes, Sweep Seconds at 6 o'clock position, Incabloc",
+        functions: "Hours, Minutes, Sub Seconds at 6 o'clock position, Incabloc",
       },
     },
   },

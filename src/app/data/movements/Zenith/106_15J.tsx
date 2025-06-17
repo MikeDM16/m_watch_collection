@@ -8,26 +8,26 @@ import { MovementWatchTypeEnum } from "@/app/enums/movementWatchTypeEnum";
 
 import { Caliber } from "../../movementsData";
 
-const OMEGA_30T2: Caliber = {
+const ZENITH_106_15J: Caliber = {
   // Title
-  title: "Omega Cal. 30T2",
-  //Description
-  description: "In-house Omega movement produced around 1939 until 1963.",
+  title: "Zenith caliber 106",
 
+  //Description
+  description: "In-house Zenith movement produced around 1948 until 1955.",
   // UsefullLinks
   usefullLinks: {},
   // sliderImages
   sliderImages: [
-    "public/assets/Images/Movements/Omega/cal_30T2/Omega_cal_30T2_1.JPG",
-    "public/assets/Images/Movements/Omega/cal_30T2/Omega_cal_30T2_2.JPG",
-    "public/assets/Images/Movements/Omega/cal_30T2/Omega_cal_30T2_3.JPG",
+    "public/assets/Images/Movements/Zenith/P12_4_50/106_15J__0.JPG",
+    "public/assets/Images/Movements/Zenith/P12_4_50/106_15J__1.JPG",
   ],
+
   // Details
   details: {
     // Manufacturer
-    manufacturer: CaliberBrandsEnum.OMEGA,
+    manufacturer: CaliberBrandsEnum.ZENITH,
     // ModelReference
-    modelReference: "Cal. 30T2",
+    modelReference: "106",
     // Type
     type: MovementWatchTypeEnum.MECHANIQUE,
     // Frequency
@@ -35,12 +35,12 @@ const OMEGA_30T2: Caliber = {
     // Jewels
     jewels: JewelsNumberEnum.J_15,
     // Reserve
-    reserve: ReserveHoursEnum.R_44,
+    reserve: ReserveHoursEnum.R_38,
     // Functions
-    functions: "Hours, Minutes, Sub Seconds at 6 o'clock",
+    functions: "Hours, Minutes, Sweep Seconds",
     // Battery
     battery: undefined,
   },
 };
 
-export default OMEGA_30T2;
+export default ZENITH_106_15J;

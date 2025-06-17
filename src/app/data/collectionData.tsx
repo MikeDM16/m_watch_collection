@@ -1927,6 +1927,15 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     href: require("./watchModels/Helma/Helma_AS1130_1955"),
     specialCollectionItem: false,
   },
+  "Relide Militare 17 Jewels": {
+    brand: BrandsEnum.RELIDE,
+    legend: "Relide Militare 17 Jewels",
+    year: 1955,
+    type: WatchTypeEnum.CASUAL,
+    srcImage: "public/assets/Images/Relide/1955_Relide_Militare/IMG_1030.JPG",
+    href: require("./watchModels/Relide/Relide_Militare_1955"),
+    specialCollectionItem: false,
+  },
   "Hermes Landerom 51 Chronograph": {
     brand: BrandsEnum.HERMES,
     legend: "Hermes Landerom 51 Chronograph",
@@ -1961,6 +1970,15 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     type: WatchTypeEnum.DRESS,
     srcImage: "public/assets/Images/Admes/1950_Admes_Automatic/IMG_1443.JPG",
     href: require("./watchModels/Admes/Admes_ETA1246_Automatic_1950"),
+    specialCollectionItem: false,
+  },
+  "Certina Dress 15 Jewels": {
+    brand: BrandsEnum.CERTINA,
+    legend: "Certina Dress 15 Jewels",
+    year: 1950,
+    type: WatchTypeEnum.DRESS,
+    srcImage: "public/assets/Images/Certina/1950_Certina_Mechanical_331/IMG_0960.JPG",
+    href: require("./watchModels/Certina/Certina_Dress_331_15_jewels_1950"),
     specialCollectionItem: false,
   },
   "Titus Geneve Chronograph 18K Gold Landeron 48": {

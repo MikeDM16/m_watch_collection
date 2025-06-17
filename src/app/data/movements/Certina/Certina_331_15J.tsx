@@ -8,26 +8,26 @@ import { MovementWatchTypeEnum } from "@/app/enums/movementWatchTypeEnum";
 
 import { Caliber } from "../../movementsData";
 
-const OMEGA_30T2: Caliber = {
+const CERTINA_331: Caliber = {
   // Title
-  title: "Omega Cal. 30T2",
+  title: "Certina Cal. 331",
   //Description
-  description: "In-house Omega movement produced around 1939 until 1963.",
-
+  description: "",
   // UsefullLinks
-  usefullLinks: {},
+  usefullLinks: {
+    "Emmy Watch Cal. Certina 331": "https://www.emmywatch.com/db/movement/certina--331/",
+  },
   // sliderImages
   sliderImages: [
-    "public/assets/Images/Movements/Omega/cal_30T2/Omega_cal_30T2_1.JPG",
-    "public/assets/Images/Movements/Omega/cal_30T2/Omega_cal_30T2_2.JPG",
-    "public/assets/Images/Movements/Omega/cal_30T2/Omega_cal_30T2_3.JPG",
+    "public/assets/Images/Movements/Certina/Certina_331/Certina_331_1.JPG",
+    "public/assets/Images/Movements/Certina/Certina_331/Certina_331_2.JPG",
   ],
   // Details
   details: {
     // Manufacturer
-    manufacturer: CaliberBrandsEnum.OMEGA,
+    manufacturer: CaliberBrandsEnum.CERTINA,
     // ModelReference
-    modelReference: "Cal. 30T2",
+    modelReference: "Cal. 331",
     // Type
     type: MovementWatchTypeEnum.MECHANIQUE,
     // Frequency
@@ -35,7 +35,7 @@ const OMEGA_30T2: Caliber = {
     // Jewels
     jewels: JewelsNumberEnum.J_15,
     // Reserve
-    reserve: ReserveHoursEnum.R_44,
+    reserve: ReserveHoursEnum.R_50,
     // Functions
     functions: "Hours, Minutes, Sub Seconds at 6 o'clock",
     // Battery
@@ -43,4 +43,4 @@ const OMEGA_30T2: Caliber = {
   },
 };
 
-export default OMEGA_30T2;
+export default CERTINA_331;

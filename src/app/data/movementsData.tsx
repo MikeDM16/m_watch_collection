@@ -1,5 +1,6 @@
 import AS_1130 from "./movements/AS/AS_1130_17J";
 import AS_1950 from "./movements/AS/AS_1950_17J";
+import CERTINA_331 from "./movements/Certina/Certina_331_15J";
 import DD_2000_ETA_955_232 from "./movements/Debois_Depraz/DD_2000_955";
 import DD_2000_ETA_2982 from "./movements/Debois_Depraz/DD_2000_2892";
 import EBERHARD_16000_17J from "./movements/Eberhard/Eberhard_16000_17J";
@@ -7,6 +8,7 @@ import ETA_C07_111 from "./movements/ETA/C07_111";
 import ETA_251_262 from "./movements/ETA/ETA_251_262_27J";
 import ETA_251_265 from "./movements/ETA/ETA_251_265_23J";
 import ETA_251_272 from "./movements/ETA/ETA_251_272_22J";
+import ETA_900 from "./movements/ETA/ETA_900_17J";
 import ETA_902_101 from "./movements/ETA/ETA_902_101";
 import ETA_955_112 from "./movements/ETA/ETA_955_112";
 import ETA_955_114 from "./movements/ETA/ETA_955_114";
@@ -109,11 +111,14 @@ export const MovementsDataDB: Record<string, Caliber> = {
   AS_1130: AS_1130,
   AS_1950: AS_1950,
 
+  CERTINA_331: CERTINA_331,
+
   DD_2000_ETA_2982: DD_2000_ETA_2982,
   DD_2000_ETA_955_232: DD_2000_ETA_955_232,
 
   EBERHARD_16000_17J: EBERHARD_16000_17J,
 
+  ETA_900: ETA_900,
   ETA_1256: ETA_1256,
   ETA_251_262: ETA_251_262,
   ETA_251_265: ETA_251_265,

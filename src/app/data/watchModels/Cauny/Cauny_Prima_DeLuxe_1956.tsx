@@ -133,7 +133,7 @@ const details: WatchDetails = {
         frequency: "18000 A/h",
         jewels: "17 (Seventeen) Jewels ",
         reserve: "50 Hours",
-        functions: "Hours, Minutes, Sweep Seconds at 6 o'clock",
+        functions: "Hours, Minutes, Sub Seconds at 6 o'clock",
       },
     },
   },

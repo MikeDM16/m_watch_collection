@@ -287,6 +287,11 @@ export const brandsDB: Brand[] = [
   },
 
   {
+    name: BrandsEnum.CERTINA,
+    logoImg: "public/assets/Images/Brands_Logos/certina_logo.PNG",
+    displayOrder: 40,
+  },
+  {
     name: BrandsEnum.CAMEL_TROPHY,
     logoImg: "public/assets/Images/Brands_Logos/camel_logo.PNG",
     displayOrder: undefined,
@@ -523,6 +528,12 @@ export const brandsDB: Brand[] = [
     displayOrder: undefined,
   },
   {
+    name: BrandsEnum.RELIDE,
+    logoImg: "public/assets/Images/Brands_Logos/relide_logo.PNG",
+    displayOrder: undefined,
+    description: "Vintage Portuguese brand with Swiss Made parts and assembly.",
+  },
+  {
     name: BrandsEnum.RONE,
     logoImg: "public/assets/Images/Brands_Logos/rone_logo.PNG",
     displayOrder: undefined,
@@ -533,6 +544,7 @@ export const brandsDB: Brand[] = [
     displayOrder: undefined,
     description: "Vintage Portuguese brand with Swiss Made parts and assembly.",
   },
+
   {
     name: BrandsEnum.SIGNO,
     logoImg: "public/assets/Images/Brands_Logos/signo_logo.PNG",

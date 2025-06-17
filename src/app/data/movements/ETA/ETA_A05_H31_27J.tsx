@@ -39,7 +39,7 @@ const ETA_A05_H31_27: Caliber = {
     reserve: ReserveHoursEnum.R_60,
     // Functions
     functions:
-      "Hours, Minutes, Sweep Seconds at 9 o'clock, 30M Chronograph, date adjusted with pusher at 10 o'clock",
+      "Hours, Minutes, Sub Seconds at 9 o'clock, 30M Chronograph, date adjusted with pusher at 10 o'clock",
     // Battery
     battery: undefined,
   },

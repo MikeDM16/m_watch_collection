@@ -39,7 +39,7 @@ const Landeron_51_17J: Caliber = {
     // Reserve
     reserve: ReserveHoursEnum.R_44,
     // Functions
-    functions: "Minutes, Sweep Seconds at 9 o'clock, 30 minutes Chronograph",
+    functions: "Minutes, Sub Seconds at 9 o'clock, 30 minutes Chronograph",
     // Battery
     battery: undefined,
   },

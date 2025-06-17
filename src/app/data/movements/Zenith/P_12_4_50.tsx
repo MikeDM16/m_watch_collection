@@ -47,7 +47,7 @@ const ZENITH_P_12_4_50: Caliber = {
     // Reserve
     reserve: ReserveHoursEnum.R_44,
     // Functions
-    functions: "Hours, Minutes, Sweep Seconds at 6 o'clock",
+    functions: "Hours, Minutes, Sub Seconds at 6 o'clock",
     // Battery
     battery: undefined,
   },

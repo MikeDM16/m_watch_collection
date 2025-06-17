@@ -125,7 +125,7 @@ const details: WatchDetails = {
         frequency: "28800 A/h",
         jewels: "17 (Seventeen) Jewels ",
         reserve: "52 Hours",
-        functions: "Day, Date, Hours, Minutes, Sweep Seconds at 9 o'clock, 12h 30M 60s Chronograph",
+        functions: "Day, Date, Hours, Minutes, Sub Seconds at 9 o'clock, 12h 30M 60s Chronograph",
       },
     },
   },

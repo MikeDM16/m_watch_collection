@@ -42,7 +42,7 @@ reserve:
   ReserveHoursEnum.R_44,
   // Functions
 functions:
-  "Day, Date, Hours, Minutes, Sweep Seconds at 9 o'clock, 12h 30M 60s Chronograph",
+  "Day, Date, Hours, Minutes, Sub Seconds at 9 o'clock, 12h 30M 60s Chronograph",
   // Battery
 battery:
   undefined,
