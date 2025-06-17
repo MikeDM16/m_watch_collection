@@ -1411,13 +1411,31 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     href: require("./watchModels/Nobreza/Nobreza_Automatic_1977"),
     specialCollectionItem: false,
   },
-  "1977 Amyria Blue Shades AS 1950": {
+  "Nobreza Shades 17 Jewels": {
+    brand: BrandsEnum.NOBREZA,
+    legend: "Nobreza Shades 17 Jewels",
+    year: 1976,
+    type: WatchTypeEnum.CASUAL,
+    srcImage: "public/assets/Images/Nobreza/1976_Nobreza_shades_17_jewels/IMG_0991.JPG",
+    href: require("./watchModels/Nobreza/Nobreza_Shades_Mechanical_1976"),
+    specialCollectionItem: false,
+  },
+  "Amyria Blue Shades AS 1950": {
     brand: BrandsEnum.AMYRIA,
-    legend: "1977 Amyria Blue Shades AS 1950",
+    legend: "Amyria Blue Shades AS 1950",
     year: 1977,
     type: WatchTypeEnum.CASUAL,
     srcImage: "public/assets/Images/Amyria/1997_Amyria_Blue_Shades/IMG_0733.JPG",
     href: require("./watchModels/Amyria/Amyria_Blue_Shades_1977"),
+    specialCollectionItem: false,
+  },
+  "Amyria Day Date": {
+    brand: BrandsEnum.AMYRIA,
+    legend: "Amyria Day Date",
+    year: 1976,
+    type: WatchTypeEnum.CASUAL,
+    srcImage: "public/assets/Images/Amyria/1976_Amyria_Day_Date/IMG_0893.JPG",
+    href: require("./watchModels/Amyria/Amyria_Day_Date_1976"),
     specialCollectionItem: false,
   },
   "Omega De Ville 191.0167 Cal. 1365": {
@@ -1481,6 +1499,15 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     type: WatchTypeEnum.DIVE,
     srcImage: "public/assets/Images/Lucerne/1975_Lucerne_Dive/IMG_0443.JPG",
     href: require("./watchModels/Lucerne/Lucerne_Automatic_27J_1975"),
+    specialCollectionItem: false,
+  },
+  "Amer Campos FE 233 17 Jewels": {
+    brand: BrandsEnum.AMER,
+    legend: "Amer Campos FE 233 17 Jewels",
+    year: 1975,
+    type: WatchTypeEnum.CASUAL,
+    srcImage: "public/assets/Images/Amer/1975_Amer_Campos/IMG_0929.JPG",
+    href: require("./watchModels/Amer/Amer_Campos_1975_17_jewels"),
     specialCollectionItem: false,
   },
   "Lucerne Three Stars": {
@@ -1818,6 +1845,15 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     href: require("./watchModels/Omega/Omega_Geneve_Cal_268_1961"),
     specialCollectionItem: true,
   },
+  "Tissot Nuevo Horizonte": {
+    brand: BrandsEnum.TISSOT,
+    legend: "Tissot Nuevo Horizonte",
+    year: 1960,
+    type: WatchTypeEnum.DRESS,
+    srcImage: "public/assets/Images/Tissot/1960_Tissot_Nuevo_Horizonte/IMG_1067.JPG",
+    href: require("./watchModels/Tissot/Tissot_Nuevo_Horizonte_1960"),
+    specialCollectionItem: false,
+  },
   "Lanco Cal. 1305": {
     brand: BrandsEnum.LANCO,
     legend: "Lanco Cal. 1305",
@@ -2000,18 +2036,18 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     href: require("./watchModels/Tissot/Tissot_Antimagnetic_1946"),
     specialCollectionItem: false,
   },
-  "1946 Olma Imperius AS 1130": {
+  "Olma Imperius AS 1130": {
     brand: BrandsEnum.OLMA,
-    legend: "1946 Olma Imperius AS 1130",
+    legend: "Olma Imperius AS 1130",
     year: 1946,
     type: WatchTypeEnum.DRESS,
     srcImage: "public/assets/Images/Olma/1946_Olma_Imperius_1130/IMG_0823.JPG",
     href: require("./watchModels/Olma/Olma_Imperius_1130_1946"),
     specialCollectionItem: false,
   },
-  "1946 Omega 2504-5 Cal. 30T2": {
+  "Omega 2504-5 Cal. 30T2": {
     brand: BrandsEnum.OMEGA,
-    legend: "1946 Omega 2504-5 Cal. 30T2",
+    legend: "Omega 2504-5 Cal. 30T2",
     year: 1946,
     type: WatchTypeEnum.DRESS,
     srcImage: "public/assets/Images/Omega/1946_Omega_2404_5_30T2/IMG_0873.JPG",

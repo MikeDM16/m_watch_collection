@@ -27,6 +27,7 @@ import ETA_Valjoux_7751_25 from "./movements/ETA/ETA_Valjoux_7751_25J";
 import FE_140 from "./movements/FE/FE_140_17J";
 import FE_233_69 from "./movements/FE/FE_233_69_17J";
 import FHF_96_4 from "./movements/FHF/FHF_96_4_17J";
+import FHF_974 from "./movements/FHF/FHF_974_17J";
 import Landeron_48_17J from "./movements/Landeron/Landeron_48_17J";
 import Landeron_51_17J from "./movements/Landeron/Landeron_51_17J_";
 import MIYOTA_OS10 from "./movements/Miyota/OS10";
@@ -62,6 +63,7 @@ import HEUER_4_93 from "./movements/Tag_Heuer/Tag_Heuer_4_93";
 import HEUER_4_95 from "./movements/Tag_Heuer/Tag_Heuer_4_95";
 import HEUER_4_96 from "./movements/Tag_Heuer/Tag_Heuer_4_96";
 import TIMEX_M100 from "./movements/Timex/Timex_M100";
+import TISSOT_26_9_261 from "./movements/Tissot/26_9_621_17J";
 import TISSOT_27_3 from "./movements/Tissot/27_3_15J";
 import TISSOT_781 from "./movements/Tissot/781_17J";
 import TISSOT_784 from "./movements/Tissot/784_21J";
@@ -135,9 +137,11 @@ export const MovementsDataDB: Record<string, Caliber> = {
   ETA_Valjoux_7751_25J: ETA_Valjoux_7751_25,
 
   FE_140: FE_140,
+  FE_233: FE_233_69,
   FE_233_69: FE_233_69,
 
   FHF_96_4: FHF_96_4,
+  FHF_974: FHF_974,
 
   // same base ETA 955.112 / 412
   HEUER_1_93: HEUER_1_93,
@@ -185,7 +189,9 @@ export const MovementsDataDB: Record<string, Caliber> = {
 
   TISSOT_2031: TISSOT_2031,
   TISSOT_2060_7734_17J: TISSOT_2060_7734_17J,
+  TISSOT_26_9_261: TISSOT_26_9_261,
   TISSOT_27_3: TISSOT_27_3,
+
   TISSOT_781: TISSOT_781,
   TISSOT_784: TISSOT_784,
   TISSOT_794: TISSOT_794,

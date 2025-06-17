@@ -26,6 +26,7 @@ const FE_140: Caliber = {
   sliderImages: [
     "public/assets/Images/Movements/FE/FE_140/FE_140_3.JPG",
     "public/assets/Images/Movements/FE/FE_140/FE_140_4.JPG",
+    "public/assets/Images/Movements/FE/FE_140/FE_140_5.JPG",
     "public/assets/Images/Movements/FE/FE_140/FE_140_1.JPG",
     "public/assets/Images/Movements/FE/FE_140/FE_140_2.JPG",
   ],

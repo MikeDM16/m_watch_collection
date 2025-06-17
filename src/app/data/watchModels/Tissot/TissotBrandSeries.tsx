@@ -14,5 +14,6 @@ export const TissotBrandSeries = {
   PRX: "PRX",
   PR_516_VINTAGE: "PR 516 (Vintage)",
   VISODATE: "Visodate (Vintage)",
+  NUEVO_HORIZONTE: "Nuevo Horizonte",
   ANTIMAGINETIC: "Antimagnetic",
 };

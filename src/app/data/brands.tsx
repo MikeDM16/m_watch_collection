@@ -321,6 +321,12 @@ export const brandsDB: Brand[] = [
     displayOrder: undefined,
   },
   {
+    name: BrandsEnum.AMER,
+    logoImg: "public/assets/Images/Brands_Logos/amer_logo.PNG",
+    displayOrder: undefined,
+    description: "Vintage Portuguese brand with Swiss Made parts and assembly.",
+  },
+  {
     name: BrandsEnum.AMYRIA,
     logoImg: "public/assets/Images/Brands_Logos/amyria_logo.PNG",
     displayOrder: undefined,
