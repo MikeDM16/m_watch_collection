@@ -64,7 +64,7 @@ const details: WatchDetails = {
     information: {
       brand: BrandsEnum.TISSOT,
       series: TissotBrandSeries.T_CLASSIC,
-      catalogueReference: "Fetes Des Vignerons Ltd. Ed. ",
+      catalogueReference: "Fetes Des Vignerons Ltd. Ed.",
       productionYear: "2019",
       movementType: MovementWatchTypeEnum.QUARTZ,
       style: WatchStyleEnum.DRESS,

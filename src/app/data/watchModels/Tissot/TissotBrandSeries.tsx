@@ -11,6 +11,7 @@ export const TissotBrandSeries = {
   BALLADE: "Ballade",
   SPORTS: "Sports",
   SEASTAR: "Seastar",
+  T12: "T.12",
   PRX: "PRX",
   PR_516_VINTAGE: "PR 516 (Vintage)",
   VISODATE: "Visodate (Vintage)",

@@ -32,7 +32,7 @@ const details: WatchDetails = {
       " - <b>TIMER</b> mode: Used to control regressive timer function. The movement works counter clock-wise and the  seconds' hands move one time per second; \n" +
       " - <b>ALARM</b>:Either over TIME or SET mode. Changes to control the alarm function; \n" +
       " - <b>0</b> mode: used to reset and adjust the position of all the hands. \n \n" +
-      "These particular Lorus models are hard to find in good condition. ",
+      "These particular Lorus models are hard to find in good condition.",
     sliderImages: [
       "public/assets/Images/Lorus/1993_Lorus_N945_7A10/N945 web/991ee770-0b96-469d-a72c-43be409cefce.JPG",
       "public/assets/Images/Lorus/1993_Lorus_N945_7A10/N945 web/32179456.JPG",

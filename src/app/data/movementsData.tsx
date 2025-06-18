@@ -5,6 +5,7 @@ import DD_2000_ETA_955_232 from "./movements/Debois_Depraz/DD_2000_955";
 import DD_2000_ETA_2982 from "./movements/Debois_Depraz/DD_2000_2892";
 import EBERHARD_16000_17J from "./movements/Eberhard/Eberhard_16000_17J";
 import ETA_C07_111 from "./movements/ETA/C07_111";
+import ETA_251_251 from "./movements/ETA/ETA_251_251_27J";
 import ETA_251_262 from "./movements/ETA/ETA_251_262_27J";
 import ETA_251_265 from "./movements/ETA/ETA_251_265_23J";
 import ETA_251_272 from "./movements/ETA/ETA_251_272_22J";
@@ -61,12 +62,14 @@ import SELLITA_SW200 from "./movements/Sellita/SW200";
 import HEUER_1_93 from "./movements/Tag_Heuer/Tag_Heuer_1_93";
 import HEUER_1_94 from "./movements/Tag_Heuer/Tag_Heuer_1_94";
 import HEUER_1_97 from "./movements/Tag_Heuer/Tag_Heuer_1_97";
+import TAG_HEUER_2_95 from "./movements/Tag_Heuer/Tag_Heuer_2_95";
 import HEUER_4_93 from "./movements/Tag_Heuer/Tag_Heuer_4_93";
 import HEUER_4_95 from "./movements/Tag_Heuer/Tag_Heuer_4_95";
 import HEUER_4_96 from "./movements/Tag_Heuer/Tag_Heuer_4_96";
 import TIMEX_M100 from "./movements/Timex/Timex_M100";
 import TISSOT_26_9_261 from "./movements/Tissot/26_9_621_17J";
 import TISSOT_27_3 from "./movements/Tissot/27_3_15J";
+import TISSOT_27B_1 from "./movements/Tissot/27B_1_15J";
 import TISSOT_781 from "./movements/Tissot/781_17J";
 import TISSOT_784 from "./movements/Tissot/784_21J";
 import TISSOT_794 from "./movements/Tissot/794_21J";
@@ -120,6 +123,7 @@ export const MovementsDataDB: Record<string, Caliber> = {
 
   ETA_900: ETA_900,
   ETA_1256: ETA_1256,
+  ETA_251_251: ETA_251_251,
   ETA_251_262: ETA_251_262,
   ETA_251_265: ETA_251_265,
   ETA_251_272: ETA_251_272,
@@ -192,11 +196,13 @@ export const MovementsDataDB: Record<string, Caliber> = {
   SEIKO_8M25: SEIKO_8M25,
   SELLITA_SW200: SELLITA_SW200,
 
+  TAG_HEUER_2_95: TAG_HEUER_2_95,
+
   TISSOT_2031: TISSOT_2031,
   TISSOT_2060_7734_17J: TISSOT_2060_7734_17J,
   TISSOT_26_9_261: TISSOT_26_9_261,
   TISSOT_27_3: TISSOT_27_3,
-
+  TISSOT_27B_1: TISSOT_27B_1,
   TISSOT_781: TISSOT_781,
   TISSOT_784: TISSOT_784,
   TISSOT_794: TISSOT_794,

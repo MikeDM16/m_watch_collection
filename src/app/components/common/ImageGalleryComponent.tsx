@@ -27,7 +27,7 @@ export default function ImageGalleryComponent(galleryImages: string[]) {
 
   const items = galleryImages.map((entry) => {
     const srcImg = getExternalResource(entry);
-    //const fullhdImageUrl = getExternalResource(getImgURLForSizeType(entry, SizeType.FULL_HD));
+    const fullhdImageUrl = getExternalResource(getImgURLForSizeType(entry, SizeType.FULL_HD));
     //const galleryImageUrl = getExternalResource(getImgURLForSizeType(entry, SizeType.GALLERY));
     //const sliderImageUrl = getExternalResource(getImgURLForSizeType(entry, SizeType.SLIDER));
     const thumbnailImageUrl = getExternalResource(getImgURLForSizeType(entry, SizeType.THUMBNAIL));
@@ -37,7 +37,7 @@ export default function ImageGalleryComponent(galleryImages: string[]) {
       height: 2500,
       srcSet: [
         { src: srcImg, width: 2000, height: 2000 },
-        //{ src: fullhdImageUrl, width: 1200, height: 1200 },
+        { src: fullhdImageUrl, width: 1200, height: 1200 },
         //{ src: galleryImageUrl, width: 800, height: 800 },
         //{ src: sliderImageUrl, width: 500, height: 500 },
         { src: thumbnailImageUrl, width: 200, height: 200 },

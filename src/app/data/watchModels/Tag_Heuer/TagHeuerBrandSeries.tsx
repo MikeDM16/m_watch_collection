@@ -6,4 +6,5 @@ export const TagHeuerBrandSeries = {
   PROFESSIONAL_2000_SERIES: "Professional 2000 Series",
   PROFESSIONAL_1500_SERIES: "Professional 1500 Series",
   AIRLINE_HEUER: "AirLine Professional Series (Pre-Tag)",
+  S_EL: "S/EL (Sports and Elegance)",
 };

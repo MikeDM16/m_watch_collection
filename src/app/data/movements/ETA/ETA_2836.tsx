@@ -14,7 +14,7 @@ const ETA_2836: Caliber = {
   //Description
   description:
     "High quality ETA automatic movement with gold plated finishing, adjusted and bi-diretional winding. \n \n" +
-    "Based on the ETA 2824-2 date movement, but with a added day-date complication. ",
+    "Based on the ETA 2824-2 date movement, but with a added day-date complication.",
   // UsefullLinks
   usefullLinks: {},
   // sliderImages

@@ -88,7 +88,7 @@ const details: WatchDetails = {
       title: "ETA 805.114",
       description:
         "Very basic Quartz movement from ETA's fashion line series. \n" +
-        "These calibers represent the entry line from the ETA range of movements. ",
+        "These calibers represent the entry line from the ETA range of movements.",
       usefullLinks: {
         "Technical Information from ETA": "../Files//3584_ETA 805.111,114,121,124,144,161.pdf",
       },

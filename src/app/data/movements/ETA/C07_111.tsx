@@ -14,7 +14,7 @@ const ETA_C07_111: Caliber = {
   //Description
   description:
     "ETA automatic movement known has the Powermatic 80. \n \n" +
-    "Based on the ETA 2824-2 date movement. Reducend frequency of 28800A/h to 21600A/h to achived higher power reserve of 80 hours. ",
+    "Based on the ETA 2824-2 date movement. Reducend frequency of 28800A/h to 21600A/h to achived higher power reserve of 80 hours.",
   // UsefullLinks
   usefullLinks: {},
   // sliderImages

@@ -1155,6 +1155,15 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     href: require("./watchModels/Tissot/Tissot_PRX_P475_Chrono_1991"),
     specialCollectionItem: false,
   },
+  "Tag Heuer S/EL Digital Chrono Senna": {
+    brand: BrandsEnum.TAG_HEUER,
+    legend: "Tag Heuer S/EL Digital Chrono Senna",
+    year: 1990,
+    type: WatchTypeEnum.SPORTS,
+    srcImage: "public/assets/Images/Tag_Heuer/1990_Tag_Heuer_S_EL_Digital_Senna/IMG_1351.JPG",
+    href: require("./watchModels/Tag_Heuer/Tag_Heuer_S-EL_Digitial_Senna_1990"),
+    specialCollectionItem: true,
+  },
   "Pryngeps Regolo Prepetual 1467": {
     brand: BrandsEnum.PRYNGEPS,
     legend: "Pryngeps Regolo Prepetual 1467",
@@ -1827,6 +1836,15 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     href: require("./watchModels/Belex/Belex_Precision_17Jewels_1965"),
     specialCollectionItem: false,
   },
+  "Tissot Seastar Visodate T.12 Automatic": {
+    brand: BrandsEnum.TISSOT,
+    legend: "Tissot Seastar Visodate T.12 Automatic",
+    year: 1964,
+    type: WatchTypeEnum.DRESS,
+    srcImage: "public/assets/Images/Tissot/1964_Tissot_T12_Automatic/IMG_1240.JPG",
+    href: require("./watchModels/Tissot/Tissot_Seastar_T12_Auto_1964"),
+    specialCollectionItem: false,
+  },
   "Tissot Seastar Seven": {
     brand: BrandsEnum.TISSOT,
     legend: "Tissot Seastar Seven",
@@ -2098,6 +2116,15 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     srcImage: "public/assets/Images/Natalis/1943_Natalis_German/IMG_2548.JPG",
     href: require("./watchModels/Natalis/Natalis_AS1130_1943"),
     specialCollectionItem: false,
+  },
+  "Tissot Antimagnetic Tuxedo": {
+    brand: BrandsEnum.TISSOT,
+    legend: "Tissot Antimagnetic Tuxedo",
+    year: 1943,
+    type: WatchTypeEnum.CASUAL,
+    srcImage: "public/assets/Images/Tissot/1943_Tissot_Tuxedo_27B1/IMG_1163.JPG",
+    href: require("./watchModels/Tissot/Tissot_Antimagnetic_Tuxedo_1943"),
+    specialCollectionItem: true,
   },
   'Omega StayBrite "Tank" CK3416': {
     brand: BrandsEnum.OMEGA,

@@ -23,7 +23,7 @@ const details: WatchDetails = {
       "Omodox seems to be a Swiss-based watch brand, assembling watches between the mid-1940s until mid-1970s.\n " +
       "By searching for the company name owners, the brand was officially registered in 1946 by his founder Uhrwerke Lengnau and, in 1986, \
         the brand was sold to Delma Watch Ltd, ceasing to exist. \n \n" +
-      "As other brands, Omodox models were mostly entry-level watches and mostly sold in France, Spain and Portugal as affordable timepieces. ",
+      "As other brands, Omodox models were mostly entry-level watches and mostly sold in France, Spain and Portugal as affordable timepieces.",
 
     sliderImages: [
       "public/assets/Images/Omodox/1950_Omodox_Precision/Omodox Models/m1 (1).JPG",

@@ -23,7 +23,7 @@ const details: WatchDetails = {
       'Their models were essentially simple timepieces, built with a low production cost and taking advantage of the "Swiss Made" high-quality philosophy to\
          make their prices up. Still, the brand was reliable and provided rather affordable watches for their time. \n \n' +
       "The watches could use simple pin-lever movements up to decent jewelled calibers. If there is any information in the dial or in the movement engraving \
-         regarding the jewels numbers, then the movement does have jewels. Otherwise, it's probably a pin-lever movement. ",
+         regarding the jewels numbers, then the movement does have jewels. Otherwise, it's probably a pin-lever movement",
 
     sliderImages: [],
   },

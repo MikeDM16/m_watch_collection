@@ -74,7 +74,7 @@ const details: WatchDetails = {
     features: [
       featuresEnum.DATE,
       featuresEnum.AUTOMATIC,
-      "Movement with production number 8077563, dating the watch back to 1965. ",
+      "Movement with production number 8077563, dating the watch back to 1965.",
     ],
 
     information: {

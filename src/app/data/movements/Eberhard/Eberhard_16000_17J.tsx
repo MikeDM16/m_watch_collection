@@ -17,7 +17,7 @@ const EBERHARD_16000_17J: Caliber = {
   \nBased on the Valjoux 65 chronograph caliber, the 1600 is a single pusher cronograph. \
   \n-The upper pusher controls the cronograph in a single pusher style (Start - Stop - Reset) \
   \n-The lower pusher, is not a button bur rather a slider, that allows to lock the cronograpg and perform the Stop - Continue operations without reseting the cronograph. \
-  \n\nProduced from around 1935 until 1950. Later replaced by the Eberhard 14000 caliber. ",
+  \n\nProduced from around 1935 until 1950. Later replaced by the Eberhard 14000 caliber.",
   // UsefullLinks
   usefullLinks: {},
 
