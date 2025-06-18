@@ -8,15 +8,16 @@ import {
 import { Container } from "react-bootstrap";
 
 import ImageSliderComponent, { ImageSliderEntry } from "../common/ImageSliderComponent";
+import SearchBarComponent from "../searchBar/searchBarComponent";
 
 export default function SpecialItemsComponent() {
   const specialCollectionItems = collectionService.getSpecialCollectionItems();
 
   const swiperItems: ImageSliderEntry[] = Object.values(specialCollectionItems).map((entry) => {
     return {
-      image_src: getExternalResource(getImgURLForSizeType(entry.srcImage, SizeType.GALLERY)),
+      imageSrc: getExternalResource(getImgURLForSizeType(entry.srcImage, SizeType.GALLERY)),
       href: routeToCollectionBrandModelPage(entry.brand, entry.legend),
-      href_text: `${entry.year} ${entry.legend}`,
+      hreftext: `${entry.year} ${entry.legend}`,
       alt: undefined,
     };
   });
@@ -32,8 +33,12 @@ export default function SpecialItemsComponent() {
             }
           </a>
           <br />
-          <a>{"Click over the slideshow names to open their detail page."}</a>
+          <a>Either </a>
+          <b>search</b>
+          <a> or </a>
+          <b>click</b> <a> over the slideshow entries to open their detail page.</a>
         </div>
+        <SearchBarComponent />
       </Container>
       <Container>{ImageSliderComponent(swiperItems)}</Container>
     </div>

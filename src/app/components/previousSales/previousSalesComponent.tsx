@@ -31,9 +31,9 @@ export default function PreviousSalesComponent() {
       : routeToCollectionBrandModelPage(entry.brand, entry.legend);
 
     return {
-      image_src: getExternalResource(saleReportImg),
+      imageSrc: getExternalResource(saleReportImg),
       href: url,
-      href_text: entry.legend,
+      hreftext: entry.legend,
       target: "_blank",
       alt: alt,
     };

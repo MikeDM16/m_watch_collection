@@ -90,12 +90,17 @@ function getSpecialCollectionItems(): CollectionEntry[] {
     .map(([, v]) => v);
 }
 
+function getAllCollectionItems(): Record<string, CollectionEntry> {
+  return CollectionItemsDB;
+}
+
 const collectionService = {
   getCollectionModelsByBrand,
   getModelInformationByKey,
   getSoldModels,
   getCollectionStatistic,
   getSpecialCollectionItems,
+  getAllCollectionItems,
 };
 
 export default collectionService;

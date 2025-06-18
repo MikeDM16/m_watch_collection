@@ -23,9 +23,9 @@ import "swiper/css/thumbs";
 import { ReactElement } from "react";
 
 export interface ImageSliderEntry {
-  image_src: string;
+  imageSrc: string;
   href?: string;
-  href_text?: string;
+  hreftext?: string;
   target?: string;
   alt?: string | ReactElement;
 }
@@ -110,14 +110,14 @@ export default function ImageSliderComponent(props: ImageSliderEntry[]) {
               href={entry.href || ""}
               target={entry.target || undefined}
             >
-              <ImageComponent src={entry.image_src} />
+              <ImageComponent src={entry.imageSrc} />
               <br />
               <em key={`swiper_slide_legend_${idx}`}>
                 {/** Use href text hs main alt legend */}
-                {entry.href_text || undefined}
+                {entry.hreftext || undefined}
                 <br />
                 {/** Only render a alt text if it difers from the url text */}
-                {entry.alt != entry.href_text ? entry.alt : undefined}
+                {entry.alt != entry.hreftext ? entry.alt : undefined}
               </em>
             </Link>
           </SwiperSlide>
