@@ -81,7 +81,11 @@ const details: WatchDetails = {
     "public/assets/Images/Tissot/1974_Tissot_Seastar_Navigator_Chrono/IMG_0101.JPG",
     "public/assets/Images/Tissot/1974_Tissot_Seastar_Navigator_Chrono/IMG_0102.JPG",
   ],
-
+  saleReport: {
+    price: 900,
+    date: "08/06/2025",
+    url: "https://www.catawiki.com/en/l/95741480",
+  },
   technicalData: {
     features: [featuresEnum.DATE, featuresEnum.MECHANICAL],
 

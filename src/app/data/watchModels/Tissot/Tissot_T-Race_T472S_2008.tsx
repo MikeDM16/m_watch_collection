@@ -68,7 +68,11 @@ const details: WatchDetails = {
     "public/assets/Images/Tissot/2008_Tissot_T_Race_T472S/IMG_0428.JPG",
     "public/assets/Images/Tissot/2008_Tissot_T_Race_T472S/IMG_0429.JPG",
   ],
-
+  saleReport: {
+    price: 192,
+    date: "13/06/2025",
+    url: "https://www.catawiki.com/en/l/96001404",
+  },
   technicalData: {
     features: [
       featuresEnum.DATE,

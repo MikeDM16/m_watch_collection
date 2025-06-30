@@ -76,7 +76,11 @@ const details: WatchDetails = {
     "public/assets/Images/Omega/1946_Omega_2404_5_30T2/IMG_0864.JPG",
     "public/assets/Images/Omega/1946_Omega_2404_5_30T2/IMG_0865.JPG",
   ],
-
+  saleReport: {
+    price: 550,
+    date: "27/06/2025",
+    url: "https://www.catawiki.com/en/l/96206844-omega-seamaster-2504-5-cal-30t2-15-jewels-men-1946",
+  },
   technicalData: {
     features: [
       featuresEnum.SMALL_SECONDS,

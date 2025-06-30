@@ -60,6 +60,12 @@ const details: WatchDetails = {
     "public/assets/Images/Olma/1946_Olma_Imperius_1130/IMG_0845.JPG",
     "public/assets/Images/Olma/1946_Olma_Imperius_1130/IMG_0846.JPG",
   ],
+  saleReport: {
+    price: 249,
+    date: "25/06/2025",
+    url: "https://www.catawiki.com/en/l/96207810-olma-imperius-no-reserve-price-cal-as-1130-16-jewels-men-1946",
+  },
+
   technicalData: {
     features: [featuresEnum.MECHANICAL, featuresEnum.SMALL_SECONDS],
 

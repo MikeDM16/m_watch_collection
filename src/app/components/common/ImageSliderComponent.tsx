@@ -73,11 +73,11 @@ export default function ImageSliderComponent(props: ImageSliderEntry[]) {
         },*/
 
     // Scrollbar
-    /*scrollbar: {
+    scrollbar: {
           enabled: true,
           draggable: true,
-          hide: true,
-        },*/
+          hide: false,
+        },
 
     // AutoPlay
     autoplay: {

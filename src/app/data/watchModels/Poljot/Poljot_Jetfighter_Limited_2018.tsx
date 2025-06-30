@@ -87,7 +87,11 @@ const details: WatchDetails = {
     "public/assets/Images/Poljot/2018_Poljot_JetFighter_3133/IMG_0472.JPG",
     "public/assets/Images/Poljot/2018_Poljot_JetFighter_3133/IMG_0473.JPG",
   ],
-
+  saleReport: {
+    price: 464,
+    date: "18/06/2025",
+    url: "https://www.catawiki.com/en/l/96001514",
+  },
   technicalData: {
     features: [featuresEnum.DATE, featuresEnum.MECHANICAL, featuresEnum.CHRONOGRAPH],
 

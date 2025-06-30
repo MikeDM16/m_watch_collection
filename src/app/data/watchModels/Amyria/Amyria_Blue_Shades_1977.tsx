@@ -62,6 +62,11 @@ const details: WatchDetails = {
     "public/assets/Images/Amyria/1997_Amyria_Blue_Shades//IMG_0748.JPG",
     "public/assets/Images/Amyria/1997_Amyria_Blue_Shades//IMG_0749.JPG",
   ],
+  saleReport: {
+    price: 100,
+    date: "26/06/2025",
+    url: "https://www.catawiki.com/en/l/96208071-amyria-nivada-blue-shades-nos-no-reserve-price-cal-as-1950-17-jewels-men-1977",
+  },
   technicalData: {
     features: [featuresEnum.MECHANICAL, featuresEnum.SMALL_SECONDS],
 

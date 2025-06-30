@@ -69,7 +69,11 @@ const details: WatchDetails = {
     "public/assets/Images/Nobreza/1977_Nobreza_Automatic_25_jewels/IMG_1839.JPG",
     "public/assets/Images/Nobreza/1977_Nobreza_Automatic_25_jewels/IMG_1840.JPG",
   ],
-
+  saleReport: {
+    price: 150,
+    date: "10/06/2025",
+    url: "https://www.catawiki.com/en/l/95829619",
+  },
   technicalData: {
     features: [featuresEnum.DATE, featuresEnum.AUTOMATIC],
 

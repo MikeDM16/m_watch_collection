@@ -179,9 +179,9 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     href: require("./watchModels/Tissot/Tissot_Fetes_Des_Vignerons_2019"),
     specialCollectionItem: false,
   },
-  "2018 Poljot Jet Fighter Limited Edition 129/600": {
+  "Poljot Jet Fighter Limited Edition 129/600": {
     brand: BrandsEnum.POLJOT,
-    legend: "2018 Poljot Jet Fighter Limited Edition 129/600",
+    legend: "Poljot Jet Fighter Limited Edition 129/600",
     year: 2018,
     type: WatchTypeEnum.SPORTS,
     srcImage: "public/assets/Images/Poljot/2018_Poljot_JetFighter_3133/IMG_0478.JPG",
@@ -453,9 +453,9 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     href: require("./watchModels/Tissot/Tissot_T-Touch_2009"),
     specialCollectionItem: false,
   },
-  "2008 Tissot T-Race T472S Chronograph": {
+  "Tissot T-Race T472S Chronograph": {
     brand: BrandsEnum.TISSOT,
-    legend: "2008 Tissot T-Race T472S Chronograph",
+    legend: "Tissot T-Race T472S Chronograph",
     year: 2008,
     type: WatchTypeEnum.SPORTS,
     srcImage: "public/assets/Images/Tissot/2008_Tissot_T_Race_T472S/IMG_0411.JPG",
