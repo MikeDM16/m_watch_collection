@@ -13,6 +13,7 @@ import { WatchStyleEnum } from "@/app/enums/watchStyleEnum";
 import { WaterResistanceEnum } from "@/app/enums/waterResistanceEnum";
 
 import { WatchDetails } from "../../watchDetails";
+import { RaymondWeilBrandSeries } from "./RaymondWeilBrandSeries";
 
 const details: WatchDetails = {
   title: "1990 Raymond Weil Tradition Mécanique 7760",
@@ -68,8 +69,8 @@ const details: WatchDetails = {
 
     information: {
       brand: BrandsEnum.RAYMOND_WEIL,
-      series: "Tradition Mécanique",
-      catalogueReference: "A290341",
+      series: RaymondWeilBrandSeries.TRADITION_MECANIQUE,
+      catalogueReference: "Black Dial - A290341",
       productionYear: "1990",
       movementType: MovementWatchTypeEnum.MECHANIQUE,
       style: WatchStyleEnum.DRESS,

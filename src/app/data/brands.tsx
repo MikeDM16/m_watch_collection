@@ -154,6 +154,7 @@ export const brandsDB: Brand[] = [
       year: 1976,
       details: "Founded in Geneva, Switzerland",
     },
+    displayBySeries: false,
     backgrounImages: [
       "public/assets/Images/Brands_Backgrounds/Raymond_Weil_1_Background.JPG",
       "public/assets/Images/Brands_Backgrounds/Raymond_Weil_2_Background.JPG",

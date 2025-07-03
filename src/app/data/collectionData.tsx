@@ -1183,6 +1183,15 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     specialCollectionItem: false,
   },
 
+  "Raymond Weil Tradition Mécanique White": {
+    brand: BrandsEnum.RAYMOND_WEIL,
+    legend: "Raymond Weil Tradition Mécanique White",
+    year: 1990,
+    type: WatchTypeEnum.DRESS,
+    srcImage: "public/assets/Images/Raymond_Weil/1990_Raymond_Weil_7760_A290703/IMG_2222.JPG",
+    href: require("./watchModels/Raymond_Weil/Raymond_Weil_Tradition_Mecanique_7760_1990_A290703"),
+    specialCollectionItem: true,
+  },
   "Raymond Weil Tradition Mécanique": {
     brand: BrandsEnum.RAYMOND_WEIL,
     legend: "Raymond Weil Tradition Mécanique",
