@@ -12,6 +12,7 @@ import { MovementWatchTypeEnum } from "@/app/enums/movementWatchTypeEnum";
 import { WatchStyleEnum } from "@/app/enums/watchStyleEnum";
 import { WaterResistanceEnum } from "@/app/enums/waterResistanceEnum";
 
+import { MovementsDataDB } from "../../movementsData";
 import { WatchDetails } from "../../watchDetails";
 import { RaymondWeilBrandSeries } from "./RaymondWeilBrandSeries";
 
@@ -103,32 +104,7 @@ const details: WatchDetails = {
       color: "Black",
     },
 
-    movement: {
-      title: "Valjoux 7760",
-      description:
-        "High quality mechanique chronograph from Valjoux (Pré-ETA). \n" +
-        "Adjusted by Raymond Weil with some polishing details added.",
-      usefullLinks: {
-        "Ranfft 7760 Caliber":
-          "http://www.ranfft.de/cgi-bin/bidfun-db.cgi?10&ranfft&&2uswk&Valjoux_7760",
-        "Technical Information from ETA": "../Files/4230_Valjoux7760Smaller.pdf",
-        "Instruction Manual from ETA": "../Files/3135_Valjoux7760operatingInstructions.pdf",
-      },
-      sliderImages: [
-        "public/assets/Images/Raymond_Weil/1990_Raymond_Weil_7760/7760_1.PNG",
-        "public/assets/Images/Raymond_Weil/1990_Raymond_Weil_7760/7760_2.PNG",
-        "public/assets/Images/Raymond_Weil/1990_Raymond_Weil_7760/7760_4.JPG",
-      ],
-      details: {
-        manufacturer: "Valjoux",
-        modelReference: "7760 (Mechanique, date)",
-        type: "Manual wind",
-        frequency: "28800 A/h",
-        jewels: "17 (Seventeen) Jewels ",
-        reserve: "52 Hours",
-        functions: "Day, Date, Hours, Minutes, Sub Seconds at 9 o'clock, 12h 30M 60s Chronograph",
-      },
-    },
+    movement: MovementsDataDB.ETA_Valjoux_7760_17,
   },
 };
 
