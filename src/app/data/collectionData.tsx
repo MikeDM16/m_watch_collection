@@ -1827,6 +1827,15 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     href: require("./watchModels/Cauny/Cauny_Apollon_17_jewels_1965"),
     specialCollectionItem: false,
   },
+  "1965 Festina Automatic ETA 2452": {
+    brand: BrandsEnum.FESTINA,
+    legend: "1965 Festina Automatic ETA 2452",
+    year: 1965,
+    type: WatchTypeEnum.CASUAL,
+    srcImage: "public/assets/Images/Festina/1965_Festina_Automatic/IMG_2451.JPG",
+    href: require("./watchModels/Festina/Festina_Automatic_ETA_2452_1965"),
+    specialCollectionItem: false,
+  },
   "Tissot Seastar PR 516 Automatic": {
     brand: BrandsEnum.TISSOT,
     legend: "Tissot Seastar PR 516 Automatic",

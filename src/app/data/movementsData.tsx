@@ -80,6 +80,7 @@ import UNITAS_6380 from "./movements/Unitas/Unitas_6380";
 import ZENITH_EL_PRIMERO_400Z from "./movements/Zenith/El_Primero_400Z";
 import ZENITH_EL_PRIMERO_4021 from "./movements/Zenith/El_Primero_4021";
 import ZENITH_P_12_4_50 from "./movements/Zenith/P_12_4_50";
+import ETA_2452 from "./movements/ETA/ETA_2452_17J";
 
 export const CaliberTechinicalDetailskeyToDisplayTextmappings: Record<string, string> = {
   manufacturer: "Manufacturer",
@@ -128,6 +129,7 @@ export const MovementsDataDB: Record<string, Caliber> = {
   ETA_251_262: ETA_251_262,
   ETA_251_265: ETA_251_265,
   ETA_251_272: ETA_251_272,
+  ETA_2452: ETA_2452,
   ETA_2671: ETA_2671,
   ETA_2783: ETA_2783,
   ETA_2824: ETA_2824,

@@ -6,6 +6,7 @@ from tqdm import tqdm
 
 directory = "D:/[2] Media/[3] Imagens/"
 directory = "C:/Users/migue/Desktop/tt"
+directory = "D:/New folder"
 
 folders = os.walk(directory, topdown=False)
 
@@ -29,10 +30,11 @@ for root, dirs, files in tqdm(folders):
                 os.remove(filename)
                 continue
             elif filename.lower().endswith(".heic"):
-                filename = os.path.join(source_path, filename).replace("\\", "/")
-                # print("Converting %s..." % filename)
-                cmd = f'magick "{filename}" "{filename[0:-5] + ".JPG"}" '
-                print(cmd)
-                os.system(cmd)
+                if filename.lower().replace(".heic", ".jpg") not in files:
+                    filename = os.path.join(source_path, filename).replace("\\", "/")
+                    # print("Converting %s..." % filename)
+                    cmd = f'magick "{filename}" "{filename[0:-5] + ".JPG"}" '
+                    print(cmd)
+                    os.system(cmd)
                 os.remove(filename)
                 continue
