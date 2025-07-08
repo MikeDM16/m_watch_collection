@@ -12,7 +12,8 @@ const ETA_2452: Caliber = {
   // Title
   title: "ETA 2452",
   //Description
-  description: "High quality ETA automatic movement with gold plated finishing, shockabsorver and bi-diretional winding.",
+  description:
+    "High quality ETA automatic movement with gold plated finishing, shockabsorver and bi-diretional winding.",
   // UsefullLinks
   usefullLinks: {},
   // sliderImages

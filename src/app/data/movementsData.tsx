@@ -14,6 +14,7 @@ import ETA_902_101 from "./movements/ETA/ETA_902_101";
 import ETA_955_112 from "./movements/ETA/ETA_955_112";
 import ETA_955_114 from "./movements/ETA/ETA_955_114";
 import ETA_1256 from "./movements/ETA/ETA_1256";
+import ETA_2452 from "./movements/ETA/ETA_2452_17J";
 import ETA_2671 from "./movements/ETA/ETA_2671_25J";
 import ETA_2783 from "./movements/ETA/ETA_2783";
 import ETA_2824 from "./movements/ETA/ETA_2824";
@@ -80,7 +81,6 @@ import UNITAS_6380 from "./movements/Unitas/Unitas_6380";
 import ZENITH_EL_PRIMERO_400Z from "./movements/Zenith/El_Primero_400Z";
 import ZENITH_EL_PRIMERO_4021 from "./movements/Zenith/El_Primero_4021";
 import ZENITH_P_12_4_50 from "./movements/Zenith/P_12_4_50";
-import ETA_2452 from "./movements/ETA/ETA_2452_17J";
 
 export const CaliberTechinicalDetailskeyToDisplayTextmappings: Record<string, string> = {
   manufacturer: "Manufacturer",
