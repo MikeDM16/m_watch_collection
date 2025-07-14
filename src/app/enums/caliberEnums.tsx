@@ -2,6 +2,7 @@ export const CaliberBrandsEnum = {
   AS: "A. Schild",
   CERTINA: "Certina",
   DUBOIS_DEPRAZ: "Dubois Depraz",
+  DOXA: "Doxa",
   EBERHARD: "Eberhard",
   ETA: "ETA",
   FE: "FE (France Ebauche)",
@@ -21,6 +22,7 @@ export const CaliberBrandsEnum = {
   UNITAS: "Unitas",
   VALJOUX: "Valjoux",
   VENUS: "Venus",
+  UNIVERSAL_GENEVE: "Universal Geneve",
   ZENITH: "Zenith",
 };
 

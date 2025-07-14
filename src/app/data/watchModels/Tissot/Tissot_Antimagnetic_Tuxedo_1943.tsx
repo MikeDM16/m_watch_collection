@@ -75,7 +75,7 @@ const details: WatchDetails = {
 
     information: {
       brand: BrandsEnum.TISSOT,
-      series: TissotBrandSeries.ANTIMAGINETIC,
+      series: TissotBrandSeries.ANTIMAGNETIC,
       catalogueReference: "1140306",
       productionYear: "1943",
       movementType: MovementWatchTypeEnum.MECHANIQUE,

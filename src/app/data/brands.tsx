@@ -230,12 +230,12 @@ export const brandsDB: Brand[] = [
   {
     name: BrandsEnum.UNIVERSAL_GENEVE,
     logoImg: "public/assets/Images/Brands_Logos/universal_geneve_logo.PNG",
-    displayOrder: undefined,
+    displayOrder: 34,
   },
   {
     name: BrandsEnum.NOVART,
     logoImg: "public/assets/Images/Brands_Logos/novart_logo.PNG",
-    displayOrder: 34,
+    displayOrder: 35,
     description: "Vintage Portuguese brand with Swiss Made parts and assembly.",
   },
 
@@ -327,6 +327,11 @@ export const brandsDB: Brand[] = [
     displayOrder: undefined,
   },
   {
+    name: BrandsEnum.DOXA,
+    logoImg: "public/assets/Images/Brands_Logos/doxa_logo.PNG",
+    displayOrder: undefined,
+  },
+  {
     name: BrandsEnum.AMER,
     logoImg: "public/assets/Images/Brands_Logos/amer_logo.PNG",
     displayOrder: undefined,
@@ -348,6 +353,12 @@ export const brandsDB: Brand[] = [
     name: BrandsEnum.BERGEON,
     logoImg: "public/assets/Images/Brands_Logos/bergeon_logo.PNG",
     displayOrder: undefined,
+  },
+  {
+    name: BrandsEnum.CRYSTAL_WATCH,
+    logoImg: "public/assets/Images/Brands_Logos/crystal_watch_logo.PNG",
+    displayOrder: undefined,
+    description: "Vintage Portuguese brand with Swiss Made parts and assembly.",
   },
   {
     name: BrandsEnum.CALYPSO,
@@ -521,7 +532,7 @@ export const brandsDB: Brand[] = [
   {
     name: BrandsEnum.POLJOT,
     logoImg: "public/assets/Images/Brands_Logos/poljot_logo.PNG",
-    displayOrder: 50,
+    displayOrder: undefined,
   },
   {
     name: BrandsEnum.PHILIP_WATCH,

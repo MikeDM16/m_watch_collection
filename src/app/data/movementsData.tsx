@@ -3,6 +3,7 @@ import AS_1950 from "./movements/AS/AS_1950_17J";
 import CERTINA_331 from "./movements/Certina/Certina_331_15J";
 import DD_2000_ETA_955_232 from "./movements/Debois_Depraz/DD_2000_955";
 import DD_2000_ETA_2982 from "./movements/Debois_Depraz/DD_2000_2892";
+import DOXA_83_4_987_17J from "./movements/Doxa/Doxa_83_4_987_17J";
 import EBERHARD_16000_17J from "./movements/Eberhard/Eberhard_16000_17J";
 import ETA_C07_111 from "./movements/ETA/C07_111";
 import ETA_251_251 from "./movements/ETA/ETA_251_251_27J";
@@ -78,6 +79,7 @@ import TISSOT_794 from "./movements/Tissot/794_21J";
 import TISSOT_2031 from "./movements/Tissot/2031";
 import TISSOT_2060_7734_17J from "./movements/Tissot/2060_7734_17J";
 import UNITAS_6380 from "./movements/Unitas/Unitas_6380";
+import UNIVERSAL_GENEVE_262_17J from "./movements/Universal_Geneve/UG_Cal_262_17J";
 import ZENITH_EL_PRIMERO_400Z from "./movements/Zenith/El_Primero_400Z";
 import ZENITH_EL_PRIMERO_4021 from "./movements/Zenith/El_Primero_4021";
 import ZENITH_P_12_4_50 from "./movements/Zenith/P_12_4_50";
@@ -120,6 +122,8 @@ export const MovementsDataDB: Record<string, Caliber> = {
 
   DD_2000_ETA_2982: DD_2000_ETA_2982,
   DD_2000_ETA_955_232: DD_2000_ETA_955_232,
+
+  DOXA_83_4_987_17J: DOXA_83_4_987_17J,
 
   EBERHARD_16000_17J: EBERHARD_16000_17J,
 
@@ -218,4 +222,6 @@ export const MovementsDataDB: Record<string, Caliber> = {
   ZENITH_EL_PRIMERO_400Z: ZENITH_EL_PRIMERO_400Z,
   ZENITH_EL_PRIMERO_4021: ZENITH_EL_PRIMERO_4021,
   ZENITH_P_12_4_50: ZENITH_P_12_4_50,
+
+  UNIVERSAL_GENEVE_262_17J: UNIVERSAL_GENEVE_262_17J,
 };

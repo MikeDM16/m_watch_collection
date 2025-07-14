@@ -1827,9 +1827,9 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     href: require("./watchModels/Cauny/Cauny_Apollon_17_jewels_1965"),
     specialCollectionItem: false,
   },
-  "1965 Festina Automatic ETA 2452": {
+  "Festina Automatic ETA 2452": {
     brand: BrandsEnum.FESTINA,
-    legend: "1965 Festina Automatic ETA 2452",
+    legend: "Festina Automatic ETA 2452",
     year: 1965,
     type: WatchTypeEnum.CASUAL,
     srcImage: "public/assets/Images/Festina/1965_Festina_Automatic/IMG_2451.JPG",
@@ -2117,6 +2117,15 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     href: require("./watchModels/Zenith/Zenith_Pilot_P12_1945"),
     specialCollectionItem: false,
   },
+  "Doxa Antimagnetic": {
+    brand: BrandsEnum.DOXA,
+    legend: "Doxa Antimagnetic",
+    year: 1945,
+    type: WatchTypeEnum.CASUAL,
+    srcImage: "public/assets/Images/Doxa/1945_Doxa_Antimagnetic/IMG_2601.JPG",
+    href: require("./watchModels/Doxa/Doxa_Antimagnetic_1942"),
+    specialCollectionItem: false,
+  },
   "Argus Tuxedo Militare Cal. AS1130": {
     brand: BrandsEnum.ARGUS,
     legend: "Argus Tuxedo Militare Cal. AS1130",
@@ -2143,6 +2152,15 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     srcImage: "public/assets/Images/Tissot/1943_Tissot_Tuxedo_27B1/IMG_1163.JPG",
     href: require("./watchModels/Tissot/Tissot_Antimagnetic_Tuxedo_1943"),
     specialCollectionItem: true,
+  },
+  " Universal Geneve Mécanique Cal. 262": {
+    brand: BrandsEnum.UNIVERSAL_GENEVE,
+    legend: " Universal Geneve Mécanique Cal. 262",
+    year: 1942,
+    type: WatchTypeEnum.DRESS,
+    srcImage: "public/assets/Images/Universal_Geneve/1942_Universal_Geneve_cal_262/IMG_2640.JPG",
+    href: require("./watchModels/Universal_Geneve/Universal_Geneve_Mecanique_cal_262_1942"),
+    specialCollectionItem: false,
   },
   'Omega StayBrite "Tank" CK3416': {
     brand: BrandsEnum.OMEGA,

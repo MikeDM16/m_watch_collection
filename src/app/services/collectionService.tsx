@@ -73,8 +73,8 @@ function getCollectionStatistic(): Record<string, number | string> {
   });
 
   return {
-    "Watch Brands": numBrands,
-    "Models Handled": numModels,
+    "Brands": numBrands,
+    "Models": numModels,
     Sales: numSoldModels,
   };
 }

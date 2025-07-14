@@ -52,7 +52,7 @@ const details: WatchDetails = {
     features: [featuresEnum.DATE, featuresEnum.MECHANICAL],
 
     information: {
-      brand: BrandsEnum.ONE,
+      brand: BrandsEnum.RONE,
       series: "Calendar Pointer",
       catalogueReference: "180153",
       productionYear: "1950",
