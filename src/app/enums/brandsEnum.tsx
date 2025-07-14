@@ -8,6 +8,7 @@ export const BrandsEnum = {
   BREITLING: "Breitling",
   CALYPSO: "Calypso (Festina Group)",
   CAMEL_TROPHY: "Camel Trophy",
+  CUERVO_Y_SOBRINOS: "Cuervo y Sobrinos",
   CAUNY: "Cauny",
   CELSUS: "Celsus",
   CERTINA: "Certina",

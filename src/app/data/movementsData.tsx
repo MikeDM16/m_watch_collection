@@ -36,6 +36,7 @@ import FHF_96_4 from "./movements/FHF/FHF_96_4_17J";
 import FHF_974 from "./movements/FHF/FHF_974_17J";
 import Landeron_48_17J from "./movements/Landeron/Landeron_48_17J";
 import Landeron_51_17J from "./movements/Landeron/Landeron_51_17J_";
+import Landeron_159_17J from "./movements/Landeron/Landeron_159_17J";
 import MIYOTA_OS10 from "./movements/Miyota/OS10";
 import OMEGA_30T2 from "./movements/Omega/Omega_30T2_15J";
 import OMEGA_265 from "./movements/Omega/Omega_265_15J";
@@ -170,6 +171,7 @@ export const MovementsDataDB: Record<string, Caliber> = {
 
   LANDERON_48_17J: Landeron_48_17J,
   LANDERON_51_17J: Landeron_51_17J,
+  LANDERON_159_17J: Landeron_159_17J,
 
   MIYOTA_OS10: MIYOTA_OS10,
 

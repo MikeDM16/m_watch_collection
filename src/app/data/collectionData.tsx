@@ -186,7 +186,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     type: WatchTypeEnum.SPORTS,
     srcImage: "public/assets/Images/Poljot/2018_Poljot_JetFighter_3133/IMG_0478.JPG",
     href: require("./watchModels/Poljot/Poljot_Jetfighter_Limited_2018"),
-    specialCollectionItem: true,
+    specialCollectionItem: false,
   },
   "Porsche Design Drivers Collection Cayenne": {
     brand: BrandsEnum.PORSCHE_DESIGN,
@@ -1998,6 +1998,16 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     srcImage: "public/assets/Images/Omega/1952_Omega_Staybrite_410/IMG_0034.JPG",
     href: require("./watchModels/Omega/Omega_StayBrite_Honeycomb_1952"),
     specialCollectionItem: false,
+  },
+  "Cuervo y Sobrinos Historiador Habana": {
+    brand: BrandsEnum.CUERVO_Y_SOBRINOS,
+    legend: "Cuervo y Sobrinos Historiador Habana",
+    year: 1950,
+    type: WatchTypeEnum.CASUAL,
+    srcImage:
+      "public/assets/Images/Cuervo_y_Sobrinos/1950_Cuervo_y_Sobrinos_Habana_Landeron/IMG_2691.JPG",
+    href: require("./watchModels/Cuervo_y_Sobrinos/Cuervo_y_Sobrinos_Hanava_Landeron_159_1950"),
+    specialCollectionItem: true,
   },
   "Admes Automatic ETA 1246": {
     brand: BrandsEnum.ADMES,

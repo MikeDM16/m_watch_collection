@@ -231,11 +231,23 @@ export const brandsDB: Brand[] = [
     name: BrandsEnum.UNIVERSAL_GENEVE,
     logoImg: "public/assets/Images/Brands_Logos/universal_geneve_logo.PNG",
     displayOrder: 34,
+    website: "https://www.universalgeneve.com/",
+    description:
+      "Universal Genéve is a Swiss luxury watch brand known for its heritage, in-house movements and craftsmanship.",
+    foundedInformation: {
+      year: 1894,
+      details: "Founded in Le Locle, Switzerland",
+    },
+    backgrounImages: [
+      "public/assets/Images/Brands_Backgrounds/Universal_Geneve_1_Background.JPG",
+      "public/assets/Images/Brands_Backgrounds/Universal_Geneve_3_Background.JPG",
+      "public/assets/Images/Brands_Backgrounds/Universal_Geneve_2_Background.JPG",
+    ],
   },
   {
     name: BrandsEnum.NOVART,
     logoImg: "public/assets/Images/Brands_Logos/novart_logo.PNG",
-    displayOrder: 35,
+    displayOrder: 37,
     description: "Vintage Portuguese brand with Swiss Made parts and assembly.",
   },
 
@@ -271,7 +283,7 @@ export const brandsDB: Brand[] = [
   {
     name: BrandsEnum.CELSUS,
     logoImg: "public/assets/Images/Brands_Logos/celsus_logo.PNG",
-    displayOrder: 38,
+    displayOrder: undefined,
   },
   {
     name: BrandsEnum.CAUNY,
@@ -284,6 +296,24 @@ export const brandsDB: Brand[] = [
       year: 1927,
       details: "Founded in La Chaux-de-Fonds, Switzerland",
     },
+    displayBySeries: true,
+  },
+  {
+    name: BrandsEnum.CUERVO_Y_SOBRINOS,
+    logoImg: "public/assets/Images/Brands_Logos/cuervo_y_sobrinos_logo.PNG",
+    displayOrder: 35,
+    website: "https://www.cuervoysobrinos.com/en/",
+    description:
+      "Cauny is a historic watch brand known for its elegant designs and quality craftsmanship.",
+    foundedInformation: {
+      year: 1882,
+      details: "Founded in Habana, Cuba",
+    },
+    backgrounImages: [
+      "public/assets/Images/Brands_Backgrounds/Cuervo_y_Sobrinos_1_Background.JPG",
+      "public/assets/Images/Brands_Backgrounds/Cuervo_y_Sobrinos_2_Background.JPG",
+      "public/assets/Images/Brands_Backgrounds/Cuervo_y_Sobrinos_3_Background.JPG",
+    ],
     displayBySeries: true,
   },
 

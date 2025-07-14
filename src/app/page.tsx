@@ -71,8 +71,11 @@ export default function Page() {
 
   const ListBrandsForLetter = (key_letter: string, brandNames: Brand[]) => {
     return (
-      <div key={`brand_list_for_letter_${key_letter}`} >
-        <div key={`brand_letter_prefix_${key_letter}`} className={"bold-text feature-text border-bottom-text"}>
+      <div key={`brand_list_for_letter_${key_letter}`}>
+        <div
+          key={`brand_letter_prefix_${key_letter}`}
+          className={"bold-text feature-text border-bottom-text"}
+        >
           {key_letter}
         </div>
         {brandNames.map((entry: Brand) => {
