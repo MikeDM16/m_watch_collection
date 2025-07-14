@@ -50,6 +50,12 @@ const details: WatchDetails = {
     "public/assets/Images/Certina/1950_Certina_Mechanical_331/IMG_0984.JPG",
   ],
 
+  saleReport: {
+    price: 281,
+    date: "03/07/2025",
+    url: "https://www.catawiki.com/en/l/96326413",
+  },
+
   technicalData: {
     features: [featuresEnum.SMALL_SECONDS, featuresEnum.MECHANICAL],
 

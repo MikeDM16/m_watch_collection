@@ -57,6 +57,12 @@ const details: WatchDetails = {
     "public/assets/Images/Nobreza/1976_Nobreza_shades_17_jewels/IMG_1025.JPG",
   ],
 
+  saleReport: {
+    price: 118,
+    date: "03/07/2025",
+    url: "https://www.catawiki.com/en/l/96326564",
+  },
+
   technicalData: {
     features: [featuresEnum.DATE, featuresEnum.MECHANICAL],
 
