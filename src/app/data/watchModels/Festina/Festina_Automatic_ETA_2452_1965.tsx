@@ -63,6 +63,12 @@ const details: WatchDetails = {
     "public/assets/Images/Festina/1965_Festina_Automatic/IMG_2471.JPG",
   ],
 
+  saleReport: {
+    price: 134,
+    date: "16/07/2025",
+    url: "https://www.catawiki.com/en/l/96608019",
+  },
+
   technicalData: {
     features: [featuresEnum.DATE, featuresEnum.AUTOMATIC],
 

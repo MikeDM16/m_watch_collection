@@ -47,6 +47,12 @@ const details: WatchDetails = {
     "public/assets/Images/Amer/1975_Amer_Campos/IMG_0955.JPG",
   ],
 
+  saleReport: {
+    price: 120,
+    date: "16/07/2025",
+    url: "https://www.catawiki.com/en/l/96607868",
+  },
+
   technicalData: {
     features: [featuresEnum.SMALL_SECONDS, featuresEnum.MECHANICAL],
 

@@ -86,6 +86,12 @@ const details: WatchDetails = {
     "public/assets/Images/Porsche_Design/2005_Porsche Design_Dashboard_P662_10_1_Black_Titanium/IMG_0217.JPG",
   ],
 
+  saleReport: {
+    price: 1568,
+    date: "15/07/2025",
+    url: "https://www.catawiki.com/en/l/96564223",
+  },
+
   technicalData: {
     features: [featuresEnum.DATE, featuresEnum.AUTOMATIC_CHRONOGRAPH],
 

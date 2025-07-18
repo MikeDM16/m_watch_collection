@@ -55,6 +55,12 @@ const details: WatchDetails = {
     "public/assets/Images/Relide/1955_Relide_Militare/IMG_1061.JPG",
   ],
 
+  saleReport: {
+    price: 197,
+    date: "11/07/2025",
+    url: "https://www.catawiki.com/en/l/96497777",
+  },
+
   technicalData: {
     features: [featuresEnum.SMALL_SECONDS, featuresEnum.MECHANICAL],
 

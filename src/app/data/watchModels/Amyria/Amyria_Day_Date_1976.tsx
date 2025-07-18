@@ -57,6 +57,12 @@ const details: WatchDetails = {
     "public/assets/Images/Amyria/1976_Amyria_Day_Date/IMG_0908.JPG",
     "public/assets/Images/Amyria/1976_Amyria_Day_Date/IMG_0909.JPG",
   ],
+  saleReport: {
+    price: 100,
+    date: "10/07/2025",
+    url: "https://www.catawiki.com/en/l/96497600",
+  },
+
   technicalData: {
     features: [featuresEnum.DATE, featuresEnum.MECHANICAL],
 

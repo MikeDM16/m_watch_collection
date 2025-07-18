@@ -63,7 +63,7 @@ export default function BrandModelPage() {
 
   const getTechnicalInformation = () => {
     return (
-      <Row className="container">
+      <Row>
         <Col>
           {FeatureListingComponent(
             "Case",

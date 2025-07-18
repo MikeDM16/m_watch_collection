@@ -73,6 +73,12 @@ const details: WatchDetails = {
     "public/assets/Images/Raymond_Weil/1990_Raymond_Weil_7760_A290703/IMG_2248.JPG",
     "public/assets/Images/Raymond_Weil/1990_Raymond_Weil_7760_A290703/IMG_2249.JPG",
   ],
+  saleReport: {
+    price: 800,
+    date: "16/07/2025",
+    url: "https://www.catawiki.com/en/l/96521948",
+  },
+
   technicalData: {
     features: [
       featuresEnum.DATE,
