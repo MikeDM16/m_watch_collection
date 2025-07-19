@@ -7,6 +7,7 @@ export const CaliberBrandsEnum = {
   ETA: "ETA",
   FE: "FE (France Ebauche)",
   FHF: "FHF (Fabrique d'Horlogerie de Fontainemelon)",
+  FORTIS: "Fortis",
   LANDERON: "Landeron",
   LEMANIA: "Lemania",
   MIYOTA: "Miyota",

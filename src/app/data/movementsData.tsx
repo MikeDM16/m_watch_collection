@@ -34,6 +34,7 @@ import FE_140 from "./movements/FE/FE_140_17J";
 import FE_233_69 from "./movements/FE/FE_233_69_17J";
 import FHF_96_4 from "./movements/FHF/FHF_96_4_17J";
 import FHF_974 from "./movements/FHF/FHF_974_17J";
+import FORTIS_AV_21J from "./movements/Fortis/Fortis_AV_21_jewels";
 import Landeron_48_17J from "./movements/Landeron/Landeron_48_17J";
 import Landeron_51_17J from "./movements/Landeron/Landeron_51_17J_";
 import Landeron_159_17J from "./movements/Landeron/Landeron_159_17J";
@@ -160,6 +161,8 @@ export const MovementsDataDB: Record<string, Caliber> = {
 
   FHF_96_4: FHF_96_4,
   FHF_974: FHF_974,
+
+  FORTIS_AV_21J: FORTIS_AV_21J,
 
   // same base ETA 955.112 / 412
   HEUER_1_93: HEUER_1_93,

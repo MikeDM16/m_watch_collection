@@ -385,8 +385,8 @@ export const brandsDB: Brand[] = [
     displayOrder: undefined,
   },
   {
-    name: BrandsEnum.CRYSTAL_WATCH,
-    logoImg: "public/assets/Images/Brands_Logos/crystal_watch_logo.PNG",
+    name: BrandsEnum.CRISTAL_WATCH,
+    logoImg: "public/assets/Images/Brands_Logos/cristal_watch_logo.PNG",
     displayOrder: undefined,
     description: "Vintage Portuguese brand with Swiss Made parts and assembly.",
   },
@@ -444,6 +444,11 @@ export const brandsDB: Brand[] = [
   {
     name: BrandsEnum.FONTAINE,
     logoImg: "public/assets/Images/Brands_Logos/fontaine_logo.PNG",
+    displayOrder: undefined,
+  },
+  {
+    name: BrandsEnum.FORTIS,
+    logoImg: "public/assets/Images/Brands_Logos/fortis_logo.PNG",
     displayOrder: undefined,
   },
   {

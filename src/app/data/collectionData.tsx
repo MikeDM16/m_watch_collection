@@ -1555,6 +1555,15 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     href: require("./watchModels/Miura/Miura_Calendar_17Rubis_1975"),
     specialCollectionItem: false,
   },
+  "Crystal Watch Blue Cushion 17 Jewels": {
+    brand: BrandsEnum.CRISTAL_WATCH,
+    legend: "Crystal Watch Blue Cushion 17 Jewels",
+    year: 1975,
+    type: WatchTypeEnum.CASUAL,
+    srcImage: "public/assets/Images/Cristal_Watch/1975_Cristal_Watch_Blue_Cushion/IMG_2735.JPG",
+    href: require("./watchModels/Cristal_Watch/Cristal_Watch_Blue_Cushion_17J_1975"),
+    specialCollectionItem: false,
+  },
   "Monumental Automatic Dive 200M": {
     brand: BrandsEnum.MONUMENTAL,
     legend: "Monumental Automatic Dive 200M",
@@ -1933,6 +1942,15 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     type: WatchTypeEnum.CASUAL,
     srcImage: "public/assets/Images/Cauny/1957_CaunyApollon/IMG_1589.JPG",
     href: require("./watchModels/Cauny/Cauny_Apollon_17Rubis_1957"),
+    specialCollectionItem: false,
+  },
+  "Fortis 18K Gold 21 Jewels": {
+    brand: BrandsEnum.FORTIS,
+    legend: "Fortis 18K Gold 21 Jewels",
+    year: 1957,
+    type: WatchTypeEnum.CASUAL,
+    srcImage: "public/assets/Images/Fortis/1957_Fortis_21_Jewels/IMG_2560.JPG",
+    href: require("./watchModels/Fortis/Fortis_Mecanical_17Rubis_1955"),
     specialCollectionItem: false,
   },
 
