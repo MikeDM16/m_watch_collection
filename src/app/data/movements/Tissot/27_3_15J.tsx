@@ -22,8 +22,9 @@ const TISSOT_27_3: Caliber = {
   },
   // sliderImages
   sliderImages: [
+    "public/assets/Images/Movements/Tissot/Tissot_27_3/Tissot_27_3_2.JPG",
     "public/assets/Images/Movements/Tissot/Tissot_27_3/Tissot_27_3.JPG",
-    "public/assets/Images/Movements/Tissot/Tissot_27_3/Tissot_27_3_1.JPG",
+    //"public/assets/Images/Movements/Tissot/Tissot_27_3/Tissot_27_3_1.JPG",
   ],
   // Details
   details: {
