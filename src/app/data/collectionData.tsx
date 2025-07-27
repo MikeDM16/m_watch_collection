@@ -2123,7 +2123,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     legend: "Tissot Antimagnetic White Enamel 27.3",
     year: 1947,
     type: WatchTypeEnum.DRESS,
-    srcImage: "public/assets/Images/Tissot/1947_Tissot_Antimaginetic_27_3/IMG_3203.JPG",
+    srcImage: "public/assets/Images/Tissot/1947_Tissot_Antimagnetic_27_3/IMG_3203.JPG",
     href: require("./watchModels/Tissot/Tissot_Antimagnetic_1947_white"),
     specialCollectionItem: false,
   },
