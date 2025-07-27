@@ -17,7 +17,7 @@ import { WatchDetails } from "../../watchDetails";
 import { TissotBrandSeries } from "./TissotBrandSeries";
 
 const details: WatchDetails = {
-  title: "1946 Tissot Antimagnetic",
+  title: "1946 Tissot Antimagnetic Tuxedo",
   sliderImages: [
     "public/assets/Images/Tissot/1946_Tissot_Antimagnetic/IMG_1003.JPG",
     "public/assets/Images/Tissot/1946_Tissot_Antimagnetic/IMG_1004.JPG",

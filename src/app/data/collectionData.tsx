@@ -806,6 +806,15 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     href: require("./watchModels/Tag_Heuer/Tag_Heuer_Professional_1500_1997"),
     specialCollectionItem: false,
   },
+  "Tag Heuer Professional 2000 CK1111 Chronograph": {
+    brand: BrandsEnum.TAG_HEUER,
+    legend: "Tag Heuer Professional 2000 CK1111 Chronograph",
+    year: 1996,
+    type: WatchTypeEnum.DIVE,
+    srcImage: "public/assets/Images/Tag_Heuer/1996_Tag_Heuer_Professional_2000_CK1111/IMG_3244.JPG",
+    href: require("./watchModels/Tag_Heuer/Tag_Heuer_Professional_2000_CK1111_1996"),
+    specialCollectionItem: false,
+  },
   "Maurice Lacroix 5872 Monza Chrono": {
     brand: BrandsEnum.MAURICE_LACROIX,
     legend: "Maurice Lacroix 5872 Monza Chrono",
@@ -2107,6 +2116,15 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     type: WatchTypeEnum.CASUAL,
     srcImage: "public/assets/Images/Signo/1947_Signo_Small_Seconds/IMG_0653.JPG",
     href: require("./watchModels/Signo/Signo_Small_Seconds_1947"),
+    specialCollectionItem: false,
+  },
+  "Tissot Antimagnetic White Enamel 27.3": {
+    brand: BrandsEnum.TISSOT,
+    legend: "Tissot Antimagnetic White Enamel 27.3",
+    year: 1947,
+    type: WatchTypeEnum.DRESS,
+    srcImage: "public/assets/Images/Tissot/1947_Tissot_Antimaginetic_27_3/IMG_3203.JPG",
+    href: require("./watchModels/Tissot/Tissot_Antimagnetic_1947_white"),
     specialCollectionItem: false,
   },
   "Tissot Antimagnetic": {

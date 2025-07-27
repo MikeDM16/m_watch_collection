@@ -17,6 +17,7 @@ const ETA_251_262: Caliber = {
   sliderImages: [
     "public/assets/Images/Movements/ETA/ETA_255_264/ETA_255_264_1.JPG",
     "public/assets/Images/Movements/ETA/ETA_255_264/ETA_255_264_2.JPG",
+    "public/assets/Images/Movements/ETA/ETA_255_264/ETA_251_262_Tag_2_00.JPG",
   ],
   // Details
   details: {

@@ -67,6 +67,7 @@ import SELLITA_SW200 from "./movements/Sellita/SW200";
 import HEUER_1_93 from "./movements/Tag_Heuer/Tag_Heuer_1_93";
 import HEUER_1_94 from "./movements/Tag_Heuer/Tag_Heuer_1_94";
 import HEUER_1_97 from "./movements/Tag_Heuer/Tag_Heuer_1_97";
+import HEUER_2_00 from "./movements/Tag_Heuer/Tag_Heuer_2_00";
 import TAG_HEUER_2_95 from "./movements/Tag_Heuer/Tag_Heuer_2_95";
 import HEUER_4_93 from "./movements/Tag_Heuer/Tag_Heuer_4_93";
 import HEUER_4_95 from "./movements/Tag_Heuer/Tag_Heuer_4_95";
@@ -171,6 +172,7 @@ export const MovementsDataDB: Record<string, Caliber> = {
   HEUER_4_93: HEUER_4_93,
   HEUER_4_95: HEUER_4_95,
   HEUER_4_96: HEUER_4_96,
+  HEUER_2_00: HEUER_2_00,
 
   LANDERON_48_17J: Landeron_48_17J,
   LANDERON_51_17J: Landeron_51_17J,
