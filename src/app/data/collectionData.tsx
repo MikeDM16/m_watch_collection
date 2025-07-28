@@ -133,6 +133,15 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     href: require("./watchModels/Maurice_Lacroix/Maurice_Lacroix_8724_MasterPiece_2010"),
     specialCollectionItem: false,
   },
+  "Certina DS Podium Mother Of Pearl": {
+    brand: BrandsEnum.CERTINA,
+    legend: "Certina DS Podium Mother Of Pearl",
+    year: 2020,
+    type: WatchTypeEnum.CASUAL,
+    srcImage: "public/assets/Images/Certina/2020_Certina_DS_Podium_MOP_Lady/IMG_3135.JPG",
+    href: require("./watchModels/Certina/Certina_DS_Podium_Lady_MOP_2020"),
+    specialCollectionItem: false,
+  },
   "Tissot T-Touch Expert Solar Titanium": {
     brand: BrandsEnum.TISSOT,
     legend: "Tissot T-Touch Expert Solar Titanium",
@@ -265,6 +274,15 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     specialCollectionItem: true,
   },
 
+  "Certina DS First White Ceramic": {
+    brand: BrandsEnum.CERTINA,
+    legend: "Certina DS First White Ceramic",
+    year: 2014,
+    type: WatchTypeEnum.CASUAL,
+    srcImage: "public/assets/Images/Certina/2014_Certina_DS_First_Ceramic_white/IMG_3167.JPG",
+    href: require("./watchModels/Certina/Certina_DS_First_White_Ceramic_2014"),
+    specialCollectionItem: false,
+  },
   "Tissot T-Classic Dream": {
     brand: BrandsEnum.TISSOT,
     legend: "Tissot T-Classic Dream",
@@ -1127,6 +1145,15 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     srcImage: "public/assets/Images/Seiko/1991_Seiko_7T36_7410_Moonphase_chrono/IMG_3430.JPG",
     href: require("./watchModels/Seiko/Seiko_7T32_7410_Moonphase_1991"),
     specialCollectionItem: false,
+  },
+  "Breitling Chronomat J13047x White Gold": {
+    brand: BrandsEnum.BREITLING,
+    legend: "Breitling Chronomat J13047x White Gold",
+    year: 1991,
+    type: WatchTypeEnum.CASUAL,
+    srcImage: "public/assets/Images/Breitling/1991_Breitling_J13047X_018/IMG_3011.JPG",
+    href: require("./watchModels/Breitling/Breitling_Chronomat_J13047X_1991"),
+    specialCollectionItem: true,
   },
   "Pryngeps Regolo 1467": {
     brand: BrandsEnum.PRYNGEPS,

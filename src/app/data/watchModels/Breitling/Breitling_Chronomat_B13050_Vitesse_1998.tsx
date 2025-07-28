@@ -103,7 +103,7 @@ const details: WatchDetails = {
 
     information: {
       brand: BrandsEnum.BREITLING,
-      series: BreitlingBrandSeries.CHRONOMAT,
+      series: BreitlingBrandSeries.CHRONOMAT_VITESSE,
       catalogueReference: "Vitesse (B13050.1 138371 Acier)",
       productionYear: "1998",
       movementType: MovementWatchTypeEnum.AUTOMATIC,

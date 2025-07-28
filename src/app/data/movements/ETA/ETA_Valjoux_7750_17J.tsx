@@ -26,6 +26,7 @@ const ETA_Valjoux_7750_17: Caliber = {
   sliderImages: [
     "public/assets/Images/Movements/ETA/ETA_Valjoux_7750/7750_1.JPG",
     "public/assets/Images/Movements/ETA/ETA_Valjoux_7750/7750_2.JPG",
+    "public/assets/Images/Movements/ETA/ETA_Valjoux_7750/7750_17_Breitling.JPG",
     "public/assets/Images/Movements/ETA/ETA_Valjoux_7750/7750_17_1.JPG",
     "public/assets/Images/Movements/ETA/ETA_Valjoux_7750/7750_17_2.JPG",
     "public/assets/Images/Movements/ETA/ETA_Valjoux_7750/7750_17_3.JPG",

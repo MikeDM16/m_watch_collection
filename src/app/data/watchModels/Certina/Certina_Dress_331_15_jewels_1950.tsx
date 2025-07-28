@@ -14,6 +14,7 @@ import { WaterResistanceEnum } from "@/app/enums/waterResistanceEnum";
 
 import { MovementsDataDB } from "../../movementsData";
 import { WatchDetails } from "../../watchDetails";
+import { CertinaBrandSeries } from "./CertinaBrandSeries";
 
 const details: WatchDetails = {
   title: "1950 Certina Dress 15 Jewels",
@@ -61,7 +62,7 @@ const details: WatchDetails = {
 
     information: {
       brand: BrandsEnum.CERTINA,
-      series: "Dress",
+      series: CertinaBrandSeries.VINTAGE_SERIES,
       catalogueReference: "-",
       productionYear: "1950",
       movementType: MovementWatchTypeEnum.MECHANIQUE,

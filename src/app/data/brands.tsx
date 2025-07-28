@@ -304,7 +304,8 @@ export const brandsDB: Brand[] = [
     displayOrder: 35,
     website: "https://www.cuervoysobrinos.com/en/",
     description:
-      "Cauny is a historic watch brand known for its elegant designs and quality craftsmanship.",
+      "Cuervo y Sobrinos is a historic watch brand known for its elegant designs and quality craftsmanship. \n\
+      The company began as a jewelry store and later became known for its luxury watches",
     foundedInformation: {
       year: 1882,
       details: "Founded in Habana, Cuba",
@@ -321,6 +322,14 @@ export const brandsDB: Brand[] = [
     name: BrandsEnum.CERTINA,
     logoImg: "public/assets/Images/Brands_Logos/certina_logo.PNG",
     displayOrder: 40,
+    website: "https://www.certina.com/en",
+    description:
+      "Certina is a historic watch brand known for its elegant designs and quality craftsmanship.",
+    foundedInformation: {
+      year: 1988,
+      details: "Founded in Grenchen, Switzerland",
+    },
+    displayBySeries: true,
   },
   {
     name: BrandsEnum.CAMEL_TROPHY,

@@ -20,6 +20,7 @@ const ETA_2671: Caliber = {
   usefullLinks: {},
   // sliderImages
   sliderImages: [
+    "public/assets/Images/Movements/ETA/ETA_2671/ETA_2671_3.JPG",
     "public/assets/Images/Movements/ETA/ETA_2671/ETA_2671_0.JPG",
     "public/assets/Images/Movements/ETA/ETA_2671/ETA_2671.JPG",
     "public/assets/Images/Movements/ETA/ETA_2671/ETA_2671_2.JPG",
