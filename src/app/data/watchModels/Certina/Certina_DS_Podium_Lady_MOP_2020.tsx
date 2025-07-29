@@ -52,6 +52,11 @@ const details: WatchDetails = {
     "public/assets/Images/Certina/2020_Certina_DS_Podium_MOP_Lady/IMG_3150.JPG",
   ],
 
+      saleReport: {
+    price: 164,
+    date: "29/07/2025",
+  },
+
   technicalData: {
     features: [featuresEnum.DATE, featuresEnum.SCREWED_IN_CROWN],
 

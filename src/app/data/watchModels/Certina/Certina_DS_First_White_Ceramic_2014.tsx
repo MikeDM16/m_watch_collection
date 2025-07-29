@@ -54,6 +54,11 @@ const details: WatchDetails = {
     "public/assets/Images/Certina/2014_Certina_DS_First_Ceramic_white/IMG_3184.JPG",
   ],
 
+    saleReport: {
+    price: 254,
+    date: "29/07/2025",
+  },
+
   technicalData: {
     features: [featuresEnum.DATE, featuresEnum.SCREWED_IN_CROWN],
 
