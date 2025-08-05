@@ -78,7 +78,7 @@ const details: WatchDetails = {
     case: {
       diameter: "33 mm",
       thickness: "6 mm",
-      material: "Stainless Steel - Gold plated",
+      material: "Stainless Steel - Gold Inlay",
       waterResistance: WaterResistanceEnum.WATERPROOF_30M,
       finishingDetails: "Vertical Polished",
       bezel: "Without bezel",
@@ -88,7 +88,7 @@ const details: WatchDetails = {
     },
 
     dial: {
-      color: "Cream Yellow",
+      color: "White",
       dialMarkers: DialMarketsEnum.BATTON,
       finishingDetails: FinishingDetailsEnum.NONE,
       luminiscentIndexes: LuminescentIndexesEnum.MARKERS,
@@ -99,7 +99,7 @@ const details: WatchDetails = {
       material: "Stainless Steel",
       buckleType: BuckleTypeEnum.FOLDING_CLASP,
       width: "19 mm",
-      color: "Grey",
+      color: "Grey with gold details",
     },
 
     movement: MovementsDataDB.OMEGA_1449,

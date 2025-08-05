@@ -441,7 +441,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     type: WatchTypeEnum.DIVE,
     srcImage: "public/assets/Images/Zenith/2010_Zenith_El_Primero_ChronoMaster/IMG_3466.JPG",
     href: require("./watchModels/Zenith/Zenith_El_Primero_ChronoMaster_2010"),
-    specialCollectionItem: true,
+    specialCollectionItem: false,
   },
   "Tag Heuer Aquaracer Grande Date": {
     brand: BrandsEnum.TAG_HEUER,
@@ -450,7 +450,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     type: WatchTypeEnum.SPORTS,
     srcImage: "public/assets/Images/Tag_Heuer/2010_Tag_Heuer_Aquaracer_WAF1010/IMG_6047.JPG",
     href: require("./watchModels/Tag_Heuer/Tag_Heuer_Aquaracer_WAF1010_2010"),
-    specialCollectionItem: true,
+    specialCollectionItem: false,
   },
   "Tissot PRS 200 Black T362/462K": {
     brand: BrandsEnum.TISSOT,
@@ -666,6 +666,16 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     href: require("./watchModels/Mercedes/Mercedes_Benz_SLK_Chrono_II_2004"),
     specialCollectionItem: false,
   },
+  "Tag Heuer Senna Limited Edition 3236/4000 CT5114": {
+    brand: BrandsEnum.TAG_HEUER,
+    legend: "Tag Heuer Senna Limited Edition 3236/4000 CT5114",
+    year: 2003,
+    type: WatchTypeEnum.SPORTS,
+    srcImage: "public/assets/Images/Tag_Heuer/2003_Tag_Heuer_Senna_Link_CT5114/IMG_3755.JPG",
+    href: require("./watchModels/Tag_Heuer/Tag_Heuer_Senna_Link_CT5114_2003"),
+    specialCollectionItem: true,
+  },
+
   "Tissot Heritage COSC Limited Edition": {
     brand: BrandsEnum.TISSOT,
     legend: "Tissot Heritage COSC Limited Edition",
@@ -691,7 +701,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     type: WatchTypeEnum.SPORTS,
     srcImage: "public/assets/Images/Breitling/2002_Breitling_Chronomat_B13050/IMG_5090.JPG",
     href: require("./watchModels/Breitling/Breitling_Chronomat_B13050_2002"),
-    specialCollectionItem: true,
+    specialCollectionItem: false,
   },
   "Mercedes Benz Chronograph": {
     brand: BrandsEnum.MERCEDES_BENZ,
@@ -1226,7 +1236,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     type: WatchTypeEnum.DRESS,
     srcImage: "public/assets/Images/Raymond_Weil/1990_Raymond_Weil_7760_A290703/IMG_2222.JPG",
     href: require("./watchModels/Raymond_Weil/Raymond_Weil_Tradition_Mecanique_7760_1990_A290703"),
-    specialCollectionItem: true,
+    specialCollectionItem: false,
   },
   "Raymond Weil Tradition Mécanique": {
     brand: BrandsEnum.RAYMOND_WEIL,
@@ -1292,13 +1302,22 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     href: require("./watchModels/Omega/Omega_Polaris_396_1022_1987"),
     specialCollectionItem: false,
   },
-  "Omega Seamaster GMT 396.1122": {
+  "Omega Seamaster Polaris GMT 396.1122": {
     brand: BrandsEnum.OMEGA,
-    legend: "Omega Seamaster GMT 396.1122",
+    legend: "Omega Seamaster Polaris GMT 396.1122",
     year: 1987,
     type: WatchTypeEnum.CASUAL,
     srcImage: "public/assets/Images/Omega/1987_Polaris_GMT_396_1122/IMG_7199.JPG",
     href: require("./watchModels/Omega/Omega_Polaris_GMT_396_1122_1987"),
+    specialCollectionItem: false,
+  },
+  "Omega Seamaster Polaris GMT (396.1122)": {
+    brand: BrandsEnum.OMEGA,
+    legend: "Omega Seamaster Polaris GMT (396.1122)",
+    year: 1987,
+    type: WatchTypeEnum.CASUAL,
+    srcImage: "public/assets/Images/Omega/1987_Omega_Seamaster_GMT_396_1122/IMG_3697.JPG",
+    href: require("./watchModels/Omega/Omega_Polaris_GMT_2_396_1122_1987"),
     specialCollectionItem: false,
   },
   "Omega Polaris Calendar 396.1222": {
@@ -1616,7 +1635,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     type: WatchTypeEnum.CASUAL,
     srcImage: "public/assets/Images/Pryngeps/1975_Pryngeps_7750/IMG_1989.JPG",
     href: require("./watchModels/Pryngeps/Pryngeps_Automatic_Chronograph_Valjoux_7750"),
-    specialCollectionItem: true,
+    specialCollectionItem: false,
   },
   "Hipco Incabloc 17 Jewels": {
     brand: BrandsEnum.HIPCO,
@@ -1924,7 +1943,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     type: WatchTypeEnum.DRESS,
     srcImage: "public/assets/Images/Omega/1961_Omega_Geneve_Cal_268/IMG_6636.JPG",
     href: require("./watchModels/Omega/Omega_Geneve_Cal_268_1961"),
-    specialCollectionItem: true,
+    specialCollectionItem: false,
   },
   "Tissot Nuevo Horizonte": {
     brand: BrandsEnum.TISSOT,
@@ -2033,7 +2052,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     type: WatchTypeEnum.DRESS,
     srcImage: "public/assets/Images/Hermes/1955_Hermes_Chronograph/IMG_1904.JPG",
     href: require("./watchModels/Hermes/Hermes_Landeron_51_Chrono_1955"),
-    specialCollectionItem: true,
+    specialCollectionItem: false,
   },
   "Tissot Visodate Mechanical": {
     brand: BrandsEnum.TISSOT,

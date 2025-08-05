@@ -72,6 +72,7 @@ import TAG_HEUER_2_95 from "./movements/Tag_Heuer/Tag_Heuer_2_95";
 import HEUER_4_93 from "./movements/Tag_Heuer/Tag_Heuer_4_93";
 import HEUER_4_95 from "./movements/Tag_Heuer/Tag_Heuer_4_95";
 import HEUER_4_96 from "./movements/Tag_Heuer/Tag_Heuer_4_96";
+import TAG_HEUER_CALIBER_16 from "./movements/Tag_Heuer/Tag_Heuer_Caliber_16_25J";
 import TIMEX_M100 from "./movements/Timex/Timex_M100";
 import TISSOT_26_9_261 from "./movements/Tissot/26_9_621_17J";
 import TISSOT_27_3 from "./movements/Tissot/27_3_15J";
@@ -173,6 +174,7 @@ export const MovementsDataDB: Record<string, Caliber> = {
   HEUER_4_95: HEUER_4_95,
   HEUER_4_96: HEUER_4_96,
   HEUER_2_00: HEUER_2_00,
+  TAG_HEUER_CALIBER_16: TAG_HEUER_CALIBER_16,
 
   LANDERON_48_17J: Landeron_48_17J,
   LANDERON_51_17J: Landeron_51_17J,

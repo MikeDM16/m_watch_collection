@@ -59,6 +59,12 @@ const details: WatchDetails = {
     "public/assets/Images/Universal_Geneve/1942_Universal_Geneve_cal_262/IMG_2659.JPG",
   ],
 
+  saleReport: {
+    price: 700,
+    date: "24/07/2025",
+    url: "https://www.catawiki.com/en/l/96716167",
+  },
+
   technicalData: {
     features: [featuresEnum.MECHANICAL],
 

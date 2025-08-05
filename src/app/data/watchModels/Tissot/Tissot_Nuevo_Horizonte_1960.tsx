@@ -59,6 +59,12 @@ const details: WatchDetails = {
     "public/assets/Images/Tissot/1960_Tissot_Nuevo_Horizonte/IMG_1102.JPG",
   ],
 
+  saleReport: {
+    price: 345,
+    date: "30/07/2025",
+    url: "https://www.catawiki.com/en/l/96842809",
+  },
+
   technicalData: {
     features: [
       featuresEnum.MECHANICAL,

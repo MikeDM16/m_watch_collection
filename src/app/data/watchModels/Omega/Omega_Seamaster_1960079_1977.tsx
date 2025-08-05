@@ -69,6 +69,13 @@ const details: WatchDetails = {
     "public/assets/Images/Omega/1977_Omega_1960079_Seamaster/IMG_0068.JPG",
     "public/assets/Images/Omega/1977_Omega_1960079_Seamaster/IMG_0069.JPG",
   ],
+
+  saleReport: {
+    price: 600,
+    date: "11/07/2025",
+    url: "https://www.catawiki.com/en/l/96497523",
+  },
+
   technicalData: {
     features: [featuresEnum.DATE, featuresEnum.WR_30_METERS],
 

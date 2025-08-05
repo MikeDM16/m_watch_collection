@@ -54,6 +54,11 @@ const details: WatchDetails = {
     "public/assets/Images/Doxa/1945_Doxa_Antimagnetic/IMG_2610.JPG",
     "public/assets/Images/Doxa/1945_Doxa_Antimagnetic/IMG_2612.JPG",
   ],
+  saleReport: {
+    price: 201,
+    date: "24/07/2025",
+    url: "https://www.catawiki.com/en/l/96715979",
+  },
 
   technicalData: {
     features: [featuresEnum.MECHANICAL],
