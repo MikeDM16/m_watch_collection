@@ -1738,6 +1738,16 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     specialCollectionItem: false,
   },
 
+  "Tissot Navigator Lemania 1341": {
+    brand: BrandsEnum.TISSOT,
+    legend: "Tissot Navigator Lemania 1341",
+    year: 1974,
+    type: WatchTypeEnum.SPORTS,
+    srcImage:
+      "public/assets/Images/Tissot/1974_Tissot_Navigator_Automatic_Panda_Lemania_1341/IMG_4076.JPG",
+    href: require("./watchModels/Tissot/Tissot_Navigator_Panda_Automatic_Lemania_1341_1974"),
+    specialCollectionItem: true,
+  },
   "Tissot Seastar Navigator Chronograph": {
     brand: BrandsEnum.TISSOT,
     legend: "Tissot Seastar Navigator Chronograph",

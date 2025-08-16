@@ -87,12 +87,16 @@ const details: WatchDetails = {
     url: "https://www.catawiki.com/en/l/95741480",
   },
   technicalData: {
-    features: [featuresEnum.DATE, featuresEnum.MECHANICAL],
+    features: [
+      featuresEnum.DATE,
+      featuresEnum.MECHANIQUE_CHRONOGRAPH,
+      "Movement with production number 18890993, dating the watch back to 1974",
+    ],
 
     information: {
       brand: BrandsEnum.TISSOT,
-      series: TissotBrandSeries.SEASTAR,
-      catalogueReference: "40522-1 (15) (18890993)",
+      series: TissotBrandSeries.NAVIGATOR,
+      catalogueReference: "Seastar - 40522-1 (15) (18890993)",
       productionYear: "1974",
       movementType: MovementWatchTypeEnum.MECHANIQUE,
       style: WatchStyleEnum.SPORTS,
