@@ -41,7 +41,7 @@ export const brandsDB: Brand[] = [
       year: 1887,
       details: "Founded in La Chaux-de-Fonds, Switzerland",
     },
-    displayBySeries: true,
+    displayBySeries: false,
     backgrounImages: [
       "public/assets/Images/Brands_Backgrounds/Eberhard_1_Background.JPG",
       "public/assets/Images/Brands_Backgrounds/Eberhard_2_Background.JPG",

@@ -1402,6 +1402,15 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     href: require("./watchModels/Omega/Omega_DeVille_1910077_Cal_1365_1982"),
     specialCollectionItem: false,
   },
+  "Eberhard Chronograph EP-40-68 Enamel Dial": {
+    brand: BrandsEnum.EBERHARD,
+    legend: "Eberhard Chronograph EP-40-68 Enamel Dial",
+    year: 1980,
+    type: WatchTypeEnum.DRESS,
+    srcImage: "public/assets/Images/Eberhard/1980_Eberhard_ref_31100_silver_gold/IMG_4408.JPG",
+    href: require("./watchModels/Eberhard/Eberhard_Chronograph_31000_1980"),
+    specialCollectionItem: true,
+  },
   "Timex Marlim": {
     brand: BrandsEnum.TIMEX,
     legend: "Timex Marlim",
@@ -1457,6 +1466,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     href: require("./watchModels/Taunus/Taunus_Calendar_17Rubis_1975"),
     specialCollectionItem: false,
   },
+
   "Omega Seamaster 196.0079 Cal. 1342": {
     brand: BrandsEnum.OMEGA,
     legend: "Omega Seamaster 196.0079 Cal. 1342",
@@ -1955,6 +1965,16 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     href: require("./watchModels/Omega/Omega_Geneve_Cal_268_1961"),
     specialCollectionItem: false,
   },
+  "Omega Seamaster Cross-hair Cal. 610": {
+    brand: BrandsEnum.OMEGA,
+    legend: "Omega Seamaster Cross-hair Cal. 610",
+    year: 1960,
+    type: WatchTypeEnum.CASUAL,
+    srcImage: "public/assets/Images/Omega/1960_Omega_14740_CrossHaird_610/IMG_4270.JPG",
+    href: require("./watchModels/Omega/Omega_Seamaster_cross_hair_14740_Cal_610_1960"),
+    specialCollectionItem: false,
+  },
+
   "Tissot Nuevo Horizonte": {
     brand: BrandsEnum.TISSOT,
     legend: "Tissot Nuevo Horizonte",

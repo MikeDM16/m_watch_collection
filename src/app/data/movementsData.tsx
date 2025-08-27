@@ -30,6 +30,7 @@ import ETA_Valjoux_7750_17 from "./movements/ETA/ETA_Valjoux_7750_17J";
 import ETA_Valjoux_7750_25 from "./movements/ETA/ETA_Valjoux_7750_25J";
 import ETA_Valjoux_7751_25 from "./movements/ETA/ETA_Valjoux_7751_25J";
 import ETA_Valjoux_7760_17 from "./movements/ETA/ETA_Valjoux_7760_17J";
+import EXCELSIOR_PARK_40_68_17J from "./movements/Excelsior_Park/Excelsior_Park_40_68_17J";
 import FE_140 from "./movements/FE/FE_140_17J";
 import FE_233_69 from "./movements/FE/FE_233_69_17J";
 import FHF_96_4 from "./movements/FHF/FHF_96_4_17J";
@@ -45,6 +46,7 @@ import OMEGA_265 from "./movements/Omega/Omega_265_15J";
 import OMEGA_267 from "./movements/Omega/Omega_267_17J";
 import OMEGA_268 from "./movements/Omega/Omega_268_17J";
 import OMEGA_410 from "./movements/Omega/Omega_410_17J";
+import OMEGA_610_17J from "./movements/Omega/Omega_610_17J";
 import OMEGA_1151 from "./movements/Omega/Omega_1151";
 import OMEGA_1370 from "./movements/Omega/Omega_1370";
 import OMEGA_1430 from "./movements/Omega/Omega_1430";
@@ -132,6 +134,7 @@ export const MovementsDataDB: Record<string, Caliber> = {
   DOXA_83_4_987_17J: DOXA_83_4_987_17J,
 
   EBERHARD_16000_17J: EBERHARD_16000_17J,
+  EXCELSIOR_PARK_40_68_17J: EXCELSIOR_PARK_40_68_17J,
 
   ETA_900: ETA_900,
   ETA_1256: ETA_1256,
@@ -200,6 +203,7 @@ export const MovementsDataDB: Record<string, Caliber> = {
   OMEGA_268: OMEGA_268,
   OMEGA_30T2: OMEGA_30T2,
   OMEGA_410: OMEGA_410,
+  OMEGA_610_17J: OMEGA_610_17J,
   OMEGA_T17: OMEGA_T17,
 
   ORIENT_46D40: ORIENT_46D40,
