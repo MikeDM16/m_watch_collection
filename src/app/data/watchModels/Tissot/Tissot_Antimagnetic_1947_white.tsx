@@ -63,6 +63,12 @@ const details: WatchDetails = {
     "public/assets/Images/Tissot/1947_Tissot_Antimagnetic_27_3/IMG_3226.JPG",
   ],
 
+  saleReport: {
+    price: 335,
+    date: "05/08/2025",
+    url: "https://www.catawiki.com/en/l/96948310",
+  },
+
   technicalData: {
     features: [
       featuresEnum.DATE,

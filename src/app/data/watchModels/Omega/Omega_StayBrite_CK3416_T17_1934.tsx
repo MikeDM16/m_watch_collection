@@ -59,6 +59,12 @@ const details: WatchDetails = {
     "public/assets/Images/Omega/1934_OmegaStaybrite_Tank_CK3516/IMG_0075.JPG",
   ],
 
+  saleReport: {
+    price: 780,
+    date: "17/08/2025",
+    url: "https://www.catawiki.com/en/l/97096270",
+  },
+
   technicalData: {
     features: [featuresEnum.MECHANICAL, featuresEnum.SMALL_SECONDS],
 
