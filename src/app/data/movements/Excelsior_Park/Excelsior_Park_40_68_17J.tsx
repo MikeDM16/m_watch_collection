@@ -10,7 +10,7 @@ import { Caliber } from "../../movementsData";
 
 const EXCELSIOR_PARK_40_68_17J: Caliber = {
   // Title
-  title: "Excelsior_Park 40-68",
+  title: "Excelsior Park 40-68",
   //Description
   description:
     "Excelsior Park Cal. JB4 family movements are recognizable due to the distinctive U-shaped cock that supports the chronograph wheels.\
