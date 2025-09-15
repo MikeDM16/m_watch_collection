@@ -17,7 +17,7 @@ import { WatchDetails } from "../../watchDetails";
 import { TissotBrandSeries } from "./TissotBrandSeries";
 
 const details: WatchDetails = {
-  title: "2005 Tissot PR 100 Octa Chronograph",
+  title: "2005 Tissot PR 100 Chronograph",
 
   sliderImages: [
     "public/assets/Images/Tissot/2005_Tissot_PR_100_Chronograph/IMG_4750.JPG",
@@ -73,7 +73,7 @@ const details: WatchDetails = {
       material: "Stainless Steel",
       waterResistance: WaterResistanceEnum.WATERPROOF_100M,
       finishingDetails: "Polished",
-      bezel: "Octagon Gold Plated bezel",
+      bezel: "Hexa Gold Plated bezel",
       crownType: CrownWatchTypeEnum.PUSH_PULL,
       crystal: CrystalMaterialEnum.SAPPHIRE,
       caseback: CaseBackDetailsEnum.BRAND_DECORATION,

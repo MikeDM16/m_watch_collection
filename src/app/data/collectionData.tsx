@@ -603,9 +603,9 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     href: require("./watchModels/Emes/Emes_Chrono_OS60_2005"),
     specialCollectionItem: false,
   },
-  "Tissot PR 100 Octa Chronograph": {
+  "Tissot PR 100 Chronograph": {
     brand: BrandsEnum.TISSOT,
-    legend: "Tissot PR 100 Octa Chronograph",
+    legend: "Tissot PR 100 Chronograph",
     year: 2005,
     type: WatchTypeEnum.SPORTS,
     srcImage: "public/assets/Images/Tissot/2005_Tissot_PR_100_Chronograph/IMG_4755.JPG",
