@@ -17,7 +17,7 @@ import { WatchDetails } from "../../watchDetails";
 import { TissotBrandSeries } from "./TissotBrandSeries";
 
 const details: WatchDetails = {
-  title: "1963 Tissot Nuevo Horizonte",
+  title: "1963 Tissot Nuevo Horizonte Cross-Hair",
   sliderImages: [
     "public/assets/Images/Tissot/1960_Tissot_Nuevo_Horizonte/IMG_1104.JPG",
     "public/assets/Images/Tissot/1960_Tissot_Nuevo_Horizonte/IMG_1105.JPG",

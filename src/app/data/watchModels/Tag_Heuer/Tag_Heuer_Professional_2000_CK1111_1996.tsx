@@ -74,6 +74,12 @@ const details: WatchDetails = {
     "public/assets/Images/Tag_Heuer/1996_Tag_Heuer_Professional_2000_CK1111/IMG_3236.JPG",
   ],
 
+  saleReport: {
+    price: 650,
+    date: "021/09/2025",
+    url: "https://www.catawiki.com/en/l/97500593",
+  },
+
   technicalData: {
     features: [
       featuresEnum.DATE,

@@ -603,6 +603,15 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     href: require("./watchModels/Emes/Emes_Chrono_OS60_2005"),
     specialCollectionItem: false,
   },
+  "Tissot PR 100 Octa Chronograph": {
+    brand: BrandsEnum.TISSOT,
+    legend: "Tissot PR 100 Octa Chronograph",
+    year: 2005,
+    type: WatchTypeEnum.SPORTS,
+    srcImage: "public/assets/Images/Tissot/2005_Tissot_PR_100_Chronograph/IMG_4755.JPG",
+    href: require("./watchModels/Tissot/Tissot_ PR_100_Chronograph_2005"),
+    specialCollectionItem: false,
+  },
   "Tissot PRS 516 J565/665 Retrograde": {
     brand: BrandsEnum.TISSOT,
     legend: "Tissot PRS 516 J565/665 Retrograde",
@@ -2009,6 +2018,15 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     type: WatchTypeEnum.DRESS,
     srcImage: "public/assets/Images/Tissot/1958_Tissot_Visodate/IMG_0426.JPG",
     href: require("./watchModels/Tissot/Tissot_Visodate_Automatic_1958"),
+    specialCollectionItem: false,
+  },
+  "Tissot Nuevo Horizonte Cross-Hair": {
+    brand: BrandsEnum.TISSOT,
+    legend: "Tissot Nuevo Horizonte Cross-Hair",
+    year: 1958,
+    type: WatchTypeEnum.DRESS,
+    srcImage: "public/assets/Images/Tissot/1958_Tissot_Nuevo_Horizonte_27B21/IMG_4721.JPG",
+    href: require("./watchModels/Tissot/Tissot_Nuevo_Horizonte_1958"),
     specialCollectionItem: false,
   },
   "Tissot Visodate": {

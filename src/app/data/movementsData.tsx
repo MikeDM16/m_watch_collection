@@ -80,6 +80,7 @@ import TIMEX_M100 from "./movements/Timex/Timex_M100";
 import TISSOT_26_9_261 from "./movements/Tissot/26_9_621_17J";
 import TISSOT_27_3 from "./movements/Tissot/27_3_15J";
 import TISSOT_27B_1 from "./movements/Tissot/27B_1_15J";
+import TISSOT_27B_21 from "./movements/Tissot/27B_21_15J";
 import TISSOT_781 from "./movements/Tissot/781_17J";
 import TISSOT_784 from "./movements/Tissot/784_21J";
 import TISSOT_794 from "./movements/Tissot/794_21J";
@@ -228,6 +229,7 @@ export const MovementsDataDB: Record<string, Caliber> = {
   TISSOT_26_9_261: TISSOT_26_9_261,
   TISSOT_27_3: TISSOT_27_3,
   TISSOT_27B_1: TISSOT_27B_1,
+  TISSOT_27B_21: TISSOT_27B_21,
   TISSOT_781: TISSOT_781,
   TISSOT_784: TISSOT_784,
   TISSOT_794: TISSOT_794,

@@ -87,6 +87,12 @@ const details: WatchDetails = {
     "public/assets/Images/Tissot/1974_Tissot_Navigator_Automatic_Panda_Lemania_1341/manufacture_date.JPG",
   ],
 
+  saleReport: {
+    price: 936,
+    date: "31/08/2025",
+    url: "https://www.catawiki.com/en/l/97307708",
+  },
+
   technicalData: {
     features: [
       featuresEnum.DATE,

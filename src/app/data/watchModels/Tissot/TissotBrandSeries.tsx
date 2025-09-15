@@ -7,6 +7,7 @@ export const TissotBrandSeries = {
   PRS_516: "PRS 516",
   PRS_200: "PRS 200",
   PRC_200: "PRC 200",
+  PR_100: "PRC 100",
   LE_LOCLE: "Le Locle",
   BALLADE: "Ballade",
   SPORTS: "Sports",
