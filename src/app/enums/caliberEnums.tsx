@@ -44,6 +44,7 @@ export const JewelsNumberEnum = {
   J_7: "7 (Seven) Jewels",
   J_13: "13 (Thirteen) Jewels",
   J_15: "15 (Fifteen) Jewels",
+  J_16: "16 (Sixteen) Jewels",
   J_17: "17 (Seventeen) Jewels",
   J_21: "21 (Twenty-One) Jewels",
   J_22: "22 (Twenty-Two) Jewels",
