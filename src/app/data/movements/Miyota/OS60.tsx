@@ -3,29 +3,27 @@ import { MovementWatchTypeEnum } from "@/app/enums/movementWatchTypeEnum";
 
 import { Caliber } from "../../movementsData";
 
-const MIYOTA_OS10: Caliber = {
+const MIYOTA_OS60: Caliber = {
   // Title
-  title: "Miyota OS10 (Citizen 0510)",
+  title: "Miyota OS60 (Citizen 0560)",
   //Description
   description: "",
   // UsefullLinks
   usefullLinks: {
-    "Instruction Manual from Miyota": "../Files/JM_MiyotaOS10.pdf",
+    "Instruction Manual from Miyota": "../Files/0s60.pdf",
   },
   // sliderImages
   sliderImages: [
-    "public/assets/Images/Movements/Miyota/OS10/OS10_1.JPG",
-    "public/assets/Images/Movements/Miyota/OS10/OS10_2.JPG",
-    "public/assets/Images/Movements/Miyota/OS10/OS10_3.JPG",
-    "public/assets/Images/Movements/Miyota/OS10/OS10_4.JPG",
-    "public/assets/Images/Movements/Miyota/OS10/OS10_5.JPG",
+    "public/assets/Images/Movements/Miyota/OS60/OS60_1.JPG",
+    "public/assets/Images/Movements/Miyota/OS60/OS60_2.JPG",
+    "public/assets/Images/Movements/Miyota/OS60/OS60_3.JPG",
   ],
   // Details
   details: {
     // Manufacturer
     manufacturer: CaliberBrandsEnum.MIYOTA,
     // ModelReference
-    modelReference: "OS10",
+    modelReference: "OS60",
     // Type
     type: MovementWatchTypeEnum.QUARTZ,
     // Frequency
@@ -41,4 +39,4 @@ const MIYOTA_OS10: Caliber = {
   },
 };
 
-export default MIYOTA_OS10;
+export default MIYOTA_OS60;

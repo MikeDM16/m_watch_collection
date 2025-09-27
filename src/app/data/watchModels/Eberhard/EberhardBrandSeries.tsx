@@ -1,4 +1,4 @@
 export const EberhardBrandSeries = {
   EXTRA_FORT_VINTAGE: "Extra Fort (Vintage)",
-  CHRONOGRAPH_VINTAGE: "Chronograph (Vintage)",
+  RE_EDITION: "Re Edition Chronograph Series",
 };

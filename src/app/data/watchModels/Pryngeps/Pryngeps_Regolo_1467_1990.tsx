@@ -97,7 +97,7 @@ const details: WatchDetails = {
         manufacturer: "SpaceLine (Swiss Made)",
         modelReference: "-",
         type: "Quartz",
-        battery: "399",
+        battery: "399 / SR927SW",
         jewels: "7 /Seven) Jewels",
         functions: "Tri-Compax (Month, Day, Date), Hours, Minutes, Seconds",
       },

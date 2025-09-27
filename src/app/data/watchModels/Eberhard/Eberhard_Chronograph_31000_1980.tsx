@@ -78,7 +78,7 @@ const details: WatchDetails = {
 
     information: {
       brand: BrandsEnum.EBERHARD,
-      series: EberhardBrandSeries.CHRONOGRAPH_VINTAGE,
+      series: EberhardBrandSeries.RE_EDITION,
       catalogueReference: "31100-357 (Replica of the 1940s model)",
       productionYear: "1980",
       movementType: MovementWatchTypeEnum.MECHANIQUE,

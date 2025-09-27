@@ -12,6 +12,7 @@ import { MovementWatchTypeEnum } from "@/app/enums/movementWatchTypeEnum";
 import { WatchStyleEnum } from "@/app/enums/watchStyleEnum";
 import { WaterResistanceEnum } from "@/app/enums/waterResistanceEnum";
 
+import { MovementsDataDB } from "../../movementsData";
 import { WatchDetails } from "../../watchDetails";
 
 const details: WatchDetails = {
@@ -81,25 +82,7 @@ const details: WatchDetails = {
       color: "Red",
     },
 
-    movement: {
-      title: "Miyota OS60",
-      description: "",
-      usefullLinks: {
-        "Instruction Manual from Miyota": "../Files/0s60.pdf",
-      },
-      sliderImages: [
-        "public/assets/Images/Mercedes/2004_Mercedes_SLK_Chrono_I/os60-1.JPG",
-        "public/assets/Images/Mercedes/2004_Mercedes_SLK_Chrono_I/os60-2.JPG",
-      ],
-      details: {
-        manufacturer: "Miyota (Citizen)",
-        modelReference: "OS60",
-        type: "Quartz",
-        battery: "399",
-        jewels: "0 Jewels (None)",
-        functions: "Chrono up to 12 hours 60min, Date, Hours, Minutes, Seconds at 6 o'clock",
-      },
-    },
+    movement: MovementsDataDB.MIYOTA_OS60,
   },
 };
 

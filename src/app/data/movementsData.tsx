@@ -41,6 +41,7 @@ import Landeron_51_17J from "./movements/Landeron/Landeron_51_17J_";
 import Landeron_159_17J from "./movements/Landeron/Landeron_159_17J";
 import LEMANIA_1341 from "./movements/Lemania/Lemania_1341_17_Jewels";
 import MIYOTA_OS10 from "./movements/Miyota/OS10";
+import MIYOTA_OS60 from "./movements/Miyota/OS60";
 import OMEGA_30T2 from "./movements/Omega/Omega_30T2_15J";
 import OMEGA_265 from "./movements/Omega/Omega_265_15J";
 import OMEGA_267 from "./movements/Omega/Omega_267_17J";
@@ -189,6 +190,7 @@ export const MovementsDataDB: Record<string, Caliber> = {
   LEMANIA_1341: LEMANIA_1341,
 
   MIYOTA_OS10: MIYOTA_OS10,
+  MIYOTA_OS60: MIYOTA_OS60,
 
   OMEGA_1151: OMEGA_1151,
   OMEGA_1370: OMEGA_1370,
