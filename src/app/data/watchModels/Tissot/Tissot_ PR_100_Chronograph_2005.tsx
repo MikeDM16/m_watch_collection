@@ -55,6 +55,12 @@ const details: WatchDetails = {
     "public/assets/Images/Tissot/2005_Tissot_PR_100_Chronograph/IMG_4773.JPG",
   ],
 
+  saleReport: {
+    price: 350,
+    date: "25/09/2025",
+    url: "https://www.catawiki.com/en/l/97911218",
+  },
+
   technicalData: {
     features: [featuresEnum.DATE, featuresEnum.CHRONOGRAPH, featuresEnum.WR_30_METERS],
 

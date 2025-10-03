@@ -57,6 +57,13 @@ const details: WatchDetails = {
     "public/assets/Images/Omega/1987_Omega_Seamaster_GMT_396_1122/IMG_3720.JPG",
     "public/assets/Images/Omega/1987_Omega_Seamaster_GMT_396_1122/IMG_3721.JPG",
   ],
+
+  saleReport: {
+    price: 550,
+    date: "23/09/2025",
+    url: "https://www.catawiki.com/en/l/97911355",
+  },
+
   technicalData: {
     features: [featuresEnum.DATE, featuresEnum.WR_30_METERS],
 

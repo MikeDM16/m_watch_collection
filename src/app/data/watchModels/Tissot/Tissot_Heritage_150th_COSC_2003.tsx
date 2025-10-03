@@ -72,6 +72,13 @@ const details: WatchDetails = {
     "public/assets/Images/Tissot/2003_Tissot_150th_Heritage/IMG_4994.JPG",
     "public/assets/Images/Tissot/2003_Tissot_150th_Heritage/IMG_4995.JPG",
   ],
+
+  saleReport: {
+    price: 950,
+    date: "01/10/2025",
+    url: "https://www.catawiki.com/en/l/98063593",
+  },
+
   technicalData: {
     features: [featuresEnum.DATE, featuresEnum.OPEN_CASE_BACK, featuresEnum.AUTOMATIC],
 

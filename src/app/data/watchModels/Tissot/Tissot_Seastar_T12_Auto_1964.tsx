@@ -83,6 +83,12 @@ const details: WatchDetails = {
     "public/assets/Images/Tissot/1964_Tissot_T12_Automatic/IMG_1232.JPG",
   ],
 
+  saleReport: {
+    price: 282,
+    date: "24/09/2025",
+    url: "https://www.catawiki.com/en/l/97911370",
+  },
+
   technicalData: {
     features: [
       featuresEnum.DATE,
