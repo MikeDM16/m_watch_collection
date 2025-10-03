@@ -14,6 +14,7 @@ import { WaterResistanceEnum } from "@/app/enums/waterResistanceEnum";
 
 import { MovementsDataDB } from "../../movementsData";
 import { WatchDetails } from "../../watchDetails";
+import { RaymondWeilBrandSeries } from "./RaymondWeilBrandSeries";
 
 const details: WatchDetails = {
   title: "2007 Raymond Weil Saxo 9520",
@@ -64,7 +65,7 @@ const details: WatchDetails = {
 
     information: {
       brand: BrandsEnum.RAYMOND_WEIL,
-      series: "Saxo",
+      series: RaymondWeilBrandSeries.SAXO,
       catalogueReference: "9520",
       productionYear: "2007",
       movementType: MovementWatchTypeEnum.QUARTZ,

@@ -14,6 +14,7 @@ import { WaterResistanceEnum } from "@/app/enums/waterResistanceEnum";
 
 import { MovementsDataDB } from "../../movementsData";
 import { WatchDetails } from "../../watchDetails";
+import { RaymondWeilBrandSeries } from "./RaymondWeilBrandSeries";
 
 const details: WatchDetails = {
   title: "2016 Raymond Weil Jazzmaster Maestro Automatic",
@@ -65,7 +66,7 @@ const details: WatchDetails = {
 
     information: {
       brand: BrandsEnum.RAYMOND_WEIL,
-      series: "Maestro",
+      series: RaymondWeilBrandSeries.MAESTRO,
       catalogueReference: "2837",
       productionYear: "2016",
       movementType: MovementWatchTypeEnum.AUTOMATIC,

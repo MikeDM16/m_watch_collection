@@ -471,6 +471,17 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     href: require("./watchModels/Tissot/Tissot_T-Touch_2009"),
     specialCollectionItem: false,
   },
+
+  "Raymond Weil Maestro Automatic": {
+    brand: BrandsEnum.RAYMOND_WEIL,
+    legend: "Raymond Weil Maestro Automatic",
+    year: 2008,
+    type: WatchTypeEnum.DRESS,
+    srcImage: "public/assets/Images/Raymond_Weil/2008_Raymond_Weil_Maestro_2834/IMG_5305.JPG",
+    href: require("./watchModels/Raymond_Weil/Raymond_Weil_Maestro_2834_Automatic_2008"),
+    specialCollectionItem: false,
+  },
+
   "Tissot T-Race T472S Chronograph": {
     brand: BrandsEnum.TISSOT,
     legend: "Tissot T-Race T472S Chronograph",
@@ -529,15 +540,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     href: require("./watchModels/Tissot/Tissot_Le_Locle_Auto_2007"),
     specialCollectionItem: false,
   },
-  "Raymond Weil Tango 5563": {
-    brand: BrandsEnum.RAYMOND_WEIL,
-    legend: "Raymond Weil Tango 5563",
-    year: 2007,
-    type: WatchTypeEnum.DIVE,
-    srcImage: "public/assets/Images/Raymond_Weil/2007_Raymond_Weil_Tango_5563_Diver/IMG_0495.JPG",
-    href: require("./watchModels/Raymond_Weil/Raymond_Weil_Tango_Diver_2007"),
-    specialCollectionItem: false,
-  },
+
   "Raymond Weil Saxo 9520": {
     brand: BrandsEnum.RAYMOND_WEIL,
     legend: "Raymond Weil Saxo 9520",
@@ -1265,6 +1268,16 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     href: require("./watchModels/Raymond_Weil/Raymond_Weil_Tradition_Mecanique_7760_1990"),
     specialCollectionItem: true,
   },
+  "Raymond Weil Tango 5563": {
+    brand: BrandsEnum.RAYMOND_WEIL,
+    legend: "Raymond Weil Tango 5563",
+    year: 1988,
+    type: WatchTypeEnum.DIVE,
+    srcImage: "public/assets/Images/Raymond_Weil/2007_Raymond_Weil_Tango_5563_Diver/IMG_0495.JPG",
+    href: require("./watchModels/Raymond_Weil/Raymond_Weil_Tango_Diver_2007"),
+    specialCollectionItem: false,
+  },
+
   "Raymond Weil Automatic 2809": {
     brand: BrandsEnum.RAYMOND_WEIL,
     legend: "Raymond Weil Automatic 2809",
@@ -1855,6 +1868,15 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     type: WatchTypeEnum.CASUAL,
     srcImage: "public/assets/Images/Tissot/1970_Tissot_PR_516/IMG_1635.JPG",
     href: require("./watchModels/Tissot/Tissot_Seastar_PR516_1970"),
+    specialCollectionItem: false,
+  },
+  "Omega Geneve Cal. 565 (166.041)": {
+    brand: BrandsEnum.OMEGA,
+    legend: "Omega Geneve Cal. 565 (166.041)",
+    year: 1969,
+    type: WatchTypeEnum.CASUAL,
+    srcImage: "public/assets/Images/Omega/1969_Omega_Geneve_166_041__565/IMG_5330.JPG",
+    href: require("./watchModels/Omega/Omega_Geneve_Cal_565_166_041__1969"),
     specialCollectionItem: false,
   },
   "Provita Automatic": {

@@ -19,6 +19,7 @@ import ETA_2452 from "./movements/ETA/ETA_2452_17J";
 import ETA_2671 from "./movements/ETA/ETA_2671_25J";
 import ETA_2783 from "./movements/ETA/ETA_2783";
 import ETA_2824 from "./movements/ETA/ETA_2824";
+import ETA_2834 from "./movements/ETA/ETA_2834";
 import ETA_2836 from "./movements/ETA/ETA_2836";
 import ETA_2894_2_37J from "./movements/ETA/ETA_2894_2_37J";
 import ETA_2895_1_30J from "./movements/ETA/ETA_2895_1_30J";
@@ -47,6 +48,7 @@ import OMEGA_265 from "./movements/Omega/Omega_265_15J";
 import OMEGA_267 from "./movements/Omega/Omega_267_17J";
 import OMEGA_268 from "./movements/Omega/Omega_268_17J";
 import OMEGA_410 from "./movements/Omega/Omega_410_17J";
+import OMEGA_565 from "./movements/Omega/Omega_565_24J";
 import OMEGA_610_17J from "./movements/Omega/Omega_610_17J";
 import OMEGA_1151 from "./movements/Omega/Omega_1151";
 import OMEGA_1370 from "./movements/Omega/Omega_1370";
@@ -149,6 +151,7 @@ export const MovementsDataDB: Record<string, Caliber> = {
   ETA_2783: ETA_2783,
   ETA_2824: ETA_2824,
   ETA_2836: ETA_2836,
+  ETA_2834: ETA_2834,
   ETA_2894_2: ETA_2894_2_37J,
   ETA_2895_1: ETA_2895_1_30J,
   ETA_2895_2: ETA_2895_2_27J,
@@ -206,6 +209,7 @@ export const MovementsDataDB: Record<string, Caliber> = {
   OMEGA_268: OMEGA_268,
   OMEGA_30T2: OMEGA_30T2,
   OMEGA_410: OMEGA_410,
+  OMEGA_565: OMEGA_565,
   OMEGA_610_17J: OMEGA_610_17J,
   OMEGA_T17: OMEGA_T17,
 

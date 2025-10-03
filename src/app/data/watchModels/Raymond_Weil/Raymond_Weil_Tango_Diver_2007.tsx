@@ -14,9 +14,10 @@ import { WaterResistanceEnum } from "@/app/enums/waterResistanceEnum";
 
 import { MovementsDataDB } from "../../movementsData";
 import { WatchDetails } from "../../watchDetails";
+import { RaymondWeilBrandSeries } from "./RaymondWeilBrandSeries";
 
 const details: WatchDetails = {
-  title: "2007 Raymond Weil Tango 5563 Diver",
+  title: "1988 Raymond Weil Tango 5563 Diver",
   sliderImages: [
     "public/assets/Images/Raymond_Weil/2007_Raymond_Weil_Tango_5563_Diver/IMG_0465.JPG",
     "public/assets/Images/Raymond_Weil/2007_Raymond_Weil_Tango_5563_Diver/IMG_0466.JPG",
@@ -74,9 +75,9 @@ const details: WatchDetails = {
 
     information: {
       brand: BrandsEnum.RAYMOND_WEIL,
-      series: "Tango",
+      series: RaymondWeilBrandSeries.TANGO,
       catalogueReference: "5563",
-      productionYear: "2007",
+      productionYear: "1988",
       movementType: MovementWatchTypeEnum.QUARTZ,
       style: WatchStyleEnum.DIVE,
     },

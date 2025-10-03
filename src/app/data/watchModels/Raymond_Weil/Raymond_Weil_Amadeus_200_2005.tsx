@@ -14,6 +14,7 @@ import { WaterResistanceEnum } from "@/app/enums/waterResistanceEnum";
 
 import { MovementsDataDB } from "../../movementsData";
 import { WatchDetails } from "../../watchDetails";
+import { RaymondWeilBrandSeries } from "./RaymondWeilBrandSeries";
 
 const details: WatchDetails = {
   title: "2005 Raymond Weil Amadeus 200 7750",
@@ -74,7 +75,7 @@ const details: WatchDetails = {
 
     information: {
       brand: BrandsEnum.RAYMOND_WEIL,
-      series: "Amadeus 200",
+      series: RaymondWeilBrandSeries.AMADEUS_200,
       catalogueReference: "7713",
       productionYear: "2005",
       movementType: MovementWatchTypeEnum.AUTOMATIC,
