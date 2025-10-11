@@ -51,8 +51,7 @@ const details: WatchDetails = {
     "public/assets/Images/Novart/1974_Novart_U6380_Blue/IMG_6253.JPG",
     "public/assets/Images/Novart/1974_Novart_U6380_Blue/IMG_6254.JPG",
     "public/assets/Images/Novart/1974_Novart_U6380_Blue/IMG_6255.JPG",
-        "public/assets/Images/Novart/1974_Novart_set_Collection/IMG_6259.JPG",
-
+    "public/assets/Images/Novart/1974_Novart_set_Collection/IMG_6259.JPG",
   ],
   saleReport: {
     price: 240,

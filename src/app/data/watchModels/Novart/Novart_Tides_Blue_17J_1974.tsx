@@ -50,8 +50,7 @@ const details: WatchDetails = {
     "public/assets/Images/Novart/1974_Novart_Tides_Blue_Unitas_17J/IMG_5749.JPG",
     "public/assets/Images/Novart/1974_Novart_Tides_Blue_Unitas_17J/IMG_5750.JPG",
     "public/assets/Images/Novart/1974_Novart_Tides_Blue_Unitas_17J/IMG_5751.JPG",
-      "public/assets/Images/Novart/1974_Novart_set_Collection/IMG_5817.JPG",
-
+    "public/assets/Images/Novart/1974_Novart_set_Collection/IMG_5817.JPG",
   ],
 
   technicalData: {

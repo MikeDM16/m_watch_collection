@@ -58,7 +58,7 @@ const details: WatchDetails = {
     "public/assets/Images/Novart/1974_Novart_U6380_Tides_Blue/IMG_5923.JPG",
     "public/assets/Images/Novart/1974_Novart_U6380_Tides_Blue/IMG_5924.JPG",
 
-          "public/assets/Images/Novart/1974_Novart_set_Collection/IMG_5987.JPG",
+    "public/assets/Images/Novart/1974_Novart_set_Collection/IMG_5987.JPG",
   ],
   saleReport: {
     price: 224,

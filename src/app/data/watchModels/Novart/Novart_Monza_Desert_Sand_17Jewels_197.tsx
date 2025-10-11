@@ -54,9 +54,8 @@ const details: WatchDetails = {
     "public/assets/Images/Novart/1974_Novart_U6380_Desert_Sand/IMG_5826.JPG",
     "public/assets/Images/Novart/1974_Novart_U6380_Desert_Sand/IMG_5827.JPG",
     "public/assets/Images/Novart/1974_Novart_U6380_Desert_Sand/IMG_5828.JPG",
-  
-              "public/assets/Images/Novart/1974_Novart_set_Collection/IMG_5987.JPG",
 
+    "public/assets/Images/Novart/1974_Novart_set_Collection/IMG_5987.JPG",
   ],
 
   saleReport: {

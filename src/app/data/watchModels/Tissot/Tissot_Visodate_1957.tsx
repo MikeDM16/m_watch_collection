@@ -12,9 +12,9 @@ import { MovementWatchTypeEnum } from "@/app/enums/movementWatchTypeEnum";
 import { WatchStyleEnum } from "@/app/enums/watchStyleEnum";
 import { WaterResistanceEnum } from "@/app/enums/waterResistanceEnum";
 
+import { MovementsDataDB } from "../../movementsData";
 import { WatchDetails } from "../../watchDetails";
 import { TissotBrandSeries } from "./TissotBrandSeries";
-import { MovementsDataDB } from "../../movementsData";
 
 const details: WatchDetails = {
   title: "1957 Tissot Visodate",

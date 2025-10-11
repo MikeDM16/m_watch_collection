@@ -51,7 +51,6 @@ const details: WatchDetails = {
 
     "public/assets/Images/Novart/1974_Novart_U6380_Monza_Blue/IMG_6001.JPG",
     "public/assets/Images/Novart/1974_Novart_U6380_Monza_Blue/IMG_6002.JPG",
-
   ],
 
   saleReport: {

@@ -54,8 +54,7 @@ const details: WatchDetails = {
     "public/assets/Images/Novart/1974_Novart_U6380_Green_Borealis/IMG_4859.JPG",
     "public/assets/Images/Novart/1974_Novart_U6380_Green_Borealis/IMG_4860.JPG",
     "public/assets/Images/Novart/1974_Novart_U6380_Green_Borealis/IMG_4861.JPG",
-      "public/assets/Images/Novart/1974_Novart_set_Collection/IMG_6259.JPG",
-
+    "public/assets/Images/Novart/1974_Novart_set_Collection/IMG_6259.JPG",
   ],
 
   saleReport: {
