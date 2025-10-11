@@ -100,7 +100,7 @@ const details: WatchDetails = {
 
     information: {
       brand: BrandsEnum.BREITLING,
-      series: BreitlingBrandSeries.CHRONOMAT_EARLY,
+      series: BreitlingBrandSeries.CHRONOMAT,
       catalogueReference: "J13047X - Limited Edition 018/100",
       productionYear: "1991",
       movementType: MovementWatchTypeEnum.AUTOMATIC,

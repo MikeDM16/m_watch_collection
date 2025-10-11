@@ -59,7 +59,9 @@ const details: WatchDetails = {
     "public/assets/Images/Novart/1974_Novart_U6380_Golden_Linen/IMG_5965.JPG",
     "public/assets/Images/Novart/1974_Novart_U6380_Golden_Linen/IMG_5966.JPG",
     "public/assets/Images/Novart/1974_Novart_U6380_Golden_Linen/IMG_5967.JPG",
-  ],
+ 
+           "public/assets/Images/Novart/1974_Novart_set_Collection/IMG_5987.JPG",
+ ],
 
   saleReport: {
     price: 190,

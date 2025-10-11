@@ -71,7 +71,7 @@ const details: WatchDetails = {
 
   technicalData: {
     features: [
-      featuresEnum.SOLID_GOLD,
+      featuresEnum.SOLID_STERLING_SILVER,
       featuresEnum.MECHANIQUE_CHRONOGRAPH,
       featuresEnum.TACHYMETER,
     ],

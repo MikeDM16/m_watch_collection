@@ -86,9 +86,9 @@ const details: CollectionCatalogue = {
         href: require("./Novart_Vitesse_Red_17Jewels_1974"),
         specialCollectionItem: false,
       },
-      "1974 Novart Vitesse Blue 17 Jewels": {
+      "1974 Novart Vitesse Blue Date 17 Jewels": {
         brand: BrandsEnum.NOVART,
-        legend: "1974 Novart Vitesse Blue 17 Jewels",
+        legend: "1974 Novart Vitesse Blue Date 17 Jewels",
         year: 1974,
         type: WatchTypeEnum.CASUAL,
         srcImage: "public/assets/Images/Novart/1974_Novart_U6380_Monza_Blue/IMG_5989.JPG",
@@ -106,9 +106,9 @@ const details: CollectionCatalogue = {
         specialCollectionItem: false,
       },
 
-      "1974 Novart Monza Ligth Blue 17 Jewels": {
+      "1974 Novart Monza Ligth Blue Date 17 Jewels": {
         brand: BrandsEnum.NOVART,
-        legend: "1974 Novart Monza Ligth Blue 17 Jewels",
+        legend: "1974 Novart Monza Ligth Blue Date 17 Jewels",
         year: 1974,
         type: WatchTypeEnum.CASUAL,
         srcImage: "public/assets/Images/Novart/1974_Novart_U6380_Date_Blue/IMG_5643.JPG",

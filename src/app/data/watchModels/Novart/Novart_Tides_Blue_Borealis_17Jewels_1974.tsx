@@ -17,7 +17,7 @@ import { WatchDetails } from "../../watchDetails";
 import { NovartBrandSeries } from "./NovartBrandSeries";
 
 const details: WatchDetails = {
-  title: "1974 Novart Tides Blue Borealis 17 Jewels",
+  title: "1974 Novart Tides Blue Borealis Date 17 Jewels",
   sliderImages: [
     "public/assets/Images/Novart/1974_Novart_U6380_Blue_Borealis/IMG_0614.JPG",
     "public/assets/Images/Novart/1974_Novart_U6380_Blue_Borealis/IMG_0615.JPG",
@@ -58,7 +58,9 @@ const details: WatchDetails = {
     "public/assets/Images/Novart/1974_Novart_U6380_Blue_Borealis/IMG_0638.JPG",
     "public/assets/Images/Novart/1974_Novart_U6380_Blue_Borealis/IMG_0639.JPG",
     "public/assets/Images/Novart/1974_Novart_U6380_Blue_Borealis/IMG_0640.JPG",
-  ],
+
+          "public/assets/Images/Novart/1974_Novart_set_Collection/IMG_5987.JPG",
+        ],
 
   saleReport: {
     price: 191,

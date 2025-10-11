@@ -72,6 +72,8 @@ const details: WatchDetails = {
     "public/assets/Images/Novart/1974_Novart_U6380_Monza_Red/IMG_6089.JPG",
     "public/assets/Images/Novart/1974_Novart_U6380_Monza_Red/IMG_6090.JPG",
     "public/assets/Images/Novart/1974_Novart_U6380_Monza_Red/IMG_6091.JPG",
+          "public/assets/Images/Novart/1974_Novart_set_Collection/IMG_5987.JPG",
+
   ],
 
   saleReport: {
@@ -113,7 +115,7 @@ const details: WatchDetails = {
     },
 
     bracelet: {
-      material: "Lizard Skin eather",
+      material: "Lizard Skin Leather",
       buckleType: BuckleTypeEnum.STANDARD_BUCKLE,
       width: "18 mm",
       color: "Red",

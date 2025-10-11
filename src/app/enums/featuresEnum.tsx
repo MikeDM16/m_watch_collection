@@ -66,7 +66,7 @@ export const featuresEnum: Record<string, FeatureStruct> = {
     description:
       "A feature that displays the current day of the month, typically in a small window on the dial, commonly placed at the 3 o'clock or 6 o'clock position.",
   },
-  TRI_COMPEX_CALENDAR: {
+  TRI_COMPAX_CALENDAR: {
     name: "Tri-Compax Calendar",
     description:
       "A watch with sub-dials displaying the full calendar, including the month, date, and day of the week, allowing to track the entire calendar values.",

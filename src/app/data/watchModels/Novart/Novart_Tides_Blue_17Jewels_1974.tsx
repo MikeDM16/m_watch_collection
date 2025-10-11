@@ -16,7 +16,7 @@ import { MovementsDataDB } from "../../movementsData";
 import { WatchDetails } from "../../watchDetails";
 
 const details: WatchDetails = {
-  title: "1974 Novart Tides Blue 17 Jewels",
+  title: "1974 Novart Tides Blue Date 17 Jewels",
   sliderImages: [
     "public/assets/Images/Novart/1974_Novart_U6380_Tides_Blue/IMG_5910.JPG",
     "public/assets/Images/Novart/1974_Novart_U6380_Tides_Blue/IMG_5912.JPG",
@@ -57,6 +57,8 @@ const details: WatchDetails = {
     "public/assets/Images/Novart/1974_Novart_U6380_Tides_Blue/IMG_5919.JPG",
     "public/assets/Images/Novart/1974_Novart_U6380_Tides_Blue/IMG_5923.JPG",
     "public/assets/Images/Novart/1974_Novart_U6380_Tides_Blue/IMG_5924.JPG",
+
+          "public/assets/Images/Novart/1974_Novart_set_Collection/IMG_5987.JPG",
   ],
   saleReport: {
     price: 224,
@@ -97,7 +99,7 @@ const details: WatchDetails = {
     },
 
     bracelet: {
-      material: "Lizard Skin eather",
+      material: "Lizard Skin Leather",
       buckleType: BuckleTypeEnum.STANDARD_BUCKLE,
       width: "18 mm",
       color: "Blue",

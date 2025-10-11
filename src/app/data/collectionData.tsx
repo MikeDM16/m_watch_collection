@@ -1687,9 +1687,9 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     href: require("./watchModels/Hipco/Hipco_Incabloc_17Jewels_1974"),
     specialCollectionItem: false,
   },
-  "Novart Monza Ligth Blue 17 Jewels": {
+  "Novart Monza Ligth Blue Date 17 Jewels": {
     brand: BrandsEnum.NOVART,
-    legend: "Novart Monza Ligth Blue 17 Jewels",
+    legend: "Novart Monza Ligth Blue Date 17 Jewels",
     year: 1974,
     type: WatchTypeEnum.CASUAL,
     srcImage: "public/assets/Images/Novart/1974_Novart_U6380_Date_Blue/IMG_5643.JPG",
@@ -1705,9 +1705,28 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     href: require("./watchModels/Novart/Novart_Monza_Green_Borealis_17Jewels_1974"),
     specialCollectionItem: false,
   },
-  "Novart Tides Blue Borealis 17 Jewels": {
+  "Novart Monza Green Borealis": {
     brand: BrandsEnum.NOVART,
-    legend: "Novart Tides Blue Borealis 17 Jewels",
+    legend: "Novart Monza Green Borealis",
+    year: 1974,
+    type: WatchTypeEnum.CASUAL,
+    srcImage:
+      "public/assets/Images/Novart/1974_Novart_Monza_Green_Borealis_Unitas_17J/IMG_5756.JPG",
+    href: require("./watchModels/Novart/Novart_Monza_Green_Borealis_17J_1974"),
+    specialCollectionItem: false,
+  },
+  "Novart Tides Yellow 17 Jewels": {
+    brand: BrandsEnum.NOVART,
+    legend: "Novart Tides Yellow 17 Jewels",
+    year: 1974,
+    type: WatchTypeEnum.CASUAL,
+    srcImage: "public/assets/Images/Novart/1974_Novart_Tides_Yellow_17J/IMG_5789.JPG",
+    href: require("./watchModels/Novart/Novart_Tides_Yellow_17Jewels_1974"),
+    specialCollectionItem: false,
+  },
+  "Novart Tides Blue Borealis Date 17 Jewels": {
+    brand: BrandsEnum.NOVART,
+    legend: "Novart Tides Blue Borealis Date 17 Jewels",
     year: 1974,
     type: WatchTypeEnum.CASUAL,
     srcImage: "public/assets/Images/Novart/1974_Novart_U6380_Blue_Borealis/IMG_0623.JPG",
@@ -1726,6 +1745,15 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
   "Novart Tides Blue 17 Jewels": {
     brand: BrandsEnum.NOVART,
     legend: "Novart Tides Blue 17 Jewels",
+    year: 1974,
+    type: WatchTypeEnum.CASUAL,
+    srcImage: "public/assets/Images/Novart/1974_Novart_Tides_Blue_Unitas_17J/IMG_5727.JPG",
+    href: require("./watchModels/Novart/Novart_Tides_Blue_17J_1974"),
+    specialCollectionItem: false,
+  },
+  "Novart Tides Blue Date 17 Jewels": {
+    brand: BrandsEnum.NOVART,
+    legend: "Novart Tides Blue Date 17 Jewels",
     year: 1974,
     type: WatchTypeEnum.CASUAL,
     srcImage: "public/assets/Images/Novart/1974_Novart_U6380_Blue/IMG_6228.JPG",
@@ -1759,9 +1787,9 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     href: require("./watchModels/Novart/Novart_Vitesse_Red_17Jewels_1974"),
     specialCollectionItem: false,
   },
-  "Novart Vitesse Blue 17 Jewels": {
+  "Novart Vitesse Blue Date 17 Jewels": {
     brand: BrandsEnum.NOVART,
-    legend: "Novart Vitesse Blue 17 Jewels",
+    legend: "Novart Vitesse Blue Date 17 Jewels",
     year: 1974,
     type: WatchTypeEnum.CASUAL,
     srcImage: "public/assets/Images/Novart/1974_Novart_U6380_Monza_Blue/IMG_5989.JPG",
@@ -2065,7 +2093,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     legend: "Tissot Visodate",
     year: 1957,
     type: WatchTypeEnum.DRESS,
-    srcImage: "public/assets/Images/Tissot/1957_Tissot_Visodate/IMG_1667.JPG",
+    srcImage: "public/assets/Images/Tissot/1957_Tissot_Visodate/IMG_5824.JPG",
     href: require("./watchModels/Tissot/Tissot_Visodate_1957"),
     specialCollectionItem: true,
   },

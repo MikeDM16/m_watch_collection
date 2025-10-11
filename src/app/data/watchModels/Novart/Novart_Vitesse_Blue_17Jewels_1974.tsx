@@ -17,7 +17,7 @@ import { WatchDetails } from "../../watchDetails";
 import { NovartBrandSeries } from "./NovartBrandSeries";
 
 const details: WatchDetails = {
-  title: "1974 Novart Vitesse Blue 17 Jewels",
+  title: "1974 Novart Vitesse Blue Date 17 Jewels",
 
   sliderImages: [
     "public/assets/Images/Novart/1974_Novart_U6380_Monza_Blue/IMG_5982.JPG",
@@ -51,6 +51,7 @@ const details: WatchDetails = {
 
     "public/assets/Images/Novart/1974_Novart_U6380_Monza_Blue/IMG_6001.JPG",
     "public/assets/Images/Novart/1974_Novart_U6380_Monza_Blue/IMG_6002.JPG",
+
   ],
 
   saleReport: {

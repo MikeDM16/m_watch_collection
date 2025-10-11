@@ -47,7 +47,7 @@ const details: WatchDetails = {
   },
   technicalData: {
     features: [
-      featuresEnum.TRI_COMPEX_CALENDAR,
+      featuresEnum.TRI_COMPAX_CALENDAR,
       featuresEnum.REGOLO_BEZEL,
       featuresEnum.WR_30_METERS,
     ],

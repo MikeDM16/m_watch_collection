@@ -14,42 +14,41 @@ import { WaterResistanceEnum } from "@/app/enums/waterResistanceEnum";
 
 import { WatchDetails } from "../../watchDetails";
 import { TissotBrandSeries } from "./TissotBrandSeries";
+import { MovementsDataDB } from "../../movementsData";
 
 const details: WatchDetails = {
   title: "1957 Tissot Visodate",
   sliderImages: [
-    "public/assets/Images/Tissot/1957_Tissot_Visodate/IMG_1657.JPG",
-    "public/assets/Images/Tissot/1957_Tissot_Visodate/IMG_1658.JPG",
-    "public/assets/Images/Tissot/1957_Tissot_Visodate/IMG_1659.JPG",
-    "public/assets/Images/Tissot/1957_Tissot_Visodate/IMG_1661.JPG",
-    "public/assets/Images/Tissot/1957_Tissot_Visodate/IMG_1662.JPG",
-    "public/assets/Images/Tissot/1957_Tissot_Visodate/IMG_1663.JPG",
-    "public/assets/Images/Tissot/1957_Tissot_Visodate/IMG_1664.JPG",
-    "public/assets/Images/Tissot/1957_Tissot_Visodate/IMG_1665.JPG",
-    "public/assets/Images/Tissot/1957_Tissot_Visodate/IMG_1666.JPG",
-    "public/assets/Images/Tissot/1957_Tissot_Visodate/IMG_1667.JPG",
-    "public/assets/Images/Tissot/1957_Tissot_Visodate/IMG_1668.JPG",
-    "public/assets/Images/Tissot/1957_Tissot_Visodate/IMG_1669.JPG",
-    "public/assets/Images/Tissot/1957_Tissot_Visodate/IMG_1670.JPG",
-    "public/assets/Images/Tissot/1957_Tissot_Visodate/IMG_1671.JPG",
-    "public/assets/Images/Tissot/1957_Tissot_Visodate/IMG_1672.JPG",
-    "public/assets/Images/Tissot/1957_Tissot_Visodate/IMG_0903.JPG",
-    "public/assets/Images/Tissot/1957_Tissot_Visodate/IMG_0904.JPG",
-    "public/assets/Images/Tissot/1957_Tissot_Visodate/IMG_0905.JPG",
-    "public/assets/Images/Tissot/1957_Tissot_Visodate/IMG_0906.JPG",
-    "public/assets/Images/Tissot/1957_Tissot_Visodate/IMG_0907.JPG",
-    "public/assets/Images/Tissot/1957_Tissot_Visodate/IMG_0908.JPG",
-    "public/assets/Images/Tissot/1957_Tissot_Visodate/IMG_0909.JPG",
-    "public/assets/Images/Tissot/1957_Tissot_Visodate/IMG_0910.JPG",
-    "public/assets/Images/Tissot/1957_Tissot_Visodate/IMG_0911.JPG",
-    "public/assets/Images/Tissot/1957_Tissot_Visodate/IMG_0912.JPG",
-    "public/assets/Images/Tissot/1957_Tissot_Visodate/IMG_0153.JPG",
-    "public/assets/Images/Tissot/1957_Tissot_Visodate/FUGT0776.JPG",
-    "public/assets/Images/Tissot/1957_Tissot_Visodate/IMG_2994.JPG",
-    "public/assets/Images/Tissot/1957_Tissot_Visodate/IMG_2987.JPG",
-    "public/assets/Images/Tissot/1957_Tissot_Visodate/IMG_2988.JPG",
-    "public/assets/Images/Tissot/1957_Tissot_Visodate/JKVC6411.JPG",
-    "public/assets/Images/Tissot/1957_Tissot_Visodate/RZVP0560.JPG",
+    "public/assets/Images/Tissot/1957_Tissot_Visodate/IMG_5850.JPG",
+    "public/assets/Images/Tissot/1957_Tissot_Visodate/IMG_5851.JPG",
+
+    "public/assets/Images/Tissot/1957_Tissot_Visodate/IMG_5820.JPG",
+    "public/assets/Images/Tissot/1957_Tissot_Visodate/IMG_5821.JPG",
+    "public/assets/Images/Tissot/1957_Tissot_Visodate/IMG_5822.JPG",
+    "public/assets/Images/Tissot/1957_Tissot_Visodate/IMG_5823.JPG",
+    "public/assets/Images/Tissot/1957_Tissot_Visodate/IMG_5824.JPG",
+    "public/assets/Images/Tissot/1957_Tissot_Visodate/IMG_5825.JPG",
+    "public/assets/Images/Tissot/1957_Tissot_Visodate/IMG_5826.JPG",
+    "public/assets/Images/Tissot/1957_Tissot_Visodate/IMG_5827.JPG",
+
+    "public/assets/Images/Tissot/1957_Tissot_Visodate/IMG_5840.JPG",
+    "public/assets/Images/Tissot/1957_Tissot_Visodate/IMG_5842.JPG",
+    "public/assets/Images/Tissot/1957_Tissot_Visodate/IMG_5843.JPG",
+    "public/assets/Images/Tissot/1957_Tissot_Visodate/IMG_5844.JPG",
+    "public/assets/Images/Tissot/1957_Tissot_Visodate/IMG_5846.JPG",
+
+    "public/assets/Images/Tissot/1957_Tissot_Visodate/IMG_5828.JPG",
+    "public/assets/Images/Tissot/1957_Tissot_Visodate/IMG_5829.JPG",
+    "public/assets/Images/Tissot/1957_Tissot_Visodate/IMG_5830.JPG",
+    "public/assets/Images/Tissot/1957_Tissot_Visodate/IMG_5831.JPG",
+    "public/assets/Images/Tissot/1957_Tissot_Visodate/IMG_5832.JPG",
+    "public/assets/Images/Tissot/1957_Tissot_Visodate/IMG_5833.JPG",
+    "public/assets/Images/Tissot/1957_Tissot_Visodate/IMG_5834.JPG",
+    "public/assets/Images/Tissot/1957_Tissot_Visodate/IMG_5835.JPG",
+    "public/assets/Images/Tissot/1957_Tissot_Visodate/IMG_5836.JPG",
+    "public/assets/Images/Tissot/1957_Tissot_Visodate/IMG_5837.JPG",
+    "public/assets/Images/Tissot/1957_Tissot_Visodate/IMG_5838.JPG",
+
     "public/assets/Images/Tissot/1957_Tissot_Visodate/visodate-sell-add1.JPG",
     "public/assets/Images/Tissot/1957_Tissot_Visodate/visodate-sell-add.JPG",
     "public/assets/Images/Tissot/1957_Tissot_Visodate/tissot_manufacturing_dates.JPG",
@@ -98,31 +97,7 @@ const details: WatchDetails = {
       color: "Black",
     },
 
-    movement: {
-      title: "Tissot 27B-21",
-      description:
-        "In-house Tissot movement produced around 1950s until 1961. \n" +
-        'Suffix "21-1": variant with sweep second and Incabloc. \n',
-      usefullLinks: {
-        "Ranfft 27B-21":
-          "http://www.ranfft.de/cgi-bin/bidfun-db.cgi?10&ranfft&ae&2uswk&Tissot_27_221",
-        "Vintage technical information from Tissot":
-          "../Files/1867_Tissot 27B, 27b1,27b2,27b21.pdf",
-      },
-      sliderImages: [
-        "public/assets/Images/Tissot/1957_Tissot_Visodate/mov3.PNG",
-        "public/assets/Images/Tissot/1957_Tissot_Visodate/mov1.PNG",
-      ],
-      details: {
-        manufacturer: "Tissot (Swiss Made)",
-        modelReference: "27B-21",
-        type: "Mechanical",
-        frequency: "18000 A/h",
-        jewels: "16 (Sixteen) Jewels ",
-        reserve: "44 Hours",
-        functions: "Date, Hours, Minutes, Sweep Seconds",
-      },
-    },
+    movement: MovementsDataDB.TISSOT_27B_21,
   },
 };
 
