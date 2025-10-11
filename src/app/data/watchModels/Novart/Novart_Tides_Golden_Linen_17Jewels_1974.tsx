@@ -95,7 +95,7 @@ const details: WatchDetails = {
 
     dial: {
       color: "Golden Linen",
-      dialMarkers: DialMarketsEnum.BATTON,
+      dialMarkers: DialMarketsEnum.ARABIC,
       finishingDetails: FinishingDetailsEnum.METALLIC_COLOR,
       luminiscentIndexes: LuminescentIndexesEnum.HANDS_AND_MARKERS,
       calendar: CalendarWatchTypeEnum.WITHOUT,

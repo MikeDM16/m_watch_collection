@@ -17,7 +17,7 @@ import { WatchDetails } from "../../watchDetails";
 import { NovartBrandSeries } from "./NovartBrandSeries";
 
 const details: WatchDetails = {
-  title: "1974 Novart Tides Blue Date 17 Jewels",
+  title: "1974 Novart Tides Blue 17 Jewels",
   sliderImages: [
     "public/assets/Images/Novart/1974_Novart_Tides_Blue_Unitas_17J/IMG_5739.JPG",
 

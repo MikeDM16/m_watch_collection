@@ -97,7 +97,7 @@ const details: WatchDetails = {
       dialMarkers: DialMarketsEnum.BATTON,
       finishingDetails: FinishingDetailsEnum.METALLIC_COLOR,
       luminiscentIndexes: LuminescentIndexesEnum.HANDS_AND_MARKERS,
-      calendar: CalendarWatchTypeEnum.WITHOUT,
+      calendar: CalendarWatchTypeEnum.AT_3_OCLOCK,
     },
 
     bracelet: {

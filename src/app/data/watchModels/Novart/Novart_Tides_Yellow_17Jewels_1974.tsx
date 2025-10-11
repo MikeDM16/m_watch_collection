@@ -74,7 +74,7 @@ const details: WatchDetails = {
 
     dial: {
       color: "Yellow",
-      dialMarkers: DialMarketsEnum.ARABIC,
+      dialMarkers: DialMarketsEnum.BATTON,
       finishingDetails: FinishingDetailsEnum.RADIAL_BRUSHED_EFFECT,
       luminiscentIndexes: LuminescentIndexesEnum.HANDS_AND_MARKERS,
       calendar: CalendarWatchTypeEnum.WITHOUT,

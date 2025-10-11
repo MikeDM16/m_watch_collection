@@ -81,7 +81,7 @@ const details: WatchDetails = {
     },
 
     dial: {
-      color: "Wgite",
+      color: "White",
       dialMarkers: DialMarketsEnum.ARABIC,
       finishingDetails: FinishingDetailsEnum.NONE,
       luminiscentIndexes: LuminescentIndexesEnum.NONE,
