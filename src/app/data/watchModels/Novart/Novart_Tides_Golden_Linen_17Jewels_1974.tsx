@@ -14,9 +14,10 @@ import { WaterResistanceEnum } from "@/app/enums/waterResistanceEnum";
 
 import { MovementsDataDB } from "../../movementsData";
 import { WatchDetails } from "../../watchDetails";
+import { NovartBrandSeries } from "./NovartBrandSeries";
 
 const details: WatchDetails = {
-  title: "1974 Novart Golden Linen 17 Jewels",
+  title: "1974 Novart Tides Golden Linen 17 Jewels",
   sliderImages: [
     "public/assets/Images/Novart/1974_Novart_U6380_Golden_Linen/IMG_5959.JPG",
     "public/assets/Images/Novart/1974_Novart_U6380_Golden_Linen/IMG_5960.JPG",
@@ -71,7 +72,7 @@ const details: WatchDetails = {
 
     information: {
       brand: BrandsEnum.NOVART,
-      series: "Incabloc",
+      series: NovartBrandSeries.TIDES,
       catalogueReference: "(Golden Linen Dial)",
       productionYear: "1974",
       movementType: MovementWatchTypeEnum.MECHANIQUE,

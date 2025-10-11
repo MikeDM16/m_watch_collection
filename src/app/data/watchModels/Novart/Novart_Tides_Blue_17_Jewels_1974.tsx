@@ -14,9 +14,10 @@ import { WaterResistanceEnum } from "@/app/enums/waterResistanceEnum";
 
 import { MovementsDataDB } from "../../movementsData";
 import { WatchDetails } from "../../watchDetails";
+import { NovartBrandSeries } from "./NovartBrandSeries";
 
 const details: WatchDetails = {
-  title: "1974 Novart 17 Jewels",
+  title: "1974 Novart Tides Blue 17 Jewels",
   sliderImages: [
     "public/assets/Images/Novart/1974_Novart_U6380_Blue/IMG_6224.JPG",
     "public/assets/Images/Novart/1974_Novart_U6380_Blue/IMG_6225.JPG",
@@ -62,7 +63,7 @@ const details: WatchDetails = {
 
     information: {
       brand: BrandsEnum.NOVART,
-      series: "Incabloc",
+      series: NovartBrandSeries.TIDES,
       catalogueReference: "(Blue Dial)",
       productionYear: "1974",
       movementType: MovementWatchTypeEnum.MECHANIQUE,

@@ -14,6 +14,7 @@ import { WaterResistanceEnum } from "@/app/enums/waterResistanceEnum";
 
 import { MovementsDataDB } from "../../movementsData";
 import { WatchDetails } from "../../watchDetails";
+import { NovartBrandSeries } from "./NovartBrandSeries";
 
 const details: WatchDetails = {
   title: "1976 Novart Incabloc 17 Jewels",
@@ -60,7 +61,7 @@ const details: WatchDetails = {
 
     information: {
       brand: BrandsEnum.NOVART,
-      series: "Incabloc",
+      series: NovartBrandSeries.INCABLOC,
       catalogueReference: "10072",
       productionYear: "1976",
       movementType: MovementWatchTypeEnum.MECHANIQUE,

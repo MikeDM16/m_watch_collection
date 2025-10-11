@@ -1687,31 +1687,31 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     href: require("./watchModels/Hipco/Hipco_Incabloc_17Jewels_1974"),
     specialCollectionItem: false,
   },
-  "Novart Tides 17 Jewels": {
+  "Novart Monza Ligth Blue 17 Jewels": {
     brand: BrandsEnum.NOVART,
-    legend: "Novart Tides 17 Jewels",
+    legend: "Novart Monza Ligth Blue 17 Jewels",
     year: 1974,
     type: WatchTypeEnum.CASUAL,
     srcImage: "public/assets/Images/Novart/1974_Novart_U6380_Date_Blue/IMG_5643.JPG",
-    href: require("./watchModels/Novart/Novart_Blue_17Jewels_1974"),
+    href: require("./watchModels/Novart/Novart_Monza_Ligth_Blue_17Jewels_1974"),
     specialCollectionItem: false,
   },
-  "Novart Green Borealis 17 Jewels": {
+  "Novart Monza Green Borealis 17 Jewels": {
     brand: BrandsEnum.NOVART,
-    legend: "Novart Green Borealis 17 Jewels",
+    legend: "Novart Monza Green Borealis 17 Jewels",
     year: 1974,
     type: WatchTypeEnum.CASUAL,
     srcImage: "public/assets/Images/Novart/1974_Novart_U6380_Green_Borealis/IMG_4839.JPG",
-    href: require("./watchModels/Novart/Novart_Green_Borealis_17Jewels_1974"),
+    href: require("./watchModels/Novart/Novart_Monza_Green_Borealis_17Jewels_1974"),
     specialCollectionItem: false,
   },
-  "Novart Blue Borealis 17 Jewels": {
+  "Novart Tides Blue Borealis 17 Jewels": {
     brand: BrandsEnum.NOVART,
-    legend: "Novart Blue Borealis 17 Jewels",
+    legend: "Novart Tides Blue Borealis 17 Jewels",
     year: 1974,
     type: WatchTypeEnum.CASUAL,
     srcImage: "public/assets/Images/Novart/1974_Novart_U6380_Blue_Borealis/IMG_0623.JPG",
-    href: require("./watchModels/Novart/Novart_Blue_Borealis_17Jewels_1974"),
+    href: require("./watchModels/Novart/Novart_Tides_Blue_Borealis_17Jewels_1974"),
     specialCollectionItem: false,
   },
   "Novart Tides Blue": {
@@ -1723,40 +1723,40 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     href: require("./watchModels/Novart/Novart_Tides_Blue_17Jewels_1974"),
     specialCollectionItem: false,
   },
-  "Novart Incabloc": {
+  "Novart Tides Blue 17 Jewels": {
     brand: BrandsEnum.NOVART,
-    legend: "Novart Incabloc",
+    legend: "Novart Tides Blue 17 Jewels",
     year: 1974,
     type: WatchTypeEnum.CASUAL,
     srcImage: "public/assets/Images/Novart/1974_Novart_U6380_Blue/IMG_6228.JPG",
-    href: require("./watchModels/Novart/Novart_Incabloc_17Jewels_1974"),
+    href: require("./watchModels/Novart/Novart_Tides_Blue_17_Jewels_1974"),
     specialCollectionItem: false,
   },
-  "Novart Golden Linen 17 Jewels": {
+  "Novart Tides Golden Linen 17 Jewels": {
     brand: BrandsEnum.NOVART,
-    legend: "Novart Golden Linen 17 Jewels",
+    legend: "Novart Tides Golden Linen 17 Jewels",
     year: 1974,
     type: WatchTypeEnum.CASUAL,
     srcImage: "public/assets/Images/Novart/1974_Novart_U6380_Golden_Linen/IMG_5933.JPG",
-    href: require("./watchModels/Novart/Novart_Golden_Linen_17Jewels_1974"),
+    href: require("./watchModels/Novart/Novart_Tides_Golden_Linen_17Jewels_1974"),
     specialCollectionItem: false,
   },
-  "Novart Desert Sand 17 Jewels": {
+  "Novart Monza Desert Sand 17 Jewels": {
     brand: BrandsEnum.NOVART,
-    legend: "Novart Desert Sand 17 Jewels",
+    legend: "Novart Monza Desert Sand 17 Jewels",
     year: 1974,
     type: WatchTypeEnum.CASUAL,
     srcImage: "public/assets/Images/Novart/1974_Novart_U6380_Desert_Sand/IMG_5816.JPG",
-    href: require("./watchModels/Novart/Novart_Desert_Sand_17Jewels_197"),
+    href: require("./watchModels/Novart/Novart_Monza_Desert_Sand_17Jewels_197"),
     specialCollectionItem: false,
   },
-  "Novart Vitesse 17 Jewels": {
+  "Novart Vitesse Red 17 Jewels": {
     brand: BrandsEnum.NOVART,
-    legend: "Novart Vitesse 17 Jewels",
+    legend: "Novart Vitesse Red 17 Jewels",
     year: 1974,
     type: WatchTypeEnum.CASUAL,
     srcImage: "public/assets/Images/Novart/1974_Novart_U6380_Red/IMG_6266.JPG",
-    href: require("./watchModels/Novart/Novart_Red_17Jewels_1974"),
+    href: require("./watchModels/Novart/Novart_Vitesse_Red_17Jewels_1974"),
     specialCollectionItem: false,
   },
   "Novart Vitesse Blue 17 Jewels": {

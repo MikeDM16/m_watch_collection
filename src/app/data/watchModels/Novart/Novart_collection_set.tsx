@@ -44,7 +44,7 @@ const details: CollectionCatalogue = {
         year: 1974,
         type: WatchTypeEnum.CASUAL,
         srcImage: "public/assets/Images/Novart/1974_Novart_U6380_Blue_Borealis/IMG_0623.JPG",
-        href: require("./Novart_Blue_Borealis_17Jewels_1974"),
+        href: require("./Novart_Tides_Blue_Borealis_17Jewels_1974"),
         specialCollectionItem: false,
       },
       "1974 Novart Tides Blue": {
@@ -56,13 +56,13 @@ const details: CollectionCatalogue = {
         href: require("./Novart_Tides_Blue_17Jewels_1974"),
         specialCollectionItem: false,
       },
-      "1974 Novart Incabloc": {
+      "1974 Novart Tide Blue": {
         brand: BrandsEnum.NOVART,
-        legend: "1974 Novart Incabloc",
+        legend: "1974 Novart Tide Blue",
         year: 1974,
         type: WatchTypeEnum.CASUAL,
         srcImage: "public/assets/Images/Novart/1974_Novart_U6380_Blue/IMG_6228.JPG",
-        href: require("./Novart_Incabloc_17Jewels_1974"),
+        href: require("./Novart_Tides_Blue_17_Jewels_1974"),
         specialCollectionItem: false,
       },
       "1974 Novart Golden Linen 17 Jewels": {
@@ -71,7 +71,7 @@ const details: CollectionCatalogue = {
         year: 1974,
         type: WatchTypeEnum.CASUAL,
         srcImage: "public/assets/Images/Novart/1974_Novart_U6380_Golden_Linen/IMG_5933.JPG",
-        href: require("./Novart_Golden_Linen_17Jewels_1974"),
+        href: require("./Novart_Tides_Golden_Linen_17Jewels_1974"),
         specialCollectionItem: false,
       },
     },
@@ -83,7 +83,7 @@ const details: CollectionCatalogue = {
         year: 1974,
         type: WatchTypeEnum.CASUAL,
         srcImage: "public/assets/Images/Novart/1974_Novart_U6380_Red/IMG_6266.JPG",
-        href: require("./Novart_Red_17Jewels_1974"),
+        href: require("./Novart_Vitesse_Red_17Jewels_1974"),
         specialCollectionItem: false,
       },
       "1974 Novart Vitesse Blue 17 Jewels": {
@@ -106,13 +106,13 @@ const details: CollectionCatalogue = {
         specialCollectionItem: false,
       },
 
-      "1974 Novart Tides 17 Jewels": {
+      "1974 Novart Monza Ligth Blue 17 Jewels": {
         brand: BrandsEnum.NOVART,
-        legend: "1974 Novart Tides 17 Jewels",
+        legend: "1974 Novart Monza Ligth Blue 17 Jewels",
         year: 1974,
         type: WatchTypeEnum.CASUAL,
         srcImage: "public/assets/Images/Novart/1974_Novart_U6380_Date_Blue/IMG_5643.JPG",
-        href: require("./Novart_Blue_17Jewels_1974"),
+        href: require("./Novart_Monza_Ligth_Blue_17Jewels_1974"),
         specialCollectionItem: false,
       },
       "1974 Novart Green Borealis 17 Jewels": {
@@ -121,7 +121,7 @@ const details: CollectionCatalogue = {
         year: 1974,
         type: WatchTypeEnum.CASUAL,
         srcImage: "public/assets/Images/Novart/1974_Novart_U6380_Green_Borealis/IMG_4839.JPG",
-        href: require("./Novart_Green_Borealis_17Jewels_1974"),
+        href: require("./Novart_Monza_Green_Borealis_17Jewels_1974"),
         specialCollectionItem: false,
       },
 
@@ -131,7 +131,7 @@ const details: CollectionCatalogue = {
         year: 1974,
         type: WatchTypeEnum.CASUAL,
         srcImage: "public/assets/Images/Novart/1974_Novart_U6380_Desert_Sand/IMG_5816.JPG",
-        href: require("./Novart_Desert_Sand_17Jewels_197"),
+        href: require("./Novart_Monza_Desert_Sand_17Jewels_197"),
         specialCollectionItem: false,
       },
     },

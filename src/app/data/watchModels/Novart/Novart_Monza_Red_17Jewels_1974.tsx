@@ -14,6 +14,7 @@ import { WaterResistanceEnum } from "@/app/enums/waterResistanceEnum";
 
 import { MovementsDataDB } from "../../movementsData";
 import { WatchDetails } from "../../watchDetails";
+import { NovartBrandSeries } from "./NovartBrandSeries";
 
 const details: WatchDetails = {
   title: "1974 Novart Monza Red 17 Jewels",
@@ -84,7 +85,7 @@ const details: WatchDetails = {
 
     information: {
       brand: BrandsEnum.NOVART,
-      series: "Monza",
+      series: NovartBrandSeries.MONZA,
       catalogueReference: "(Red Dial)",
       productionYear: "1974",
       movementType: MovementWatchTypeEnum.MECHANIQUE,

@@ -249,6 +249,7 @@ export const brandsDB: Brand[] = [
     logoImg: "public/assets/Images/Brands_Logos/novart_logo.PNG",
     displayOrder: 37,
     description: "Vintage Portuguese brand with Swiss Made parts and assembly.",
+    displayBySeries: true,
   },
 
   {

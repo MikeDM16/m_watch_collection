@@ -14,9 +14,10 @@ import { WaterResistanceEnum } from "@/app/enums/waterResistanceEnum";
 
 import { MovementsDataDB } from "../../movementsData";
 import { WatchDetails } from "../../watchDetails";
+import { NovartBrandSeries } from "./NovartBrandSeries";
 
 const details: WatchDetails = {
-  title: "1974 Novart Green Borealis 17 Jewels",
+  title: "1974 Novart Monza Green Borealis 17 Jewels",
   sliderImages: [
     "public/assets/Images/Novart/1974_Novart_U6380_Green_Borealis/IMG_4862.JPG",
     "public/assets/Images/Novart/1974_Novart_U6380_Green_Borealis/IMG_4863.JPG",
@@ -66,8 +67,8 @@ const details: WatchDetails = {
 
     information: {
       brand: BrandsEnum.NOVART,
-      series: "Borealis",
-      catalogueReference: "(Green Dial)",
+      series: NovartBrandSeries.MONZA,
+      catalogueReference: "(Green Borealis Dial)",
       productionYear: "1974",
       movementType: MovementWatchTypeEnum.MECHANIQUE,
       style: WatchStyleEnum.CASUAL,
