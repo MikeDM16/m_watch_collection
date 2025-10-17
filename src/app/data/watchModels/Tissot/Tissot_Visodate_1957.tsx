@@ -49,6 +49,14 @@ const details: WatchDetails = {
     "public/assets/Images/Tissot/1957_Tissot_Visodate/IMG_5837.JPG",
     "public/assets/Images/Tissot/1957_Tissot_Visodate/IMG_5838.JPG",
 
+    "public/assets/Images/Tissot/1957_Tissot_Visodate/IMG_5998.JPG",
+    "public/assets/Images/Tissot/1957_Tissot_Visodate/IMG_5999.JPG",
+    "public/assets/Images/Tissot/1957_Tissot_Visodate/IMG_6001.JPG",
+    "public/assets/Images/Tissot/1957_Tissot_Visodate/IMG_6002.JPG",
+    "public/assets/Images/Tissot/1957_Tissot_Visodate/IMG_6003.JPG",
+    "public/assets/Images/Tissot/1957_Tissot_Visodate/IMG_6004.JPG",
+    "public/assets/Images/Tissot/1957_Tissot_Visodate/IMG_6005.JPG",
+
     "public/assets/Images/Tissot/1957_Tissot_Visodate/visodate-sell-add1.JPG",
     "public/assets/Images/Tissot/1957_Tissot_Visodate/visodate-sell-add.JPG",
     "public/assets/Images/Tissot/1957_Tissot_Visodate/tissot_manufacturing_dates.JPG",

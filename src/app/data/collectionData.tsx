@@ -1433,6 +1433,16 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     href: require("./watchModels/Omega/Omega_DeVille_1910077_Cal_1365_1982"),
     specialCollectionItem: false,
   },
+  "Eberhard 32001 Tricompax Moon Phase Valjoux 88": {
+    brand: BrandsEnum.EBERHARD,
+    legend: "Eberhard 32001 Tricompax Moon Phase Valjoux 88",
+    year: 1980,
+    type: WatchTypeEnum.DRESS,
+    srcImage:
+      "public/assets/Images/Eberhard/1980_Eberhard_Ref_32001_TriCompax_Moon_Phase/IMG_5662.JPG",
+    href: require("./watchModels/Eberhard/Eberhard_Chronograph_32001_Tricompax_Moon_1980"),
+    specialCollectionItem: true,
+  },
   "Eberhard Chronograph EP-40-68 Enamel Dial": {
     brand: BrandsEnum.EBERHARD,
     legend: "Eberhard Chronograph EP-40-68 Enamel Dial",

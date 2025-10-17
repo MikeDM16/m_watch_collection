@@ -19,9 +19,15 @@ import { RaymondWeilBrandSeries } from "./RaymondWeilBrandSeries";
 const details: WatchDetails = {
   title: "1990 Raymond Weil Tradition Mécanique 7760",
   sliderImages: [
-    "public/assets/Images/Raymond_Weil/1990_Raymond_Weil_7760/IMG_4902.JPG",
+    /*"public/assets/Images/Raymond_Weil/1990_Raymond_Weil_7760/IMG_4902.JPG",
     "public/assets/Images/Raymond_Weil/1990_Raymond_Weil_7760/IMG_4903.JPG",
     "public/assets/Images/Raymond_Weil/1990_Raymond_Weil_7760/IMG_4904.JPG",
+    */
+    "public/assets/Images/Raymond_Weil/1990_Raymond_Weil_7760/IMG_6006.JPG",
+    "public/assets/Images/Raymond_Weil/1990_Raymond_Weil_7760/IMG_6007.JPG",
+    "public/assets/Images/Raymond_Weil/1990_Raymond_Weil_7760/IMG_6010.JPG",
+    "public/assets/Images/Raymond_Weil/1990_Raymond_Weil_7760/IMG_6012.JPG",
+    "public/assets/Images/Raymond_Weil/1990_Raymond_Weil_7760/IMG_6015.JPG",
 
     "public/assets/Images/Raymond_Weil/1990_Raymond_Weil_7760/IMG_4944.JPG",
     "public/assets/Images/Raymond_Weil/1990_Raymond_Weil_7760/IMG_4947.JPG",

@@ -52,6 +52,7 @@ const details: WatchDetails = {
     "public/assets/Images/Novart/1974_Novart_Monza_Green_Borealis_Unitas_17J/IMG_5781.JPG",
     "public/assets/Images/Novart/1974_Novart_Monza_Green_Borealis_Unitas_17J/IMG_5783.JPG",
     "public/assets/Images/Novart/1974_Novart_Monza_Green_Borealis_Unitas_17J/IMG_5784.JPG",
+
     "public/assets/Images/Novart/1974_Novart_set_Collection/IMG_5817.JPG",
   ],
 
