@@ -16,6 +16,7 @@ import ETA_955_112 from "./movements/ETA/ETA_955_112";
 import ETA_955_114 from "./movements/ETA/ETA_955_114";
 import ETA_1256 from "./movements/ETA/ETA_1256";
 import ETA_2452 from "./movements/ETA/ETA_2452_17J";
+import ETA_2472 from "./movements/ETA/ETA_2472_25J";
 import ETA_2671 from "./movements/ETA/ETA_2671_25J";
 import ETA_2783 from "./movements/ETA/ETA_2783";
 import ETA_2824 from "./movements/ETA/ETA_2824";
@@ -93,6 +94,7 @@ import TISSOT_2170 from "./movements/Tissot/2170_17J";
 import UNITAS_6380 from "./movements/Unitas/Unitas_6380";
 import UNIVERSAL_GENEVE_262_17J from "./movements/Universal_Geneve/UG_Cal_262_17J";
 import VALJOUX_726_88_17J from "./movements/Valjoux/Valjoux_726_88_17J";
+import ZENITH_106_15J from "./movements/Zenith/106_15J";
 import ZENITH_EL_PRIMERO_400Z from "./movements/Zenith/El_Primero_400Z";
 import ZENITH_EL_PRIMERO_4021 from "./movements/Zenith/El_Primero_4021";
 import ZENITH_P_12_4_50 from "./movements/Zenith/P_12_4_50";
@@ -148,6 +150,7 @@ export const MovementsDataDB: Record<string, Caliber> = {
   ETA_251_265: ETA_251_265,
   ETA_251_272: ETA_251_272,
   ETA_2452: ETA_2452,
+  ETA_2472: ETA_2472,
   ETA_2671: ETA_2671,
   ETA_2783: ETA_2783,
   ETA_2824: ETA_2824,
@@ -251,6 +254,7 @@ export const MovementsDataDB: Record<string, Caliber> = {
   ZENITH_EL_PRIMERO_400Z: ZENITH_EL_PRIMERO_400Z,
   ZENITH_EL_PRIMERO_4021: ZENITH_EL_PRIMERO_4021,
   ZENITH_P_12_4_50: ZENITH_P_12_4_50,
+  ZENITH_106_15J: ZENITH_106_15J,
 
   UNIVERSAL_GENEVE_262_17J: UNIVERSAL_GENEVE_262_17J,
 };

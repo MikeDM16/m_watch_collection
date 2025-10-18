@@ -1962,6 +1962,15 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     href: require("./watchModels/Cauny/Cauny_Prima_Calendario_17_Jewels_1967"),
     specialCollectionItem: false,
   },
+  "Barrett Gran Turismo ETA 2472": {
+    brand: BrandsEnum.BARRETT,
+    legend: "Barrett Gran Turismo ETA 2472",
+    year: 1965,
+    type: WatchTypeEnum.CASUAL,
+    srcImage: "public/assets/Images/Barrett/1965_Barrett_Gran_Turismo_eta_2472/IMG_6171.JPG",
+    href: require("./watchModels/Barrett/Barrett_Gran_Turismo_ETA_2472_1965"),
+    specialCollectionItem: false,
+  },
   "Cauny Prima Swiss 17 Rubis": {
     brand: BrandsEnum.CAUNY,
     legend: "Cauny Prima Swiss 17 Rubis",
@@ -2315,6 +2324,15 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     type: WatchTypeEnum.DRESS,
     srcImage: "public/assets/Images/Omega/1946_Omega_2404_5_30T2/IMG_0873.JPG",
     href: require("./watchModels/Omega/Omega_166041_Cal_30T2_1946"),
+    specialCollectionItem: false,
+  },
+  "Zenith Militare Cal 106 17 Jewels": {
+    brand: BrandsEnum.ZENITH,
+    legend: "Zenith Militare Cal 106 17 Jewels",
+    year: 1945,
+    type: WatchTypeEnum.CASUAL,
+    srcImage: "public/assets/Images/Zenith/1945_Zenith_Militare_Cal_106/IMG_6145.JPG",
+    href: require("./watchModels/Zenith/Zenith_Militare_Cal_106_1945"),
     specialCollectionItem: false,
   },
   "Zenith Pilot P12": {

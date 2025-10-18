@@ -13,13 +13,23 @@ const ZENITH_106_15J: Caliber = {
   title: "Zenith caliber 106",
 
   //Description
-  description: "In-house Zenith movement produced around 1948 until 1955.",
+  description:
+    "In-house Zenith movement produced around 1948 until 1955.\n\
+  Movement References:\n\
+    -106 : sub second\n\
+    -106-50: sweep second\n\
+    -106-6: sub second, Incabloc\n\
+    -106-50-6: sweep second, Incabloc\n\
+    -106-S.C.: sweep second, Incabloc\n\
+    -106-7: stem unlocking from dlal side\n\
+    -106-P: Mouvement pincé\n\
+    -extension B: cam disc regulator\n",
   // UsefullLinks
   usefullLinks: {},
   // sliderImages
   sliderImages: [
-    "public/assets/Images/Movements/Zenith/P12_4_50/106_15J__0.JPG",
-    "public/assets/Images/Movements/Zenith/P12_4_50/106_15J__1.JPG",
+    "public/assets/Images/Movements/Zenith/Cal_106_15J/Cal_106_15J_1.JPG",
+    "public/assets/Images/Movements/Zenith/Cal_106_15J/Cal_106_15J_2.JPG",
   ],
 
   // Details

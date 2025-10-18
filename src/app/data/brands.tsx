@@ -395,6 +395,11 @@ export const brandsDB: Brand[] = [
     displayOrder: undefined,
   },
   {
+    name: BrandsEnum.BARRETT,
+    logoImg: "public/assets/Images/Brands_Logos/barrett_logo.PNG",
+    displayOrder: undefined,
+  },
+  {
     name: BrandsEnum.CRISTAL_WATCH,
     logoImg: "public/assets/Images/Brands_Logos/cristal_watch_logo.PNG",
     displayOrder: undefined,

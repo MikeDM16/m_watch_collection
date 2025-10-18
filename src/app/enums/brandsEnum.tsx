@@ -24,6 +24,7 @@ export const BrandsEnum = {
   FONTAINE: "Fontaine",
   FORTIS: "Fortis",
   GREENWICH: "Greenwich",
+  BARRETT: "Barrett",
   HELMA: "Helma",
   HEUER: "Heuer",
   HERMES: "Hermes",
