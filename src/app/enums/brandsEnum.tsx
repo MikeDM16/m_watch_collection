@@ -46,6 +46,7 @@ export const BrandsEnum = {
   NOBREZA: "Nobreza",
   NOVART: "Novart",
   OLMA: "Olma",
+  ORFINA: "Orfina",
   OMEGA: "Omega",
   OMODOX: "Omodox",
   ONE: "One",

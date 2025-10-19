@@ -1395,7 +1395,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     type: WatchTypeEnum.SPORTS,
     srcImage: "public/assets/Images/Tag_Heuer/1985_Tag_Heuer_2000_Chrono/IMG_0535.JPG",
     href: require("./watchModels/Tag_Heuer/Tag_Heuer_ProChrono_2720061_1985"),
-    specialCollectionItem: true,
+    specialCollectionItem: false,
   },
   "Heuer Airline Professional 895.513": {
     brand: BrandsEnum.TAG_HEUER,
@@ -1404,7 +1404,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     type: WatchTypeEnum.SPORTS,
     srcImage: "public/assets/Images/Tag_Heuer/1985_Heuer_Airline/IMG_2798.JPG",
     href: require("./watchModels/Tag_Heuer/Heuer_Airline_Professional_895513_1985"),
-    specialCollectionItem: true,
+    specialCollectionItem: false,
   },
   "Tissot Le Locle Seastar": {
     brand: BrandsEnum.TISSOT,
@@ -1496,6 +1496,15 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     type: WatchTypeEnum.CASUAL,
     srcImage: "public/assets/Images/Tissot/1978_Tissot_Seastar_Quartz/IMG_0982.JPG",
     href: require("./watchModels/Tissot/Tissot_SeaStar_Quartz_1978"),
+    specialCollectionItem: false,
+  },
+  "Nobreza Racing Chronograph 7734 17 Jewels": {
+    brand: BrandsEnum.NOBREZA,
+    legend: "Nobreza Racing Chronograph 7734 17 Jewels",
+    year: 1977,
+    type: WatchTypeEnum.SPORTS,
+    srcImage: "public/assets/Images/Nobreza/1977_Nobreza_Racing_Chrono_7754/IMG_6277.JPG",
+    href: require("./watchModels/Nobreza/Nobreza_Racing_Chrono_7754_1977"),
     specialCollectionItem: false,
   },
   "Taunus Calendar 17 Rubis": {
@@ -1861,7 +1870,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     type: WatchTypeEnum.SPORTS,
     srcImage: "public/assets/Images/Tissot/1971_Tissot_PR_516_GL/IMG_5020.JPG",
     href: require("./watchModels/Tissot/Tissot_Seastar_PR516_GL_1971"),
-    specialCollectionItem: true,
+    specialCollectionItem: false,
   },
   "Kelton M24 Sub-Dive": {
     brand: BrandsEnum.KELTON, //_TIMEX_GROUP
@@ -2103,7 +2112,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     legend: "Tissot Nuevo Horizonte Cross-Hair",
     year: 1958,
     type: WatchTypeEnum.DRESS,
-    srcImage: "public/assets/Images/Tissot/1958_Tissot_Nuevo_Horizonte_27B21/IMG_4721.JPG",
+    srcImage: "public/assets/Images/Tissot/1958_Tissot_Nuevo_Horizonte_27B/IMG_6229.JPG",
     href: require("./watchModels/Tissot/Tissot_Nuevo_Horizonte_1958"),
     specialCollectionItem: false,
   },
@@ -2281,6 +2290,15 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     specialCollectionItem: true,
   },
 
+  "Fortis Pilot Chronograph Venus 170": {
+    brand: BrandsEnum.FORTIS,
+    legend: "Fortis Pilot Chronograph Venus 170",
+    year: 1947,
+    type: WatchTypeEnum.CASUAL,
+    srcImage: "public/assets/Images/Fortis/1947_Fortis_Pilot_Chronograph_Valjoux_77/IMG_6380.JPG",
+    href: require("./watchModels/Fortis/Fortis_Pilot_Chronograph_17J_1947"),
+    specialCollectionItem: true,
+  },
   "Signo Small Seconds - AS 1130": {
     brand: BrandsEnum.SIGNO,
     legend: "Signo Small Seconds - AS 1130",
@@ -2334,6 +2352,15 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     srcImage: "public/assets/Images/Zenith/1945_Zenith_Militare_Cal_106/IMG_6145.JPG",
     href: require("./watchModels/Zenith/Zenith_Militare_Cal_106_1945"),
     specialCollectionItem: false,
+  },
+  "Orfina Pilot Chronograph Venus 170": {
+    brand: BrandsEnum.ORFINA,
+    legend: "Orfina Pilot Chronograph Venus 170",
+    year: 1945,
+    type: WatchTypeEnum.CASUAL,
+    srcImage: "public/assets/Images/Orfina/1945_Orfina_Pilot_Chronograph_Venus_170/IMG_6348.JPG",
+    href: require("./watchModels/Orfina/Orfina_Pilot_Chronograph_17J_1945"),
+    specialCollectionItem: true,
   },
   "Zenith Pilot P12": {
     brand: BrandsEnum.ZENITH,

@@ -93,7 +93,10 @@ import TISSOT_2060_7734_17J from "./movements/Tissot/2060_7734_17J";
 import TISSOT_2170 from "./movements/Tissot/2170_17J";
 import UNITAS_6380 from "./movements/Unitas/Unitas_6380";
 import UNIVERSAL_GENEVE_262_17J from "./movements/Universal_Geneve/UG_Cal_262_17J";
+import VALJOIX_7734_17J from "./movements/Valjoux/7734_17J";
+import VALJOUX_77_17J from "./movements/Valjoux/Valjoux_77_17J";
 import VALJOUX_726_88_17J from "./movements/Valjoux/Valjoux_726_88_17J";
+import VENUS_170_17J from "./movements/Venus/Venus_170_17J";
 import ZENITH_106_15J from "./movements/Zenith/106_15J";
 import ZENITH_EL_PRIMERO_400Z from "./movements/Zenith/El_Primero_400Z";
 import ZENITH_EL_PRIMERO_4021 from "./movements/Zenith/El_Primero_4021";
@@ -247,7 +250,11 @@ export const MovementsDataDB: Record<string, Caliber> = {
 
   TIMEX_M100: TIMEX_M100,
 
+  VALJOUX_77_17J: VALJOUX_77_17J,
   VALJOUX_726_88_17J: VALJOUX_726_88_17J,
+  VALJOIX_7734_17J: VALJOIX_7734_17J,
+
+  VENUS_170_17J: VENUS_170_17J,
 
   UNITAS_6380: UNITAS_6380,
 

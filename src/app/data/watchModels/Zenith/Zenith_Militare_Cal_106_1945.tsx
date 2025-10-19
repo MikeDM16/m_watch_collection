@@ -96,7 +96,7 @@ const details: WatchDetails = {
     },
 
     bracelet: {
-      material: "Nilon",
+      material: "Nilon (Fixed Lugs)",
       buckleType: BuckleTypeEnum.STANDARD_BUCKLE,
       width: "18 mm",
       color: "Black",

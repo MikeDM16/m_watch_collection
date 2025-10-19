@@ -137,7 +137,7 @@ export const brandsDB: Brand[] = [
       year: 1975,
       details: "Founded in Saignelégier, Switzerland",
     },
-    displayBySeries: true,
+    displayBySeries: false,
     backgrounImages: [
       "public/assets/Images/Brands_Backgrounds/Maurice_Lacroix_1_Background.JPG",
       "public/assets/Images/Brands_Backgrounds/Maurice_Lacroix_2_Background.JPG",
@@ -154,7 +154,7 @@ export const brandsDB: Brand[] = [
       year: 1976,
       details: "Founded in Geneva, Switzerland",
     },
-    displayBySeries: true,
+    displayBySeries: false,
     backgrounImages: [
       "public/assets/Images/Brands_Backgrounds/Raymond_Weil_1_Background.JPG",
       "public/assets/Images/Brands_Backgrounds/Raymond_Weil_2_Background.JPG",
@@ -322,7 +322,7 @@ export const brandsDB: Brand[] = [
   {
     name: BrandsEnum.CERTINA,
     logoImg: "public/assets/Images/Brands_Logos/certina_logo.PNG",
-    displayOrder: 40,
+    displayOrder: undefined,
     website: "https://www.certina.com/en",
     description:
       "Certina is a historic watch brand known for its elegant designs and quality craftsmanship.",
@@ -464,7 +464,7 @@ export const brandsDB: Brand[] = [
   {
     name: BrandsEnum.FORTIS,
     logoImg: "public/assets/Images/Brands_Logos/fortis_logo.PNG",
-    displayOrder: undefined,
+    displayOrder: 40,
   },
   {
     name: BrandsEnum.GREENWICH,
@@ -567,6 +567,11 @@ export const brandsDB: Brand[] = [
   {
     name: BrandsEnum.OLMA,
     logoImg: "public/assets/Images/Brands_Logos/olma_logo.PNG",
+    displayOrder: undefined,
+  },
+  {
+    name: BrandsEnum.ORFINA,
+    logoImg: "public/assets/Images/Brands_Logos/orfina_logo.PNG",
     displayOrder: undefined,
   },
   {
