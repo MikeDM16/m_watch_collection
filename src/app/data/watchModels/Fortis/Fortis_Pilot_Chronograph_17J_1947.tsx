@@ -16,7 +16,7 @@ import { MovementsDataDB } from "../../movementsData";
 import { WatchDetails } from "../../watchDetails";
 
 const details: WatchDetails = {
-  title: "1947 Fortis Pilot Chronograph Venus 170",
+  title: "1947 Fortis Pilot Chronograph Valjoux 77",
 
   sliderImages: [
     "public/assets/Images/Fortis/1947_Fortis_Pilot_Chronograph_Valjoux_77/IMG_6389.JPG",

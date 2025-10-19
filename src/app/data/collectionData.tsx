@@ -2290,9 +2290,9 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     specialCollectionItem: true,
   },
 
-  "Fortis Pilot Chronograph Venus 170": {
+  "Fortis Pilot Chronograph Valjoux 77": {
     brand: BrandsEnum.FORTIS,
-    legend: "Fortis Pilot Chronograph Venus 170",
+    legend: "Fortis Pilot Chronograph Valjoux 77",
     year: 1947,
     type: WatchTypeEnum.CASUAL,
     srcImage: "public/assets/Images/Fortis/1947_Fortis_Pilot_Chronograph_Valjoux_77/IMG_6380.JPG",
