@@ -17,7 +17,7 @@ const LEMANIA_1281_17J: Caliber = {
     "Tissot, Omega and Lemania were parter companies along the 1960s. \
   This partnership lead to many Lemania movements beeing used and rebranded by Tissot and Omega. \n\n\
   The Lemania 1281 is used by Tissot under the reference Cal. Tissot 871. \n\
-  This reference 1281 is also the predecessor of the Lemania 1873, more famously known as Omega cal. 861 (Lemania 1873), featured in the original Moonwatch Speedmaster.",
+  This reference 1281 is also the predecessor of the Lemania 1873, more famously known as Omega Cal. 861, featured in the original Moonwatch Speedmaster.",
 
   // UsefullLinks
   usefullLinks: {
