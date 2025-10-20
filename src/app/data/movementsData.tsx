@@ -41,6 +41,7 @@ import FORTIS_AV_21J from "./movements/Fortis/Fortis_AV_21_jewels";
 import Landeron_48_17J from "./movements/Landeron/Landeron_48_17J";
 import Landeron_51_17J from "./movements/Landeron/Landeron_51_17J_";
 import Landeron_159_17J from "./movements/Landeron/Landeron_159_17J";
+import LEMANIA_1281_17J from "./movements/Lemania/Lemania_1281_17_Jewels";
 import LEMANIA_1341 from "./movements/Lemania/Lemania_1341_17_Jewels";
 import MIYOTA_OS10 from "./movements/Miyota/OS10";
 import MIYOTA_OS60 from "./movements/Miyota/OS60";
@@ -198,6 +199,7 @@ export const MovementsDataDB: Record<string, Caliber> = {
   LANDERON_159_17J: Landeron_159_17J,
 
   LEMANIA_1341: LEMANIA_1341,
+  LEMANIA_1281_17J: LEMANIA_1281_17J,
 
   MIYOTA_OS10: MIYOTA_OS10,
   MIYOTA_OS60: MIYOTA_OS60,

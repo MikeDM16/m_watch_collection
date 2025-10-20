@@ -1863,6 +1863,17 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     href: require("./watchModels/Tissot/Tissot_Seastar_Lobster_Automatic_1974"),
     specialCollectionItem: false,
   },
+  "Tissot Seastar T.12 Chronograph Lemania 1281": {
+    brand: BrandsEnum.TISSOT,
+    legend: "Tissot Seastar T.12 Chronograph Lemania 1281",
+    year: 1972,
+    type: WatchTypeEnum.SPORTS,
+    srcImage:
+      "public/assets/Images/Tissot/1972_Tissot_Navigator_Seastar_T12_Lemania_1281/IMG_6459.JPG",
+    href: require("./watchModels/Tissot/Tissot_Seastar_T12_Chrono_Lemania_1972"),
+    specialCollectionItem: true,
+  },
+
   "Tissot PR 516 GL": {
     brand: BrandsEnum.TISSOT,
     legend: "Tissot PR 516 GL",
