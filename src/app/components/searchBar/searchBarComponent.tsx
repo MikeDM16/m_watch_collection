@@ -24,11 +24,21 @@ export default function SearchBarComponent() {
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const searchValue = e.target.value;
     setQuery(searchValue);
-    const matches = Object.keys(data).filter((key) =>
-      key.toLowerCase().includes(searchValue.toLowerCase()),
-    );
-    setFiltered(searchValue ? matches : []);
-    setIsOpen(!!searchValue && matches.length > 0);
+
+    const matches = Object.entries(data).filter(([key, value]) => {
+      const search = searchValue.toLowerCase();
+
+      const keyMatch = key.toLowerCase().includes(search);
+
+      const movementtitleMatch = value?.href?.default?.technicalData?.movement?.title
+        ?.toLowerCase()
+        ?.includes(search);
+
+      return keyMatch || movementtitleMatch;
+    });
+    const matchedKeys = matches.map(([key]) => key);
+    setFiltered(searchValue ? matchedKeys : []);
+    setIsOpen(!!searchValue && matchedKeys.length > 0);
   };
 
   // Use wrapperSearchBarRef to know if the click is in the searhcbar or outside, to close it
@@ -50,7 +60,7 @@ export default function SearchBarComponent() {
       <div className="flex items-center gap-2 bg-white shadow-md rounded-2xl p-2">
         <Search className="w-5 h-5 text-gray-500" />
         <Input
-          placeholder="Search by brand or model name..."
+          placeholder="Search by Brand, Model or Movement name..."
           value={query}
           onChange={handleChange}
           className="border-none focus-visible:ring-0 focus-visible:ring-offset-0"
