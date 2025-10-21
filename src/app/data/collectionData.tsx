@@ -799,6 +799,16 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     specialCollectionItem: true,
   },
 
+  "Maserati Neptune Chronograph Automatic": {
+    brand: BrandsEnum.MASERATI,
+    legend: "Maserati Neptune Chronograph Automatic",
+    year: 1998,
+    type: WatchTypeEnum.SPORTS,
+    srcImage: "public/assets/Images/Maserati/1998_Maserati_Neptune_Chronograph/IMG_6578.JPG",
+    href: require("./watchModels/Maserati/Maserati_Neptune_Chrono_1998"),
+    specialCollectionItem: true,
+  },
+
   "Breitling Chronomat Vitesse B13050": {
     brand: BrandsEnum.BREITLING,
     legend: "Breitling Chronomat Vitesse B13050",

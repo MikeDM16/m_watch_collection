@@ -520,6 +520,11 @@ export const brandsDB: Brand[] = [
     },
   },
   {
+    name: BrandsEnum.MASERATI,
+    logoImg: "public/assets/Images/Brands_Logos/maserati_logo.PNG",
+    displayOrder: undefined,
+  },
+  {
     name: BrandsEnum.MARTINI,
     logoImg: "public/assets/Images/Brands_Logos/martini_logo.PNG",
     displayOrder: undefined,

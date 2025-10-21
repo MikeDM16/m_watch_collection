@@ -39,6 +39,7 @@ export const BrandsEnum = {
   MARTINI: "Martini",
   MAURICE_LACROIX: "Maurice Lacroix",
   MERCEDES_BENZ: "Mercedes Benz",
+  MASERATI: "Maserati",
   MIURA: "Miura",
   MONUMENTAL: "Monumental",
   MOTORSPORT_BRANDS: "MotorSport Brands",
