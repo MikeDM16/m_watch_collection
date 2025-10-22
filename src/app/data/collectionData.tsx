@@ -809,13 +809,23 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     specialCollectionItem: true,
   },
 
-  "Breitling Chronomat Vitesse B13050": {
+  "Breitling Chronomat Vitesse Blue B13050": {
     brand: BrandsEnum.BREITLING,
-    legend: "Breitling Chronomat Vitesse B13050",
+    legend: "Breitling Chronomat Vitesse Blue B13050",
     year: 1998,
     type: WatchTypeEnum.SPORTS,
     srcImage: "public/assets/Images/Breitling/1998_Breitling_Chronomat_Vitesse_B13050/IMG_5064.JPG",
     href: require("./watchModels/Breitling/Breitling_Chronomat_B13050_Vitesse_1998"),
+    specialCollectionItem: true,
+  },
+  "Breitling Chronomat Vitesse Black B13050": {
+    brand: BrandsEnum.BREITLING,
+    legend: "Breitling Chronomat Vitesse Black B13050",
+    year: 1998,
+    type: WatchTypeEnum.SPORTS,
+    srcImage:
+      "public/assets/Images/Breitling/1998_Breitling_Chronomat_Vitesse_B13050_Black/IMG_6663.JPG",
+    href: require("./watchModels/Breitling/Breitling_Chronomat_B13050_Vitesse_Black_1998"),
     specialCollectionItem: true,
   },
 
