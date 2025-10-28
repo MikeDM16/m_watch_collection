@@ -67,6 +67,12 @@ const details: WatchDetails = {
     "public/assets/Images/Omega/1960_Omega_14740_CrossHaird_610/IMG_4304.JPG",
   ],
 
+  saleReport: {
+    price: 434,
+    date: "15/10/2025",
+    url: "https://www.catawiki.com/en/l/98338438",
+  },
+
   technicalData: {
     features: [
       featuresEnum.MECHANICAL,

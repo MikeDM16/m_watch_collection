@@ -59,6 +59,12 @@ const details: WatchDetails = {
     "public/assets/Images/Omega/1969_Omega_Geneve_166_041__565/IMG_5366.JPG",
   ],
 
+  saleReport: {
+    price: 550,
+    date: "11/10/2025",
+    url: "https://www.catawiki.com/en/l/98311012",
+  },
+
   technicalData: {
     features: [
       featuresEnum.GOLD_PLATED_20M,
