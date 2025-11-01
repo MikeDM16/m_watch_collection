@@ -16,7 +16,7 @@ import { WatchDetails } from "../../watchDetails";
 import { TissotBrandSeries } from "./TissotBrandSeries";
 
 const details: WatchDetails = {
-  title: "2021 Tissot T-Classic Tradition",
+  title: "2018 Tissot T-Classic Tradition",
   sliderImages: [
     "public/assets/Images/Tissot/2021_Tissot_T_Classic_Tradition/IMG_1625.JPG",
     "public/assets/Images/Tissot/2021_Tissot_T_Classic_Tradition/IMG_1626.JPG",
@@ -49,7 +49,7 @@ const details: WatchDetails = {
       brand: BrandsEnum.TISSOT,
       series: TissotBrandSeries.T_CLASSIC,
       catalogueReference: "Tradition",
-      productionYear: "2021",
+      productionYear: "2018",
       movementType: MovementWatchTypeEnum.QUARTZ,
       style: WatchStyleEnum.DRESS,
     },

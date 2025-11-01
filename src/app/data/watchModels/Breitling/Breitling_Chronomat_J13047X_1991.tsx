@@ -17,7 +17,7 @@ import { WatchDetails } from "../../watchDetails";
 import { BreitlingBrandSeries } from "./BreitlingBrandSeries";
 
 const details: WatchDetails = {
-  title: "1991 Breitling Chronomat J13047x White Gold",
+  title: "1991 Breitling Chronomat J13047x White Gold 018/100",
   sliderImages: [
     "public/assets/Images/Breitling/1991_Breitling_J13047X_018/IMG_2978.JPG",
     "public/assets/Images/Breitling/1991_Breitling_J13047X_018/IMG_2980.JPG",

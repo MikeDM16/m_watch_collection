@@ -117,7 +117,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
   "Tissot T-Classic Tradition": {
     brand: BrandsEnum.TISSOT,
     legend: "Tissot T-Classic Tradition",
-    year: 2021,
+    year: 2018,
     type: WatchTypeEnum.CASUAL,
     srcImage: "public/assets/Images/Tissot/2021_Tissot_T_Classic_Tradition/IMG_1629.JPG",
     href: require("./watchModels/Tissot/Tissot_TClassic_Tradition_2021"),
@@ -385,9 +385,9 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     specialCollectionItem: false,
   },
 
-  "Tissot Heritage 1944 COSC Limited Edition": {
+  "Tissot Heritage 1944 COSC Limited Edition 0141/3333": {
     brand: BrandsEnum.TISSOT,
-    legend: "Tissot Heritage 1944 COSC Limited Edition",
+    legend: "Tissot Heritage 1944 COSC Limited Edition 0141/3333",
     year: 2011,
     type: WatchTypeEnum.DRESS,
     srcImage: "public/assets/Images/Tissot/2011_Tissot_Heritage_1944_150th/IMG_3831.JPG",
@@ -697,9 +697,9 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     specialCollectionItem: true,
   },
 
-  "Tissot Heritage COSC Limited Edition": {
+  "Tissot Heritage COSC Limited Edition 0837/8888": {
     brand: BrandsEnum.TISSOT,
-    legend: "Tissot Heritage COSC Limited Edition",
+    legend: "Tissot Heritage COSC Limited Edition 0837/8888",
     year: 2003,
     type: WatchTypeEnum.DRESS,
     srcImage: "public/assets/Images/Tissot/2003_Tissot_150th_Heritage/IMG_4970.JPG",
@@ -1014,9 +1014,9 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     href: require("./watchModels/Tag_Heuer/Tag_Heuer_Formula_1_WA1211_Tritium_1995"),
     specialCollectionItem: false,
   },
-  "Breitling Chronomat 10th Anniversary Limited Edition A13050": {
+  "Breitling Chronomat 10th Anniversary Limited Edition 1157/1994 A13050": {
     brand: BrandsEnum.BREITLING,
-    legend: "Breitling Chronomat 10th Anniversary Limited Edition A13050",
+    legend: "Breitling Chronomat 10th Anniversary Limited Edition 1157/1994 A13050",
     year: 1994,
     type: WatchTypeEnum.SPORTS,
     srcImage:
@@ -2326,7 +2326,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     legend: "Fortis Pilot Chronograph Valjoux 77",
     year: 1947,
     type: WatchTypeEnum.CASUAL,
-    srcImage: "public/assets/Images/Fortis/1947_Fortis_Pilot_Chronograph_Valjoux_77/IMG_6380.JPG",
+    srcImage: "public/assets/Images/Fortis/1947_Fortis_Pilot_Chronograph_Valjoux_77/IMG_6912.JPG",
     href: require("./watchModels/Fortis/Fortis_Pilot_Chronograph_17J_1947"),
     specialCollectionItem: true,
   },

@@ -17,7 +17,7 @@ import { WatchDetails } from "../../watchDetails";
 import { TissotBrandSeries } from "./TissotBrandSeries";
 
 const details: WatchDetails = {
-  title: "2003 Tissot Heritage COSC Limited Edition",
+  title: "2003 Tissot Heritage COSC Limited Edition 0837/8888",
   sliderImages: [
     "public/assets/Images/Tissot/2003_Tissot_150th_Heritage/IMG_4948.JPG",
     "public/assets/Images/Tissot/2003_Tissot_150th_Heritage/IMG_4949.JPG",

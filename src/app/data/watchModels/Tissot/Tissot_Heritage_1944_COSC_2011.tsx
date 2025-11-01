@@ -17,7 +17,7 @@ import { WatchDetails } from "../../watchDetails";
 import { TissotBrandSeries } from "./TissotBrandSeries";
 
 const details: WatchDetails = {
-  title: "2011 Tissot Heritage 1944 COSC Limited Edition",
+  title: "2011 Tissot Heritage 1944 COSC Limited Edition 0141/3333",
   sliderImages: [
     "public/assets/Images/Tissot/2011_Tissot_Heritage_1944_150th/IMG_3802.JPG",
     "public/assets/Images/Tissot/2011_Tissot_Heritage_1944_150th/IMG_3804.JPG",

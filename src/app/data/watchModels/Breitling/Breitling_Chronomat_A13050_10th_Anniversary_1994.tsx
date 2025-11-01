@@ -17,7 +17,7 @@ import { WatchDetails } from "../../watchDetails";
 import { BreitlingBrandSeries } from "./BreitlingBrandSeries";
 
 const details: WatchDetails = {
-  title: "1994 Breitling Chronomat 10th Anniversary COSC Limited Edition",
+  title: "1994 Breitling Chronomat 10th Anniversary COSC Limited Edition 1157/1994",
   sliderImages: [
     /*
     "public/assets/Images/Breitling/1994_Breitling_Chronomat_10th_Anniversary_A13050/IMG_4266.JPG",

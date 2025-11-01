@@ -24,7 +24,7 @@ function getCollectionModelsByBrand(
       .map(([, entry]) => {
         seriesKey = entry.href.default.technicalData.information.series;
         if (seriesKey in brandModels) {
-          // key in BrandModels imples we already processed this series before
+          // key in BrandModels implies we already processed this series before
           brandModels[seriesKey].push(entry);
         } else if (displayBySeries == true) {
           // 1st entry if filtering by series
