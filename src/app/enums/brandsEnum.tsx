@@ -71,6 +71,7 @@ export const BrandsEnum = {
   TAUNUS: "Taunus",
   TIMEX: "Timex",
   TISSOT: "Tissot",
+  TISSOURE: "Tissoure",
   TONINO_LAMBORGHINI: "Tonino Lamborghini",
   TOURIST: "Tourist",
   UNIVERSAL_GENEVE: "Universal Geneve",

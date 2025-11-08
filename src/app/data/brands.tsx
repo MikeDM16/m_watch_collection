@@ -330,7 +330,7 @@ export const brandsDB: Brand[] = [
       year: 1988,
       details: "Founded in Grenchen, Switzerland",
     },
-    displayBySeries: true,
+    displayBySeries: false,
   },
   {
     name: BrandsEnum.CAMEL_TROPHY,
@@ -637,6 +637,12 @@ export const brandsDB: Brand[] = [
     name: BrandsEnum.TOURIST,
     logoImg: "public/assets/Images/Brands_Logos/tourist_logo.PNG",
     displayOrder: undefined,
+  },
+  {
+    name: BrandsEnum.TISSOURE,
+    logoImg: "public/assets/Images/Brands_Logos/tissoure_logo.PNG",
+    displayOrder: undefined,
+    description: "Vintage Portuguese brand with Swiss Made parts and assembly.",
   },
   {
     name: BrandsEnum.TAUNUS,

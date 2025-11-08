@@ -1,5 +1,6 @@
 import AS_1130 from "./movements/AS/AS_1130_17J";
 import AS_1950 from "./movements/AS/AS_1950_17J";
+import CERTINA_25_261_27J from "./movements/Certina/Certina_25_261_28J";
 import CERTINA_331 from "./movements/Certina/Certina_331_15J";
 import DD_2000_ETA_955_232 from "./movements/Debois_Depraz/DD_2000_955";
 import DD_2000_ETA_2982 from "./movements/Debois_Depraz/DD_2000_2892";
@@ -98,6 +99,7 @@ import VALJOIX_7734_17J from "./movements/Valjoux/7734_17J";
 import VALJOUX_77_17J from "./movements/Valjoux/Valjoux_77_17J";
 import VALJOUX_726_88_17J from "./movements/Valjoux/Valjoux_726_88_17J";
 import VENUS_170_17J from "./movements/Venus/Venus_170_17J";
+import VOSTOK_2605_17J from "./movements/Vostok/Vostok_2605_17J";
 import ZENITH_106_15J from "./movements/Zenith/106_15J";
 import ZENITH_EL_PRIMERO_400Z from "./movements/Zenith/El_Primero_400Z";
 import ZENITH_EL_PRIMERO_4021 from "./movements/Zenith/El_Primero_4021";
@@ -138,6 +140,7 @@ export const MovementsDataDB: Record<string, Caliber> = {
   AS_1950: AS_1950,
 
   CERTINA_331: CERTINA_331,
+  CERTINA_25_261_27J: CERTINA_25_261_27J,
 
   DD_2000_ETA_2982: DD_2000_ETA_2982,
   DD_2000_ETA_955_232: DD_2000_ETA_955_232,
@@ -257,6 +260,8 @@ export const MovementsDataDB: Record<string, Caliber> = {
   VALJOIX_7734_17J: VALJOIX_7734_17J,
 
   VENUS_170_17J: VENUS_170_17J,
+
+  VOSTOK_2605_17J: VOSTOK_2605_17J,
 
   UNITAS_6380: UNITAS_6380,
 

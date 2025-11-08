@@ -83,6 +83,12 @@ const details: WatchDetails = {
     "public/assets/Images/Breitling/1998_Breitling_Chronomat_Vitesse_B13050_Black/IMG_6699.JPG",
   ],
 
+  saleReport: {
+    price: 1700,
+    date: "08/11/2025",
+    url: "https://www.catawiki.com/en/l/98993241",
+  },
+
   technicalData: {
     features: [
       featuresEnum.DATE,

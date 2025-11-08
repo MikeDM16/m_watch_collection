@@ -114,6 +114,12 @@ const details: WatchDetails = {
     "public/assets/Images/Tissot/1972_Tissot_Navigator_Seastar_T12_Lemania_1281/IMG_6503.JPG",
   ],
 
+  saleReport: {
+    price: 1000,
+    date: "01/11/2025",
+    url: "https://www.catawiki.com/en/l/98682991",
+  },
+
   technicalData: {
     features: [
       featuresEnum.MECHANIQUE_CHRONOGRAPH,

@@ -55,6 +55,12 @@ const details: WatchDetails = {
     "public/assets/Images/Nobreza/1977_Nobreza_Racing_Chrono_7754/IMG_6308.JPG",
   ],
 
+  saleReport: {
+    price: 387,
+    date: "02/11/2025",
+    url: "https://www.catawiki.com/en/l/98656557",
+  },
+
   technicalData: {
     features: [featuresEnum.DATE, featuresEnum.MECHANIQUE_CHRONOGRAPH],
 

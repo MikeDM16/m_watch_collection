@@ -56,6 +56,12 @@ const details: WatchDetails = {
     "public/assets/Images/Novart/1974_Novart_set_Collection/IMG_5817.JPG",
   ],
 
+  saleReport: {
+    price: 236,
+    date: "27/10/2025",
+    url: "https://www.catawiki.com/en/l/98624567",
+  },
+
   technicalData: {
     features: [featuresEnum.MECHANICAL],
 

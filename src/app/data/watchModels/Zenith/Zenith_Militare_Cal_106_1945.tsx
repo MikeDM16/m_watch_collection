@@ -63,6 +63,12 @@ const details: WatchDetails = {
     "public/assets/Images/Zenith/1945_Zenith_Militare_Cal_106/IMG_6162.JPG",
   ],
 
+  saleReport: {
+    price: 320,
+    date: "30/10/2025",
+    url: "https://www.catawiki.com/en/l/98640893",
+  },
+
   technicalData: {
     features: [featuresEnum.MECHANICAL],
 

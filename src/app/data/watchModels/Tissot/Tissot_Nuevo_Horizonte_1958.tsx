@@ -60,6 +60,12 @@ const details: WatchDetails = {
     "public/assets/Images/Tissot/1958_Tissot_Nuevo_Horizonte_27B/IMG_6267.JPG",
   ],
 
+  saleReport: {
+    price: 500,
+    date: "28/10/2025",
+    url: "https://www.catawiki.com/en/l/98656371",
+  },
+
   technicalData: {
     features: [
       featuresEnum.MECHANICAL,

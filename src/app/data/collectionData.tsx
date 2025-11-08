@@ -1645,6 +1645,16 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     href: require("./watchModels/Novart/Novart_Incabloc_white_17Jewels_1976"),
     specialCollectionItem: false,
   },
+  "Tissoure Cronometro 17 Rubis": {
+    brand: BrandsEnum.TISSOURE,
+    legend: "Tissoure Cronometro 17 Rubis",
+    year: 1975,
+    type: WatchTypeEnum.CASUAL,
+    srcImage: "public/assets/Images/Tissoure/1975_Tissoure_Cronometro_17J/IMG_7088.JPG",
+    href: require("./watchModels/Tissoure/Tissoure_Cronometro_17J_1975"),
+    specialCollectionItem: false,
+  },
+
   "Lucerne Automatic 25 Jewels": {
     brand: BrandsEnum.LUCERNE,
     legend: "Lucerne Automatic 25 Jewels",
@@ -2000,6 +2010,16 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     type: WatchTypeEnum.CASUAL,
     srcImage: "public/assets/Images/Cauny/1967_Cauny_Prima_Calendario/IMG_1760.JPG",
     href: require("./watchModels/Cauny/Cauny_Prima_Calendario_17_Jewels_1967"),
+    specialCollectionItem: false,
+  },
+  "Certina DS Turtle Automatic 27 Jewels": {
+    brand: BrandsEnum.CERTINA,
+    legend: "Certina DS Turtle Automatic 27 Jewels",
+    year: 1965,
+    type: WatchTypeEnum.CASUAL,
+    srcImage:
+      "public/assets/Images/Certina/1965_Certina_DS_Automatic_25_651_27_jewels/IMG_7158.JPG",
+    href: require("./watchModels/Certina/Certina_DS_Automatic_27_jewels_1965"),
     specialCollectionItem: false,
   },
   "Barrett Gran Turismo ETA 2472": {
