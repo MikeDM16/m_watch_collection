@@ -25,6 +25,7 @@ import { ReactElement } from "react";
 export interface ImageSliderEntry {
   imageSrc: string;
   href?: string;
+  hoverSrc?: string;
   hreftext?: string;
   target?: string;
   alt?: string | ReactElement;
@@ -110,7 +111,7 @@ export default function ImageSliderComponent(props: ImageSliderEntry[]) {
               href={entry.href || ""}
               target={entry.target || undefined}
             >
-              <ImageComponent src={entry.imageSrc} />
+              <ImageComponent src={entry.imageSrc} hoverSrc={entry.hoverSrc || undefined} />
               <br />
               <em key={`swiper_slide_legend_${idx}`}>
                 {/** Use href text hs main alt legend */}

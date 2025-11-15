@@ -48,6 +48,8 @@ const details: WatchDetails = {
     "public/assets/Images/Certina/1965_Certina_DS_Automatic_25_651_27_jewels/IMG_7142.JPG",
     "public/assets/Images/Certina/1965_Certina_DS_Automatic_25_651_27_jewels/IMG_7143.JPG",
     "public/assets/Images/Certina/1965_Certina_DS_Automatic_25_651_27_jewels/IMG_7144.JPG",
+    "public/assets/Images/Certina/1965_Certina_DS_Automatic_25_651_27_jewels/timegraph_1.JPG",
+    "public/assets/Images/Certina/1965_Certina_DS_Automatic_25_651_27_jewels/timegraph_2.JPG",
 
     "public/assets/Images/Certina/1965_Certina_DS_Automatic_25_651_27_jewels/IMG_7151.JPG",
     "public/assets/Images/Certina/1965_Certina_DS_Automatic_25_651_27_jewels/IMG_7153.JPG",

@@ -78,6 +78,12 @@ export default function Page() {
                           src={getExternalResource(
                             getImgURLForSizeType(entry.srcImage, SizeType.GALLERY),
                           )}
+                          hoverSrc={getExternalResource(
+                            getImgURLForSizeType(
+                              entry.hoverSrc ? entry.hoverSrc : entry.srcImage,
+                              SizeType.GALLERY,
+                            ),
+                          )}
                           alt={`${entry.legend}`}
                         />
                         <div

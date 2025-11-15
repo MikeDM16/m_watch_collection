@@ -16,6 +16,9 @@ export default function SpecialItemsComponent() {
   const swiperItems: ImageSliderEntry[] = Object.values(specialCollectionItems).map((entry) => {
     return {
       imageSrc: getExternalResource(getImgURLForSizeType(entry.srcImage, SizeType.GALLERY)),
+      hoverSrc: getExternalResource(
+        getImgURLForSizeType(entry.hoverSrc ? entry.hoverSrc : entry.srcImage, SizeType.SLIDER),
+      ),
       href: routeToCollectionBrandModelPage(entry.brand, entry.legend),
       hreftext: `${entry.year} ${entry.legend}`,
       alt: undefined,
