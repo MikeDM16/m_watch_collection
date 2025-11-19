@@ -61,7 +61,7 @@ const details: WatchDetails = {
 
     information: {
       brand: BrandsEnum.TISSOT,
-      series: TissotBrandSeries.PR_516_VINTAGE,
+      series: TissotBrandSeries.SEASTAR,
       catalogueReference: "40210",
       productionYear: "1978",
       movementType: MovementWatchTypeEnum.QUARTZ,

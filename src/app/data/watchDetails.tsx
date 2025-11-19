@@ -90,7 +90,7 @@ export interface TechnicalData {
 
 export interface WathchDescription {
   text: string;
-  sliderImages: string[];
+  sliderImages?: string[];
 }
 
 export interface WatchDetails {

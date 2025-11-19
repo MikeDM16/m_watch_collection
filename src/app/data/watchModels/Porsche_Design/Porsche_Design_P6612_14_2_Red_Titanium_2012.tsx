@@ -19,12 +19,11 @@ import { PorscheDesignBrandSeries } from "./PorscheDesignBrandSeries";
 const details: WatchDetails = {
   title: "2005 Porsche Design Dashboard P6612 Titanium",
   sliderImages: [
-    //"public/assets/Images/Porsche_Design/2005_Porsche Design_Dashboard_P662_17_2_Red_Titanium/IMG_7032.JPG",
-    //"public/assets/Images/Porsche_Design/2005_Porsche Design_Dashboard_P662_17_2_Red_Titanium/IMG_7030.JPG",
-    //"public/assets/Images/Porsche_Design/2005_Porsche Design_Dashboard_P662_17_2_Red_Titanium/IMG_7033.JPG",
-    //"public/assets/Images/Porsche_Design/2005_Porsche Design_Dashboard_P662_17_2_Red_Titanium/IMG_7034.JPG",
-
-    //"public/assets/Images/Porsche_Design/2005_Porsche Design_Dashboard_P662_17_2_Red_Titanium/IMG_7063.JPG",
+    "public/assets/Images/Porsche_Design/2005_Porsche Design_Dashboard_P662_17_2_Red_Titanium/IMG_7032.JPG",
+    "public/assets/Images/Porsche_Design/2005_Porsche Design_Dashboard_P662_17_2_Red_Titanium/IMG_7030.JPG",
+    "public/assets/Images/Porsche_Design/2005_Porsche Design_Dashboard_P662_17_2_Red_Titanium/IMG_7033.JPG",
+    "public/assets/Images/Porsche_Design/2005_Porsche Design_Dashboard_P662_17_2_Red_Titanium/IMG_7034.JPG",
+    "public/assets/Images/Porsche_Design/2005_Porsche Design_Dashboard_P662_17_2_Red_Titanium/IMG_7063.JPG",
     "public/assets/Images/Porsche_Design/2005_Porsche Design_Dashboard_P662_17_2_Red_Titanium/IMG_7064.JPG",
 
     "public/assets/Images/Porsche_Design/2005_Porsche Design_Dashboard_P662_17_2_Red_Titanium/IMG_7028.JPG",
@@ -75,7 +74,7 @@ const details: WatchDetails = {
     "public/assets/Images/Porsche_Design/2005_Porsche Design_Dashboard_P662_17_2_Red_Titanium/IMG_7047.JPG",
     "public/assets/Images/Porsche_Design/2005_Porsche Design_Dashboard_P662_17_2_Red_Titanium/IMG_7048.JPG",
 
-    //"public/assets/Images/Porsche_Design/2005_Porsche Design_Dashboard_P662_17_2_Red_Titanium/IMG_7107.JPG",
+    "public/assets/Images/Porsche_Design/2005_Porsche Design_Dashboard_P662_17_2_Red_Titanium/IMG_7107.JPG",
 
     "public/assets/Images/Porsche_Design/2005_Porsche Design_Dashboard_P662_17_2_Red_Titanium/IMG_7065.JPG",
     "public/assets/Images/Porsche_Design/2005_Porsche Design_Dashboard_P662_17_2_Red_Titanium/IMG_7066.JPG",

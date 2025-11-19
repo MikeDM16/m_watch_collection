@@ -19,6 +19,11 @@ import { OmegaBrandSeries } from "./OmegaBrandSeries";
 const details: WatchDetails = {
   title: '1998 Omega Speedmaster MK40 Triple Date "Schumacher"',
   sliderImages: [
+    "public/assets/Images/Omega/1998_Omega_Speedmaster_MK40_triple_date/IMG_7324.JPG",
+    "public/assets/Images/Omega/1998_Omega_Speedmaster_MK40_triple_date/IMG_7328.JPG",
+    "public/assets/Images/Omega/1998_Omega_Speedmaster_MK40_triple_date/IMG_7329.JPG",
+    "public/assets/Images/Omega/1998_Omega_Speedmaster_MK40_triple_date/IMG_7330.JPG",
+
     "public/assets/Images/Omega/1998_Omega_Speedmaster_MK40_triple_date/IMG_7721.JPG",
     "public/assets/Images/Omega/1998_Omega_Speedmaster_MK40_triple_date/IMG_7722.JPG",
     "public/assets/Images/Omega/1998_Omega_Speedmaster_MK40_triple_date/IMG_7723.JPG",

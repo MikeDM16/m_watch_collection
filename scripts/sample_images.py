@@ -3,8 +3,9 @@ import cv2
 from tqdm import tqdm
 from PIL import Image
 
-main_folder_path = "C:/Users/migue/Documentos/GitHub/MWatchCollectionResources/public/assets/Images/Argus/1945_Argus_Tuxedo_Militare_AS_1130"
-main_folder_path = "C:/Users/migue/Documentos/GitHub/MWatchCollectionResources/public/assets/Images/Movements/Seagull/Seagull_ST2505/"
+main_folder_path = "C:/Users/migue/Documentos/GitHub/MWatchCollectionResources/public/assets/Images/Brands_Backgrounds/"
+main_folder_path = "C:/Users/migue/Documentos/GitHub/MWatchCollectionResources/public/assets/Images/Movements/Certina"
+main_folder_path = "C:/Users/migue/Documentos/GitHub/MWatchCollectionResources/public/assets/Images/Tissot/1965_Tissot_PR_516_Automatic/"
 
 
 def remove_lower_extension_images():
