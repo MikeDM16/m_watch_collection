@@ -99,8 +99,7 @@ const details: WatchDetails = {
     information: {
       brand: BrandsEnum.TISSOT,
       series: TissotBrandSeries.HERITAGE,
-
-      catalogueReference: " 150th Anniversary 0141/3333",
+      catalogueReference: "150th Anniversary 0141/3333",
       productionYear: "2011",
       movementType: MovementWatchTypeEnum.AUTOMATIC,
       style: WatchStyleEnum.DRESS,

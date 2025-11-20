@@ -495,6 +495,17 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     specialCollectionItem: false,
   },
 
+  "Tissot Heritage Telemeter COSC Limited Edition 0250/3333": {
+    brand: BrandsEnum.TISSOT,
+    legend: "Tissot Heritage Telemeter COSC Limited Edition 0250/3333",
+    year: 2009,
+    type: WatchTypeEnum.SPORTS,
+    srcImage: "public/assets/Images/Tissot/2009_Tissot_Heritage_Telemeter_250_3333/IMG_7506.JPG",
+    hoverSrc: "public/assets/Images/Tissot/2009_Tissot_Heritage_Telemeter_250_3333/IMG_7478.JPG",
+    href: require("./watchModels/Tissot/Tissot_Heritage_Telemeter_COSC_2009"),
+    specialCollectionItem: true,
+  },
+
   "Tissot T-Touch Titanium": {
     brand: BrandsEnum.TISSOT,
     legend: "Tissot T-Touch Titanium",
@@ -2099,6 +2110,16 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     type: WatchTypeEnum.CASUAL,
     srcImage: "public/assets/Images/Provita/1969_Provita_Automatic/IMG_0456.JPG",
     href: require("./watchModels/Provita/Provita_Automatic_25J_1969"),
+    specialCollectionItem: false,
+  },
+  "Omega Constellation COSC (153.029 - Linen Dial)": {
+    brand: BrandsEnum.OMEGA,
+    legend: "Omega Constellation COSC (153.029 - Linen Dial)",
+    year: 1968,
+    type: WatchTypeEnum.SPORTS,
+    srcImage: "public/assets/Images/Omega/1967_Omega_Constellation_COSC_153_020/IMG_7437.JPG",
+    hoverSrc: "public/assets/Images/Omega/1967_Omega_Constellation_COSC_153_020/IMG_7469.JPG",
+    href: require("./watchModels/Omega/Omega_Constellation_COSC_153_020_1967"),
     specialCollectionItem: false,
   },
   "Tissot PR-516 GL": {

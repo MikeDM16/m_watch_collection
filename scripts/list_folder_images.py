@@ -46,6 +46,6 @@ def generate_image_array(brand_name, folder_path):
     print(f"\n// Found {len(image_files)} image(s)")
 
 if __name__ == "__main__":
-    folder_path = "c:/Users/migue/Downloads/Imagens_airmore_20251118_210428-20251118-090429/1950_Eberhard_Extra_Fort"
-    brand_name = "Eberhard"
+    folder_path = "c:/Users/migue/Downloads/t/2009_Tissot_Heritage_Telemeter_250_3333"
+    brand_name = "Omega"
     generate_image_array(brand_name, folder_path)
