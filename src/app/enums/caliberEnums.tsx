@@ -21,6 +21,7 @@ export const CaliberBrandsEnum = {
   SELLITA: "Sellita",
   TIMEX: "Timex",
   TISSOT: "Tissot",
+  PIGUET: "Piguet",
   UNITAS: "Unitas",
   VALJOUX: "Valjoux",
   VENUS: "Venus",

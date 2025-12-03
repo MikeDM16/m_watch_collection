@@ -4,4 +4,5 @@ export const BreitlingBrandSeries = {
   CHRONOMAT_VITESSE: "Chronomat Vitesse",
   CHRONOMAT_EARLY: "Chronomat (Early)",
   COLT: "Colt",
+  VINTAGE_SERIES: "Vintage Series",
 };

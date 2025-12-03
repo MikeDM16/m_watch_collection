@@ -1389,6 +1389,19 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     href: require("./watchModels/Raymond_Weil/Raymond_Weil_Tradition_Mecanique_7760_1990"),
     specialCollectionItem: true,
   },
+  " Breitling Chronomat Sextant 80350 Chronograph": {
+    brand: BrandsEnum.BREITLING,
+    legend: " Breitling Chronomat Sextant 80350 Chronograph",
+    year: 1989,
+    type: WatchTypeEnum.SPORTS,
+    srcImage:
+      "public/assets/Images/Breitling/1989_Breitling_Chronomat_Sextant_1270_22J/IMG_7762.JPG",
+    hoverSrc:
+      "public/assets/Images/Breitling/1989_Breitling_Chronomat_Sextant_1270_22J/IMG_7814.JPG",
+    href: require("./watchModels/Breitling/Breitling_Chronomat_Sextant_80350_1989"),
+    specialCollectionItem: false,
+  },
+
   "Raymond Weil Tango 5563": {
     brand: BrandsEnum.RAYMOND_WEIL,
     legend: "Raymond Weil Tango 5563",

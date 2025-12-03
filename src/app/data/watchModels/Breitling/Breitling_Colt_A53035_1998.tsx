@@ -119,7 +119,7 @@ const details: WatchDetails = {
 
     information: {
       brand: BrandsEnum.BREITLING,
-      series: BreitlingBrandSeries.COLT,
+      series: BreitlingBrandSeries.VINTAGE_SERIES,
       catalogueReference: "Colt (A53035)",
       productionYear: "1998",
       movementType: MovementWatchTypeEnum.QUARTZ,
