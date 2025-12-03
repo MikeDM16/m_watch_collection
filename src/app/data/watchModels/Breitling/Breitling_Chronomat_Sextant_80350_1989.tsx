@@ -34,10 +34,10 @@ const details: WatchDetails = {
     "public/assets/Images/Breitling/1989_Breitling_Chronomat_Sextant_1270_22J/IMG_7764.JPG",
     "public/assets/Images/Breitling/1989_Breitling_Chronomat_Sextant_1270_22J/IMG_7765.JPG",
 
-        "public/assets/Images/Breitling/1989_Breitling_Chronomat_Sextant_1270_22J/IMG_7796.JPG",
+    "public/assets/Images/Breitling/1989_Breitling_Chronomat_Sextant_1270_22J/IMG_7796.JPG",
     "public/assets/Images/Breitling/1989_Breitling_Chronomat_Sextant_1270_22J/IMG_7797.JPG",
     "public/assets/Images/Breitling/1989_Breitling_Chronomat_Sextant_1270_22J/IMG_7798.JPG",
-    
+
     "public/assets/Images/Breitling/1989_Breitling_Chronomat_Sextant_1270_22J/IMG_7804.JPG",
     "public/assets/Images/Breitling/1989_Breitling_Chronomat_Sextant_1270_22J/IMG_7805.JPG",
     "public/assets/Images/Breitling/1989_Breitling_Chronomat_Sextant_1270_22J/IMG_7807.JPG",
@@ -55,9 +55,6 @@ const details: WatchDetails = {
     "public/assets/Images/Breitling/1989_Breitling_Chronomat_Sextant_1270_22J/IMG_7785.JPG",
     "public/assets/Images/Breitling/1989_Breitling_Chronomat_Sextant_1270_22J/IMG_7786.JPG",
     "public/assets/Images/Breitling/1989_Breitling_Chronomat_Sextant_1270_22J/IMG_7787.JPG",
-
-
-
 
     "public/assets/Images/Breitling/1989_Breitling_Chronomat_Sextant_1270_22J/IMG_7801.JPG",
     "public/assets/Images/Breitling/1989_Breitling_Chronomat_Sextant_1270_22J/IMG_7803.JPG",

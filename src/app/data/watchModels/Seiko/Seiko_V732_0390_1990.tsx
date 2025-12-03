@@ -13,6 +13,7 @@ import { WatchStyleEnum } from "@/app/enums/watchStyleEnum";
 import { WaterResistanceEnum } from "@/app/enums/waterResistanceEnum";
 
 import { WatchDetails } from "../../watchDetails";
+import { SeikoBrandSeries } from "./SeikoBrandSeries";
 
 const details: WatchDetails = {
   title: "1990 Seiko Two Tone 0390",
@@ -44,7 +45,7 @@ const details: WatchDetails = {
 
     information: {
       brand: BrandsEnum.SEIKO,
-      series: "0390",
+      series: SeikoBrandSeries.VINTAGE_SERIES,
       catalogueReference: "V732-0390 (070008)",
       productionYear: "1990",
       movementType: MovementWatchTypeEnum.QUARTZ,

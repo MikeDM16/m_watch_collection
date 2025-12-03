@@ -103,8 +103,8 @@ const details: WatchDetails = {
 
     information: {
       brand: BrandsEnum.SEIKO,
-      series: SeikoBrandSeries.TYPE_II,
-      catalogueReference: "0903-8019 (661506)",
+      series: SeikoBrandSeries.VINTAGE_SERIES,
+      catalogueReference: "Type II - 0903-8019 (661506)",
       productionYear: "1976",
       movementType: MovementWatchTypeEnum.QUARTZ,
       style: WatchStyleEnum.CASUAL,

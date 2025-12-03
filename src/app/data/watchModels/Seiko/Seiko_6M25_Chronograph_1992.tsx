@@ -80,7 +80,7 @@ const details: WatchDetails = {
 
     information: {
       brand: BrandsEnum.SEIKO,
-      series: SeikoBrandSeries.SPORTS_150,
+      series: SeikoBrandSeries.VINTAGE_SERIES,
       catalogueReference: '6M25-6000 "Dancing Hands"',
       productionYear: "1992",
       movementType: MovementWatchTypeEnum.QUARTZ,

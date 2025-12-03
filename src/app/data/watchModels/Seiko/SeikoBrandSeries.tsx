@@ -4,4 +4,5 @@ export const SeikoBrandSeries = {
   SPORTS_150: "Sports 150",
   AGE_OF_DISCOVERY_SERIES: "Age of Discovery",
   TURTLE_6306: "Turtle (6306 JDM Version)",
+  VINTAGE_SERIES: "Vintage Series",
 };
