@@ -84,6 +84,13 @@ const details: WatchDetails = {
     "public/assets/Images/Certina/1965_Certina_DS_Automatic_25_651_27_jewels/IMG_7176.JPG",
     "public/assets/Images/Certina/1965_Certina_DS_Automatic_25_651_27_jewels/IMG_7177.JPG",
   ],
+
+  saleReport: {
+    price: 265,
+    date: "18/11/2025",
+    url: "https://www.catawiki.com/en/l/99134352",
+  },
+
   technicalData: {
     features: [featuresEnum.AUTOMATIC],
 

@@ -83,6 +83,12 @@ const details: WatchDetails = {
     "public/assets/Images/Fortis/1947_Fortis_Pilot_Chronograph_Valjoux_77/IMG_6965.JPG",
   ],
 
+  saleReport: {
+    price: 550,
+    date: "15/12/2025",
+    url: "https://www.catawiki.com/en/l/99326904",
+  },
+
   technicalData: {
     features: [featuresEnum.MECHANIQUE_CHRONOGRAPH],
 

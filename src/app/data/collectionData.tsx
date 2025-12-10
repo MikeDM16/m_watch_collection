@@ -517,6 +517,16 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     specialCollectionItem: false,
   },
 
+  "Raymond Weil Maestro Automatic 2834": {
+    brand: BrandsEnum.RAYMOND_WEIL,
+    legend: "Raymond Weil Maestro Automatic 2834",
+    year: 2008,
+    type: WatchTypeEnum.DRESS,
+    srcImage: "public/assets/Images/Raymond_Weil/2008_Raymond_Weil_Maestro_ETA_2834/IMG_8011.JPG",
+    hoverSrc: "public/assets/Images/Raymond_Weil/2008_Raymond_Weil_Maestro_ETA_2834/IMG_8036.JPG",
+    href: require("./watchModels/Raymond_Weil/Raymond_Weil_Maestro_ETA_2834_Automatic_2008"),
+    specialCollectionItem: false,
+  },
   "Raymond Weil Maestro Automatic": {
     brand: BrandsEnum.RAYMOND_WEIL,
     legend: "Raymond Weil Maestro Automatic",
@@ -2049,6 +2059,16 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     href: require("./watchModels/Tissot/Tissot_Seastar_Lobster_Automatic_1974"),
     specialCollectionItem: false,
   },
+  "Utina Sunburst FE 233 17 Jewels": {
+    brand: BrandsEnum.UTINA,
+    legend: "Utina Sunburst FE 233 17 Jewels",
+    year: 1972,
+    type: WatchTypeEnum.CASUAL,
+    srcImage: "public/assets/Images/Utina/1972_Utina_Sunburst_FE233/IMG_8090.JPG",
+    hoverSrc: "public/assets/Images/Utina/1972_Utina_Sunburst_FE233/IMG_8093.JPG",
+    href: require("./watchModels/Utina/Utina_Sunburst_FE233_1972"),
+    specialCollectionItem: false,
+  },
   "Tissot Seastar T.12 Chronograph Lemania 1281": {
     brand: BrandsEnum.TISSOT,
     legend: "Tissot Seastar T.12 Chronograph Lemania 1281",
@@ -2147,6 +2167,16 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     srcImage: "public/assets/Images/Omega/1967_Omega_Constellation_COSC_153_020/IMG_7437.JPG",
     hoverSrc: "public/assets/Images/Omega/1967_Omega_Constellation_COSC_153_020/IMG_7469.JPG",
     href: require("./watchModels/Omega/Omega_Constellation_COSC_153_020_1967"),
+    specialCollectionItem: false,
+  },
+  "Utina Enamel Dial FE 233 17 Jewels": {
+    brand: BrandsEnum.UTINA,
+    legend: "Utina Enamel Dial FE 233 17 Jewels",
+    year: 1968,
+    type: WatchTypeEnum.CASUAL,
+    srcImage: "public/assets/Images/Utina/1968_Utina_Enamel_dial_FE233/IMG_8050.JPG",
+    hoverSrc: "public/assets/Images/Utina/1968_Utina_Enamel_dial_FE233/IMG_8048.JPG",
+    href: require("./watchModels/Utina/Utina_Enamel_Dial_FE233_1968"),
     specialCollectionItem: false,
   },
   "Tissot PR-516 GL": {

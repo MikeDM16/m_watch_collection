@@ -616,7 +616,12 @@ export const brandsDB: Brand[] = [
     displayOrder: undefined,
     description: "Vintage Portuguese brand with Swiss Made parts and assembly.",
   },
-
+  {
+    name: BrandsEnum.UTINA,
+    logoImg: "public/assets/Images/Brands_Logos/utina_logo.PNG",
+    displayOrder: undefined,
+    description: "Vintage Portuguese brand with Swiss Made parts and assembly.",
+  },
   {
     name: BrandsEnum.SIGNO,
     logoImg: "public/assets/Images/Brands_Logos/signo_logo.PNG",

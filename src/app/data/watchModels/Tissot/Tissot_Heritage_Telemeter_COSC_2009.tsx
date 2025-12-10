@@ -84,6 +84,12 @@ const details: WatchDetails = {
     "public/assets/Images/Tissot/2009_Tissot_Heritage_Telemeter_250_3333/IMG_7532.JPG",
   ],
 
+  saleReport: {
+    price: 1600,
+    date: "23/12/2025",
+    url: "https://www.catawiki.com/en/l/99464212",
+  },
+
   technicalData: {
     features: [featuresEnum.DATE, featuresEnum.OPEN_CASE_BACK, featuresEnum.AUTOMATIC],
 
