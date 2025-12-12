@@ -773,6 +773,16 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     specialCollectionItem: true,
   },
 
+  "Tissot Heritage COSC Limited Edition 0884/8888": {
+    brand: BrandsEnum.TISSOT,
+    legend: "Tissot Heritage COSC Limited Edition 0884/8888",
+    year: 2003,
+    type: WatchTypeEnum.DRESS,
+    srcImage: "public/assets/Images/Tissot/2003_Tissot_150th_Heritage_884_8888/IMG_8175.JPG",
+    hoverSrc: "public/assets/Images/Tissot/2003_Tissot_150th_Heritage_884_8888/IMG_8167.JPG",
+    href: require("./watchModels/Tissot/Tissot_Heritage_150th_COSC_884_8888_2003"),
+    specialCollectionItem: true,
+  },
   "Tissot Heritage COSC Limited Edition 0837/8888": {
     brand: BrandsEnum.TISSOT,
     legend: "Tissot Heritage COSC Limited Edition 0837/8888",
@@ -781,7 +791,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     srcImage: "public/assets/Images/Tissot/2003_Tissot_150th_Heritage/IMG_4970.JPG",
     hoverSrc: "public/assets/Images/Tissot/2003_Tissot_150th_Heritage/IMG_4948.JPG",
     href: require("./watchModels/Tissot/Tissot_Heritage_150th_COSC_2003"),
-    specialCollectionItem: true,
+    specialCollectionItem: false,
   },
   "Tissot Ballade Automatic C279/379C": {
     brand: BrandsEnum.TISSOT,
@@ -917,6 +927,16 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     specialCollectionItem: true,
   },
 
+  "Eterna - Porsche Design 911 - Jean-Pierre Jarier": {
+    brand: BrandsEnum.PORSCHE_DESIGN,
+    legend: "Eterna - Porsche Design 911 - Jean-Pierre Jarier",
+    year: 1998,
+    type: WatchTypeEnum.SPORTS,
+    srcImage: "public/assets/Images/Porsche_Design/1998_Porsche_Design_911_JP_Jarier/IMG_8266.JPG",
+    hoverSrc: "public/assets/Images/Porsche_Design/1998_Porsche_Design_911_JP_Jarier/IMG_8237.JPG",
+    href: require("./watchModels/Porsche_Design/Porsche_Design_911_JP_Jarier_1998"),
+    specialCollectionItem: true,
+  },
   "Breitling Colt A53035 Chronograph": {
     brand: BrandsEnum.BREITLING,
     legend: "Breitling Colt A53035 Chronograph",

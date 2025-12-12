@@ -10,7 +10,7 @@ const ETA_251_265: Caliber = {
   description:
     "ETA superquartz chronograph based on the ETA 255.251. Very rare caliber with 1/100th measuraments. \
   Caliber with small seconds subdial at 6 o'clock. \n\
-  Chronograph with 1/100 ratrappant seconds using a right LCD screen. 12 hours subdial at 10 o'clock.\n\
+  Chronograph with 1/100 rattrapante seconds using a right LCD screen. 12 hours subdial at 10 o'clock.\n\
   The month day is displayed on the right LCD screen. The month is displayed on the left LCD screen when the crown is in the second position.",
 
   // UsefullLinks

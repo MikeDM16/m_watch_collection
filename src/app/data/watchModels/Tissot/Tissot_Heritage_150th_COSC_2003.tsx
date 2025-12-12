@@ -113,7 +113,7 @@ const details: WatchDetails = {
     },
 
     bracelet: {
-      material: "Lizard Leather",
+      material: "Crocodile Leather",
       buckleType: BuckleTypeEnum.STANDARD_BUCKLE,
       width: "20 mm",
       color: "Brown",

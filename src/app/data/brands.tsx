@@ -119,7 +119,7 @@ export const brandsDB: Brand[] = [
       year: 1972,
       details: "Founded in Stuttgart, Germany",
     },
-    displayBySeries: true,
+    displayBySeries: false,
     backgrounImages: [
       "public/assets/Images/Brands_Backgrounds/Porsche_Design_1_Background.JPG",
       "public/assets/Images/Brands_Backgrounds/Porsche_Design_2_Background.JPG",
