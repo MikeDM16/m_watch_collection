@@ -53,7 +53,6 @@ const details: WatchDetails = {
     "public/assets/Images/Tissot/2003_Tissot_150th_Heritage_884_8888/IMG_8206.JPG",
     "public/assets/Images/Tissot/2003_Tissot_150th_Heritage_884_8888/IMG_8207.JPG",
     "public/assets/Images/Tissot/2003_Tissot_150th_Heritage_884_8888/IMG_8208.JPG",
-    "public/assets/Images/Tissot/2003_Tissot_150th_Heritage_884_8888/IMG_8209.JPG",
 
     "public/assets/Images/Tissot/2003_Tissot_150th_Heritage_884_8888/IMG_8178.JPG",
     "public/assets/Images/Tissot/2003_Tissot_150th_Heritage_884_8888/IMG_8179.JPG",
@@ -69,6 +68,7 @@ const details: WatchDetails = {
     "public/assets/Images/Tissot/2003_Tissot_150th_Heritage_884_8888/IMG_8189.JPG",
     "public/assets/Images/Tissot/2003_Tissot_150th_Heritage_884_8888/IMG_8190.JPG",
 
+    "public/assets/Images/Tissot/2003_Tissot_150th_Heritage_884_8888/IMG_8209.JPG",
     "public/assets/Images/Tissot/2003_Tissot_150th_Heritage_884_8888/IMG_8210.JPG",
     "public/assets/Images/Tissot/2003_Tissot_150th_Heritage_884_8888/IMG_8211.JPG",
     "public/assets/Images/Tissot/2003_Tissot_150th_Heritage_884_8888/IMG_8212.JPG",
