@@ -1383,8 +1383,8 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     legend: "Tag Heuer S/EL Digital Chrono Senna",
     year: 1990,
     type: WatchTypeEnum.SPORTS,
-    srcImage: "public/assets/Images/Tag_Heuer/1990_Tag_Heuer_S_EL_Digital_Senna/IMG_1351.JPG",
-    hoverSrc: "public/assets/Images/Tag_Heuer/1990_Tag_Heuer_S_EL_Digital_Senna/IMG_1371.JPG",
+    srcImage: "public/assets/Images/Tag_Heuer/1990_Tag_Heuer_S_EL_Digital_Senna/IMG_8764.JPG",
+    hoverSrc: "public/assets/Images/Tag_Heuer/1990_Tag_Heuer_S_EL_Digital_Senna/IMG_8748.JPG",
     href: require("./watchModels/Tag_Heuer/Tag_Heuer_S-EL_Digitial_Senna_1990"),
     specialCollectionItem: true,
   },
@@ -1429,9 +1429,9 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     href: require("./watchModels/Raymond_Weil/Raymond_Weil_Tradition_Mecanique_7760_1990"),
     specialCollectionItem: true,
   },
-  " Breitling Chronomat Sextant 80350 Chronograph": {
+  "Breitling Chronomat Sextant 80350 Chronograph": {
     brand: BrandsEnum.BREITLING,
-    legend: " Breitling Chronomat Sextant 80350 Chronograph",
+    legend: "Breitling Chronomat Sextant 80350 Chronograph",
     year: 1989,
     type: WatchTypeEnum.SPORTS,
     srcImage:
@@ -1439,6 +1439,16 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     hoverSrc:
       "public/assets/Images/Breitling/1989_Breitling_Chronomat_Sextant_1270_22J/IMG_7814.JPG",
     href: require("./watchModels/Breitling/Breitling_Chronomat_Sextant_80350_1989"),
+    specialCollectionItem: false,
+  },
+  "Lorenz Classic Rattrapante Chronograph": {
+    brand: BrandsEnum.LORENZ,
+    legend: "Lorenz Classic Rattrapante Chronograph",
+    year: 1989,
+    type: WatchTypeEnum.DRESS,
+    srcImage: "public/assets/Images/Lorenz/1989_Lorenz_Classic_Rattrapante/IMG_8717.JPG",
+    hoverSrc: "public/assets/Images/Lorenz/1989_Lorenz_Classic_Rattrapante/IMG_8695.JPG",
+    href: require("./watchModels/Lorenz/Lorenz_Classic_Rattrapante_1989"),
     specialCollectionItem: false,
   },
 
@@ -2657,7 +2667,10 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     legend: "Orfina Pilot Chronograph Venus 170",
     year: 1945,
     type: WatchTypeEnum.CASUAL,
-    srcImage: "public/assets/Images/Orfina/1945_Orfina_Pilot_Chronograph_Venus_170/IMG_6348.JPG",
+    srcImage: "public/assets/Images/Orfina/1945_Orfina_Pilot_Chronograph_Venus_170/IMG_8400.JPG",
+
+    hoverSrc: "public/assets/Images/Orfina/1945_Orfina_Pilot_Chronograph_Venus_170/IMG_8402.JPG",
+
     href: require("./watchModels/Orfina/Orfina_Pilot_Chronograph_17J_1945"),
     specialCollectionItem: true,
   },
@@ -2708,9 +2721,9 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     href: require("./watchModels/Tissot/Tissot_Antimagnetic_Tuxedo_1943"),
     specialCollectionItem: true,
   },
-  " Universal Geneve Mécanique Cal. 262": {
+  "Universal Geneve Mécanique Cal. 262": {
     brand: BrandsEnum.UNIVERSAL_GENEVE,
-    legend: " Universal Geneve Mécanique Cal. 262",
+    legend: "Universal Geneve Mécanique Cal. 262",
     year: 1942,
     type: WatchTypeEnum.DRESS,
     srcImage: "public/assets/Images/Universal_Geneve/1942_Universal_Geneve_cal_262/IMG_2640.JPG",
