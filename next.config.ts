@@ -15,6 +15,18 @@ const nextConfig: NextConfig = {
   eslint: {
     dirs: ["src"],
   },
+
+  webpack: (config, { isServer }) => {
+    // Prevent webpack from trying to bundle Node.js modules for client-side code
+    if (!isServer) {
+      config.resolve.fallback = {
+        ...config.resolve.fallback,
+        fs: false,
+        path: false,
+      };
+    }
+    return config;
+  },
 };
 
 export default nextConfig;

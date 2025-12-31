@@ -20,10 +20,10 @@ const ETA_955_114: Caliber = {
   usefullLinks: {},
   // sliderImages
   sliderImages: [
-    "public/assets/Images/Movements/ETA/ETA_955_114/955_114_1.JPG",
-    "public/assets/Images/Movements/ETA/ETA_955_114/955_114_2.JPG",
-    "public/assets/Images/Movements/ETA/ETA_955_114/955_114_3.JPG",
-    "public/assets/Images/Movements/ETA/ETA_955_114/955_114_4.JPG",
+    "public/assets/Images/Movements/ETA/ETA_955_114/ETA_955_114_1.JPG",
+    "public/assets/Images/Movements/ETA/ETA_955_114/ETA_955_114_2.JPG",
+    "public/assets/Images/Movements/ETA/ETA_955_114/ETA_955_114_3.JPG",
+    "public/assets/Images/Movements/ETA/ETA_955_114/ETA_955_114_4.JPG",
   ],
   // Details
   details: {
