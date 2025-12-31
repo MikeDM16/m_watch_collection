@@ -99,6 +99,12 @@ const details: WatchDetails = {
     "public/assets/Images/Zenith/2005_Zenith_El_Primero_Port_Royal/IMG_3681.JPG",
   ],
 
+  saleReport: {
+    price: 2350,
+    date: "25/12/2025",
+    url: "https://www.catawiki.com/en/l/100052835",
+  },
+
   technicalData: {
     features: [featuresEnum.DATE, featuresEnum.AUTOMATIC_CHRONOGRAPH],
 

@@ -76,6 +76,12 @@ const details: WatchDetails = {
     "public/assets/Images/Omega/1950_Omega_Seamaster_Jumbo_CK2544/IMG_5777.JPG",
   ],
 
+  saleReport: {
+    price: 1100,
+    date: "26/12/2025",
+    url: "https://www.catawiki.com/en/l/100052954",
+  },
+
   technicalData: {
     features: [
       featuresEnum.MECHANICAL,

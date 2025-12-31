@@ -1318,6 +1318,17 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     href: require("./watchModels/Seiko/Seiko_6M25_Chronograph_1992"),
     specialCollectionItem: false,
   },
+  "Lorenz Rattrapante Quartz Chronograph": {
+    brand: BrandsEnum.LORENZ,
+    legend: "Lorenz Rattrapante Quartz Chronograph",
+    year: 1992,
+    type: WatchTypeEnum.DRESS,
+    srcImage: "public/assets/Images/Lorenz/1992_Lorenz_Classic_Rattrapante/IMG_8807.JPG",
+    hoverSrc: "public/assets/Images/Lorenz/1992_Lorenz_Classic_Rattrapante/IMG_8810.JPG",
+    href: require("./watchModels/Lorenz/Lorenz_Classic_Rattrapante_1992"),
+    specialCollectionItem: false,
+  },
+
   "Seiko 7T36 Moonphase Chrono - Age of Discoveries": {
     brand: BrandsEnum.SEIKO,
     legend: "Seiko 7T36 Moonphase Chrono - Age of Discoveries",
@@ -2112,14 +2123,24 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     specialCollectionItem: true,
   },
 
-  "Tissot PR 516 GL": {
+  "Tissot PR 516 GL  Cal. 794": {
     brand: BrandsEnum.TISSOT,
-    legend: "Tissot PR 516 GL",
+    legend: "Tissot PR 516 GL  Cal. 794",
     year: 1971,
     type: WatchTypeEnum.SPORTS,
     srcImage: "public/assets/Images/Tissot/1971_Tissot_PR_516_GL/IMG_5020.JPG",
     hoverSrc: "public/assets/Images/Tissot/1971_Tissot_PR_516_GL/IMG_5029.JPG",
     href: require("./watchModels/Tissot/Tissot_Seastar_PR516_GL_1971"),
+    specialCollectionItem: false,
+  },
+  "Tissot PR 516 GL Cal. 784": {
+    brand: BrandsEnum.TISSOT,
+    legend: "Tissot PR 516 GL Cal. 784",
+    year: 1971,
+    type: WatchTypeEnum.SPORTS,
+    srcImage: "public/assets/Images/Tissot/1971_Tissot_PR_516_GL_784-2/IMG_8862.JPG",
+    hoverSrc: "public/assets/Images/Tissot/1971_Tissot_PR_516_GL_784-2/IMG_8863.JPG",
+    href: require("./watchModels/Tissot/Tissot_Seastar_PR516_GL_784_1971"),
     specialCollectionItem: false,
   },
   "Kelton M24 Sub-Dive": {

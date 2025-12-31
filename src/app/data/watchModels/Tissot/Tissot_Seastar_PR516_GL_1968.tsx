@@ -17,7 +17,7 @@ import { WatchDetails } from "../../watchDetails";
 import { TissotBrandSeries } from "./TissotBrandSeries";
 
 const details: WatchDetails = {
-  title: "1968 Tissot Seastar PR 516 GL",
+  title: "1968 Tissot Seastar PR 516 GL Cal. 794",
   sliderImages: [
     "public/assets/Images/Tissot/1968_Tissot_Seastar_PR516_GL/IMG_4156.JPG",
     "public/assets/Images/Tissot/1968_Tissot_Seastar_PR516_GL/IMG_4157.JPG",

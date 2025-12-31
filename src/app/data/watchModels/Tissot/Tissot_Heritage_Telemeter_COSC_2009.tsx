@@ -86,7 +86,7 @@ const details: WatchDetails = {
 
   saleReport: {
     price: 1600,
-    date: "23/12/2025",
+    date: "01/12/2025",
     url: "https://www.catawiki.com/en/l/99464212",
   },
 

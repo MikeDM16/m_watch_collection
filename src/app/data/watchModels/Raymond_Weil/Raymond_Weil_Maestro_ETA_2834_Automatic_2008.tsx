@@ -65,6 +65,12 @@ const details: WatchDetails = {
     "public/assets/Images/Raymond_Weil/2008_Raymond_Weil_Maestro_ETA_2834/IMG_8029.JPG",
   ],
 
+  saleReport: {
+    price: 400,
+    date: "19/12/2025",
+    url: "https://www.catawiki.com/en/l/99935406",
+  },
+
   technicalData: {
     features: [featuresEnum.DATE, featuresEnum.AUTOMATIC],
 

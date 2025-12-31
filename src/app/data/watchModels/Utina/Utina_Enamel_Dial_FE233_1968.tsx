@@ -56,6 +56,12 @@ const details: WatchDetails = {
     "public/assets/Images/Utina/1968_Utina_Enamel_dial_FE233/IMG_8079.JPG",
   ],
 
+  saleReport: {
+    price: 130,
+    date: "23/12/2025",
+    url: "https://www.catawiki.com/en/l/99935620",
+  },
+
   technicalData: {
     features: [featuresEnum.SMALL_SECONDS, featuresEnum.MECHANICAL],
 

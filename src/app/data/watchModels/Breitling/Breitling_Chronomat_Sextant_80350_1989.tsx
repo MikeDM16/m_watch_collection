@@ -86,6 +86,12 @@ const details: WatchDetails = {
     "public/assets/Images/Breitling/1989_Breitling_Chronomat_Sextant_1270_22J/IMG_7831.JPG",
   ],
 
+  saleReport: {
+    price: 1600,
+    date: "10/12/2025",
+    url: "https://www.catawiki.com/en/l/99757036",
+  },
+
   technicalData: {
     features: [featuresEnum.DATE, featuresEnum.CHRONOGRAPH, featuresEnum.TACHYMETER],
 
