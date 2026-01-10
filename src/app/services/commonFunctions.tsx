@@ -12,7 +12,8 @@ function requireNodeModule(moduleName: string) {
   const mod: any = typeof module !== "undefined" ? module : null;
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const req: any = typeof require !== "undefined" ? require : null;
-  return moduleName;
+  console.log(`${mod} - ${req} - ${moduleName}`);
+  return req(moduleName);
   /*
   
   if (mod && mod.require) {
@@ -48,17 +49,18 @@ export function getLocalImagePath(imagePath: string): string {
 
   // Dynamic import for Node.js modules
   // Using helper function to prevent webpack static analysis
-  const path = requireNodeModule("path") as typeof import("path");
+  // const path = requireNodeModule("path") as typeof import("path");
 
   // Base path to the MWatchCollectionResources repository
   const basePath = "C:\\Users\\migue\\Documentos\\GitHub\\MWatchCollectionResources";
 
+  console.log(`${imagePath}`);
   // The imagePath from JSON already includes "public/assets/Images/..."
   // path.join will handle path separators correctly for the current OS
-  const fullPath = path.join(basePath, imagePath);
+  // const fullPath = path.join(basePath, imagePath);
 
   // Normalize the path and return as absolute Windows path
-  return path.normalize(fullPath);
+  return basePath; // path.normalize(fullPath);
 }
 
 /**
