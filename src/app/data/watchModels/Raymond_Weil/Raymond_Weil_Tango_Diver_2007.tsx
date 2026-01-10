@@ -75,8 +75,8 @@ const details: WatchDetails = {
 
     information: {
       brand: BrandsEnum.RAYMOND_WEIL,
-      series: RaymondWeilBrandSeries.TANGO,
-      catalogueReference: "5563",
+      series: RaymondWeilBrandSeries.VINTAGE_SERIES,
+      catalogueReference: "Tango Diver - 5563",
       productionYear: "1988",
       movementType: MovementWatchTypeEnum.QUARTZ,
       style: WatchStyleEnum.DIVE,

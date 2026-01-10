@@ -17,7 +17,7 @@ import { WatchDetails } from "../../watchDetails";
 import { EberhardBrandSeries } from "./EberhardBrandSeries";
 
 const details: WatchDetails = {
-  title: "1980 Eberhard 32001 Tricompax Moon Phase Valjoux 88",
+  title: "1980 Eberhard 32001 Tricompax Moon Phase Valjoux 88 18K Gold",
   sliderImages: [
     "public/assets/Images/Eberhard/1980_Eberhard_Ref_32001_TriCompax_Moon_Phase/IMG_5682.JPG",
     "public/assets/Images/Eberhard/1980_Eberhard_Ref_32001_TriCompax_Moon_Phase/IMG_5685.JPG",
@@ -87,7 +87,7 @@ const details: WatchDetails = {
     case: {
       diameter: "38 mm",
       thickness: "13 mm",
-      material: "Solid Gold 18K (0.750)",
+      material: "Solid Yellow Gold 18K (0.750)",
       waterResistance: WaterResistanceEnum.WATER_RESISTANT,
       finishingDetails: "Polished",
       bezel: "Tachymeter bezel",

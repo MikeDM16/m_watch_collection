@@ -12,6 +12,7 @@ import { MovementWatchTypeEnum } from "@/app/enums/movementWatchTypeEnum";
 import { WatchStyleEnum } from "@/app/enums/watchStyleEnum";
 import { WaterResistanceEnum } from "@/app/enums/waterResistanceEnum";
 
+import { MovementsDataDB } from "../../movementsData";
 import { WatchDetails } from "../../watchDetails";
 
 const details: WatchDetails = {
@@ -88,20 +89,7 @@ const details: WatchDetails = {
       color: "Brown",
     },
 
-    movement: {
-      title: "SpaceLine",
-      description: "",
-      usefullLinks: {},
-      sliderImages: ["public/assets/Images/Pryngeps/1990_Pryngeps_Regolo_II/spaceline_cal.JPG"],
-      details: {
-        manufacturer: "SpaceLine (Swiss Made)",
-        modelReference: "-",
-        type: "Quartz",
-        battery: "399 / SR927SW",
-        jewels: "7 /Seven) Jewels",
-        functions: "Tri-Compax (Month, Day, Date), Hours, Minutes, Seconds",
-      },
-    },
+    movement: MovementsDataDB.FE_TRIPLE_CALENDAR_5J,
   },
 };
 

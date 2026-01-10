@@ -71,6 +71,12 @@ const details: WatchDetails = {
     "public/assets/Images/Omega/1967_Omega_Constellation_COSC_153_020/IMG_7458.JPG",
   ],
 
+  saleReport: {
+    price: 450,
+    date: "26/12/2025",
+    url: "https://www.catawiki.com/en/l/100011421",
+  },
+
   technicalData: {
     features: [
       featuresEnum.MECHANICAL,

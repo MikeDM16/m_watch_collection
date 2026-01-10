@@ -12,7 +12,9 @@ import { MovementWatchTypeEnum } from "@/app/enums/movementWatchTypeEnum";
 import { WatchStyleEnum } from "@/app/enums/watchStyleEnum";
 import { WaterResistanceEnum } from "@/app/enums/waterResistanceEnum";
 
+import { MovementsDataDB } from "../../movementsData";
 import { WatchDetails } from "../../watchDetails";
+import { RaymondWeilBrandSeries } from "./RaymondWeilBrandSeries";
 
 const details: WatchDetails = {
   title: "1988 Raymond Weil 2809 Automatic",
@@ -56,8 +58,8 @@ const details: WatchDetails = {
 
     information: {
       brand: BrandsEnum.RAYMOND_WEIL,
-      series: "Automatic",
-      catalogueReference: "2809",
+      series: RaymondWeilBrandSeries.VINTAGE_SERIES,
+      catalogueReference: "Automatic - 2809",
       productionYear: "1988",
       movementType: MovementWatchTypeEnum.MECHANIQUE,
       style: WatchStyleEnum.DRESS,
@@ -90,29 +92,7 @@ const details: WatchDetails = {
       color: "Black",
     },
 
-    movement: {
-      title: "ETA 2892-2",
-      description:
-        "High quality, extremely compact ETA automatic movement. Adjusted by Raymond Weil. Bi-diretional winding. \n \n" +
-        "It has been in production since 1983 until around 2000.",
-      usefullLinks: {
-        "Technical Information from ETA": "../Files/774_ETA 2892-2NEWSmaller.pdf",
-      },
-      sliderImages: [
-        "public/assets/Images/Raymond_Weil/1988_Raymond_Weil_2809_Auto/ETA_2892A2_1.PNG",
-        "public/assets/Images/Raymond_Weil/1988_Raymond_Weil_2809_Auto/ETA_2892A2_2.PNG",
-        "public/assets/Images/Raymond_Weil/1988_Raymond_Weil_2809_Auto/ETA_2892A2_3.PNG",
-      ],
-      details: {
-        manufacturer: "ETA (Swiss Made)",
-        modelReference: "2892",
-        type: "Manual wind",
-        frequency: "28800 A/h",
-        jewels: "21 (Twenty-One) Jewels ",
-        reserve: "42 Hours",
-        functions: "Day, Date, Hours, Minutes, Sweep Seconds, bi-directional winding",
-      },
-    },
+    movement: MovementsDataDB.ETA_2892_2_21J,
   },
 };
 

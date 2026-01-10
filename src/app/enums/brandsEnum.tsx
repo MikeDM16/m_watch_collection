@@ -16,6 +16,7 @@ export const BrandsEnum = {
   CORTICIMA: "Corticima",
   CRISTAL_WATCH: "Crystal Watch",
   DOXA: "Doxa",
+  DUBOIS: "DuBois Et Fils",
   EBERHARD: "Eberhard",
   ELETTA: "Eletta",
   EMES: "Emes",

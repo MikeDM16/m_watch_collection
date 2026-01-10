@@ -872,6 +872,16 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     specialCollectionItem: false,
   },
 
+  "DuBois Grand Prix D'Europe Formula 1 - 1999": {
+    brand: BrandsEnum.DUBOIS,
+    legend: "DuBois Grand Prix D'Europe Formula 1 - 1999",
+    year: 1999,
+    type: WatchTypeEnum.DIVE,
+    srcImage: "public/assets/Images/DuBois/1999_DuBois_Gran_Prix_Europe_F1_7750/IMG_9076.JPG",
+    hoverSrc: "public/assets/Images/DuBois/1999_DuBois_Gran_Prix_Europe_F1_7750/IMG_9098.JPG",
+    href: require("./watchModels/DuBois/DuBois_Gran_Prix_Europe_F1_1999"),
+    specialCollectionItem: true,
+  },
   "Tag Heuer Professional 2000 Quartz": {
     brand: BrandsEnum.TAG_HEUER,
     legend: "Tag Heuer Professional 2000 Quartz",
@@ -1328,7 +1338,28 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     href: require("./watchModels/Lorenz/Lorenz_Classic_Rattrapante_1992"),
     specialCollectionItem: false,
   },
-
+  "Raymond Weil Tradition Mécanique Automatic 2892 21 Jewels": {
+    brand: BrandsEnum.RAYMOND_WEIL,
+    legend: "Raymond Weil Tradition Mécanique Automatic 2892 21 Jewels",
+    year: 1992,
+    type: WatchTypeEnum.DRESS,
+    srcImage:
+      "public/assets/Images/Raymond_Weil/1992_Raymond_Weil_Tradition_Mecanique_2892/IMG_9267.JPG",
+    hoverSrc:
+      "public/assets/Images/Raymond_Weil/1992_Raymond_Weil_Tradition_Mecanique_2892/IMG_9288.JPG",
+    href: require("./watchModels/Raymond_Weil/Raymond_Weil_Tradition_Mecanique_2892_1992"),
+    specialCollectionItem: false,
+  },
+  "Pryngeps Regolo Triple Calendar": {
+    brand: BrandsEnum.PRYNGEPS,
+    legend: "Pryngeps Regolo Triple Calendar",
+    year: 1992,
+    type: WatchTypeEnum.CASUAL,
+    srcImage: "public/assets/Images/Pryngeps/1992_Pryngeps_Regolo_Triple_Calendar/IMG_9035.JPG",
+    hoverSrc: "public/assets/Images/Pryngeps/1992_Pryngeps_Regolo_Triple_Calendar/IMG_9060.JPG",
+    href: require("./watchModels/Pryngeps/Pryngeps_Regolo_Triple_Calendar_1992"),
+    specialCollectionItem: false,
+  },
   "Seiko 7T36 Moonphase Chrono - Age of Discoveries": {
     brand: BrandsEnum.SEIKO,
     legend: "Seiko 7T36 Moonphase Chrono - Age of Discoveries",
@@ -1349,6 +1380,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     href: require("./watchModels/Breitling/Breitling_Chronomat_J13047X_1991"),
     specialCollectionItem: true,
   },
+
   "Pryngeps Regolo 1467": {
     brand: BrandsEnum.PRYNGEPS,
     legend: "Pryngeps Regolo 1467",
@@ -1427,7 +1459,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     type: WatchTypeEnum.DRESS,
     srcImage: "public/assets/Images/Raymond_Weil/1990_Raymond_Weil_7760_A290703/IMG_2222.JPG",
     hoverSrc: "public/assets/Images/Raymond_Weil/1990_Raymond_Weil_7760_A290703/IMG_2253.JPG",
-    href: require("./watchModels/Raymond_Weil/Raymond_Weil_Tradition_Mecanique_7760_1990_A290703"),
+    href: require("./watchModels/Raymond_Weil/Raymond_Weil_Tradition_Mecanique_7760_A290703_1990"),
     specialCollectionItem: false,
   },
   "Raymond Weil Tradition Mécanique": {
@@ -2516,6 +2548,16 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     hoverSrc: "public/assets/Images/Tissot/1954_Tissot_Visodate/IMG_3376.JPG",
     href: require("./watchModels/Tissot/Tissot_Visodate_1955"),
     specialCollectionItem: false,
+  },
+  " Omega Trésor Honeycomb Cal. 266 18K Gold": {
+    brand: BrandsEnum.OMEGA,
+    legend: " Omega Trésor Honeycomb Cal. 266 18K Gold",
+    year: 1952,
+    type: WatchTypeEnum.CASUAL,
+    srcImage: "public/assets/Images/Omega/1952_Omega_Tresor_Honeycomb_266/IMG_9199.JPG",
+    hoverSrc: "public/assets/Images/Omega/1952_Omega_Tresor_Honeycomb_266/IMG_9192.JPG",
+    href: require("./watchModels/Omega/Omega_Trésor_Cal_266_1952"),
+    specialCollectionItem: true,
   },
   "Omega StayBrite Honeycomb": {
     brand: BrandsEnum.OMEGA,

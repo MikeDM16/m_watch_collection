@@ -65,8 +65,8 @@ const details: WatchDetails = {
 
     information: {
       brand: BrandsEnum.RAYMOND_WEIL,
-      series: RaymondWeilBrandSeries.SAXO,
-      catalogueReference: "9520",
+      series: RaymondWeilBrandSeries.VINTAGE_SERIES,
+      catalogueReference: "Saxo - 9520",
       productionYear: "2007",
       movementType: MovementWatchTypeEnum.QUARTZ,
       style: WatchStyleEnum.DRESS,

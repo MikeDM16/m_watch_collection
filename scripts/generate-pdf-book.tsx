@@ -79,14 +79,14 @@ async function generatePDFBook() {
     });
     currentPage++; // Brand header page
 
-    // Each model has 2 pages (title + details)
+    // Each model has 1 page (combined title and details)
     brand.models.forEach((model) => {
       tocEntries.push({
         title: model.href.default.title,
         pageNumber: currentPage,
         level: 2,
       });
-      currentPage += 2; // Title page + details page
+      currentPage += 1; // Single combined page
     });
   });
 

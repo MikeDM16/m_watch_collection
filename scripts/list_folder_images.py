@@ -46,6 +46,6 @@ def generate_image_array(brand_name, folder_path):
     print(f"\n// Found {len(image_files)} image(s)")
 
 if __name__ == "__main__":
-    folder_path = "c:/Users/migue/Downloads/t/1992_Lorenz_Classic_Rattrapante"
-    brand_name = "Lorenz"
+    folder_path = "c:/Users/migue/Downloads/t/1952_Omega_Tresor_Honeycomb_266"
+    brand_name = "Omega"
     generate_image_array(brand_name, folder_path)

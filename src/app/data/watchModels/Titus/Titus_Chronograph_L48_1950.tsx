@@ -90,7 +90,7 @@ const details: WatchDetails = {
     case: {
       diameter: "35 mm",
       thickness: "12 mm",
-      material: "Solid Gold 18K (0.750)",
+      material: "Solid Rose Gold 18K (0.750)",
       waterResistance: WaterResistanceEnum.WATER_RESISTANT,
       finishingDetails: "Polished",
       bezel: "Tachymeter bezel",

@@ -67,6 +67,13 @@ const details: WatchDetails = {
     "public/assets/Images/Tissot/1971_Tissot_PR_516_GL_784-2/IMG_8888.JPG",
     "public/assets/Images/Tissot/1971_Tissot_PR_516_GL_784-2/IMG_8889.JPG",
   ],
+
+  saleReport: {
+    price: 200,
+    date: "09/01/2026",
+    url: "https://www.catawiki.com/en/l/100398990",
+  },
+
   technicalData: {
     features: [
       featuresEnum.DATE,

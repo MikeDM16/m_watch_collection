@@ -12,14 +12,16 @@ function requireNodeModule(moduleName: string) {
   const mod: any = typeof module !== "undefined" ? module : null;
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const req: any = typeof require !== "undefined" ? require : null;
-
+  return moduleName;
+  /*
+  
   if (mod && mod.require) {
     return mod.require(moduleName);
   }
   if (req) {
     return req(moduleName);
   }
-  throw new Error(`Cannot load module '${moduleName}': require is not available`);
+  throw new Error(`Cannot load module '${moduleName}': require is not available`);*/
 }
 
 export function getExternalResource(image_url: string) {

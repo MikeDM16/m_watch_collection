@@ -75,8 +75,8 @@ const details: WatchDetails = {
 
     information: {
       brand: BrandsEnum.RAYMOND_WEIL,
-      series: RaymondWeilBrandSeries.AMADEUS_200,
-      catalogueReference: "7713",
+      series: RaymondWeilBrandSeries.VINTAGE_SERIES,
+      catalogueReference: "Amadeus 200 - 7713",
       productionYear: "2005",
       movementType: MovementWatchTypeEnum.AUTOMATIC,
       style: WatchStyleEnum.DRESS,

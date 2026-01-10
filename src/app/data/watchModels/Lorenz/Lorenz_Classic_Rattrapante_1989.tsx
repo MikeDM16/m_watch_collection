@@ -60,6 +60,12 @@ const details: WatchDetails = {
     "public/assets/Images/Lorenz/1989_Lorenz_Classic_Rattrapante/IMG_8736.JPG",
   ],
 
+  saleReport: {
+    price: 262,
+    date: "05/02/2026",
+    url: "https://www.catawiki.com/l/100309951",
+  },
+
   technicalData: {
     features: [featuresEnum.DATE, featuresEnum.CHRONOGRAPH, featuresEnum.WR_50_METERS],
 

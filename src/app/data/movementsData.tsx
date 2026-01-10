@@ -23,6 +23,7 @@ import ETA_2783 from "./movements/ETA/ETA_2783";
 import ETA_2824 from "./movements/ETA/ETA_2824";
 import ETA_2834 from "./movements/ETA/ETA_2834";
 import ETA_2836 from "./movements/ETA/ETA_2836";
+import ETA_2892_2_21J from "./movements/ETA/ETA_2892_21J";
 import ETA_2894_2_37J from "./movements/ETA/ETA_2894_2_37J";
 import ETA_2895_1_30J from "./movements/ETA/ETA_2895_1_30J";
 import ETA_2895_2_27J from "./movements/ETA/ETA_2895_2_27J";
@@ -37,6 +38,7 @@ import ETA_Valjoux_7760_17 from "./movements/ETA/ETA_Valjoux_7760_17J";
 import EXCELSIOR_PARK_40_68_17J from "./movements/Excelsior_Park/Excelsior_Park_40_68_17J";
 import FE_140 from "./movements/FE/FE_140_17J";
 import FE_233_69 from "./movements/FE/FE_233_69_17J";
+import FE_TRIPLE_CALENDAR_5J from "./movements/FE/FE_Triple_Calendar_5J";
 import FHF_96_4 from "./movements/FHF/FHF_96_4_17J";
 import FHF_974 from "./movements/FHF/FHF_974_17J";
 import FORTIS_AV_21J from "./movements/Fortis/Fortis_AV_21_jewels";
@@ -49,6 +51,7 @@ import MIYOTA_OS10 from "./movements/Miyota/OS10";
 import MIYOTA_OS60 from "./movements/Miyota/OS60";
 import OMEGA_30T2 from "./movements/Omega/Omega_30T2_15J";
 import OMEGA_265 from "./movements/Omega/Omega_265_15J";
+import OMEGA_266_17J from "./movements/Omega/Omega_266_17J";
 import OMEGA_267 from "./movements/Omega/Omega_267_17J";
 import OMEGA_268 from "./movements/Omega/Omega_268_17J";
 import OMEGA_410 from "./movements/Omega/Omega_410_17J";
@@ -166,6 +169,7 @@ export const MovementsDataDB: Record<string, Caliber> = {
   ETA_2824: ETA_2824,
   ETA_2836: ETA_2836,
   ETA_2834: ETA_2834,
+  ETA_2892_2_21J: ETA_2892_2_21J,
   ETA_2894_2: ETA_2894_2_37J,
   ETA_2895_1: ETA_2895_1_30J,
   ETA_2895_2: ETA_2895_2_27J,
@@ -185,6 +189,7 @@ export const MovementsDataDB: Record<string, Caliber> = {
   FE_140: FE_140,
   FE_233: FE_233_69,
   FE_233_69: FE_233_69,
+  FE_TRIPLE_CALENDAR_5J: FE_TRIPLE_CALENDAR_5J,
 
   FHF_96_4: FHF_96_4,
   FHF_974: FHF_974,
@@ -221,6 +226,7 @@ export const MovementsDataDB: Record<string, Caliber> = {
   OMEGA_1670: OMEGA_1670,
   OMEGA_1675: OMEGA_1675,
   OMEGA_265: OMEGA_265,
+  OMEGA_266_17J: OMEGA_266_17J,
   OMEGA_267: OMEGA_267,
   OMEGA_268: OMEGA_268,
   OMEGA_30T2: OMEGA_30T2,

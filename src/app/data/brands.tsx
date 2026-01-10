@@ -154,7 +154,7 @@ export const brandsDB: Brand[] = [
       year: 1976,
       details: "Founded in Geneva, Switzerland",
     },
-    displayBySeries: false,
+    displayBySeries: true,
     backgrounImages: [
       "public/assets/Images/Brands_Backgrounds/Raymond_Weil_1_Background.JPG",
       "public/assets/Images/Brands_Backgrounds/Raymond_Weil_2_Background.JPG",
@@ -208,7 +208,6 @@ export const brandsDB: Brand[] = [
       details: "Founded in Milan, Italy",
     },
   },
-
   {
     name: BrandsEnum.SOLVIL_ET_TITUS,
     logoImg: "public/assets/Images/Brands_Logos/titus_logo.PNG",
@@ -221,6 +220,7 @@ export const brandsDB: Brand[] = [
       details: "Founded in La Chaux-de-Fonds, Switzerland",
     },
   },
+
   /*{
     name: BrandsEnum.HEUER,
     logoImg: "public/assets/Images/Brands_Logos/heuer_logo.PNG",
@@ -370,6 +370,19 @@ export const brandsDB: Brand[] = [
     name: BrandsEnum.DOXA,
     logoImg: "public/assets/Images/Brands_Logos/doxa_logo.PNG",
     displayOrder: undefined,
+  },
+
+  {
+    name: BrandsEnum.DUBOIS,
+    logoImg: "public/assets/Images/Brands_Logos/dubois_logo.PNG",
+    displayOrder: 32,
+    website: "https://duboisfils.ch/en/watches",
+    description:
+      "DuBois et fils is a Swiss luxury watch brand. It is recognized as Switzerland's oldest watch factory, continuing uninterrupted production since its founding",
+    foundedInformation: {
+      year: 1751,
+      details: "Founded in Le Locle, Switzerland",
+    },
   },
   {
     name: BrandsEnum.AMER,
