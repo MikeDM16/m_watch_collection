@@ -879,7 +879,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     type: WatchTypeEnum.DIVE,
     srcImage: "public/assets/Images/DuBois/1999_DuBois_Gran_Prix_Europe_F1_7750/IMG_9076.JPG",
     hoverSrc: "public/assets/Images/DuBois/1999_DuBois_Gran_Prix_Europe_F1_7750/IMG_9098.JPG",
-    href: require("./watchModels/DuBois/DuBois_Gran_Prix_Europe_F1_1999"),
+    href: require("./watchModels/DuBois_Et_Fils/DuBois_Gran_Prix_Europe_F1_1999"),
     specialCollectionItem: true,
   },
   "Tag Heuer Professional 2000 Quartz": {
