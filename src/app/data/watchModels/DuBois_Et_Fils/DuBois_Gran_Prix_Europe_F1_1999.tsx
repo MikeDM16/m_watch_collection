@@ -45,9 +45,11 @@ const details: WatchDetails = {
     "public/assets/Images/DuBois/1999_DuBois_Gran_Prix_Europe_F1_7750/IMG_9087.JPG",
     "public/assets/Images/DuBois/1999_DuBois_Gran_Prix_Europe_F1_7750/IMG_9088.JPG",
 
-    // "public/assets/Images/DuBois/1999_DuBois_Gran_Prix_Europe_F1_7750/IMG_9104.JPG",
-    // "public/assets/Images/DuBois/1999_DuBois_Gran_Prix_Europe_F1_7750/IMG_9105.JPG",
-    // "public/assets/Images/DuBois/1999_DuBois_Gran_Prix_Europe_F1_7750/IMG_9107.JPG",
+    "public/assets/Images/DuBois/1999_DuBois_Gran_Prix_Europe_F1_7750/IMG_0007_1.JPG",
+    "public/assets/Images/DuBois/1999_DuBois_Gran_Prix_Europe_F1_7750/IMG_0010.JPG",
+    "public/assets/Images/DuBois/1999_DuBois_Gran_Prix_Europe_F1_7750/IMG_0011.JPG",
+    "public/assets/Images/DuBois/1999_DuBois_Gran_Prix_Europe_F1_7750/IMG_0012_1.JPG",
+    "public/assets/Images/DuBois/1999_DuBois_Gran_Prix_Europe_F1_7750/IMG_0013.JPG",
 
     "public/assets/Images/DuBois/1999_DuBois_Gran_Prix_Europe_F1_7750/IMG_9095.JPG",
     "public/assets/Images/DuBois/1999_DuBois_Gran_Prix_Europe_F1_7750/IMG_9096.JPG",
@@ -59,6 +61,12 @@ const details: WatchDetails = {
     "public/assets/Images/DuBois/1999_DuBois_Gran_Prix_Europe_F1_7750/IMG_9093.JPG",
     "public/assets/Images/DuBois/1999_DuBois_Gran_Prix_Europe_F1_7750/IMG_9094.JPG",
   ],
+
+  saleReport: {
+    price: 765,
+    date: "25/01/2026",
+    url: "https://www.catawiki.com/en/l/100887530",
+  },
 
   technicalData: {
     features: [featuresEnum.DATE, featuresEnum.AUTOMATIC_CHRONOGRAPH, featuresEnum.WR_50_METERS],

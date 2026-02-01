@@ -60,6 +60,12 @@ const details: WatchDetails = {
     "public/assets/Images/Pryngeps/1992_Pryngeps_Regolo_Triple_Calendar/IMG_9070.JPG",
   ],
 
+  saleReport: {
+    price: 120,
+    date: "17/01/2026",
+    url: "https://www.catawiki.com/en/l/100608086",
+  },
+
   technicalData: {
     features: [
       featuresEnum.TRI_COMPAX_CALENDAR,

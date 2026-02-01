@@ -13,7 +13,6 @@ function requireNodeModule(moduleName: string) {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const req: any = typeof require !== "undefined" ? require : null;
   console.log(`${mod} - ${req} - ${moduleName}`);
-  return req(moduleName);
   /*
   
   if (mod && mod.require) {
