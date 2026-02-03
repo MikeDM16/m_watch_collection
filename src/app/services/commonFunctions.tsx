@@ -1,29 +1,5 @@
 import { IconType } from "react-icons";
 
-/**
- * Helper function to dynamically require Node.js modules
- * This pattern prevents webpack from statically analyzing the require calls
- * Only call this in Node.js environment (checked before calling)
- */
-function requireNodeModule(moduleName: string) {
-  // Try to get require from various sources
-  // Using bracket notation and variable access to prevent webpack static analysis
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const mod: any = typeof module !== "undefined" ? module : null;
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const req: any = typeof require !== "undefined" ? require : null;
-  console.log(`${mod} - ${req} - ${moduleName}`);
-  /*
-  
-  if (mod && mod.require) {
-    return mod.require(moduleName);
-  }
-  if (req) {
-    return req(moduleName);
-  }
-  throw new Error(`Cannot load module '${moduleName}': require is not available`);*/
-}
-
 export function getExternalResource(image_url: string) {
   //const url_begin = "https://github.com/MikeDM16/MWatchCollectionResources/raw/master";
   const base_url = "https://raw.githubusercontent.com/MikeDM16/MWatchCollectionResources/master";
@@ -38,28 +14,8 @@ export function getExternalResource(image_url: string) {
  * @returns Absolute local file path
  */
 export function getLocalImagePath(imagePath: string): string {
-  // Only work in Node.js environment (not browser)
-  if (typeof window !== "undefined") {
-    throw new Error(
-      "getLocalImagePath() is only available in Node.js environment. " +
-        "This function cannot be used in browser.",
-    );
-  }
-
-  // Dynamic import for Node.js modules
-  // Using helper function to prevent webpack static analysis
-  // const path = requireNodeModule("path") as typeof import("path");
-
-  // Base path to the MWatchCollectionResources repository
-  const basePath = "C:\\Users\\migue\\Documentos\\GitHub\\MWatchCollectionResources";
-
-  console.log(`${imagePath}`);
-  // The imagePath from JSON already includes "public/assets/Images/..."
-  // path.join will handle path separators correctly for the current OS
-  // const fullPath = path.join(basePath, imagePath);
-
-  // Normalize the path and return as absolute Windows path
-  return basePath; // path.normalize(fullPath);
+  // TODO
+  return imagePath;
 }
 
 /**
@@ -69,42 +25,8 @@ export function getLocalImagePath(imagePath: string): string {
  * @returns Data URI string (e.g., "data:image/jpeg;base64,...")
  */
 export function getLocalImageAsDataUri(imagePath: string): string {
-  // Only work in Node.js environment (not browser)
-  if (typeof window !== "undefined") {
-    throw new Error(
-      "getLocalImageAsDataUri() is only available in Node.js environment. " +
-        "This function cannot be used in browser.",
-    );
-  }
-
-  // Dynamic import for Node.js modules
-  // Using helper function to prevent webpack static analysis
-  const fs = requireNodeModule("fs") as typeof import("fs");
-  const path = requireNodeModule("path") as typeof import("path");
-
-  const filePath = getLocalImagePath(imagePath);
-
-  try {
-    // Read the file as a buffer
-    const imageBuffer = fs.readFileSync(filePath);
-
-    // Determine MIME type from file extension
-    const ext = path.extname(filePath).toLowerCase();
-    let mimeType = "image/jpeg"; // default
-    if (ext === ".png") mimeType = "image/png";
-    else if (ext === ".jpg" || ext === ".jpeg") mimeType = "image/jpeg";
-    else if (ext === ".gif") mimeType = "image/gif";
-    else if (ext === ".webp") mimeType = "image/webp";
-
-    // Convert buffer to base64
-    const base64 = imageBuffer.toString("base64");
-
-    // Return data URI
-    return `data:${mimeType};base64,${base64}`;
-  } catch (error) {
-    console.error(`Failed to read image file: ${filePath}`, error);
-    throw error;
-  }
+  // TODO
+  return imagePath;
 }
 
 export function getSaleReportImage(baseImgSrc: string): string {

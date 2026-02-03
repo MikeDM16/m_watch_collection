@@ -105,7 +105,7 @@ const details: WatchDetails = {
     case: {
       diameter: "36 mm",
       thickness: "8 mm",
-      material: "Solid Yellow Gold 18K (0.750) (15g)",
+      material: "Solid Yellow Gold 18K (0.750) (13g)",
       waterResistance: WaterResistanceEnum.WATER_RESISTANT,
       finishingDetails: "Polished",
       bezel: "Without bezel",

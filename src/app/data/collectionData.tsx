@@ -1370,9 +1370,9 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     href: require("./watchModels/Seiko/Seiko_7T32_7410_Moonphase_1991"),
     specialCollectionItem: false,
   },
-  "Breitling Chronomat J13047x White Gold": {
+  "Breitling Chronomat J13047x 18K White Gold": {
     brand: BrandsEnum.BREITLING,
-    legend: "Breitling Chronomat J13047x White Gold",
+    legend: "Breitling Chronomat J13047x 18K White Gold",
     year: 1991,
     type: WatchTypeEnum.CASUAL,
     srcImage: "public/assets/Images/Breitling/1991_Breitling_J13047X_018/IMG_3011.JPG",
@@ -1520,8 +1520,8 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     legend: "Omega Olympia Winter Olympics Calgary And Seoul Limited 457/1000",
     year: 1988,
     type: WatchTypeEnum.SPORTS,
-    srcImage: "public/assets/Images/Omega/1988_Polaris_Calgary_Seoul_386_1232_1000/IMG_8702.JPG",
-    hoverSrc: "public/assets/Images/Omega/1988_Polaris_Calgary_Seoul_386_1232_1000/IMG_8740.JPG",
+    srcImage: "public/assets/Images/Omega/1988_Polaris_Calgary_Seoul_386_1232_1000/IMG_0128.JPG",
+    hoverSrc: "public/assets/Images/Omega/1988_Polaris_Calgary_Seoul_386_1232_1000/IMG_0112.JPG",
     href: require("./watchModels/Omega/Omega_Olympia_Calgary_Seoul_1988"),
     specialCollectionItem: true,
   },
@@ -1676,9 +1676,9 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     href: require("./watchModels/Omega/Omega_DeVille_1910077_Cal_1365_1982"),
     specialCollectionItem: false,
   },
-  "Eberhard 32001 Tricompax Moon Phase Valjoux 88": {
+  "Eberhard 32001 Tricompax Moon Phase Valjoux 88 18K Gold": {
     brand: BrandsEnum.EBERHARD,
-    legend: "Eberhard 32001 Tricompax Moon Phase Valjoux 88",
+    legend: "Eberhard 32001 Tricompax Moon Phase Valjoux 88 18K Gold",
     year: 1980,
     type: WatchTypeEnum.DRESS,
     srcImage:
