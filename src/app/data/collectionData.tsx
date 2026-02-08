@@ -813,6 +813,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     href: require("./watchModels/Breitling/Breitling_Chronomat_B13050_2002"),
     specialCollectionItem: false,
   },
+
   "Mercedes Benz Chronograph": {
     brand: BrandsEnum.MERCEDES_BENZ,
     legend: "Mercedes Benz Chronograph",
@@ -1013,6 +1014,17 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     srcImage: "public/assets/Images/Maurice_Lacroix/2021_Maurice_Lacroix_5872_Chrono/IMG_8026.JPG",
     hoverSrc: "public/assets/Images/Maurice_Lacroix/2021_Maurice_Lacroix_5872_Chrono/IMG_8057.JPG",
     href: require("./watchModels/Maurice_Lacroix/Maurice_Lacroix_5872_Chrono_2021"),
+    specialCollectionItem: false,
+  },
+
+  "Radiant Sport Rally Rattrapante Chronograph": {
+    brand: BrandsEnum.RADIANT,
+    legend: "Radiant Sport Rally Rattrapante Chronograph",
+    year: 1996,
+    type: WatchTypeEnum.SPORTS,
+    srcImage: "public/assets/Images/Radiant/1996_Radiant_Rattrapante_Chrono/IMG_0183.JPG",
+    hoverSrc: "public/assets/Images/Radiant/1996_Radiant_Rattrapante_Chrono/IMG_0179.JPG",
+    href: require("./watchModels/Radiant/Radiant_Sport_Rally_Rattrapante_1996"),
     specialCollectionItem: false,
   },
 

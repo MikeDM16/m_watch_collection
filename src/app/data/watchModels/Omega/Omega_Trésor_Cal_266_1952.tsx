@@ -89,7 +89,6 @@ const details: WatchDetails = {
   technicalData: {
     features: [
       featuresEnum.SOLID_GOLD,
-      featuresEnum.MECHANIQUE_CHRONOGRAPH,
       "Movement with production number 13564275, dating the watch back to 1952",
     ],
 

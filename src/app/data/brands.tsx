@@ -613,6 +613,11 @@ export const brandsDB: Brand[] = [
     displayOrder: undefined,
   },
   {
+    name: BrandsEnum.RADIANT,
+    logoImg: "public/assets/Images/Brands_Logos/radiant_logo.PNG",
+    displayOrder: undefined,
+  },
+  {
     name: BrandsEnum.RELIDE,
     logoImg: "public/assets/Images/Brands_Logos/relide_logo.PNG",
     displayOrder: undefined,

@@ -59,6 +59,7 @@ export const BrandsEnum = {
   PORTUGUESE_BRANDS: "Portuguese Brands",
   PROVITA: "Provita",
   PRYNGEPS: "Pryngeps",
+  RADIANT: "Radiant",
   RAYMOND_WEIL: "Raymond Weil",
   RELIDE: "Relide",
   ROMAR: "Romar",
