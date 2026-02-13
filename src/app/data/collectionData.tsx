@@ -1006,6 +1006,28 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     href: require("./watchModels/Tag_Heuer/Tag_Heuer_Professional_2000_CK1111_1996"),
     specialCollectionItem: false,
   },
+  "Lorenz Classic Chronograph Valjoux 7760": {
+    brand: BrandsEnum.LORENZ,
+    legend: "Lorenz Classic Chronograph Valjoux 7760",
+    year: 1996,
+    type: WatchTypeEnum.DRESS,
+    srcImage: "public/assets/Images/Lorenz/1996_Lorenz_Classic_Chrono_7760/IMG_0408.JPG",
+    hoverSrc: "public/assets/Images/Lorenz/1996_Lorenz_Classic_Chrono_7760/IMG_0409.JPG",
+    href: require("./watchModels/Lorenz/Lorenz_Classic_Chrono_7760_1996"),
+    specialCollectionItem: false,
+  },
+  "Saint Honoré Classic Rattrapante Chronograph": {
+    brand: BrandsEnum.SAINT_HONORE,
+    legend: "Saint Honoré Classic Rattrapante Chronograph",
+    year: 1996,
+    type: WatchTypeEnum.DRESS,
+    srcImage:
+      "public/assets/Images/Saint_Honore/1996_Saint_Honore_Classic_Ratrappante/IMG_0362.JPG",
+    hoverSrc:
+      "public/assets/Images/Saint_Honore/1996_Saint_Honore_Classic_Ratrappante/IMG_0357.JPG",
+    href: require("./watchModels/Saint_Honore/Saint_Honore_Classic_Rattrapante_1996"),
+    specialCollectionItem: false,
+  },
   "Maurice Lacroix 5872 Monza Chrono": {
     brand: BrandsEnum.MAURICE_LACROIX,
     legend: "Maurice Lacroix 5872 Monza Chrono",
@@ -1676,6 +1698,18 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     srcImage: "public/assets/Images/Omega/1984_Polaris_Titanium_396_1100/IMG_1580.JPG",
     hoverSrc: "public/assets/Images/Omega/1984_Polaris_Titanium_396_1100/IMG_1597.JPG",
     href: require("./watchModels/Omega/Omega_Polaris_Titanium_396_1100_1984"),
+    specialCollectionItem: false,
+  },
+  "1983 Tissot Heritage 130th Anniversary Moon Phase": {
+    brand: BrandsEnum.TISSOT,
+    legend: "1983 Tissot Heritage 130th Anniversary Moon Phase",
+    year: 1983,
+    type: WatchTypeEnum.DRESS,
+    srcImage:
+      "public/assets/Images/Tissot/1983_Tissot_130th_Anniversary_moon_phase_7734/IMG_0443.JPG",
+    hoverSrc:
+      "public/assets/Images/Tissot/1983_Tissot_130th_Anniversary_moon_phase_7734/IMG_0431.JPG",
+    href: require("./watchModels/Tissot/Tissot_Heritage_130th_Anniversary_7734_1983"),
     specialCollectionItem: false,
   },
   "Omega De Ville 191.0077 Cal. 1365": {

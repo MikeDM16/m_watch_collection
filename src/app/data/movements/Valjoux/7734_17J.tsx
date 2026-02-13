@@ -13,7 +13,7 @@ const VALJOIX_7734_17J: Caliber = {
   title: "Valjoux 7734",
   //Description
   description:
-    "Chronograph based on the Valjoux 7733, but adds a date complication at 6 0'clock. \n\n \
+    "Chronograph based on the Valjoux 7733, but adds a date complication at 6 0'clock. Some variations also include a central moon phase display. \n\n \
   Produced from 1970 until around 1974.",
   // UsefullLinks
   usefullLinks: {},

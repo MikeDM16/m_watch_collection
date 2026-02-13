@@ -69,6 +69,7 @@ export const BrandsEnum = {
   SECTOR: "Sector",
   SIGNO: "Signo",
   SOLVIL_ET_TITUS: "Solvil et Titus",
+  SAINT_HONORE: "Saint Honoré",
   TAG_HEUER: "Tag Heuer",
   TAUNUS: "Taunus",
   TIMEX: "Timex",

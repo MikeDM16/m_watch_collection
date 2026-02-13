@@ -652,6 +652,11 @@ export const brandsDB: Brand[] = [
     displayOrder: undefined,
   },
   {
+    name: BrandsEnum.SAINT_HONORE,
+    logoImg: "public/assets/Images/Brands_Logos/saint_honore_logo.PNG",
+    displayOrder: undefined,
+  },
+  {
     name: BrandsEnum.TONINO_LAMBORGHINI,
     logoImg: "public/assets/Images/Brands_Logos/tonino_lamborghini_logo.PNG",
     displayOrder: undefined,
