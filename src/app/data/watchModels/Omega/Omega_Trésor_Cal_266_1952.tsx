@@ -19,6 +19,12 @@ const details: WatchDetails = {
   title: "1952 Omega Trésor Honeycomb Cal. 266 18K Gold",
 
   sliderImages: [
+    "public/assets/Images/Omega/1952_Omega_Tresor_Honeycomb_266/IMG_0476.JPG",
+    "public/assets/Images/Omega/1952_Omega_Tresor_Honeycomb_266/IMG_0477.JPG",
+    "public/assets/Images/Omega/1952_Omega_Tresor_Honeycomb_266/IMG_0478.JPG",
+    "public/assets/Images/Omega/1952_Omega_Tresor_Honeycomb_266/IMG_0479.JPG",
+    "public/assets/Images/Omega/1952_Omega_Tresor_Honeycomb_266/IMG_0480.JPG",
+
     "public/assets/Images/Omega/1952_Omega_Tresor_Honeycomb_266/IMG_9184.JPG",
     "public/assets/Images/Omega/1952_Omega_Tresor_Honeycomb_266/IMG_9185.JPG",
     "public/assets/Images/Omega/1952_Omega_Tresor_Honeycomb_266/IMG_9187.JPG",

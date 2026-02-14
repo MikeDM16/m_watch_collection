@@ -19,6 +19,10 @@ const details: WatchDetails = {
   title: "1996 Lorenz Classic Chronograph Valjoux 7760",
 
   sliderImages: [
+    "public/assets/Images/Lorenz/1996_Lorenz_Classic_Chrono_7760/IMG_0471.JPG",
+    "public/assets/Images/Lorenz/1996_Lorenz_Classic_Chrono_7760/IMG_0472.JPG",
+    "public/assets/Images/Lorenz/1996_Lorenz_Classic_Chrono_7760/IMG_0473.JPG",
+
     "public/assets/Images/Lorenz/1996_Lorenz_Classic_Chrono_7760/IMG_0400.JPG",
     "public/assets/Images/Lorenz/1996_Lorenz_Classic_Chrono_7760/IMG_0401.JPG",
     "public/assets/Images/Lorenz/1996_Lorenz_Classic_Chrono_7760/IMG_0402.JPG",

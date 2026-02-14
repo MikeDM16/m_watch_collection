@@ -38,6 +38,7 @@ const details: WatchDetails = {
     "public/assets/Images/Tissot/1983_Tissot_130th_Anniversary_moon_phase_7734/IMG_0446.JPG",
 
     "public/assets/Images/Tissot/1983_Tissot_130th_Anniversary_moon_phase_7734/IMG_0460.JPG",
+    "public/assets/Images/Tissot/1983_Tissot_130th_Anniversary_moon_phase_7734/Heuer-Chronograph-Moonphase-Ref-34300-No-Reserve-Price-Men-1970-1979_1601132593_8271.JPG",
     "public/assets/Images/Tissot/1983_Tissot_130th_Anniversary_moon_phase_7734/IMG_0461.JPG",
     "public/assets/Images/Tissot/1983_Tissot_130th_Anniversary_moon_phase_7734/IMG_0462.JPG",
     "public/assets/Images/Tissot/1983_Tissot_130th_Anniversary_moon_phase_7734/IMG_0463.JPG",
@@ -59,7 +60,12 @@ const details: WatchDetails = {
   ],
 
   technicalData: {
-    features: [featuresEnum.DATE, featuresEnum.OPEN_CASE_BACK, featuresEnum.AUTOMATIC],
+    features: [
+      "Back in the late 70's, Heuer put together a moonphase movement based on the valjoux 7734. The movement, plus a moonphase wheel, dial and case were intended for an Abercrombie & Fitch watch. A number of these watches were made before Abercrombie & Fitch went bankrupt in 1977, but most of the movements and parts were left in Heuer's inventory. These movements, dials and cases were, over time, purchased by a few other watch brands like Daniel Lagrange, Alfred Rochart & Fils, and Tissot. \nTissot used this movement in their 130th anniversary watch in 1983.",
+      featuresEnum.DATE,
+      featuresEnum.OPEN_CASE_BACK,
+      featuresEnum.AUTOMATIC,
+    ],
 
     information: {
       brand: BrandsEnum.TISSOT,

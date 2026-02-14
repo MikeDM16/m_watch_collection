@@ -31,6 +31,12 @@ const details: WatchDetails = {
     "public/assets/Images/Breitling/1991_Breitling_J13047X_018/IMG_2985.JPG",
     "public/assets/Images/Breitling/1991_Breitling_J13047X_018/IMG_2986.JPG",
 
+    "public/assets/Images/Breitling/1991_Breitling_J13047X_018/IMG_0486.JPG",
+    "public/assets/Images/Breitling/1991_Breitling_J13047X_018/IMG_0485.JPG",
+    "public/assets/Images/Breitling/1991_Breitling_J13047X_018/IMG_0487.JPG",
+    "public/assets/Images/Breitling/1991_Breitling_J13047X_018/IMG_0484.JPG",
+    "public/assets/Images/Breitling/1991_Breitling_J13047X_018/IMG_0483.JPG",
+
     "public/assets/Images/Breitling/1991_Breitling_J13047X_018/IMG_3003.JPG",
     "public/assets/Images/Breitling/1991_Breitling_J13047X_018/IMG_3004.JPG",
     "public/assets/Images/Breitling/1991_Breitling_J13047X_018/IMG_3005.JPG",
