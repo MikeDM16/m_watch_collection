@@ -78,7 +78,7 @@ const details: WatchDetails = {
     },
 
     dial: {
-      color: "White",
+      color: "White - Green Tuxedo",
       dialMarkers: DialMarketsEnum.BATTON,
       finishingDetails: FinishingDetailsEnum.NONE,
       luminiscentIndexes: LuminescentIndexesEnum.NONE,
