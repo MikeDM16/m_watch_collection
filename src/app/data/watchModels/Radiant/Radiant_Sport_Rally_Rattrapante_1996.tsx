@@ -67,6 +67,12 @@ const details: WatchDetails = {
     "public/assets/Images/Radiant/1996_Radiant_Rattrapante_Chrono/IMG_0201.JPG",
   ],
 
+  saleReport: {
+    price: 136,
+    date: "18/02/2026",
+    url: "https://www.catawiki.com/en/l/101342550",
+  },
+
   technicalData: {
     features: [featuresEnum.DATE, featuresEnum.CHRONOGRAPH, featuresEnum.WR_30_METERS],
 

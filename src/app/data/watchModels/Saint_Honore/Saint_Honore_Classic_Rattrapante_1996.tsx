@@ -60,6 +60,12 @@ const details: WatchDetails = {
     "public/assets/Images/Saint_Honore/1996_Saint_Honore_Classic_Ratrappante/IMG_0385.JPG",
   ],
 
+  saleReport: {
+    price: 151,
+    date: "25/02/2026",
+    url: "https://www.catawiki.com/en/l/101496590",
+  },
+
   technicalData: {
     features: [featuresEnum.DATE, featuresEnum.CHRONOGRAPH],
 
