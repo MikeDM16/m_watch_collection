@@ -28,7 +28,10 @@ export const brandsDB: Brand[] = [
       details: "Founded in Le Locle, Neuchâtel, Switzerland",
     },
     displayBySeries: true,
-    backgrounImages: ["public/assets/Images/Brands_Backgrounds/Zenith_1_Background.JPG"],
+    backgrounImages: [
+      "public/assets/Images/Brands_Backgrounds/Zenith_1_Background.JPG",
+      "public/assets/Images/Brands_Backgrounds/Images/Z_IMG_3757.JPG",
+    ],
   },
   {
     name: BrandsEnum.EBERHARD,
@@ -59,7 +62,11 @@ export const brandsDB: Brand[] = [
       details: "Founded in Saint-Imier, Switzerland",
     },
     displayBySeries: true,
-    backgrounImages: ["public/assets/Images/Brands_Backgrounds/Breitling_1_Background.JPG"],
+    backgrounImages: [
+      "public/assets/Images/Brands_Backgrounds/Breitling_1_Background.JPG",
+      "public/assets/Images/Brands_Backgrounds/Images/B_IMG_7653.JPG",
+      "public/assets/Images/Brands_Backgrounds/Images/B_IMG_7664.JPG",
+    ],
   },
   {
     name: BrandsEnum.OMEGA,
@@ -74,6 +81,8 @@ export const brandsDB: Brand[] = [
     backgrounImages: [
       "public/assets/Images/Brands_Backgrounds/Omega_1_Background.JPG",
       "public/assets/Images/Brands_Backgrounds/Omega_2_Background.JPG",
+      "public/assets/Images/Brands_Backgrounds/Images/O_IMG_0476.JPG",
+      "public/assets/Images/Brands_Backgrounds/Images/O_IMG_8409.JPG",
     ],
     displayBySeries: true,
   },
@@ -106,7 +115,11 @@ export const brandsDB: Brand[] = [
       details: "Founded in Saint-Imier, Switzerland",
     },
     displayBySeries: true,
-    backgrounImages: ["public/assets/Images/Brands_Backgrounds/Tag_Heuer_1_Background.JPG"],
+    backgrounImages: [
+      "public/assets/Images/Brands_Backgrounds/Tag_Heuer_1_Background.JPG",
+      "public/assets/Images/Brands_Backgrounds/Images/TH_IMG_6641.JPG",
+      "public/assets/Images/Brands_Backgrounds/Images/TH_IMG_6642.JPG",
+    ],
   },
   {
     name: BrandsEnum.PORSCHE_DESIGN,
@@ -176,6 +189,10 @@ export const brandsDB: Brand[] = [
       "public/assets/Images/Brands_Backgrounds/Tissot_2_Background.JPG",
       "public/assets/Images/Brands_Backgrounds/Tissot_3_Background.JPG",
       "public/assets/Images/Brands_Backgrounds/Tissot_4_Background.JPG",
+      "public/assets/Images/Brands_Backgrounds/Images/T_IMG_0605.JPG",
+      "public/assets/Images/Brands_Backgrounds/Images/T_IMG_4567.JPG",
+      "public/assets/Images/Brands_Backgrounds/Images/T_IMG_4570.JPG",
+      "public/assets/Images/Brands_Backgrounds/Images/T_IMG_4577.JPG",
     ],
     displayBySeries: true,
   },

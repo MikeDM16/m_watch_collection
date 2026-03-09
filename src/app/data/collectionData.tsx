@@ -26,7 +26,7 @@ const todo: Record<string, CollectionEntry> = {
     type: WatchTypeEnum.CASUAL,
     srcImage: "public/assets/Images/Zenith/Zenith_Collection/IMG_3757.JPG",
     href: require("./watchModels/Zenith/Zenith_Collection_set"),
-    specialCollectionItem: true,
+    specialCollectionItem: false,
     collectionSet: true,
   },
   "Breitling Collection": {
@@ -36,7 +36,7 @@ const todo: Record<string, CollectionEntry> = {
     type: WatchTypeEnum.CASUAL,
     srcImage: "public/assets/Images/Breitling/Chronomat_Collection/IMG_6328.JPG",
     href: require("./watchModels/Breitling/Breitling_Collection_set"),
-    specialCollectionItem: true,
+    specialCollectionItem: false,
     collectionSet: true,
   },
   "Tag Heuer Collection": {
@@ -46,7 +46,7 @@ const todo: Record<string, CollectionEntry> = {
     type: WatchTypeEnum.CASUAL,
     srcImage: "public/assets/Images/Tag_Heuer/Heuer_Collection/IMG_6838.JPG",
     href: require("./watchModels/Tag_Heuer/Tag_Heuer_collection_set"),
-    specialCollectionItem: true,
+    specialCollectionItem: false,
     collectionSet: true,
   },
   "Tissot Collection": {
@@ -56,7 +56,7 @@ const todo: Record<string, CollectionEntry> = {
     type: WatchTypeEnum.CASUAL,
     srcImage: "public/assets/Images/Tissot/Tissot_Collection_2024/IMG_4588.JPG",
     href: require("./watchModels/Tissot/Tissot_collection_set"),
-    specialCollectionItem: true,
+    specialCollectionItem: false,
     collectionSet: true,
   },
   "Omega Olympics Collection": {
@@ -66,7 +66,7 @@ const todo: Record<string, CollectionEntry> = {
     type: WatchTypeEnum.CASUAL,
     srcImage: "public/assets/Images/Omega/Omega_Olympics_Collection/IMG_8411.JPG",
     href: require("./watchModels/Omega/Omega_Olympic_collection"),
-    specialCollectionItem: true,
+    specialCollectionItem: false,
     collectionSet: true,
   },
 
@@ -77,7 +77,7 @@ const todo: Record<string, CollectionEntry> = {
     type: WatchTypeEnum.CASUAL,
     srcImage: "public/assets/Images/Omega/Omega_Polaris_Collection/IMG_0475.JPG",
     href: require("./watchModels/Omega/Omega_Polaris_set"),
-    specialCollectionItem: true,
+    specialCollectionItem: false,
     collectionSet: true,
   },
 
@@ -88,7 +88,7 @@ const todo: Record<string, CollectionEntry> = {
     type: WatchTypeEnum.CASUAL,
     srcImage: "public/assets/Images/Novart/1974_Novart_set_Collection/IMG_6259.JPG",
     href: require("./watchModels/Novart/Novart_collection_set"),
-    specialCollectionItem: true,
+    specialCollectionItem: false,
     collectionSet: true,
   },
 };
@@ -288,7 +288,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     srcImage: "public/assets/Images/Tissot/2014_Tissot_NASCAR_Racing_V7750/IMG_0130.JPG",
     hoverSrc: "public/assets/Images/Tissot/2014_Tissot_NASCAR_Racing_V7750/IMG_0168.JPG",
     href: require("./watchModels/Tissot/Tissot_PRS_516_Valjoux_2009"),
-    specialCollectionItem: true,
+    specialCollectionItem: false,
   },
 
   "Certina DS First White Ceramic": {
@@ -633,7 +633,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     hoverSrc:
       "public/assets/Images/Porsche_Design/2005_Porsche Design_Dashboard_P662_Titanium/IMG_4292.JPG",
     href: require("./watchModels/Porsche_Design/Porsche_Design_P6612_Titanium_2005"),
-    specialCollectionItem: true,
+    specialCollectionItem: false,
   },
   "Porsche Design Dashboard P6612/10 Titanium": {
     brand: BrandsEnum.PORSCHE_DESIGN,
@@ -655,7 +655,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     srcImage: "public/assets/Images/Tag_Heuer/2005_Tag_Heuer_Aquaracer_CN2111/IMG_0153.JPG",
     hoverSrc: "public/assets/Images/Tag_Heuer/2005_Tag_Heuer_Aquaracer_CN2111/IMG_4393.JPG",
     href: require("./watchModels/Tag_Heuer/Tag_Heuer_Aquaracer_CN2111_2005"),
-    specialCollectionItem: true,
+    specialCollectionItem: false,
   },
   "Raymond Weil Amadeus 200 7750": {
     brand: BrandsEnum.RAYMOND_WEIL,
@@ -881,7 +881,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     srcImage: "public/assets/Images/DuBois/1999_DuBois_Gran_Prix_Europe_F1_7750/IMG_9076.JPG",
     hoverSrc: "public/assets/Images/DuBois/1999_DuBois_Gran_Prix_Europe_F1_7750/IMG_9098.JPG",
     href: require("./watchModels/DuBois_Et_Fils/DuBois_Gran_Prix_Europe_F1_1999"),
-    specialCollectionItem: true,
+    specialCollectionItem: false,
   },
   "Tag Heuer Professional 2000 Quartz": {
     brand: BrandsEnum.TAG_HEUER,
@@ -935,7 +935,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     hoverSrc:
       "public/assets/Images/Breitling/1998_Breitling_Chronomat_Vitesse_B13050_Black/IMG_6654.JPG",
     href: require("./watchModels/Breitling/Breitling_Chronomat_B13050_Vitesse_Black_1998"),
-    specialCollectionItem: true,
+    specialCollectionItem: false,
   },
 
   "Eterna - Porsche Design 911 - Jean-Pierre Jarier": {
@@ -946,7 +946,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     srcImage: "public/assets/Images/Porsche_Design/1998_Porsche_Design_911_JP_Jarier/IMG_8266.JPG",
     hoverSrc: "public/assets/Images/Porsche_Design/1998_Porsche_Design_911_JP_Jarier/IMG_8237.JPG",
     href: require("./watchModels/Porsche_Design/Porsche_Design_911_JP_Jarier_1998"),
-    specialCollectionItem: true,
+    specialCollectionItem: false,
   },
   "Breitling Colt A53035 Chronograph": {
     brand: BrandsEnum.BREITLING,
@@ -1330,7 +1330,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     srcImage: "public/assets/Images/Omega/1992_Polaris_Albertville_386_1031_3000/IMG_8710.JPG",
     hoverSrc: "public/assets/Images/Omega/1992_Polaris_Albertville_386_1031_3000/IMG_8707.JPG",
     href: require("./watchModels/Omega/Omega_Olympia_Albertville_3000_386_1031_1992"),
-    specialCollectionItem: true,
+    specialCollectionItem: false,
   },
   "Omega Polaris Ratrappante Chronograph 386 1031.1": {
     brand: BrandsEnum.OMEGA,
@@ -1340,7 +1340,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     srcImage: "public/assets/Images/Omega/1992_Omega_Polaris_Ratrappante_386_1031/IMG_0647.JPG",
     hoverSrc: "public/assets/Images/Omega/1992_Omega_Polaris_Ratrappante_386_1031/IMG_0675.JPG",
     href: require("./watchModels/Omega/Omega_Polaris_Chrono_White_386_1031_1992"),
-    specialCollectionItem: true,
+    specialCollectionItem: false,
   },
 
   "Seiko 8M25 Age of Discovery": {
@@ -1515,7 +1515,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     srcImage: "public/assets/Images/Raymond_Weil/1990_Raymond_Weil_7760/IMG_4910.JPG",
     hoverSrc: "public/assets/Images/Raymond_Weil/1990_Raymond_Weil_7760/IMG_6015.JPG",
     href: require("./watchModels/Raymond_Weil/Raymond_Weil_Tradition_Mecanique_7760_1990"),
-    specialCollectionItem: true,
+    specialCollectionItem: false,
   },
   "Breitling Chronomat Sextant 80350 Chronograph": {
     brand: BrandsEnum.BREITLING,
@@ -2685,7 +2685,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     srcImage: "public/assets/Images/Titus/1950_Titus_Chronograph_18K_L48/IMG_8093.JPG",
     hoverSrc: "public/assets/Images/Titus/1950_Titus_Chronograph_18K_L48/IMG_8089.JPG",
     href: require("./watchModels/Titus/Titus_Chronograph_L48_1950"),
-    specialCollectionItem: true,
+    specialCollectionItem: false,
   },
   "Omodox Precision 17 Rubis": {
     brand: BrandsEnum.OMODOX,
@@ -2743,7 +2743,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     srcImage: "public/assets/Images/Fortis/1947_Fortis_Pilot_Chronograph_Valjoux_77/IMG_6912.JPG",
     hoverSrc: "public/assets/Images/Fortis/1947_Fortis_Pilot_Chronograph_Valjoux_77/IMG_6914.JPG",
     href: require("./watchModels/Fortis/Fortis_Pilot_Chronograph_17J_1947"),
-    specialCollectionItem: true,
+    specialCollectionItem: false,
   },
   "Signo Small Seconds - AS 1130": {
     brand: BrandsEnum.SIGNO,
