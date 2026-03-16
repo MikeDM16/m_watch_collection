@@ -1940,7 +1940,8 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     legend: "Tissoure Cronometro 17 Rubis",
     year: 1975,
     type: WatchTypeEnum.CASUAL,
-    srcImage: "public/assets/Images/Tissoure/1975_Tissoure_Cronometro_17J/IMG_7088.JPG",
+    srcImage: "public/assets/Images/Tissoure/1975_Tissoure_Cronometro_17J/IMG_1815.JPG",
+    hoverSrc: "public/assets/Images/Tissoure/1975_Tissoure_Cronometro_17J/IMG_1816.JPG",
     href: require("./watchModels/Tissoure/Tissoure_Cronometro_17J_1975"),
     specialCollectionItem: false,
   },
@@ -2764,6 +2765,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     href: require("./watchModels/Tissot/Tissot_Antimagnetic_1947_white"),
     specialCollectionItem: false,
   },
+
   "Tissot Antimagnetic": {
     brand: BrandsEnum.TISSOT,
     legend: "Tissot Antimagnetic",
@@ -2872,6 +2874,17 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     href: require("./watchModels/Universal_Geneve/Universal_Geneve_Mecanique_cal_262_1942"),
     specialCollectionItem: false,
   },
+  "1940 Tissot Antimagnetic 27-2": {
+    brand: BrandsEnum.TISSOT,
+    legend: "1940 Tissot Antimagnetic 27-2",
+    year: 1940,
+    type: WatchTypeEnum.CASUAL,
+    srcImage: "public/assets/Images/Tissot/1942_Tissot_Antimagnetic_27-2/IMG_1773.JPG",
+    hoverSrc: "public/assets/Images/Tissot/1942_Tissot_Antimagnetic_27-2/IMG_1776.JPG",
+    href: require("./watchModels/Tissot/Tissot_Antimagnetic_27_2_1940"),
+    specialCollectionItem: false,
+  },
+
   'Omega StayBrite "Tank" CK3416': {
     brand: BrandsEnum.OMEGA,
     legend: 'Omega StayBrite "Tank" CK3416',

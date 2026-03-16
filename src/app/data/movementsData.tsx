@@ -90,6 +90,7 @@ import HEUER_4_96 from "./movements/Tag_Heuer/Tag_Heuer_4_96";
 import TAG_HEUER_CALIBER_16 from "./movements/Tag_Heuer/Tag_Heuer_Caliber_16_25J";
 import TIMEX_M100 from "./movements/Timex/Timex_M100";
 import TISSOT_26_9_261 from "./movements/Tissot/26_9_621_17J";
+import TISSOT_27_2 from "./movements/Tissot/27_2_17J";
 import TISSOT_27_3 from "./movements/Tissot/27_3_15J";
 import TISSOT_27B_1 from "./movements/Tissot/27B_1_15J";
 import TISSOT_27B_21 from "./movements/Tissot/27B_21_15J";
@@ -257,6 +258,7 @@ export const MovementsDataDB: Record<string, Caliber> = {
   TISSOT_2060_7734_17J: TISSOT_2060_7734_17J,
   TISSOT_26_9_261: TISSOT_26_9_261,
   TISSOT_27_3: TISSOT_27_3,
+  TISSOT_27_2: TISSOT_27_2,
   TISSOT_27B_1: TISSOT_27B_1,
   TISSOT_27B_21: TISSOT_27B_21,
   TISSOT_781: TISSOT_781,
