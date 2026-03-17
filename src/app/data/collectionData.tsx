@@ -1672,6 +1672,16 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     specialCollectionItem: false,
   },
 
+  "Tag Heuer Professional 272.006 LWO 185 Chronograph": {
+    brand: BrandsEnum.TAG_HEUER,
+    legend: "Tag Heuer Professional 272.006 LWO 185 Chronograph",
+    year: 1986,
+    type: WatchTypeEnum.SPORTS,
+    srcImage: "public/assets/Images/Tag_Heuer/1986_Tag_Heuer_Professional_200_LWO_185/IMG_1871.JPG",
+    hoverSrc: "public/assets/Images/Tag_Heuer/1986_Tag_Heuer_Professional_200_LWO_185/IMG_1891.JPG",
+    href: require("./watchModels/Tag_Heuer/Tag_Heuer_ProChrono_2720061_LWO_185_1986"),
+    specialCollectionItem: true,
+  },
   "Tag Heuer Professional 272.006-1 Chronograph": {
     brand: BrandsEnum.TAG_HEUER,
     legend: "Tag Heuer Professional 272.006-1 Chronograph",
