@@ -744,6 +744,18 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     href: require("./watchModels/Tissot/Tissot_Ballade_C229399C_Lady_Auto_2005"),
     specialCollectionItem: false,
   },
+
+  "Tag Heuer Monza Classic (CR2110)": {
+    brand: BrandsEnum.TAG_HEUER,
+    legend: "Tag Heuer Monza Classic (CR2110)",
+    year: 2005,
+    type: WatchTypeEnum.SPORTS,
+    srcImage: "public/assets/Images/Tag_Heuer/2005_Tag_Heuer_Classic_Monza/IMG_0747.JPG",
+    hoverSrc: "public/assets/Images/Tag_Heuer/2005_Tag_Heuer_Classic_Monza/IMG_0729.JPG",
+    href: require("./watchModels/Tag_Heuer/Tag_Heuer_Monza_Classic_2005"),
+    specialCollectionItem: false,
+  },
+
   "Mercedes Benz SLK Limited Edition": {
     brand: BrandsEnum.MERCEDES_BENZ,
     legend: "Mercedes Benz SLK Limited Edition",
@@ -948,6 +960,18 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     href: require("./watchModels/Porsche_Design/Porsche_Design_911_JP_Jarier_1998"),
     specialCollectionItem: false,
   },
+  "Eterna - Porsche Design 911 - GT2 Cup": {
+    brand: BrandsEnum.PORSCHE_DESIGN,
+    legend: "Eterna - Porsche Design 911 - GT2 Cup",
+    year: 1998,
+    type: WatchTypeEnum.SPORTS,
+    srcImage:
+      "public/assets/Images/Porsche_Design/1998_Porsche_Design_Eterna_911_GT2_Cup/IMG_1064.JPG",
+    hoverSrc:
+      "public/assets/Images/Porsche_Design/1998_Porsche_Design_Eterna_911_GT2_Cup/IMG_1108.JPG",
+    href: require("./watchModels/Porsche_Design/Porsche_Design_911_GT2_Cup_1998"),
+    specialCollectionItem: false,
+  },
   "Breitling Colt A53035 Chronograph": {
     brand: BrandsEnum.BREITLING,
     legend: "Breitling Colt A53035 Chronograph",
@@ -1028,16 +1052,6 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     href: require("./watchModels/Saint_Honore/Saint_Honore_Classic_Rattrapante_1996"),
     specialCollectionItem: false,
   },
-  "Maurice Lacroix 5872 Monza Chrono": {
-    brand: BrandsEnum.MAURICE_LACROIX,
-    legend: "Maurice Lacroix 5872 Monza Chrono",
-    year: 1996,
-    type: WatchTypeEnum.DRESS,
-    srcImage: "public/assets/Images/Maurice_Lacroix/2021_Maurice_Lacroix_5872_Chrono/IMG_8026.JPG",
-    hoverSrc: "public/assets/Images/Maurice_Lacroix/2021_Maurice_Lacroix_5872_Chrono/IMG_8057.JPG",
-    href: require("./watchModels/Maurice_Lacroix/Maurice_Lacroix_5872_Chrono_2021"),
-    specialCollectionItem: false,
-  },
 
   "Radiant Sport Rally Rattrapante Chronograph": {
     brand: BrandsEnum.RADIANT,
@@ -1050,14 +1064,37 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     specialCollectionItem: false,
   },
 
-  "Maurice Lacroix 5393 Chrono": {
+  'Maurice Lacroix Monza "Schumacher" Yellow Chrono': {
     brand: BrandsEnum.MAURICE_LACROIX,
-    legend: "Maurice Lacroix 5393 Chrono",
+    legend: 'Maurice Lacroix Monza "Schumacher" Yellow Chrono',
+    year: 1996,
+    type: WatchTypeEnum.DRESS,
+    srcImage:
+      "public/assets/Images/Maurice_Lacroix/1996_Maurice_Lacroix_Monza_Schumacher_Chrono/IMG_1050.JPG",
+    hoverSrc:
+      "public/assets/Images/Maurice_Lacroix/1996_Maurice_Lacroix_Monza_Schumacher_Chrono/IMG_1003.JPG",
+    href: require("./watchModels/Maurice_Lacroix/Maurice_Lacroix_5872_Monza_Schumacher_Chrono_1996"),
+    specialCollectionItem: false,
+  },
+  'Maurice Lacroix 5393 Monza "Schumacher" Red Chrono': {
+    brand: BrandsEnum.MAURICE_LACROIX,
+    legend: 'Maurice Lacroix 5393 Monza "Schumacher" Red Chrono',
     year: 1996,
     type: WatchTypeEnum.DRESS,
     srcImage: "public/assets/Images/Maurice_Lacroix/2021_Maurice_Lacroix_5393_Chrono/IMG_8970.JPG",
     hoverSrc: "public/assets/Images/Maurice_Lacroix/2021_Maurice_Lacroix_5393_Chrono/IMG_8978.JPG",
     href: require("./watchModels/Maurice_Lacroix/Maurice_Lacroix_5393_Chrono_2021"),
+    specialCollectionItem: false,
+  },
+
+  'Maurice Lacroix 5872 Monza "Schumacher" Chrono': {
+    brand: BrandsEnum.MAURICE_LACROIX,
+    legend: 'Maurice Lacroix 5872 Monza "Schumacher" Chrono',
+    year: 1996,
+    type: WatchTypeEnum.DRESS,
+    srcImage: "public/assets/Images/Maurice_Lacroix/2021_Maurice_Lacroix_5872_Chrono/IMG_8026.JPG",
+    hoverSrc: "public/assets/Images/Maurice_Lacroix/2021_Maurice_Lacroix_5872_Chrono/IMG_8057.JPG",
+    href: require("./watchModels/Maurice_Lacroix/Maurice_Lacroix_5872_Chrono_2021"),
     specialCollectionItem: false,
   },
 
@@ -1721,9 +1758,9 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     href: require("./watchModels/Omega/Omega_Polaris_Titanium_396_1100_1984"),
     specialCollectionItem: false,
   },
-  "1983 Tissot Heritage 130th Anniversary Moon Phase": {
+  "Tissot Heritage 130th Anniversary Moon Phase": {
     brand: BrandsEnum.TISSOT,
-    legend: "1983 Tissot Heritage 130th Anniversary Moon Phase",
+    legend: "Tissot Heritage 130th Anniversary Moon Phase",
     year: 1983,
     type: WatchTypeEnum.DRESS,
     srcImage:
@@ -2884,9 +2921,9 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     href: require("./watchModels/Universal_Geneve/Universal_Geneve_Mecanique_cal_262_1942"),
     specialCollectionItem: false,
   },
-  "1940 Tissot Antimagnetic 27-2": {
+  "Tissot Antimagnetic 27-2": {
     brand: BrandsEnum.TISSOT,
-    legend: "1940 Tissot Antimagnetic 27-2",
+    legend: "Tissot Antimagnetic 27-2",
     year: 1940,
     type: WatchTypeEnum.CASUAL,
     srcImage: "public/assets/Images/Tissot/1942_Tissot_Antimagnetic_27-2/IMG_1773.JPG",

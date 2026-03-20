@@ -8,4 +8,5 @@ export const TagHeuerBrandSeries = {
   AIRLINE_HEUER: "AirLine Professional Series (Pre-Tag)",
   S_EL: "S/EL (Sports and Elegance)",
   LINK: "Link",
+  MONZA: "Monza",
 };

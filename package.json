@@ -36,7 +36,7 @@
     "react-photo-album": "^3.0.2",
     "react-responsive": "^10.0.1",
     "styled-components": "^6.1.15",
-    "swiper": "^11.2.4",
+    "swiper": "^12.1.2",
     "tailwind-merge": "^3.3.1",
     "tailwindcss-animate": "^1.0.7",
     "yet-another-react-lightbox": "^3.21.7"

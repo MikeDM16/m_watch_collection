@@ -70,7 +70,6 @@ const details: WatchDetails = {
 
     "public/assets/Images/Tag_Heuer/1986_Tag_Heuer_Professional_200_LWO_185/IMG_1901.JPG",
 
-    
     "public/assets/Images/Tag_Heuer/1986_Tag_Heuer_Professional_200_LWO_185/IMG_1893.JPG",
     "public/assets/Images/Tag_Heuer/1986_Tag_Heuer_Professional_200_LWO_185/IMG_1894.JPG",
     "public/assets/Images/Tag_Heuer/1986_Tag_Heuer_Professional_200_LWO_185/IMG_1895.JPG",

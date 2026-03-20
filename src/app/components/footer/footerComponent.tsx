@@ -31,7 +31,7 @@ export default function FooterComponent(props?: FooterComponentProps) {
           <div className="header-title upper-text info-text title-white-color">
             {"M Watch Collection"}
           </div>
-          <em>{"Copyright © 2018-2025, MWatchCollection. All Rights Reserved."}</em>
+          <em>{"Copyright © 2018-2026, MWatchCollection. All Rights Reserved."}</em>
         </div>
       </div>
     </div>

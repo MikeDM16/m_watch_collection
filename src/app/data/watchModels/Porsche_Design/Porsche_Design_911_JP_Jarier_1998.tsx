@@ -80,14 +80,25 @@ const details: WatchDetails = {
     "public/assets/Images/Porsche_Design/1998_Porsche_Design_911_JP_Jarier/IMG_8291.JPG",
     "public/assets/Images/Porsche_Design/1998_Porsche_Design_911_JP_Jarier/IMG_8292.JPG",
     "public/assets/Images/Porsche_Design/1998_Porsche_Design_911_JP_Jarier/IMG_8293.JPG",
+
+    "public/assets/Images/Porsche_Design/1998_Porsche_Design_Eterna_911_GT2_Cup/IMG_0776.JPG",
+    "public/assets/Images/Porsche_Design/1998_Porsche_Design_Eterna_911_GT2_Cup/IMG_0780.JPG",
+    "public/assets/Images/Porsche_Design/1998_Porsche_Design_Eterna_911_GT2_Cup/IMG_0781.JPG",
+    "public/assets/Images/Porsche_Design/1998_Porsche_Design_Eterna_911_GT2_Cup/IMG_0784.JPG",
   ],
+
+  saleReport: {
+    price: 1200,
+    date: "06/03/2026",
+    url: "https://www.catawiki.com/en/l/101818003",
+  },
 
   technicalData: {
     features: [
       featuresEnum.DATE,
       featuresEnum.AUTOMATIC_CHRONOGRAPH,
       "Jean-Pierre Jarier is a former French professional racing driver whose career spanned multiple decades and disciplines, including Formula 1, Formula 2, sports cars, touring cars, LeMans and GT racing.",
-      "This exclusive Porsche Design (Eterna) model was issued Jean-Pierre Jarier after his victory in the 1998 FIA GT Championship.",
+      "This exclusive Porsche Design (Eterna) model was issued to Jean-Pierre Jarier after his victory in the 1998 FIA GT Championship.",
       "Exclusive autograph from the 2000 Budapest FIA GT race, the season in which Jarier finished 2nd in the Championship.",
     ],
 
@@ -95,7 +106,7 @@ const details: WatchDetails = {
       brand: BrandsEnum.PORSCHE_DESIGN,
       series: PorscheDesignBrandSeries.PORSCHE_DESIGN_911,
       catalogueReference: "FIA GT - Porsche 911 - Jean-Pierre Jarier",
-      productionYear: "2016",
+      productionYear: "1998",
       movementType: MovementWatchTypeEnum.QUARTZ,
       style: WatchStyleEnum.SPORTS,
     },

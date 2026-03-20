@@ -97,7 +97,7 @@ const details: WatchDetails = {
       material: "Leather",
       buckleType: BuckleTypeEnum.STANDARD_BUCKLE,
       width: "20 mm",
-      color: "Dark Green",
+      color: "Yellow",
     },
 
     movement: MovementsDataDB.ETA_251_262,

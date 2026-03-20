@@ -62,6 +62,12 @@ const details: WatchDetails = {
     "public/assets/Images/Lorenz/1996_Lorenz_Classic_Chrono_7760/IMG_0426.JPG",
   ],
 
+  saleReport: {
+    price: 440,
+    date: "06/03/2026",
+    url: "https://www.catawiki.com/en/l/101856650",
+  },
+
   technicalData: {
     features: [featuresEnum.DATE, featuresEnum.CHRONOGRAPH, featuresEnum.WR_10_METERS],
 

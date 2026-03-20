@@ -61,6 +61,12 @@ const details: WatchDetails = {
     "public/assets/Images/Amer/1975_Amer_Campos_Racing_Red_FE_233/IMG_0577.JPG",
   ],
 
+  saleReport: {
+    price: 320,
+    date: "06/03/2026",
+    url: "https://www.catawiki.com/en/l/101585026",
+  },
+
   technicalData: {
     features: [featuresEnum.SMALL_SECONDS, featuresEnum.MECHANICAL],
 
