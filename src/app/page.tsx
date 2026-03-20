@@ -2,6 +2,7 @@
 
 import FooterComponent from "@/app/components/footer/footerComponent";
 import HeaderNavBar from "@/app/components/header/headerComponent";
+import dynamic from "next/dynamic";
 import Image from "next/image";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
@@ -9,17 +10,26 @@ import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 
-import AboutMeContainer from "./components/aboutMe/aboutMe";
 import AnalyticsReport from "./components/analytics/analyticsReport";
 import BrandTitleDivisionComponent from "./components/brandPage/BrandTitleDivisionComponent";
 import PageTitleDivisionComponent from "./components/common/pageTitleDivisionComponent";
-import ContactsComponent from "./components/contacts/contacts";
-import PreviousSalesComponent from "./components/previousSales/previousSalesComponent";
-import SpecialItemsComponent from "./components/specialItems/specialItemsComponent";
 import { Brand } from "./data/brands";
 import brandsService from "./services/brandsService";
 import collectionService from "./services/collectionService";
 import { getExternalResource, routeToCollectionBrandPage } from "./services/commonFunctions";
+
+const SpecialItemsComponent = dynamic(
+  () => import("./components/specialItems/specialItemsComponent"),
+  { ssr: false },
+);
+const PreviousSalesComponent = dynamic(
+  () => import("./components/previousSales/previousSalesComponent"),
+  { ssr: false },
+);
+const AboutMeContainer = dynamic(() => import("./components/aboutMe/aboutMe"), { ssr: false });
+const ContactsComponent = dynamic(() => import("./components/contacts/contacts"), {
+  ssr: false,
+});
 
 export default function Page() {
   const [mainBrands] = useState(brandsService.getMainBrands());
@@ -37,7 +47,7 @@ export default function Page() {
     // Single row with all the columns in 1 line. boostrap table will adjust the table based on the provided sizes
     return (
       <div>
-        {SpecialItemsComponent()}
+        <SpecialItemsComponent />
 
         <Container>
           <div className="container-title centered-container">Main Brands</div>
@@ -55,7 +65,7 @@ export default function Page() {
                   <Image
                     key={`brand_icon_image_${entry.name}`}
                     src={getExternalResource(entry.logoImg)}
-                    alt="Next.js logo"
+                    alt={`${entry.name} logo`}
                     width={180}
                     height={38}
                     loading="lazy"
@@ -139,9 +149,9 @@ export default function Page() {
       })}
       {mainBrandsTable()}
       {ListAllBrandsGroupByLetter()}
-      {AboutMeContainer()}
-      {PreviousSalesComponent()}
-      {ContactsComponent()}
+      <AboutMeContainer />
+      <PreviousSalesComponent />
+      <ContactsComponent />
       {FooterComponent()}
     </div>
   );

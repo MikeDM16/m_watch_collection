@@ -22,7 +22,13 @@ import {
 } from "@/app/services/commonFunctions";
 import { RowsPhotoAlbum } from "react-photo-album";
 
-export default function ImageGalleryComponent(galleryImages: string[]) {
+export default function ImageGalleryComponent(
+  galleryImages: string[] | { galleryImages: string[] },
+) {
+  // Support both direct call and JSX props patterns
+  if (!Array.isArray(galleryImages)) {
+    galleryImages = galleryImages.galleryImages;
+  }
   const [index, setIndex] = useState(-1);
 
   const items = galleryImages.map((entry) => {

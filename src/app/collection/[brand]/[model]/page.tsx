@@ -5,7 +5,6 @@ import AnalyticsReport from "@/app/components/analytics/analyticsReport";
 import BrandPageTitleComponent from "@/app/components/brandPage/BrandPageTitleComponent";
 import { CaliberDetailComponent } from "@/app/components/caliber/CaliberDetailsComponent";
 import FeatureListingComponent from "@/app/components/common/FeaturesListingComponent";
-import ImageGalleryComponent from "@/app/components/common/ImageGalleryComponent";
 import FooterComponent from "@/app/components/footer/footerComponent";
 import HeaderNavBar from "@/app/components/header/headerComponent";
 import BrandModelPageNotFoundComponent from "@/app/components/notFound/BrandModelPageNotFoundComponent";
@@ -32,10 +31,16 @@ import {
   routeToCollectionBrandModelPage,
   selectBackgroundImage,
 } from "@/app/services/commonFunctions";
+import dynamic from "next/dynamic";
 import { useParams } from "next/navigation";
 import { useEffect, useState } from "react";
 import { Col, Row } from "react-bootstrap";
 import Container from "react-bootstrap/Container";
+
+const ImageGalleryComponent = dynamic(
+  () => import("@/app/components/common/ImageGalleryComponent"),
+  { ssr: false },
+);
 
 export default function BrandModelPage() {
   let { brand, model } = useParams();
@@ -158,7 +163,7 @@ export default function BrandModelPage() {
               <div id="div1" style={{ height: "50dvh" }}>
                 <div id="div2" style={{ height: "inherit", overflow: "auto" }}>
                   {/*SingleImageSwiperWithThumbnailComponent({images:modelDetails.href.default.sliderImages})*/}
-                  {ImageGalleryComponent(modelDetails.href.default.sliderImages)}
+                  <ImageGalleryComponent galleryImages={modelDetails.href.default.sliderImages} />
                 </div>
               </div>
             </Col>

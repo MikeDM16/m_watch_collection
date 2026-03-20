@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(find /c/Users/migue/Documentos/GitHub/m_watch_collection/src -type f -name \"*.tsx\" -exec grep -l \"next/image\\\\|Image from\" {})",
+      "Bash(wc -l /c/Users/migue/Documentos/GitHub/m_watch_collection/src/app/components/*/*.tsx)",
+      "Bash(wc -l /c/Users/migue/Documentos/GitHub/m_watch_collection/src/app/data/*.tsx)",
+      "Bash(grep -r \"placeholder\\\\|blurDataURL\\\\|blur\" /c/Users/migue/Documentos/GitHub/m_watch_collection/src/app/components --include=*.tsx)",
+      "Bash(head -100 /c/Users/migue/Documentos/GitHub/m_watch_collection/src/app/collection/[brand]/[model]/page.tsx)",
+      "Bash(grep -r '<img ' /c/Users/migue/Documentos/GitHub/m_watch_collection/src --include=*.tsx --include=*.jsx)",
+      "Bash(grep -r \"from.*\\\\.\\(jpg\\\\|jpeg\\\\|png\\\\|gif\\\\|webp\\\\|svg\\)\" /c/Users/migue/Documentos/GitHub/m_watch_collection/src --include=*.tsx --include=*.jsx)",
+      "Bash(npm install:*)",
+      "Bash(npm run:*)",
+      "Bash(npx tsc:*)"
+    ]
+  }
+}

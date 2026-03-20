@@ -9,7 +9,9 @@ export interface ImageProps {
   alt?: string;
   width?: number | string;
   height?: number | string;
+  sizes?: string;
   loading?: "eager" | "lazy" | undefined;
+  priority?: boolean;
   className?: string;
   style?: Record<string, string>;
 }
@@ -26,11 +28,12 @@ export default function ImageComponent(props: ImageProps) {
       className={props.className}
       src={imageSrc}
       alt={props.alt || ""}
-      width={0}
-      height={0}
-      sizes="100vw"
-      loading={props.loading || "lazy"}
-      style={merged_styles} // optional
+      width={800}
+      height={800}
+      sizes={props.sizes || "(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"}
+      loading={props.priority ? undefined : props.loading || "lazy"}
+      priority={props.priority}
+      style={merged_styles}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     />
