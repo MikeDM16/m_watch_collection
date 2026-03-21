@@ -906,9 +906,9 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     specialCollectionItem: false,
   },
 
-  'Omega Speedmaster MK40 Triple Date "Schumacher"': {
+  "Omega Speedmaster MK40 Triple Date Schumacher": {
     brand: BrandsEnum.OMEGA,
-    legend: 'Omega Speedmaster MK40 Triple Date "Schumacher"',
+    legend: "Omega Speedmaster MK40 Triple Date Schumacher",
     year: 1998,
     type: WatchTypeEnum.SPORTS,
     srcImage: "public/assets/Images/Omega/1998_Omega_Speedmaster_MK40_triple_date/IMG_7806.JPG",
@@ -1064,9 +1064,9 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     specialCollectionItem: false,
   },
 
-  'Maurice Lacroix Monza "Schumacher" Yellow Chrono': {
+  "Maurice Lacroix Monza Schumacher Yellow Chrono": {
     brand: BrandsEnum.MAURICE_LACROIX,
-    legend: 'Maurice Lacroix Monza "Schumacher" Yellow Chrono',
+    legend: "Maurice Lacroix Monza Schumacher Yellow Chrono",
     year: 1996,
     type: WatchTypeEnum.DRESS,
     srcImage:
@@ -1076,9 +1076,9 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     href: require("./watchModels/Maurice_Lacroix/Maurice_Lacroix_5872_Monza_Schumacher_Chrono_1996"),
     specialCollectionItem: false,
   },
-  'Maurice Lacroix 5393 Monza "Schumacher" Red Chrono': {
+  "Maurice Lacroix 5393 Monza Schumacher Red Chrono": {
     brand: BrandsEnum.MAURICE_LACROIX,
-    legend: 'Maurice Lacroix 5393 Monza "Schumacher" Red Chrono',
+    legend: "Maurice Lacroix 5393 Monza Schumacher Red Chrono",
     year: 1996,
     type: WatchTypeEnum.DRESS,
     srcImage: "public/assets/Images/Maurice_Lacroix/2021_Maurice_Lacroix_5393_Chrono/IMG_8970.JPG",
@@ -1087,9 +1087,9 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     specialCollectionItem: false,
   },
 
-  'Maurice Lacroix 5872 Monza "Schumacher" Chrono': {
+  "Maurice Lacroix 5872 Monza Schumacher Chrono": {
     brand: BrandsEnum.MAURICE_LACROIX,
-    legend: 'Maurice Lacroix 5872 Monza "Schumacher" Chrono',
+    legend: "Maurice Lacroix 5872 Monza Schumacher Chrono",
     year: 1996,
     type: WatchTypeEnum.DRESS,
     srcImage: "public/assets/Images/Maurice_Lacroix/2021_Maurice_Lacroix_5872_Chrono/IMG_8026.JPG",
@@ -2248,9 +2248,9 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     href: require("./watchModels/Tissot/Tissot_Seastar_Automatic_1974"),
     specialCollectionItem: false,
   },
-  'Tissot Seastar "Lobster" Automatic': {
+  "Tissot Seastar Lobster Automatic": {
     brand: BrandsEnum.TISSOT,
-    legend: 'Tissot Seastar "Lobster" Automatic',
+    legend: "Tissot Seastar Lobster Automatic",
     year: 1974,
     type: WatchTypeEnum.CASUAL,
     srcImage: "public/assets/Images/Tissot/1974_Tissot_Seastar/IMG_1006.JPG",
@@ -2675,9 +2675,9 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     href: require("./watchModels/Tissot/Tissot_Visodate_1955"),
     specialCollectionItem: false,
   },
-  " Omega Trésor Honeycomb Cal. 266 18K Gold": {
+  "Omega Trésor Honeycomb Cal. 266 18K Gold": {
     brand: BrandsEnum.OMEGA,
-    legend: " Omega Trésor Honeycomb Cal. 266 18K Gold",
+    legend: "Omega Trésor Honeycomb Cal. 266 18K Gold",
     year: 1952,
     type: WatchTypeEnum.CASUAL,
     srcImage: "public/assets/Images/Omega/1952_Omega_Tresor_Honeycomb_266/IMG_9199.JPG",
@@ -2932,9 +2932,9 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     specialCollectionItem: false,
   },
 
-  'Omega StayBrite "Tank" CK3416': {
+  "Omega StayBrite Tank CK3416": {
     brand: BrandsEnum.OMEGA,
-    legend: 'Omega StayBrite "Tank" CK3416',
+    legend: "Omega StayBrite Tank CK3416",
     year: 1934,
     type: WatchTypeEnum.CASUAL,
     srcImage: "public/assets/Images/Omega/1934_OmegaStaybrite_Tank_CK3516/IMG_0061.JPG",

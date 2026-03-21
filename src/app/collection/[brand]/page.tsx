@@ -76,6 +76,7 @@ export default async function Page({ params }: { params: Promise<{ brand: string
                             ),
                           )}
                           alt={`${entry.legend}`}
+                          priority={idx < 4}
                         />
                         <div className="upper-text">{entry.brand}</div>
                         <em>{entry.legend}</em>

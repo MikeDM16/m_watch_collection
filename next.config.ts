@@ -7,6 +7,7 @@ const withAnalyzer = withBundleAnalyzer({
 
 const nextConfig: NextConfig = {
   images: {
+    formats: ["image/avif", "image/webp"],
     remotePatterns: [
       {
         protocol: "https",
@@ -16,6 +17,27 @@ const nextConfig: NextConfig = {
     ],
     minimumCacheTTL: 2592000, // 30 days
   },
+
+  headers: async () => [
+    {
+      source: "/:all*(svg|jpg|jpeg|png|webp|avif|ico|woff2)",
+      headers: [
+        {
+          key: "Cache-Control",
+          value: "public, max-age=31536000, immutable",
+        },
+      ],
+    },
+    {
+      source: "/:path*",
+      headers: [
+        {
+          key: "Cache-Control",
+          value: "public, max-age=0, s-maxage=86400, stale-while-revalidate=604800",
+        },
+      ],
+    },
+  ],
 
   eslint: {
     dirs: ["src"],

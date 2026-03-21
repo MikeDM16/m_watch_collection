@@ -17,7 +17,7 @@ import { WatchDetails } from "../../watchDetails";
 import { MauriceLacroixBrandSeries } from "./MauriceLacroixBrandSeries";
 
 const details: WatchDetails = {
-  title: '1996 Maurice Lacroix Monza "Schumacher" Chrono',
+  title: "1996 Maurice Lacroix Monza Schumacher Chrono",
 
   sliderImages: [
     "public/assets/Images/Maurice_Lacroix/1996_Maurice_Lacroix_Monza_Schumacher_Chrono/IMG_1002.JPG",

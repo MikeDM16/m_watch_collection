@@ -12,7 +12,12 @@
       "Bash(npm run:*)",
       "Bash(npx tsc:*)",
       "Read(//tmp/**)",
-      "Read(//c/Users/migue/Documentos/GitHub/m_watch_collection/**)"
+      "Read(//c/Users/migue/Documentos/GitHub/m_watch_collection/**)",
+      "Bash(grep -r \"386.0822\\\\|386_0822\" /c/Users/migue/Documentos/GitHub/m_watch_collection/src --include=*.tsx --include=*.ts --include=*.jsx --include=*.js)",
+      "Bash(xargs grep:*)",
+      "Bash(grep -v \"^  \"\"[A-Za-z0-9 ]*\"\": {$\")",
+      "Bash(grep -n \"getPathParameter\\\\|rawBrand\\\\|rawModel\" /c/Users/migue/Documentos/GitHub/m_watch_collection/src/app/collection/[brand]/[model]/page.tsx)",
+      "Bash(npm uninstall:*)"
     ]
   }
 }
