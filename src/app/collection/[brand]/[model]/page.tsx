@@ -34,8 +34,8 @@ import {
 export function generateStaticParams() {
   const allItems = collectionService.getAllCollectionItems();
   return Object.values(allItems).map((entry) => ({
-    brand: encodeURIComponent(entry.brand),
-    model: encodeURIComponent(entry.legend),
+    brand: entry.brand,
+    model: entry.legend,
   }));
 }
 

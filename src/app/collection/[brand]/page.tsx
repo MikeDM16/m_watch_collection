@@ -23,7 +23,7 @@ export function generateStaticParams() {
   const params: { brand: string }[] = [];
   Object.values(allBrands).forEach((brands) => {
     brands.forEach((b) => {
-      params.push({ brand: encodeURIComponent(b.name) });
+      params.push({ brand: b.name });
     });
   });
   return params;
