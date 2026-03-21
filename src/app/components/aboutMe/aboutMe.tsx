@@ -1,7 +1,6 @@
+"use client";
+
 import { getExternalResource, getIconWithTextCentered } from "@/app/services/commonFunctions";
-import Col from "react-bootstrap/Col";
-import Container from "react-bootstrap/Container";
-import Row from "react-bootstrap/Row";
 import { IoMdPerson } from "react-icons/io";
 
 import ImageComponent from "../common/ImageComponent";
@@ -14,12 +13,12 @@ export default function AboutMeContainer() {
     <div>
       <div id="AboutMe">{PageTitleDivisionComponent({ title: "About Me" })}</div>
 
-      <Container className="centered-text">
-        <Row>
-          <Col className="col-md-2 ">
+      <div className="section-container centered-text">
+        <div className="grid grid-cols-12 gap-4">
+          <div className="col-span-12 md:col-span-2">
             <ImageComponent src={getExternalResource(aboutMe_photo)} alt="Photo of Me" />
-          </Col>
-          <Col className="col-md-8 col-12 ">
+          </div>
+          <div className="col-span-12 md:col-span-8">
             <div className="container-title">
               <p>
                 {"They don't only tell the the time."}
@@ -43,9 +42,9 @@ export default function AboutMeContainer() {
                 </p>
               </div>
             </div>
-          </Col>
-        </Row>
-      </Container>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

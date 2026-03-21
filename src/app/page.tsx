@@ -1,67 +1,41 @@
-"use client";
-
 import FooterComponent from "@/app/components/footer/footerComponent";
 import HeaderNavBar from "@/app/components/header/headerComponent";
-import dynamic from "next/dynamic";
 import Image from "next/image";
 import Link from "next/link";
-import React, { useEffect, useState } from "react";
-import Col from "react-bootstrap/Col";
-import Container from "react-bootstrap/Container";
-import Row from "react-bootstrap/Row";
 
-import AnalyticsReport from "./components/analytics/analyticsReport";
+import AboutMeContainer from "./components/aboutMe/aboutMe";
+import AnalyticsReporter from "./components/analytics/AnalyticsReporter";
 import BrandTitleDivisionComponent from "./components/brandPage/BrandTitleDivisionComponent";
 import PageTitleDivisionComponent from "./components/common/pageTitleDivisionComponent";
+import ContactsComponent from "./components/contacts/contacts";
+import PreviousSalesComponent from "./components/previousSales/previousSalesComponent";
+import SpecialItemsComponent from "./components/specialItems/specialItemsComponent";
 import { Brand } from "./data/brands";
 import brandsService from "./services/brandsService";
 import collectionService from "./services/collectionService";
 import { getExternalResource, routeToCollectionBrandPage } from "./services/commonFunctions";
 
-const SpecialItemsComponent = dynamic(
-  () => import("./components/specialItems/specialItemsComponent"),
-  { ssr: false },
-);
-const PreviousSalesComponent = dynamic(
-  () => import("./components/previousSales/previousSalesComponent"),
-  { ssr: false },
-);
-const AboutMeContainer = dynamic(() => import("./components/aboutMe/aboutMe"), { ssr: false });
-const ContactsComponent = dynamic(() => import("./components/contacts/contacts"), {
-  ssr: false,
-});
-
 export default function Page() {
-  const [mainBrands] = useState(brandsService.getMainBrands());
-  const [allBrands] = useState(brandsService.getAllBrands());
-
-  useEffect(() => {
-    AnalyticsReport({ page: "home", title: "MWatchCollection" });
-  }, []);
-
-  const brandColOnClickHandler = (brandName: string): string => {
-    return routeToCollectionBrandPage(brandName);
-  };
+  const mainBrands = brandsService.getMainBrands();
+  const allBrands = brandsService.getAllBrands();
 
   const mainBrandsTable = () => {
-    // Single row with all the columns in 1 line. boostrap table will adjust the table based on the provided sizes
     return (
       <div>
         <SpecialItemsComponent />
 
-        <Container>
+        <div className="section-container">
           <div className="container-title centered-container">Main Brands</div>
-        </Container>
+        </div>
 
-        <Container>
-          <Row key="single_main_brands_row" {...{ xs: 2, sm: 3, md: 4, lg: 5, xl: 6 }}>
+        <div className="section-container">
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4">
             {mainBrands.map((entry) => (
-              // For each brand the is a colum with a image and a click callback
-              <Col
+              <div
                 key={`brand_icon_${entry.name}`}
                 className="centered-container hover-animation bottom-margin-s"
               >
-                <Link href={brandColOnClickHandler(entry.name)}>
+                <Link href={routeToCollectionBrandPage(entry.name)}>
                   <Image
                     key={`brand_icon_image_${entry.name}`}
                     src={getExternalResource(entry.logoImg)}
@@ -71,10 +45,10 @@ export default function Page() {
                     loading="lazy"
                   />
                 </Link>
-              </Col>
+              </div>
             ))}
-          </Row>
-        </Container>
+          </div>
+        </div>
       </div>
     );
   };
@@ -89,13 +63,12 @@ export default function Page() {
           {key_letter}
         </div>
         {brandNames.map((entry: Brand) => {
-          // Each branch is the list is a simple name with a click callback
           return (
-            <Col key={`brand_${entry.name}`} className={"border-bottom-text"}>
-              <Link href={brandColOnClickHandler(entry.name)} className="info-text">
+            <div key={`brand_${entry.name}`} className={"border-bottom-text"}>
+              <Link href={routeToCollectionBrandPage(entry.name)} className="info-text">
                 {entry.name}
               </Link>
-            </Col>
+            </div>
           );
         })}
       </div>
@@ -108,51 +81,51 @@ export default function Page() {
 
     return (
       <div>
-        <div id="AllBrandsItems">{PageTitleDivisionComponent({ title: "All Brands" })}</div>
+        <div id="AllBrandsItems">
+          <PageTitleDivisionComponent title="All Brands" />
+        </div>
 
-        <Container>
-          <Row className="centered-text bottom-margin-m feature-text ">
+        <div className="section-container">
+          <div className="grid grid-cols-3 gap-4 centered-text bottom-margin-m feature-text">
             {Object.entries(collectionStats).map(([statKey, statValue], idx) => {
               return (
-                <Col key={`stat_listing_${idx}`}>
+                <div key={`stat_listing_${idx}`}>
                   <b>{statValue}+</b>
                   <br />
-                  <a>{statKey}</a>
-                </Col>
+                  <span>{statKey}</span>
+                </div>
               );
             })}
-          </Row>
-          <Row {...{ xs: 2, xl: 4 }}>
+          </div>
+          <div className="grid grid-cols-2 xl:grid-cols-4 gap-4">
             {[0, 1, 2, 3].map((idx) => {
               return (
-                <Col key={`brands_listing_${idx}`}>
+                <div key={`brands_listing_${idx}`}>
                   {Object.entries(allBrands)
                     .slice(idx * offset, idx * offset + offset)
                     .map(([key_letter, brandNames]) => {
                       return ListBrandsForLetter(key_letter, brandNames);
                     })}
-                </Col>
+                </div>
               );
             })}
-          </Row>
-        </Container>
+          </div>
+        </div>
       </div>
     );
   };
 
   return (
     <div>
-      {HeaderNavBar()}
-      {BrandTitleDivisionComponent({
-        title: `M Watch Collection`,
-        textAlignement: "center",
-      })}
+      <HeaderNavBar />
+      <AnalyticsReporter page="home" title="MWatchCollection" />
+      <BrandTitleDivisionComponent title="M Watch Collection" textAlignement="center" />
       {mainBrandsTable()}
       {ListAllBrandsGroupByLetter()}
       <AboutMeContainer />
       <PreviousSalesComponent />
       <ContactsComponent />
-      {FooterComponent()}
+      <FooterComponent />
     </div>
   );
 }

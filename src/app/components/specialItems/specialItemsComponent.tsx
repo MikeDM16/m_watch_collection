@@ -1,3 +1,5 @@
+"use client";
+
 import collectionService from "@/app/services/collectionService";
 import {
   getExternalResource,
@@ -5,7 +7,6 @@ import {
   routeToCollectionBrandModelPage,
   SizeType,
 } from "@/app/services/commonFunctions";
-import { Container } from "react-bootstrap";
 
 import ImageSliderComponent, { ImageSliderEntry } from "../common/ImageSliderComponent";
 import SearchBarComponent from "../searchBar/searchBarComponent";
@@ -27,23 +28,22 @@ export default function SpecialItemsComponent() {
 
   return (
     <div className="centered-text">
-      <Container>
+      <div className="section-container">
         <div className="container-title centered-container">Special Timepieces</div>
         <div className="centered-text">
-          <a>
-            {
-              "Here we can find the details about the watches that I've come across since I started building my collection."
-            }
-          </a>
+          <span>
+            Here we can find the details about the watches that I&apos;ve come across since I
+            started building my collection.
+          </span>
           <br />
-          <a>Either </a>
+          <span>Either </span>
           <b>search</b>
-          <a> or </a>
-          <b>click</b> <a> over the slideshow entries to open their detail page.</a>
+          <span> or </span>
+          <b>click</b> <span>over the slideshow entries to open their detail page.</span>
         </div>
         <SearchBarComponent />
-      </Container>
-      <Container>{ImageSliderComponent(swiperItems)}</Container>
+      </div>
+      <div className="section-container">{ImageSliderComponent(swiperItems)}</div>
     </div>
   );
 }

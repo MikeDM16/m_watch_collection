@@ -3,10 +3,8 @@ import { Geist, Geist_Mono } from "next/font/google";
 
 import "./globals.css";
 import "swiper/css";
-import "bootstrap/dist/css/bootstrap.min.css";
 import "react-photo-album/rows.css";
 import "react-light-accordion/demo/css/index.css";
-//  import after bootstrap css
 import "./styles/container.css";
 
 const geistSans = Geist({

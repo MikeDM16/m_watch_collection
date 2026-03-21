@@ -1,10 +1,11 @@
+"use client";
+
 import collectionService from "@/app/services/collectionService";
 import {
   getExternalResource,
   getSaleReportImage,
   routeToCollectionBrandModelPage,
 } from "@/app/services/commonFunctions";
-import Container from "react-bootstrap/Container";
 
 import ImageSliderComponent, { ImageSliderEntry } from "../common/ImageSliderComponent";
 import PageTitleDivisionComponent from "../common/pageTitleDivisionComponent";
@@ -44,12 +45,12 @@ export default function PreviousSalesComponent() {
       <div id="PreviousSales">
         {PageTitleDivisionComponent({ title: "Previous Sales History" })}
       </div>
-      <Container className="centered-text">
-        <div>
+      <div className="section-container centered-text">
+        <div className="mb-6">
           <p>Some links to my previous auctions at Catawiki!</p>
         </div>
         {ImageSliderComponent(swiperItems)}
-      </Container>
+      </div>
     </div>
   );
 }

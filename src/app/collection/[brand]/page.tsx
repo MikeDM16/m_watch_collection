@@ -1,6 +1,4 @@
-"use client";
-
-import AnalyticsReport from "@/app/components/analytics/analyticsReport";
+import AnalyticsReporter from "@/app/components/analytics/AnalyticsReporter";
 import BrandPageTitleComponent from "@/app/components/brandPage/BrandPageTitleComponent";
 import ImageComponent from "@/app/components/common/ImageComponent";
 import FooterComponent from "@/app/components/footer/footerComponent";
@@ -19,59 +17,52 @@ import {
   SizeType,
 } from "@/app/services/commonFunctions";
 import Link from "next/link";
-import { useParams } from "next/navigation";
-import React, { useEffect, useState } from "react";
-import { Col, Row } from "react-bootstrap";
-import Container from "react-bootstrap/Container";
 
-export default function Page() {
-  let { brand } = useParams();
+export function generateStaticParams() {
+  const allBrands = brandsService.getAllBrands();
+  const params: { brand: string }[] = [];
+  Object.values(allBrands).forEach((brands) => {
+    brands.forEach((b) => {
+      params.push({ brand: encodeURIComponent(b.name) });
+    });
+  });
+  return params;
+}
 
-  brand = getPathParameter(brand as string);
-  const [brandDetails] = useState(brandsService.getBrandInformation(brand));
-
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  useEffect(() => {
-    AnalyticsReport({ page: routeToCollectionBrandPage(brand), title: brand });
-  }, []);
+export default async function Page({ params }: { params: Promise<{ brand: string }> }) {
+  const { brand: rawBrand } = await params;
+  const brand = getPathParameter(rawBrand);
+  const brandDetails = brandsService.getBrandInformation(brand);
 
   if (!brand || !brandDetails) {
-    return BrandPageNotFoundComponent(brand);
+    return <BrandPageNotFoundComponent unknownBrand={brand} />;
   }
 
   const brandModels: Record<string, CollectionEntry[]> =
-    collectionService.getCollectionModelsByBrand(brand as string, brandDetails.displayBySeries);
-
-  const brandModelOnClickHandler = (brandName: string, modelName: string): string => {
-    return routeToCollectionBrandModelPage(brandName, modelName);
-  };
+    collectionService.getCollectionModelsByBrand(brand, brandDetails.displayBySeries);
 
   const renderCollectionItem = () => {
     return (
-      <Container
+      <div
         key={`brand_container_${brand}`}
-        className="extended-screen-container centered-text"
+        className="section-container extended-screen-container centered-text"
       >
         {Object.entries(brandModels).map(([seriesName, seriesModels]) => {
           return (
             <div key={`brand_${brand}_series_${seriesName}`} className="bottom-margin-m">
-              <div key={`brand_${brand}_series_${seriesName}_title`} className="container-title ">
+              <div key={`brand_${brand}_series_${seriesName}_title`} className="container-title">
                 <p className="border-bottom-text">{seriesName}</p>
               </div>
 
-              <Row
-                key={`brand_row_${brand}`}
-                {...{ xs: 2, sm: 3, md: 4, lg: 4, xl: 5 }}
-                className="centered-container"
-              >
+              <div key={`brand_row_${brand}`} className="flex flex-wrap justify-center gap-4">
                 {Object.values(seriesModels).map((entry, idx) => {
                   return (
-                    <Col
+                    <div
                       key={`brand_${brand}_series_${seriesName}_model_${idx}`}
-                      className="hover-animation bottom-margin-m"
+                      className="hover-animation bottom-margin-m w-[calc(50%-0.5rem)] sm:w-[calc(33%-0.5rem)] md:w-[calc(25%-0.75rem)] xl:w-[calc(20%-0.8rem)]"
                     >
                       <Link
-                        href={brandModelOnClickHandler(brand, entry.legend)}
+                        href={routeToCollectionBrandModelPage(brand, entry.legend)}
                         className="info-text link"
                       >
                         <ImageComponent
@@ -86,36 +77,30 @@ export default function Page() {
                           )}
                           alt={`${entry.legend}`}
                         />
-                        <div
-                          key={`brand_${brand}_series_${seriesName}_model_${idx}_title1`}
-                          className="upper-text"
-                        >
-                          {entry.brand}
-                        </div>
-                        <em key={`brand_${brand}_series_${seriesName}_model_${idx}_title2`}>
-                          {entry.legend}
-                        </em>
-                        <div key={`brand_${brand}_series_${seriesName}_model_${idx}_title3`}>
+                        <div className="upper-text">{entry.brand}</div>
+                        <em>{entry.legend}</em>
+                        <div>
                           <b>{entry.year}</b>
                         </div>
                       </Link>
-                    </Col>
+                    </div>
                   );
                 })}
-              </Row>
+              </div>
             </div>
           );
         })}
-      </Container>
+      </div>
     );
   };
 
   return (
     <div>
-      {HeaderNavBar()}
-      {BrandPageTitleComponent(brandDetails)}
+      <HeaderNavBar />
+      <AnalyticsReporter page={routeToCollectionBrandPage(brand)} title={brand} />
+      <BrandPageTitleComponent brand={brandDetails} />
       {renderCollectionItem()}
-      {FooterComponent({ backgroudImage: selectBackgroundImage(brandDetails.backgrounImages) })}
+      <FooterComponent backgroudImage={selectBackgroundImage(brandDetails.backgrounImages)} />
     </div>
   );
 }

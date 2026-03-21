@@ -1,3 +1,5 @@
+"use client";
+
 import { CollectionEntry } from "@/app/data/collectionData";
 import collectionService from "@/app/services/collectionService";
 import {
@@ -11,7 +13,6 @@ import { Input } from "@/components/ui/input";
 import { Search } from "lucide-react";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
-import { Image } from "react-bootstrap";
 
 export default function SearchBarComponent() {
   const data: Record<string, CollectionEntry> = collectionService.getAllCollectionItems();
@@ -83,7 +84,7 @@ export default function SearchBarComponent() {
                     key={index}
                     className="p-2 flex items-center gap-3 hover:bg-gray-100 rounded cursor-pointer"
                   >
-                    <Image className="w-8 h-8 object-cover" src={imagesrc} alt={hrefText} />
+                    <img className="w-8 h-8 object-cover" src={imagesrc} alt={hrefText} />
                     {hrefText}
                   </li>
                 </Link>

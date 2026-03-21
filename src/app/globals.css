@@ -13,11 +13,13 @@
   margin-bottom: 2rem;
 }
 
-.min-padded-left {
-  padding-left: 2%;
-}
-.padded-left {
+.responsive-padded-left {
   padding-left: 10%;
+}
+@media (max-width: 768px) {
+  .responsive-padded-left {
+    padding-left: 2%;
+  }
 }
 
 .header-navbar-entry {
@@ -27,7 +29,7 @@
 }
 
 .header-navbar-entry:hover {
-  color: #c40d2e;
+  color: var(--color-brand);
 }
 
 .centered-container {
@@ -42,18 +44,20 @@
 
 .page-division {
   position: relative;
-  width: 100dvw;
+  width: 100%;
   min-height: 20dvh;
   background-position: center;
   background-size: cover;
   margin: auto;
 }
 
-.main-title-division {
+.title-division {
   min-height: 35dvh;
 }
-.mobile-main-title-division {
-  min-height: 55dvh;
+@media (max-width: 768px) {
+  .title-division {
+    min-height: 55dvh;
+  }
 }
 
 .page-title-overlay-aligned {
@@ -64,27 +68,24 @@
   background-color: rgba(0, 0, 0, 0.5);
 }
 
-.btn-outline-danger {
-  border: #ffffff;
-  --bs-btn-hover-bg: #c40d2f44;
-}
-
 .link {
   text-decoration: none; /* Optional: Remove underline */
   transition: color 0.3s ease; /* Smooth transition */
 }
 
 .link:hover {
-  color: #c40d2e; /* Hover color */
+  color: var(--color-brand); /* Hover color */
 }
 
 .hover-animation {
-  text-decoration: none; /* Optional: Remove underline */
-  transition: color 0.3s ease; /* Smooth transition */
+  text-decoration: none;
+  transition:
+    color 0.3s ease,
+    background-color 0.3s ease;
 }
 
 .hover-animation:hover {
-  color: #c40d2e; /* Hover color */
+  color: var(--color-brand);
   background-color: #c5718044;
 }
 
@@ -134,6 +135,7 @@
     --chart-3: 197 37% 24%;
     --chart-4: 43 74% 66%;
     --chart-5: 27 87% 67%;
+    --color-brand: #c40d2e;
     --radius: 0.5rem;
   }
   .dark {

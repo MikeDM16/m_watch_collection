@@ -1,3 +1,5 @@
+"use client";
+
 import { motion } from "framer-motion";
 import { ReactElement, useState } from "react";
 import { FaMinus, FaPlus } from "react-icons/fa6";
@@ -7,7 +9,7 @@ export interface AccordionEntry {
   content: string | ReactElement;
 }
 
-export default function AccordionFunction(items: AccordionEntry[]) {
+export default function AccordionFunction({ items }: { items: AccordionEntry[] }) {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   const toggleAccordion = (index: number) => {

@@ -7,13 +7,13 @@
 }
 
 .feature-text {
-  color: #c40d2e;
+  color: var(--color-brand);
   font-size: 1.5rem;
 }
 
 .border-bottom-text {
   border-bottom-width: 0.1rem;
-  border-bottom-color: "black";
+  border-bottom-color: black;
   position: relative;
   margin-bottom: 1rem;
 }
@@ -27,11 +27,13 @@
   font-family: "Goudy old Style";
   font-style: italic;
   font-weight: bold;
+  font-size: 1.25rem;
   color: white;
 }
 
 .header-navbar-link {
   color: rgb(180, 180, 180);
+  font-size: 0.95rem;
 }
 
 .container-title {
@@ -39,7 +41,7 @@
   /* For the watch features list  */
   /*font-family: Verdana, sans-serif;*/
   font-size: 1.6rem;
-  color: #c40d2e;
+  color: var(--color-brand);
 }
 
 .main-page-title {

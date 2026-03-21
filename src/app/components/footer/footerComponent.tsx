@@ -5,19 +5,15 @@ import {
 } from "@/app/services/commonFunctions";
 import Link from "next/link";
 import { IoMdArrowRoundUp } from "react-icons/io";
-import { useMediaQuery } from "react-responsive";
 
 export interface FooterComponentProps {
   backgroudImage?: string;
 }
 
 export default function FooterComponent(props?: FooterComponentProps) {
-  const isMobile = useMediaQuery({ maxWidth: 768 });
-  const titleClassName = isMobile ? "mobile-main-title-division" : "main-title-division";
-
   return (
     <div
-      className={`page-division  ${titleClassName} title-white-color`}
+      className={`page-division title-division title-white-color`}
       style={{
         backgroundImage: `url(${getExternalResource(props?.backgroudImage || background_images_paths[1])})`,
       }}

@@ -7,7 +7,7 @@ import {
 
 import BrandTitleDivisionComponent from "./BrandTitleDivisionComponent";
 
-export default function BrandPageTitleComponent(brandDetails: Brand) {
+export default function BrandPageTitleComponent({ brand: brandDetails }: { brand: Brand }) {
   const brandName = brandDetails.name;
 
   const getBrandFoundedText = (): string => {
@@ -24,18 +24,18 @@ export default function BrandPageTitleComponent(brandDetails: Brand) {
 
   return (
     <div>
-      {BrandTitleDivisionComponent({
-        title: `${brandName}`,
-        textAlignement: "left",
-        description: brandDetails.description,
-        founded: getBrandFoundedText(),
-        website: brandDetails.website,
-        srcImage: selectBackgroundImage(brandDetails.backgrounImages),
-        navigationPath: {
+      <BrandTitleDivisionComponent
+        title={`${brandName}`}
+        textAlignement="left"
+        description={brandDetails.description}
+        founded={getBrandFoundedText()}
+        website={brandDetails.website}
+        srcImage={selectBackgroundImage(brandDetails.backgrounImages)}
+        navigationPath={{
           MWatchCollection: routeToMainPageHeader(),
           "All Brands": routeToMainPageAllBrandListing(),
-        },
-      })}
+        }}
+      />
     </div>
   );
 }

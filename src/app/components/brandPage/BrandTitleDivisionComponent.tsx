@@ -4,7 +4,6 @@ import {
   routeToCollectionBrandPage,
 } from "@/app/services/commonFunctions";
 import Link from "next/link";
-import { useMediaQuery } from "react-responsive";
 
 export interface BrandTitleDivisionProps {
   title: string;
@@ -17,12 +16,10 @@ export interface BrandTitleDivisionProps {
 }
 
 export default function BrandTitleDivisionComponent(props: BrandTitleDivisionProps) {
-  const isMobile = useMediaQuery({ maxWidth: 768 });
-
   const textClassName = props.textAlignement == "left" ? "left-text" : "centered-text";
-  const paddedClassName = isMobile ? "min-padded-left" : "padded-left";
 
-  const navigation = Object.entries(props.navigationPath ?? {}).map(([path, reference]) => {
+  const navigationEntries = Object.entries(props.navigationPath ?? {});
+  const navigation = navigationEntries.map(([path, reference], idx) => {
     return (
       <span key={`span_navigation_${path}`}>
         <Link
@@ -32,22 +29,21 @@ export default function BrandTitleDivisionComponent(props: BrandTitleDivisionPro
         >
           {`${path}`}
         </Link>
-        <span>{" / "}</span>
+        {idx < navigationEntries.length - 1 && <span>{" / "}</span>}
       </span>
     );
   });
 
-  const titleClassName = isMobile ? "mobile-main-title-division" : "main-title-division";
   return (
     <div
-      className={`page-division ${titleClassName} `}
+      className={`page-division title-division`}
       style={{
         backgroundImage: `url(${getExternalResource(props.srcImage || background_images_paths[0])})`,
       }}
     >
       <div className={`page-title-overlay-aligned title-white-color ${textClassName}`}>
         {/** Layout need to be inside this div, because of the previous overlay */}
-        <div className={`${textClassName} ${paddedClassName}`}>
+        <div className={`${textClassName} responsive-padded-left`}>
           <div className="">{navigation}</div>
 
           <div className="header-title upper-text">

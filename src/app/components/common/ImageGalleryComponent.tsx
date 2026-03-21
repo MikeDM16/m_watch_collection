@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useState } from "react";
 import Lightbox from "yet-another-react-lightbox";
 // import optional lightbox plugins
@@ -22,13 +24,7 @@ import {
 } from "@/app/services/commonFunctions";
 import { RowsPhotoAlbum } from "react-photo-album";
 
-export default function ImageGalleryComponent(
-  galleryImages: string[] | { galleryImages: string[] },
-) {
-  // Support both direct call and JSX props patterns
-  if (!Array.isArray(galleryImages)) {
-    galleryImages = galleryImages.galleryImages;
-  }
+export default function ImageGalleryComponent({ galleryImages }: { galleryImages: string[] }) {
   const [index, setIndex] = useState(-1);
 
   const items = galleryImages.map((entry) => {

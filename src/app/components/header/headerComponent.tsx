@@ -5,14 +5,14 @@ import {
 } from "@/app/services/commonFunctions";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
-import Container from "react-bootstrap/Container";
-import Nav from "react-bootstrap/Nav";
-import Navbar from "react-bootstrap/Navbar";
+import Link from "next/link";
 import { IconType } from "react-icons";
 import { FaArchive } from "react-icons/fa";
 import { MdEmail, MdPerson } from "react-icons/md";
 import { PiMagnifyingGlassPlus } from "react-icons/pi";
 import { RiAuctionLine } from "react-icons/ri";
+
+import MobileMenuToggle from "./MobileMenuToggle";
 
 interface NavBarItem {
   reference: string;
@@ -58,28 +58,29 @@ export default function HeaderNavBar() {
   ];
   return (
     <>
-      <Navbar id="start" expand="lg" className="navbar-dark bg-dark" fixed="top" sticky="top">
-        <Container fluid>
-          <Navbar.Brand href={routeToMainPageHeader()}>
+      <nav id="start" className="fixed top-0 w-full bg-gray-900 z-50">
+        <div className="flex flex-wrap items-center gap-4 px-4 py-3">
+          <Link href={routeToMainPageHeader()} className="no-underline">
             <div className="header-navbar-title">M Watch Collection</div>
-          </Navbar.Brand>
-          <Navbar.Toggle aria-controls="navbarScroll" />
-          <Navbar.Collapse id="navbarScroll" className="header-navbar-entry header-navbar-link">
-            <Nav className="my-lg-0 my-2 me-auto" style={{ maxHeight: "50dvh" }} navbarScroll>
+          </Link>
+          <MobileMenuToggle>
+            <ul className="flex flex-col lg:flex-row my-2 lg:my-0 gap-3 max-h-[50dvh] overflow-auto list-none p-0">
               {references.map((entry) => {
                 return (
-                  <Nav.Link key={`nav_link_${entry.reference}`} href={`${entry.reference}`}>
-                    {" "}
-                    <div className="header-navbar-entry header-navbar-link">
+                  <li key={`nav_link_${entry.reference}`}>
+                    <Link
+                      href={entry.reference}
+                      className="header-navbar-entry header-navbar-link no-underline"
+                    >
                       {getIconWithTextCentered(entry.icon, entry.text)}
-                    </div>
-                  </Nav.Link>
+                    </Link>
+                  </li>
                 );
               })}
-            </Nav>
-          </Navbar.Collapse>
-        </Container>
-      </Navbar>
+            </ul>
+          </MobileMenuToggle>
+        </div>
+      </nav>
       {vercel_analytics}
     </>
   );

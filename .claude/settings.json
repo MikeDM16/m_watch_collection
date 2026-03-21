@@ -10,7 +10,9 @@
       "Bash(grep -r \"from.*\\\\.\\(jpg\\\\|jpeg\\\\|png\\\\|gif\\\\|webp\\\\|svg\\)\" /c/Users/migue/Documentos/GitHub/m_watch_collection/src --include=*.tsx --include=*.jsx)",
       "Bash(npm install:*)",
       "Bash(npm run:*)",
-      "Bash(npx tsc:*)"
+      "Bash(npx tsc:*)",
+      "Read(//tmp/**)",
+      "Read(//c/Users/migue/Documentos/GitHub/m_watch_collection/**)"
     ]
   }
 }
