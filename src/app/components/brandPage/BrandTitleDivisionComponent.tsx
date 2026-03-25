@@ -55,8 +55,8 @@ export default function BrandTitleDivisionComponent(props: BrandTitleDivisionPro
               {props.title}
             </Link>
           </div>
-          <em>{props.description}</em>
-          <div>{props.founded}</div>
+          <em className="mt-2 block">{props.description}</em>
+          <div className="mt-1">{props.founded}</div>
           <Link
             className="info-text title-white-color link"
             href={props.website ?? ""}

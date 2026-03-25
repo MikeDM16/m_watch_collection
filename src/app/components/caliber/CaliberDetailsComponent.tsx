@@ -21,10 +21,7 @@ export const CaliberDetailComponent = (caliberDetails: Caliber) => {
           .map(([key, value]) => {
             const displayText = CaliberTechinicalDetailskeyToDisplayTextmappings?.[key] || key;
             return (
-              <div
-                className="capitalize-text"
-                key={`caliber_information_${key}`}
-              >
+              <div className="capitalize-text" key={`caliber_information_${key}`}>
                 <b>{displayText}</b>
                 <p>{value}</p>
               </div>

@@ -40,7 +40,7 @@ export default function FeatureListingComponent({
         {Object.entries(features).map(([key, value]) => {
           const displayText = keyToDisplayTextmappings?.[key] || key;
           return (
-            <div key={`model_information_${key}`}>
+            <div key={`model_information_${key}`} className="mb-3">
               <b className="capitalize-text">{displayText}</b>
               <p>{value}</p>
             </div>

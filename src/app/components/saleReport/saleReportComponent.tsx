@@ -7,7 +7,11 @@ import ImageComponent from "../common/ImageComponent";
 export default function saleReportComponent(saleReport: SellReport, baseImgSrc: string) {
   const saleReportImg = getSaleReportImage(baseImgSrc);
   const linkDiv = saleReport.url ? (
-    <Link target="_blank" href={saleReport.url} className="text-blue-600 underline hover:text-blue-800">
+    <Link
+      target="_blank"
+      href={saleReport.url}
+      className="text-blue-600 underline hover:text-blue-800"
+    >
       Original auction link
     </Link>
   ) : undefined;

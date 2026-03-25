@@ -42,7 +42,6 @@
 }
 
 .page-division {
-  position: relative;
   width: 100%;
   min-height: 20dvh;
   background-position: center;
@@ -60,11 +59,12 @@
 }
 
 .page-title-overlay-aligned {
-  position: absolute;
-  inset: 0;
+  position: relative;
   display: flex;
   align-items: center;
   background-color: rgba(0, 0, 0, 0.5);
+  padding: 8rem 0 2rem;
+  min-height: inherit;
 }
 
 .link {

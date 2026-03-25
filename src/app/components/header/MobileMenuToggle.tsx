@@ -22,7 +22,7 @@ export default function MobileMenuToggle({ children }: { children: React.ReactNo
         id="navbarScroll"
         className="lg:!max-h-none lg:!block overflow-hidden transition-all duration-300 ease-in-out w-full lg:w-auto"
         style={{
-          maxHeight: isOpen ? `${contentRef.current?.scrollHeight ?? 500}px` : "0px",
+          maxHeight: isOpen ? `${(contentRef.current?.scrollHeight ?? 500) + 20}px` : "0px",
         }}
       >
         <div ref={contentRef}>{children}</div>

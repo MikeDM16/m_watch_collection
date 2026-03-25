@@ -150,7 +150,12 @@ export default async function BrandModelPage({
       <BrandPageTitleComponent brand={brandDetails} />
       <div>
         <div className="section-container">
-          <div className="container-title centered-container">{modelName}</div>
+          <div
+            className="container-title centered-container"
+            style={{ textAlign: "center", width: "100%" }}
+          >
+            {modelName}
+          </div>
         </div>
         <div className="section-container">
           <div className="grid grid-cols-12 gap-4">

@@ -59,12 +59,12 @@ export default function HeaderNavBar() {
   return (
     <>
       <nav id="start" className="fixed top-0 w-full bg-gray-900 z-50">
-        <div className="flex flex-wrap items-center gap-4 px-4 py-3">
+        <div className="flex flex-wrap items-center gap-4 px-4 py-1">
           <Link href={routeToMainPageHeader()} className="no-underline">
             <div className="header-navbar-title">M Watch Collection</div>
           </Link>
           <MobileMenuToggle>
-            <ul className="flex flex-col lg:flex-row my-2 lg:my-0 gap-3 max-h-[50dvh] overflow-auto list-none p-0">
+            <ul className="flex flex-col lg:flex-row my-2 lg:my-0 gap-3 max-h-[70dvh] overflow-auto list-none p-0 pb-2">
               {references.map((entry) => {
                 return (
                   <li key={`nav_link_${entry.reference}`}>
