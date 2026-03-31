@@ -1,5 +1,6 @@
 export const CaliberBrandsEnum = {
   AS: "A. Schild",
+  BREITLING: "Breitling",
   CERTINA: "Certina",
   DUBOIS_DEPRAZ: "Dubois Depraz",
   DOXA: "Doxa",
@@ -59,6 +60,7 @@ export const JewelsNumberEnum = {
   J_30: "30 (Thirty) Jewels",
   J_31: "31 (Thirty-One) Jewels",
   J_37: "37 (Thirty-Seven) Jewels",
+  J_38: "38 (Thirty-Eigth) Jewels",
   J_39: "39 (Thirty-Nine) Jewels",
   J_40: "40 (Forty) Jewels",
 };

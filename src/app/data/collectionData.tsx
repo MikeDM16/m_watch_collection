@@ -338,10 +338,22 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     href: require("./watchModels/Zodiac/Zodiac_Sea_Dragon_ZO2237_2014"),
     specialCollectionItem: false,
   },
+  "Porsche Design Dashboard P6620 Titanium": {
+    brand: BrandsEnum.PORSCHE_DESIGN,
+    legend: "Porsche Design Dashboard P6620 Titanium",
+    year: 2012,
+    type: WatchTypeEnum.SPORTS,
+    srcImage:
+      "public/assets/Images/Porsche_Design/2012_Porsche_Design_Dashboard_P6620_Blue/IMG_2180.JPG",
+    hoverSrc:
+      "public/assets/Images/Porsche_Design/2012_Porsche_Design_Dashboard_P6620_Blue/IMG_2203.JPG",
+    href: require("./watchModels/Porsche_Design/Porsche_Design_P6620_Blue_Titanium_2012"),
+    specialCollectionItem: false,
+  },
   "Porsche Design Dashboard P6612/17 Titanium": {
     brand: BrandsEnum.PORSCHE_DESIGN,
     legend: "Porsche Design Dashboard P6612/17 Titanium",
-    year: 2012,
+    year: 2008,
     type: WatchTypeEnum.SPORTS,
     srcImage:
       "public/assets/Images/Porsche_Design/2005_Porsche Design_Dashboard_P662_17_2_Red_Titanium/IMG_7069.JPG",
@@ -864,6 +876,18 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     href: require("./watchModels/Tissot/Tissot_Sports_E662_2000"),
     specialCollectionItem: false,
   },
+  "Pryngeps Timonier Rattrapante Chronograph": {
+    brand: BrandsEnum.PRYNGEPS,
+    legend: "Pryngeps Timonier Rattrapante Chronograph",
+    year: 2000,
+    type: WatchTypeEnum.SPORTS,
+    srcImage:
+      "public/assets/Images/Pryngeps/2000_Pryngeps_Timonier_Ratrappante_27_jewels/IMG_2220.JPG",
+    hoverSrc:
+      "public/assets/Images/Pryngeps/2000_Pryngeps_Timonier_Ratrappante_27_jewels/IMG_2213.JPG",
+    href: require("./watchModels/Pryngeps/Pryngeps_Timonier_Rattrapante_2000"),
+    specialCollectionItem: false,
+  },
   "Chopard Mille Miglia Titanium": {
     brand: BrandsEnum.CHOPARD,
     legend: "Chopard Mille Miglia Titanium",
@@ -883,6 +907,17 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     hoverSrc: "public/assets/Images/Tissot/2000_Tissot_Sport_Chrono/IMG_0503.JPG",
     href: require("./watchModels/Tissot/Tissot_Sports_E662_Chrono_2000"),
     specialCollectionItem: false,
+  },
+
+  "Breitling Navitimer Premier A40035": {
+    brand: BrandsEnum.BREITLING,
+    legend: "Breitling Navitimer Premier A40035",
+    year: 1999,
+    type: WatchTypeEnum.CASUAL,
+    srcImage: "public/assets/Images/Breitling/1999_Breitling_Navitimer_Premier_A40035/IMG_2072.JPG",
+    hoverSrc: "public/assets/Images/Breitling/1999_Breitling_Navitimer_Premier_A40035/IMG_2073.JPG",
+    href: require("./watchModels/Breitling/Breitling_Navitimer_Premier_A40035_1998"),
+    specialCollectionItem: true,
   },
 
   "DuBois Grand Prix D'Europe Formula 1 - 1999": {

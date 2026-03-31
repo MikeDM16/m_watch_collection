@@ -99,7 +99,7 @@ const details: WatchDetails = {
 
     information: {
       brand: BrandsEnum.PORSCHE_DESIGN,
-      series: PorscheDesignBrandSeries.DASHBOARD_P6612,
+      series: PorscheDesignBrandSeries.DASHBOARD,
       catalogueReference: "P6612.14 152'646",
       productionYear: "2005",
       movementType: MovementWatchTypeEnum.AUTOMATIC,

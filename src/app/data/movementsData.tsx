@@ -1,5 +1,6 @@
 import AS_1130 from "./movements/AS/AS_1130_17J";
 import AS_1950 from "./movements/AS/AS_1950_17J";
+import BREITLING_B40_38J from "./movements/Breitling/Breitling_B40_38J";
 import CERTINA_25_261_27J from "./movements/Certina/Certina_25_261_28J";
 import CERTINA_331 from "./movements/Certina/Certina_331_15J";
 import DD_2000_ETA_955_232 from "./movements/Debois_Depraz/DD_2000_955";
@@ -145,6 +146,8 @@ export interface Caliber {
 export const MovementsDataDB: Record<string, Caliber> = {
   AS_1130: AS_1130,
   AS_1950: AS_1950,
+
+  BREITLING_B40_38J: BREITLING_B40_38J,
 
   CERTINA_331: CERTINA_331,
   CERTINA_25_261_27J: CERTINA_25_261_27J,

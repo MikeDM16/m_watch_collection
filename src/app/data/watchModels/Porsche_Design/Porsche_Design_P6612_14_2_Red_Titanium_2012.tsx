@@ -17,7 +17,7 @@ import { WatchDetails } from "../../watchDetails";
 import { PorscheDesignBrandSeries } from "./PorscheDesignBrandSeries";
 
 const details: WatchDetails = {
-  title: "2005 Porsche Design Dashboard P6612 Titanium",
+  title: "2008 Porsche Design Dashboard P6612 Titanium",
   sliderImages: [
     "public/assets/Images/Porsche_Design/2005_Porsche Design_Dashboard_P662_17_2_Red_Titanium/IMG_7032.JPG",
     "public/assets/Images/Porsche_Design/2005_Porsche Design_Dashboard_P662_17_2_Red_Titanium/IMG_7030.JPG",
@@ -113,9 +113,9 @@ const details: WatchDetails = {
 
     information: {
       brand: BrandsEnum.PORSCHE_DESIGN,
-      series: PorscheDesignBrandSeries.DASHBOARD_P6612,
+      series: PorscheDesignBrandSeries.DASHBOARD,
       catalogueReference: "P6612.17/2 160.182",
-      productionYear: "2012",
+      productionYear: "2008",
       movementType: MovementWatchTypeEnum.AUTOMATIC,
       style: WatchStyleEnum.SPORTS,
     },
