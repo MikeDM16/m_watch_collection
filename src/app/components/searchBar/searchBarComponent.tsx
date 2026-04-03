@@ -1,7 +1,5 @@
 "use client";
 
-import { CollectionEntry } from "@/app/data/collectionData";
-import collectionService from "@/app/services/collectionService";
 import {
   getExternalResource,
   getImgURLForSizeType,
@@ -11,12 +9,19 @@ import {
 import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Search } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 
-export default function SearchBarComponent() {
-  const data: Record<string, CollectionEntry> = collectionService.getAllCollectionItems();
+export interface SearchEntry {
+  brand: string;
+  legend: string;
+  year: number;
+  srcImage: string;
+  movementTitle?: string;
+}
 
+export default function SearchBarComponent({ data }: { data: Record<string, SearchEntry> }) {
   const [query, setQuery] = useState("");
   const [filtered, setFiltered] = useState<string[]>([]);
   const [isOpen, setIsOpen] = useState(false);
@@ -31,9 +36,7 @@ export default function SearchBarComponent() {
 
       const keyMatch = key.toLowerCase().includes(search);
 
-      const movementtitleMatch = value?.href?.default?.technicalData?.movement?.title
-        ?.toLowerCase()
-        ?.includes(search);
+      const movementtitleMatch = value?.movementTitle?.toLowerCase()?.includes(search);
 
       return keyMatch || movementtitleMatch;
     });
@@ -84,7 +87,13 @@ export default function SearchBarComponent() {
                     key={index}
                     className="p-2 flex items-center gap-3 hover:bg-gray-100 rounded cursor-pointer"
                   >
-                    <img className="w-8 h-8 object-cover" src={imagesrc} alt={hrefText} />
+                    <Image
+                      className="w-8 h-8 object-cover"
+                      src={imagesrc}
+                      alt={hrefText}
+                      width={32}
+                      height={32}
+                    />
                     {hrefText}
                   </li>
                 </Link>

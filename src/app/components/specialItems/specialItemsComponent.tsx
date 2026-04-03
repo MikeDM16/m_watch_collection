@@ -1,6 +1,5 @@
 "use client";
 
-import collectionService from "@/app/services/collectionService";
 import {
   getExternalResource,
   getImgURLForSizeType,
@@ -9,12 +8,23 @@ import {
 } from "@/app/services/commonFunctions";
 
 import ImageSliderComponent, { ImageSliderEntry } from "../common/ImageSliderComponent";
-import SearchBarComponent from "../searchBar/searchBarComponent";
+import SearchBarComponent, { SearchEntry } from "../searchBar/searchBarComponent";
 
-export default function SpecialItemsComponent() {
-  const specialCollectionItems = collectionService.getSpecialCollectionItems();
+export interface SpecialItemEntry {
+  srcImage: string;
+  hoverSrc?: string;
+  brand: string;
+  legend: string;
+  year: number;
+}
 
-  const swiperItems: ImageSliderEntry[] = Object.values(specialCollectionItems).map((entry) => {
+interface SpecialItemsProps {
+  specialItems: SpecialItemEntry[];
+  searchData: Record<string, SearchEntry>;
+}
+
+export default function SpecialItemsComponent({ specialItems, searchData }: SpecialItemsProps) {
+  const swiperItems: ImageSliderEntry[] = specialItems.map((entry) => {
     return {
       imageSrc: getExternalResource(getImgURLForSizeType(entry.srcImage, SizeType.GALLERY)),
       hoverSrc: getExternalResource(
@@ -41,7 +51,7 @@ export default function SpecialItemsComponent() {
           <span> or </span>
           <b>click</b> <span>over the slideshow entries to open their detail page.</span>
         </div>
-        <SearchBarComponent />
+        <SearchBarComponent data={searchData} />
       </div>
       <div className="section-container">{ImageSliderComponent(swiperItems)}</div>
     </div>

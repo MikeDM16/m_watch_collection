@@ -1,15 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import {
-  Autoplay,
-  EffectFade,
-  Keyboard,
-  Navigation,
-  Scrollbar,
-  Thumbs,
-  Zoom,
-} from "swiper/modules";
+import { Autoplay, Keyboard, Navigation, Scrollbar } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import ImageComponent from "./ImageComponent";
@@ -19,8 +11,6 @@ import "swiper/css/navigation";
 import "swiper/css/scrollbar";
 import "swiper/css/autoplay";
 import "swiper/css/keyboard";
-import "swiper/css/zoom";
-import "swiper/css/thumbs";
 
 import { ReactElement } from "react";
 
@@ -35,7 +25,7 @@ export interface ImageSliderEntry {
 
 export default function ImageSliderComponent(props: ImageSliderEntry[]) {
   const swiper_settings = {
-    modules: [Navigation, Scrollbar, Autoplay, Keyboard, Zoom, Thumbs, EffectFade],
+    modules: [Navigation, Scrollbar, Autoplay, Keyboard],
 
     // navigation
     // Arrows over the sides for nav

@@ -1,28 +1,84 @@
 import FooterComponent from "@/app/components/footer/footerComponent";
 import HeaderNavBar from "@/app/components/header/headerComponent";
+import dynamic from "next/dynamic";
 import Image from "next/image";
 import Link from "next/link";
+import { Suspense } from "react";
 
-import AboutMeContainer from "./components/aboutMe/aboutMe";
 import AnalyticsReporter from "./components/analytics/AnalyticsReporter";
 import BrandTitleDivisionComponent from "./components/brandPage/BrandTitleDivisionComponent";
 import PageTitleDivisionComponent from "./components/common/pageTitleDivisionComponent";
 import ContactsComponent from "./components/contacts/contacts";
-import PreviousSalesComponent from "./components/previousSales/previousSalesComponent";
-import SpecialItemsComponent from "./components/specialItems/specialItemsComponent";
 import { Brand } from "./data/brands";
 import brandsService from "./services/brandsService";
 import collectionService from "./services/collectionService";
-import { getExternalResource, routeToCollectionBrandPage } from "./services/commonFunctions";
+import {
+  background_images_paths,
+  getExternalResource,
+  routeToCollectionBrandPage,
+} from "./services/commonFunctions";
+
+const SpecialItemsComponent = dynamic(
+  () => import("./components/specialItems/specialItemsComponent"),
+  { ssr: true },
+);
+
+const PreviousSalesComponent = dynamic(
+  () => import("./components/previousSales/previousSalesComponent"),
+  { ssr: true },
+);
+
+const AboutMeContainer = dynamic(() => import("./components/aboutMe/aboutMe"), { ssr: true });
 
 export default function Page() {
   const mainBrands = brandsService.getMainBrands();
   const allBrands = brandsService.getAllBrands();
 
+  // Prepare data on the server side to avoid bundling collectionService in client JS
+  const specialItems = collectionService.getSpecialCollectionItems().map((entry) => ({
+    srcImage: entry.srcImage,
+    hoverSrc: entry.hoverSrc,
+    brand: entry.brand,
+    legend: entry.legend,
+    year: entry.year,
+  }));
+
+  const soldModels = collectionService.getSoldModels().map((entry) => ({
+    brand: entry.brand,
+    legend: entry.legend,
+    srcImage: entry.srcImage,
+    saleReport: entry.href.default.saleReport
+      ? {
+          price: entry.href.default.saleReport.price,
+          date: entry.href.default.saleReport.date,
+          url: entry.href.default.saleReport.url,
+        }
+      : undefined,
+  }));
+
+  const searchData: Record<
+    string,
+    { brand: string; legend: string; year: number; srcImage: string; movementTitle?: string }
+  > = {};
+  const allItems = collectionService.getAllCollectionItems();
+  for (const [key, entry] of Object.entries(allItems)) {
+    searchData[key] = {
+      brand: entry.brand,
+      legend: entry.legend,
+      year: entry.year,
+      srcImage: entry.srcImage,
+      movementTitle: entry.href?.default?.technicalData?.movement?.title,
+    };
+  }
+
+  const heroBackgroundUrl = getExternalResource(background_images_paths[0]);
+
   const mainBrandsTable = () => {
     return (
       <div>
-        <SpecialItemsComponent />
+        <Suspense fallback={<div className="h-64" />}>
+          <SpecialItemsComponent specialItems={specialItems} searchData={searchData} />
+        </Suspense>
 
         <div className="section-container">
           <div className="container-title centered-container">Main Brands</div>
@@ -30,7 +86,7 @@ export default function Page() {
 
         <div className="section-container">
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4">
-            {mainBrands.map((entry) => (
+            {mainBrands.map((entry, idx) => (
               <div
                 key={`brand_icon_${entry.name}`}
                 className="centered-container hover-animation bottom-margin-s"
@@ -42,7 +98,8 @@ export default function Page() {
                     alt={`${entry.name} logo`}
                     width={180}
                     height={38}
-                    loading="lazy"
+                    priority={idx < 6}
+                    loading={idx < 6 ? undefined : "lazy"}
                   />
                 </Link>
               </div>
@@ -117,13 +174,18 @@ export default function Page() {
 
   return (
     <div>
+      <link rel="preload" as="image" href={heroBackgroundUrl} />
       <HeaderNavBar />
       <AnalyticsReporter page="home" title="MWatchCollection" />
       <BrandTitleDivisionComponent title="M Watch Collection" textAlignement="center" />
       {mainBrandsTable()}
       {ListAllBrandsGroupByLetter()}
-      <AboutMeContainer />
-      <PreviousSalesComponent />
+      <Suspense fallback={<div className="h-96" />}>
+        <AboutMeContainer />
+      </Suspense>
+      <Suspense fallback={<div className="h-96" />}>
+        <PreviousSalesComponent soldModels={soldModels} />
+      </Suspense>
       <ContactsComponent />
       <FooterComponent />
     </div>

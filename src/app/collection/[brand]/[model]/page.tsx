@@ -3,7 +3,6 @@ import AnalyticsReporter from "@/app/components/analytics/AnalyticsReporter";
 import BrandPageTitleComponent from "@/app/components/brandPage/BrandPageTitleComponent";
 import { CaliberDetailComponent } from "@/app/components/caliber/CaliberDetailsComponent";
 import FeatureListingComponent from "@/app/components/common/FeaturesListingComponent";
-import ImageGalleryComponent from "@/app/components/common/ImageGalleryComponent";
 import FooterComponent from "@/app/components/footer/footerComponent";
 import HeaderNavBar from "@/app/components/header/headerComponent";
 import BrandModelPageNotFoundComponent from "@/app/components/notFound/BrandModelPageNotFoundComponent";
@@ -30,6 +29,12 @@ import {
   routeToCollectionBrandModelPage,
   selectBackgroundImage,
 } from "@/app/services/commonFunctions";
+import dynamic from "next/dynamic";
+import { Suspense } from "react";
+
+const ImageGalleryComponent = dynamic(
+  () => import("@/app/components/common/ImageGalleryComponent"),
+);
 
 export function generateStaticParams() {
   const allItems = collectionService.getAllCollectionItems();
@@ -162,7 +167,9 @@ export default async function BrandModelPage({
             <div className="col-span-12 md:col-span-8 bottom-margin-m">
               <div style={{ height: "50dvh" }}>
                 <div style={{ height: "inherit", overflow: "auto" }}>
-                  <ImageGalleryComponent galleryImages={modelDetails.href.default.sliderImages} />
+                  <Suspense fallback={<div className="h-full bg-gray-100 animate-pulse rounded" />}>
+                    <ImageGalleryComponent galleryImages={modelDetails.href.default.sliderImages} />
+                  </Suspense>
                 </div>
               </div>
             </div>

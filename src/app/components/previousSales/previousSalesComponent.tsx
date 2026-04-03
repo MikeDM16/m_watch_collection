@@ -1,6 +1,5 @@
 "use client";
 
-import collectionService from "@/app/services/collectionService";
 import {
   getExternalResource,
   getSaleReportImage,
@@ -10,11 +9,24 @@ import {
 import ImageSliderComponent, { ImageSliderEntry } from "../common/ImageSliderComponent";
 import PageTitleDivisionComponent from "../common/pageTitleDivisionComponent";
 
-export default function PreviousSalesComponent() {
-  const previousSoldModels = collectionService.getSoldModels();
+export interface PreviousSaleEntry {
+  brand: string;
+  legend: string;
+  srcImage: string;
+  saleReport?: {
+    price: number | string;
+    date: string;
+    url?: string;
+  };
+}
 
-  const swiperItems: ImageSliderEntry[] = Object.values(previousSoldModels).map((entry) => {
-    const saleData = entry.href.default.saleReport;
+export default function PreviousSalesComponent({
+  soldModels,
+}: {
+  soldModels: PreviousSaleEntry[];
+}) {
+  const swiperItems: ImageSliderEntry[] = soldModels.map((entry) => {
+    const saleData = entry.saleReport;
     const saleReportImg = getSaleReportImage(entry.srcImage);
     const alt = (
       <div>
