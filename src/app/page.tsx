@@ -16,6 +16,7 @@ import {
   background_images_paths,
   getExternalResource,
   routeToCollectionBrandPage,
+  selectMultipleBackgroundImages,
 } from "./services/commonFunctions";
 
 const SpecialItemsComponent = dynamic(
@@ -71,6 +72,7 @@ export default function Page() {
     };
   }
 
+  const divisionBackgrounds = selectMultipleBackgroundImages(4);
   const heroBackgroundUrl = getExternalResource(background_images_paths[0]);
 
   const mainBrandsTable = () => {
@@ -139,7 +141,7 @@ export default function Page() {
     return (
       <div>
         <div id="AllBrandsItems">
-          <PageTitleDivisionComponent title="All Brands" />
+          <PageTitleDivisionComponent title="All Brands" srcImage={divisionBackgrounds[0]} />
         </div>
 
         <div className="section-container">
@@ -181,12 +183,12 @@ export default function Page() {
       {mainBrandsTable()}
       {ListAllBrandsGroupByLetter()}
       <Suspense fallback={<div className="h-96" />}>
-        <AboutMeContainer />
+        <AboutMeContainer backgroundImage={divisionBackgrounds[1]} />
       </Suspense>
       <Suspense fallback={<div className="h-96" />}>
-        <PreviousSalesComponent soldModels={soldModels} />
+        <PreviousSalesComponent soldModels={soldModels} backgroundImage={divisionBackgrounds[2]} />
       </Suspense>
-      <ContactsComponent />
+      <ContactsComponent backgroundImage={divisionBackgrounds[3]} />
       <FooterComponent />
     </div>
   );

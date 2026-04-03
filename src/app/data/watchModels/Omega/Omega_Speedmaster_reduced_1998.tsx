@@ -20,22 +20,22 @@ const details: WatchDetails = {
   title: "1998 Omega Speedmaster Reduced Cal. 1141",
 
   sliderImages: [
-        "public/assets/Images/Omega/1998_Omega_Speedmaster_reduced/IMG_2372.JPG",
+    "public/assets/Images/Omega/1998_Omega_Speedmaster_reduced/IMG_2372.JPG",
     "public/assets/Images/Omega/1998_Omega_Speedmaster_reduced/IMG_2373.JPG",
     "public/assets/Images/Omega/1998_Omega_Speedmaster_reduced/IMG_2376.JPG",
-    
+
     "public/assets/Images/Omega/1998_Omega_Speedmaster_reduced/IMG_2276.JPG",
     "public/assets/Images/Omega/1998_Omega_Speedmaster_reduced/IMG_2277.JPG",
     "public/assets/Images/Omega/1998_Omega_Speedmaster_reduced/IMG_2279.JPG",
     "public/assets/Images/Omega/1998_Omega_Speedmaster_reduced/IMG_2280.JPG",
     "public/assets/Images/Omega/1998_Omega_Speedmaster_reduced/IMG_2283.JPG",
 
-     "public/assets/Images/Omega/1998_Omega_Speedmaster_reduced/IMG_2330.JPG",
+    "public/assets/Images/Omega/1998_Omega_Speedmaster_reduced/IMG_2330.JPG",
     "public/assets/Images/Omega/1998_Omega_Speedmaster_reduced/IMG_2331.JPG",
     "public/assets/Images/Omega/1998_Omega_Speedmaster_reduced/IMG_2332.JPG",
 
     "public/assets/Images/Omega/1998_Omega_Speedmaster_reduced/IMG_2333.JPG",
-        "public/assets/Images/Omega/1998_Omega_Speedmaster_reduced/IMG_2339.JPG",
+    "public/assets/Images/Omega/1998_Omega_Speedmaster_reduced/IMG_2339.JPG",
     "public/assets/Images/Omega/1998_Omega_Speedmaster_reduced/IMG_2365.JPG",
 
     "public/assets/Images/Omega/1998_Omega_Speedmaster_reduced/IMG_2334.JPG",
@@ -44,7 +44,6 @@ const details: WatchDetails = {
     "public/assets/Images/Omega/1998_Omega_Speedmaster_reduced/IMG_2338.JPG",
     "public/assets/Images/Omega/1998_Omega_Speedmaster_reduced/IMG_2340.JPG",
 
-        
     "public/assets/Images/Omega/1998_Omega_Speedmaster_reduced/IMG_2284.JPG",
     "public/assets/Images/Omega/1998_Omega_Speedmaster_reduced/IMG_2287.JPG",
     "public/assets/Images/Omega/1998_Omega_Speedmaster_reduced/IMG_2288.JPG",
@@ -54,7 +53,6 @@ const details: WatchDetails = {
     "public/assets/Images/Omega/1998_Omega_Speedmaster_reduced/IMG_2292.JPG",
     "public/assets/Images/Omega/1998_Omega_Speedmaster_reduced/IMG_2293.JPG",
     "public/assets/Images/Omega/1998_Omega_Speedmaster_reduced/IMG_2294.JPG",
-
 
     "public/assets/Images/Omega/1998_Omega_Speedmaster_reduced/IMG_2341.JPG",
     "public/assets/Images/Omega/1998_Omega_Speedmaster_reduced/IMG_2342.JPG",
@@ -74,7 +72,6 @@ const details: WatchDetails = {
     "public/assets/Images/Omega/1998_Omega_Speedmaster_reduced/IMG_2367.JPG",
     "public/assets/Images/Omega/1998_Omega_Speedmaster_reduced/IMG_2369.JPG",
     "public/assets/Images/Omega/1998_Omega_Speedmaster_reduced/IMG_2370.JPG",
-
 
     "public/assets/Images/Omega/1998_Omega_Speedmaster_reduced/IMG_2295.JPG",
     "public/assets/Images/Omega/1998_Omega_Speedmaster_reduced/IMG_2296.JPG",
@@ -104,7 +101,6 @@ const details: WatchDetails = {
     "public/assets/Images/Omega/1998_Omega_Speedmaster_reduced/IMG_2327.JPG",
     "public/assets/Images/Omega/1998_Omega_Speedmaster_reduced/IMG_2329.JPG",
 
-   
     "public/assets/Images/Omega/1998_Omega_Speedmaster_reduced/IMG_2355.JPG",
     "public/assets/Images/Omega/1998_Omega_Speedmaster_reduced/IMG_2356.JPG",
     "public/assets/Images/Omega/1998_Omega_Speedmaster_reduced/IMG_2357.JPG",

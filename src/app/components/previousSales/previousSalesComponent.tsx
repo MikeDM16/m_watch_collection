@@ -22,8 +22,10 @@ export interface PreviousSaleEntry {
 
 export default function PreviousSalesComponent({
   soldModels,
+  backgroundImage,
 }: {
   soldModels: PreviousSaleEntry[];
+  backgroundImage?: string;
 }) {
   const swiperItems: ImageSliderEntry[] = soldModels.map((entry) => {
     const saleData = entry.saleReport;
@@ -55,7 +57,7 @@ export default function PreviousSalesComponent({
   return (
     <div>
       <div id="PreviousSales">
-        {PageTitleDivisionComponent({ title: "Previous Sales History" })}
+        {PageTitleDivisionComponent({ title: "Previous Sales History", srcImage: backgroundImage })}
       </div>
       <div className="section-container centered-text">
         <div className="mb-6">

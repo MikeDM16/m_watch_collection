@@ -4,10 +4,12 @@ import { MdEmail } from "react-icons/md";
 
 import PageTitleDivisionComponent from "../common/pageTitleDivisionComponent";
 
-export default function ContactsComponent() {
+export default function ContactsComponent({ backgroundImage }: { backgroundImage?: string }) {
   return (
     <div>
-      <div id="Contacts">{PageTitleDivisionComponent({ title: "Contacts" })}</div>
+      <div id="Contacts">
+        {PageTitleDivisionComponent({ title: "Contacts", srcImage: backgroundImage })}
+      </div>
       <div className="section-container centered-text">
         <div className="container-title">Where to find me</div>
         <div>

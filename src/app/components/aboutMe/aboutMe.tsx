@@ -6,12 +6,14 @@ import { IoMdPerson } from "react-icons/io";
 import ImageComponent from "../common/ImageComponent";
 import PageTitleDivisionComponent from "../common/pageTitleDivisionComponent";
 
-export default function AboutMeContainer() {
+export default function AboutMeContainer({ backgroundImage }: { backgroundImage?: string }) {
   const aboutMe_photo = "public/assets/Backgrouds/me.JPG";
 
   return (
     <div>
-      <div id="AboutMe">{PageTitleDivisionComponent({ title: "About Me" })}</div>
+      <div id="AboutMe">
+        {PageTitleDivisionComponent({ title: "About Me", srcImage: backgroundImage })}
+      </div>
 
       <div className="section-container centered-text">
         <div className="grid grid-cols-12 gap-4">

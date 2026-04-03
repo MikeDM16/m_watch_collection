@@ -1,5 +1,7 @@
 import { IconType } from "react-icons";
 
+import { brandsDB } from "../data/brands";
+
 export function getExternalResource(image_url: string) {
   //const url_begin = "https://github.com/MikeDM16/MWatchCollectionResources/raw/master";
   const base_url = "https://raw.githubusercontent.com/MikeDM16/MWatchCollectionResources/master";
@@ -94,6 +96,20 @@ export function selectBackgroundImage(images: string[] | undefined): string | un
   const currentHour = new Date().getHours();
   const selectedIdx = currentHour % images.length;
   return images[selectedIdx];
+}
+
+export function selectMultipleBackgroundImages(count: number): string[] {
+  const allImages = brandsDB.flatMap((b) => b.backgrounImages || []);
+
+  if (allImages.length === 0) return background_images_paths.slice(0, count);
+
+  const currentHour = new Date().getHours();
+  const result: string[] = [];
+  for (let i = 0; i < count; i++) {
+    const idx = (currentHour + i * 7) % allImages.length;
+    result.push(allImages[idx]);
+  }
+  return result;
 }
 
 export const background_images_paths = [

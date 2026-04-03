@@ -21,7 +21,8 @@
       "Bash(grep -n \"Image\\\\|src=\" /c/Users/migue/Documentos/GitHub/m_watch_collection/src/app/collection/[brand]/page.tsx)",
       "Bash(find /c/Users/migue/Documentos/GitHub/m_watch_collection/public -type f \\\\\\(-iname *.jpg -o -iname *.jpeg -o -iname *.png -o -iname *.webp -o -iname *.avif -o -iname *.svg -o -iname *.gif \\\\\\))",
       "Bash(xargs -I {} wc -l {})",
-      "Bash(grep -l async /c/Users/migue/Documentos/GitHub/m_watch_collection/src/app/**/*.tsx)"
+      "Bash(grep -l async /c/Users/migue/Documentos/GitHub/m_watch_collection/src/app/**/*.tsx)",
+      "Bash(find /c/Users/migue/Documentos/GitHub/m_watch_collection/src -type f -name *home* -o -name *carousel* -o -name *slider* -o -name *banner* -o -name *section*)"
     ]
   }
 }
