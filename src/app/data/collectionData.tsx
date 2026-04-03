@@ -941,17 +941,6 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     specialCollectionItem: false,
   },
 
-  "Omega Speedmaster MK40 Triple Date Schumacher": {
-    brand: BrandsEnum.OMEGA,
-    legend: "Omega Speedmaster MK40 Triple Date Schumacher",
-    year: 1998,
-    type: WatchTypeEnum.SPORTS,
-    srcImage: "public/assets/Images/Omega/1998_Omega_Speedmaster_MK40_triple_date/IMG_7806.JPG",
-    hoverSrc: "public/assets/Images/Omega/1998_Omega_Speedmaster_MK40_triple_date/IMG_7722.JPG",
-    href: require("./watchModels/Omega/Omega_Speedmaster_mk40_triple_date_1998"),
-    specialCollectionItem: true,
-  },
-
   "Maserati Neptune Chronograph Automatic": {
     brand: BrandsEnum.MASERATI,
     legend: "Maserati Neptune Chronograph Automatic",
@@ -983,6 +972,17 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
       "public/assets/Images/Breitling/1998_Breitling_Chronomat_Vitesse_B13050_Black/IMG_6654.JPG",
     href: require("./watchModels/Breitling/Breitling_Chronomat_B13050_Vitesse_Black_1998"),
     specialCollectionItem: false,
+  },
+
+  "Omega Speedmaster Reduced Cal. 1141": {
+    brand: BrandsEnum.OMEGA,
+    legend: "Omega Speedmaster Reduced Cal. 1141",
+    year: 1998,
+    type: WatchTypeEnum.SPORTS,
+    srcImage: "public/assets/Images/Omega/1998_Omega_Speedmaster_reduced/IMG_2336.JPG",
+    hoverSrc: "public/assets/Images/Omega/1998_Omega_Speedmaster_reduced/IMG_2296.JPG",
+    href: require("./watchModels/Omega/Omega_Speedmaster_reduced_1998"),
+    specialCollectionItem: true,
   },
 
   "Eterna - Porsche Design 911 - Jean-Pierre Jarier": {
@@ -1055,6 +1055,18 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     href: require("./watchModels/Tag_Heuer/Tag_Heuer_Professional_1500_1997"),
     specialCollectionItem: false,
   },
+
+  "Omega Speedmaster MK40 Triple Date Schumacher": {
+    brand: BrandsEnum.OMEGA,
+    legend: "Omega Speedmaster MK40 Triple Date Schumacher",
+    year: 1996,
+    type: WatchTypeEnum.SPORTS,
+    srcImage: "public/assets/Images/Omega/1998_Omega_Speedmaster_MK40_triple_date/IMG_7806.JPG",
+    hoverSrc: "public/assets/Images/Omega/1998_Omega_Speedmaster_MK40_triple_date/IMG_7722.JPG",
+    href: require("./watchModels/Omega/Omega_Speedmaster_mk40_triple_date_1998"),
+    specialCollectionItem: true,
+  },
+
   "Tag Heuer Professional 2000 CK1111 Chronograph": {
     brand: BrandsEnum.TAG_HEUER,
     legend: "Tag Heuer Professional 2000 CK1111 Chronograph",

@@ -63,6 +63,8 @@ export const JewelsNumberEnum = {
   J_38: "38 (Thirty-Eigth) Jewels",
   J_39: "39 (Thirty-Nine) Jewels",
   J_40: "40 (Forty) Jewels",
+  J_42: "42 (Forty-two) Jewels",
+  J_45: "45 (Forty-Five) Jewels",
 };
 
 export const ReserveHoursEnum = {

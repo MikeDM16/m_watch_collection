@@ -59,6 +59,7 @@ import OMEGA_410 from "./movements/Omega/Omega_410_17J";
 import OMEGA_565 from "./movements/Omega/Omega_565_24J";
 import OMEGA_610_17J from "./movements/Omega/Omega_610_17J";
 import OMEGA_672_24J from "./movements/Omega/Omega_672_24J";
+import OMEGA_1141_45J from "./movements/Omega/Omega_1141";
 import OMEGA_1151 from "./movements/Omega/Omega_1151";
 import OMEGA_1370 from "./movements/Omega/Omega_1370";
 import OMEGA_1430 from "./movements/Omega/Omega_1430";
@@ -220,6 +221,7 @@ export const MovementsDataDB: Record<string, Caliber> = {
   MIYOTA_OS10: MIYOTA_OS10,
   MIYOTA_OS60: MIYOTA_OS60,
 
+  OMEGA_1141_45J: OMEGA_1141_45J,
   OMEGA_1151: OMEGA_1151,
   OMEGA_1370: OMEGA_1370,
   OMEGA_1430: OMEGA_1430,

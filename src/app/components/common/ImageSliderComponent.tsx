@@ -32,14 +32,9 @@ export default function ImageSliderComponent(props: ImageSliderEntry[]) {
     navigation: true,
 
     breakpoints: {
-      1920: {
+      1280: {
         slidesPerView: 5,
         slidesPerGroup: 5,
-        spaceBetween: 20,
-      },
-      1440: {
-        slidesPerView: 4,
-        slidesPerGroup: 4,
         spaceBetween: 20,
       },
       720: {

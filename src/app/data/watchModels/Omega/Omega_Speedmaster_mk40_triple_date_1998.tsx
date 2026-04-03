@@ -17,7 +17,7 @@ import { WatchDetails } from "../../watchDetails";
 import { OmegaBrandSeries } from "./OmegaBrandSeries";
 
 const details: WatchDetails = {
-  title: '1998 Omega Speedmaster MK40 Triple Date "Schumacher"',
+  title: '1996 Omega Speedmaster MK40 Triple Date "Schumacher"',
   sliderImages: [
     "public/assets/Images/Omega/1998_Omega_Speedmaster_MK40_triple_date/IMG_7324.JPG",
     "public/assets/Images/Omega/1998_Omega_Speedmaster_MK40_triple_date/IMG_7328.JPG",
@@ -120,13 +120,17 @@ const details: WatchDetails = {
   ],
 
   technicalData: {
-    features: [featuresEnum.AUTOMATIC_CHRONOGRAPH, featuresEnum.TACHYMETER],
+    features: [
+      featuresEnum.AUTOMATIC_CHRONOGRAPH,
+      featuresEnum.TACHYMETER,
+      "Case with production number 55346434, dating the watch back to 1996",
+    ],
 
     information: {
       brand: BrandsEnum.OMEGA,
       series: OmegaBrandSeries.SPEEDMASTER,
       catalogueReference: 'MK40 Triple Date "Schumacher" (175.0084 375.0084)',
-      productionYear: "1998",
+      productionYear: "1996",
       movementType: MovementWatchTypeEnum.AUTOMATIC,
       style: WatchStyleEnum.SPORTS,
     },
