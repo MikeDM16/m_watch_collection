@@ -53,7 +53,8 @@ export default function ImageGalleryComponent({ galleryImages }: { galleryImages
     <div>
       <RowsPhotoAlbum
         photos={items}
-        targetRowHeight={150}
+        targetRowHeight={250}
+        rowConstraints={{ singleRowMaxHeight: 350 }}
         onClick={({ index: current }) => setIndex(current)}
       />
 

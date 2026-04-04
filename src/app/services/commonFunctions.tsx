@@ -103,13 +103,8 @@ export function selectMultipleBackgroundImages(count: number): string[] {
 
   if (allImages.length === 0) return background_images_paths.slice(0, count);
 
-  const currentHour = new Date().getHours();
-  const result: string[] = [];
-  for (let i = 0; i < count; i++) {
-    const idx = (currentHour + i * 7) % allImages.length;
-    result.push(allImages[idx]);
-  }
-  return result;
+  const shuffled = [...allImages].sort(() => Math.random() - 0.5);
+  return shuffled.slice(0, count);
 }
 
 export const background_images_paths = [
