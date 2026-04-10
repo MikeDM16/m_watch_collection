@@ -8,7 +8,7 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 import Link from "next/link";
 import { IconType } from "react-icons";
 import { FaArchive } from "react-icons/fa";
-import { MdEmail, MdPerson } from "react-icons/md";
+import { MdAddCircleOutline, MdEmail, MdPerson } from "react-icons/md";
 import { PiMagnifyingGlassPlus } from "react-icons/pi";
 import { RiAuctionLine } from "react-icons/ri";
 
@@ -56,6 +56,14 @@ export default function HeaderNavBar() {
       text: "Contacts",
     },
   ];
+
+  if (process.env.NODE_ENV !== "production") {
+    references.push({
+      reference: "/admin/create-model",
+      icon: MdAddCircleOutline,
+      text: "Add Model",
+    });
+  }
   return (
     <>
       <nav id="start" className="fixed top-0 w-full bg-gray-900 z-50">
