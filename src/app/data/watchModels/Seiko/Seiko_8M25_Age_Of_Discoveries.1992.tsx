@@ -1,7 +1,15 @@
+import { BezelTypeEnum } from "@/app/enums/bezelTypeEnum";
+import { BraceletMaterialEnum } from "@/app/enums/braceletMaterialEnum";
+import { BraceletWidthEnum } from "@/app/enums/braceletWidthEnum";
 import { BrandsEnum } from "@/app/enums/brandsEnum";
 import { BuckleTypeEnum } from "@/app/enums/buckleTypeEnum";
 import { CalendarWatchTypeEnum } from "@/app/enums/calendarWatchTypeEnum";
 import { CaseBackDetailsEnum } from "@/app/enums/caseBackDetailsEnum";
+import { CaseDiameterEnum } from "@/app/enums/caseDiameterEnum";
+import { CaseFinishingEnum } from "@/app/enums/caseFinishingEnum";
+import { CaseMaterialEnum } from "@/app/enums/caseMaterialEnum";
+import { CaseThicknessEnum } from "@/app/enums/caseThicknessEnum";
+import { ColorEnum } from "@/app/enums/colorEnum";
 import { CrownWatchTypeEnum } from "@/app/enums/crownWatchTypeEnum";
 import { CrystalMaterialEnum } from "@/app/enums/crystalMaterialEnum";
 import { DialMarketsEnum } from "@/app/enums/dialMarketsEnum";
@@ -87,19 +95,19 @@ const details: WatchDetails = {
     },
 
     case: {
-      diameter: "38 mm",
-      thickness: "9 mm",
-      material: "Stainless Steel - Gold Plated",
+      diameter: CaseDiameterEnum.D_38,
+      thickness: CaseThicknessEnum.T_9,
+      material: CaseMaterialEnum.SS_GOLD_PLATED,
       waterResistance: WaterResistanceEnum.WATERPROOF_30M,
-      finishingDetails: "Polished",
-      bezel: "Detailed",
+      finishingDetails: CaseFinishingEnum.POLISHED,
+      bezel: BezelTypeEnum.DETAILED,
       crownType: CrownWatchTypeEnum.PUSH_PULL,
       crystal: CrystalMaterialEnum.HARDLEX,
       caseback: CaseBackDetailsEnum.DETAILS_ENGRAVED,
     },
 
     dial: {
-      color: "White",
+      color: ColorEnum.WHITE,
       dialMarkers: DialMarketsEnum.ROMAN,
       finishingDetails: FinishingDetailsEnum.GOLD_DETAILS,
       luminiscentIndexes: LuminescentIndexesEnum.NONE,
@@ -107,10 +115,10 @@ const details: WatchDetails = {
     },
 
     bracelet: {
-      material: "Leather",
+      material: BraceletMaterialEnum.LEATHER,
       buckleType: BuckleTypeEnum.STANDARD_BUCKLE,
-      width: "18 mm",
-      color: "Brown",
+      width: BraceletWidthEnum.W_18,
+      color: ColorEnum.BROWN,
     },
 
     movement: MovementsDataDB.SEIKO_8M25,

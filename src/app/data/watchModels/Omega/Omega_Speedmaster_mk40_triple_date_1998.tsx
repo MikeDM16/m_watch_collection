@@ -1,7 +1,15 @@
+import { BezelTypeEnum } from "@/app/enums/bezelTypeEnum";
+import { BraceletMaterialEnum } from "@/app/enums/braceletMaterialEnum";
+import { BraceletWidthEnum } from "@/app/enums/braceletWidthEnum";
 import { BrandsEnum } from "@/app/enums/brandsEnum";
 import { BuckleTypeEnum } from "@/app/enums/buckleTypeEnum";
 import { CalendarWatchTypeEnum } from "@/app/enums/calendarWatchTypeEnum";
 import { CaseBackDetailsEnum } from "@/app/enums/caseBackDetailsEnum";
+import { CaseDiameterEnum } from "@/app/enums/caseDiameterEnum";
+import { CaseFinishingEnum } from "@/app/enums/caseFinishingEnum";
+import { CaseMaterialEnum } from "@/app/enums/caseMaterialEnum";
+import { CaseThicknessEnum } from "@/app/enums/caseThicknessEnum";
+import { ColorEnum } from "@/app/enums/colorEnum";
 import { CrownWatchTypeEnum } from "@/app/enums/crownWatchTypeEnum";
 import { CrystalMaterialEnum } from "@/app/enums/crystalMaterialEnum";
 import { DialMarketsEnum } from "@/app/enums/dialMarketsEnum";
@@ -136,19 +144,19 @@ const details: WatchDetails = {
     },
 
     case: {
-      diameter: "39 mm",
-      thickness: "14 mm",
-      material: "Stainless Steel",
+      diameter: CaseDiameterEnum.D_39,
+      thickness: CaseThicknessEnum.T_14,
+      material: CaseMaterialEnum.STAINLESS_STEEL,
       waterResistance: WaterResistanceEnum.WATER_RESISTANT,
-      finishingDetails: "Polished",
-      bezel: "Tachymeter Bezel",
+      finishingDetails: CaseFinishingEnum.POLISHED,
+      bezel: BezelTypeEnum.TACHYMETER,
       crownType: CrownWatchTypeEnum.PUSH_PULL,
       crystal: CrystalMaterialEnum.SAPPHIRE,
       caseback: CaseBackDetailsEnum.BRAND_DECORATION,
     },
 
     dial: {
-      color: "Grey",
+      color: ColorEnum.GREY,
       dialMarkers: DialMarketsEnum.ARABIC,
       finishingDetails: FinishingDetailsEnum.DETAILED_SUB_DIALS,
       luminiscentIndexes: LuminescentIndexesEnum.HANDS_AND_MARKERS,
@@ -156,10 +164,10 @@ const details: WatchDetails = {
     },
 
     bracelet: {
-      material: "Leather",
+      material: BraceletMaterialEnum.LEATHER,
       buckleType: BuckleTypeEnum.STANDARD_BUCKLE,
-      width: "18 mm",
-      color: "Black",
+      width: BraceletWidthEnum.W_18,
+      color: ColorEnum.BLACK,
     },
 
     movement: MovementsDataDB.OMEGA_1151,

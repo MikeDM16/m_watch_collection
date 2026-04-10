@@ -1,7 +1,15 @@
+import { BezelTypeEnum } from "@/app/enums/bezelTypeEnum";
+import { BraceletMaterialEnum } from "@/app/enums/braceletMaterialEnum";
+import { BraceletWidthEnum } from "@/app/enums/braceletWidthEnum";
 import { BrandsEnum } from "@/app/enums/brandsEnum";
 import { BuckleTypeEnum } from "@/app/enums/buckleTypeEnum";
 import { CalendarWatchTypeEnum } from "@/app/enums/calendarWatchTypeEnum";
 import { CaseBackDetailsEnum } from "@/app/enums/caseBackDetailsEnum";
+import { CaseDiameterEnum } from "@/app/enums/caseDiameterEnum";
+import { CaseFinishingEnum } from "@/app/enums/caseFinishingEnum";
+import { CaseMaterialEnum } from "@/app/enums/caseMaterialEnum";
+import { CaseThicknessEnum } from "@/app/enums/caseThicknessEnum";
+import { ColorEnum } from "@/app/enums/colorEnum";
 import { CrownWatchTypeEnum } from "@/app/enums/crownWatchTypeEnum";
 import { CrystalMaterialEnum } from "@/app/enums/crystalMaterialEnum";
 import { DialMarketsEnum } from "@/app/enums/dialMarketsEnum";
@@ -71,19 +79,19 @@ const details: WatchDetails = {
     },
 
     case: {
-      diameter: "39 mm",
-      thickness: "7 mm",
-      material: "Stainless Steel, Rose Gold Plated",
+      diameter: CaseDiameterEnum.D_39,
+      thickness: CaseThicknessEnum.T_7,
+      material: CaseMaterialEnum.SS_ROSE_GOLD_PLATED,
       waterResistance: WaterResistanceEnum.WATERPROOF_30M,
-      finishingDetails: "Polished",
-      bezel: "Without bezel",
+      finishingDetails: CaseFinishingEnum.POLISHED,
+      bezel: BezelTypeEnum.WITHOUT,
       crownType: CrownWatchTypeEnum.PUSH_PULL,
       crystal: CrystalMaterialEnum.SAPPHIRE,
       caseback: CaseBackDetailsEnum.BRAND_DECORATION,
     },
 
     dial: {
-      color: "Dark Blue",
+      color: ColorEnum.DARK_BLUE,
       dialMarkers: DialMarketsEnum.DAGGER,
       finishingDetails: FinishingDetailsEnum.GOLD_DETAILS,
       luminiscentIndexes: LuminescentIndexesEnum.NONE,
@@ -91,10 +99,10 @@ const details: WatchDetails = {
     },
 
     bracelet: {
-      material: "Leather",
+      material: BraceletMaterialEnum.LEATHER,
       buckleType: BuckleTypeEnum.BUTTERFLY_DEPLOY_CLASP,
-      width: "19 mm",
-      color: "Brown, Blue and Custom Fabric White",
+      width: BraceletWidthEnum.W_19,
+      color: ColorEnum.CUSTOM_FABRIC,
     },
 
     movement: MovementsDataDB.ETA_902_101,

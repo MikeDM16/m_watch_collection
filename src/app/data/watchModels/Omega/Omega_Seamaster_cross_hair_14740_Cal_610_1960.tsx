@@ -1,7 +1,14 @@
+import { BezelTypeEnum } from "@/app/enums/bezelTypeEnum";
+import { BraceletMaterialEnum } from "@/app/enums/braceletMaterialEnum";
+import { BraceletWidthEnum } from "@/app/enums/braceletWidthEnum";
 import { BrandsEnum } from "@/app/enums/brandsEnum";
 import { BuckleTypeEnum } from "@/app/enums/buckleTypeEnum";
 import { CalendarWatchTypeEnum } from "@/app/enums/calendarWatchTypeEnum";
 import { CaseBackDetailsEnum } from "@/app/enums/caseBackDetailsEnum";
+import { CaseDiameterEnum } from "@/app/enums/caseDiameterEnum";
+import { CaseFinishingEnum } from "@/app/enums/caseFinishingEnum";
+import { CaseThicknessEnum } from "@/app/enums/caseThicknessEnum";
+import { ColorEnum } from "@/app/enums/colorEnum";
 import { CrownWatchTypeEnum } from "@/app/enums/crownWatchTypeEnum";
 import { CrystalMaterialEnum } from "@/app/enums/crystalMaterialEnum";
 import { DialMarketsEnum } from "@/app/enums/dialMarketsEnum";
@@ -89,19 +96,19 @@ const details: WatchDetails = {
     },
 
     case: {
-      diameter: "35 mm",
-      thickness: "9 mm",
+      diameter: CaseDiameterEnum.D_35,
+      thickness: CaseThicknessEnum.T_9,
       material: "Stainless Steel - 20\u339B Gold plated",
       waterResistance: WaterResistanceEnum.WATER_RESISTANT,
-      finishingDetails: "Polished",
-      bezel: "Polished",
+      finishingDetails: CaseFinishingEnum.POLISHED,
+      bezel: BezelTypeEnum.POLISHED,
       crownType: CrownWatchTypeEnum.PUSH_PULL,
       crystal: CrystalMaterialEnum.ACRYLIC,
       caseback: CaseBackDetailsEnum.BRAND_DECORATION,
     },
 
     dial: {
-      color: "Beige (Patina)",
+      color: ColorEnum.BEIGE_PATINA,
       dialMarkers: DialMarketsEnum.ARABIC_STICKS,
       finishingDetails: FinishingDetailsEnum.APPLIED_INDECES,
       luminiscentIndexes: LuminescentIndexesEnum.NONE,
@@ -109,10 +116,10 @@ const details: WatchDetails = {
     },
 
     bracelet: {
-      material: "Crocodile Leather",
+      material: BraceletMaterialEnum.CROCODILE_LEATHER,
       buckleType: BuckleTypeEnum.STANDARD_BUCKLE,
-      width: "18 mm",
-      color: "Bourdeaux Red",
+      width: BraceletWidthEnum.W_18,
+      color: ColorEnum.BORDEAUX,
     },
 
     movement: MovementsDataDB.OMEGA_610_17J,

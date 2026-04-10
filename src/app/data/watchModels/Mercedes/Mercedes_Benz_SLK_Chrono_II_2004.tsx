@@ -1,7 +1,15 @@
+import { BezelTypeEnum } from "@/app/enums/bezelTypeEnum";
+import { BraceletMaterialEnum } from "@/app/enums/braceletMaterialEnum";
+import { BraceletWidthEnum } from "@/app/enums/braceletWidthEnum";
 import { BrandsEnum } from "@/app/enums/brandsEnum";
 import { BuckleTypeEnum } from "@/app/enums/buckleTypeEnum";
 import { CalendarWatchTypeEnum } from "@/app/enums/calendarWatchTypeEnum";
 import { CaseBackDetailsEnum } from "@/app/enums/caseBackDetailsEnum";
+import { CaseDiameterEnum } from "@/app/enums/caseDiameterEnum";
+import { CaseFinishingEnum } from "@/app/enums/caseFinishingEnum";
+import { CaseMaterialEnum } from "@/app/enums/caseMaterialEnum";
+import { CaseThicknessEnum } from "@/app/enums/caseThicknessEnum";
+import { ColorEnum } from "@/app/enums/colorEnum";
 import { CrownWatchTypeEnum } from "@/app/enums/crownWatchTypeEnum";
 import { CrystalMaterialEnum } from "@/app/enums/crystalMaterialEnum";
 import { DialMarketsEnum } from "@/app/enums/dialMarketsEnum";
@@ -56,19 +64,19 @@ const details: WatchDetails = {
     },
 
     case: {
-      diameter: "39 mm",
-      thickness: "12 mm",
-      material: "Aluminium",
+      diameter: CaseDiameterEnum.D_39,
+      thickness: CaseThicknessEnum.T_12,
+      material: CaseMaterialEnum.ALUMINIUM,
       waterResistance: WaterResistanceEnum.WATERPROOF_50M,
-      finishingDetails: "Matte",
-      bezel: "Without bezel",
+      finishingDetails: CaseFinishingEnum.MATTE,
+      bezel: BezelTypeEnum.WITHOUT,
       crownType: CrownWatchTypeEnum.PUSH_PULL,
       crystal: CrystalMaterialEnum.MINERAL,
       caseback: CaseBackDetailsEnum.BRAND_DECORATION,
     },
 
     dial: {
-      color: "White",
+      color: ColorEnum.WHITE,
       dialMarkers: DialMarketsEnum.DAGGER,
       finishingDetails: FinishingDetailsEnum.NONE,
       luminiscentIndexes: LuminescentIndexesEnum.MARKERS,
@@ -76,10 +84,10 @@ const details: WatchDetails = {
     },
 
     bracelet: {
-      material: "Leather - Racing Style",
+      material: BraceletMaterialEnum.LEATHER_RACING,
       buckleType: BuckleTypeEnum.STANDARD_BUCKLE,
-      width: "22 mm",
-      color: "Red",
+      width: BraceletWidthEnum.W_22,
+      color: ColorEnum.RED,
     },
 
     movement: MovementsDataDB.MIYOTA_OS60,

@@ -1,7 +1,15 @@
+import { BezelTypeEnum } from "@/app/enums/bezelTypeEnum";
+import { BraceletMaterialEnum } from "@/app/enums/braceletMaterialEnum";
+import { BraceletWidthEnum } from "@/app/enums/braceletWidthEnum";
 import { BrandsEnum } from "@/app/enums/brandsEnum";
 import { BuckleTypeEnum } from "@/app/enums/buckleTypeEnum";
 import { CalendarWatchTypeEnum } from "@/app/enums/calendarWatchTypeEnum";
 import { CaseBackDetailsEnum } from "@/app/enums/caseBackDetailsEnum";
+import { CaseDiameterEnum } from "@/app/enums/caseDiameterEnum";
+import { CaseFinishingEnum } from "@/app/enums/caseFinishingEnum";
+import { CaseMaterialEnum } from "@/app/enums/caseMaterialEnum";
+import { CaseThicknessEnum } from "@/app/enums/caseThicknessEnum";
+import { ColorEnum } from "@/app/enums/colorEnum";
 import { CrownWatchTypeEnum } from "@/app/enums/crownWatchTypeEnum";
 import { CrystalMaterialEnum } from "@/app/enums/crystalMaterialEnum";
 import { DialMarketsEnum } from "@/app/enums/dialMarketsEnum";
@@ -98,19 +106,19 @@ const details: WatchDetails = {
     },
 
     case: {
-      diameter: "40 mm",
-      thickness: "12 mm",
-      material: "Stainless Steel",
+      diameter: CaseDiameterEnum.D_40,
+      thickness: CaseThicknessEnum.T_12,
+      material: CaseMaterialEnum.STAINLESS_STEEL,
       waterResistance: WaterResistanceEnum.WATERPROOF_200M,
-      finishingDetails: "Sand-blasted",
-      bezel: "Uni-directional, 10-minute graduated",
+      finishingDetails: CaseFinishingEnum.SANDBLASTED,
+      bezel: BezelTypeEnum.UNI_10_MIN,
       crownType: CrownWatchTypeEnum.SCREW_DOWN,
       crystal: CrystalMaterialEnum.SAPPHIRE,
       caseback: CaseBackDetailsEnum.BRAND_DECORATION,
     },
 
     dial: {
-      color: "White",
+      color: ColorEnum.WHITE,
       dialMarkers: DialMarketsEnum.BATTON,
       finishingDetails: FinishingDetailsEnum.DETAILED_SUB_DIALS,
       luminiscentIndexes: LuminescentIndexesEnum.HANDS_AND_MARKERS + LuminescentIndexesEnum.TRITIUM,
@@ -118,10 +126,10 @@ const details: WatchDetails = {
     },
 
     bracelet: {
-      material: "Stainless Steel Links Bracelet",
+      material: BraceletMaterialEnum.SS_LINKS,
       buckleType: BuckleTypeEnum.FOLDING_CLASP,
-      width: "18 mm",
-      color: "Grey",
+      width: BraceletWidthEnum.W_18,
+      color: ColorEnum.GREY,
     },
 
     movement: MovementsDataDB.HEUER_2_00,

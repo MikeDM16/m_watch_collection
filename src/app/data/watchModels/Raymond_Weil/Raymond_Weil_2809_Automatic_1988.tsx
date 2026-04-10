@@ -1,7 +1,15 @@
+import { BezelTypeEnum } from "@/app/enums/bezelTypeEnum";
+import { BraceletMaterialEnum } from "@/app/enums/braceletMaterialEnum";
+import { BraceletWidthEnum } from "@/app/enums/braceletWidthEnum";
 import { BrandsEnum } from "@/app/enums/brandsEnum";
 import { BuckleTypeEnum } from "@/app/enums/buckleTypeEnum";
 import { CalendarWatchTypeEnum } from "@/app/enums/calendarWatchTypeEnum";
 import { CaseBackDetailsEnum } from "@/app/enums/caseBackDetailsEnum";
+import { CaseDiameterEnum } from "@/app/enums/caseDiameterEnum";
+import { CaseFinishingEnum } from "@/app/enums/caseFinishingEnum";
+import { CaseMaterialEnum } from "@/app/enums/caseMaterialEnum";
+import { CaseThicknessEnum } from "@/app/enums/caseThicknessEnum";
+import { ColorEnum } from "@/app/enums/colorEnum";
 import { CrownWatchTypeEnum } from "@/app/enums/crownWatchTypeEnum";
 import { CrystalMaterialEnum } from "@/app/enums/crystalMaterialEnum";
 import { DialMarketsEnum } from "@/app/enums/dialMarketsEnum";
@@ -66,19 +74,19 @@ const details: WatchDetails = {
     },
 
     case: {
-      diameter: "33 mm",
-      thickness: "7 mm",
-      material: "18K Gold Electroplated",
+      diameter: CaseDiameterEnum.D_33,
+      thickness: CaseThicknessEnum.T_7,
+      material: CaseMaterialEnum.GOLD_18K_ELECTROPLATED,
       waterResistance: WaterResistanceEnum.WATERPROOF_10M,
-      finishingDetails: "Polished",
-      bezel: "Coin detailed bezel edge",
+      finishingDetails: CaseFinishingEnum.POLISHED,
+      bezel: BezelTypeEnum.COIN_EDGE,
       crownType: CrownWatchTypeEnum.PUSH_PULL,
       crystal: CrystalMaterialEnum.MINERAL,
       caseback: CaseBackDetailsEnum.BRAND_DECORATION,
     },
 
     dial: {
-      color: "Gold",
+      color: ColorEnum.GOLD,
       dialMarkers: DialMarketsEnum.DAGGER,
       finishingDetails: FinishingDetailsEnum.RADIAL_BRUSHED_EFFECT,
       luminiscentIndexes: LuminescentIndexesEnum.NONE,
@@ -86,10 +94,10 @@ const details: WatchDetails = {
     },
 
     bracelet: {
-      material: "Leather (Lizard skin)",
+      material: BraceletMaterialEnum.LIZARD_LEATHER,
       buckleType: BuckleTypeEnum.STANDARD_BUCKLE,
-      width: "18 mm",
-      color: "Black",
+      width: BraceletWidthEnum.W_18,
+      color: ColorEnum.BLACK,
     },
 
     movement: MovementsDataDB.ETA_2892_2_21J,

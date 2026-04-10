@@ -1,7 +1,15 @@
+import { BezelTypeEnum } from "@/app/enums/bezelTypeEnum";
+import { BraceletMaterialEnum } from "@/app/enums/braceletMaterialEnum";
+import { BraceletWidthEnum } from "@/app/enums/braceletWidthEnum";
 import { BrandsEnum } from "@/app/enums/brandsEnum";
 import { BuckleTypeEnum } from "@/app/enums/buckleTypeEnum";
 import { CalendarWatchTypeEnum } from "@/app/enums/calendarWatchTypeEnum";
 import { CaseBackDetailsEnum } from "@/app/enums/caseBackDetailsEnum";
+import { CaseDiameterEnum } from "@/app/enums/caseDiameterEnum";
+import { CaseFinishingEnum } from "@/app/enums/caseFinishingEnum";
+import { CaseMaterialEnum } from "@/app/enums/caseMaterialEnum";
+import { CaseThicknessEnum } from "@/app/enums/caseThicknessEnum";
+import { ColorEnum } from "@/app/enums/colorEnum";
 import { CrownWatchTypeEnum } from "@/app/enums/crownWatchTypeEnum";
 import { CrystalMaterialEnum } from "@/app/enums/crystalMaterialEnum";
 import { DialMarketsEnum } from "@/app/enums/dialMarketsEnum";
@@ -80,19 +88,19 @@ const details: WatchDetails = {
     },
 
     case: {
-      diameter: "44 mm",
-      thickness: "13 mm",
-      material: "Titanium",
+      diameter: CaseDiameterEnum.D_44,
+      thickness: CaseThicknessEnum.T_13,
+      material: CaseMaterialEnum.TITANIUM,
       waterResistance: WaterResistanceEnum.WATERPROOF_100M,
-      finishingDetails: "Sandblasted",
-      bezel: "Inner Hour scale",
+      finishingDetails: CaseFinishingEnum.SANDBLASTED,
+      bezel: BezelTypeEnum.INNER_HOUR,
       crownType: CrownWatchTypeEnum.SCREW_DOWN,
       crystal: CrystalMaterialEnum.SAPPHIRE,
       caseback: CaseBackDetailsEnum.OPEN_CASE_BACK,
     },
 
     dial: {
-      color: "Blue",
+      color: ColorEnum.BLUE,
       dialMarkers: DialMarketsEnum.ARABIC,
       finishingDetails: FinishingDetailsEnum.DETAILED_SUB_DIALS,
       luminiscentIndexes: LuminescentIndexesEnum.HANDS_AND_MARKERS,
@@ -100,10 +108,10 @@ const details: WatchDetails = {
     },
 
     bracelet: {
-      material: "Rubber (Racing Style)",
+      material: BraceletMaterialEnum.RUBBER_RACING,
       buckleType: BuckleTypeEnum.BUTTERFLY_DEPLOY_CLASP,
-      width: "24 mm",
-      color: "Blue",
+      width: BraceletWidthEnum.W_24,
+      color: ColorEnum.BLUE,
     },
 
     movement: MovementsDataDB.ETA_Valjoux_7753_27,

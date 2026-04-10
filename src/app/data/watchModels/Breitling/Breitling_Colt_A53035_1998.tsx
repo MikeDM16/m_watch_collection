@@ -1,7 +1,15 @@
+import { BezelTypeEnum } from "@/app/enums/bezelTypeEnum";
+import { BraceletMaterialEnum } from "@/app/enums/braceletMaterialEnum";
+import { BraceletWidthEnum } from "@/app/enums/braceletWidthEnum";
 import { BrandsEnum } from "@/app/enums/brandsEnum";
 import { BuckleTypeEnum } from "@/app/enums/buckleTypeEnum";
 import { CalendarWatchTypeEnum } from "@/app/enums/calendarWatchTypeEnum";
 import { CaseBackDetailsEnum } from "@/app/enums/caseBackDetailsEnum";
+import { CaseDiameterEnum } from "@/app/enums/caseDiameterEnum";
+import { CaseFinishingEnum } from "@/app/enums/caseFinishingEnum";
+import { CaseMaterialEnum } from "@/app/enums/caseMaterialEnum";
+import { CaseThicknessEnum } from "@/app/enums/caseThicknessEnum";
+import { ColorEnum } from "@/app/enums/colorEnum";
 import { CrownWatchTypeEnum } from "@/app/enums/crownWatchTypeEnum";
 import { CrystalMaterialEnum } from "@/app/enums/crystalMaterialEnum";
 import { DialMarketsEnum } from "@/app/enums/dialMarketsEnum";
@@ -127,19 +135,19 @@ const details: WatchDetails = {
     },
 
     case: {
-      diameter: "39 mm",
-      thickness: "12 mm",
-      material: "Stainless Steel",
+      diameter: CaseDiameterEnum.D_39,
+      thickness: CaseThicknessEnum.T_12,
+      material: CaseMaterialEnum.STAINLESS_STEEL,
       waterResistance: WaterResistanceEnum.WATERPROOF_100M,
-      finishingDetails: "Polished",
-      bezel: "Rider Tabs, 5 min graduated",
+      finishingDetails: CaseFinishingEnum.POLISHED,
+      bezel: BezelTypeEnum.RIDERS_TABS_5_MIN,
       crownType: CrownWatchTypeEnum.PUSH_PULL,
       crystal: CrystalMaterialEnum.MINERAL,
       caseback: CaseBackDetailsEnum.BRAND_DECORATION,
     },
 
     dial: {
-      color: "Blue",
+      color: ColorEnum.BLUE,
       dialMarkers: DialMarketsEnum.DAGGER,
       finishingDetails: FinishingDetailsEnum.TEXTURED,
       luminiscentIndexes: LuminescentIndexesEnum.HANDS_AND_MARKERS + LuminescentIndexesEnum.TRITIUM,
@@ -147,10 +155,10 @@ const details: WatchDetails = {
     },
 
     bracelet: {
-      material: "Stainless Steel",
+      material: BraceletMaterialEnum.SS_LINKS,
       buckleType: BuckleTypeEnum.FOLDING_CLASP,
-      width: "18 mm",
-      color: "Polished",
+      width: BraceletWidthEnum.W_18,
+      color: ColorEnum.SS_POLISHED,
     },
 
     movement: MovementsDataDB.ETA_251_262,

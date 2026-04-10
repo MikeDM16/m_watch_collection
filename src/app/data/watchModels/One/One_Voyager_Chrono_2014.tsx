@@ -1,7 +1,14 @@
+import { BezelTypeEnum } from "@/app/enums/bezelTypeEnum";
+import { BraceletMaterialEnum } from "@/app/enums/braceletMaterialEnum";
+import { BraceletWidthEnum } from "@/app/enums/braceletWidthEnum";
 import { BrandsEnum } from "@/app/enums/brandsEnum";
 import { BuckleTypeEnum } from "@/app/enums/buckleTypeEnum";
 import { CalendarWatchTypeEnum } from "@/app/enums/calendarWatchTypeEnum";
 import { CaseBackDetailsEnum } from "@/app/enums/caseBackDetailsEnum";
+import { CaseDiameterEnum } from "@/app/enums/caseDiameterEnum";
+import { CaseMaterialEnum } from "@/app/enums/caseMaterialEnum";
+import { CaseThicknessEnum } from "@/app/enums/caseThicknessEnum";
+import { ColorEnum } from "@/app/enums/colorEnum";
 import { CrownWatchTypeEnum } from "@/app/enums/crownWatchTypeEnum";
 import { CrystalMaterialEnum } from "@/app/enums/crystalMaterialEnum";
 import { DialMarketsEnum } from "@/app/enums/dialMarketsEnum";
@@ -48,19 +55,19 @@ const details: WatchDetails = {
     },
 
     case: {
-      diameter: "32 mm",
-      thickness: "12 mm",
-      material: "Stainless Steel",
+      diameter: CaseDiameterEnum.D_32,
+      thickness: CaseThicknessEnum.T_12,
+      material: CaseMaterialEnum.STAINLESS_STEEL,
       waterResistance: WaterResistanceEnum.WATERPROOF_100M,
       finishingDetails: "Brushed",
-      bezel: "Uni-directional, 5-minute graduated",
+      bezel: BezelTypeEnum.UNI_5_MIN,
       crownType: CrownWatchTypeEnum.PUSH_PULL,
       crystal: CrystalMaterialEnum.MINERAL,
       caseback: CaseBackDetailsEnum.BRAND_DECORATION,
     },
 
     dial: {
-      color: "Black",
+      color: ColorEnum.BLACK,
       dialMarkers: DialMarketsEnum.BATTON,
       finishingDetails: FinishingDetailsEnum.CARBON_FIBER,
       luminiscentIndexes: LuminescentIndexesEnum.HANDS_AND_MARKERS,
@@ -68,10 +75,10 @@ const details: WatchDetails = {
     },
 
     bracelet: {
-      material: "Leather (Racing style)",
+      material: BraceletMaterialEnum.LEATHER_RACING,
       buckleType: BuckleTypeEnum.FOLDING_CLASP,
-      width: "22 mm",
-      color: "Black",
+      width: BraceletWidthEnum.W_22,
+      color: ColorEnum.BLACK,
     },
 
     movement: {

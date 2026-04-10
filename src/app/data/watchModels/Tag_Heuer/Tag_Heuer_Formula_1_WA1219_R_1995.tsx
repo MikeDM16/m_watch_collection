@@ -1,7 +1,15 @@
+import { BezelTypeEnum } from "@/app/enums/bezelTypeEnum";
+import { BraceletMaterialEnum } from "@/app/enums/braceletMaterialEnum";
+import { BraceletWidthEnum } from "@/app/enums/braceletWidthEnum";
 import { BrandsEnum } from "@/app/enums/brandsEnum";
 import { BuckleTypeEnum } from "@/app/enums/buckleTypeEnum";
 import { CalendarWatchTypeEnum } from "@/app/enums/calendarWatchTypeEnum";
 import { CaseBackDetailsEnum } from "@/app/enums/caseBackDetailsEnum";
+import { CaseDiameterEnum } from "@/app/enums/caseDiameterEnum";
+import { CaseFinishingEnum } from "@/app/enums/caseFinishingEnum";
+import { CaseMaterialEnum } from "@/app/enums/caseMaterialEnum";
+import { CaseThicknessEnum } from "@/app/enums/caseThicknessEnum";
+import { ColorEnum } from "@/app/enums/colorEnum";
 import { CrownWatchTypeEnum } from "@/app/enums/crownWatchTypeEnum";
 import { CrystalMaterialEnum } from "@/app/enums/crystalMaterialEnum";
 import { DialMarketsEnum } from "@/app/enums/dialMarketsEnum";
@@ -59,19 +67,19 @@ const details: WatchDetails = {
     },
 
     case: {
-      diameter: "35 mm",
-      thickness: "9 mm",
-      material: "Stainless Steel",
+      diameter: CaseDiameterEnum.D_35,
+      thickness: CaseThicknessEnum.T_9,
+      material: CaseMaterialEnum.STAINLESS_STEEL,
       waterResistance: WaterResistanceEnum.WATERPROOF_200M,
-      finishingDetails: "Matte",
-      bezel: "Uni-directional, 5-minute graduated",
+      finishingDetails: CaseFinishingEnum.MATTE,
+      bezel: BezelTypeEnum.UNI_5_MIN,
       crownType: CrownWatchTypeEnum.PUSH_PULL,
       crystal: CrystalMaterialEnum.MINERAL,
       caseback: CaseBackDetailsEnum.BRAND_DECORATION,
     },
 
     dial: {
-      color: "White",
+      color: ColorEnum.WHITE,
       dialMarkers: DialMarketsEnum.ARROW,
       finishingDetails: FinishingDetailsEnum.TRITIUM_MARKERS,
       luminiscentIndexes: LuminescentIndexesEnum.HANDS_AND_MARKERS + LuminescentIndexesEnum.TRITIUM,
@@ -79,10 +87,10 @@ const details: WatchDetails = {
     },
 
     bracelet: {
-      material: "F1 series Rubber strap",
+      material: BraceletMaterialEnum.RUBBER_F1,
       buckleType: BuckleTypeEnum.STANDARD_BUCKLE,
-      width: "18 mm",
-      color: "Dark Blue",
+      width: BraceletWidthEnum.W_18,
+      color: ColorEnum.DARK_BLUE,
     },
 
     movement: MovementsDataDB.HEUER_4_93,

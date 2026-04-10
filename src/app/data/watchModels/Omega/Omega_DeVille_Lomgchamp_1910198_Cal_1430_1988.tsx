@@ -1,7 +1,14 @@
+import { BezelTypeEnum } from "@/app/enums/bezelTypeEnum";
+import { BraceletMaterialEnum } from "@/app/enums/braceletMaterialEnum";
+import { BraceletWidthEnum } from "@/app/enums/braceletWidthEnum";
 import { BrandsEnum } from "@/app/enums/brandsEnum";
 import { BuckleTypeEnum } from "@/app/enums/buckleTypeEnum";
 import { CalendarWatchTypeEnum } from "@/app/enums/calendarWatchTypeEnum";
 import { CaseBackDetailsEnum } from "@/app/enums/caseBackDetailsEnum";
+import { CaseDiameterEnum } from "@/app/enums/caseDiameterEnum";
+import { CaseFinishingEnum } from "@/app/enums/caseFinishingEnum";
+import { CaseThicknessEnum } from "@/app/enums/caseThicknessEnum";
+import { ColorEnum } from "@/app/enums/colorEnum";
 import { CrownWatchTypeEnum } from "@/app/enums/crownWatchTypeEnum";
 import { CrystalMaterialEnum } from "@/app/enums/crystalMaterialEnum";
 import { DialMarketsEnum } from "@/app/enums/dialMarketsEnum";
@@ -71,19 +78,19 @@ const details: WatchDetails = {
     },
 
     case: {
-      diameter: "32 mm",
-      thickness: "5 mm",
+      diameter: CaseDiameterEnum.D_32,
+      thickness: CaseThicknessEnum.T_5,
       material: "14K Gold Plated (20 \u339B) - Stainless Steel backcase",
       waterResistance: WaterResistanceEnum.WATER_RESISTANT,
-      finishingDetails: "Polished",
-      bezel: "Without bezel",
+      finishingDetails: CaseFinishingEnum.POLISHED,
+      bezel: BezelTypeEnum.WITHOUT,
       crownType: CrownWatchTypeEnum.PUSH_PULL,
       crystal: CrystalMaterialEnum.MINERAL,
       caseback: CaseBackDetailsEnum.BRAND_DECORATION,
     },
 
     dial: {
-      color: "White",
+      color: ColorEnum.WHITE,
       dialMarkers: DialMarketsEnum.ROMAN,
       finishingDetails: FinishingDetailsEnum.NONE,
       luminiscentIndexes: LuminescentIndexesEnum.NONE,
@@ -91,10 +98,10 @@ const details: WatchDetails = {
     },
 
     bracelet: {
-      material: "Leather",
+      material: BraceletMaterialEnum.LEATHER,
       buckleType: BuckleTypeEnum.STANDARD_BUCKLE,
-      width: "18 mm",
-      color: "Brown",
+      width: BraceletWidthEnum.W_18,
+      color: ColorEnum.BROWN,
     },
 
     movement: MovementsDataDB.OMEGA_1430,

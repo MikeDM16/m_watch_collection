@@ -1,7 +1,15 @@
+import { BezelTypeEnum } from "@/app/enums/bezelTypeEnum";
+import { BraceletMaterialEnum } from "@/app/enums/braceletMaterialEnum";
+import { BraceletWidthEnum } from "@/app/enums/braceletWidthEnum";
 import { BrandsEnum } from "@/app/enums/brandsEnum";
 import { BuckleTypeEnum } from "@/app/enums/buckleTypeEnum";
 import { CalendarWatchTypeEnum } from "@/app/enums/calendarWatchTypeEnum";
 import { CaseBackDetailsEnum } from "@/app/enums/caseBackDetailsEnum";
+import { CaseDiameterEnum } from "@/app/enums/caseDiameterEnum";
+import { CaseFinishingEnum } from "@/app/enums/caseFinishingEnum";
+import { CaseMaterialEnum } from "@/app/enums/caseMaterialEnum";
+import { CaseThicknessEnum } from "@/app/enums/caseThicknessEnum";
+import { ColorEnum } from "@/app/enums/colorEnum";
 import { CrownWatchTypeEnum } from "@/app/enums/crownWatchTypeEnum";
 import { CrystalMaterialEnum } from "@/app/enums/crystalMaterialEnum";
 import { DialMarketsEnum } from "@/app/enums/dialMarketsEnum";
@@ -58,19 +66,19 @@ const details: WatchDetails = {
     },
 
     case: {
-      diameter: "36 mm",
-      thickness: "9 mm",
-      material: "Stainless Steel",
+      diameter: CaseDiameterEnum.D_36,
+      thickness: CaseThicknessEnum.T_9,
+      material: CaseMaterialEnum.STAINLESS_STEEL,
       waterResistance: WaterResistanceEnum.WATERPROOF_100M,
-      finishingDetails: "Sattin-mate",
-      bezel: "Tachymeter inner bezel",
+      finishingDetails: CaseFinishingEnum.SATIN_MATTE,
+      bezel: BezelTypeEnum.TACHYMETER_INNER,
       crownType: CrownWatchTypeEnum.SCREW_DOWN,
       crystal: CrystalMaterialEnum.MINERAL,
       caseback: CaseBackDetailsEnum.DETAILS_ENGRAVED,
     },
 
     dial: {
-      color: "Dark Grey",
+      color: ColorEnum.DARK_GREY,
       dialMarkers: DialMarketsEnum.ARABIC,
       finishingDetails: FinishingDetailsEnum.NONE,
       luminiscentIndexes: LuminescentIndexesEnum.MARKERS,
@@ -78,10 +86,10 @@ const details: WatchDetails = {
     },
 
     bracelet: {
-      material: "Stainless Steel Links Bracelet",
+      material: BraceletMaterialEnum.SS_LINKS,
       buckleType: BuckleTypeEnum.FOLDING_CLASP,
-      width: "19 mm",
-      color: "Matte Grey",
+      width: BraceletWidthEnum.W_19,
+      color: ColorEnum.MATTE_GREY,
     },
 
     movement: MovementsDataDB.MIYOTA_OS60,

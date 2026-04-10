@@ -1,7 +1,14 @@
+import { BezelTypeEnum } from "@/app/enums/bezelTypeEnum";
+import { BraceletMaterialEnum } from "@/app/enums/braceletMaterialEnum";
+import { BraceletWidthEnum } from "@/app/enums/braceletWidthEnum";
 import { BrandsEnum } from "@/app/enums/brandsEnum";
 import { BuckleTypeEnum } from "@/app/enums/buckleTypeEnum";
 import { CalendarWatchTypeEnum } from "@/app/enums/calendarWatchTypeEnum";
 import { CaseBackDetailsEnum } from "@/app/enums/caseBackDetailsEnum";
+import { CaseDiameterEnum } from "@/app/enums/caseDiameterEnum";
+import { CaseMaterialEnum } from "@/app/enums/caseMaterialEnum";
+import { CaseThicknessEnum } from "@/app/enums/caseThicknessEnum";
+import { ColorEnum } from "@/app/enums/colorEnum";
 import { CrownWatchTypeEnum } from "@/app/enums/crownWatchTypeEnum";
 import { CrystalMaterialEnum } from "@/app/enums/crystalMaterialEnum";
 import { DialMarketsEnum } from "@/app/enums/dialMarketsEnum";
@@ -105,19 +112,19 @@ const details: WatchDetails = {
     },
 
     case: {
-      diameter: "44 mm",
-      thickness: "14 mm",
-      material: "Stainless Steel",
+      diameter: CaseDiameterEnum.D_44,
+      thickness: CaseThicknessEnum.T_14,
+      material: CaseMaterialEnum.STAINLESS_STEEL,
       waterResistance: WaterResistanceEnum.WATERPROOF_50M,
       finishingDetails: "Brushed",
-      bezel: "15min Graduated bezel",
+      bezel: BezelTypeEnum.GRADUATED_15_MIN,
       crownType: CrownWatchTypeEnum.PUSH_PULL,
       crystal: CrystalMaterialEnum.MINERAL,
       caseback: CaseBackDetailsEnum.OPEN_CASE_BACK,
     },
 
     dial: {
-      color: "Black",
+      color: ColorEnum.BLACK,
       dialMarkers: DialMarketsEnum.ARABIC,
       finishingDetails: FinishingDetailsEnum.APPLIED_INDECES,
       luminiscentIndexes: LuminescentIndexesEnum.HANDS_AND_MARKERS + LuminescentIndexesEnum.TRITIUM,
@@ -125,10 +132,10 @@ const details: WatchDetails = {
     },
 
     bracelet: {
-      material: "Leather",
+      material: BraceletMaterialEnum.LEATHER,
       buckleType: BuckleTypeEnum.BUTTERFLY_DEPLOY_CLASP,
-      width: "20 mm",
-      color: "Bourdeaux",
+      width: BraceletWidthEnum.W_20,
+      color: ColorEnum.BORDEAUX,
     },
 
     movement: MovementsDataDB.POLJOT_3133_25J,

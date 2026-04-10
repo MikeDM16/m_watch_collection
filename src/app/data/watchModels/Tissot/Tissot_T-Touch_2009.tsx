@@ -1,7 +1,15 @@
+import { BezelTypeEnum } from "@/app/enums/bezelTypeEnum";
+import { BraceletMaterialEnum } from "@/app/enums/braceletMaterialEnum";
+import { BraceletWidthEnum } from "@/app/enums/braceletWidthEnum";
 import { BrandsEnum } from "@/app/enums/brandsEnum";
 import { BuckleTypeEnum } from "@/app/enums/buckleTypeEnum";
 import { CalendarWatchTypeEnum } from "@/app/enums/calendarWatchTypeEnum";
 import { CaseBackDetailsEnum } from "@/app/enums/caseBackDetailsEnum";
+import { CaseDiameterEnum } from "@/app/enums/caseDiameterEnum";
+import { CaseFinishingEnum } from "@/app/enums/caseFinishingEnum";
+import { CaseMaterialEnum } from "@/app/enums/caseMaterialEnum";
+import { CaseThicknessEnum } from "@/app/enums/caseThicknessEnum";
+import { ColorEnum } from "@/app/enums/colorEnum";
 import { CrownWatchTypeEnum } from "@/app/enums/crownWatchTypeEnum";
 import { CrystalMaterialEnum } from "@/app/enums/crystalMaterialEnum";
 import { DialMarketsEnum } from "@/app/enums/dialMarketsEnum";
@@ -101,19 +109,19 @@ const details: WatchDetails = {
     },
 
     case: {
-      diameter: "43 mm",
-      thickness: "14 mm",
-      material: "Titanium",
+      diameter: CaseDiameterEnum.D_43,
+      thickness: CaseThicknessEnum.T_14,
+      material: CaseMaterialEnum.TITANIUM,
       waterResistance: WaterResistanceEnum.WATERPROOF_30M,
-      finishingDetails: "-",
-      bezel: "bi-directional, compass graduated",
+      finishingDetails: CaseFinishingEnum.NONE,
+      bezel: BezelTypeEnum.COMPASS_BI,
       crownType: CrownWatchTypeEnum.PUSH_PULL,
       crystal: CrystalMaterialEnum.SAPPHIRE,
       caseback: CaseBackDetailsEnum.BRAND_DECORATION,
     },
 
     dial: {
-      color: "Orange",
+      color: ColorEnum.ORANGE,
       dialMarkers: DialMarketsEnum.BATTON,
       finishingDetails: FinishingDetailsEnum.NONE,
       luminiscentIndexes: LuminescentIndexesEnum.HANDS_AND_MARKERS,
@@ -121,10 +129,10 @@ const details: WatchDetails = {
     },
 
     bracelet: {
-      material: "Rubber",
+      material: BraceletMaterialEnum.RUBBER,
       buckleType: BuckleTypeEnum.STANDARD_BUCKLE,
-      width: "20 mm",
-      color: "Back with orange details",
+      width: BraceletWidthEnum.W_20,
+      color: ColorEnum.BLACK_ORANGE,
     },
 
     movement: {

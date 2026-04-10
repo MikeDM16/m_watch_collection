@@ -1,7 +1,15 @@
+import { BezelTypeEnum } from "@/app/enums/bezelTypeEnum";
+import { BraceletMaterialEnum } from "@/app/enums/braceletMaterialEnum";
+import { BraceletWidthEnum } from "@/app/enums/braceletWidthEnum";
 import { BrandsEnum } from "@/app/enums/brandsEnum";
 import { BuckleTypeEnum } from "@/app/enums/buckleTypeEnum";
 import { CalendarWatchTypeEnum } from "@/app/enums/calendarWatchTypeEnum";
 import { CaseBackDetailsEnum } from "@/app/enums/caseBackDetailsEnum";
+import { CaseDiameterEnum } from "@/app/enums/caseDiameterEnum";
+import { CaseFinishingEnum } from "@/app/enums/caseFinishingEnum";
+import { CaseMaterialEnum } from "@/app/enums/caseMaterialEnum";
+import { CaseThicknessEnum } from "@/app/enums/caseThicknessEnum";
+import { ColorEnum } from "@/app/enums/colorEnum";
 import { CrownWatchTypeEnum } from "@/app/enums/crownWatchTypeEnum";
 import { CrystalMaterialEnum } from "@/app/enums/crystalMaterialEnum";
 import { DialMarketsEnum } from "@/app/enums/dialMarketsEnum";
@@ -121,19 +129,19 @@ const details: WatchDetails = {
     },
 
     case: {
-      diameter: "42 mm",
-      thickness: "13 mm",
-      material: "Titanium with Black PVD",
+      diameter: CaseDiameterEnum.D_42,
+      thickness: CaseThicknessEnum.T_13,
+      material: CaseMaterialEnum.TITANIUM_BLACK_PVD,
       waterResistance: WaterResistanceEnum.WATERPROOF_100M,
-      finishingDetails: "Black PVD Coating",
-      bezel: "Without",
+      finishingDetails: CaseFinishingEnum.BLACK_PVD,
+      bezel: BezelTypeEnum.WITHOUT,
       crownType: CrownWatchTypeEnum.SCREW_DOWN,
       crystal: CrystalMaterialEnum.SAPPHIRE,
       caseback: CaseBackDetailsEnum.OPEN_CASE_BACK,
     },
 
     dial: {
-      color: "Red",
+      color: ColorEnum.RED,
       dialMarkers: DialMarketsEnum.ARABIC,
       finishingDetails: FinishingDetailsEnum.DETAILED_SUB_DIALS,
       luminiscentIndexes: LuminescentIndexesEnum.HANDS_AND_MARKERS,
@@ -141,10 +149,10 @@ const details: WatchDetails = {
     },
 
     bracelet: {
-      material: "Rubber",
+      material: BraceletMaterialEnum.RUBBER,
       buckleType: BuckleTypeEnum.BUTTERFLY_DEPLOY_CLASP,
-      width: "22 mm",
-      color: "Black",
+      width: BraceletWidthEnum.W_22,
+      color: ColorEnum.BLACK,
     },
 
     movement: MovementsDataDB.ETA_2894_2,

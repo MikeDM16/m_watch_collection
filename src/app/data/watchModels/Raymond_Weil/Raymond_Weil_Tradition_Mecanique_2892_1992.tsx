@@ -1,7 +1,15 @@
+import { BezelTypeEnum } from "@/app/enums/bezelTypeEnum";
+import { BraceletMaterialEnum } from "@/app/enums/braceletMaterialEnum";
+import { BraceletWidthEnum } from "@/app/enums/braceletWidthEnum";
 import { BrandsEnum } from "@/app/enums/brandsEnum";
 import { BuckleTypeEnum } from "@/app/enums/buckleTypeEnum";
 import { CalendarWatchTypeEnum } from "@/app/enums/calendarWatchTypeEnum";
 import { CaseBackDetailsEnum } from "@/app/enums/caseBackDetailsEnum";
+import { CaseDiameterEnum } from "@/app/enums/caseDiameterEnum";
+import { CaseFinishingEnum } from "@/app/enums/caseFinishingEnum";
+import { CaseMaterialEnum } from "@/app/enums/caseMaterialEnum";
+import { CaseThicknessEnum } from "@/app/enums/caseThicknessEnum";
+import { ColorEnum } from "@/app/enums/colorEnum";
 import { CrownWatchTypeEnum } from "@/app/enums/crownWatchTypeEnum";
 import { CrystalMaterialEnum } from "@/app/enums/crystalMaterialEnum";
 import { DialMarketsEnum } from "@/app/enums/dialMarketsEnum";
@@ -86,19 +94,19 @@ const details: WatchDetails = {
     },
 
     case: {
-      diameter: "35 mm",
-      thickness: "7 mm",
-      material: "18K Gold Electroplated",
+      diameter: CaseDiameterEnum.D_35,
+      thickness: CaseThicknessEnum.T_7,
+      material: CaseMaterialEnum.GOLD_18K_ELECTROPLATED,
       waterResistance: WaterResistanceEnum.WATERPROOF_10M,
-      finishingDetails: "Polished",
-      bezel: "Without bezel",
+      finishingDetails: CaseFinishingEnum.POLISHED,
+      bezel: BezelTypeEnum.WITHOUT,
       crownType: CrownWatchTypeEnum.PUSH_PULL,
       crystal: CrystalMaterialEnum.SAPPHIRE,
       caseback: CaseBackDetailsEnum.OPEN_CASE_BACK,
     },
 
     dial: {
-      color: "White",
+      color: ColorEnum.WHITE,
       dialMarkers: DialMarketsEnum.ROMAN,
       finishingDetails: FinishingDetailsEnum.GOLD_DETAILS,
       luminiscentIndexes: LuminescentIndexesEnum.NONE,
@@ -106,10 +114,10 @@ const details: WatchDetails = {
     },
 
     bracelet: {
-      material: "Crocodile Leather",
+      material: BraceletMaterialEnum.CROCODILE_LEATHER,
       buckleType: BuckleTypeEnum.STANDARD_BUCKLE,
-      width: "19 mm",
-      color: "Brown",
+      width: BraceletWidthEnum.W_19,
+      color: ColorEnum.BROWN,
     },
 
     movement: MovementsDataDB.ETA_2892_2_21J,

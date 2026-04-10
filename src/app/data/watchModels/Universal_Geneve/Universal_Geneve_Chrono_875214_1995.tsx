@@ -1,7 +1,15 @@
+import { BezelTypeEnum } from "@/app/enums/bezelTypeEnum";
+import { BraceletMaterialEnum } from "@/app/enums/braceletMaterialEnum";
+import { BraceletWidthEnum } from "@/app/enums/braceletWidthEnum";
 import { BrandsEnum } from "@/app/enums/brandsEnum";
 import { BuckleTypeEnum } from "@/app/enums/buckleTypeEnum";
 import { CalendarWatchTypeEnum } from "@/app/enums/calendarWatchTypeEnum";
 import { CaseBackDetailsEnum } from "@/app/enums/caseBackDetailsEnum";
+import { CaseDiameterEnum } from "@/app/enums/caseDiameterEnum";
+import { CaseFinishingEnum } from "@/app/enums/caseFinishingEnum";
+import { CaseMaterialEnum } from "@/app/enums/caseMaterialEnum";
+import { CaseThicknessEnum } from "@/app/enums/caseThicknessEnum";
+import { ColorEnum } from "@/app/enums/colorEnum";
 import { CrownWatchTypeEnum } from "@/app/enums/crownWatchTypeEnum";
 import { CrystalMaterialEnum } from "@/app/enums/crystalMaterialEnum";
 import { DialMarketsEnum } from "@/app/enums/dialMarketsEnum";
@@ -63,19 +71,19 @@ const details: WatchDetails = {
     },
 
     case: {
-      diameter: "37 mm",
-      thickness: "13 mm",
-      material: "Stainless Steel",
+      diameter: CaseDiameterEnum.D_37,
+      thickness: CaseThicknessEnum.T_13,
+      material: CaseMaterialEnum.STAINLESS_STEEL,
       waterResistance: WaterResistanceEnum.WATERPROOF_100M,
-      finishingDetails: "Polished",
-      bezel: "Polished bezel",
+      finishingDetails: CaseFinishingEnum.POLISHED,
+      bezel: BezelTypeEnum.POLISHED,
       crownType: CrownWatchTypeEnum.SCREW_DOWN,
       crystal: CrystalMaterialEnum.SAPPHIRE,
       caseback: CaseBackDetailsEnum.BRAND_DECORATION,
     },
 
     dial: {
-      color: "Grey",
+      color: ColorEnum.GREY,
       dialMarkers: DialMarketsEnum.BATTON,
       finishingDetails: FinishingDetailsEnum.METALLIC_COLOR,
       luminiscentIndexes: LuminescentIndexesEnum.MARKERS,
@@ -83,10 +91,10 @@ const details: WatchDetails = {
     },
 
     bracelet: {
-      material: "Stainless Steel",
+      material: BraceletMaterialEnum.SS_LINKS,
       buckleType: BuckleTypeEnum.FOLDING_CLASP,
-      width: "20 mm",
-      color: "Stainless Steel",
+      width: BraceletWidthEnum.W_20,
+      color: ColorEnum.SS_GREY,
     },
 
     movement: MovementsDataDB.ETA_251_262,

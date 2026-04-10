@@ -1,7 +1,15 @@
+import { BezelTypeEnum } from "@/app/enums/bezelTypeEnum";
+import { BraceletMaterialEnum } from "@/app/enums/braceletMaterialEnum";
+import { BraceletWidthEnum } from "@/app/enums/braceletWidthEnum";
 import { BrandsEnum } from "@/app/enums/brandsEnum";
 import { BuckleTypeEnum } from "@/app/enums/buckleTypeEnum";
 import { CalendarWatchTypeEnum } from "@/app/enums/calendarWatchTypeEnum";
 import { CaseBackDetailsEnum } from "@/app/enums/caseBackDetailsEnum";
+import { CaseDiameterEnum } from "@/app/enums/caseDiameterEnum";
+import { CaseFinishingEnum } from "@/app/enums/caseFinishingEnum";
+import { CaseMaterialEnum } from "@/app/enums/caseMaterialEnum";
+import { CaseThicknessEnum } from "@/app/enums/caseThicknessEnum";
+import { ColorEnum } from "@/app/enums/colorEnum";
 import { CrownWatchTypeEnum } from "@/app/enums/crownWatchTypeEnum";
 import { CrystalMaterialEnum } from "@/app/enums/crystalMaterialEnum";
 import { DialMarketsEnum } from "@/app/enums/dialMarketsEnum";
@@ -114,19 +122,19 @@ const details: WatchDetails = {
     },
 
     case: {
-      diameter: "39 mm",
-      thickness: "13 mm",
-      material: "Solid White Gold 18K (0.750) (72g)",
+      diameter: CaseDiameterEnum.D_39,
+      thickness: CaseThicknessEnum.T_13,
+      material: CaseMaterialEnum.SOLID_WHITE_GOLD_18K_72G,
       waterResistance: WaterResistanceEnum.WATERPROOF_50M,
-      finishingDetails: "Polished",
-      bezel: "Minute graduated, Chronomat Riders Tabs bezel",
+      finishingDetails: CaseFinishingEnum.POLISHED,
+      bezel: BezelTypeEnum.RIDERS_TABS_MINUTE,
       crownType: CrownWatchTypeEnum.SCREW_DOWN,
       crystal: CrystalMaterialEnum.SAPPHIRE,
       caseback: CaseBackDetailsEnum.BRAND_DECORATION,
     },
 
     dial: {
-      color: "Beige",
+      color: ColorEnum.BEIGE,
       dialMarkers: DialMarketsEnum.DAGGER,
       finishingDetails: FinishingDetailsEnum.DETAILED_SUB_DIALS,
       luminiscentIndexes: LuminescentIndexesEnum.HANDS_AND_MARKERS + LuminescentIndexesEnum.TRITIUM,
@@ -134,10 +142,10 @@ const details: WatchDetails = {
     },
 
     bracelet: {
-      material: "Genuine Breitling Crocodile Leather",
+      material: BraceletMaterialEnum.CROCODILE_BREITLING,
       buckleType: BuckleTypeEnum.FOLDING_CLASP,
-      width: "20 mm",
-      color: "Bourdeaux Red",
+      width: BraceletWidthEnum.W_20,
+      color: ColorEnum.BORDEAUX,
     },
 
     movement: MovementsDataDB.ETA_Valjoux_7750_17J,

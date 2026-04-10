@@ -1,7 +1,15 @@
+import { BezelTypeEnum } from "@/app/enums/bezelTypeEnum";
+import { BraceletMaterialEnum } from "@/app/enums/braceletMaterialEnum";
+import { BraceletWidthEnum } from "@/app/enums/braceletWidthEnum";
 import { BrandsEnum } from "@/app/enums/brandsEnum";
 import { BuckleTypeEnum } from "@/app/enums/buckleTypeEnum";
 import { CalendarWatchTypeEnum } from "@/app/enums/calendarWatchTypeEnum";
 import { CaseBackDetailsEnum } from "@/app/enums/caseBackDetailsEnum";
+import { CaseDiameterEnum } from "@/app/enums/caseDiameterEnum";
+import { CaseFinishingEnum } from "@/app/enums/caseFinishingEnum";
+import { CaseMaterialEnum } from "@/app/enums/caseMaterialEnum";
+import { CaseThicknessEnum } from "@/app/enums/caseThicknessEnum";
+import { ColorEnum } from "@/app/enums/colorEnum";
 import { CrownWatchTypeEnum } from "@/app/enums/crownWatchTypeEnum";
 import { CrystalMaterialEnum } from "@/app/enums/crystalMaterialEnum";
 import { DialMarketsEnum } from "@/app/enums/dialMarketsEnum";
@@ -112,19 +120,19 @@ const details: WatchDetails = {
     },
 
     case: {
-      diameter: "39 mm",
-      thickness: "12 mm",
-      material: "Stainless Steel",
+      diameter: CaseDiameterEnum.D_39,
+      thickness: CaseThicknessEnum.T_12,
+      material: CaseMaterialEnum.STAINLESS_STEEL,
       waterResistance: WaterResistanceEnum.WATERPROOF_100M,
-      finishingDetails: "Sandblasted",
-      bezel: "Tachymeter Scale",
+      finishingDetails: CaseFinishingEnum.SANDBLASTED,
+      bezel: BezelTypeEnum.TACHYMETER,
       crownType: CrownWatchTypeEnum.SCREW_DOWN,
       crystal: CrystalMaterialEnum.SAPPHIRE,
       caseback: CaseBackDetailsEnum.DETAILS_ENGRAVED,
     },
 
     dial: {
-      color: "Black",
+      color: ColorEnum.BLACK,
       dialMarkers: DialMarketsEnum.BATTON,
       finishingDetails: FinishingDetailsEnum.DETAILED_SUB_DIALS,
       luminiscentIndexes: LuminescentIndexesEnum.HANDS_AND_MARKERS,
@@ -132,10 +140,10 @@ const details: WatchDetails = {
     },
 
     bracelet: {
-      material: "Stainless Steel",
+      material: BraceletMaterialEnum.SS_LINKS,
       buckleType: BuckleTypeEnum.STANDARD_BUCKLE,
-      width: "20 mm",
-      color: "Sandblasted Grey",
+      width: BraceletWidthEnum.W_20,
+      color: ColorEnum.SS_SANDBLASTED,
     },
 
     movement: MovementsDataDB.ETA_251_251,
