@@ -1,3 +1,4 @@
+import { BezelTypeEnum } from "@/app/enums/bezelTypeEnum";
 import { BraceletMaterialEnum } from "@/app/enums/braceletMaterialEnum";
 import { BraceletWidthEnum } from "@/app/enums/braceletWidthEnum";
 import { BrandsEnum } from "@/app/enums/brandsEnum";
@@ -115,7 +116,7 @@ const details: WatchDetails = {
       material: CaseMaterialEnum.STAINLESS_STEEL,
       waterResistance: WaterResistanceEnum.WATERPROOF_200M,
       finishingDetails: CaseFinishingEnum.POLISHED,
-      bezel: "Circular Brushed",
+      bezel: BezelTypeEnum.CIRCULAR_BRUSHED,
       crownType: CrownWatchTypeEnum.SCREW_DOWN,
       crystal: CrystalMaterialEnum.MINERAL,
       caseback: CaseBackDetailsEnum.BRAND_DECORATION,

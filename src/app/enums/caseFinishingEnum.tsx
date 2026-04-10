@@ -16,4 +16,5 @@ export const CaseFinishingEnum = {
   CHROMED: "Chromed",
   BRONZE_PLATED: "Bronze Plated",
   GUN_METAL: "Gun-metal Finish",
+  BRUSHED: "Brushed",
 };

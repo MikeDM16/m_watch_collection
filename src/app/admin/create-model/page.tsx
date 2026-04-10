@@ -57,7 +57,6 @@ function SectionHeader({ title }: { title: string }) {
 
 const STEPS = ["Brand", "Template", "File Name", "Details", "Movement", "Features", "Review"];
 
-
 const STYLE_TO_TYPE: Record<string, string> = {
   DRESS: "DRESS",
   CASUAL: "CASUAL",
@@ -495,8 +494,8 @@ export default function CreateModelPage() {
         <div>
           <SectionHeader title="Select Template to Duplicate" />
           <p className="mb-3 text-sm text-muted-foreground">
-            Pick any existing model as starting template. All fields will be pre-filled.
-            Models from <strong>{brandFolder}</strong> are listed first.
+            Pick any existing model as starting template. All fields will be pre-filled. Models from{" "}
+            <strong>{brandFolder}</strong> are listed first.
           </p>
           <SearchableSelect
             options={(() => {
@@ -528,7 +527,9 @@ export default function CreateModelPage() {
             <p className="mt-3 text-sm text-muted-foreground">Loading template...</p>
           )}
           <div className="mt-6 flex gap-3">
-            <Button variant="outline" onClick={() => setStep(0)}>Back</Button>
+            <Button variant="outline" onClick={() => setStep(0)}>
+              Back
+            </Button>
             <Button onClick={() => setStep(2)} disabled={!selectedTemplate || templateLoading}>
               Next
             </Button>

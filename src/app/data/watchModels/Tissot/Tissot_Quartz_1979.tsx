@@ -7,6 +7,7 @@ import { CalendarWatchTypeEnum } from "@/app/enums/calendarWatchTypeEnum";
 import { CaseBackDetailsEnum } from "@/app/enums/caseBackDetailsEnum";
 import { CaseDiameterEnum } from "@/app/enums/caseDiameterEnum";
 import { CaseFinishingEnum } from "@/app/enums/caseFinishingEnum";
+import { CaseMaterialEnum } from "@/app/enums/caseMaterialEnum";
 import { CaseThicknessEnum } from "@/app/enums/caseThicknessEnum";
 import { ColorEnum } from "@/app/enums/colorEnum";
 import { CrownWatchTypeEnum } from "@/app/enums/crownWatchTypeEnum";
@@ -95,7 +96,7 @@ const details: WatchDetails = {
     case: {
       diameter: CaseDiameterEnum.D_35,
       thickness: CaseThicknessEnum.T_8,
-      material: "Stainless Steel - Gold Plated 10 \u339B",
+      material: CaseMaterialEnum.GP_10_SS_BACK,
       waterResistance: WaterResistanceEnum.WATERPROOF_10M,
       finishingDetails: CaseFinishingEnum.VERTICAL_BRUSHED,
       bezel: BezelTypeEnum.FLUTED,

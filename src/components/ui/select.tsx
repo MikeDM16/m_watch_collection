@@ -64,7 +64,14 @@ function SearchableSelect({
       >
         <span className={cn("flex items-center gap-2", !selectedLabel && "text-muted-foreground")}>
           {selectedOption?.image && (
-            <img src={selectedOption.image} alt="" className="h-5 w-5 object-contain" />
+            <img
+              src={selectedOption.image}
+              alt=""
+              className="h-5 w-5 object-contain"
+              onError={(e) => {
+                e.currentTarget.style.display = "none";
+              }}
+            />
           )}
           {selectedLabel || placeholder}
         </span>
@@ -102,7 +109,14 @@ function SearchableSelect({
                 )}
               >
                 {option.image && (
-                  <img src={option.image} alt="" className="mr-2 h-5 w-5 object-contain" />
+                  <img
+                    src={option.image}
+                    alt=""
+                    className="mr-2 h-5 w-5 object-contain"
+                    onError={(e) => {
+                      e.currentTarget.style.display = "none";
+                    }}
+                  />
                 )}
                 {option.label}
               </button>

@@ -1,5 +1,8 @@
 import fs from "fs";
 import path from "path";
+import { brandsDB } from "@/app/data/brands";
+import { BrandsEnum } from "@/app/enums/brandsEnum";
+import { getExternalResource } from "@/app/services/commonFunctions";
 import { NextResponse } from "next/server";
 
 const DATA_DIR = path.join(process.cwd(), "src", "app", "data");
@@ -74,15 +77,16 @@ export async function GET(request: Request) {
   }
 
   if (action === "brandLogos") {
-    const content = fs.readFileSync(path.join(DATA_DIR, "brands.tsx"), "utf-8");
-    const baseUrl = "https://raw.githubusercontent.com/MikeDM16/MWatchCollectionResources/master";
     const logos: Record<string, string> = {};
-    const blocks = content.split(/\{(?=\s*name:)/);
-    for (const block of blocks) {
-      const nameMatch = block.match(/name:\s*BrandsEnum\.(\w+)/);
-      const logoMatch = block.match(/logoImg:\s*"([^"]*)"/);
-      if (nameMatch && logoMatch) {
-        logos[nameMatch[1]] = `${baseUrl}/${encodeURI(logoMatch[1])}`;
+    // Reverse-lookup: display name → enum key
+    const nameToKey: Record<string, string> = {};
+    for (const [k, v] of Object.entries(BrandsEnum)) {
+      nameToKey[v] = k;
+    }
+    for (const brand of brandsDB) {
+      const key = nameToKey[brand.name];
+      if (key) {
+        logos[key] = getExternalResource(brand.logoImg);
       }
     }
     return NextResponse.json({ logos });

@@ -6,6 +6,7 @@ import { BuckleTypeEnum } from "@/app/enums/buckleTypeEnum";
 import { CalendarWatchTypeEnum } from "@/app/enums/calendarWatchTypeEnum";
 import { CaseBackDetailsEnum } from "@/app/enums/caseBackDetailsEnum";
 import { CaseDiameterEnum } from "@/app/enums/caseDiameterEnum";
+import { CaseFinishingEnum } from "@/app/enums/caseFinishingEnum";
 import { CaseMaterialEnum } from "@/app/enums/caseMaterialEnum";
 import { CaseThicknessEnum } from "@/app/enums/caseThicknessEnum";
 import { ColorEnum } from "@/app/enums/colorEnum";
@@ -117,7 +118,7 @@ const details: WatchDetails = {
       thickness: CaseThicknessEnum.T_10,
       material: CaseMaterialEnum.STAINLESS_STEEL,
       waterResistance: WaterResistanceEnum.WATERPROOF_300M,
-      finishingDetails: "Brushed",
+      finishingDetails: CaseFinishingEnum.BRUSHED,
       bezel: BezelTypeEnum.UNI_10_MIN,
       crownType: CrownWatchTypeEnum.SCREW_DOWN,
       crystal: CrystalMaterialEnum.SAPPHIRE,

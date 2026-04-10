@@ -214,6 +214,13 @@ export const brandsDB: Brand[] = [
     displayBySeries: true,
   },
   {
+    name: BrandsEnum.SAID,
+    logoImg: "public/assets/Images/Brands_Logos/said_logo.PNG",
+    displayOrder: undefined,
+    description: "Vintage Portuguese brand with Swiss Made parts and assembly.",
+    displayBySeries: false,
+  },
+  {
     name: BrandsEnum.PRYNGEPS,
     logoImg: "public/assets/Images/Brands_Logos/pryngeps_logo.PNG",
     displayOrder: 31,
@@ -247,7 +254,7 @@ export const brandsDB: Brand[] = [
   {
     name: BrandsEnum.UNIVERSAL_GENEVE,
     logoImg: "public/assets/Images/Brands_Logos/universal_geneve_logo.PNG",
-    displayOrder: 34,
+    displayOrder: 33,
     website: "https://www.universalgeneve.com/",
     description:
       "Universal Genéve is a Swiss luxury watch brand known for its heritage, in-house movements and craftsmanship.",
@@ -264,7 +271,7 @@ export const brandsDB: Brand[] = [
   {
     name: BrandsEnum.NOVART,
     logoImg: "public/assets/Images/Brands_Logos/novart_logo.PNG",
-    displayOrder: 37,
+    displayOrder: 35,
     description: "Vintage Portuguese brand with Swiss Made parts and assembly.",
     displayBySeries: true,
   },
@@ -281,6 +288,20 @@ export const brandsDB: Brand[] = [
       details: "Founded in Waterbury, Connecticut, USA",
     },
   },
+  {
+    name: BrandsEnum.GIRARD_PERREGAUX,
+    logoImg: "public/assets/Images/Brands_Logos/girard_perregaux_logo.PNG",
+    displayOrder: 38,
+    website: "https://www.girard-perregaux.com/",
+    description:
+      "Swiss watchmaker founded in La Chaux-de-Fonds, Switzerland, and recognized as a high-end brand in the global luxury watch market.",
+    displayBySeries: false,
+    foundedInformation: {
+      year: 1791,
+      details: "Founded in La Chaux-de-Fonds, Switzerland; now based in Barcelona, Spain",
+    },
+  },
+
   {
     name: BrandsEnum.LUCERNE,
     logoImg: "public/assets/Images/Brands_Logos/Lucerne_logo.PNG",
@@ -306,7 +327,7 @@ export const brandsDB: Brand[] = [
   {
     name: BrandsEnum.CAUNY,
     logoImg: "public/assets/Images/Brands_Logos/cauny_logo.PNG",
-    displayOrder: 39,
+    displayOrder: 36,
     website: "https://www.cauny.com",
     description:
       "Cauny is a historic watch brand known for its elegant designs and quality craftsmanship.",
@@ -319,7 +340,7 @@ export const brandsDB: Brand[] = [
   {
     name: BrandsEnum.CUERVO_Y_SOBRINOS,
     logoImg: "public/assets/Images/Brands_Logos/cuervo_y_sobrinos_logo.PNG",
-    displayOrder: 35,
+    displayOrder: 34,
     website: "https://www.cuervoysobrinos.com/en/",
     description:
       "Cuervo y Sobrinos is a historic watch brand known for its elegant designs and quality craftsmanship. \n\
@@ -414,6 +435,13 @@ export const brandsDB: Brand[] = [
     description: "Vintage Portuguese brand with Swiss Made parts and assembly.",
   },
   {
+    name: BrandsEnum.ARAUTO,
+    logoImg: "public/assets/Images/Brands_Logos/arauto_logo.PNG",
+    displayOrder: undefined,
+    description: "Vintage Portuguese brand with Swiss Made parts and assembly.",
+    displayBySeries: false,
+  },
+  {
     name: BrandsEnum.BELEX,
     logoImg: "public/assets/Images/Brands_Logos/belex_logo.PNG",
     displayOrder: undefined,
@@ -486,6 +514,7 @@ export const brandsDB: Brand[] = [
       details: "Founded in La Chaux-de-Fonds, Switzerland; now based in Barcelona, Spain",
     },
   },
+
   {
     name: BrandsEnum.FONTAINE,
     logoImg: "public/assets/Images/Brands_Logos/fontaine_logo.PNG",
@@ -520,6 +549,13 @@ export const brandsDB: Brand[] = [
     name: BrandsEnum.JAGUAR_FRAGRANCES,
     logoImg: "public/assets/Images/Brands_Logos/jaguar_logo.PNG",
     displayOrder: undefined,
+  },
+  {
+    name: BrandsEnum.JOMEL,
+    logoImg: "public/assets/Images/Brands_Logos/jomel_logo.PNG",
+    displayOrder: undefined,
+    description: "Vintage Portuguese brand with Swiss Made parts and assembly.",
+    displayBySeries: false,
   },
   {
     name: BrandsEnum.KELTON,
@@ -694,5 +730,12 @@ export const brandsDB: Brand[] = [
     logoImg: "public/assets/Images/Brands_Logos/taunus_logo.PNG",
     displayOrder: undefined,
     description: "Vintage Portuguese brand with Swiss Made parts and assembly.",
+  },
+  {
+    name: BrandsEnum.TECNAL,
+    logoImg: "public/assets/Images/Brands_Logos/tecnal_logo.PNG",
+    displayOrder: undefined,
+    description: "Vintage Portuguese brand with Swiss Made parts and assembly.",
+    displayBySeries: false,
   },
 ];
