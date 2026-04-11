@@ -435,7 +435,12 @@ export default function CreateModelPage() {
   // ─── Render ──────────────────────────────────
   return (
     <div className="mx-auto max-w-3xl px-4 py-8">
-      <h1 className="mb-2 text-2xl font-bold">Create Watch Model</h1>
+      <div className="mb-2 flex items-center justify-between">
+        <h1 className="text-2xl font-bold">Create Watch Model</h1>
+        <Button variant="outline" size="sm" onClick={() => (window.location.href = "/")}>
+          Back to Site
+        </Button>
+      </div>
       <p className="mb-6 text-sm text-muted-foreground">
         Dev-only tool for creating new watch model files.
       </p>

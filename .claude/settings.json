@@ -39,7 +39,15 @@
       "Bash(python -c \"import sys,json; d=json.load\\(sys.stdin\\); print\\(f'Enums loaded: {len\\(d\\)} groups'\\); [print\\(f'  {k}: {len\\(v\\)} values'\\) for k,v in sorted\\(d.items\\(\\)\\)]\")",
       "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3000/admin/create-model)",
       "Bash(kill %1)",
-      "Bash(npx next:*)"
+      "Bash(npx next:*)",
+      "Bash(sed 's/.*material:\\\\s*//g')",
+      "Bash(ls -lh /c/Users/migue/Documentos/GitHub/m_watch_collection/src/app/data/*.tsx)",
+      "Bash(find \"c:\\\\Users\\\\migue\\\\Documentos\\\\GitHub\\\\m_watch_collection\\\\src\\\\app\\\\data\\\\watchModels\" -type f -name \"*.tsx\" -exec wc -l {} \\\\;)",
+      "Bash(awk '{sum+=$1; count++} END {print \"Average lines per file: \" sum/count; print \"Total lines: \" sum; print \"Files: \" count}')",
+      "Bash(du -sh /c/Users/migue/Documentos/GitHub/m_watch_collection/public/*)",
+      "Bash(find /c/Users/migue/Documentos/GitHub/m_watch_collection/src/app/data -name \"*.tsx\" -type f -exec wc -l {} +)",
+      "Bash(find /c/Users/migue/Documentos/GitHub/m_watch_collection/src/app/data/watchModels -name \"*.tsx\" -exec wc -l {} +)",
+      "Bash(xargs wc:*)"
     ]
   }
 }
