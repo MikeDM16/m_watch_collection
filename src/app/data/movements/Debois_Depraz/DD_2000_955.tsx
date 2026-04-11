@@ -1,7 +1,7 @@
 import { CaliberBrandsEnum, JewelsNumberEnum } from "@/app/enums/caliberEnums";
 import { MovementWatchTypeEnum } from "@/app/enums/movementWatchTypeEnum";
 
-import { Caliber } from "../../movementsData";
+import type { Caliber } from "../../caliberTypes";
 
 const DD_2000_ETA_955_232: Caliber = {
   // Title

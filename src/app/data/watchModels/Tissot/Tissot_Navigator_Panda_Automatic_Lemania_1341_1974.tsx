@@ -1,7 +1,15 @@
+import { BezelTypeEnum } from "@/app/enums/bezelTypeEnum";
+import { BraceletMaterialEnum } from "@/app/enums/braceletMaterialEnum";
+import { BraceletWidthEnum } from "@/app/enums/braceletWidthEnum";
 import { BrandsEnum } from "@/app/enums/brandsEnum";
 import { BuckleTypeEnum } from "@/app/enums/buckleTypeEnum";
 import { CalendarWatchTypeEnum } from "@/app/enums/calendarWatchTypeEnum";
 import { CaseBackDetailsEnum } from "@/app/enums/caseBackDetailsEnum";
+import { CaseDiameterEnum } from "@/app/enums/caseDiameterEnum";
+import { CaseFinishingEnum } from "@/app/enums/caseFinishingEnum";
+import { CaseMaterialEnum } from "@/app/enums/caseMaterialEnum";
+import { CaseThicknessEnum } from "@/app/enums/caseThicknessEnum";
+import { ColorEnum } from "@/app/enums/colorEnum";
 import { CrownWatchTypeEnum } from "@/app/enums/crownWatchTypeEnum";
 import { CrystalMaterialEnum } from "@/app/enums/crystalMaterialEnum";
 import { DialMarketsEnum } from "@/app/enums/dialMarketsEnum";
@@ -12,7 +20,7 @@ import { MovementWatchTypeEnum } from "@/app/enums/movementWatchTypeEnum";
 import { WatchStyleEnum } from "@/app/enums/watchStyleEnum";
 import { WaterResistanceEnum } from "@/app/enums/waterResistanceEnum";
 
-import { MovementsDataDB } from "../../movementsData";
+import movement_TISSOT_2170 from "../../movements/Tissot/2170_17J";
 import { WatchDetails } from "../../watchDetails";
 import { TissotBrandSeries } from "./TissotBrandSeries";
 
@@ -110,19 +118,19 @@ const details: WatchDetails = {
     },
 
     case: {
-      diameter: "37 mm",
-      thickness: "13 mm",
-      material: "Stainless Steel",
+      diameter: CaseDiameterEnum.D_37,
+      thickness: CaseThicknessEnum.T_13,
+      material: CaseMaterialEnum.STAINLESS_STEEL,
       waterResistance: WaterResistanceEnum.WATER_RESISTANT,
-      finishingDetails: "Slight Vertical brush",
-      bezel: "Tachymeter bezel",
+      finishingDetails: CaseFinishingEnum.VERTICAL_BRUSHED,
+      bezel: BezelTypeEnum.TACHYMETER,
       crownType: CrownWatchTypeEnum.PUSH_PULL,
       crystal: CrystalMaterialEnum.ACRYLIC,
       caseback: CaseBackDetailsEnum.WITHOUT_DECORATION,
     },
 
     dial: {
-      color: "White (Panda Subdials)",
+      color: ColorEnum.WHITE_PANDA,
       dialMarkers: DialMarketsEnum.BATTON,
       finishingDetails: FinishingDetailsEnum.VERTICAL_BRUSHED,
       luminiscentIndexes: LuminescentIndexesEnum.HANDS_AND_MARKERS + LuminescentIndexesEnum.TRITIUM,
@@ -130,13 +138,13 @@ const details: WatchDetails = {
     },
 
     bracelet: {
-      material: "Stainless Steel",
+      material: BraceletMaterialEnum.SS_LINKS,
       buckleType: BuckleTypeEnum.FOLDING_CLASP,
-      width: "20 mm",
-      color: "Grey",
+      width: BraceletWidthEnum.W_20,
+      color: ColorEnum.GREY,
     },
 
-    movement: MovementsDataDB.TISSOT_2170,
+    movement: movement_TISSOT_2170,
   },
 };
 

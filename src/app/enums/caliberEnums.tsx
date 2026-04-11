@@ -4,14 +4,17 @@ export const CaliberBrandsEnum = {
   CERTINA: "Certina",
   DUBOIS_DEPRAZ: "Dubois Depraz",
   DOXA: "Doxa",
+  DUROMAT: "Duromat",
   EBERHARD: "Eberhard",
   ETA: "ETA",
   EXCELSIOR_PARK: "Excelsior Park",
+  GIRARD_PERREGAUX: "Girard Perregaux",
   FE: "FE (France Ebauche)",
   FHF: "FHF (Fabrique d'Horlogerie de Fontainemelon)",
   FORTIS: "Fortis",
   LANDERON: "Landeron",
   LEMANIA: "Lemania",
+  LORSA: "Lorsa",
   MIYOTA: "Miyota",
   OMEGA: "Omega",
   ORIENT: "Orient",
@@ -68,8 +71,9 @@ export const JewelsNumberEnum = {
 };
 
 export const ReserveHoursEnum = {
-  R_40: "40 Hours",
+  R_34: "34 Hours",
   R_38: "38 Hours",
+  R_40: "40 Hours",
   R_41: "41 Hours",
   R_42: "42 Hours",
   R_44: "44 Hours",

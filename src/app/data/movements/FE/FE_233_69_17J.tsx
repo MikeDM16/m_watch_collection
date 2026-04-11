@@ -6,7 +6,7 @@ import {
 } from "@/app/enums/caliberEnums";
 import { MovementWatchTypeEnum } from "@/app/enums/movementWatchTypeEnum";
 
-import { Caliber } from "../../movementsData";
+import type { Caliber } from "../../caliberTypes";
 
 const FE_233_69: Caliber = {
   // Title

@@ -1,7 +1,15 @@
+import { BezelTypeEnum } from "@/app/enums/bezelTypeEnum";
+import { BraceletMaterialEnum } from "@/app/enums/braceletMaterialEnum";
+import { BraceletWidthEnum } from "@/app/enums/braceletWidthEnum";
 import { BrandsEnum } from "@/app/enums/brandsEnum";
 import { BuckleTypeEnum } from "@/app/enums/buckleTypeEnum";
 import { CalendarWatchTypeEnum } from "@/app/enums/calendarWatchTypeEnum";
 import { CaseBackDetailsEnum } from "@/app/enums/caseBackDetailsEnum";
+import { CaseDiameterEnum } from "@/app/enums/caseDiameterEnum";
+import { CaseFinishingEnum } from "@/app/enums/caseFinishingEnum";
+import { CaseMaterialEnum } from "@/app/enums/caseMaterialEnum";
+import { CaseThicknessEnum } from "@/app/enums/caseThicknessEnum";
+import { ColorEnum } from "@/app/enums/colorEnum";
 import { CrownWatchTypeEnum } from "@/app/enums/crownWatchTypeEnum";
 import { CrystalMaterialEnum } from "@/app/enums/crystalMaterialEnum";
 import { DialMarketsEnum } from "@/app/enums/dialMarketsEnum";
@@ -12,7 +20,7 @@ import { MovementWatchTypeEnum } from "@/app/enums/movementWatchTypeEnum";
 import { WatchStyleEnum } from "@/app/enums/watchStyleEnum";
 import { WaterResistanceEnum } from "@/app/enums/waterResistanceEnum";
 
-import { MovementsDataDB } from "../../movementsData";
+import movement_ETA_Valjoux_7760_17 from "../../movements/ETA/ETA_Valjoux_7760_17J";
 import { WatchDetails } from "../../watchDetails";
 import { RaymondWeilBrandSeries } from "./RaymondWeilBrandSeries";
 
@@ -107,19 +115,19 @@ const details: WatchDetails = {
     },
 
     case: {
-      diameter: "38 mm",
-      thickness: "12 mm",
-      material: "18K Gold Electroplated",
+      diameter: CaseDiameterEnum.D_38,
+      thickness: CaseThicknessEnum.T_12,
+      material: CaseMaterialEnum.GOLD_18K_ELECTROPLATED,
       waterResistance: WaterResistanceEnum.WATERPROOF_10M,
-      finishingDetails: "Polished",
-      bezel: "Without bezel",
+      finishingDetails: CaseFinishingEnum.POLISHED,
+      bezel: BezelTypeEnum.WITHOUT,
       crownType: CrownWatchTypeEnum.PUSH_PULL,
       crystal: CrystalMaterialEnum.SAPPHIRE,
       caseback: CaseBackDetailsEnum.OPEN_CASE_BACK,
     },
 
     dial: {
-      color: "Enamel black",
+      color: ColorEnum.BLACK_ENAMEL,
       dialMarkers: DialMarketsEnum.BREGUET,
       finishingDetails: FinishingDetailsEnum.GOLD_DETAILS,
       luminiscentIndexes: LuminescentIndexesEnum.HANDS_AND_MARKERS + LuminescentIndexesEnum.TRITIUM,
@@ -127,13 +135,13 @@ const details: WatchDetails = {
     },
 
     bracelet: {
-      material: "Crocodile Leather",
+      material: BraceletMaterialEnum.CROCODILE_LEATHER,
       buckleType: BuckleTypeEnum.STANDARD_BUCKLE,
-      width: "19 mm",
-      color: "Black",
+      width: BraceletWidthEnum.W_19,
+      color: ColorEnum.BLACK,
     },
 
-    movement: MovementsDataDB.ETA_Valjoux_7760_17,
+    movement: movement_ETA_Valjoux_7760_17,
   },
 };
 

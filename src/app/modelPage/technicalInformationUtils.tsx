@@ -2,8 +2,15 @@ import { BraceletInformation, TechnicalData } from "../data/watchDetails";
 import { CalendarWatchTypeEnum } from "../enums/calendarWatchTypeEnum";
 import { DialMarketsEnum } from "../enums/dialMarketsEnum";
 import { featuresEnum } from "../enums/featuresEnum";
-import { StrapMaterialEnum } from "../enums/strapMaterialEnum";
 import { technicalDataHasFeature } from "../services/brandModelService";
+
+// Material category constants for bracelet background matching
+const MATERIAL_CATEGORY = {
+  RUBBER: "Rubber",
+  NATO: "NATO",
+  STAINLESS_STEEL: "Stainless Steel",
+  LEATHER: "Leather",
+} as const;
 
 interface DialType {
   DEFAULT: string;
@@ -106,23 +113,23 @@ const braceletsBackgrounds: Record<string, string> = {
 
 export function getColumnBraceletBackgroud(bracelet: BraceletInformation) {
   const braceletMaterial = bracelet.material.toLowerCase();
-  const braceletKey: string = braceletMaterial.includes(StrapMaterialEnum.RUBBER.toLowerCase())
-    ? StrapMaterialEnum.RUBBER
-    : braceletMaterial.includes(StrapMaterialEnum.NATO.toLowerCase())
-      ? StrapMaterialEnum.NATO
-      : /links|titanium|ss|stainless|stainless/.test(braceletMaterial)
-        ? StrapMaterialEnum.STAINLESS_STEEL
-        : StrapMaterialEnum.LEATHER;
+  const braceletKey: string = braceletMaterial.includes(MATERIAL_CATEGORY.RUBBER.toLowerCase())
+    ? MATERIAL_CATEGORY.RUBBER
+    : braceletMaterial.includes(MATERIAL_CATEGORY.NATO.toLowerCase())
+      ? MATERIAL_CATEGORY.NATO
+      : /links|titanium|ss|stainless/.test(braceletMaterial)
+        ? MATERIAL_CATEGORY.STAINLESS_STEEL
+        : MATERIAL_CATEGORY.LEATHER;
 
   let type = undefined;
   switch (braceletKey) {
-    case StrapMaterialEnum.RUBBER:
+    case MATERIAL_CATEGORY.RUBBER:
       return braceletsBackgrounds["RUBBER"];
 
-    case StrapMaterialEnum.NATO:
+    case MATERIAL_CATEGORY.NATO:
       return braceletsBackgrounds["NATO"];
 
-    case StrapMaterialEnum.STAINLESS_STEEL:
+    case MATERIAL_CATEGORY.STAINLESS_STEEL:
       type = braceletMaterial.includes("jubilee")
         ? "JUBILEE"
         : bracelet.color.toLowerCase().includes("two tone")

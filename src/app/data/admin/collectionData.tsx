@@ -1,7 +1,7 @@
 import { BrandsEnum } from "@/app/enums/brandsEnum";
 import { WatchTypeEnum } from "@/app/enums/watchTypeEnum";
 
-import { WatchDetails } from "./watchDetails";
+import { WatchDetails } from "../watchDetails";
 
 export interface ScopedWatchDetails {
   default: WatchDetails;
@@ -18,83 +18,6 @@ export interface CollectionEntry {
   collectionSet?: boolean | undefined;
 }
 
-const todo: Record<string, CollectionEntry> = {
-  "Zenith Collection": {
-    brand: BrandsEnum.ZENITH,
-    legend: "Zenith Collection",
-    year: 2010,
-    type: WatchTypeEnum.CASUAL,
-    srcImage: "public/assets/Images/Zenith/Zenith_Collection/IMG_3757.JPG",
-    href: require("./watchModels/Zenith/Zenith_Collection_set"),
-    specialCollectionItem: false,
-    collectionSet: true,
-  },
-  "Breitling Collection": {
-    brand: BrandsEnum.BREITLING,
-    legend: "Breitling Collection",
-    year: 2010,
-    type: WatchTypeEnum.CASUAL,
-    srcImage: "public/assets/Images/Breitling/Chronomat_Collection/IMG_6328.JPG",
-    href: require("./watchModels/Breitling/Breitling_Collection_set"),
-    specialCollectionItem: false,
-    collectionSet: true,
-  },
-  "Tag Heuer Collection": {
-    brand: BrandsEnum.TAG_HEUER,
-    legend: "Tag Heuer Collection",
-    year: 2010,
-    type: WatchTypeEnum.CASUAL,
-    srcImage: "public/assets/Images/Tag_Heuer/Heuer_Collection/IMG_6838.JPG",
-    href: require("./watchModels/Tag_Heuer/Tag_Heuer_collection_set"),
-    specialCollectionItem: false,
-    collectionSet: true,
-  },
-  "Tissot Collection": {
-    brand: BrandsEnum.TISSOT,
-    legend: "Tissot Collection",
-    year: 2010,
-    type: WatchTypeEnum.CASUAL,
-    srcImage: "public/assets/Images/Tissot/Tissot_Collection_2024/IMG_4588.JPG",
-    href: require("./watchModels/Tissot/Tissot_collection_set"),
-    specialCollectionItem: false,
-    collectionSet: true,
-  },
-  "Omega Olympics Collection": {
-    brand: BrandsEnum.OMEGA,
-    legend: "Omega Olympics Collection",
-    year: 1992,
-    type: WatchTypeEnum.CASUAL,
-    srcImage: "public/assets/Images/Omega/Omega_Olympics_Collection/IMG_8411.JPG",
-    href: require("./watchModels/Omega/Omega_Olympic_collection"),
-    specialCollectionItem: false,
-    collectionSet: true,
-  },
-
-  "Omega Polaris Collection": {
-    brand: BrandsEnum.OMEGA,
-    legend: "Omega Polaris Collection",
-    year: 1986,
-    type: WatchTypeEnum.CASUAL,
-    srcImage: "public/assets/Images/Omega/Omega_Polaris_Collection/IMG_0475.JPG",
-    href: require("./watchModels/Omega/Omega_Polaris_set"),
-    specialCollectionItem: false,
-    collectionSet: true,
-  },
-
-  "Novart Watches Collection": {
-    brand: BrandsEnum.NOVART,
-    legend: "Novart Watches Collection",
-    year: 1974,
-    type: WatchTypeEnum.CASUAL,
-    srcImage: "public/assets/Images/Novart/1974_Novart_set_Collection/IMG_6259.JPG",
-    href: require("./watchModels/Novart/Novart_collection_set"),
-    specialCollectionItem: false,
-    collectionSet: true,
-  },
-};
-
-console.debug(todo);
-
 let CollectionItemsDB: Record<string, CollectionEntry> = {
   "Celsus Heritage Chronograph": {
     brand: BrandsEnum.CELSUS,
@@ -102,7 +25,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     year: 2022,
     type: WatchTypeEnum.SPORTS,
     srcImage: "public/assets/Images/Celsus/2022_Celsus_9168_Heritage/IMG_0399.JPG",
-    href: require("./watchModels/Celsus/Celsus_9168_Heritage_2022"),
+    href: require("../watchModels/Celsus/Celsus_9168_Heritage_2022"),
     specialCollectionItem: false,
   },
 
@@ -113,7 +36,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     type: WatchTypeEnum.SPORTS,
     srcImage: "public/assets/Images/Maurice_Lacroix/2021_Maurice_Lacroix_Aikon_Chrono/IMG_2092.JPG",
     hoverSrc: "public/assets/Images/Maurice_Lacroix/2021_Maurice_Lacroix_Aikon_Chrono/IMG_2061.JPG",
-    href: require("./watchModels/Maurice_Lacroix/Maurice_Lacroix_Aikon_2021"),
+    href: require("../watchModels/Maurice_Lacroix/Maurice_Lacroix_Aikon_2021"),
     specialCollectionItem: false,
   },
   "Tissot T-Classic Tradition": {
@@ -123,7 +46,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     type: WatchTypeEnum.CASUAL,
     srcImage: "public/assets/Images/Tissot/2021_Tissot_T_Classic_Tradition/IMG_1629.JPG",
     hoverSrc: "public/assets/Images/Tissot/2021_Tissot_T_Classic_Tradition/IMG_1643.JPG",
-    href: require("./watchModels/Tissot/Tissot_TClassic_Tradition_2021"),
+    href: require("../watchModels/Tissot/Tissot_TClassic_Tradition_2021"),
     specialCollectionItem: false,
   },
   "Maurice Lacroix 8724 Masterpiece": {
@@ -135,7 +58,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
       "public/assets/Images/Maurice_Lacroix/2021_Maurice_Lacroix_8724_MasterPiece_Auto/IMG_1618 - Copy.JPG",
     hoverSrc:
       "public/assets/Images/Maurice_Lacroix/2021_Maurice_Lacroix_8724_MasterPiece_Auto/IMG_1595.JPG",
-    href: require("./watchModels/Maurice_Lacroix/Maurice_Lacroix_8724_MasterPiece_2010"),
+    href: require("../watchModels/Maurice_Lacroix/Maurice_Lacroix_8724_MasterPiece_2010"),
     specialCollectionItem: false,
   },
   "Certina DS Podium Mother Of Pearl": {
@@ -144,7 +67,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     year: 2020,
     type: WatchTypeEnum.CASUAL,
     srcImage: "public/assets/Images/Certina/2020_Certina_DS_Podium_MOP_Lady/IMG_3135.JPG",
-    href: require("./watchModels/Certina/Certina_DS_Podium_Lady_MOP_2020"),
+    href: require("../watchModels/Certina/Certina_DS_Podium_Lady_MOP_2020"),
     specialCollectionItem: false,
   },
   "Tissot T-Touch Expert Solar Titanium": {
@@ -154,7 +77,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     type: WatchTypeEnum.SPORTS,
     srcImage: "public/assets/Images/Tissot/2020_Tissot_T_Touch_Expert_Solar/IMG_0413.JPG",
     hoverSrc: "public/assets/Images/Tissot/2020_Tissot_T_Touch_Expert_Solar/IMG_0391.JPG",
-    href: require("./watchModels/Tissot/Tissot_T-Touch_Expert_Solar_2020"),
+    href: require("../watchModels/Tissot/Tissot_T-Touch_Expert_Solar_2020"),
     specialCollectionItem: false,
   },
   "Tissot PRS 516 Alpine Limited Edition 444/516": {
@@ -164,7 +87,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     type: WatchTypeEnum.SPORTS,
     srcImage: "public/assets/Images/Tissot/2019_Tissot_PRS_516_Alpine_Edition/IMG_9199.JPG",
     hoverSrc: "public/assets/Images/Tissot/2019_Tissot_PRS_516_Alpine_Edition/IMG_9191.JPG",
-    href: require("./watchModels/Tissot/Tissot_PRS_516_Alpine_Edition_2019"),
+    href: require("../watchModels/Tissot/Tissot_PRS_516_Alpine_Edition_2019"),
     specialCollectionItem: false,
   },
   "Maurice Lacroix 8899 Masterpiece": {
@@ -176,7 +99,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
       "public/assets/Images/Maurice_Lacroix/2019_Maurice_Lacroix_8899_MasterPiece_Auto/IMG_0195.JPG",
     hoverSrc:
       "public/assets/Images/Maurice_Lacroix/2019_Maurice_Lacroix_8899_MasterPiece_Auto/IMG_0171.JPG",
-    href: require("./watchModels/Maurice_Lacroix/Maurice_Lacroix_8899_MasterPiece_2019"),
+    href: require("../watchModels/Maurice_Lacroix/Maurice_Lacroix_8899_MasterPiece_2019"),
     specialCollectionItem: false,
   },
   "Tissot Fetes Des Vignerons Ltd. Edition": {
@@ -186,7 +109,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     type: WatchTypeEnum.DRESS,
     srcImage: "public/assets/Images/Tissot/2019_Tissot_Fetes_Des_Vignerons_2/IMG_7571.JPG",
     hoverSrc: "public/assets/Images/Tissot/2019_Tissot_Fetes_Des_Vignerons_2/IMG_7565.JPG",
-    href: require("./watchModels/Tissot/Tissot_Fetes_Des_Vignerons_2019_2"),
+    href: require("../watchModels/Tissot/Tissot_Fetes_Des_Vignerons_2019_2"),
     specialCollectionItem: false,
   },
   "Tissot Fetes Des Vignerons Limited Edition": {
@@ -196,7 +119,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     type: WatchTypeEnum.DRESS,
     srcImage: "public/assets/Images/Tissot/2019_Tissot_Fetes_Des_Vignerons/IMG_6259.JPG",
     hoverSrc: "public/assets/Images/Tissot/2019_Tissot_Fetes_Des_Vignerons/IMG_6290.JPG",
-    href: require("./watchModels/Tissot/Tissot_Fetes_Des_Vignerons_2019"),
+    href: require("../watchModels/Tissot/Tissot_Fetes_Des_Vignerons_2019"),
     specialCollectionItem: false,
   },
   "Poljot Jet Fighter Limited Edition 129/600": {
@@ -205,7 +128,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     year: 2018,
     type: WatchTypeEnum.SPORTS,
     srcImage: "public/assets/Images/Poljot/2018_Poljot_JetFighter_3133/IMG_0478.JPG",
-    href: require("./watchModels/Poljot/Poljot_Jetfighter_Limited_2018"),
+    href: require("../watchModels/Poljot/Poljot_Jetfighter_Limited_2018"),
     specialCollectionItem: false,
   },
   "Porsche Design Drivers Collection Cayenne": {
@@ -217,7 +140,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
       "public/assets/Images/Porsche_Design/2016_Porsche_Design_Drivers_Collection_Cayenne/IMG_5695.JPG",
     hoverSrc:
       "public/assets/Images/Porsche_Design/2016_Porsche_Design_Drivers_Collection_Cayenne/IMG_5729.JPG",
-    href: require("./watchModels/Porsche_Design/Porsche_Design_Drivers_Collection_Cayenne_2016"),
+    href: require("../watchModels/Porsche_Design/Porsche_Design_Drivers_Collection_Cayenne_2016"),
     specialCollectionItem: false,
   },
   "Raymond Weil Jazzmaster Maestro Automatic": {
@@ -227,7 +150,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     type: WatchTypeEnum.DRESS,
     srcImage: "public/assets/Images/Raymond_Weil/2016_Raymond_Weil_Maestro_Automatic/IMG_7047.JPG",
     hoverSrc: "public/assets/Images/Raymond_Weil/2016_Raymond_Weil_Maestro_Automatic/IMG_7044.JPG",
-    href: require("./watchModels/Raymond_Weil/Raymond_Weil_Maestro_2847_Automatic_2016"),
+    href: require("../watchModels/Raymond_Weil/Raymond_Weil_Maestro_2847_Automatic_2016"),
     specialCollectionItem: false,
   },
   "Tag Heuer Formula-1 Indy 500 Limited Ed. 529/1000": {
@@ -237,7 +160,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     type: WatchTypeEnum.SPORTS,
     srcImage: "public/assets/Images/Tag_Heuer/2016_Tag_Heuer_formula_1_Indy_500/IMG_5409.JPG",
     hoverSrc: "public/assets/Images/Tag_Heuer/2016_Tag_Heuer_formula_1_Indy_500/IMG_5402.JPG",
-    href: require("./watchModels/Tag_Heuer/Tag_Heuer_Formula_1_Indy_500_2016"),
+    href: require("../watchModels/Tag_Heuer/Tag_Heuer_Formula_1_Indy_500_2016"),
     specialCollectionItem: true,
   },
 
@@ -247,7 +170,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     year: 2016,
     type: WatchTypeEnum.SPORTS,
     srcImage: "public/assets/Images/Lorus/2016_Lorus_VD53/IMG_3176.JPG",
-    href: require("./watchModels/Lorus/Lorus_VD53_Sports_Chrono_2016"),
+    href: require("../watchModels/Lorus/Lorus_VD53_Sports_Chrono_2016"),
     specialCollectionItem: false,
   },
 
@@ -257,7 +180,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     year: 2015,
     type: WatchTypeEnum.DRESS,
     srcImage: "public/assets/Images/Celsus/2015_Celsus_GM10/IMG_6020.JPG",
-    href: require("./watchModels/Celsus/Celsus_PPAA782XG_2015"),
+    href: require("../watchModels/Celsus/Celsus_PPAA782XG_2015"),
     specialCollectionItem: false,
   },
   "Celsus Classic PP-AB942G": {
@@ -266,7 +189,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     year: 2015,
     type: WatchTypeEnum.DRESS,
     srcImage: "public/assets/Images/Celsus/2020_Celsus_AB942G/IMG_5999.JPG",
-    href: require("./watchModels/Celsus/Celsus_PPAB942G_2020"),
+    href: require("../watchModels/Celsus/Celsus_PPAB942G_2020"),
     specialCollectionItem: false,
   },
   "Tissot T-Sports GMT Titanium": {
@@ -276,7 +199,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     type: WatchTypeEnum.DRESS,
     srcImage: "public/assets/Images/Tissot/2015_Tissot_T_Sports_GMT_Titanium/IMG_5961.JPG",
     hoverSrc: "public/assets/Images/Tissot/2015_Tissot_T_Sports_GMT_Titanium/IMG_5958.JPG",
-    href: require("./watchModels/Tissot/Tissot_T_Sports_GMT_Titanium_2015"),
+    href: require("../watchModels/Tissot/Tissot_T_Sports_GMT_Titanium_2015"),
     specialCollectionItem: false,
   },
 
@@ -287,7 +210,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     type: WatchTypeEnum.SPORTS,
     srcImage: "public/assets/Images/Tissot/2014_Tissot_NASCAR_Racing_V7750/IMG_0130.JPG",
     hoverSrc: "public/assets/Images/Tissot/2014_Tissot_NASCAR_Racing_V7750/IMG_0168.JPG",
-    href: require("./watchModels/Tissot/Tissot_PRS_516_Valjoux_2009"),
+    href: require("../watchModels/Tissot/Tissot_PRS_516_Valjoux_2009"),
     specialCollectionItem: false,
   },
 
@@ -297,7 +220,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     year: 2014,
     type: WatchTypeEnum.CASUAL,
     srcImage: "public/assets/Images/Certina/2014_Certina_DS_First_Ceramic_white/IMG_3167.JPG",
-    href: require("./watchModels/Certina/Certina_DS_First_White_Ceramic_2014"),
+    href: require("../watchModels/Certina/Certina_DS_First_White_Ceramic_2014"),
     specialCollectionItem: false,
   },
   "Tissot T-Classic Dream": {
@@ -307,7 +230,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     type: WatchTypeEnum.DRESS,
     srcImage: "public/assets/Images/Tissot/2014_Tissot_T_Classic_Dream/IMG_0913.JPG",
     hoverSrc: "public/assets/Images/Tissot/2014_Tissot_T_Classic_Dream/IMG_0880.JPG",
-    href: require("./watchModels/Tissot/Tissot_TClassic_Dream_2014"),
+    href: require("../watchModels/Tissot/Tissot_TClassic_Dream_2014"),
     specialCollectionItem: false,
   },
   "Tissot V8 S762/862N": {
@@ -317,7 +240,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     type: WatchTypeEnum.SPORTS,
     srcImage: "public/assets/Images/Tissot/2014_Tissot_V8/IMG_3615.JPG",
     hoverSrc: "public/assets/Images/Tissot/2014_Tissot_V8/IMG_3615.JPG",
-    href: require("./watchModels/Tissot/Tissot_V8_S792862N_2014"),
+    href: require("../watchModels/Tissot/Tissot_V8_S792862N_2014"),
     specialCollectionItem: false,
   },
   "One Voyager Chronograph": {
@@ -326,7 +249,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     year: 2014,
     type: WatchTypeEnum.SPORTS,
     srcImage: "public/assets/Images/One/2014_One_Voyager/IMG_3163.JPG",
-    href: require("./watchModels/One/One_Voyager_Chrono_2014"),
+    href: require("../watchModels/One/One_Voyager_Chrono_2014"),
     specialCollectionItem: false,
   },
   "Zodiac Sea Dragon ZO2237": {
@@ -335,7 +258,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     year: 2014,
     type: WatchTypeEnum.DIVE,
     srcImage: "public/assets/Images/Zodiac/2004_Zodiac_SeaDragon/IMG_1288.JPG",
-    href: require("./watchModels/Zodiac/Zodiac_Sea_Dragon_ZO2237_2014"),
+    href: require("../watchModels/Zodiac/Zodiac_Sea_Dragon_ZO2237_2014"),
     specialCollectionItem: false,
   },
   "Porsche Design Dashboard P6620 Titanium": {
@@ -347,7 +270,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
       "public/assets/Images/Porsche_Design/2012_Porsche_Design_Dashboard_P6620_Blue/IMG_2180.JPG",
     hoverSrc:
       "public/assets/Images/Porsche_Design/2012_Porsche_Design_Dashboard_P6620_Blue/IMG_2203.JPG",
-    href: require("./watchModels/Porsche_Design/Porsche_Design_P6620_Blue_Titanium_2012"),
+    href: require("../watchModels/Porsche_Design/Porsche_Design_P6620_Blue_Titanium_2012"),
     specialCollectionItem: false,
   },
   "Porsche Design Dashboard P6612/17 Titanium": {
@@ -359,7 +282,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
       "public/assets/Images/Porsche_Design/2005_Porsche Design_Dashboard_P662_17_2_Red_Titanium/IMG_7069.JPG",
     hoverSrc:
       "public/assets/Images/Porsche_Design/2005_Porsche Design_Dashboard_P662_17_2_Red_Titanium/IMG_7063.JPG",
-    href: require("./watchModels/Porsche_Design/Porsche_Design_P6612_14_2_Red_Titanium_2012"),
+    href: require("../watchModels/Porsche_Design/Porsche_Design_P6612_14_2_Red_Titanium_2012"),
     specialCollectionItem: true,
   },
 
@@ -370,7 +293,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     type: WatchTypeEnum.DRESS,
     srcImage: "public/assets/Images/Tissot/2012_Tissot_Heritage_Visodate/IMG_0975.JPG",
     hoverSrc: "public/assets/Images/Tissot/2012_Tissot_Heritage_Visodate/IMG_4711.JPG",
-    href: require("./watchModels/Tissot/Tissot_Heritage_Visodate_2012"),
+    href: require("../watchModels/Tissot/Tissot_Heritage_Visodate_2012"),
     specialCollectionItem: false,
   },
   "Tissot T-Classic Luxury Powermartic 80": {
@@ -380,7 +303,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     type: WatchTypeEnum.DRESS,
     srcImage: "public/assets/Images/Tissot/2012_Tissot_Luxury_Powermatic/IMG_0929.JPG",
     hoverSrc: "public/assets/Images/Tissot/2012_Tissot_Luxury_Powermatic/IMG_0919.JPG",
-    href: require("./watchModels/Tissot/Tissot_Luxury_Powermatic_2012"),
+    href: require("../watchModels/Tissot/Tissot_Luxury_Powermatic_2012"),
     specialCollectionItem: false,
   },
   "Sector 250 Chronograph Alarm": {
@@ -389,7 +312,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     year: 2012,
     type: WatchTypeEnum.SPORTS,
     srcImage: "public/assets/Images/Sector/2012_Sector_250/IMG_1618.JPG",
-    href: require("./watchModels/Sector/Sector_250_Chrono_Alarm_2012"),
+    href: require("../watchModels/Sector/Sector_250_Chrono_Alarm_2012"),
     specialCollectionItem: false,
   },
   "Tissot Ballade Chronograph Two Tone": {
@@ -399,7 +322,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     type: WatchTypeEnum.DRESS,
     srcImage: "public/assets/Images/Tissot/2012_Tissot_Ballade_Chrono_Two_Tone/IMG_4585.JPG",
     hoverSrc: "public/assets/Images/Tissot/2012_Tissot_Ballade_Chrono_Two_Tone/IMG_4591.JPG",
-    href: require("./watchModels/Tissot/Tissot_Ballade_Chrono_2012_two_tone"),
+    href: require("../watchModels/Tissot/Tissot_Ballade_Chrono_2012_two_tone"),
     specialCollectionItem: false,
   },
   "Tissot Ballade Chronograph": {
@@ -409,7 +332,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     type: WatchTypeEnum.DRESS,
     srcImage: "public/assets/Images/Tissot/2012_Tissot_Ballade_Chrono/IMG_0358.JPG",
     hoverSrc: "public/assets/Images/Tissot/2012_Tissot_Ballade_Chrono/IMG_0390.JPG",
-    href: require("./watchModels/Tissot/Tissot_Ballade_Chrono_2012"),
+    href: require("../watchModels/Tissot/Tissot_Ballade_Chrono_2012"),
     specialCollectionItem: false,
   },
   "Tissot PRS 200 Blue T362/462": {
@@ -419,7 +342,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     type: WatchTypeEnum.DIVE,
     srcImage: "public/assets/Images/Tissot/2012_Tissot_PRS_200_T362462/IMG_4792.JPG",
     hoverSrc: "public/assets/Images/Tissot/2012_Tissot_PRS_200_T362462/IMG_4789.JPG",
-    href: require("./watchModels/Tissot/Tissot_PRS_200_T362462_2012"),
+    href: require("../watchModels/Tissot/Tissot_PRS_200_T362462_2012"),
     specialCollectionItem: false,
   },
 
@@ -430,7 +353,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     type: WatchTypeEnum.DRESS,
     srcImage: "public/assets/Images/Tissot/2011_Tissot_Heritage_1944_150th/IMG_3831.JPG",
     hoverSrc: "public/assets/Images/Tissot/2011_Tissot_Heritage_1944_150th/IMG_3806.JPG",
-    href: require("./watchModels/Tissot/Tissot_Heritage_1944_COSC_2011"),
+    href: require("../watchModels/Tissot/Tissot_Heritage_1944_COSC_2011"),
     specialCollectionItem: true,
   },
 
@@ -441,7 +364,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     type: WatchTypeEnum.SPORTS,
     srcImage: "public/assets/Images/Tissot/2011_Tissot_PRS_516_Valjoux/IMG_6069.JPG",
     hoverSrc: "public/assets/Images/Tissot/2011_Tissot_PRS_516_Valjoux/IMG_6057.JPG",
-    href: require("./watchModels/Tissot//Tissot_PRS_516_Valjoux_2011"),
+    href: require("../watchModels/Tissot//Tissot_PRS_516_Valjoux_2011"),
     specialCollectionItem: false,
   },
 
@@ -452,7 +375,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     type: WatchTypeEnum.DIVE,
     srcImage: "public/assets/Images/Tissot/2011_Tissot_PRS_200_T362246/IMG_0601.JPG",
     hoverSrc: "public/assets/Images/Tissot/2011_Tissot_PRS_200_T362246/IMG_0616.JPG",
-    href: require("./watchModels/Tissot/Tissot_PRS_200_T362462_2011"),
+    href: require("../watchModels/Tissot/Tissot_PRS_200_T362462_2011"),
     specialCollectionItem: false,
   },
 
@@ -463,7 +386,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     type: WatchTypeEnum.SPORTS,
     srcImage:
       "public/assets/Images/Tonino_Lamborghini/2011_Tonino_Lamborghini_Bologna_II/IMG_1413.JPG",
-    href: require("./watchModels/Tonino_Lamborghini/Tonino_Lamborghini_Bologna_II_2011"),
+    href: require("../watchModels/Tonino_Lamborghini/Tonino_Lamborghini_Bologna_II_2011"),
     specialCollectionItem: false,
   },
   "Tissot PRC 200 T461": {
@@ -473,7 +396,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     type: WatchTypeEnum.SPORTS,
     srcImage: "public/assets/Images/Tissot/2010_Tissot_PRC_200/IMG_3644.JPG",
     hoverSrc: "public/assets/Images/Tissot/2010_Tissot_PRC_200/IMG_3783.JPG",
-    href: require("./watchModels/Tissot/Tissot_PRC_200_T461_2010"),
+    href: require("../watchModels/Tissot/Tissot_PRC_200_T461_2010"),
     specialCollectionItem: false,
   },
   "Zenith El Primero ChronoMaster": {
@@ -483,7 +406,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     type: WatchTypeEnum.DIVE,
     srcImage: "public/assets/Images/Zenith/2010_Zenith_El_Primero_ChronoMaster/IMG_3466.JPG",
     hoverSrc: "public/assets/Images/Zenith/2010_Zenith_El_Primero_ChronoMaster/IMG_3454.JPG",
-    href: require("./watchModels/Zenith/Zenith_El_Primero_ChronoMaster_2010"),
+    href: require("../watchModels/Zenith/Zenith_El_Primero_ChronoMaster_2010"),
     specialCollectionItem: false,
   },
   "Tag Heuer Aquaracer Grande Date": {
@@ -493,7 +416,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     type: WatchTypeEnum.SPORTS,
     srcImage: "public/assets/Images/Tag_Heuer/2010_Tag_Heuer_Aquaracer_WAF1010/IMG_6047.JPG",
     hoverSrc: "public/assets/Images/Tag_Heuer/2010_Tag_Heuer_Aquaracer_WAF1010/IMG_6077.JPG",
-    href: require("./watchModels/Tag_Heuer/Tag_Heuer_Aquaracer_WAF1010_2010"),
+    href: require("../watchModels/Tag_Heuer/Tag_Heuer_Aquaracer_WAF1010_2010"),
     specialCollectionItem: false,
   },
   "Tissot PRS 200 Black T362/462K": {
@@ -503,7 +426,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     type: WatchTypeEnum.DIVE,
     srcImage: "public/assets/Images/Tissot/2010_Tissot_PRS_200/IMG_2376.JPG",
     hoverSrc: "public/assets/Images/Tissot/2010_Tissot_PRS_200/IMG_2369.JPG",
-    href: require("./watchModels/Tissot/Tissot_PRS_200_T362462K_2010"),
+    href: require("../watchModels/Tissot/Tissot_PRS_200_T362462K_2010"),
     specialCollectionItem: false,
   },
 
@@ -514,7 +437,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     type: WatchTypeEnum.SPORTS,
     srcImage: "public/assets/Images/Tissot/2009_Tissot_Heritage_Telemeter_250_3333/IMG_7506.JPG",
     hoverSrc: "public/assets/Images/Tissot/2009_Tissot_Heritage_Telemeter_250_3333/IMG_7478.JPG",
-    href: require("./watchModels/Tissot/Tissot_Heritage_Telemeter_COSC_2009"),
+    href: require("../watchModels/Tissot/Tissot_Heritage_Telemeter_COSC_2009"),
     specialCollectionItem: true,
   },
 
@@ -525,7 +448,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     type: WatchTypeEnum.SPORTS,
     srcImage: "public/assets/Images/Tissot/2016_Tissot_T-Touch/IMG_9930.JPG",
     hoverSrc: "public/assets/Images/Tissot/2016_Tissot_T-Touch/IMG_9883.JPG",
-    href: require("./watchModels/Tissot/Tissot_T-Touch_2009"),
+    href: require("../watchModels/Tissot/Tissot_T-Touch_2009"),
     specialCollectionItem: false,
   },
 
@@ -536,7 +459,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     type: WatchTypeEnum.DRESS,
     srcImage: "public/assets/Images/Raymond_Weil/2008_Raymond_Weil_Maestro_ETA_2834/IMG_8011.JPG",
     hoverSrc: "public/assets/Images/Raymond_Weil/2008_Raymond_Weil_Maestro_ETA_2834/IMG_8036.JPG",
-    href: require("./watchModels/Raymond_Weil/Raymond_Weil_Maestro_ETA_2834_Automatic_2008"),
+    href: require("../watchModels/Raymond_Weil/Raymond_Weil_Maestro_ETA_2834_Automatic_2008"),
     specialCollectionItem: false,
   },
   "Raymond Weil Maestro Automatic": {
@@ -546,7 +469,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     type: WatchTypeEnum.DRESS,
     srcImage: "public/assets/Images/Raymond_Weil/2008_Raymond_Weil_Maestro_2834/IMG_5305.JPG",
     hoverSrc: "public/assets/Images/Raymond_Weil/2008_Raymond_Weil_Maestro_2834/IMG_5299.JPG",
-    href: require("./watchModels/Raymond_Weil/Raymond_Weil_Maestro_2834_Automatic_2008"),
+    href: require("../watchModels/Raymond_Weil/Raymond_Weil_Maestro_2834_Automatic_2008"),
     specialCollectionItem: false,
   },
 
@@ -557,7 +480,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     type: WatchTypeEnum.SPORTS,
     srcImage: "public/assets/Images/Tissot/2008_Tissot_T_Race_T472S/IMG_0411.JPG",
     hoverSrc: "public/assets/Images/Tissot/2008_Tissot_T_Race_T472S/IMG_0446.JPG",
-    href: require("./watchModels/Tissot/Tissot_T-Race_T472S_2008"),
+    href: require("../watchModels/Tissot/Tissot_T-Race_T472S_2008"),
     specialCollectionItem: false,
   },
 
@@ -570,7 +493,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
       "public/assets/Images/Breitling/2008_Breitling_Chronomat_Evolution_A13356/IMG_7166.JPG",
     hoverSrc:
       "public/assets/Images/Breitling/2008_Breitling_Chronomat_Evolution_A13356/IMG_7131.JPG",
-    href: require("./watchModels/Breitling/Breitling_Chronomat_Evolution_A13356_2008"),
+    href: require("../watchModels/Breitling/Breitling_Chronomat_Evolution_A13356_2008"),
     specialCollectionItem: true,
   },
 
@@ -581,7 +504,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     type: WatchTypeEnum.DIVE,
     srcImage: "public/assets/Images/Tag_Heuer/2008_Tag_Heuer_F1_WAC1212/IMG_3214.JPG",
     hoverSrc: "public/assets/Images/Tag_Heuer/2008_Tag_Heuer_F1_WAC1212/IMG_3239.JPG",
-    href: require("./watchModels/Tag_Heuer/Tag_Heuer_Formula_1_WAC1212_2008"),
+    href: require("../watchModels/Tag_Heuer/Tag_Heuer_Formula_1_WAC1212_2008"),
     specialCollectionItem: false,
   },
   "Tag Heuer Formula-1 WAC1210": {
@@ -591,7 +514,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     type: WatchTypeEnum.DIVE,
     srcImage: "public/assets/Images/Tag_Heuer/2008_Tag_Heuer_F1_WAC1210/IMG_4158.JPG",
     hoverSrc: "public/assets/Images/Tag_Heuer/2008_Tag_Heuer_F1_WAC1210/IMG_4146.JPG",
-    href: require("./watchModels/Tag_Heuer/Tag_Heuer_Formula_1_WAC1210_2008"),
+    href: require("../watchModels/Tag_Heuer/Tag_Heuer_Formula_1_WAC1210_2008"),
     specialCollectionItem: false,
   },
   "Timex Power Reserve T2M515": {
@@ -600,7 +523,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     year: 2008,
     type: WatchTypeEnum.CASUAL,
     srcImage: "public/assets/Images/Timex/2008_Timex_T2M515_Power_Reserve/IMG_0323.JPG",
-    href: require("./watchModels/Timex/Timex_T2M515_Power_Reserve_2008"),
+    href: require("../watchModels/Timex/Timex_T2M515_Power_Reserve_2008"),
     specialCollectionItem: false,
   },
 
@@ -611,7 +534,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     type: WatchTypeEnum.DRESS,
     srcImage: "public/assets/Images/Tissot/2007_Tissot_Le_Locle_Auto/IMG_5769.JPG",
     hoverSrc: "public/assets/Images/Tissot/2007_Tissot_Le_Locle_Auto/IMG_5787.JPG",
-    href: require("./watchModels/Tissot/Tissot_Le_Locle_Auto_2007"),
+    href: require("../watchModels/Tissot/Tissot_Le_Locle_Auto_2007"),
     specialCollectionItem: false,
   },
 
@@ -622,7 +545,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     type: WatchTypeEnum.DRESS,
     srcImage: "public/assets/Images/Raymond_Weil/2007_Reymond_Weil_Saxo_9520/IMG_1545.JPG",
     hoverSrc: "public/assets/Images/Raymond_Weil/2007_Reymond_Weil_Saxo_9520/IMG_1542.JPG",
-    href: require("./watchModels/Raymond_Weil/Raymond_Weil_Saxo_9520_2007"),
+    href: require("../watchModels/Raymond_Weil/Raymond_Weil_Saxo_9520_2007"),
     specialCollectionItem: false,
   },
   "Zenith El Primero Port Royal V": {
@@ -632,7 +555,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     type: WatchTypeEnum.DRESS,
     srcImage: "public/assets/Images/Zenith/2005_Zenith_El_Primero_Port_Royal/IMG_8350.JPG",
     hoverSrc: "public/assets/Images/Zenith/2005_Zenith_El_Primero_Port_Royal/IMG_8393.JPG",
-    href: require("./watchModels/Zenith/Zenith_El_Primero_Port_Royal_V_2005"),
+    href: require("../watchModels/Zenith/Zenith_El_Primero_Port_Royal_V_2005"),
     specialCollectionItem: true,
   },
   "Porsche Design Dashboard P6612 Titanium": {
@@ -644,7 +567,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
       "public/assets/Images/Porsche_Design/2005_Porsche Design_Dashboard_P662_Titanium/IMG_4305.JPG",
     hoverSrc:
       "public/assets/Images/Porsche_Design/2005_Porsche Design_Dashboard_P662_Titanium/IMG_4292.JPG",
-    href: require("./watchModels/Porsche_Design/Porsche_Design_P6612_Titanium_2005"),
+    href: require("../watchModels/Porsche_Design/Porsche_Design_P6612_Titanium_2005"),
     specialCollectionItem: false,
   },
   "Porsche Design Dashboard P6612/10 Titanium": {
@@ -656,7 +579,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
       "public/assets/Images/Porsche_Design/2005_Porsche Design_Dashboard_P662_10_1_Black_Titanium/IMG_0204.JPG",
     hoverSrc:
       "public/assets/Images/Porsche_Design/2005_Porsche Design_Dashboard_P662_10_1_Black_Titanium/IMG_0193.JPG",
-    href: require("./watchModels/Porsche_Design/Porsche_Design_P6612_10_1_Black_Titanium_2005"),
+    href: require("../watchModels/Porsche_Design/Porsche_Design_P6612_10_1_Black_Titanium_2005"),
     specialCollectionItem: false,
   },
   "Tag Heuer Aquaracer Exclusive CN2111": {
@@ -666,7 +589,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     type: WatchTypeEnum.SPORTS,
     srcImage: "public/assets/Images/Tag_Heuer/2005_Tag_Heuer_Aquaracer_CN2111/IMG_0153.JPG",
     hoverSrc: "public/assets/Images/Tag_Heuer/2005_Tag_Heuer_Aquaracer_CN2111/IMG_4393.JPG",
-    href: require("./watchModels/Tag_Heuer/Tag_Heuer_Aquaracer_CN2111_2005"),
+    href: require("../watchModels/Tag_Heuer/Tag_Heuer_Aquaracer_CN2111_2005"),
     specialCollectionItem: false,
   },
   "Raymond Weil Amadeus 200 7750": {
@@ -676,7 +599,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     type: WatchTypeEnum.DRESS,
     srcImage: "public/assets/Images/Raymond_Weil/2005_Raymond_Weil_Amadeus_200/IMG_1953.JPG",
     hoverSrc: "public/assets/Images/Raymond_Weil/2005_Raymond_Weil_Amadeus_200/IMG_1477.JPG",
-    href: require("./watchModels/Raymond_Weil/Raymond_Weil_Amadeus_200_2005"),
+    href: require("../watchModels/Raymond_Weil/Raymond_Weil_Amadeus_200_2005"),
     specialCollectionItem: false,
   },
   "Emes Chronograph OS60": {
@@ -685,7 +608,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     year: 2005,
     type: WatchTypeEnum.SPORTS,
     srcImage: "public/assets/Images/Emes/2005_Emes_Chrono_OS60/IMG_2102.JPG",
-    href: require("./watchModels/Emes/Emes_Chrono_OS60_2005"),
+    href: require("../watchModels/Emes/Emes_Chrono_OS60_2005"),
     specialCollectionItem: false,
   },
   "Tissot PR 100 Chronograph": {
@@ -695,7 +618,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     type: WatchTypeEnum.SPORTS,
     srcImage: "public/assets/Images/Tissot/2005_Tissot_PR_100_Chronograph/IMG_4755.JPG",
     hoverSrc: "public/assets/Images/Tissot/2005_Tissot_PR_100_Chronograph/IMG_4756.JPG",
-    href: require("./watchModels/Tissot/Tissot_ PR_100_Chronograph_2005"),
+    href: require("../watchModels/Tissot/Tissot_ PR_100_Chronograph_2005"),
     specialCollectionItem: false,
   },
   "Tissot PRS 516 J565/665 Retrograde": {
@@ -705,7 +628,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     type: WatchTypeEnum.SPORTS,
     srcImage: "public/assets/Images/Tissot/2009_Tissot_PRS_516_Retrograde/IMG_0657.JPG",
     hoverSrc: "public/assets/Images/Tissot/2009_Tissot_PRS_516_Retrograde/IMG_0664.JPG",
-    href: require("./watchModels/Tissot/Tissot_PRS_516_Retrograde_2005"),
+    href: require("../watchModels/Tissot/Tissot_PRS_516_Retrograde_2005"),
     specialCollectionItem: false,
   },
   "Tissot PRS 516 J562/662": {
@@ -715,7 +638,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     type: WatchTypeEnum.SPORTS,
     srcImage: "public/assets/Images/Tissot/2005_Tissot_PRS_516_Chrono/IMG_4808.JPG",
     hoverSrc: "public/assets/Images/Tissot/2005_Tissot_PRS_516_Chrono/IMG_4801.JPG",
-    href: require("./watchModels/Tissot/Tissot_PRS_516_J562662_2005"),
+    href: require("../watchModels/Tissot/Tissot_PRS_516_J562662_2005"),
     specialCollectionItem: false,
   },
   "Tissot T-Tracx Mother of Pearl Lady Chronograph": {
@@ -725,7 +648,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     type: WatchTypeEnum.SPORTS,
     srcImage: "public/assets/Images/Tissot/2005_Tissot_T_Tracx_MOP/IMG_0298.JPG",
     hoverSrc: "public/assets/Images/Tissot/2005_Tissot_T_Tracx_MOP/IMG_0300.JPG",
-    href: require("./watchModels/Tissot/Tissot_T_Tracx_MOP_2005"),
+    href: require("../watchModels/Tissot/Tissot_T_Tracx_MOP_2005"),
     specialCollectionItem: false,
   },
   "Ferrari Modena Red Chronograph": {
@@ -734,7 +657,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     year: 2005,
     type: WatchTypeEnum.SPORTS,
     srcImage: "public/assets/Images/Ferrari/2005_Ferrari_Modena_Chrono/IMG_2597.JPG",
-    href: require("./watchModels/Ferrari/Ferrari_Modena_Chronograph_2005"),
+    href: require("../watchModels/Ferrari/Ferrari_Modena_Chronograph_2005"),
     specialCollectionItem: false,
   },
   "Ferrari Monza Chronograph": {
@@ -743,7 +666,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     year: 2005,
     type: WatchTypeEnum.SPORTS,
     srcImage: "public/assets/Images/Ferrari/2005_Ferrari_Monza_Chronograph/IMG_4580.JPG",
-    href: require("./watchModels/Ferrari/Ferrari_Monza_Chronograph_2005"),
+    href: require("../watchModels/Ferrari/Ferrari_Monza_Chronograph_2005"),
     specialCollectionItem: false,
   },
   "Tissot Ballade Lady C229/339C": {
@@ -753,7 +676,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     type: WatchTypeEnum.DRESS,
     srcImage: "public/assets/Images/Tissot/2005_Tissot_Ballada_Lady_C229_329C/IMG_8836.JPG",
     hoverSrc: "public/assets/Images/Tissot/2005_Tissot_Ballada_Lady_C229_329C/IMG_8838.JPG",
-    href: require("./watchModels/Tissot/Tissot_Ballade_C229399C_Lady_Auto_2005"),
+    href: require("../watchModels/Tissot/Tissot_Ballade_C229399C_Lady_Auto_2005"),
     specialCollectionItem: false,
   },
 
@@ -764,7 +687,20 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     type: WatchTypeEnum.SPORTS,
     srcImage: "public/assets/Images/Tag_Heuer/2005_Tag_Heuer_Classic_Monza/IMG_0747.JPG",
     hoverSrc: "public/assets/Images/Tag_Heuer/2005_Tag_Heuer_Classic_Monza/IMG_0729.JPG",
-    href: require("./watchModels/Tag_Heuer/Tag_Heuer_Monza_Classic_2005"),
+    href: require("../watchModels/Tag_Heuer/Tag_Heuer_Monza_Classic_2005"),
+    specialCollectionItem: false,
+  },
+
+  "Girard Perregaux Ferrari Ref. 8020": {
+    brand: BrandsEnum.GIRARD_PERREGAUX,
+    legend: "Girard Perregaux Ferrari Ref. 8020",
+    year: 2004,
+    type: WatchTypeEnum.SPORTS,
+    srcImage:
+      "public/assets/Images/Girard_Perregaux/2024_Girard_Perregaux_Ferrari_R8020_45J/IMG_2575.JPG",
+    hoverSrc:
+      "public/assets/Images/Girard_Perregaux/2024_Girard_Perregaux_Ferrari_R8020_45J/IMG_2569.JPG",
+    href: require("../watchModels/Girard_Perregaux/Girard_Perregaux_Ferrari_Ref_8020_2004"),
     specialCollectionItem: false,
   },
 
@@ -774,7 +710,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     year: 2004,
     type: WatchTypeEnum.SPORTS,
     srcImage: "public/assets/Images/Mercedes/2004_Mercedes_SLK_Chrono_I/IMG_1717.JPG",
-    href: require("./watchModels/Mercedes/Mercedes_Benz_SLK_Chrono_I_2004"),
+    href: require("../watchModels/Mercedes/Mercedes_Benz_SLK_Chrono_I_2004"),
     specialCollectionItem: false,
   },
   "Mercedes Benz SLK Design Chronograph": {
@@ -783,7 +719,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     year: 2004,
     type: WatchTypeEnum.SPORTS,
     srcImage: "public/assets/Images/Mercedes/2004_Mercedes_SLK_Chrono_II/IMG_1736.JPG",
-    href: require("./watchModels/Mercedes/Mercedes_Benz_SLK_Chrono_II_2004"),
+    href: require("../watchModels/Mercedes/Mercedes_Benz_SLK_Chrono_II_2004"),
     specialCollectionItem: false,
   },
   "Tag Heuer Senna Limited Edition 3236/4000 CT5114": {
@@ -793,7 +729,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     type: WatchTypeEnum.SPORTS,
     srcImage: "public/assets/Images/Tag_Heuer/2003_Tag_Heuer_Senna_Link_CT5114/IMG_3755.JPG",
     hoverSrc: "public/assets/Images/Tag_Heuer/2003_Tag_Heuer_Senna_Link_CT5114/IMG_3521.JPG",
-    href: require("./watchModels/Tag_Heuer/Tag_Heuer_Senna_Link_CT5114_2003"),
+    href: require("../watchModels/Tag_Heuer/Tag_Heuer_Senna_Link_CT5114_2003"),
     specialCollectionItem: true,
   },
 
@@ -804,7 +740,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     type: WatchTypeEnum.DRESS,
     srcImage: "public/assets/Images/Tissot/2003_Tissot_150th_Heritage_884_8888/IMG_8175.JPG",
     hoverSrc: "public/assets/Images/Tissot/2003_Tissot_150th_Heritage_884_8888/IMG_8167.JPG",
-    href: require("./watchModels/Tissot/Tissot_Heritage_150th_COSC_884_8888_2003"),
+    href: require("../watchModels/Tissot/Tissot_Heritage_150th_COSC_884_8888_2003"),
     specialCollectionItem: true,
   },
   "Tissot Heritage COSC Limited Edition 0837/8888": {
@@ -814,7 +750,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     type: WatchTypeEnum.DRESS,
     srcImage: "public/assets/Images/Tissot/2003_Tissot_150th_Heritage/IMG_4970.JPG",
     hoverSrc: "public/assets/Images/Tissot/2003_Tissot_150th_Heritage/IMG_4948.JPG",
-    href: require("./watchModels/Tissot/Tissot_Heritage_150th_COSC_2003"),
+    href: require("../watchModels/Tissot/Tissot_Heritage_150th_COSC_2003"),
     specialCollectionItem: false,
   },
   "Tissot Ballade Automatic C279/379C": {
@@ -824,7 +760,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     type: WatchTypeEnum.DRESS,
     srcImage: "public/assets/Images/Tissot/2002_Tissot_Ballade_Auto/IMG_4637.JPG",
     hoverSrc: "public/assets/Images/Tissot/2002_Tissot_Ballade_Auto/IMG_4635.JPG",
-    href: require("./watchModels/Tissot/Tissot_Ballade_C279379_Auto_2002"),
+    href: require("../watchModels/Tissot/Tissot_Ballade_C279379_Auto_2002"),
     specialCollectionItem: false,
   },
   "Breitling Chronomat B13050.1": {
@@ -834,7 +770,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     type: WatchTypeEnum.SPORTS,
     srcImage: "public/assets/Images/Breitling/2002_Breitling_Chronomat_B13050/IMG_5090.JPG",
     hoverSrc: "public/assets/Images/Breitling/2002_Breitling_Chronomat_B13050/IMG_5121.JPG",
-    href: require("./watchModels/Breitling/Breitling_Chronomat_B13050_2002"),
+    href: require("../watchModels/Breitling/Breitling_Chronomat_B13050_2002"),
     specialCollectionItem: false,
   },
 
@@ -844,7 +780,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     year: 2002,
     type: WatchTypeEnum.SPORTS,
     srcImage: "public/assets/Images/Mercedes/1996_Mercedes_Chrono_OS60/IMG_0478.JPG",
-    href: require("./watchModels/Mercedes/Mercedes_Benz_OS60_Chrono_2002"),
+    href: require("../watchModels/Mercedes/Mercedes_Benz_OS60_Chrono_2002"),
     specialCollectionItem: false,
   },
   "Camel Trophy L2 M810.2080-2089": {
@@ -853,7 +789,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     year: 2001,
     type: WatchTypeEnum.SPORTS,
     srcImage: "public/assets/Images/Camel/2001_Camel_Trophy_L2_Chronograph/IMG_148.JPG",
-    href: require("./watchModels/Camel_Trophy/Camel_Trophy_M81020802089_2001"),
+    href: require("../watchModels/Camel_Trophy/Camel_Trophy_M81020802089_2001"),
     specialCollectionItem: false,
   },
   "Pryngeps CR763 Chronograph": {
@@ -863,7 +799,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     type: WatchTypeEnum.CASUAL,
     srcImage: "public/assets/Images/Pryngeps/2001_Pryngeps_CR763/IMG_3229.JPG",
     hoverSrc: "public/assets/Images/Pryngeps/2001_Pryngeps_CR763/IMG_3227.JPG",
-    href: require("./watchModels/Pryngeps/Pryngeps_CR763_OS60_2001"),
+    href: require("../watchModels/Pryngeps/Pryngeps_CR763_OS60_2001"),
     specialCollectionItem: false,
   },
   "Tissot Sport Chrono Black Chronograph": {
@@ -873,7 +809,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     type: WatchTypeEnum.SPORTS,
     srcImage: "public/assets/Images/Tissot/2000_Tissot_Sport_E662762M/IMG_1076.JPG",
     hoverSrc: "public/assets/Images/Tissot/2000_Tissot_Sport_E662762M/IMG_1096.JPG",
-    href: require("./watchModels/Tissot/Tissot_Sports_E662_2000"),
+    href: require("../watchModels/Tissot/Tissot_Sports_E662_2000"),
     specialCollectionItem: false,
   },
   "Pryngeps Timonier Rattrapante Chronograph": {
@@ -885,7 +821,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
       "public/assets/Images/Pryngeps/2000_Pryngeps_Timonier_Ratrappante_27_jewels/IMG_2220.JPG",
     hoverSrc:
       "public/assets/Images/Pryngeps/2000_Pryngeps_Timonier_Ratrappante_27_jewels/IMG_2213.JPG",
-    href: require("./watchModels/Pryngeps/Pryngeps_Timonier_Rattrapante_2000"),
+    href: require("../watchModels/Pryngeps/Pryngeps_Timonier_Rattrapante_2000"),
     specialCollectionItem: false,
   },
   "Chopard Mille Miglia Titanium": {
@@ -895,7 +831,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     type: WatchTypeEnum.SPORTS,
     srcImage: "public/assets/Images/Chopard/2000_Chopard_Mille_Miglia_Titanium/IMG_8038.JPG",
     hoverSrc: "public/assets/Images/Chopard/2000_Chopard_Mille_Miglia_Titanium/IMG_7990.JPG",
-    href: require("./watchModels/Chopard/Chopard_Mille_Miglia_2000_Titanium"),
+    href: require("../watchModels/Chopard/Chopard_Mille_Miglia_2000_Titanium"),
     specialCollectionItem: true,
   },
   "Tissot Sports Chronograph E662/762M": {
@@ -905,7 +841,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     type: WatchTypeEnum.SPORTS,
     srcImage: "public/assets/Images/Tissot/2000_Tissot_Sport_Chrono/IMG_0506.JPG",
     hoverSrc: "public/assets/Images/Tissot/2000_Tissot_Sport_Chrono/IMG_0503.JPG",
-    href: require("./watchModels/Tissot/Tissot_Sports_E662_Chrono_2000"),
+    href: require("../watchModels/Tissot/Tissot_Sports_E662_Chrono_2000"),
     specialCollectionItem: false,
   },
 
@@ -916,7 +852,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     type: WatchTypeEnum.CASUAL,
     srcImage: "public/assets/Images/Breitling/1999_Breitling_Navitimer_Premier_A40035/IMG_2072.JPG",
     hoverSrc: "public/assets/Images/Breitling/1999_Breitling_Navitimer_Premier_A40035/IMG_2073.JPG",
-    href: require("./watchModels/Breitling/Breitling_Navitimer_Premier_A40035_1998"),
+    href: require("../watchModels/Breitling/Breitling_Navitimer_Premier_A40035_1998"),
     specialCollectionItem: true,
   },
 
@@ -927,7 +863,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     type: WatchTypeEnum.DIVE,
     srcImage: "public/assets/Images/DuBois/1999_DuBois_Gran_Prix_Europe_F1_7750/IMG_9076.JPG",
     hoverSrc: "public/assets/Images/DuBois/1999_DuBois_Gran_Prix_Europe_F1_7750/IMG_9098.JPG",
-    href: require("./watchModels/DuBois_Et_Fils/DuBois_Gran_Prix_Europe_F1_1999"),
+    href: require("../watchModels/DuBois_Et_Fils/DuBois_Gran_Prix_Europe_F1_1999"),
     specialCollectionItem: false,
   },
   "Tag Heuer Professional 2000 Quartz": {
@@ -937,7 +873,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     type: WatchTypeEnum.DIVE,
     srcImage: "public/assets/Images/Tag_Heuer/1999_Tag_Heuer_Pro2000/IMG_4644.JPG",
     hoverSrc: "public/assets/Images/Tag_Heuer/1999_Tag_Heuer_Pro2000/IMG_4632.JPG",
-    href: require("./watchModels/Tag_Heuer/Tag_Heuer_Professional_2000_1999"),
+    href: require("../watchModels/Tag_Heuer/Tag_Heuer_Professional_2000_1999"),
     specialCollectionItem: false,
   },
 
@@ -947,7 +883,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     year: 1998,
     type: WatchTypeEnum.SPORTS,
     srcImage: "public/assets/Images/Maserati/1998_Maserati_Neptune_Chronograph/IMG_6578.JPG",
-    href: require("./watchModels/Maserati/Maserati_Neptune_Chrono_1998"),
+    href: require("../watchModels/Maserati/Maserati_Neptune_Chrono_1998"),
     specialCollectionItem: false,
   },
 
@@ -958,7 +894,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     type: WatchTypeEnum.SPORTS,
     srcImage: "public/assets/Images/Breitling/1998_Breitling_Chronomat_Vitesse_B13050/IMG_5064.JPG",
     hoverSrc: "public/assets/Images/Breitling/1998_Breitling_Chronomat_Vitesse_B13050/IMG_5097.JPG",
-    href: require("./watchModels/Breitling/Breitling_Chronomat_B13050_Vitesse_1998"),
+    href: require("../watchModels/Breitling/Breitling_Chronomat_B13050_Vitesse_1998"),
     specialCollectionItem: true,
   },
   "Breitling Chronomat Vitesse Black B13050": {
@@ -970,7 +906,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
       "public/assets/Images/Breitling/1998_Breitling_Chronomat_Vitesse_B13050_Black/IMG_6663.JPG",
     hoverSrc:
       "public/assets/Images/Breitling/1998_Breitling_Chronomat_Vitesse_B13050_Black/IMG_6654.JPG",
-    href: require("./watchModels/Breitling/Breitling_Chronomat_B13050_Vitesse_Black_1998"),
+    href: require("../watchModels/Breitling/Breitling_Chronomat_B13050_Vitesse_Black_1998"),
     specialCollectionItem: false,
   },
 
@@ -981,7 +917,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     type: WatchTypeEnum.SPORTS,
     srcImage: "public/assets/Images/Omega/1998_Omega_Speedmaster_reduced/IMG_2336.JPG",
     hoverSrc: "public/assets/Images/Omega/1998_Omega_Speedmaster_reduced/IMG_2296.JPG",
-    href: require("./watchModels/Omega/Omega_Speedmaster_reduced_1998"),
+    href: require("../watchModels/Omega/Omega_Speedmaster_reduced_1998"),
     specialCollectionItem: true,
   },
 
@@ -992,7 +928,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     type: WatchTypeEnum.SPORTS,
     srcImage: "public/assets/Images/Porsche_Design/1998_Porsche_Design_911_JP_Jarier/IMG_8266.JPG",
     hoverSrc: "public/assets/Images/Porsche_Design/1998_Porsche_Design_911_JP_Jarier/IMG_8237.JPG",
-    href: require("./watchModels/Porsche_Design/Porsche_Design_911_JP_Jarier_1998"),
+    href: require("../watchModels/Porsche_Design/Porsche_Design_911_JP_Jarier_1998"),
     specialCollectionItem: false,
   },
   "Eterna - Porsche Design 911 - GT2 Cup": {
@@ -1004,7 +940,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
       "public/assets/Images/Porsche_Design/1998_Porsche_Design_Eterna_911_GT2_Cup/IMG_1064.JPG",
     hoverSrc:
       "public/assets/Images/Porsche_Design/1998_Porsche_Design_Eterna_911_GT2_Cup/IMG_1108.JPG",
-    href: require("./watchModels/Porsche_Design/Porsche_Design_911_GT2_Cup_1998"),
+    href: require("../watchModels/Porsche_Design/Porsche_Design_911_GT2_Cup_1998"),
     specialCollectionItem: false,
   },
   "Breitling Colt A53035 Chronograph": {
@@ -1014,7 +950,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     type: WatchTypeEnum.SPORTS,
     srcImage: "public/assets/Images/Breitling/1998_Breitling_Colt_A53035_Chronograph/IMG_6294.JPG",
     hoverSrc: "public/assets/Images/Breitling/1998_Breitling_Colt_A53035_Chronograph/IMG_9224.JPG",
-    href: require("./watchModels/Breitling/Breitling_Colt_A53035_1998"),
+    href: require("../watchModels/Breitling/Breitling_Colt_A53035_1998"),
     specialCollectionItem: false,
   },
   "Calypso Chronograph OS60": {
@@ -1023,7 +959,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     year: 1998,
     type: WatchTypeEnum.SPORTS,
     srcImage: "public/assets/Images/Calypso/2001_Calypso_Chrono_OS10/IMG_2956.JPG",
-    href: require("./watchModels/Calypso/Calypso_OS10_Chrono_2001"),
+    href: require("../watchModels/Calypso/Calypso_OS10_Chrono_2001"),
     specialCollectionItem: false,
   },
   "Orient Multi Year Calendar": {
@@ -1032,7 +968,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     year: 1998,
     type: WatchTypeEnum.CASUAL,
     srcImage: "public/assets/Images/Orient/1998_Orient_Multi_Year_Calendar_EU03B0/IMG_5734.JPG",
-    href: require("./watchModels/Orient/Orient_Multi_year_calendar_EU3B0_1998"),
+    href: require("../watchModels/Orient/Orient_Multi_year_calendar_EU3B0_1998"),
     specialCollectionItem: false,
   },
   "Camel Trophy Time Date M661.2000-2009": {
@@ -1041,7 +977,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     year: 1998,
     type: WatchTypeEnum.CASUAL,
     srcImage: "public/assets/Images/Camel/1998_Camel_Trophy_Time_Date/8.JPG",
-    href: require("./watchModels/Camel_Trophy/Camel_Trophy_M6612000009_1998"),
+    href: require("../watchModels/Camel_Trophy/Camel_Trophy_M6612000009_1998"),
     specialCollectionItem: false,
   },
 
@@ -1052,7 +988,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     type: WatchTypeEnum.SPORTS,
     srcImage: "public/assets/Images/Tag_Heuer/1997_Tag_Heuer_1500_Granite/IMG_0739.JPG",
     hoverSrc: "public/assets/Images/Tag_Heuer/1997_Tag_Heuer_1500_Granite/IMG_0714.JPG",
-    href: require("./watchModels/Tag_Heuer/Tag_Heuer_Professional_1500_1997"),
+    href: require("../watchModels/Tag_Heuer/Tag_Heuer_Professional_1500_1997"),
     specialCollectionItem: false,
   },
 
@@ -1063,7 +999,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     type: WatchTypeEnum.SPORTS,
     srcImage: "public/assets/Images/Omega/1998_Omega_Speedmaster_MK40_triple_date/IMG_7806.JPG",
     hoverSrc: "public/assets/Images/Omega/1998_Omega_Speedmaster_MK40_triple_date/IMG_7722.JPG",
-    href: require("./watchModels/Omega/Omega_Speedmaster_mk40_triple_date_1998"),
+    href: require("../watchModels/Omega/Omega_Speedmaster_mk40_triple_date_1998"),
     specialCollectionItem: true,
   },
 
@@ -1074,7 +1010,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     type: WatchTypeEnum.DIVE,
     srcImage: "public/assets/Images/Tag_Heuer/1996_Tag_Heuer_Professional_2000_CK1111/IMG_3244.JPG",
     hoverSrc: "public/assets/Images/Tag_Heuer/1996_Tag_Heuer_Professional_2000_CK1111/IMG_3274.JPG",
-    href: require("./watchModels/Tag_Heuer/Tag_Heuer_Professional_2000_CK1111_1996"),
+    href: require("../watchModels/Tag_Heuer/Tag_Heuer_Professional_2000_CK1111_1996"),
     specialCollectionItem: false,
   },
   "Lorenz Classic Chronograph Valjoux 7760": {
@@ -1084,7 +1020,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     type: WatchTypeEnum.DRESS,
     srcImage: "public/assets/Images/Lorenz/1996_Lorenz_Classic_Chrono_7760/IMG_0408.JPG",
     hoverSrc: "public/assets/Images/Lorenz/1996_Lorenz_Classic_Chrono_7760/IMG_0409.JPG",
-    href: require("./watchModels/Lorenz/Lorenz_Classic_Chrono_7760_1996"),
+    href: require("../watchModels/Lorenz/Lorenz_Classic_Chrono_7760_1996"),
     specialCollectionItem: false,
   },
   "Saint Honoré Classic Rattrapante Chronograph": {
@@ -1096,7 +1032,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
       "public/assets/Images/Saint_Honore/1996_Saint_Honore_Classic_Ratrappante/IMG_0362.JPG",
     hoverSrc:
       "public/assets/Images/Saint_Honore/1996_Saint_Honore_Classic_Ratrappante/IMG_0357.JPG",
-    href: require("./watchModels/Saint_Honore/Saint_Honore_Classic_Rattrapante_1996"),
+    href: require("../watchModels/Saint_Honore/Saint_Honore_Classic_Rattrapante_1996"),
     specialCollectionItem: false,
   },
 
@@ -1107,7 +1043,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     type: WatchTypeEnum.SPORTS,
     srcImage: "public/assets/Images/Radiant/1996_Radiant_Rattrapante_Chrono/IMG_0183.JPG",
     hoverSrc: "public/assets/Images/Radiant/1996_Radiant_Rattrapante_Chrono/IMG_0179.JPG",
-    href: require("./watchModels/Radiant/Radiant_Sport_Rally_Rattrapante_1996"),
+    href: require("../watchModels/Radiant/Radiant_Sport_Rally_Rattrapante_1996"),
     specialCollectionItem: false,
   },
 
@@ -1120,7 +1056,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
       "public/assets/Images/Maurice_Lacroix/1996_Maurice_Lacroix_Monza_Schumacher_Chrono/IMG_1050.JPG",
     hoverSrc:
       "public/assets/Images/Maurice_Lacroix/1996_Maurice_Lacroix_Monza_Schumacher_Chrono/IMG_1003.JPG",
-    href: require("./watchModels/Maurice_Lacroix/Maurice_Lacroix_5872_Monza_Schumacher_Chrono_1996"),
+    href: require("../watchModels/Maurice_Lacroix/Maurice_Lacroix_5872_Monza_Schumacher_Chrono_1996"),
     specialCollectionItem: false,
   },
   "Maurice Lacroix 5393 Monza Schumacher Red Chrono": {
@@ -1130,7 +1066,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     type: WatchTypeEnum.DRESS,
     srcImage: "public/assets/Images/Maurice_Lacroix/2021_Maurice_Lacroix_5393_Chrono/IMG_8970.JPG",
     hoverSrc: "public/assets/Images/Maurice_Lacroix/2021_Maurice_Lacroix_5393_Chrono/IMG_8978.JPG",
-    href: require("./watchModels/Maurice_Lacroix/Maurice_Lacroix_5393_Chrono_2021"),
+    href: require("../watchModels/Maurice_Lacroix/Maurice_Lacroix_5393_Chrono_2021"),
     specialCollectionItem: false,
   },
 
@@ -1141,7 +1077,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     type: WatchTypeEnum.DRESS,
     srcImage: "public/assets/Images/Maurice_Lacroix/2021_Maurice_Lacroix_5872_Chrono/IMG_8026.JPG",
     hoverSrc: "public/assets/Images/Maurice_Lacroix/2021_Maurice_Lacroix_5872_Chrono/IMG_8057.JPG",
-    href: require("./watchModels/Maurice_Lacroix/Maurice_Lacroix_5872_Chrono_2021"),
+    href: require("../watchModels/Maurice_Lacroix/Maurice_Lacroix_5872_Chrono_2021"),
     specialCollectionItem: false,
   },
 
@@ -1151,7 +1087,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     year: 1996,
     type: WatchTypeEnum.SPORTS,
     srcImage: "public/assets/Images/Philip_Watch/1996_Philip_Watch_AQ_1000/IMG_0086.JPG",
-    href: require("./watchModels/Philipe_Watch/Philipe_Watch_AQ_1000_1996"),
+    href: require("../watchModels/Philipe_Watch/Philipe_Watch_AQ_1000_1996"),
     specialCollectionItem: false,
   },
 
@@ -1162,7 +1098,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     type: WatchTypeEnum.SPORTS,
     srcImage: "public/assets/Images/Tissot/1995_Tissot_Chrono_E662762M/IMG_1302.JPG",
     hoverSrc: "public/assets/Images/Tissot/1995_Tissot_Chrono_E662762M/IMG_1320-1.JPG",
-    href: require("./watchModels/Tissot/Tissot_Sports_E662_Chrono_1995"),
+    href: require("../watchModels/Tissot/Tissot_Sports_E662_Chrono_1995"),
     specialCollectionItem: false,
   },
   "Universal Geneve 875.214 Chrono": {
@@ -1172,7 +1108,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     type: WatchTypeEnum.SPORTS,
     srcImage: "public/assets/Images/Universal_Geneve/1995_Universal_Geneve_875_214/IMG_6690.JPG",
     hoverSrc: "public/assets/Images/Universal_Geneve/1995_Universal_Geneve_875_214/IMG_6714.JPG",
-    href: require("./watchModels/Universal_Geneve/Universal_Geneve_Chrono_875214_1995"),
+    href: require("../watchModels/Universal_Geneve/Universal_Geneve_Chrono_875214_1995"),
     specialCollectionItem: false,
   },
   "Jaguar Fragrances Chrono Limited Edition": {
@@ -1181,7 +1117,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     year: 1995,
     type: WatchTypeEnum.SPORTS,
     srcImage: "public/assets/Images/Jaguar/1995_Jaguar_Fragrances_Chrono/IMG_3459.JPG",
-    href: require("./watchModels/Jaguar/Jaguar_Frag_Chromed_OS10_1995"),
+    href: require("../watchModels/Jaguar/Jaguar_Frag_Chromed_OS10_1995"),
     specialCollectionItem: false,
   },
   "Jaguar Fragrances Chrono Limited Edit.": {
@@ -1190,7 +1126,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     year: 1995,
     type: WatchTypeEnum.SPORTS,
     srcImage: "public/assets/Images/Jaguar/1995_Jaguar_Fragrances_Chrono_III/IMG_6385.JPG",
-    href: require("./watchModels/Jaguar/Jaguar_Frag_Chromed_OS10_III_1995"),
+    href: require("../watchModels/Jaguar/Jaguar_Frag_Chromed_OS10_III_1995"),
     specialCollectionItem: false,
   },
 
@@ -1200,7 +1136,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     year: 1995,
     type: WatchTypeEnum.SPORTS,
     srcImage: "public/assets/Images/Jaguar/1995_Jaguar_Fragrances_Chrono_II/IMG_6631.JPG",
-    href: require("./watchModels/Jaguar/Jaguar_Frag_Chromed_OS10_II_1995"),
+    href: require("../watchModels/Jaguar/Jaguar_Frag_Chromed_OS10_II_1995"),
     specialCollectionItem: false,
   },
   "Camel Trophy Top Chrono M136.831-839": {
@@ -1209,7 +1145,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     year: 1995,
     type: WatchTypeEnum.SPORTS,
     srcImage: "public/assets/Images/Camel/1999_Camel_Trophy_TopChrono/IMG_1342.JPG",
-    href: require("./watchModels/Camel_Trophy/Camel_Trophy_M136831839_1995"),
+    href: require("../watchModels/Camel_Trophy/Camel_Trophy_M136831839_1995"),
     specialCollectionItem: false,
   },
   "Tag Heuer Professional Formula-1 WA1219": {
@@ -1219,7 +1155,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     type: WatchTypeEnum.SPORTS,
     srcImage: "public/assets/Images/Tag_Heuer/1995_Tag_Heuer_F1_WA1219/IMG_2591.JPG",
     hoverSrc: "public/assets/Images/Tag_Heuer/1995_Tag_Heuer_F1_WA1219/IMG_2615.JPG",
-    href: require("./watchModels/Tag_Heuer/Tag_Heuer_Formula_1_WA1219_1995"),
+    href: require("../watchModels/Tag_Heuer/Tag_Heuer_Formula_1_WA1219_1995"),
     specialCollectionItem: false,
   },
   "Tag Heuer Professional Formula-1 WA1218": {
@@ -1229,7 +1165,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     type: WatchTypeEnum.SPORTS,
     srcImage: "public/assets/Images/Tag_Heuer/1995_Tag_Heuer_F1_WA1218/IMG_2557.JPG",
     hoverSrc: "public/assets/Images/Tag_Heuer/1995_Tag_Heuer_F1_WA1218/IMG_2574.JPG",
-    href: require("./watchModels/Tag_Heuer/Tag_Heuer_Formula_1_WA1218_1995"),
+    href: require("../watchModels/Tag_Heuer/Tag_Heuer_Formula_1_WA1218_1995"),
     specialCollectionItem: false,
   },
   "Tag Heuer Professional Formula-1 WA1212 (Tritium Dial)": {
@@ -1239,7 +1175,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     type: WatchTypeEnum.SPORTS,
     srcImage: "public/assets/Images/Tag_Heuer/1998_Tag_Heuer_F1_WA1212/IMG_5027.JPG",
     hoverSrc: "public/assets/Images/Tag_Heuer/1998_Tag_Heuer_F1_WA1212/IMG_5037.JPG",
-    href: require("./watchModels/Tag_Heuer/Tag_Heuer_Formula_1_WA1212_Tritium_1995"),
+    href: require("../watchModels/Tag_Heuer/Tag_Heuer_Formula_1_WA1212_Tritium_1995"),
     specialCollectionItem: false,
   },
   "Tag Heuer Professional Formula-1 WA1219 (Rubber)": {
@@ -1248,7 +1184,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     year: 1995,
     type: WatchTypeEnum.SPORTS,
     srcImage: "public/assets/Images/Tag_Heuer/1998_Tag_Heuer_F1_WA1219/IMG_4771.JPG",
-    href: require("./watchModels/Tag_Heuer/Tag_Heuer_Formula_1_WA1219_R_1995"),
+    href: require("../watchModels/Tag_Heuer/Tag_Heuer_Formula_1_WA1219_R_1995"),
     specialCollectionItem: false,
   },
   "Tag Heuer Professional Formula-1 WA1211 (Tritium Dial)": {
@@ -1258,7 +1194,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     type: WatchTypeEnum.SPORTS,
     srcImage: "public/assets/Images/Tag_Heuer/1994_Tag_Heuer_F1_WA1211/IMG_0351.JPG",
     hoverSrc: "public/assets/Images/Tag_Heuer/1994_Tag_Heuer_F1_WA1211/IMG_0346.JPG",
-    href: require("./watchModels/Tag_Heuer/Tag_Heuer_Formula_1_WA1211_Tritium_1995"),
+    href: require("../watchModels/Tag_Heuer/Tag_Heuer_Formula_1_WA1211_Tritium_1995"),
     specialCollectionItem: false,
   },
   "Breitling Chronomat 10th Anniversary Limited Edition 1157/1994 A13050": {
@@ -1270,7 +1206,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
       "public/assets/Images/Breitling/1994_Breitling_Chronomat_10th_Anniversary_A13050/IMG_9335.JPG",
     hoverSrc:
       "public/assets/Images/Breitling/1994_Breitling_Chronomat_10th_Anniversary_A13050/IMG_9283.JPG",
-    href: require("./watchModels/Breitling/Breitling_Chronomat_A13050_10th_Anniversary_1994"),
+    href: require("../watchModels/Breitling/Breitling_Chronomat_A13050_10th_Anniversary_1994"),
     specialCollectionItem: true,
   },
 
@@ -1281,7 +1217,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     type: WatchTypeEnum.DRESS,
     srcImage: "public/assets/Images/Seiko/1994_Seiko_6M13_Perpetual_Calendar/IMG_8180.JPG",
     hoverSrc: "public/assets/Images/Seiko/1994_Seiko_6M13_Perpetual_Calendar/IMG_8174.JPG",
-    href: require("./watchModels/Seiko/Seiko_6M13_Perpetual_Calendar_1994"),
+    href: require("../watchModels/Seiko/Seiko_6M13_Perpetual_Calendar_1994"),
     specialCollectionItem: false,
   },
   "Tissot L395 Chronograph": {
@@ -1291,7 +1227,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     type: WatchTypeEnum.SPORTS,
     srcImage: "public/assets/Images/Tissot/1993_Tissot_L936_Chrono/IMG_7482.JPG",
     hoverSrc: "public/assets/Images/Tissot/1993_Tissot_L936_Chrono/IMG_7517.JPG",
-    href: require("./watchModels/Tissot/Tissot_L396_Chrono_1993"),
+    href: require("../watchModels/Tissot/Tissot_L396_Chrono_1993"),
     specialCollectionItem: false,
   },
   "Eletta Chronograph OS60": {
@@ -1300,7 +1236,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     year: 1993,
     type: WatchTypeEnum.SPORTS,
     srcImage: "public/assets/Images/Elleta/Eletta_Chrono_OS60_1993/IMG_7372.JPG",
-    href: require("./watchModels/Eletta/Eletta_OS60_Chrono_1993"),
+    href: require("../watchModels/Eletta/Eletta_OS60_Chrono_1993"),
     specialCollectionItem: false,
   },
   "Royal Geographical Society": {
@@ -1309,7 +1245,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     year: 1996,
     type: WatchTypeEnum.DRESS,
     srcImage: "public/assets/Images/Delma/1996_Delma_Royal_Geographical/IMG_7005.JPG",
-    href: require("./watchModels/Delma/Delma_RoyalGeographical_1996"),
+    href: require("../watchModels/Delma/Delma_RoyalGeographical_1996"),
     specialCollectionItem: false,
   },
   "Royal Geographical Society Chronograph": {
@@ -1318,7 +1254,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     year: 1996,
     type: WatchTypeEnum.DRESS,
     srcImage: "public/assets/Images/Delma/1995_Delma_RoyalGeographical/IMG_4734.JPG",
-    href: require("./watchModels/Delma/Delma_RoyalGeographical_ETA251_1996"),
+    href: require("../watchModels/Delma/Delma_RoyalGeographical_ETA251_1996"),
     specialCollectionItem: false,
   },
   "Mercedes Benz SLK Edition Chrono": {
@@ -1327,7 +1263,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     year: 1996,
     type: WatchTypeEnum.SPORTS,
     srcImage: "public/assets/Images/Mercedes/1996_Mercedes_SLK_Edition_ISA818/IMG_0498.JPG",
-    href: require("./watchModels/Mercedes/Mercedes_Benz_SLK_Edition_1996"),
+    href: require("../watchModels/Mercedes/Mercedes_Benz_SLK_Edition_1996"),
     specialCollectionItem: false,
   },
   "Greenwich Premier Chronograph": {
@@ -1336,7 +1272,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     year: 1995,
     type: WatchTypeEnum.SPORTS,
     srcImage: "public/assets/Images/Greenwich/1995_Greenwich_Premier/IMG_1761.JPG",
-    href: require("./watchModels/Greenwich/Greenwich_Premier_ETA251_Chrono_1995"),
+    href: require("../watchModels/Greenwich/Greenwich_Premier_ETA251_Chrono_1995"),
     specialCollectionItem: false,
   },
   "Latino Excellence": {
@@ -1345,7 +1281,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     year: 1995,
     type: WatchTypeEnum.CASUAL,
     srcImage: "public/assets/Images/Latino/1995_Latino_ETA/IMG_6042.JPG",
-    href: require("./watchModels/Latino/Latino_Excellence_1995"),
+    href: require("../watchModels/Latino/Latino_Excellence_1995"),
     specialCollectionItem: false,
   },
 
@@ -1356,7 +1292,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     type: WatchTypeEnum.DRESS,
     srcImage: "public/assets/Images/Tissot/1995_Tissot_Seastar/IMG_1051.JPG",
     hoverSrc: "public/assets/Images/Tissot/1995_Tissot_Seastar/IMG_1063.JPG",
-    href: require("./watchModels/Tissot/Tissot_Ballade_Seastar_1995"),
+    href: require("../watchModels/Tissot/Tissot_Ballade_Seastar_1995"),
     specialCollectionItem: false,
   },
   "Tissot PRX P376 Valjoux 7750": {
@@ -1366,7 +1302,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     type: WatchTypeEnum.DRESS,
     srcImage: "public/assets/Images/Tissot/1993_Tissot_PRX_P376_7750/IMG_6397.JPG",
     hoverSrc: "public/assets/Images/Tissot/1993_Tissot_PRX_P376_7750/IMG_6390.JPG",
-    href: require("./watchModels/Tissot/Tissot_PRX_P376_Auto_7750_1993"),
+    href: require("../watchModels/Tissot/Tissot_PRX_P376_Auto_7750_1993"),
     specialCollectionItem: false,
   },
   "Festina F6602 Titanium": {
@@ -1375,7 +1311,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     year: 1993,
     type: WatchTypeEnum.SPORTS,
     srcImage: "public/assets/Images/Festina/1993_Festina_F6602_Titanium/IMG_3149.JPG",
-    href: require("./watchModels/Festina/Festina_F6602_MultiFunction_1993"),
+    href: require("../watchModels/Festina/Festina_F6602_MultiFunction_1993"),
     specialCollectionItem: false,
   },
   "Lorus N945 7A10 Multi-Function Chronograph": {
@@ -1384,7 +1320,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     year: 1993,
     type: WatchTypeEnum.SPORTS,
     srcImage: "public/assets/Images/Lorus/1993_Lorus_N945_7A10/IMG_2023.JPG",
-    href: require("./watchModels/Lorus/Lorus_N945_7A10_MultiFunction_1993"),
+    href: require("../watchModels/Lorus/Lorus_N945_7A10_MultiFunction_1993"),
     specialCollectionItem: false,
   },
   "Lorus N945 7A90 Multi-Function Chronograph": {
@@ -1393,7 +1329,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     year: 1993,
     type: WatchTypeEnum.SPORTS,
     srcImage: "public/assets/Images/Lorus/1993_Lorus_N945_7A90/IMG_0698.JPG",
-    href: require("./watchModels/Lorus/Lorus_N945_7A90_MultiFunction_1993"),
+    href: require("../watchModels/Lorus/Lorus_N945_7A90_MultiFunction_1993"),
     specialCollectionItem: false,
   },
   "Omega Olympia Winter Olympics Albertville Ltd. 305/499": {
@@ -1403,7 +1339,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     type: WatchTypeEnum.SPORTS,
     srcImage: "public/assets/Images/Omega/1992_Polaris_Albertville_386_1031_500/IMG_8770.JPG",
     hoverSrc: "public/assets/Images/Omega/1992_Polaris_Albertville_386_1031_500/IMG_8766.JPG",
-    href: require("./watchModels/Omega/Omega_Olympia_Albertville_500_386_1031_1992"),
+    href: require("../watchModels/Omega/Omega_Olympia_Albertville_500_386_1031_1992"),
     specialCollectionItem: true,
   },
   "Omega Olympia Winter Olympics Albertville Ltd. 820/3000": {
@@ -1413,7 +1349,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     type: WatchTypeEnum.SPORTS,
     srcImage: "public/assets/Images/Omega/1992_Polaris_Albertville_386_1031_3000/IMG_8710.JPG",
     hoverSrc: "public/assets/Images/Omega/1992_Polaris_Albertville_386_1031_3000/IMG_8707.JPG",
-    href: require("./watchModels/Omega/Omega_Olympia_Albertville_3000_386_1031_1992"),
+    href: require("../watchModels/Omega/Omega_Olympia_Albertville_3000_386_1031_1992"),
     specialCollectionItem: false,
   },
   "Omega Polaris Ratrappante Chronograph 386 1031.1": {
@@ -1423,7 +1359,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     type: WatchTypeEnum.SPORTS,
     srcImage: "public/assets/Images/Omega/1992_Omega_Polaris_Ratrappante_386_1031/IMG_0647.JPG",
     hoverSrc: "public/assets/Images/Omega/1992_Omega_Polaris_Ratrappante_386_1031/IMG_0675.JPG",
-    href: require("./watchModels/Omega/Omega_Polaris_Chrono_White_386_1031_1992"),
+    href: require("../watchModels/Omega/Omega_Polaris_Chrono_White_386_1031_1992"),
     specialCollectionItem: false,
   },
 
@@ -1434,7 +1370,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     type: WatchTypeEnum.DRESS,
     srcImage: "public/assets/Images/Seiko/1992_Seiko_8M25_Age_Of_Discoveries/IMG_6682.JPG",
     hoverSrc: "public/assets/Images/Seiko/1992_Seiko_8M25_Age_Of_Discoveries/IMG_6672.JPG",
-    href: require("./watchModels/Seiko/Seiko_8M25_Age_Of_Discoveries.1992"),
+    href: require("../watchModels/Seiko/Seiko_8M25_Age_Of_Discoveries.1992"),
     specialCollectionItem: false,
   },
   "Seiko 6M13 Age of Discovery": {
@@ -1444,7 +1380,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     type: WatchTypeEnum.DRESS,
     srcImage: "public/assets/Images/Seiko/1992_Seiko_6M13_0010_Perpetual_Calendar/IMG_3177.JPG",
     hoverSrc: "public/assets/Images/Seiko/1992_Seiko_6M13_0010_Perpetual_Calendar/IMG_3158.JPG",
-    href: require("./watchModels/Seiko/Seiko_6M13_0010_Perpetual_Calendar_1992"),
+    href: require("../watchModels/Seiko/Seiko_6M13_0010_Perpetual_Calendar_1992"),
     specialCollectionItem: false,
   },
   "Seiko 6M25 Dancing Hands Chrono": {
@@ -1454,7 +1390,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     type: WatchTypeEnum.CASUAL,
     srcImage: "public/assets/Images/Seiko/1992_Seiko_6M25/IMG_1843.JPG",
     hoverSrc: "public/assets/Images/Seiko/1992_Seiko_6M25/IMG_1835.JPG",
-    href: require("./watchModels/Seiko/Seiko_6M25_Chronograph_1992"),
+    href: require("../watchModels/Seiko/Seiko_6M25_Chronograph_1992"),
     specialCollectionItem: false,
   },
   "Lorenz Rattrapante Quartz Chronograph": {
@@ -1464,7 +1400,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     type: WatchTypeEnum.DRESS,
     srcImage: "public/assets/Images/Lorenz/1992_Lorenz_Classic_Rattrapante/IMG_8807.JPG",
     hoverSrc: "public/assets/Images/Lorenz/1992_Lorenz_Classic_Rattrapante/IMG_8810.JPG",
-    href: require("./watchModels/Lorenz/Lorenz_Classic_Rattrapante_1992"),
+    href: require("../watchModels/Lorenz/Lorenz_Classic_Rattrapante_1992"),
     specialCollectionItem: false,
   },
   "Raymond Weil Tradition Mécanique Automatic 2892 21 Jewels": {
@@ -1476,7 +1412,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
       "public/assets/Images/Raymond_Weil/1992_Raymond_Weil_Tradition_Mecanique_2892/IMG_9267.JPG",
     hoverSrc:
       "public/assets/Images/Raymond_Weil/1992_Raymond_Weil_Tradition_Mecanique_2892/IMG_9288.JPG",
-    href: require("./watchModels/Raymond_Weil/Raymond_Weil_Tradition_Mecanique_2892_1992"),
+    href: require("../watchModels/Raymond_Weil/Raymond_Weil_Tradition_Mecanique_2892_1992"),
     specialCollectionItem: false,
   },
   "Pryngeps Regolo Triple Calendar": {
@@ -1486,7 +1422,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     type: WatchTypeEnum.CASUAL,
     srcImage: "public/assets/Images/Pryngeps/1992_Pryngeps_Regolo_Triple_Calendar/IMG_9035.JPG",
     hoverSrc: "public/assets/Images/Pryngeps/1992_Pryngeps_Regolo_Triple_Calendar/IMG_9060.JPG",
-    href: require("./watchModels/Pryngeps/Pryngeps_Regolo_Triple_Calendar_1992"),
+    href: require("../watchModels/Pryngeps/Pryngeps_Regolo_Triple_Calendar_1992"),
     specialCollectionItem: false,
   },
   "Seiko 7T36 Moonphase Chrono - Age of Discoveries": {
@@ -1496,7 +1432,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     type: WatchTypeEnum.CASUAL,
     srcImage: "public/assets/Images/Seiko/1991_Seiko_7T36_7410_Moonphase_chrono/IMG_3430.JPG",
     hoverSrc: "public/assets/Images/Seiko/1991_Seiko_7T36_7410_Moonphase_chrono/IMG_3431.JPG",
-    href: require("./watchModels/Seiko/Seiko_7T32_7410_Moonphase_1991"),
+    href: require("../watchModels/Seiko/Seiko_7T32_7410_Moonphase_1991"),
     specialCollectionItem: false,
   },
   "Breitling Chronomat J13047x 18K White Gold": {
@@ -1506,7 +1442,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     type: WatchTypeEnum.CASUAL,
     srcImage: "public/assets/Images/Breitling/1991_Breitling_J13047X_018/IMG_3011.JPG",
     hoverSrc: "public/assets/Images/Breitling/1991_Breitling_J13047X_018/IMG_2982.JPG",
-    href: require("./watchModels/Breitling/Breitling_Chronomat_J13047X_1991"),
+    href: require("../watchModels/Breitling/Breitling_Chronomat_J13047X_1991"),
     specialCollectionItem: true,
   },
 
@@ -1517,7 +1453,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     type: WatchTypeEnum.CASUAL,
     srcImage: "public/assets/Images/Pryngeps/1990_Pryngeps_Regolo/IMG_1605.JPG",
     hoverSrc: "public/assets/Images/Pryngeps/1990_Pryngeps_Regolo/IMG_1603.JPG",
-    href: require("./watchModels/Pryngeps/Pryngeps_Regolo_1467_1991"),
+    href: require("../watchModels/Pryngeps/Pryngeps_Regolo_1467_1991"),
     specialCollectionItem: false,
   },
   "Tag Heuer Professional 875-206 Chronograph": {
@@ -1527,7 +1463,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     type: WatchTypeEnum.DIVE,
     srcImage: "public/assets/Images/Tag_Heuer/1991_Tag_Heuer_DD2000_875_206/IMG_6794.JPG",
     hoverSrc: "public/assets/Images/Tag_Heuer/1991_Tag_Heuer_DD2000_875_206/IMG_6821.JPG",
-    href: require("./watchModels/Tag_Heuer/Tag_Heuer_LWO_283_875206_1991"),
+    href: require("../watchModels/Tag_Heuer/Tag_Heuer_LWO_283_875206_1991"),
     specialCollectionItem: true,
   },
   "Tag Heuer Professional 2000 Automatic": {
@@ -1537,7 +1473,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     type: WatchTypeEnum.DIVE,
     srcImage: "public/assets/Images/Tag_Heuer/1991_Tag_Heuer_2000_Automatic_WE2211/IMG_6690.JPG",
     hoverSrc: "public/assets/Images/Tag_Heuer/1991_Tag_Heuer_2000_Automatic_WE2211/IMG_6686.JPG",
-    href: require("./watchModels/Tag_Heuer/Tag_Heuer_Professional_2000_Auto_1991"),
+    href: require("../watchModels/Tag_Heuer/Tag_Heuer_Professional_2000_Auto_1991"),
     specialCollectionItem: false,
   },
   "Tissot PRX P475 Chronograph": {
@@ -1547,7 +1483,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     type: WatchTypeEnum.SPORTS,
     srcImage: "public/assets/Images/Tissot/1991_Tissot_PRX_P475_Chrono/IMG_6881.JPG",
     hoverSrc: "public/assets/Images/Tissot/1991_Tissot_PRX_P475_Chrono/IMG_6919.JPG",
-    href: require("./watchModels/Tissot/Tissot_PRX_P475_Chrono_1991"),
+    href: require("../watchModels/Tissot/Tissot_PRX_P475_Chrono_1991"),
     specialCollectionItem: false,
   },
   "Tag Heuer S/EL Digital Chrono Senna": {
@@ -1557,7 +1493,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     type: WatchTypeEnum.SPORTS,
     srcImage: "public/assets/Images/Tag_Heuer/1990_Tag_Heuer_S_EL_Digital_Senna/IMG_8764.JPG",
     hoverSrc: "public/assets/Images/Tag_Heuer/1990_Tag_Heuer_S_EL_Digital_Senna/IMG_8748.JPG",
-    href: require("./watchModels/Tag_Heuer/Tag_Heuer_S-EL_Digitial_Senna_1990"),
+    href: require("../watchModels/Tag_Heuer/Tag_Heuer_S-EL_Digitial_Senna_1990"),
     specialCollectionItem: true,
   },
   "Pryngeps Regolo Prepetual 1467": {
@@ -1567,7 +1503,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     type: WatchTypeEnum.CASUAL,
     srcImage: "public/assets/Images/Pryngeps/1990_Pryngeps_Regolo_II/IMG_0656.JPG",
     hoverSrc: "public/assets/Images/Pryngeps/1990_Pryngeps_Regolo_II/IMG_0640.JPG",
-    href: require("./watchModels/Pryngeps/Pryngeps_Regolo_1467_1990"),
+    href: require("../watchModels/Pryngeps/Pryngeps_Regolo_1467_1990"),
     specialCollectionItem: false,
   },
   "Seiko Two Tone 0390": {
@@ -1577,7 +1513,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     type: WatchTypeEnum.CASUAL,
     srcImage: "public/assets/Images/Seiko/1990_Seiko_V732_0390/IMG_3871.JPG",
     hoverSrc: "public/assets/Images/Seiko/1990_Seiko_V732_0390/IMG_3877.JPG",
-    href: require("./watchModels/Seiko/Seiko_V732_0390_1990"),
+    href: require("../watchModels/Seiko/Seiko_V732_0390_1990"),
     specialCollectionItem: false,
   },
 
@@ -1588,7 +1524,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     type: WatchTypeEnum.DRESS,
     srcImage: "public/assets/Images/Raymond_Weil/1990_Raymond_Weil_7760_A290703/IMG_2222.JPG",
     hoverSrc: "public/assets/Images/Raymond_Weil/1990_Raymond_Weil_7760_A290703/IMG_2253.JPG",
-    href: require("./watchModels/Raymond_Weil/Raymond_Weil_Tradition_Mecanique_7760_A290703_1990"),
+    href: require("../watchModels/Raymond_Weil/Raymond_Weil_Tradition_Mecanique_7760_A290703_1990"),
     specialCollectionItem: false,
   },
   "Raymond Weil Tradition Mécanique": {
@@ -1598,7 +1534,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     type: WatchTypeEnum.DRESS,
     srcImage: "public/assets/Images/Raymond_Weil/1990_Raymond_Weil_7760/IMG_4910.JPG",
     hoverSrc: "public/assets/Images/Raymond_Weil/1990_Raymond_Weil_7760/IMG_6015.JPG",
-    href: require("./watchModels/Raymond_Weil/Raymond_Weil_Tradition_Mecanique_7760_1990"),
+    href: require("../watchModels/Raymond_Weil/Raymond_Weil_Tradition_Mecanique_7760_1990"),
     specialCollectionItem: false,
   },
   "Breitling Chronomat Sextant 80350 Chronograph": {
@@ -1610,7 +1546,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
       "public/assets/Images/Breitling/1989_Breitling_Chronomat_Sextant_1270_22J/IMG_7762.JPG",
     hoverSrc:
       "public/assets/Images/Breitling/1989_Breitling_Chronomat_Sextant_1270_22J/IMG_7814.JPG",
-    href: require("./watchModels/Breitling/Breitling_Chronomat_Sextant_80350_1989"),
+    href: require("../watchModels/Breitling/Breitling_Chronomat_Sextant_80350_1989"),
     specialCollectionItem: false,
   },
   "Lorenz Classic Rattrapante Chronograph": {
@@ -1620,7 +1556,18 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     type: WatchTypeEnum.DRESS,
     srcImage: "public/assets/Images/Lorenz/1989_Lorenz_Classic_Rattrapante/IMG_8717.JPG",
     hoverSrc: "public/assets/Images/Lorenz/1989_Lorenz_Classic_Rattrapante/IMG_8695.JPG",
-    href: require("./watchModels/Lorenz/Lorenz_Classic_Rattrapante_1989"),
+    href: require("../watchModels/Lorenz/Lorenz_Classic_Rattrapante_1989"),
+    specialCollectionItem: false,
+  },
+
+  "Breitling Sextant B55047": {
+    brand: BrandsEnum.BREITLING,
+    legend: "Breitling Sextant B55047",
+    year: 1988,
+    type: WatchTypeEnum.SPORTS,
+    srcImage: "public/assets/Images/Breitling/1998_Breitling_Sextant_B55047/IMG_2480.JPG",
+    hoverSrc: "public/assets/Images/Breitling/1998_Breitling_Sextant_B55047/IMG_2476.JPG",
+    href: require("../watchModels/Breitling/Breitling_Sextant_B55047_1998"),
     specialCollectionItem: false,
   },
 
@@ -1631,7 +1578,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     type: WatchTypeEnum.DIVE,
     srcImage: "public/assets/Images/Raymond_Weil/2007_Raymond_Weil_Tango_5563_Diver/IMG_0495.JPG",
     hoverSrc: "public/assets/Images/Raymond_Weil/2007_Raymond_Weil_Tango_5563_Diver/IMG_0487.JPG",
-    href: require("./watchModels/Raymond_Weil/Raymond_Weil_Tango_Diver_2007"),
+    href: require("../watchModels/Raymond_Weil/Raymond_Weil_Tango_Diver_2007"),
     specialCollectionItem: false,
   },
 
@@ -1641,7 +1588,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     year: 1988,
     type: WatchTypeEnum.DRESS,
     srcImage: "public/assets/Images/Raymond_Weil/1988_Raymond_Weil_2809_Auto/IMG_4659.JPG",
-    href: require("./watchModels/Raymond_Weil/Raymond_Weil_2809_Automatic_1988"),
+    href: require("../watchModels/Raymond_Weil/Raymond_Weil_2809_Automatic_1988"),
     specialCollectionItem: false,
   },
   "Omega Olympia Winter Olympics Calgary And Seoul Limited 457/1000": {
@@ -1651,7 +1598,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     type: WatchTypeEnum.SPORTS,
     srcImage: "public/assets/Images/Omega/1988_Polaris_Calgary_Seoul_386_1232_1000/IMG_0128.JPG",
     hoverSrc: "public/assets/Images/Omega/1988_Polaris_Calgary_Seoul_386_1232_1000/IMG_0112.JPG",
-    href: require("./watchModels/Omega/Omega_Olympia_Calgary_Seoul_1988"),
+    href: require("../watchModels/Omega/Omega_Olympia_Calgary_Seoul_1988"),
     specialCollectionItem: true,
   },
   "Omega Polaris Multifunction 386.0826": {
@@ -1661,7 +1608,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     type: WatchTypeEnum.CASUAL,
     srcImage: "public/assets/Images/Omega/1988_Polaris_AnaDigi_Black_386_0826/IMG_1428.JPG",
     hoverSrc: "public/assets/Images/Omega/1988_Polaris_AnaDigi_Black_386_0826/IMG_1443.JPG",
-    href: require("./watchModels/Omega/Omega_Polaris_MultiFunction_386_0826_1988"),
+    href: require("../watchModels/Omega/Omega_Polaris_MultiFunction_386_0826_1988"),
     specialCollectionItem: false,
   },
   "Omega Polaris Multifunction Gray LCD 386.0822": {
@@ -1673,7 +1620,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
       "public/assets/Images/Omega/1988_Polaris_AnaDigi_Black_386_0826_Gold_plated/IMG_8655.JPG",
     hoverSrc:
       "public/assets/Images/Omega/1988_Polaris_AnaDigi_Black_386_0826_Gold_plated/IMG_8660.JPG",
-    href: require("./watchModels/Omega/Omega_Polaris_MultiFunction_386_0826_plated_1988"),
+    href: require("../watchModels/Omega/Omega_Polaris_MultiFunction_386_0826_plated_1988"),
     specialCollectionItem: false,
   },
   "Omega De Ville Longchamp 191.0198 Cal. 1340": {
@@ -1683,7 +1630,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     type: WatchTypeEnum.DRESS,
     srcImage: "public/assets/Images/Omega/1988_Omega_1910198_DeVille_longchamp/IMG_0265.JPG",
     hoverSrc: "public/assets/Images/Omega/1988_Omega_1910198_DeVille_longchamp/IMG_0289.JPG",
-    href: require("./watchModels/Omega/Omega_DeVille_Lomgchamp_1910198_Cal_1430_1988"),
+    href: require("../watchModels/Omega/Omega_DeVille_Lomgchamp_1910198_Cal_1430_1988"),
     specialCollectionItem: false,
   },
   "Omega Seamaster Polaris 396.1022": {
@@ -1693,7 +1640,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     type: WatchTypeEnum.CASUAL,
     srcImage: "public/assets/Images/Omega/1987_Polaris_396_1022/IMG_1339.JPG",
     hoverSrc: "public/assets/Images/Omega/1987_Polaris_396_1022/IMG_1351.JPG",
-    href: require("./watchModels/Omega/Omega_Polaris_396_1022_1987"),
+    href: require("../watchModels/Omega/Omega_Polaris_396_1022_1987"),
     specialCollectionItem: false,
   },
   "Omega Seamaster Polaris GMT 396.1122": {
@@ -1703,7 +1650,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     type: WatchTypeEnum.CASUAL,
     srcImage: "public/assets/Images/Omega/1987_Polaris_GMT_396_1122/IMG_7199.JPG",
     hoverSrc: "public/assets/Images/Omega/1987_Polaris_GMT_396_1122/IMG_7211.JPG",
-    href: require("./watchModels/Omega/Omega_Polaris_GMT_396_1122_1987"),
+    href: require("../watchModels/Omega/Omega_Polaris_GMT_396_1122_1987"),
     specialCollectionItem: false,
   },
   "Omega Seamaster Polaris GMT (396.1122)": {
@@ -1713,7 +1660,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     type: WatchTypeEnum.CASUAL,
     srcImage: "public/assets/Images/Omega/1987_Omega_Seamaster_GMT_396_1122/IMG_3697.JPG",
     hoverSrc: "public/assets/Images/Omega/1987_Omega_Seamaster_GMT_396_1122/IMG_3706.JPG",
-    href: require("./watchModels/Omega/Omega_Polaris_GMT_2_396_1122_1987"),
+    href: require("../watchModels/Omega/Omega_Polaris_GMT_2_396_1122_1987"),
     specialCollectionItem: false,
   },
   "Omega Polaris Calendar 396.1222": {
@@ -1723,7 +1670,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     type: WatchTypeEnum.CASUAL,
     srcImage: "public/assets/Images/Omega/1987_Polaris_Calendar_396_1222/IMG_1300.JPG",
     hoverSrc: "public/assets/Images/Omega/1987_Polaris_Calendar_396_1222/IMG_1314.JPG",
-    href: require("./watchModels/Omega/Omega_Polaris_Calendar_396_1222_1987"),
+    href: require("../watchModels/Omega/Omega_Polaris_Calendar_396_1222_1987"),
     specialCollectionItem: false,
   },
   "Lorenz Montecarlo Sub 666ft": {
@@ -1732,7 +1679,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     year: 1987,
     type: WatchTypeEnum.DIVE,
     srcImage: "public/assets/Images/Lorenz/1987_Lorenz_Montecarlo_600ft/IMG_0686.JPG",
-    href: require("./watchModels/Lorenz/Lorenz_Montecarlo_600ft_1987"),
+    href: require("../watchModels/Lorenz/Lorenz_Montecarlo_600ft_1987"),
     specialCollectionItem: false,
   },
   "Tag Heuer Professional 262.006-1 Chronograph": {
@@ -1742,7 +1689,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     type: WatchTypeEnum.SPORTS,
     srcImage: "public/assets/Images/Tag_Heuer/1987_Tag_Heuer_DD2000_262_0061/IMG_6720.JPG",
     hoverSrc: "public/assets/Images/Tag_Heuer/1987_Tag_Heuer_DD2000_262_0061/IMG_6707.JPG",
-    href: require("./watchModels/Tag_Heuer/Tag_Heuer_ProChrono_2620061_1987"),
+    href: require("../watchModels/Tag_Heuer/Tag_Heuer_ProChrono_2620061_1987"),
     specialCollectionItem: true,
   },
   "Omega Polaris Multifunction Black LCD 386.0822": {
@@ -1752,7 +1699,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     type: WatchTypeEnum.CASUAL,
     srcImage: "public/assets/Images/Omega/1988_Polaris_AnaDigi_386_0820/IMG_7116.JPG",
     hoverSrc: "public/assets/Images/Omega/1988_Polaris_AnaDigi_386_0820/IMG_1279.JPG",
-    href: require("./watchModels/Omega/Omega_Polaris_MultiFunction_386_0822_1986"),
+    href: require("../watchModels/Omega/Omega_Polaris_MultiFunction_386_0822_1986"),
     specialCollectionItem: false,
   },
 
@@ -1763,7 +1710,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     type: WatchTypeEnum.SPORTS,
     srcImage: "public/assets/Images/Tag_Heuer/1986_Tag_Heuer_Professional_200_LWO_185/IMG_1871.JPG",
     hoverSrc: "public/assets/Images/Tag_Heuer/1986_Tag_Heuer_Professional_200_LWO_185/IMG_1891.JPG",
-    href: require("./watchModels/Tag_Heuer/Tag_Heuer_ProChrono_2720061_LWO_185_1986"),
+    href: require("../watchModels/Tag_Heuer/Tag_Heuer_ProChrono_2720061_LWO_185_1986"),
     specialCollectionItem: true,
   },
   "Tag Heuer Professional 272.006-1 Chronograph": {
@@ -1773,7 +1720,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     type: WatchTypeEnum.SPORTS,
     srcImage: "public/assets/Images/Tag_Heuer/1985_Tag_Heuer_2000_Chrono/IMG_0535.JPG",
     hoverSrc: "public/assets/Images/Tag_Heuer/1985_Tag_Heuer_2000_Chrono/IMG_0534.JPG",
-    href: require("./watchModels/Tag_Heuer/Tag_Heuer_ProChrono_2720061_1985"),
+    href: require("../watchModels/Tag_Heuer/Tag_Heuer_ProChrono_2720061_1985"),
     specialCollectionItem: false,
   },
   "Heuer Airline Professional 895.513": {
@@ -1782,7 +1729,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     year: 1985,
     type: WatchTypeEnum.SPORTS,
     srcImage: "public/assets/Images/Tag_Heuer/1985_Heuer_Airline/IMG_2798.JPG",
-    href: require("./watchModels/Tag_Heuer/Heuer_Airline_Professional_895513_1985"),
+    href: require("../watchModels/Tag_Heuer/Heuer_Airline_Professional_895513_1985"),
     specialCollectionItem: false,
   },
   "Tissot Le Locle Seastar": {
@@ -1792,7 +1739,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     type: WatchTypeEnum.DRESS,
     srcImage: "public/assets/Images/Tissot/1985_Tissot_Le_Locle/IMG_4351.JPG",
     hoverSrc: "public/assets/Images/Tissot/1985_Tissot_Le_Locle/IMG_4360.JPG",
-    href: require("./watchModels/Tissot/Tissot_Le_Locle_Seastar_1985"),
+    href: require("../watchModels/Tissot/Tissot_Le_Locle_Seastar_1985"),
     specialCollectionItem: false,
   },
   "Omega Seamaster Polaris Titanium 396.1100": {
@@ -1802,7 +1749,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     type: WatchTypeEnum.CASUAL,
     srcImage: "public/assets/Images/Omega/1984_Polaris_Titanium_396_1100/IMG_1580.JPG",
     hoverSrc: "public/assets/Images/Omega/1984_Polaris_Titanium_396_1100/IMG_1597.JPG",
-    href: require("./watchModels/Omega/Omega_Polaris_Titanium_396_1100_1984"),
+    href: require("../watchModels/Omega/Omega_Polaris_Titanium_396_1100_1984"),
     specialCollectionItem: false,
   },
   "Tissot Heritage 130th Anniversary Moon Phase": {
@@ -1814,7 +1761,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
       "public/assets/Images/Tissot/1983_Tissot_130th_Anniversary_moon_phase_7734/IMG_0443.JPG",
     hoverSrc:
       "public/assets/Images/Tissot/1983_Tissot_130th_Anniversary_moon_phase_7734/IMG_0431.JPG",
-    href: require("./watchModels/Tissot/Tissot_Heritage_130th_Anniversary_7734_1983"),
+    href: require("../watchModels/Tissot/Tissot_Heritage_130th_Anniversary_7734_1983"),
     specialCollectionItem: false,
   },
   "Omega De Ville 191.0077 Cal. 1365": {
@@ -1824,7 +1771,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     type: WatchTypeEnum.DRESS,
     srcImage: "public/assets/Images/Omega/1982_Omega_1910077_DeVille/IMG_2181.JPG",
     hoverSrc: "public/assets/Images/Omega/1982_Omega_1910077_DeVille/IMG_2189.JPG",
-    href: require("./watchModels/Omega/Omega_DeVille_1910077_Cal_1365_1982"),
+    href: require("../watchModels/Omega/Omega_DeVille_1910077_Cal_1365_1982"),
     specialCollectionItem: false,
   },
   "Eberhard 32001 Tricompax Moon Phase Valjoux 88 18K Gold": {
@@ -1836,7 +1783,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
       "public/assets/Images/Eberhard/1980_Eberhard_Ref_32001_TriCompax_Moon_Phase/IMG_5662.JPG",
     hoverSrc:
       "public/assets/Images/Eberhard/1980_Eberhard_Ref_32001_TriCompax_Moon_Phase/IMG_5685.JPG",
-    href: require("./watchModels/Eberhard/Eberhard_Chronograph_32001_Tricompax_Moon_1980"),
+    href: require("../watchModels/Eberhard/Eberhard_Chronograph_32001_Tricompax_Moon_1980"),
     specialCollectionItem: true,
   },
   "Eberhard Chronograph EP-40-68 Enamel Dial": {
@@ -1846,7 +1793,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     type: WatchTypeEnum.DRESS,
     srcImage: "public/assets/Images/Eberhard/1980_Eberhard_ref_31100_silver_gold/IMG_4408.JPG",
     hoverSrc: "public/assets/Images/Eberhard/1980_Eberhard_ref_31100_silver_gold/IMG_4401.JPG",
-    href: require("./watchModels/Eberhard/Eberhard_Chronograph_31000_1980"),
+    href: require("../watchModels/Eberhard/Eberhard_Chronograph_31000_1980"),
     specialCollectionItem: true,
   },
   "Timex Marlim": {
@@ -1855,7 +1802,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     year: 1980,
     type: WatchTypeEnum.DRESS,
     srcImage: "public/assets/Images/Timex/1980_Timex_Marlin_M100/IMG_0917.JPG",
-    href: require("./watchModels/Timex/Timex_Marlin_1980"),
+    href: require("../watchModels/Timex/Timex_Marlin_1980"),
     specialCollectionItem: false,
   },
   "Tissot PR 516 Quartz": {
@@ -1865,7 +1812,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     type: WatchTypeEnum.SPORTS,
     srcImage: "public/assets/Images/Tissot/1979_Tissot_PR_516_Quartz/IMG_4797.JPG",
     hoverSrc: "public/assets/Images/Tissot/1979_Tissot_PR_516_Quartz/IMG_3994.JPG",
-    href: require("./watchModels/Tissot/Tissot_PR_516_LeLocle_1979"),
+    href: require("../watchModels/Tissot/Tissot_PR_516_LeLocle_1979"),
     specialCollectionItem: false,
   },
 
@@ -1876,7 +1823,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     type: WatchTypeEnum.CASUAL,
     srcImage: "public/assets/Images/Tissot/1979_Tissot_Seastar_LeLocle/IMG_0215.JPG",
     hoverSrc: "public/assets/Images/Tissot/1979_Tissot_Seastar_LeLocle/IMG_0217.JPG",
-    href: require("./watchModels/Tissot/Tissot_SeaStar_LeLocle_1979"),
+    href: require("../watchModels/Tissot/Tissot_SeaStar_LeLocle_1979"),
     specialCollectionItem: false,
   },
   "Tissot Quartz Cal.2031": {
@@ -1886,7 +1833,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     type: WatchTypeEnum.DRESS,
     srcImage: "public/assets/Images/Tissot/1979_Tissot_Quartz/IMG_4669.JPG",
     hoverSrc: "public/assets/Images/Tissot/1979_Tissot_Quartz/IMG_4681.JPG",
-    href: require("./watchModels/Tissot/Tissot_Quartz_1979"),
+    href: require("../watchModels/Tissot/Tissot_Quartz_1979"),
     specialCollectionItem: false,
   },
   "Tissot Seastar Quartz Cal.2031": {
@@ -1896,7 +1843,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     type: WatchTypeEnum.CASUAL,
     srcImage: "public/assets/Images/Tissot/1978_Tissot_Seastar_Quartz/IMG_0982.JPG",
     hoverSrc: "public/assets/Images/Tissot/1978_Tissot_Seastar_Quartz/IMG_0991.JPG",
-    href: require("./watchModels/Tissot/Tissot_SeaStar_Quartz_1978"),
+    href: require("../watchModels/Tissot/Tissot_SeaStar_Quartz_1978"),
     specialCollectionItem: false,
   },
   "Nobreza Racing Chronograph 7734 17 Jewels": {
@@ -1905,7 +1852,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     year: 1977,
     type: WatchTypeEnum.SPORTS,
     srcImage: "public/assets/Images/Nobreza/1977_Nobreza_Racing_Chrono_7754/IMG_6277.JPG",
-    href: require("./watchModels/Nobreza/Nobreza_Racing_Chrono_7754_1977"),
+    href: require("../watchModels/Nobreza/Nobreza_Racing_Chrono_7754_1977"),
     specialCollectionItem: false,
   },
   "Taunus Calendar 17 Rubis": {
@@ -1914,7 +1861,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     year: 1977,
     type: WatchTypeEnum.CASUAL,
     srcImage: "public/assets/Images/Taunus/1977_Taunus_Calendar/IMG_0345.JPG",
-    href: require("./watchModels/Taunus/Taunus_Calendar_17Rubis_1975"),
+    href: require("../watchModels/Taunus/Taunus_Calendar_17Rubis_1975"),
     specialCollectionItem: false,
   },
 
@@ -1925,7 +1872,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     type: WatchTypeEnum.CASUAL,
     srcImage: "public/assets/Images/Omega/1977_Omega_1960079_Seamaster/IMG_0052.JPG",
     hoverSrc: "public/assets/Images/Omega/1977_Omega_1960079_Seamaster/IMG_0072.JPG",
-    href: require("./watchModels/Omega/Omega_Seamaster_1960079_1977"),
+    href: require("../watchModels/Omega/Omega_Seamaster_1960079_1977"),
     specialCollectionItem: false,
   },
   "Omega 196.0122 Cal. 1370": {
@@ -1934,7 +1881,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     year: 1977,
     type: WatchTypeEnum.CASUAL,
     srcImage: "public/assets/Images/Omega/1977_Omega_1960122/IMG_0225.JPG",
-    href: require("./watchModels/Omega/Omega_1960122_Cal_1370_1977"),
+    href: require("../watchModels/Omega/Omega_1960122_Cal_1370_1977"),
     specialCollectionItem: false,
   },
   "Nobreza Automatic ETA 2783 25 Jewels": {
@@ -1943,7 +1890,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     year: 1977,
     type: WatchTypeEnum.CASUAL,
     srcImage: "public/assets/Images/Nobreza/1977_Nobreza_Automatic_25_jewels/IMG_1814.JPG",
-    href: require("./watchModels/Nobreza/Nobreza_Automatic_1977"),
+    href: require("../watchModels/Nobreza/Nobreza_Automatic_1977"),
     specialCollectionItem: false,
   },
   "Nobreza Shades 17 Jewels": {
@@ -1952,7 +1899,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     year: 1976,
     type: WatchTypeEnum.CASUAL,
     srcImage: "public/assets/Images/Nobreza/1976_Nobreza_shades_17_jewels/IMG_0991.JPG",
-    href: require("./watchModels/Nobreza/Nobreza_Shades_Mechanical_1976"),
+    href: require("../watchModels/Nobreza/Nobreza_Shades_Mechanical_1976"),
     specialCollectionItem: false,
   },
   "Amyria Blue Shades AS 1950": {
@@ -1961,7 +1908,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     year: 1977,
     type: WatchTypeEnum.CASUAL,
     srcImage: "public/assets/Images/Amyria/1997_Amyria_Blue_Shades/IMG_0733.JPG",
-    href: require("./watchModels/Amyria/Amyria_Blue_Shades_1977"),
+    href: require("../watchModels/Amyria/Amyria_Blue_Shades_1977"),
     specialCollectionItem: false,
   },
   "Amyria Day Date": {
@@ -1970,7 +1917,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     year: 1976,
     type: WatchTypeEnum.CASUAL,
     srcImage: "public/assets/Images/Amyria/1976_Amyria_Day_Date/IMG_0893.JPG",
-    href: require("./watchModels/Amyria/Amyria_Day_Date_1976"),
+    href: require("../watchModels/Amyria/Amyria_Day_Date_1976"),
     specialCollectionItem: false,
   },
   "Omega De Ville 191.0167 Cal. 1365": {
@@ -1979,7 +1926,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     year: 1976,
     type: WatchTypeEnum.DRESS,
     srcImage: "public/assets/Images/Omega/1976_Omega_1910167_DeVille/IMG_1301.JPG",
-    href: require("./watchModels/Omega/Omega_DeVille_1910167_Cal_1365_1976"),
+    href: require("../watchModels/Omega/Omega_DeVille_1910167_Cal_1365_1976"),
     specialCollectionItem: false,
   },
   "Seiko 6306-7001": {
@@ -1989,7 +1936,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     type: WatchTypeEnum.DIVE,
     srcImage: "public/assets/Images/Seiko/1976_Seiko_6306_7001/IMG_6479.JPG",
     hoverSrc: "public/assets/Images/Seiko/1976_Seiko_6306_7001/IMG_6501.JPG",
-    href: require("./watchModels/Seiko/Seiko_6306_7001_1976"),
+    href: require("../watchModels/Seiko/Seiko_6306_7001_1976"),
     specialCollectionItem: true,
   },
   "Seiko Type II 4004": {
@@ -1999,7 +1946,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     type: WatchTypeEnum.CASUAL,
     srcImage: "public/assets/Images/Seiko/1976_Seiko_4004/IMG_4093.JPG",
     hoverSrc: "public/assets/Images/Seiko/1976_Seiko_4004/IMG_4128.JPG",
-    href: require("./watchModels/Seiko/Seiko_4004_1976"),
+    href: require("../watchModels/Seiko/Seiko_4004_1976"),
     specialCollectionItem: false,
   },
   "Romar Incabloc Green 17 Jewels": {
@@ -2008,7 +1955,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     year: 1976,
     type: WatchTypeEnum.CASUAL,
     srcImage: "public/assets/Images/Romar/1976_Romar_Incabloc_Green_U6380/IMG_5648.JPG",
-    href: require("./watchModels/Romar/Romar_Incabloc_17Jewels_Green_1976"),
+    href: require("../watchModels/Romar/Romar_Incabloc_17Jewels_Green_1976"),
     specialCollectionItem: false,
   },
   "Romar Incabloc 17 Jewels": {
@@ -2017,7 +1964,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     year: 1976,
     type: WatchTypeEnum.CASUAL,
     srcImage: "public/assets/Images/Romar/1976_Romar_Incabloc_U6380/IMG_7999.JPG",
-    href: require("./watchModels/Romar/Romar_Incabloc_17Jewels_1976"),
+    href: require("../watchModels/Romar/Romar_Incabloc_17Jewels_1976"),
     specialCollectionItem: false,
   },
   "Novart Incabloc 17 Jewels": {
@@ -2026,7 +1973,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     year: 1976,
     type: WatchTypeEnum.CASUAL,
     srcImage: "public/assets/Images/Novart/1976_Novart_Incabloc_White/IMG_3959.JPG",
-    href: require("./watchModels/Novart/Novart_Incabloc_white_17Jewels_1976"),
+    href: require("../watchModels/Novart/Novart_Incabloc_white_17Jewels_1976"),
     specialCollectionItem: false,
   },
   "Tissoure Cronometro 17 Rubis": {
@@ -2036,7 +1983,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     type: WatchTypeEnum.CASUAL,
     srcImage: "public/assets/Images/Tissoure/1975_Tissoure_Cronometro_17J/IMG_1815.JPG",
     hoverSrc: "public/assets/Images/Tissoure/1975_Tissoure_Cronometro_17J/IMG_1816.JPG",
-    href: require("./watchModels/Tissoure/Tissoure_Cronometro_17J_1975"),
+    href: require("../watchModels/Tissoure/Tissoure_Cronometro_17J_1975"),
     specialCollectionItem: false,
   },
 
@@ -2046,7 +1993,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     year: 1975,
     type: WatchTypeEnum.DIVE,
     srcImage: "public/assets/Images/Lucerne/1975_Lucerne_Dive/IMG_0443.JPG",
-    href: require("./watchModels/Lucerne/Lucerne_Automatic_27J_1975"),
+    href: require("../watchModels/Lucerne/Lucerne_Automatic_27J_1975"),
     specialCollectionItem: false,
   },
   "Amer Campos FE 233 17 Jewels": {
@@ -2056,7 +2003,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     type: WatchTypeEnum.CASUAL,
     srcImage: "public/assets/Images/Amer/1975_Amer_Campos/IMG_0929.JPG",
     hoverSrc: "public/assets/Images/Amer/1975_Amer_Campos/IMG_0955.JPG",
-    href: require("./watchModels/Amer/Amer_Campos_1975_17_jewels"),
+    href: require("../watchModels/Amer/Amer_Campos_1975_17_jewels"),
     specialCollectionItem: false,
   },
   "Amer Campos Racing Yellow FE 233 17 Jewels": {
@@ -2066,7 +2013,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     type: WatchTypeEnum.CASUAL,
     srcImage: "public/assets/Images/Amer/1975_Amer_Campos_Racing_Yellow_FE_233/IMG_0601.JPG",
     hoverSrc: "public/assets/Images/Amer/1975_Amer_Campos_Racing_Yellow_FE_233/IMG_0593.JPG",
-    href: require("./watchModels/Amer/Amer_Campos_Racing_Yellow_1975_17_jewels"),
+    href: require("../watchModels/Amer/Amer_Campos_Racing_Yellow_1975_17_jewels"),
     specialCollectionItem: false,
   },
   "Amer Campos Racing Red FE 233 17 Jewels": {
@@ -2076,7 +2023,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     type: WatchTypeEnum.CASUAL,
     srcImage: "public/assets/Images/Amer/1975_Amer_Campos_Racing_Red_FE_233/IMG_0561.JPG",
     hoverSrc: "public/assets/Images/Amer/1975_Amer_Campos_Racing_Red_FE_233/IMG_0552.JPG",
-    href: require("./watchModels/Amer/Amer_Campos_Racing_Red_1975_17_jewels"),
+    href: require("../watchModels/Amer/Amer_Campos_Racing_Red_1975_17_jewels"),
     specialCollectionItem: false,
   },
   "Lucerne Three Stars": {
@@ -2085,7 +2032,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     year: 1975,
     type: WatchTypeEnum.CASUAL,
     srcImage: "public/assets/Images/Lucerne/1975_Lucerne_PR/IMG_1472.JPG",
-    href: require("./watchModels/Lucerne/Lucerne_Three_Stars_1975"),
+    href: require("../watchModels/Lucerne/Lucerne_Three_Stars_1975"),
     specialCollectionItem: false,
   },
   "Martini Special 17 Rubis NOS": {
@@ -2094,7 +2041,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     year: 1975,
     type: WatchTypeEnum.CASUAL,
     srcImage: "public/assets/Images/Martini/1975_Martini_Special/IMG_2787.JPG",
-    href: require("./watchModels/Martini/Martini_Special_17Rubis_1975"),
+    href: require("../watchModels/Martini/Martini_Special_17Rubis_1975"),
     specialCollectionItem: false,
   },
   "Miura Calendar 17 Rubis": {
@@ -2103,7 +2050,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     year: 1975,
     type: WatchTypeEnum.CASUAL,
     srcImage: "public/assets/Images/Miura/1975_Miura/IMG_2764.JPG",
-    href: require("./watchModels/Miura/Miura_Calendar_17Rubis_1975"),
+    href: require("../watchModels/Miura/Miura_Calendar_17Rubis_1975"),
     specialCollectionItem: false,
   },
   "Crystal Watch Blue Cushion 17 Jewels": {
@@ -2112,7 +2059,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     year: 1975,
     type: WatchTypeEnum.CASUAL,
     srcImage: "public/assets/Images/Cristal_Watch/1975_Cristal_Watch_Blue_Cushion/IMG_2735.JPG",
-    href: require("./watchModels/Cristal_Watch/Cristal_Watch_Blue_Cushion_17J_1975"),
+    href: require("../watchModels/Cristal_Watch/Cristal_Watch_Blue_Cushion_17J_1975"),
     specialCollectionItem: false,
   },
   "Monumental Automatic Dive 200M": {
@@ -2121,7 +2068,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     year: 1975,
     type: WatchTypeEnum.DIVE,
     srcImage: "public/assets/Images/Monumental/1975_Monumental_Swiss/IMG_0327.JPG",
-    href: require("./watchModels/Monumental/Monumental_Automatic_200M_1975"),
+    href: require("../watchModels/Monumental/Monumental_Automatic_200M_1975"),
     specialCollectionItem: false,
   },
   "Pryngeps Autavia Chronograph": {
@@ -2131,16 +2078,27 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     type: WatchTypeEnum.CASUAL,
     srcImage: "public/assets/Images/Pryngeps/1975_Pryngeps_7750/IMG_1989.JPG",
     hoverSrc: "public/assets/Images/Pryngeps/1975_Pryngeps_7750/IMG_4840.JPG",
-    href: require("./watchModels/Pryngeps/Pryngeps_Automatic_Chronograph_Valjoux_7750"),
+    href: require("../watchModels/Pryngeps/Pryngeps_Automatic_Chronograph_Valjoux_7750"),
     specialCollectionItem: false,
   },
+  "Arauto Silver Tuxedo Unitas 6325": {
+    brand: BrandsEnum.ARAUTO,
+    legend: "Arauto Silver Tuxedo Unitas 6325",
+    year: 1974,
+    type: WatchTypeEnum.CASUAL,
+    srcImage: "public/assets/Images/Arauto/1974_Arauto_Silver_Tuxedo_U6325_17J/IMG_2721.JPG",
+    hoverSrc: "public/assets/Images/Arauto/1974_Arauto_Silver_Tuxedo_U6325_17J/IMG_2723.JPG",
+    href: require("../watchModels/Arauto/Arauto_Silver_Tuxedo_Unitas_6325_1974"),
+    specialCollectionItem: false,
+  },
+
   "Hipco Incabloc 17 Jewels": {
     brand: BrandsEnum.HIPCO,
     legend: "Hipco Incabloc 17 Jewels",
     year: 1974,
     type: WatchTypeEnum.CASUAL,
     srcImage: "public/assets/Images/Hipco/1974_HIPCO_Incabloc_U6380/IMG_7965.JPG",
-    href: require("./watchModels/Hipco/Hipco_Incabloc_17Jewels_1974"),
+    href: require("../watchModels/Hipco/Hipco_Incabloc_17Jewels_1974"),
     specialCollectionItem: false,
   },
   "Novart Monza Ligth Blue Date 17 Jewels": {
@@ -2149,7 +2107,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     year: 1974,
     type: WatchTypeEnum.CASUAL,
     srcImage: "public/assets/Images/Novart/1974_Novart_U6380_Date_Blue/IMG_5643.JPG",
-    href: require("./watchModels/Novart/Novart_Monza_Ligth_Blue_17Jewels_1974"),
+    href: require("../watchModels/Novart/Novart_Monza_Ligth_Blue_17Jewels_1974"),
     specialCollectionItem: false,
   },
   "Novart Monza Green Borealis 17 Jewels": {
@@ -2158,7 +2116,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     year: 1974,
     type: WatchTypeEnum.CASUAL,
     srcImage: "public/assets/Images/Novart/1974_Novart_U6380_Green_Borealis/IMG_4839.JPG",
-    href: require("./watchModels/Novart/Novart_Monza_Green_Borealis_17Jewels_1974"),
+    href: require("../watchModels/Novart/Novart_Monza_Green_Borealis_17Jewels_1974"),
     specialCollectionItem: false,
   },
   "Novart Monza Green Borealis": {
@@ -2168,7 +2126,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     type: WatchTypeEnum.CASUAL,
     srcImage:
       "public/assets/Images/Novart/1974_Novart_Monza_Green_Borealis_Unitas_17J/IMG_5756.JPG",
-    href: require("./watchModels/Novart/Novart_Monza_Green_Borealis_17J_1974"),
+    href: require("../watchModels/Novart/Novart_Monza_Green_Borealis_17J_1974"),
     specialCollectionItem: false,
   },
   "Novart Tides Yellow 17 Jewels": {
@@ -2177,7 +2135,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     year: 1974,
     type: WatchTypeEnum.CASUAL,
     srcImage: "public/assets/Images/Novart/1974_Novart_Tides_Yellow_17J/IMG_5789.JPG",
-    href: require("./watchModels/Novart/Novart_Tides_Yellow_17Jewels_1974"),
+    href: require("../watchModels/Novart/Novart_Tides_Yellow_17Jewels_1974"),
     specialCollectionItem: false,
   },
   "Novart Tides Blue Borealis Date 17 Jewels": {
@@ -2186,7 +2144,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     year: 1974,
     type: WatchTypeEnum.CASUAL,
     srcImage: "public/assets/Images/Novart/1974_Novart_U6380_Blue_Borealis/IMG_0623.JPG",
-    href: require("./watchModels/Novart/Novart_Tides_Blue_Borealis_17Jewels_1974"),
+    href: require("../watchModels/Novart/Novart_Tides_Blue_Borealis_17Jewels_1974"),
     specialCollectionItem: false,
   },
   "Novart Tides Blue": {
@@ -2195,7 +2153,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     year: 1974,
     type: WatchTypeEnum.CASUAL,
     srcImage: "public/assets/Images/Novart/1974_Novart_U6380_Tides_Blue/IMG_5889.JPG",
-    href: require("./watchModels/Novart/Novart_Tides_Blue_17Jewels_1974"),
+    href: require("../watchModels/Novart/Novart_Tides_Blue_17Jewels_1974"),
     specialCollectionItem: false,
   },
   "Novart Tides Blue 17 Jewels": {
@@ -2204,7 +2162,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     year: 1974,
     type: WatchTypeEnum.CASUAL,
     srcImage: "public/assets/Images/Novart/1974_Novart_Tides_Blue_Unitas_17J/IMG_5727.JPG",
-    href: require("./watchModels/Novart/Novart_Tides_Blue_17J_1974"),
+    href: require("../watchModels/Novart/Novart_Tides_Blue_17J_1974"),
     specialCollectionItem: false,
   },
   "Novart Tides Blue Date 17 Jewels": {
@@ -2213,7 +2171,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     year: 1974,
     type: WatchTypeEnum.CASUAL,
     srcImage: "public/assets/Images/Novart/1974_Novart_U6380_Blue/IMG_6228.JPG",
-    href: require("./watchModels/Novart/Novart_Tides_Blue_17_Jewels_1974"),
+    href: require("../watchModels/Novart/Novart_Tides_Blue_17_Jewels_1974"),
     specialCollectionItem: false,
   },
   "Novart Tides Golden Linen 17 Jewels": {
@@ -2222,7 +2180,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     year: 1974,
     type: WatchTypeEnum.CASUAL,
     srcImage: "public/assets/Images/Novart/1974_Novart_U6380_Golden_Linen/IMG_5933.JPG",
-    href: require("./watchModels/Novart/Novart_Tides_Golden_Linen_17Jewels_1974"),
+    href: require("../watchModels/Novart/Novart_Tides_Golden_Linen_17Jewels_1974"),
     specialCollectionItem: false,
   },
   "Novart Monza Desert Sand 17 Jewels": {
@@ -2231,7 +2189,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     year: 1974,
     type: WatchTypeEnum.CASUAL,
     srcImage: "public/assets/Images/Novart/1974_Novart_U6380_Desert_Sand/IMG_5816.JPG",
-    href: require("./watchModels/Novart/Novart_Monza_Desert_Sand_17Jewels_197"),
+    href: require("../watchModels/Novart/Novart_Monza_Desert_Sand_17Jewels_197"),
     specialCollectionItem: false,
   },
   "Novart Vitesse Red 17 Jewels": {
@@ -2240,7 +2198,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     year: 1974,
     type: WatchTypeEnum.CASUAL,
     srcImage: "public/assets/Images/Novart/1974_Novart_U6380_Red/IMG_6266.JPG",
-    href: require("./watchModels/Novart/Novart_Vitesse_Red_17Jewels_1974"),
+    href: require("../watchModels/Novart/Novart_Vitesse_Red_17Jewels_1974"),
     specialCollectionItem: false,
   },
   "Novart Vitesse Blue Date 17 Jewels": {
@@ -2249,7 +2207,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     year: 1974,
     type: WatchTypeEnum.CASUAL,
     srcImage: "public/assets/Images/Novart/1974_Novart_U6380_Monza_Blue/IMG_5989.JPG",
-    href: require("./watchModels/Novart/Novart_Vitesse_Blue_17Jewels_1974"),
+    href: require("../watchModels/Novart/Novart_Vitesse_Blue_17Jewels_1974"),
     specialCollectionItem: false,
   },
 
@@ -2259,7 +2217,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     year: 1974,
     type: WatchTypeEnum.CASUAL,
     srcImage: "public/assets/Images/Novart/1974_Novart_U6380_Monza_Red/IMG_6018.JPG",
-    href: require("./watchModels/Novart/Novart_Monza_Red_17Jewels_1974"),
+    href: require("../watchModels/Novart/Novart_Monza_Red_17Jewels_1974"),
     specialCollectionItem: false,
   },
 
@@ -2272,7 +2230,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
       "public/assets/Images/Tissot/1974_Tissot_Navigator_Automatic_Panda_Lemania_1341/IMG_4076.JPG",
     hoverSrc:
       "public/assets/Images/Tissot/1974_Tissot_Navigator_Automatic_Panda_Lemania_1341/IMG_4080.JPG",
-    href: require("./watchModels/Tissot/Tissot_Navigator_Panda_Automatic_Lemania_1341_1974"),
+    href: require("../watchModels/Tissot/Tissot_Navigator_Panda_Automatic_Lemania_1341_1974"),
     specialCollectionItem: true,
   },
   "Tissot Seastar Navigator Chronograph": {
@@ -2282,7 +2240,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     type: WatchTypeEnum.SPORTS,
     srcImage: "public/assets/Images/Tissot/1974_Tissot_Seastar_Navigator_Chrono/IMG_0103.JPG",
     hoverSrc: "public/assets/Images/Tissot/1974_Tissot_Seastar_Navigator_Chrono/IMG_0044.JPG",
-    href: require("./watchModels/Tissot/Tissot_Seastar_Navigator_Chrono_1974"),
+    href: require("../watchModels/Tissot/Tissot_Seastar_Navigator_Chrono_1974"),
     specialCollectionItem: true,
   },
   "Tissot Seastar Automatic": {
@@ -2292,7 +2250,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     type: WatchTypeEnum.DRESS,
     srcImage: "public/assets/Images/Tissot/1974_Tissot_Seastar_Automatic/IMG_4692.JPG",
     hoverSrc: "public/assets/Images/Tissot/1974_Tissot_Seastar_Automatic/IMG_4695.JPG",
-    href: require("./watchModels/Tissot/Tissot_Seastar_Automatic_1974"),
+    href: require("../watchModels/Tissot/Tissot_Seastar_Automatic_1974"),
     specialCollectionItem: false,
   },
   "Tissot Seastar Lobster Automatic": {
@@ -2302,9 +2260,31 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     type: WatchTypeEnum.CASUAL,
     srcImage: "public/assets/Images/Tissot/1974_Tissot_Seastar/IMG_1006.JPG",
     hoverSrc: "public/assets/Images/Tissot/1974_Tissot_Seastar/IMG_1010.JPG",
-    href: require("./watchModels/Tissot/Tissot_Seastar_Lobster_Automatic_1974"),
+    href: require("../watchModels/Tissot/Tissot_Seastar_Lobster_Automatic_1974"),
     specialCollectionItem: false,
   },
+  "Said Blue Linen Unitas 6325": {
+    brand: BrandsEnum.SAID,
+    legend: "Said Blue Linen Unitas 6325",
+    year: 1973,
+    type: WatchTypeEnum.CASUAL,
+    srcImage: "public/assets/Images/Said/1973_Said_Blue_Linen_U6325_17J/IMG_2623.JPG",
+    hoverSrc: "public/assets/Images/Said/1973_Said_Blue_Linen_U6325_17J/IMG_2640.JPG",
+    href: require("../watchModels/Said/Said_Blue_Linen_Unitas_6325_1973"),
+    specialCollectionItem: false,
+  },
+
+  "1972 Tecnal Green Abyss Duromat 7522": {
+    brand: BrandsEnum.TECNAL,
+    legend: "1972 Tecnal Green Abyss Duromat 7522",
+    year: 1972,
+    type: WatchTypeEnum.CASUAL,
+    srcImage: "public/assets/Images/Tecnal/1972_Tecnal_Green_abyss_7522_25J/IMG_2760.JPG",
+    hoverSrc: "public/assets/Images/Tecnal/1972_Tecnal_Green_abyss_7522_25J/IMG_2747.JPG",
+    href: require("../watchModels/Tecnal/Tecnal_Green_Abyss_Duromat_7522_1972"),
+    specialCollectionItem: false,
+  },
+
   "Utina Sunburst FE 233 17 Jewels": {
     brand: BrandsEnum.UTINA,
     legend: "Utina Sunburst FE 233 17 Jewels",
@@ -2312,7 +2292,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     type: WatchTypeEnum.CASUAL,
     srcImage: "public/assets/Images/Utina/1972_Utina_Sunburst_FE233/IMG_8090.JPG",
     hoverSrc: "public/assets/Images/Utina/1972_Utina_Sunburst_FE233/IMG_8093.JPG",
-    href: require("./watchModels/Utina/Utina_Sunburst_FE233_1972"),
+    href: require("../watchModels/Utina/Utina_Sunburst_FE233_1972"),
     specialCollectionItem: false,
   },
   "Tissot Seastar T.12 Chronograph Lemania 1281": {
@@ -2324,7 +2304,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
       "public/assets/Images/Tissot/1972_Tissot_Navigator_Seastar_T12_Lemania_1281/IMG_6459.JPG",
     hoverSrc:
       "public/assets/Images/Tissot/1972_Tissot_Navigator_Seastar_T12_Lemania_1281/IMG_6422.JPG",
-    href: require("./watchModels/Tissot/Tissot_Seastar_T12_Chrono_Lemania_1972"),
+    href: require("../watchModels/Tissot/Tissot_Seastar_T12_Chrono_Lemania_1972"),
     specialCollectionItem: true,
   },
 
@@ -2335,7 +2315,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     type: WatchTypeEnum.SPORTS,
     srcImage: "public/assets/Images/Tissot/1971_Tissot_PR_516_GL/IMG_5020.JPG",
     hoverSrc: "public/assets/Images/Tissot/1971_Tissot_PR_516_GL/IMG_5029.JPG",
-    href: require("./watchModels/Tissot/Tissot_Seastar_PR516_GL_1971"),
+    href: require("../watchModels/Tissot/Tissot_Seastar_PR516_GL_1971"),
     specialCollectionItem: false,
   },
   "Tissot PR 516 GL Cal. 784": {
@@ -2345,7 +2325,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     type: WatchTypeEnum.SPORTS,
     srcImage: "public/assets/Images/Tissot/1971_Tissot_PR_516_GL_784-2/IMG_8862.JPG",
     hoverSrc: "public/assets/Images/Tissot/1971_Tissot_PR_516_GL_784-2/IMG_8863.JPG",
-    href: require("./watchModels/Tissot/Tissot_Seastar_PR516_GL_784_1971"),
+    href: require("../watchModels/Tissot/Tissot_Seastar_PR516_GL_784_1971"),
     specialCollectionItem: false,
   },
   "Kelton M24 Sub-Dive": {
@@ -2354,7 +2334,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     year: 1970,
     type: WatchTypeEnum.DIVE,
     srcImage: "public/assets/Images/Kelton/1970_Kelton_M24/IMG_1946.JPG",
-    href: require("./watchModels/Timex/Kelton_M24_Sub_Dive_1970"),
+    href: require("../watchModels/Timex/Kelton_M24_Sub_Dive_1970"),
     specialCollectionItem: false,
   },
   "Titus Tuning Fork F300Hz": {
@@ -2364,7 +2344,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     type: WatchTypeEnum.CASUAL,
     srcImage: "public/assets/Images/Titus/1970_Titus_Tuning_Fork/IMG_1254.JPG",
     hoverSrc: "public/assets/Images/Titus/1970_Titus_Tuning_Fork/IMG_1254.JPG",
-    href: require("./watchModels/Titus/Titus_Tuning_Fork_F300Hz_1970"),
+    href: require("../watchModels/Titus/Titus_Tuning_Fork_F300Hz_1970"),
     specialCollectionItem: false,
   },
   "Corticima Dress 17 Jewels": {
@@ -2373,7 +2353,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     year: 1970,
     type: WatchTypeEnum.CASUAL,
     srcImage: "public/assets/Images/Corticima/1970_Corticima_Dress_17_jewels/IMG_1849.JPG",
-    href: require("./watchModels/Corticima/Corticima_Dress_17Jewels_1970"),
+    href: require("../watchModels/Corticima/Corticima_Dress_17Jewels_1970"),
     specialCollectionItem: false,
   },
   "Tissot Seastar Eletronic": {
@@ -2383,7 +2363,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     type: WatchTypeEnum.DRESS,
     srcImage: "public/assets/Images/Tissot/1970_Tissot_Seastar_Eletronic/IMG_2236.JPG",
     hoverSrc: "public/assets/Images/Tissot/1970_Tissot_Seastar_Eletronic/IMG_2233.JPG",
-    href: require("./watchModels/Tissot/Tissot_Seastar_Eletronic_1970"),
+    href: require("../watchModels/Tissot/Tissot_Seastar_Eletronic_1970"),
     specialCollectionItem: false,
   },
   "Tissot PR 516": {
@@ -2393,7 +2373,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     type: WatchTypeEnum.CASUAL,
     srcImage: "public/assets/Images/Tissot/1970_Tissot_PR_516/IMG_1635.JPG",
     hoverSrc: "public/assets/Images/Tissot/1970_Tissot_PR_516/IMG_1588.JPG",
-    href: require("./watchModels/Tissot/Tissot_Seastar_PR516_1970"),
+    href: require("../watchModels/Tissot/Tissot_Seastar_PR516_1970"),
     specialCollectionItem: false,
   },
   "Omega Geneve Cal. 565 (166.041)": {
@@ -2403,7 +2383,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     type: WatchTypeEnum.CASUAL,
     srcImage: "public/assets/Images/Omega/1969_Omega_Geneve_166_041__565/IMG_5330.JPG",
     hoverSrc: "public/assets/Images/Omega/1969_Omega_Geneve_166_041__565/IMG_5357.JPG",
-    href: require("./watchModels/Omega/Omega_Geneve_Cal_565_166_041__1969"),
+    href: require("../watchModels/Omega/Omega_Geneve_Cal_565_166_041__1969"),
     specialCollectionItem: false,
   },
   "Provita Automatic": {
@@ -2412,7 +2392,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     year: 1969,
     type: WatchTypeEnum.CASUAL,
     srcImage: "public/assets/Images/Provita/1969_Provita_Automatic/IMG_0456.JPG",
-    href: require("./watchModels/Provita/Provita_Automatic_25J_1969"),
+    href: require("../watchModels/Provita/Provita_Automatic_25J_1969"),
     specialCollectionItem: false,
   },
   "Omega Constellation COSC (153.029 - Linen Dial)": {
@@ -2422,7 +2402,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     type: WatchTypeEnum.SPORTS,
     srcImage: "public/assets/Images/Omega/1967_Omega_Constellation_COSC_153_020/IMG_7437.JPG",
     hoverSrc: "public/assets/Images/Omega/1967_Omega_Constellation_COSC_153_020/IMG_7469.JPG",
-    href: require("./watchModels/Omega/Omega_Constellation_COSC_153_020_1967"),
+    href: require("../watchModels/Omega/Omega_Constellation_COSC_153_020_1967"),
     specialCollectionItem: false,
   },
   "Utina Enamel Dial FE 233 17 Jewels": {
@@ -2432,7 +2412,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     type: WatchTypeEnum.CASUAL,
     srcImage: "public/assets/Images/Utina/1968_Utina_Enamel_dial_FE233/IMG_8050.JPG",
     hoverSrc: "public/assets/Images/Utina/1968_Utina_Enamel_dial_FE233/IMG_8048.JPG",
-    href: require("./watchModels/Utina/Utina_Enamel_Dial_FE233_1968"),
+    href: require("../watchModels/Utina/Utina_Enamel_Dial_FE233_1968"),
     specialCollectionItem: false,
   },
   "Tissot PR-516 GL": {
@@ -2442,7 +2422,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     type: WatchTypeEnum.SPORTS,
     srcImage: "public/assets/Images/Tissot/1968_Tissot_Seastar_PR516_GL/IMG_4177.JPG",
     hoverSrc: "public/assets/Images/Tissot/1968_Tissot_Seastar_PR516_GL/IMG_4188.JPG",
-    href: require("./watchModels/Tissot/Tissot_Seastar_PR516_GL_1968"),
+    href: require("../watchModels/Tissot/Tissot_Seastar_PR516_GL_1968"),
     specialCollectionItem: false,
   },
   "Tissot Seastar PR 516": {
@@ -2452,7 +2432,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     type: WatchTypeEnum.CASUAL,
     srcImage: "public/assets/Images/Tissot/1967_Tissot_PR_516/IMG_0576.JPG",
     hoverSrc: "public/assets/Images/Tissot/1967_Tissot_PR_516/IMG_0584.JPG",
-    href: require("./watchModels/Tissot/Tissot_Seastar_PR516_1967"),
+    href: require("../watchModels/Tissot/Tissot_Seastar_PR516_1967"),
     specialCollectionItem: false,
   },
   "Cauny Prima Calendario": {
@@ -2461,7 +2441,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     year: 1967,
     type: WatchTypeEnum.CASUAL,
     srcImage: "public/assets/Images/Cauny/1967_CaunyPrimaCalendario/IMG_1818.JPG",
-    href: require("./watchModels/Cauny/Cauny_Prima_Calendario_17Rubis_1967"),
+    href: require("../watchModels/Cauny/Cauny_Prima_Calendario_17Rubis_1967"),
     specialCollectionItem: false,
   },
   "Cauny Prima Calendario 17 Jewels": {
@@ -2470,9 +2450,21 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     year: 1967,
     type: WatchTypeEnum.CASUAL,
     srcImage: "public/assets/Images/Cauny/1967_Cauny_Prima_Calendario/IMG_1760.JPG",
-    href: require("./watchModels/Cauny/Cauny_Prima_Calendario_17_Jewels_1967"),
+    href: require("../watchModels/Cauny/Cauny_Prima_Calendario_17_Jewels_1967"),
     specialCollectionItem: false,
   },
+
+  "Jomel Antimagnetic Lorsa 238": {
+    brand: BrandsEnum.JOMEL,
+    legend: "Jomel Antimagnetic Lorsa 238",
+    year: 1965,
+    type: WatchTypeEnum.CASUAL,
+    srcImage: "public/assets/Images/Jomel/1965_Jomel_Lorsa_238_17J/IMG_2691.JPG",
+    hoverSrc: "public/assets/Images/Jomel/1965_Jomel_Lorsa_238_17J/IMG_2683.JPG",
+    href: require("../watchModels/Jomel/Jomel_Antimagnetic_Lorsa_238_1965"),
+    specialCollectionItem: false,
+  },
+
   "Certina DS Turtle Automatic 27 Jewels": {
     brand: BrandsEnum.CERTINA,
     legend: "Certina DS Turtle Automatic 27 Jewels",
@@ -2480,7 +2472,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     type: WatchTypeEnum.CASUAL,
     srcImage:
       "public/assets/Images/Certina/1965_Certina_DS_Automatic_25_651_27_jewels/IMG_7158.JPG",
-    href: require("./watchModels/Certina/Certina_DS_Automatic_27_jewels_1965"),
+    href: require("../watchModels/Certina/Certina_DS_Automatic_27_jewels_1965"),
     specialCollectionItem: false,
   },
   "Barrett Gran Turismo ETA 2472": {
@@ -2489,7 +2481,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     year: 1965,
     type: WatchTypeEnum.CASUAL,
     srcImage: "public/assets/Images/Barrett/1965_Barrett_Gran_Turismo_eta_2472/IMG_6171.JPG",
-    href: require("./watchModels/Barrett/Barrett_Gran_Turismo_ETA_2472_1965"),
+    href: require("../watchModels/Barrett/Barrett_Gran_Turismo_ETA_2472_1965"),
     specialCollectionItem: false,
   },
   "Cauny Prima Swiss 17 Rubis": {
@@ -2498,7 +2490,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     year: 1965,
     type: WatchTypeEnum.CASUAL,
     srcImage: "public/assets/Images/Cauny/1965_CaunyPrima/IMG_2104.JPG",
-    href: require("./watchModels/Cauny/Cauny_Prima_17Rubis_1965"),
+    href: require("../watchModels/Cauny/Cauny_Prima_17Rubis_1965"),
     specialCollectionItem: false,
   },
   "Fontaine ETA 2472 Automatic": {
@@ -2507,7 +2499,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     year: 1965,
     type: WatchTypeEnum.DRESS,
     srcImage: "public/assets/Images/Fontaine/1965_Fontaine_Auto/IMG_4704.JPG",
-    href: require("./watchModels/Fontaine/Fontaine_ETA2472_Auto_1965"),
+    href: require("../watchModels/Fontaine/Fontaine_ETA2472_Auto_1965"),
     specialCollectionItem: false,
   },
   "Cauny Apollon Calendario 17 Rubis": {
@@ -2516,7 +2508,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     year: 1965,
     type: WatchTypeEnum.CASUAL,
     srcImage: "public/assets/Images/Cauny/1965_Cauny_Apollon_Calendario/IMG_1902.JPG",
-    href: require("./watchModels/Cauny/Cauny_Apollon_17_jewels_1965"),
+    href: require("../watchModels/Cauny/Cauny_Apollon_17_jewels_1965"),
     specialCollectionItem: false,
   },
   "Festina Automatic ETA 2452": {
@@ -2525,7 +2517,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     year: 1965,
     type: WatchTypeEnum.CASUAL,
     srcImage: "public/assets/Images/Festina/1965_Festina_Automatic/IMG_2451.JPG",
-    href: require("./watchModels/Festina/Festina_Automatic_ETA_2452_1965"),
+    href: require("../watchModels/Festina/Festina_Automatic_ETA_2452_1965"),
     specialCollectionItem: false,
   },
   "Tissot Seastar PR 516 Automatic": {
@@ -2535,7 +2527,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     type: WatchTypeEnum.CASUAL,
     srcImage: "public/assets/Images/Tissot/1965_Tissot_PR_516_Automatic/IMG_7767.JPG",
     hoverSrc: "public/assets/Images/Tissot/1965_Tissot_PR_516_Automatic/IMG_7781.JPG",
-    href: require("./watchModels/Tissot/Tissot_Seastar_PR516_Auto_1965"),
+    href: require("../watchModels/Tissot/Tissot_Seastar_PR516_Auto_1965"),
     specialCollectionItem: false,
   },
   "Belex Precision 17 Jewels": {
@@ -2544,7 +2536,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     year: 1965,
     type: WatchTypeEnum.CASUAL,
     srcImage: "public/assets/Images/Belex/1965_Belex_17_Jewels/IMG_2443.JPG",
-    href: require("./watchModels/Belex/Belex_Precision_17Jewels_1965"),
+    href: require("../watchModels/Belex/Belex_Precision_17Jewels_1965"),
     specialCollectionItem: false,
   },
   "Tissot Seastar Visodate T.12 Automatic": {
@@ -2554,7 +2546,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     type: WatchTypeEnum.DRESS,
     srcImage: "public/assets/Images/Tissot/1964_Tissot_T12_Automatic/IMG_1240.JPG",
     hoverSrc: "public/assets/Images/Tissot/1964_Tissot_T12_Automatic/IMG_1210.JPG",
-    href: require("./watchModels/Tissot/Tissot_Seastar_T12_Auto_1964"),
+    href: require("../watchModels/Tissot/Tissot_Seastar_T12_Auto_1964"),
     specialCollectionItem: false,
   },
   "Tissot Seastar Seven": {
@@ -2564,7 +2556,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     type: WatchTypeEnum.DRESS,
     srcImage: "public/assets/Images/Tissot/1963_Tissot_Seastar_Seven/IMG_7956.JPG",
     hoverSrc: "public/assets/Images/Tissot/1963_Tissot_Seastar_Seven/IMG_7960.JPG",
-    href: require("./watchModels/Tissot/Tissot_Seastar_Seven_1963"),
+    href: require("../watchModels/Tissot/Tissot_Seastar_Seven_1963"),
     specialCollectionItem: false,
   },
   "Omega Geneve Honeycomb Cal. 268": {
@@ -2574,7 +2566,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     type: WatchTypeEnum.DRESS,
     srcImage: "public/assets/Images/Omega/1961_Omega_Geneve_Cal_268/IMG_6636.JPG",
     hoverSrc: "public/assets/Images/Omega/1961_Omega_Geneve_Cal_268/IMG_6639.JPG",
-    href: require("./watchModels/Omega/Omega_Geneve_Cal_268_1961"),
+    href: require("../watchModels/Omega/Omega_Geneve_Cal_268_1961"),
     specialCollectionItem: false,
   },
   "Omega Seamaster Cross-hair Cal. 610": {
@@ -2584,7 +2576,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     type: WatchTypeEnum.CASUAL,
     srcImage: "public/assets/Images/Omega/1960_Omega_14740_CrossHaird_610/IMG_4270.JPG",
     hoverSrc: "public/assets/Images/Omega/1960_Omega_14740_CrossHaird_610/IMG_4282.JPG",
-    href: require("./watchModels/Omega/Omega_Seamaster_cross_hair_14740_Cal_610_1960"),
+    href: require("../watchModels/Omega/Omega_Seamaster_cross_hair_14740_Cal_610_1960"),
     specialCollectionItem: false,
   },
 
@@ -2595,7 +2587,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     type: WatchTypeEnum.DRESS,
     srcImage: "public/assets/Images/Tissot/1960_Tissot_Nuevo_Horizonte/IMG_1067.JPG",
     hoverSrc: "public/assets/Images/Tissot/1960_Tissot_Nuevo_Horizonte/IMG_1105.JPG",
-    href: require("./watchModels/Tissot/Tissot_Nuevo_Horizonte_1960"),
+    href: require("../watchModels/Tissot/Tissot_Nuevo_Horizonte_1960"),
     specialCollectionItem: false,
   },
   "Lanco Cal. 1305": {
@@ -2604,7 +2596,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     year: 1960,
     type: WatchTypeEnum.DRESS,
     srcImage: "public/assets/Images/Lanco/1960_Lanco/IMG_2467.JPG",
-    href: require("./watchModels/Lanco/Lanco_Cal1305_1960"),
+    href: require("../watchModels/Lanco/Lanco_Cal1305_1960"),
     specialCollectionItem: false,
   },
   "Bergeon Incabloc FE233/69": {
@@ -2613,7 +2605,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     year: 1960,
     type: WatchTypeEnum.CASUAL,
     srcImage: "public/assets/Images/Bergeon/1960_Bergeon_Incabloc_FE_233/IMG_3926.JPG",
-    href: require("./watchModels/Bergeon/Bergeon_Incabloc_1960"),
+    href: require("../watchModels/Bergeon/Bergeon_Incabloc_1960"),
     specialCollectionItem: false,
   },
   "Tissot Visodate Automatic": {
@@ -2623,7 +2615,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     type: WatchTypeEnum.DRESS,
     srcImage: "public/assets/Images/Tissot/1958_Tissot_Visodate/IMG_0426.JPG",
     hoverSrc: "public/assets/Images/Tissot/1958_Tissot_Visodate/IMG_0440.JPG",
-    href: require("./watchModels/Tissot/Tissot_Visodate_Automatic_1958"),
+    href: require("../watchModels/Tissot/Tissot_Visodate_Automatic_1958"),
     specialCollectionItem: false,
   },
   "Tissot Nuevo Horizonte Cross-Hair": {
@@ -2633,7 +2625,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     type: WatchTypeEnum.DRESS,
     srcImage: "public/assets/Images/Tissot/1958_Tissot_Nuevo_Horizonte_27B/IMG_6229.JPG",
     hoverSrc: "public/assets/Images/Tissot/1958_Tissot_Nuevo_Horizonte_27B/IMG_6237.JPG",
-    href: require("./watchModels/Tissot/Tissot_Nuevo_Horizonte_1958"),
+    href: require("../watchModels/Tissot/Tissot_Nuevo_Horizonte_1958"),
     specialCollectionItem: false,
   },
   "Tissot Visodate": {
@@ -2643,7 +2635,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     type: WatchTypeEnum.DRESS,
     srcImage: "public/assets/Images/Tissot/1957_Tissot_Visodate/IMG_5824.JPG",
     hoverSrc: "public/assets/Images/Tissot/1957_Tissot_Visodate/IMG_5850.JPG",
-    href: require("./watchModels/Tissot/Tissot_Visodate_1957"),
+    href: require("../watchModels/Tissot/Tissot_Visodate_1957"),
     specialCollectionItem: true,
   },
   "Cauny Swiss Apollon 17 Rubis": {
@@ -2652,7 +2644,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     year: 1957,
     type: WatchTypeEnum.CASUAL,
     srcImage: "public/assets/Images/Cauny/1957_CaunyApollon/IMG_1589.JPG",
-    href: require("./watchModels/Cauny/Cauny_Apollon_17Rubis_1957"),
+    href: require("../watchModels/Cauny/Cauny_Apollon_17Rubis_1957"),
     specialCollectionItem: false,
   },
   "Fortis 18K Gold 21 Jewels": {
@@ -2662,7 +2654,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     type: WatchTypeEnum.CASUAL,
     srcImage: "public/assets/Images/Fortis/1957_Fortis_21_Jewels/IMG_2560.JPG",
     hoverSrc: "public/assets/Images/Fortis/1957_Fortis_21_Jewels/IMG_2555.JPG",
-    href: require("./watchModels/Fortis/Fortis_Mecanical_17Rubis_1955"),
+    href: require("../watchModels/Fortis/Fortis_Mecanical_17Rubis_1955"),
     specialCollectionItem: false,
   },
 
@@ -2673,7 +2665,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     type: WatchTypeEnum.DRESS,
     srcImage: "public/assets/Images/Omega/1956_Omega_Seamaster_2891_Cal_267/IMG_3769.JPG",
     hoverSrc: "public/assets/Images/Omega/1956_Omega_Seamaster_2891_Cal_267/IMG_3772.JPG",
-    href: require("./watchModels/Omega/Omega_Seamaster_Cal_267_1956"),
+    href: require("../watchModels/Omega/Omega_Seamaster_Cal_267_1956"),
     specialCollectionItem: false,
   },
   "Cauny Prima de Luxe": {
@@ -2682,7 +2674,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     year: 1956,
     type: WatchTypeEnum.DRESS,
     srcImage: "public/assets/Images/Cauny/1956_CaunyDeLuxe/IMG_2291.JPG",
-    href: require("./watchModels/Cauny/Cauny_Prima_DeLuxe_1956"),
+    href: require("../watchModels/Cauny/Cauny_Prima_DeLuxe_1956"),
     specialCollectionItem: false,
   },
   "Helma Cal. AS 1130": {
@@ -2691,7 +2683,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     year: 1955,
     type: WatchTypeEnum.CASUAL,
     srcImage: "public/assets/Images/Helma/1955_Helma AS1130/IMG_1677.JPG",
-    href: require("./watchModels/Helma/Helma_AS1130_1955"),
+    href: require("../watchModels/Helma/Helma_AS1130_1955"),
     specialCollectionItem: false,
   },
   "Relide Militare 17 Jewels": {
@@ -2700,7 +2692,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     year: 1955,
     type: WatchTypeEnum.CASUAL,
     srcImage: "public/assets/Images/Relide/1955_Relide_Militare/IMG_1030.JPG",
-    href: require("./watchModels/Relide/Relide_Militare_1955"),
+    href: require("../watchModels/Relide/Relide_Militare_1955"),
     specialCollectionItem: false,
   },
   "Hermes Landerom 51 Chronograph": {
@@ -2709,7 +2701,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     year: 1955,
     type: WatchTypeEnum.DRESS,
     srcImage: "public/assets/Images/Hermes/1955_Hermes_Chronograph/IMG_1904.JPG",
-    href: require("./watchModels/Hermes/Hermes_Landeron_51_Chrono_1955"),
+    href: require("../watchModels/Hermes/Hermes_Landeron_51_Chrono_1955"),
     specialCollectionItem: false,
   },
   "Tissot Visodate Mechanical": {
@@ -2719,7 +2711,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     type: WatchTypeEnum.DRESS,
     srcImage: "public/assets/Images/Tissot/1954_Tissot_Visodate/IMG_3355.JPG",
     hoverSrc: "public/assets/Images/Tissot/1954_Tissot_Visodate/IMG_3376.JPG",
-    href: require("./watchModels/Tissot/Tissot_Visodate_1955"),
+    href: require("../watchModels/Tissot/Tissot_Visodate_1955"),
     specialCollectionItem: false,
   },
   "Omega Trésor Honeycomb Cal. 266 18K Gold": {
@@ -2729,7 +2721,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     type: WatchTypeEnum.CASUAL,
     srcImage: "public/assets/Images/Omega/1952_Omega_Tresor_Honeycomb_266/IMG_9199.JPG",
     hoverSrc: "public/assets/Images/Omega/1952_Omega_Tresor_Honeycomb_266/IMG_9192.JPG",
-    href: require("./watchModels/Omega/Omega_Trésor_Cal_266_1952"),
+    href: require("../watchModels/Omega/Omega_Trésor_Cal_266_1952"),
     specialCollectionItem: true,
   },
   "Omega StayBrite Honeycomb": {
@@ -2739,7 +2731,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     type: WatchTypeEnum.CASUAL,
     srcImage: "public/assets/Images/Omega/1952_Omega_Staybrite_410/IMG_0034.JPG",
     hoverSrc: "public/assets/Images/Omega/1952_Omega_Staybrite_410/IMG_0048.JPG",
-    href: require("./watchModels/Omega/Omega_StayBrite_Honeycomb_1952"),
+    href: require("../watchModels/Omega/Omega_StayBrite_Honeycomb_1952"),
     specialCollectionItem: false,
   },
   "Cuervo y Sobrinos Historiador Habana": {
@@ -2751,7 +2743,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
       "public/assets/Images/Cuervo_y_Sobrinos/1950_Cuervo_y_Sobrinos_Habana_Landeron/IMG_2691.JPG",
     hoverSrc:
       "public/assets/Images/Cuervo_y_Sobrinos/1950_Cuervo_y_Sobrinos_Habana_Landeron/IMG_2684.JPG",
-    href: require("./watchModels/Cuervo_y_Sobrinos/Cuervo_y_Sobrinos_Hanava_Landeron_159_1950"),
+    href: require("../watchModels/Cuervo_y_Sobrinos/Cuervo_y_Sobrinos_Hanava_Landeron_159_1950"),
     specialCollectionItem: true,
   },
   "Admes Automatic ETA 1246": {
@@ -2760,7 +2752,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     year: 1950,
     type: WatchTypeEnum.DRESS,
     srcImage: "public/assets/Images/Admes/1950_Admes_Automatic/IMG_1443.JPG",
-    href: require("./watchModels/Admes/Admes_ETA1246_Automatic_1950"),
+    href: require("../watchModels/Admes/Admes_ETA1246_Automatic_1950"),
     specialCollectionItem: false,
   },
   "Certina Dress 15 Jewels": {
@@ -2769,7 +2761,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     year: 1950,
     type: WatchTypeEnum.DRESS,
     srcImage: "public/assets/Images/Certina/1950_Certina_Mechanical_331/IMG_0960.JPG",
-    href: require("./watchModels/Certina/Certina_Dress_331_15_jewels_1950"),
+    href: require("../watchModels/Certina/Certina_Dress_331_15_jewels_1950"),
     specialCollectionItem: false,
   },
   "Titus Geneve Chronograph 18K Gold Landeron 48": {
@@ -2779,7 +2771,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     type: WatchTypeEnum.DRESS,
     srcImage: "public/assets/Images/Titus/1950_Titus_Chronograph_18K_L48/IMG_8093.JPG",
     hoverSrc: "public/assets/Images/Titus/1950_Titus_Chronograph_18K_L48/IMG_8089.JPG",
-    href: require("./watchModels/Titus/Titus_Chronograph_L48_1950"),
+    href: require("../watchModels/Titus/Titus_Chronograph_L48_1950"),
     specialCollectionItem: false,
   },
   "Omodox Precision 17 Rubis": {
@@ -2788,7 +2780,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     year: 1950,
     type: WatchTypeEnum.CASUAL,
     srcImage: "public/assets/Images/Omodox/1950_Omodox_Precision/IMG_2378.JPG",
-    href: require("./watchModels/Omodox/Omodox_Precision_17Rubis_1950"),
+    href: require("../watchModels/Omodox/Omodox_Precision_17Rubis_1950"),
     specialCollectionItem: false,
   },
   "Rone Calendar Pointer": {
@@ -2797,7 +2789,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     year: 1950,
     type: WatchTypeEnum.CASUAL,
     srcImage: "public/assets/Images/Rone/1950_Rone_Calendar_Pointer/IMG_3537.JPG",
-    href: require("./watchModels/Rone/Rone_Calendar_Pointer_1950"),
+    href: require("../watchModels/Rone/Rone_Calendar_Pointer_1950"),
     specialCollectionItem: false,
   },
   "Tourist Ancre 17 Rubis": {
@@ -2806,7 +2798,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     year: 1950,
     type: WatchTypeEnum.CASUAL,
     srcImage: "public/assets/Images/Tourist/1950_Tourist/IMG_2545.JPG",
-    href: require("./watchModels/Tourist/Tourist_Ancre_17Rubis_1950"),
+    href: require("../watchModels/Tourist/Tourist_Ancre_17Rubis_1950"),
     specialCollectionItem: false,
   },
   "Eberhard Extra-Fort 18K Gold": {
@@ -2816,7 +2808,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     type: WatchTypeEnum.DRESS,
     srcImage: "public/assets/Images/Eberhard/1950_Eberhard_Extra_Fort/IMG_7350.JPG",
     hoverSrc: "public/assets/Images/Eberhard/1950_Eberhard_Extra_Fort/IMG_7333.JPG",
-    href: require("./watchModels/Eberhard/Eberhard_Extra_Fort_1950"),
+    href: require("../watchModels/Eberhard/Eberhard_Extra_Fort_1950"),
     specialCollectionItem: true,
   },
   "Omega Seamaster Jumbo Cal. 265": {
@@ -2826,7 +2818,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     type: WatchTypeEnum.DRESS,
     srcImage: "public/assets/Images/Omega/1950_Omega_Seamaster_Jumbo_CK2544/IMG_5768.JPG",
     hoverSrc: "public/assets/Images/Omega/1950_Omega_Seamaster_Jumbo_CK2544/IMG_5766.JPG",
-    href: require("./watchModels/Omega/Omega_Seamaster_Jumbo_Cal_265_1950"),
+    href: require("../watchModels/Omega/Omega_Seamaster_Jumbo_Cal_265_1950"),
     specialCollectionItem: true,
   },
 
@@ -2837,7 +2829,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     type: WatchTypeEnum.CASUAL,
     srcImage: "public/assets/Images/Fortis/1947_Fortis_Pilot_Chronograph_Valjoux_77/IMG_6912.JPG",
     hoverSrc: "public/assets/Images/Fortis/1947_Fortis_Pilot_Chronograph_Valjoux_77/IMG_6914.JPG",
-    href: require("./watchModels/Fortis/Fortis_Pilot_Chronograph_17J_1947"),
+    href: require("../watchModels/Fortis/Fortis_Pilot_Chronograph_17J_1947"),
     specialCollectionItem: false,
   },
   "Signo Small Seconds - AS 1130": {
@@ -2846,7 +2838,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     year: 1947,
     type: WatchTypeEnum.CASUAL,
     srcImage: "public/assets/Images/Signo/1947_Signo_Small_Seconds/IMG_0653.JPG",
-    href: require("./watchModels/Signo/Signo_Small_Seconds_1947"),
+    href: require("../watchModels/Signo/Signo_Small_Seconds_1947"),
     specialCollectionItem: false,
   },
   "Tissot Antimagnetic White Enamel 27.3": {
@@ -2856,7 +2848,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     type: WatchTypeEnum.DRESS,
     srcImage: "public/assets/Images/Tissot/1947_Tissot_Antimagnetic_27_3/IMG_3203.JPG",
     hoverSrc: "public/assets/Images/Tissot/1947_Tissot_Antimagnetic_27_3/IMG_3207.JPG",
-    href: require("./watchModels/Tissot/Tissot_Antimagnetic_1947_white"),
+    href: require("../watchModels/Tissot/Tissot_Antimagnetic_1947_white"),
     specialCollectionItem: false,
   },
 
@@ -2867,7 +2859,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     type: WatchTypeEnum.DRESS,
     srcImage: "public/assets/Images/Tissot/1946_Tissot_Antimagnetic/IMG_1032.JPG",
     hoverSrc: "public/assets/Images/Tissot/1946_Tissot_Antimagnetic/IMG_1004.JPG",
-    href: require("./watchModels/Tissot/Tissot_Antimagnetic_1946"),
+    href: require("../watchModels/Tissot/Tissot_Antimagnetic_1946"),
     specialCollectionItem: false,
   },
   "Olma Imperius AS 1130": {
@@ -2876,7 +2868,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     year: 1946,
     type: WatchTypeEnum.DRESS,
     srcImage: "public/assets/Images/Olma/1946_Olma_Imperius_1130/IMG_0823.JPG",
-    href: require("./watchModels/Olma/Olma_Imperius_1130_1946"),
+    href: require("../watchModels/Olma/Olma_Imperius_1130_1946"),
     specialCollectionItem: false,
   },
   "Omega 2504-5 Cal. 30T2": {
@@ -2886,7 +2878,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     type: WatchTypeEnum.DRESS,
     srcImage: "public/assets/Images/Omega/1946_Omega_2404_5_30T2/IMG_0873.JPG",
     hoverSrc: "public/assets/Images/Omega/1946_Omega_2404_5_30T2/IMG_0777.JPG",
-    href: require("./watchModels/Omega/Omega_166041_Cal_30T2_1946"),
+    href: require("../watchModels/Omega/Omega_166041_Cal_30T2_1946"),
     specialCollectionItem: false,
   },
   "Zenith Militare Cal 106 17 Jewels": {
@@ -2896,7 +2888,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     type: WatchTypeEnum.CASUAL,
     srcImage: "public/assets/Images/Zenith/1945_Zenith_Militare_Cal_106/IMG_6145.JPG",
     hoverSrc: "public/assets/Images/Zenith/1945_Zenith_Militare_Cal_106/IMG_6150.JPG",
-    href: require("./watchModels/Zenith/Zenith_Militare_Cal_106_1945"),
+    href: require("../watchModels/Zenith/Zenith_Militare_Cal_106_1945"),
     specialCollectionItem: false,
   },
   "Orfina Pilot Chronograph Venus 170": {
@@ -2908,7 +2900,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
 
     hoverSrc: "public/assets/Images/Orfina/1945_Orfina_Pilot_Chronograph_Venus_170/IMG_8402.JPG",
 
-    href: require("./watchModels/Orfina/Orfina_Pilot_Chronograph_17J_1945"),
+    href: require("../watchModels/Orfina/Orfina_Pilot_Chronograph_17J_1945"),
     specialCollectionItem: true,
   },
   "Zenith Pilot P12": {
@@ -2918,7 +2910,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     type: WatchTypeEnum.DRESS,
     srcImage: "public/assets/Images/Zenith/1945_Zenith_Pilot_P12_4_50/IMG_4676.JPG",
     hoverSrc: "public/assets/Images/Zenith/1945_Zenith_Pilot_P12_4_50/IMG_4674.JPG",
-    href: require("./watchModels/Zenith/Zenith_Pilot_P12_1945"),
+    href: require("../watchModels/Zenith/Zenith_Pilot_P12_1945"),
     specialCollectionItem: false,
   },
   "Doxa Antimagnetic": {
@@ -2927,7 +2919,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     year: 1945,
     type: WatchTypeEnum.CASUAL,
     srcImage: "public/assets/Images/Doxa/1945_Doxa_Antimagnetic/IMG_2601.JPG",
-    href: require("./watchModels/Doxa/Doxa_Antimagnetic_1942"),
+    href: require("../watchModels/Doxa/Doxa_Antimagnetic_1942"),
     specialCollectionItem: false,
   },
   "Argus Tuxedo Militare Cal. AS1130": {
@@ -2936,7 +2928,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     year: 1945,
     type: WatchTypeEnum.CASUAL,
     srcImage: "public/assets/Images/Argus/1945_Argus_Tuxedo_Militare_AS_1130/IMG_0557.JPG",
-    href: require("./watchModels/Argus/Argus_Tuxedo_Militare_1945"),
+    href: require("../watchModels/Argus/Argus_Tuxedo_Militare_1945"),
     specialCollectionItem: false,
   },
   "Natalis WWII German Watch": {
@@ -2945,7 +2937,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     year: 1943,
     type: WatchTypeEnum.CASUAL,
     srcImage: "public/assets/Images/Natalis/1943_Natalis_German/IMG_2548.JPG",
-    href: require("./watchModels/Natalis/Natalis_AS1130_1943"),
+    href: require("../watchModels/Natalis/Natalis_AS1130_1943"),
     specialCollectionItem: false,
   },
   "Tissot Antimagnetic Tuxedo": {
@@ -2955,7 +2947,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     type: WatchTypeEnum.CASUAL,
     srcImage: "public/assets/Images/Tissot/1943_Tissot_Tuxedo_27B1/IMG_1163.JPG",
     hoverSrc: "public/assets/Images/Tissot/1943_Tissot_Tuxedo_27B1/IMG_1202.JPG",
-    href: require("./watchModels/Tissot/Tissot_Antimagnetic_Tuxedo_1943"),
+    href: require("../watchModels/Tissot/Tissot_Antimagnetic_Tuxedo_1943"),
     specialCollectionItem: true,
   },
   "Universal Geneve Mécanique Cal. 262": {
@@ -2965,7 +2957,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     type: WatchTypeEnum.DRESS,
     srcImage: "public/assets/Images/Universal_Geneve/1942_Universal_Geneve_cal_262/IMG_2640.JPG",
     hoverSrc: "public/assets/Images/Universal_Geneve/1942_Universal_Geneve_cal_262/IMG_2642.JPG",
-    href: require("./watchModels/Universal_Geneve/Universal_Geneve_Mecanique_cal_262_1942"),
+    href: require("../watchModels/Universal_Geneve/Universal_Geneve_Mecanique_cal_262_1942"),
     specialCollectionItem: false,
   },
   "Tissot Antimagnetic 27-2": {
@@ -2975,7 +2967,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     type: WatchTypeEnum.CASUAL,
     srcImage: "public/assets/Images/Tissot/1942_Tissot_Antimagnetic_27-2/IMG_1773.JPG",
     hoverSrc: "public/assets/Images/Tissot/1942_Tissot_Antimagnetic_27-2/IMG_1776.JPG",
-    href: require("./watchModels/Tissot/Tissot_Antimagnetic_27_2_1940"),
+    href: require("../watchModels/Tissot/Tissot_Antimagnetic_27_2_1940"),
     specialCollectionItem: false,
   },
 
@@ -2986,7 +2978,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     type: WatchTypeEnum.CASUAL,
     srcImage: "public/assets/Images/Omega/1934_OmegaStaybrite_Tank_CK3516/IMG_0061.JPG",
     hoverSrc: "public/assets/Images/Omega/1934_OmegaStaybrite_Tank_CK3516/IMG_0093.JPG",
-    href: require("./watchModels/Omega/Omega_StayBrite_CK3416_T17_1934"),
+    href: require("../watchModels/Omega/Omega_StayBrite_CK3416_T17_1934"),
     specialCollectionItem: true,
   },
 };
@@ -3008,7 +3000,7 @@ function sortCollection(items: Record<string, CollectionEntry>) {
   const temp = { ...collectionItems, ...modelItems };
   Object.entries(temp).map(([k, value]) => {
     if (k != value.legend) {
-      console.debug(`Key is diferent from legend: ${k}`);
+      console.warn(`Key is different from legend: ${k}`);
     }
   });
   return { ...collectionItems, ...modelItems };

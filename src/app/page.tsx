@@ -38,7 +38,7 @@ export default function Page() {
   // Prepare data on the server side to avoid bundling collectionService in client JS
   const specialItems = collectionService.getSpecialCollectionItems().map((entry) => ({
     srcImage: entry.srcImage,
-    hoverSrc: entry.hoverSrc,
+    hoverSrc: entry.hoverSrc ?? undefined,
     brand: entry.brand,
     legend: entry.legend,
     year: entry.year,
@@ -48,11 +48,11 @@ export default function Page() {
     brand: entry.brand,
     legend: entry.legend,
     srcImage: entry.srcImage,
-    saleReport: entry.href.default.saleReport
+    saleReport: entry.saleReport
       ? {
-          price: entry.href.default.saleReport.price,
-          date: entry.href.default.saleReport.date,
-          url: entry.href.default.saleReport.url,
+          price: entry.saleReport.price,
+          date: entry.saleReport.date,
+          url: entry.saleReport.url,
         }
       : undefined,
   }));
@@ -68,7 +68,7 @@ export default function Page() {
       legend: entry.legend,
       year: entry.year,
       srcImage: entry.srcImage,
-      movementTitle: entry.href?.default?.technicalData?.movement?.title,
+      movementTitle: entry.movementTitle || undefined,
     };
   }
 

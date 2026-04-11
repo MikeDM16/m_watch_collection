@@ -1,7 +1,7 @@
 import {
-  Caliber,
   CaliberTechinicalDetailskeyToDisplayTextmappings,
-} from "@/app/data/movementsData";
+  type Caliber,
+} from "@/app/data/caliberTypes";
 
 import ImageGalleryComponent from "../common/ImageGalleryComponent";
 

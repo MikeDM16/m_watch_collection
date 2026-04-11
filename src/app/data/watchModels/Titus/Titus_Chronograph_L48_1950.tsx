@@ -1,7 +1,15 @@
+import { BezelTypeEnum } from "@/app/enums/bezelTypeEnum";
+import { BraceletMaterialEnum } from "@/app/enums/braceletMaterialEnum";
+import { BraceletWidthEnum } from "@/app/enums/braceletWidthEnum";
 import { BrandsEnum } from "@/app/enums/brandsEnum";
 import { BuckleTypeEnum } from "@/app/enums/buckleTypeEnum";
 import { CalendarWatchTypeEnum } from "@/app/enums/calendarWatchTypeEnum";
 import { CaseBackDetailsEnum } from "@/app/enums/caseBackDetailsEnum";
+import { CaseDiameterEnum } from "@/app/enums/caseDiameterEnum";
+import { CaseFinishingEnum } from "@/app/enums/caseFinishingEnum";
+import { CaseMaterialEnum } from "@/app/enums/caseMaterialEnum";
+import { CaseThicknessEnum } from "@/app/enums/caseThicknessEnum";
+import { ColorEnum } from "@/app/enums/colorEnum";
 import { CrownWatchTypeEnum } from "@/app/enums/crownWatchTypeEnum";
 import { CrystalMaterialEnum } from "@/app/enums/crystalMaterialEnum";
 import { DialMarketsEnum } from "@/app/enums/dialMarketsEnum";
@@ -12,7 +20,7 @@ import { MovementWatchTypeEnum } from "@/app/enums/movementWatchTypeEnum";
 import { WatchStyleEnum } from "@/app/enums/watchStyleEnum";
 import { WaterResistanceEnum } from "@/app/enums/waterResistanceEnum";
 
-import { MovementsDataDB } from "../../movementsData";
+import movement_LANDERON_48_17J from "../../movements/Landeron/Landeron_48_17J";
 import { WatchDetails } from "../../watchDetails";
 
 const details: WatchDetails = {
@@ -88,19 +96,19 @@ const details: WatchDetails = {
     },
 
     case: {
-      diameter: "35 mm",
-      thickness: "12 mm",
-      material: "Solid Rose Gold 18K (0.750)",
+      diameter: CaseDiameterEnum.D_35,
+      thickness: CaseThicknessEnum.T_12,
+      material: CaseMaterialEnum.SOLID_ROSE_GOLD_18K,
       waterResistance: WaterResistanceEnum.WATER_RESISTANT,
-      finishingDetails: "Polished",
-      bezel: "Tachymeter bezel",
+      finishingDetails: CaseFinishingEnum.POLISHED,
+      bezel: BezelTypeEnum.TACHYMETER,
       crownType: CrownWatchTypeEnum.PUSH_PULL,
       crystal: CrystalMaterialEnum.ACRYLIC,
       caseback: CaseBackDetailsEnum.DETAILS_ENGRAVED,
     },
 
     dial: {
-      color: "Cream/Salmon",
+      color: ColorEnum.CREAM_SALMON,
       dialMarkers: DialMarketsEnum.ARABIC,
       finishingDetails: FinishingDetailsEnum.DETAILED_SUB_DIALS,
       luminiscentIndexes: LuminescentIndexesEnum.NONE,
@@ -108,13 +116,13 @@ const details: WatchDetails = {
     },
 
     bracelet: {
-      material: "Lizard Leather",
+      material: BraceletMaterialEnum.LIZARD_LEATHER,
       buckleType: BuckleTypeEnum.STANDARD_BUCKLE,
-      width: "18 mm",
-      color: "Brown",
+      width: BraceletWidthEnum.W_18,
+      color: ColorEnum.BROWN,
     },
 
-    movement: MovementsDataDB.LANDERON_48_17J,
+    movement: movement_LANDERON_48_17J,
   },
 };
 

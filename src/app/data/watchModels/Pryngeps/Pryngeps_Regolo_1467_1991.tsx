@@ -1,7 +1,15 @@
+import { BezelTypeEnum } from "@/app/enums/bezelTypeEnum";
+import { BraceletMaterialEnum } from "@/app/enums/braceletMaterialEnum";
+import { BraceletWidthEnum } from "@/app/enums/braceletWidthEnum";
 import { BrandsEnum } from "@/app/enums/brandsEnum";
 import { BuckleTypeEnum } from "@/app/enums/buckleTypeEnum";
 import { CalendarWatchTypeEnum } from "@/app/enums/calendarWatchTypeEnum";
 import { CaseBackDetailsEnum } from "@/app/enums/caseBackDetailsEnum";
+import { CaseDiameterEnum } from "@/app/enums/caseDiameterEnum";
+import { CaseFinishingEnum } from "@/app/enums/caseFinishingEnum";
+import { CaseMaterialEnum } from "@/app/enums/caseMaterialEnum";
+import { CaseThicknessEnum } from "@/app/enums/caseThicknessEnum";
+import { ColorEnum } from "@/app/enums/colorEnum";
 import { CrownWatchTypeEnum } from "@/app/enums/crownWatchTypeEnum";
 import { CrystalMaterialEnum } from "@/app/enums/crystalMaterialEnum";
 import { DialMarketsEnum } from "@/app/enums/dialMarketsEnum";
@@ -12,7 +20,7 @@ import { MovementWatchTypeEnum } from "@/app/enums/movementWatchTypeEnum";
 import { WatchStyleEnum } from "@/app/enums/watchStyleEnum";
 import { WaterResistanceEnum } from "@/app/enums/waterResistanceEnum";
 
-import { MovementsDataDB } from "../../movementsData";
+import movement_FE_TRIPLE_CALENDAR_5J from "../../movements/FE/FE_Triple_Calendar_5J";
 import { WatchDetails } from "../../watchDetails";
 
 const details: WatchDetails = {
@@ -65,19 +73,19 @@ const details: WatchDetails = {
     },
 
     case: {
-      diameter: "36 mm",
-      thickness: "9 mm",
-      material: "Stainless Steel - Gold plated details",
+      diameter: CaseDiameterEnum.D_36,
+      thickness: CaseThicknessEnum.T_9,
+      material: CaseMaterialEnum.SS_GOLD_DETAILS,
       waterResistance: WaterResistanceEnum.WATERPROOF_30M,
-      finishingDetails: "Polished",
-      bezel: "Regolo graduated bezel",
+      finishingDetails: CaseFinishingEnum.POLISHED,
+      bezel: BezelTypeEnum.REGOLO,
       crownType: CrownWatchTypeEnum.PUSH_PULL,
       crystal: CrystalMaterialEnum.MINERAL,
       caseback: CaseBackDetailsEnum.BRAND_DECORATION,
     },
 
     dial: {
-      color: "White",
+      color: ColorEnum.WHITE,
       dialMarkers: DialMarketsEnum.DAGGER,
       finishingDetails: FinishingDetailsEnum.APPLIED_INDECES,
       luminiscentIndexes: LuminescentIndexesEnum.NONE,
@@ -85,13 +93,13 @@ const details: WatchDetails = {
     },
 
     bracelet: {
-      material: "Suede Leather",
+      material: BraceletMaterialEnum.SUEDE_LEATHER,
       buckleType: BuckleTypeEnum.STANDARD_BUCKLE,
-      width: "18 mm",
-      color: "Brown",
+      width: BraceletWidthEnum.W_18,
+      color: ColorEnum.BROWN,
     },
 
-    movement: MovementsDataDB.FE_TRIPLE_CALENDAR_5J,
+    movement: movement_FE_TRIPLE_CALENDAR_5J,
   },
 };
 

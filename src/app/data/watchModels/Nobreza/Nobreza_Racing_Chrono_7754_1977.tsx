@@ -1,7 +1,15 @@
+import { BezelTypeEnum } from "@/app/enums/bezelTypeEnum";
+import { BraceletMaterialEnum } from "@/app/enums/braceletMaterialEnum";
+import { BraceletWidthEnum } from "@/app/enums/braceletWidthEnum";
 import { BrandsEnum } from "@/app/enums/brandsEnum";
 import { BuckleTypeEnum } from "@/app/enums/buckleTypeEnum";
 import { CalendarWatchTypeEnum } from "@/app/enums/calendarWatchTypeEnum";
 import { CaseBackDetailsEnum } from "@/app/enums/caseBackDetailsEnum";
+import { CaseDiameterEnum } from "@/app/enums/caseDiameterEnum";
+import { CaseFinishingEnum } from "@/app/enums/caseFinishingEnum";
+import { CaseMaterialEnum } from "@/app/enums/caseMaterialEnum";
+import { CaseThicknessEnum } from "@/app/enums/caseThicknessEnum";
+import { ColorEnum } from "@/app/enums/colorEnum";
 import { CrownWatchTypeEnum } from "@/app/enums/crownWatchTypeEnum";
 import { CrystalMaterialEnum } from "@/app/enums/crystalMaterialEnum";
 import { DialMarketsEnum } from "@/app/enums/dialMarketsEnum";
@@ -12,7 +20,7 @@ import { MovementWatchTypeEnum } from "@/app/enums/movementWatchTypeEnum";
 import { WatchStyleEnum } from "@/app/enums/watchStyleEnum";
 import { WaterResistanceEnum } from "@/app/enums/waterResistanceEnum";
 
-import { MovementsDataDB } from "../../movementsData";
+import movement_VALJOIX_7734_17J from "../../movements/Valjoux/7734_17J";
 import { WatchDetails } from "../../watchDetails";
 
 const details: WatchDetails = {
@@ -74,19 +82,19 @@ const details: WatchDetails = {
     },
 
     case: {
-      diameter: "37 mm",
-      thickness: "13 mm",
-      material: "Stainless Steel",
+      diameter: CaseDiameterEnum.D_37,
+      thickness: CaseThicknessEnum.T_13,
+      material: CaseMaterialEnum.STAINLESS_STEEL,
       waterResistance: WaterResistanceEnum.WATER_RESISTANT,
-      finishingDetails: "Polished",
-      bezel: "Inner Tachymeter bezel",
+      finishingDetails: CaseFinishingEnum.POLISHED,
+      bezel: BezelTypeEnum.TACHYMETER_INNER,
       crownType: CrownWatchTypeEnum.PUSH_PULL,
       crystal: CrystalMaterialEnum.ACRYLIC,
       caseback: CaseBackDetailsEnum.DETAILS_ENGRAVED,
     },
 
     dial: {
-      color: "Blue",
+      color: ColorEnum.BLUE,
       dialMarkers: DialMarketsEnum.BATTON,
       finishingDetails: FinishingDetailsEnum.DETAILED_SUB_DIALS,
       luminiscentIndexes: LuminescentIndexesEnum.HANDS + LuminescentIndexesEnum.TRITIUM,
@@ -94,13 +102,13 @@ const details: WatchDetails = {
     },
 
     bracelet: {
-      material: "Rubber",
+      material: BraceletMaterialEnum.RUBBER,
       buckleType: BuckleTypeEnum.STANDARD_BUCKLE,
-      width: "20 mm",
-      color: "Blue",
+      width: BraceletWidthEnum.W_20,
+      color: ColorEnum.BLUE,
     },
 
-    movement: MovementsDataDB.VALJOIX_7734_17J,
+    movement: movement_VALJOIX_7734_17J,
   },
 };
 

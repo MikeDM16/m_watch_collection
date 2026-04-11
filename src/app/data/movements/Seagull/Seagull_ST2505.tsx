@@ -6,7 +6,7 @@ import {
 } from "@/app/enums/caliberEnums";
 import { MovementWatchTypeEnum } from "@/app/enums/movementWatchTypeEnum";
 
-import { Caliber } from "../../movementsData";
+import type { Caliber } from "../../caliberTypes";
 
 const SEAGULL_ST2505: Caliber = {
   // Title

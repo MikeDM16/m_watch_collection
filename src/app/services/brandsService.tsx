@@ -1,12 +1,11 @@
 import { Brand, brandsDB } from "../data/brands";
-import CollectionItemsDB from "../data/collectionData";
+import CollectionIndex from "../data/collectionIndex";
 
 function getMainBrands(): Brand[] {
   /**
    * Get main brands
    * Defined with display order. Returned ordered by displayOrder
    */
-  console.debug("Returning main brands");
   return brandsDB
     .filter((entry) => entry.displayOrder != undefined)
     .sort((a, b) => (a.displayOrder ?? 0) - (b.displayOrder ?? 0));
@@ -16,7 +15,6 @@ function getSecondaryBrands(): Brand[] {
   /**
    * Get secondary brands, that don't have displayOrder
    */
-  console.debug("Returning secondary brands");
   return brandsDB.filter((entry) => entry.displayOrder == undefined);
 }
 
@@ -28,11 +26,9 @@ function getAllBrands(): Record<string, Brand[]> {
   /**
    * Get a Mapping of all brands by first letter
    */
-  let usedBrands = Object.entries(CollectionItemsDB).map(([, entry]) => {
-    if (entry.href.default.technicalData) {
-      return entry.href.default.technicalData.information.brand;
-    }
-  });
+  let usedBrands: (string | undefined)[] = Object.values(CollectionIndex).map(
+    (entry) => entry.brand,
+  );
   usedBrands = [...new Set(usedBrands)];
 
   const allBrands: Record<string, Brand[]> = {};
@@ -50,7 +46,6 @@ function getAllBrands(): Record<string, Brand[]> {
 
   // sort keys by alphabetical order
   const sortedEntries = Object.entries(allBrands).sort(([ka], [kb]) => ka.localeCompare(kb));
-  console.debug("Returning all brands map");
 
   // after the sort, return back the dict in the Record<> structure
   return Object.fromEntries(sortedEntries);

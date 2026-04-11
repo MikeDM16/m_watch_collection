@@ -3,7 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --turbopack",
+    "generate-index": "tsx scripts/generate-collection-index.ts",
+    "predev": "tsx scripts/generate-collection-index.ts",
+    "dev": "cross-env NODE_OPTIONS=--max-old-space-size=8192 next dev --turbopack",
+    "prebuild": "tsx scripts/generate-collection-index.ts",
     "build": "cross-env NODE_OPTIONS=--max-old-space-size=8192 next build",
     "analyze": "cross-env ANALYZE=true NODE_OPTIONS=--max-old-space-size=8192 next build",
     "start": "next start",

@@ -1,7 +1,15 @@
+import { BezelTypeEnum } from "@/app/enums/bezelTypeEnum";
+import { BraceletMaterialEnum } from "@/app/enums/braceletMaterialEnum";
+import { BraceletWidthEnum } from "@/app/enums/braceletWidthEnum";
 import { BrandsEnum } from "@/app/enums/brandsEnum";
 import { BuckleTypeEnum } from "@/app/enums/buckleTypeEnum";
 import { CalendarWatchTypeEnum } from "@/app/enums/calendarWatchTypeEnum";
 import { CaseBackDetailsEnum } from "@/app/enums/caseBackDetailsEnum";
+import { CaseDiameterEnum } from "@/app/enums/caseDiameterEnum";
+import { CaseFinishingEnum } from "@/app/enums/caseFinishingEnum";
+import { CaseMaterialEnum } from "@/app/enums/caseMaterialEnum";
+import { CaseThicknessEnum } from "@/app/enums/caseThicknessEnum";
+import { ColorEnum } from "@/app/enums/colorEnum";
 import { CrownWatchTypeEnum } from "@/app/enums/crownWatchTypeEnum";
 import { CrystalMaterialEnum } from "@/app/enums/crystalMaterialEnum";
 import { DialMarketsEnum } from "@/app/enums/dialMarketsEnum";
@@ -12,7 +20,7 @@ import { MovementWatchTypeEnum } from "@/app/enums/movementWatchTypeEnum";
 import { WatchStyleEnum } from "@/app/enums/watchStyleEnum";
 import { WaterResistanceEnum } from "@/app/enums/waterResistanceEnum";
 
-import { MovementsDataDB } from "../../movementsData";
+import movement_MIYOTA_OS60 from "../../movements/Miyota/OS60";
 import { WatchDetails } from "../../watchDetails";
 
 const details: WatchDetails = {
@@ -58,19 +66,19 @@ const details: WatchDetails = {
     },
 
     case: {
-      diameter: "37 mm",
-      thickness: "10 mm",
-      material: "Stainless Steel",
+      diameter: CaseDiameterEnum.D_37,
+      thickness: CaseThicknessEnum.T_10,
+      material: CaseMaterialEnum.STAINLESS_STEEL,
       waterResistance: WaterResistanceEnum.WATERPROOF_30M,
-      finishingDetails: "Polished",
-      bezel: "Without bezel",
+      finishingDetails: CaseFinishingEnum.POLISHED,
+      bezel: BezelTypeEnum.WITHOUT,
       crownType: CrownWatchTypeEnum.PUSH_PULL,
       crystal: CrystalMaterialEnum.SAPPHIRE,
       caseback: CaseBackDetailsEnum.BRAND_DECORATION,
     },
 
     dial: {
-      color: "White",
+      color: ColorEnum.WHITE,
       dialMarkers: DialMarketsEnum.ARABIC,
       finishingDetails: FinishingDetailsEnum.CARBON_FIBER,
       luminiscentIndexes: LuminescentIndexesEnum.NONE,
@@ -78,13 +86,13 @@ const details: WatchDetails = {
     },
 
     bracelet: {
-      material: "Leather - Racing Style",
+      material: BraceletMaterialEnum.LEATHER_RACING,
       buckleType: BuckleTypeEnum.STANDARD_BUCKLE,
-      width: "22 mm",
-      color: "Red",
+      width: BraceletWidthEnum.W_22,
+      color: ColorEnum.RED,
     },
 
-    movement: MovementsDataDB.MIYOTA_OS60,
+    movement: movement_MIYOTA_OS60,
   },
 };
 

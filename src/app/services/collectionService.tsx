@@ -1,4 +1,5 @@
-import CollectionItemsDB, { CollectionEntry } from "../data/collectionData";
+import CollectionIndex, { CollectionIndexEntry } from "../data/collectionIndex";
+import type { WatchDetails } from "../data/watchDetails";
 import brandsService from "./brandsService";
 
 // Convert "DD/MM/YYYY" to a proper Date object
@@ -10,27 +11,24 @@ const parseDate = (dateStr: string): number => {
 function getCollectionModelsByBrand(
   brand: string,
   displayBySeries?: boolean,
-): Record<string, CollectionEntry[]> {
+): Record<string, CollectionIndexEntry[]> {
   let seriesKey: string | undefined = undefined;
-  const brandModels: Record<string, CollectionEntry[]> = {};
+  const brandModels: Record<string, CollectionIndexEntry[]> = {};
   const defaultSeriesKey = "";
   brandModels[defaultSeriesKey] = [];
 
   Object.assign(
     {},
-    Object.entries(CollectionItemsDB)
+    Object.entries(CollectionIndex)
       .filter(([, entry]) => entry.brand == brand)
       .sort(([, va], [, vb]) => vb.year - va.year) // DESC order
       .map(([, entry]) => {
-        seriesKey = entry.href.default.technicalData.information.series;
+        seriesKey = entry.series;
         if (seriesKey in brandModels) {
-          // key in BrandModels implies we already processed this series before
           brandModels[seriesKey].push(entry);
         } else if (displayBySeries == true) {
-          // 1st entry if filtering by series
           brandModels[seriesKey] = [entry];
         } else {
-          // if not filtering by series, simply add to default key
           brandModels[defaultSeriesKey].push(entry);
         }
       }),
@@ -43,20 +41,29 @@ function getCollectionModelsByBrand(
   return brandModels;
 }
 
-function getModelInformationByKey(key: string): CollectionEntry | undefined {
-  return CollectionItemsDB[key];
+function getIndexEntry(key: string): CollectionIndexEntry | undefined {
+  return CollectionIndex[key];
 }
 
-function getSoldModels(): CollectionEntry[] {
-  return Object.entries(CollectionItemsDB)
+async function getModelDetails(key: string): Promise<WatchDetails | undefined> {
+  const indexEntry = CollectionIndex[key];
+  if (!indexEntry) return undefined;
+
+  try {
+    const modelModule = await import(`../data/watchModels/${indexEntry.modelFile}`);
+    return modelModule.default;
+  } catch {
+    return undefined;
+  }
+}
+
+function getSoldModels(): CollectionIndexEntry[] {
+  return Object.entries(CollectionIndex)
     .filter(([, v]) => {
-      return v.href.default.saleReport != undefined;
+      return v.saleReport != null;
     })
     .sort(([, a], [, b]) => {
-      return (
-        parseDate(b.href.default.saleReport?.date || "") -
-        parseDate(a.href.default.saleReport?.date || "")
-      );
+      return parseDate(b.saleReport?.date || "") - parseDate(a.saleReport?.date || "");
     }) // DESC order
     .map(([, v]) => v);
 }
@@ -64,7 +71,7 @@ function getSoldModels(): CollectionEntry[] {
 function getCollectionStatistic(): Record<string, number | string> {
   const brandByLetter = brandsService.getAllBrands();
 
-  const numModels = Object.keys(CollectionItemsDB).length;
+  const numModels = Object.keys(CollectionIndex).length;
   const numSoldModels = Object.values(getSoldModels()).length;
 
   let numBrands = 0;
@@ -79,8 +86,8 @@ function getCollectionStatistic(): Record<string, number | string> {
   };
 }
 
-function getSpecialCollectionItems(): CollectionEntry[] {
-  return Object.entries(CollectionItemsDB)
+function getSpecialCollectionItems(): CollectionIndexEntry[] {
+  return Object.entries(CollectionIndex)
     .filter(([, v]) => {
       return v.specialCollectionItem && !v.collectionSet;
     })
@@ -90,13 +97,14 @@ function getSpecialCollectionItems(): CollectionEntry[] {
     .map(([, v]) => v);
 }
 
-function getAllCollectionItems(): Record<string, CollectionEntry> {
-  return CollectionItemsDB;
+function getAllCollectionItems(): Record<string, CollectionIndexEntry> {
+  return CollectionIndex;
 }
 
 const collectionService = {
   getCollectionModelsByBrand,
-  getModelInformationByKey,
+  getIndexEntry,
+  getModelDetails,
   getSoldModels,
   getCollectionStatistic,
   getSpecialCollectionItems,

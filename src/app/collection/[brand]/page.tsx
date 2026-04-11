@@ -4,7 +4,7 @@ import ImageComponent from "@/app/components/common/ImageComponent";
 import FooterComponent from "@/app/components/footer/footerComponent";
 import HeaderNavBar from "@/app/components/header/headerComponent";
 import BrandPageNotFoundComponent from "@/app/components/notFound/BrandPageNotFoundComponent";
-import { CollectionEntry } from "@/app/data/collectionData";
+import { CollectionIndexEntry } from "@/app/data/collectionIndex";
 import brandsService from "@/app/services/brandsService";
 import collectionService from "@/app/services/collectionService";
 import {
@@ -38,7 +38,7 @@ export default async function Page({ params }: { params: Promise<{ brand: string
     return <BrandPageNotFoundComponent unknownBrand={brand} />;
   }
 
-  const brandModels: Record<string, CollectionEntry[]> =
+  const brandModels: Record<string, CollectionIndexEntry[]> =
     collectionService.getCollectionModelsByBrand(brand, brandDetails.displayBySeries);
 
   const renderCollectionItem = () => {

@@ -1,5 +1,5 @@
 import { FeatureStruct } from "../enums/featuresEnum";
-import { Caliber } from "./movementsData";
+import type { Caliber } from "./caliberTypes";
 
 export interface SellReport {
   price: number;

@@ -1,0 +1,275 @@
+import type { Caliber } from "../caliberTypes";
+import AS_1130 from "../movements/AS/AS_1130_17J";
+import AS_1950 from "../movements/AS/AS_1950_17J";
+import BREITLING_B40_38J from "../movements/Breitling/Breitling_B40_38J";
+import CERTINA_25_261_27J from "../movements/Certina/Certina_25_261_28J";
+import CERTINA_331 from "../movements/Certina/Certina_331_15J";
+import DD_2000_ETA_955_232 from "../movements/Debois_Depraz/DD_2000_955";
+import DD_2000_ETA_2982 from "../movements/Debois_Depraz/DD_2000_2892";
+import DOXA_83_4_987_17J from "../movements/Doxa/Doxa_83_4_987_17J";
+import Duromat_7522 from "../movements/Duromat/Duromat_7522";
+import EBERHARD_16000_17J from "../movements/Eberhard/Eberhard_16000_17J";
+import ETA_C07_111 from "../movements/ETA/C07_111";
+import ETA_251_251 from "../movements/ETA/ETA_251_251_27J";
+import ETA_251_262 from "../movements/ETA/ETA_251_262_27J";
+import ETA_251_265 from "../movements/ETA/ETA_251_265_23J";
+import ETA_251_272 from "../movements/ETA/ETA_251_272_22J";
+import ETA_900 from "../movements/ETA/ETA_900_17J";
+import ETA_902_101 from "../movements/ETA/ETA_902_101";
+import ETA_955_112 from "../movements/ETA/ETA_955_112";
+import ETA_955_114 from "../movements/ETA/ETA_955_114";
+import ETA_1256 from "../movements/ETA/ETA_1256";
+import ETA_2452 from "../movements/ETA/ETA_2452_17J";
+import ETA_2472 from "../movements/ETA/ETA_2472_25J";
+import ETA_2671 from "../movements/ETA/ETA_2671_25J";
+import ETA_2783 from "../movements/ETA/ETA_2783";
+import ETA_2824 from "../movements/ETA/ETA_2824";
+import ETA_2834 from "../movements/ETA/ETA_2834";
+import ETA_2836 from "../movements/ETA/ETA_2836";
+import ETA_2892_2_21J from "../movements/ETA/ETA_2892_21J";
+import ETA_2894_2_37J from "../movements/ETA/ETA_2894_2_37J";
+import ETA_2895_1_30J from "../movements/ETA/ETA_2895_1_30J";
+import ETA_2895_2_27J from "../movements/ETA/ETA_2895_2_27J";
+import ETA_A05_H31_27 from "../movements/ETA/ETA_A05_H31_27J";
+import ETA_G10_211 from "../movements/ETA/ETA_G10_211";
+import ETA_G10_961 from "../movements/ETA/ETA_G10_961";
+import ETA_Valjoux_7750_17 from "../movements/ETA/ETA_Valjoux_7750_17J";
+import ETA_Valjoux_7750_25 from "../movements/ETA/ETA_Valjoux_7750_25J";
+import ETA_Valjoux_7751_25 from "../movements/ETA/ETA_Valjoux_7751_25J";
+import ETA_Valjoux_7753_27 from "../movements/ETA/ETA_Valjoux_7753_27J";
+import ETA_Valjoux_7760_17 from "../movements/ETA/ETA_Valjoux_7760_17J";
+import EXCELSIOR_PARK_40_68_17J from "../movements/Excelsior_Park/Excelsior_Park_40_68_17J";
+import FE_140 from "../movements/FE/FE_140_17J";
+import FE_233_69 from "../movements/FE/FE_233_69_17J";
+import FE_TRIPLE_CALENDAR_5J from "../movements/FE/FE_Triple_Calendar_5J";
+import FHF_96_4 from "../movements/FHF/FHF_96_4_17J";
+import FHF_974 from "../movements/FHF/FHF_974_17J";
+import FORTIS_AV_21J from "../movements/Fortis/Fortis_AV_21_jewels";
+import Girard_Perregaux_2280 from "../movements/Girard_Perregaux/Girard_Perregaux_2280";
+import Landeron_48_17J from "../movements/Landeron/Landeron_48_17J";
+import Landeron_51_17J from "../movements/Landeron/Landeron_51_17J_";
+import Landeron_159_17J from "../movements/Landeron/Landeron_159_17J";
+import LEMANIA_1281_17J from "../movements/Lemania/Lemania_1281_17_Jewels";
+import LEMANIA_1341 from "../movements/Lemania/Lemania_1341_17_Jewels";
+import Lorsa_238 from "../movements/Lorsa/Lorsa_238";
+import MIYOTA_OS10 from "../movements/Miyota/OS10";
+import MIYOTA_OS60 from "../movements/Miyota/OS60";
+import OMEGA_30T2 from "../movements/Omega/Omega_30T2_15J";
+import OMEGA_265 from "../movements/Omega/Omega_265_15J";
+import OMEGA_266_17J from "../movements/Omega/Omega_266_17J";
+import OMEGA_267 from "../movements/Omega/Omega_267_17J";
+import OMEGA_268 from "../movements/Omega/Omega_268_17J";
+import OMEGA_410 from "../movements/Omega/Omega_410_17J";
+import OMEGA_565 from "../movements/Omega/Omega_565_24J";
+import OMEGA_610_17J from "../movements/Omega/Omega_610_17J";
+import OMEGA_672_24J from "../movements/Omega/Omega_672_24J";
+import OMEGA_1141_45J from "../movements/Omega/Omega_1141";
+import OMEGA_1151 from "../movements/Omega/Omega_1151";
+import OMEGA_1370 from "../movements/Omega/Omega_1370";
+import OMEGA_1430 from "../movements/Omega/Omega_1430";
+import OMEGA_1441 from "../movements/Omega/Omega_1441";
+import OMEGA_1445 from "../movements/Omega/Omega_1445";
+import OMEGA_1449 from "../movements/Omega/Omega_1449";
+import OMEGA_1665 from "../movements/Omega/Omega_1665";
+import OMEGA_1670 from "../movements/Omega/Omega_1670";
+import OMEGA_1675 from "../movements/Omega/Omega_1675";
+import OMEGA_T17 from "../movements/Omega/Omega_T17_15J";
+import ORIENT_46D40 from "../movements/Orient/Orient_46D40";
+import PIGUET_1270_22J from "../movements/Piguet/Piguet_1270_22_Jewels";
+import POLJOT_3133_25J from "../movements/Poljot/Polot_3133_25_Jewels";
+import RW_4200 from "../movements/Raymond_Weil/RW_4200";
+import RONDA_5030D from "../movements/Ronda/Ronda_5030D";
+import RONDA_5040D from "../movements/Ronda/Ronda_5040D";
+import RONDA_6004B from "../movements/Ronda/Ronda_6004B";
+import SEAGULL_ST2505 from "../movements/Seagull/Seagull_ST2505";
+import SEIKO_8M25 from "../movements/Seiko/8M25";
+import SEIKO_6306A from "../movements/Seiko/6306A";
+import SELLITA_SW200 from "../movements/Sellita/SW200";
+import HEUER_1_93 from "../movements/Tag_Heuer/Tag_Heuer_1_93";
+import HEUER_1_94 from "../movements/Tag_Heuer/Tag_Heuer_1_94";
+import HEUER_1_97 from "../movements/Tag_Heuer/Tag_Heuer_1_97";
+import HEUER_2_00 from "../movements/Tag_Heuer/Tag_Heuer_2_00";
+import TAG_HEUER_2_95 from "../movements/Tag_Heuer/Tag_Heuer_2_95";
+import HEUER_4_93 from "../movements/Tag_Heuer/Tag_Heuer_4_93";
+import HEUER_4_95 from "../movements/Tag_Heuer/Tag_Heuer_4_95";
+import HEUER_4_96 from "../movements/Tag_Heuer/Tag_Heuer_4_96";
+import TAG_HEUER_CALIBER_16 from "../movements/Tag_Heuer/Tag_Heuer_Caliber_16_25J";
+import TIMEX_M100 from "../movements/Timex/Timex_M100";
+import TISSOT_26_9_261 from "../movements/Tissot/26_9_621_17J";
+import TISSOT_27_2 from "../movements/Tissot/27_2_17J";
+import TISSOT_27_3 from "../movements/Tissot/27_3_15J";
+import TISSOT_27B_1 from "../movements/Tissot/27B_1_15J";
+import TISSOT_27B_21 from "../movements/Tissot/27B_21_15J";
+import TISSOT_781 from "../movements/Tissot/781_17J";
+import TISSOT_784 from "../movements/Tissot/784_21J";
+import TISSOT_794 from "../movements/Tissot/794_21J";
+import TISSOT_2031 from "../movements/Tissot/2031";
+import TISSOT_2060_7734_17J from "../movements/Tissot/2060_7734_17J";
+import TISSOT_2170 from "../movements/Tissot/2170_17J";
+import UNITAS_6325 from "../movements/Unitas/Unitas_6325";
+import UNITAS_6380 from "../movements/Unitas/Unitas_6380";
+import UNIVERSAL_GENEVE_262_17J from "../movements/Universal_Geneve/UG_Cal_262_17J";
+import VALJOIX_7734_17J from "../movements/Valjoux/7734_17J";
+import VALJOUX_77_17J from "../movements/Valjoux/Valjoux_77_17J";
+import VALJOUX_726_88_17J from "../movements/Valjoux/Valjoux_726_88_17J";
+import VENUS_170_17J from "../movements/Venus/Venus_170_17J";
+import VOSTOK_2605_17J from "../movements/Vostok/Vostok_2605_17J";
+import ZENITH_106_15J from "../movements/Zenith/106_15J";
+import ZENITH_EL_PRIMERO_400Z from "../movements/Zenith/El_Primero_400Z";
+import ZENITH_EL_PRIMERO_4021 from "../movements/Zenith/El_Primero_4021";
+import ZENITH_P_12_4_50 from "../movements/Zenith/P_12_4_50";
+
+// Types re-exported from caliberTypes.ts for backwards compatibility
+export type { Caliber, CaliberTechinicalDetails } from "../caliberTypes";
+export { CaliberTechinicalDetailskeyToDisplayTextmappings } from "../caliberTypes";
+
+export const MovementsDataDB: Record<string, Caliber> = {
+  AS_1130: AS_1130,
+  AS_1950: AS_1950,
+
+  BREITLING_B40_38J: BREITLING_B40_38J,
+
+  CERTINA_331: CERTINA_331,
+  CERTINA_25_261_27J: CERTINA_25_261_27J,
+
+  DD_2000_ETA_2982: DD_2000_ETA_2982,
+  DD_2000_ETA_955_232: DD_2000_ETA_955_232,
+
+  DOXA_83_4_987_17J: DOXA_83_4_987_17J,
+
+  EBERHARD_16000_17J: EBERHARD_16000_17J,
+  EXCELSIOR_PARK_40_68_17J: EXCELSIOR_PARK_40_68_17J,
+
+  ETA_900: ETA_900,
+  ETA_1256: ETA_1256,
+  ETA_251_251: ETA_251_251,
+  ETA_251_262: ETA_251_262,
+  ETA_251_265: ETA_251_265,
+  ETA_251_272: ETA_251_272,
+  ETA_2452: ETA_2452,
+  ETA_2472: ETA_2472,
+  ETA_2671: ETA_2671,
+  ETA_2783: ETA_2783,
+  ETA_2824: ETA_2824,
+  ETA_2836: ETA_2836,
+  ETA_2834: ETA_2834,
+  ETA_2892_2_21J: ETA_2892_2_21J,
+  ETA_2894_2: ETA_2894_2_37J,
+  ETA_2895_1: ETA_2895_1_30J,
+  ETA_2895_2: ETA_2895_2_27J,
+  ETA_902_101: ETA_902_101,
+  ETA_955_112: ETA_955_112,
+  ETA_955_114: ETA_955_114,
+  ETA_A05_H31_27: ETA_A05_H31_27,
+  ETA_C07_111: ETA_C07_111,
+  ETA_G10_211: ETA_G10_211,
+  ETA_G10_961: ETA_G10_961,
+  ETA_Valjoux_7750_17J: ETA_Valjoux_7750_17,
+  ETA_Valjoux_7750_25J: ETA_Valjoux_7750_25,
+  ETA_Valjoux_7751_25J: ETA_Valjoux_7751_25,
+  ETA_Valjoux_7753_27: ETA_Valjoux_7753_27,
+  ETA_Valjoux_7760_17: ETA_Valjoux_7760_17,
+
+  FE_140: FE_140,
+  FE_233: FE_233_69,
+  FE_233_69: FE_233_69,
+  FE_TRIPLE_CALENDAR_5J: FE_TRIPLE_CALENDAR_5J,
+
+  FHF_96_4: FHF_96_4,
+  FHF_974: FHF_974,
+
+  FORTIS_AV_21J: FORTIS_AV_21J,
+
+  // same base ETA 955.112 / 412
+  HEUER_1_93: HEUER_1_93,
+  HEUER_1_94: HEUER_1_94,
+  HEUER_1_97: HEUER_1_97,
+  HEUER_4_93: HEUER_4_93,
+  HEUER_4_95: HEUER_4_95,
+  HEUER_4_96: HEUER_4_96,
+  HEUER_2_00: HEUER_2_00,
+  TAG_HEUER_CALIBER_16: TAG_HEUER_CALIBER_16,
+
+  LANDERON_48_17J: Landeron_48_17J,
+  LANDERON_51_17J: Landeron_51_17J,
+  LANDERON_159_17J: Landeron_159_17J,
+
+  LEMANIA_1341: LEMANIA_1341,
+  LEMANIA_1281_17J: LEMANIA_1281_17J,
+
+  MIYOTA_OS10: MIYOTA_OS10,
+  MIYOTA_OS60: MIYOTA_OS60,
+
+  OMEGA_1141_45J: OMEGA_1141_45J,
+  OMEGA_1151: OMEGA_1151,
+  OMEGA_1370: OMEGA_1370,
+  OMEGA_1430: OMEGA_1430,
+  OMEGA_1441: OMEGA_1441,
+  OMEGA_1445: OMEGA_1445,
+  OMEGA_1449: OMEGA_1449,
+  OMEGA_1665: OMEGA_1665,
+  OMEGA_1670: OMEGA_1670,
+  OMEGA_1675: OMEGA_1675,
+  OMEGA_265: OMEGA_265,
+  OMEGA_266_17J: OMEGA_266_17J,
+  OMEGA_267: OMEGA_267,
+  OMEGA_268: OMEGA_268,
+  OMEGA_30T2: OMEGA_30T2,
+  OMEGA_410: OMEGA_410,
+  OMEGA_565: OMEGA_565,
+  OMEGA_610_17J: OMEGA_610_17J,
+  OMEGA_672_24J: OMEGA_672_24J,
+  OMEGA_T17: OMEGA_T17,
+
+  ORIENT_46D40: ORIENT_46D40,
+
+  POLJOT_3133_25J: POLJOT_3133_25J,
+  PIGUET_1270_22J: PIGUET_1270_22J,
+  RAYMON_WEIL_4200: RW_4200,
+
+  RONDA_5030D: RONDA_5030D,
+  RONDA_5040D: RONDA_5040D,
+  RONDA_6004B: RONDA_6004B,
+
+  SEAGULL_ST2505: SEAGULL_ST2505,
+  SEIKO_6306A: SEIKO_6306A,
+  SEIKO_8M25: SEIKO_8M25,
+  SELLITA_SW200: SELLITA_SW200,
+
+  TAG_HEUER_2_95: TAG_HEUER_2_95,
+
+  TISSOT_2031: TISSOT_2031,
+  TISSOT_2060_7734_17J: TISSOT_2060_7734_17J,
+  TISSOT_26_9_261: TISSOT_26_9_261,
+  TISSOT_27_3: TISSOT_27_3,
+  TISSOT_27_2: TISSOT_27_2,
+  TISSOT_27B_1: TISSOT_27B_1,
+  TISSOT_27B_21: TISSOT_27B_21,
+  TISSOT_781: TISSOT_781,
+  TISSOT_784: TISSOT_784,
+  TISSOT_794: TISSOT_794,
+  TISSOT_2170: TISSOT_2170,
+
+  TIMEX_M100: TIMEX_M100,
+
+  VALJOUX_77_17J: VALJOUX_77_17J,
+  VALJOUX_726_88_17J: VALJOUX_726_88_17J,
+  VALJOIX_7734_17J: VALJOIX_7734_17J,
+
+  VENUS_170_17J: VENUS_170_17J,
+
+  VOSTOK_2605_17J: VOSTOK_2605_17J,
+
+  UNITAS_6325: UNITAS_6325,
+  UNITAS_6380: UNITAS_6380,
+
+  ZENITH_EL_PRIMERO_400Z: ZENITH_EL_PRIMERO_400Z,
+  ZENITH_EL_PRIMERO_4021: ZENITH_EL_PRIMERO_4021,
+  ZENITH_P_12_4_50: ZENITH_P_12_4_50,
+  ZENITH_106_15J: ZENITH_106_15J,
+
+  UNIVERSAL_GENEVE_262_17J: UNIVERSAL_GENEVE_262_17J,
+  Duromat_7522: Duromat_7522,
+  LORSA_238: Lorsa_238,
+  Girard_Perregaux_2280: Girard_Perregaux_2280,
+};

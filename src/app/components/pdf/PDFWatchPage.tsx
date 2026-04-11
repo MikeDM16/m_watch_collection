@@ -1,4 +1,4 @@
-import { CaliberTechinicalDetailskeyToDisplayTextmappings } from "@/app/data/movementsData";
+import { CaliberTechinicalDetailskeyToDisplayTextmappings } from "@/app/data/caliberTypes";
 import {
   BraceletInformationToDisplayTextMapping,
   CaseInformationKeyToDisplayTextMapping,
