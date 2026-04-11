@@ -3,9 +3,8 @@ import { renderToFile } from "@react-pdf/renderer";
 import React from "react";
 
 import { PDFBookDocument } from "../src/app/components/pdf/PDFBookDocument";
-import { CollectionEntry } from "../src/app/data/collectionData";
+import CollectionItemsDB, { CollectionEntry } from "../src/app/data/admin/collectionData";
 import brandsService from "../src/app/services/brandsService";
-import collectionService from "../src/app/services/collectionService";
 
 interface BrandWithModels {
   name: string;
@@ -21,8 +20,8 @@ interface TOCEntry {
 async function generatePDFBook() {
   console.log("Starting PDF book generation...");
 
-  // Get all collection items
-  const allItems = collectionService.getAllCollectionItems();
+  // Get all collection items (direct import for full model details in PDF)
+  const allItems = CollectionItemsDB;
 
   // Get all brands that have models
   const allBrands = brandsService.getAllBrands();

@@ -28,6 +28,7 @@ export function generateWatchModelFile(data: {
   braceletWidth: string;
   braceletColor: string;
   movementRef: string;
+  movementImportPath: string;
   features: string[];
   customFeatures: string[];
   imgFolder: string;
@@ -55,7 +56,7 @@ export function generateWatchModelFile(data: {
     'import { WatchStyleEnum } from "@/app/enums/watchStyleEnum";',
     'import { WaterResistanceEnum } from "@/app/enums/waterResistanceEnum";',
     "",
-    'import { MovementsDataDB } from "../../admin/movementsData";',
+    `import movement_${data.movementRef} from "../../${data.movementImportPath}";`,
     'import { WatchDetails } from "../../watchDetails";',
   ];
 
@@ -131,7 +132,7 @@ ${featuresItems}
       color: ColorEnum.${data.braceletColor},
     },
 
-    movement: MovementsDataDB.${data.movementRef},
+    movement: movement_${data.movementRef},
   },
 };
 
@@ -180,6 +181,7 @@ import type { Caliber } from "../../caliberTypes";
 const ${data.variableName}: Caliber = {
   title: "${data.title}",
   description: "${data.description}",
+  usefullLinks: {},
   sliderImages: [
     "${data.imgFolder}/IMG_XXXX.JPG",
   ],

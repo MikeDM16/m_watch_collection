@@ -32,9 +32,24 @@ function listBrandFolders(): string[] {
     .sort();
 }
 
-function listMovementKeys(): string[] {
+function listMovementKeys(): { key: string; importPath: string }[] {
   const content = fs.readFileSync(path.join(DATA_DIR, "admin", "movementsData.tsx"), "utf-8");
-  const keys: string[] = [];
+
+  // Build variable name -> file path mapping from import statements
+  // Pattern: import VAR_NAME from "../movements/Manufacturer/File";
+  const varToPath: Record<string, string> = {};
+  for (const line of content.split("\n")) {
+    const importMatch = line.match(
+      /^import\s+(\w+)\s+from\s+"\.\.\/movements\/([^"]+)"/,
+    );
+    if (importMatch) {
+      varToPath[importMatch[1]] = `movements/${importMatch[2]}`;
+    }
+  }
+
+  // Extract DB key -> variable name from MovementsDataDB object
+  // Pattern:   DB_KEY: VARIABLE_NAME,
+  const results: { key: string; importPath: string }[] = [];
   let inDb = false;
   for (const line of content.split("\n")) {
     if (line.includes("MovementsDataDB") && line.includes("{")) {
@@ -43,11 +58,16 @@ function listMovementKeys(): string[] {
     }
     if (inDb) {
       if (line.trim().startsWith("}")) break;
-      const match = line.match(/^\s+(\w+)\s*:/);
-      if (match) keys.push(match[1]);
+      const match = line.match(/^\s+(\w+)\s*:\s*(\w+)/);
+      if (match) {
+        const dbKey = match[1];
+        const varName = match[2];
+        const importPath = varToPath[varName] || "";
+        results.push({ key: dbKey, importPath });
+      }
     }
   }
-  return keys;
+  return results;
 }
 
 function readModelFile(brandFolder: string, filename: string): string {

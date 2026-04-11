@@ -2912,6 +2912,16 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     href: require("../watchModels/Omega/Omega_StayBrite_CK3416_T17_1934"),
     specialCollectionItem: true,
   },
+  "1974 Arauto Silver Tuxedo Unitas 6325": {
+    brand: BrandsEnum.ARAUTO,
+    legend: "1974 Arauto Silver Tuxedo Unitas 6325",
+    year: 1974,
+    type: WatchTypeEnum.CASUAL,
+    srcImage: "public/assets/Images/Arauto/1974_Arauto_Silver Tuxedo Unitas 6325/IMG_XXXX.JPG",
+    hoverSrc: "public/assets/Images/Arauto/1974_Arauto_Silver Tuxedo Unitas 6325/IMG_XXXX.JPG",
+    href: require("../watchModels/Arauto/Arauto_Silver_Tuxedo_Unitas_6325_1974"),
+    specialCollectionItem: false,
+  },
 };
 
 function sortCollection(items: Record<string, CollectionEntry>) {

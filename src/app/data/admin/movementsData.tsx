@@ -114,6 +114,7 @@ import ZENITH_106_15J from "../movements/Zenith/106_15J";
 import ZENITH_EL_PRIMERO_400Z from "../movements/Zenith/El_Primero_400Z";
 import ZENITH_EL_PRIMERO_4021 from "../movements/Zenith/El_Primero_4021";
 import ZENITH_P_12_4_50 from "../movements/Zenith/P_12_4_50";
+import UNITAS_6325 from "../movements/Unitas/Unitas_6325";
 
 // Types re-exported from caliberTypes.ts for backwards compatibility
 export type { Caliber, CaliberTechinicalDetails } from "../caliberTypes";
@@ -256,6 +257,7 @@ export const MovementsDataDB: Record<string, Caliber> = {
 
   VOSTOK_2605_17J: VOSTOK_2605_17J,
 
+  UNITAS_6325: UNITAS_6325,
   UNITAS_6380: UNITAS_6380,
 
   ZENITH_EL_PRIMERO_400Z: ZENITH_EL_PRIMERO_400Z,

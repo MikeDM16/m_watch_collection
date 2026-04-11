@@ -67,7 +67,7 @@ const STYLE_TO_TYPE: Record<string, string> = {
 export default function CreateModelPage() {
   const [step, setStep] = useState(0);
   const [enums, setEnums] = useState<Enums>({});
-  const [movements, setMovements] = useState<string[]>([]);
+  const [movements, setMovements] = useState<{ key: string; importPath: string }[]>([]);
   const [allModels, setAllModels] = useState<{ brand: string; file: string }[]>([]);
   const [brandLogos, setBrandLogos] = useState<Record<string, string>>({});
   const [loading, setLoading] = useState(true);
@@ -338,6 +338,26 @@ export default function CreateModelPage() {
       }
 
       const actualMovementRef = showNewMovement ? mvVarName : movementRef;
+
+      // Derive the movement import path for direct imports
+      let movementImportPath: string;
+      if (showNewMovement) {
+        // New movement: derive from the manufacturer folder and variable name
+        const mfr = enums.CaliberBrandsEnum?.[mvManufacturer] || mvManufacturer;
+        const mfrFolder = mfr.replace(/ /g, "_").replace(/[()]/g, "");
+        const simpleFolders: Record<string, string> = {
+          "A. Schild": "AS",
+          "FE (France Ebauche)": "FE",
+          "FHF (Fabrique d'Horlogerie de Fontainemelon)": "FHF",
+        };
+        const mvFolder = simpleFolders[mfr] || mfrFolder;
+        movementImportPath = `movements/${mvFolder}/${mvVarName}`;
+      } else {
+        // Existing movement: look up from the movements array
+        const found = movements.find((m) => m.key === movementRef);
+        movementImportPath = found?.importPath || "";
+      }
+
       const imgFolder = `public/assets/Images/${brandFolder}/${year}_${brandFolder}_${modelName}`;
 
       const fileContent = generateWatchModelFile({
@@ -369,6 +389,7 @@ export default function CreateModelPage() {
         braceletWidth,
         braceletColor,
         movementRef: actualMovementRef,
+        movementImportPath,
         features,
         customFeatures,
         imgFolder,
@@ -815,7 +836,7 @@ export default function CreateModelPage() {
             <>
               <FieldRow label="From Database">
                 <SearchableSelect
-                  options={movements.map((m) => ({ value: m, label: m }))}
+                  options={movements.map((m) => ({ value: m.key, label: m.key }))}
                   value={movementRef}
                   onChange={setMovementRef}
                   placeholder="Search movements..."
