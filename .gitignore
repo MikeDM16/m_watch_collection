@@ -41,3 +41,5 @@ yarn-error.log*
 next-env.d.ts
 *.pdf
 scripts/__pycache__
+profiling/node_modules
+profiling/results
