@@ -57,21 +57,6 @@ export default function Page() {
       : undefined,
   }));
 
-  const searchData: Record<
-    string,
-    { brand: string; legend: string; year: number; srcImage: string; movementTitle?: string }
-  > = {};
-  const allItems = collectionService.getAllCollectionItems();
-  for (const [key, entry] of Object.entries(allItems)) {
-    searchData[key] = {
-      brand: entry.brand,
-      legend: entry.legend,
-      year: entry.year,
-      srcImage: entry.srcImage,
-      movementTitle: entry.movementTitle || undefined,
-    };
-  }
-
   const divisionBackgrounds = selectMultipleBackgroundImages(4);
   const heroBackgroundUrl = getExternalResource(background_images_paths[0]);
 
@@ -79,7 +64,7 @@ export default function Page() {
     return (
       <div>
         <Suspense fallback={<div className="h-64" />}>
-          <SpecialItemsComponent specialItems={specialItems} searchData={searchData} />
+          <SpecialItemsComponent specialItems={specialItems} />
         </Suspense>
 
         <div className="section-container">

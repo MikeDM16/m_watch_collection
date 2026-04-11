@@ -62,6 +62,12 @@ const details: WatchDetails = {
     "public/assets/Images/Tissoure/1975_Tissoure_Cronometro_17J/IMG_1831.JPG",
   ],
 
+  saleReport: {
+    price: 69,
+    date: "26/03/2026",
+    url: "https://www.catawiki.com/en/l/102323210",
+  },
+
   technicalData: {
     features: [featuresEnum.DATE, featuresEnum.MECHANICAL],
 

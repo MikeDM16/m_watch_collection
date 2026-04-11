@@ -71,6 +71,12 @@ const details: WatchDetails = {
     "public/assets/Images/Tissot/1942_Tissot_Antimagnetic_27-2/IMG_1843.JPG",
   ],
 
+  saleReport: {
+    price: 200,
+    date: "26/03/2026",
+    url: "https://www.catawiki.com/en/l/102323306",
+  },
+
   technicalData: {
     features: [
       featuresEnum.DATE,

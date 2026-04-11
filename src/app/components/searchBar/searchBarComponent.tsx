@@ -11,7 +11,7 @@ import { Input } from "@/components/ui/input";
 import { Search } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 
 export interface SearchEntry {
   brand: string;
@@ -21,15 +21,31 @@ export interface SearchEntry {
   movementTitle?: string;
 }
 
-export default function SearchBarComponent({ data }: { data: Record<string, SearchEntry> }) {
+export default function SearchBarComponent() {
+  const [data, setData] = useState<Record<string, SearchEntry> | null>(null);
   const [query, setQuery] = useState("");
   const [filtered, setFiltered] = useState<string[]>([]);
   const [isOpen, setIsOpen] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
   const wrapperSearchBarRef = useRef<HTMLDivElement>(null);
+
+  const loadSearchData = useCallback(async () => {
+    if (data || isLoading) return;
+    setIsLoading(true);
+    try {
+      const res = await fetch("/api/search-index");
+      const json = await res.json();
+      setData(json);
+    } finally {
+      setIsLoading(false);
+    }
+  }, [data, isLoading]);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const searchValue = e.target.value;
     setQuery(searchValue);
+
+    if (!data) return;
 
     const matches = Object.entries(data).filter(([key, value]) => {
       const search = searchValue.toLowerCase();
@@ -59,14 +75,23 @@ export default function SearchBarComponent({ data }: { data: Record<string, Sear
     };
   }, []);
 
+  // Re-run search when data arrives after user already typed
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  useEffect(() => {
+    if (data && query) {
+      handleChange({ target: { value: query } } as React.ChangeEvent<HTMLInputElement>);
+    }
+  }, [data]);
+
   return (
     <div ref={wrapperSearchBarRef} className="w-full max-w-md mx-auto mt-10 relative">
       <div className="flex items-center gap-2 bg-white shadow-md rounded-2xl p-2">
         <Search className="w-5 h-5 text-gray-500" />
         <Input
-          placeholder="Search by Brand, Model or Movement name..."
+          placeholder={isLoading ? "Loading search data..." : "Search by Brand, Model or Movement name..."}
           value={query}
           onChange={handleChange}
+          onFocus={loadSearchData}
           className="border-none focus-visible:ring-0 focus-visible:ring-offset-0"
         />
       </div>
@@ -75,7 +100,7 @@ export default function SearchBarComponent({ data }: { data: Record<string, Sear
         <Card className="absolute w-full mt-2 p-2 z-10 bg-white rounded-xl shadow-lg">
           <ul className="divide-y">
             {filtered.map((item_key, index) => {
-              const entry = data[item_key];
+              const entry = data![item_key];
               const imagesrc = getExternalResource(
                 getImgURLForSizeType(entry.srcImage, SizeType.THUMBNAIL),
               );

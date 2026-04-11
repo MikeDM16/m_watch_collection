@@ -75,6 +75,12 @@ const details: WatchDetails = {
     "public/assets/Images/Porsche_Design/2012_Porsche_Design_Dashboard_P6620_Blue/IMG_2200.JPG",
   ],
 
+  saleReport: {
+    price: 1800,
+    date: "09/04/2026",
+    url: "https://www.catawiki.com/en/l/102730532",
+  },
+
   technicalData: {
     features: [featuresEnum.DATE, featuresEnum.AUTOMATIC_CHRONOGRAPH],
 

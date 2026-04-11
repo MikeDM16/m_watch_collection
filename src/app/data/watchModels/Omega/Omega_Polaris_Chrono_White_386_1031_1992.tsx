@@ -77,6 +77,12 @@ const details: WatchDetails = {
     "public/assets/Images/Omega/1992_Omega_Polaris_Ratrappante_386_1031/IMG_0672.JPG",
   ],
 
+  saleReport: {
+    price: 1001,
+    date: "04/04/2026",
+    url: "https://www.catawiki.com/en/l/102635139",
+  },
+
   technicalData: {
     features: [featuresEnum.DATE, featuresEnum.WR_30_METERS],
 

@@ -1,7 +1,7 @@
-import { chromium } from "playwright";
-import { writeFileSync, mkdirSync } from "fs";
-import { join, dirname } from "path";
+import { mkdirSync, writeFileSync } from "fs";
+import { dirname, join } from "path";
 import { fileURLToPath } from "url";
+import { chromium } from "playwright";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const RESULTS_DIR = join(__dirname, "results");
@@ -59,8 +59,7 @@ function classifyResource(type, url) {
   if (type === "stylesheet") return "stylesheet";
   if (type === "script") return "script";
   if (type === "font") return "font";
-  if (type === "image" || /\.(jpg|jpeg|png|gif|webp|avif|svg|ico)(\?|$)/i.test(url))
-    return "image";
+  if (type === "image" || /\.(jpg|jpeg|png|gif|webp|avif|svg|ico)(\?|$)/i.test(url)) return "image";
   if (type === "fetch" || type === "xhr") return "fetch";
   return "other";
 }
@@ -222,9 +221,7 @@ async function main() {
         runResults.map((r) => r.perfMetrics.domContentLoaded).filter(Boolean),
       ),
       loadEvent: stats(runResults.map((r) => r.perfMetrics.loadEvent).filter(Boolean)),
-      domInteractive: stats(
-        runResults.map((r) => r.perfMetrics.domInteractive).filter(Boolean),
-      ),
+      domInteractive: stats(runResults.map((r) => r.perfMetrics.domInteractive).filter(Boolean)),
       totalLoadTime: stats(runResults.map((r) => r.loadTime)),
     };
 
@@ -321,7 +318,9 @@ async function main() {
   console.log(
     `  ${"Page".padEnd(40)} ${"TTFB".padStart(8)} ${"FCP".padStart(8)} ${"LCP".padStart(8)} ${"Load".padStart(8)} ${"Reqs".padStart(6)} ${"Size".padStart(10)}`,
   );
-  console.log(`  ${"─".repeat(40)} ${"─".repeat(8)} ${"─".repeat(8)} ${"─".repeat(8)} ${"─".repeat(8)} ${"─".repeat(6)} ${"─".repeat(10)}`);
+  console.log(
+    `  ${"─".repeat(40)} ${"─".repeat(8)} ${"─".repeat(8)} ${"─".repeat(8)} ${"─".repeat(8)} ${"─".repeat(6)} ${"─".repeat(10)}`,
+  );
   for (const [path, data] of Object.entries(results)) {
     console.log(
       `  ${data.name.padEnd(40)} ${(data.timing.ttfb.avg + "ms").padStart(8)} ${(data.timing.fcp.avg + "ms").padStart(8)} ${(data.timing.lcp.avg + "ms").padStart(8)} ${(data.timing.totalLoadTime.avg + "ms").padStart(8)} ${String(data.network.totalRequests.avg).padStart(6)} ${formatBytes(data.network.totalTransferSize.avg).padStart(10)}`,

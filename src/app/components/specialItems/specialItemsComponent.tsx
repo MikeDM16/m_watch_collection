@@ -8,7 +8,7 @@ import {
 } from "@/app/services/commonFunctions";
 
 import ImageSliderComponent, { ImageSliderEntry } from "../common/ImageSliderComponent";
-import SearchBarComponent, { SearchEntry } from "../searchBar/searchBarComponent";
+import SearchBarComponent from "../searchBar/searchBarComponent";
 
 export interface SpecialItemEntry {
   srcImage: string;
@@ -20,10 +20,9 @@ export interface SpecialItemEntry {
 
 interface SpecialItemsProps {
   specialItems: SpecialItemEntry[];
-  searchData: Record<string, SearchEntry>;
 }
 
-export default function SpecialItemsComponent({ specialItems, searchData }: SpecialItemsProps) {
+export default function SpecialItemsComponent({ specialItems }: SpecialItemsProps) {
   const swiperItems: ImageSliderEntry[] = specialItems.map((entry) => {
     return {
       imageSrc: getExternalResource(getImgURLForSizeType(entry.srcImage, SizeType.GALLERY)),
@@ -51,7 +50,7 @@ export default function SpecialItemsComponent({ specialItems, searchData }: Spec
           <span> or </span>
           <b>click</b> <span>over the slideshow entries to open their detail page.</span>
         </div>
-        <SearchBarComponent data={searchData} />
+        <SearchBarComponent />
       </div>
       <div className="section-container">{ImageSliderComponent(swiperItems)}</div>
     </div>

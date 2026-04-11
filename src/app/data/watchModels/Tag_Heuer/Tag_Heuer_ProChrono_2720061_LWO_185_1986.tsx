@@ -88,6 +88,12 @@ const details: WatchDetails = {
     "public/assets/Images/Tag_Heuer/1986_Tag_Heuer_Professional_200_LWO_185/IMG_1900.JPG",
   ],
 
+  saleReport: {
+    price: 709,
+    date: "04/04/2026",
+    url: "https://www.catawiki.com/en/l/102605952",
+  },
+
   technicalData: {
     features: [
       featuresEnum.DATE,

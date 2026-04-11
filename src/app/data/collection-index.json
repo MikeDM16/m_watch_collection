@@ -28,7 +28,11 @@
     "collectionSet": false,
     "series": "Antimagnetic",
     "movementTitle": "Tissot 27-2",
-    "saleReport": null,
+    "saleReport": {
+      "price": 200,
+      "date": "26/03/2026",
+      "url": "https://www.catawiki.com/en/l/102323306"
+    },
     "modelFile": "Tissot/Tissot_Antimagnetic_27_2_1940"
   },
   "Universal Geneve Mécanique Cal. 262": {
@@ -1566,7 +1570,11 @@
     "collectionSet": false,
     "series": "Calendar",
     "movementTitle": "Vostok Cal. 2605",
-    "saleReport": null,
+    "saleReport": {
+      "price": 69,
+      "date": "26/03/2026",
+      "url": "https://www.catawiki.com/en/l/102323210"
+    },
     "modelFile": "Tissoure/Tissoure_Cronometro_17J_1975"
   },
   "Lucerne Automatic 25 Jewels": {
@@ -2132,7 +2140,11 @@
     "collectionSet": false,
     "series": "Heritage",
     "movementTitle": "Valjoux 7734",
-    "saleReport": null,
+    "saleReport": {
+      "price": 1180,
+      "date": "05/04/2026",
+      "url": "https://www.catawiki.com/en/l/102665285"
+    },
     "modelFile": "Tissot/Tissot_Heritage_130th_Anniversary_7734_1983"
   },
   "Omega Seamaster Polaris Titanium 396.1100": {
@@ -2232,7 +2244,11 @@
     "collectionSet": false,
     "series": "Professional 2000 Series",
     "movementTitle": "LWO 185.30 - Dubois Depraz 2000 on ETA 955.232",
-    "saleReport": null,
+    "saleReport": {
+      "price": 709,
+      "date": "04/04/2026",
+      "url": "https://www.catawiki.com/en/l/102605952"
+    },
     "modelFile": "Tag_Heuer/Tag_Heuer_ProChrono_2720061_LWO_185_1986"
   },
   "Omega Seamaster Polaris 396.1022": {
@@ -2725,7 +2741,11 @@
     "collectionSet": false,
     "series": "Polaris",
     "movementTitle": "Omega Cal. 1675",
-    "saleReport": null,
+    "saleReport": {
+      "price": 1001,
+      "date": "04/04/2026",
+      "url": "https://www.catawiki.com/en/l/102635139"
+    },
     "modelFile": "Omega/Omega_Polaris_Chrono_White_386_1031_1992"
   },
   "Seiko 8M25 Age of Discovery": {
@@ -4481,7 +4501,11 @@
     "collectionSet": false,
     "series": "Dashboard Chronograph",
     "movementTitle": "Valjoux 7753",
-    "saleReport": null,
+    "saleReport": {
+      "price": 1800,
+      "date": "09/04/2026",
+      "url": "https://www.catawiki.com/en/l/102730532"
+    },
     "modelFile": "Porsche_Design/Porsche_Design_P6620_Blue_Titanium_2012"
   },
   "Tissot Heritage Visodate Automatic": {

@@ -57,10 +57,7 @@ function main() {
   console.log(`  Current:  ${current.meta.label} (${current.meta.timestamp})`);
   console.log(`  Baseline runs: ${baseline.meta.runs}  |  Current runs: ${current.meta.runs}\n`);
 
-  const allPages = new Set([
-    ...Object.keys(baseline.pages),
-    ...Object.keys(current.pages),
-  ]);
+  const allPages = new Set([...Object.keys(baseline.pages), ...Object.keys(current.pages)]);
 
   for (const pagePath of allPages) {
     const base = baseline.pages[pagePath];
@@ -78,9 +75,7 @@ function main() {
     console.log(
       `  │ ${"Metric".padEnd(25)} ${"Baseline".padStart(10)} ${"Current".padStart(10)} ${"Change".padStart(12)}`,
     );
-    console.log(
-      `  │ ${"─".repeat(25)} ${"─".repeat(10)} ${"─".repeat(10)} ${"─".repeat(12)}`,
-    );
+    console.log(`  │ ${"─".repeat(25)} ${"─".repeat(10)} ${"─".repeat(10)} ${"─".repeat(12)}`);
 
     // Timing metrics
     const timingMetrics = [
@@ -162,8 +157,7 @@ function main() {
     baselinePages.reduce((s, p) => s + (p.timing?.totalLoadTime?.avg ?? 0), 0) /
     baselinePages.length;
   const avgCurrLoad =
-    currentPages.reduce((s, p) => s + (p.timing?.totalLoadTime?.avg ?? 0), 0) /
-    currentPages.length;
+    currentPages.reduce((s, p) => s + (p.timing?.totalLoadTime?.avg ?? 0), 0) / currentPages.length;
   const avgBaseSize =
     baselinePages.reduce((s, p) => s + (p.network?.totalTransferSize?.avg ?? 0), 0) /
     baselinePages.length;
