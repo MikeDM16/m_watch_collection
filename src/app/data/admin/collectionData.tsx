@@ -691,6 +691,19 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     specialCollectionItem: false,
   },
 
+  "Girard Perregaux Ferrari Ref. 8020": {
+    brand: BrandsEnum.GIRARD_PERREGAUX,
+    legend: "Girard Perregaux Ferrari Ref. 8020",
+    year: 2004,
+    type: WatchTypeEnum.SPORTS,
+    srcImage:
+      "public/assets/Images/Girard_Perregaux/2024_Girard_Perregaux_Ferrari_R8020_45J/IMG_2575.JPG",
+    hoverSrc:
+      "public/assets/Images/Girard_Perregaux/2024_Girard_Perregaux_Ferrari_R8020_45J/IMG_2569.JPG",
+    href: require("../watchModels/Girard_Perregaux/Girard_Perregaux_Ferrari_Ref_8020_2004"),
+    specialCollectionItem: false,
+  },
+
   "Mercedes Benz SLK Limited Edition": {
     brand: BrandsEnum.MERCEDES_BENZ,
     legend: "Mercedes Benz SLK Limited Edition",
@@ -1547,6 +1560,17 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     specialCollectionItem: false,
   },
 
+  "Breitling Sextant B55047": {
+    brand: BrandsEnum.BREITLING,
+    legend: "Breitling Sextant B55047",
+    year: 1988,
+    type: WatchTypeEnum.SPORTS,
+    srcImage: "public/assets/Images/Breitling/1998_Breitling_Sextant_B55047/IMG_2480.JPG",
+    hoverSrc: "public/assets/Images/Breitling/1998_Breitling_Sextant_B55047/IMG_2476.JPG",
+    href: require("../watchModels/Breitling/Breitling_Sextant_B55047_1998"),
+    specialCollectionItem: false,
+  },
+
   "Raymond Weil Tango 5563": {
     brand: BrandsEnum.RAYMOND_WEIL,
     legend: "Raymond Weil Tango 5563",
@@ -2057,6 +2081,17 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     href: require("../watchModels/Pryngeps/Pryngeps_Automatic_Chronograph_Valjoux_7750"),
     specialCollectionItem: false,
   },
+  "Arauto Silver Tuxedo Unitas 6325": {
+    brand: BrandsEnum.ARAUTO,
+    legend: "Arauto Silver Tuxedo Unitas 6325",
+    year: 1974,
+    type: WatchTypeEnum.CASUAL,
+    srcImage: "public/assets/Images/Arauto/1974_Arauto_Silver_Tuxedo_U6325_17J/IMG_2721.JPG",
+    hoverSrc: "public/assets/Images/Arauto/1974_Arauto_Silver_Tuxedo_U6325_17J/IMG_2723.JPG",
+    href: require("../watchModels/Arauto/Arauto_Silver_Tuxedo_Unitas_6325_1974"),
+    specialCollectionItem: false,
+  },
+
   "Hipco Incabloc 17 Jewels": {
     brand: BrandsEnum.HIPCO,
     legend: "Hipco Incabloc 17 Jewels",
@@ -2228,6 +2263,28 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     href: require("../watchModels/Tissot/Tissot_Seastar_Lobster_Automatic_1974"),
     specialCollectionItem: false,
   },
+  "Said Blue Linen Unitas 6325": {
+    brand: BrandsEnum.SAID,
+    legend: "Said Blue Linen Unitas 6325",
+    year: 1973,
+    type: WatchTypeEnum.CASUAL,
+    srcImage: "public/assets/Images/Said/1973_Said_Blue_Linen_U6325_17J/IMG_2623.JPG",
+    hoverSrc: "public/assets/Images/Said/1973_Said_Blue_Linen_U6325_17J/IMG_2640.JPG",
+    href: require("../watchModels/Said/Said_Blue_Linen_Unitas_6325_1973"),
+    specialCollectionItem: false,
+  },
+
+  "1972 Tecnal Green Abyss Duromat 7522": {
+    brand: BrandsEnum.TECNAL,
+    legend: "1972 Tecnal Green Abyss Duromat 7522",
+    year: 1972,
+    type: WatchTypeEnum.CASUAL,
+    srcImage: "public/assets/Images/Tecnal/1972_Tecnal_Green_abyss_7522_25J/IMG_2760.JPG",
+    hoverSrc: "public/assets/Images/Tecnal/1972_Tecnal_Green_abyss_7522_25J/IMG_2747.JPG",
+    href: require("../watchModels/Tecnal/Tecnal_Green_Abyss_Duromat_7522_1972"),
+    specialCollectionItem: false,
+  },
+
   "Utina Sunburst FE 233 17 Jewels": {
     brand: BrandsEnum.UTINA,
     legend: "Utina Sunburst FE 233 17 Jewels",
@@ -2396,6 +2453,18 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     href: require("../watchModels/Cauny/Cauny_Prima_Calendario_17_Jewels_1967"),
     specialCollectionItem: false,
   },
+
+  "Jomel Antimagnetic Lorsa 238": {
+    brand: BrandsEnum.JOMEL,
+    legend: "Jomel Antimagnetic Lorsa 238",
+    year: 1965,
+    type: WatchTypeEnum.CASUAL,
+    srcImage: "public/assets/Images/Jomel/1965_Jomel_Lorsa_238_17J/IMG_2691.JPG",
+    hoverSrc: "public/assets/Images/Jomel/1965_Jomel_Lorsa_238_17J/IMG_2683.JPG",
+    href: require("../watchModels/Jomel/Jomel_Antimagnetic_Lorsa_238_1965"),
+    specialCollectionItem: false,
+  },
+
   "Certina DS Turtle Automatic 27 Jewels": {
     brand: BrandsEnum.CERTINA,
     legend: "Certina DS Turtle Automatic 27 Jewels",
@@ -2911,16 +2980,6 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     hoverSrc: "public/assets/Images/Omega/1934_OmegaStaybrite_Tank_CK3516/IMG_0093.JPG",
     href: require("../watchModels/Omega/Omega_StayBrite_CK3416_T17_1934"),
     specialCollectionItem: true,
-  },
-  "1974 Arauto Silver Tuxedo Unitas 6325": {
-    brand: BrandsEnum.ARAUTO,
-    legend: "1974 Arauto Silver Tuxedo Unitas 6325",
-    year: 1974,
-    type: WatchTypeEnum.CASUAL,
-    srcImage: "public/assets/Images/Arauto/1974_Arauto_Silver Tuxedo Unitas 6325/IMG_XXXX.JPG",
-    hoverSrc: "public/assets/Images/Arauto/1974_Arauto_Silver Tuxedo Unitas 6325/IMG_XXXX.JPG",
-    href: require("../watchModels/Arauto/Arauto_Silver_Tuxedo_Unitas_6325_1974"),
-    specialCollectionItem: false,
   },
 };
 

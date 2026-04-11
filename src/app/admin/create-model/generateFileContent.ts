@@ -184,6 +184,7 @@ const ${data.variableName}: Caliber = {
   usefullLinks: {},
   sliderImages: [
     "${data.imgFolder}/IMG_XXXX.JPG",
+    "${data.imgFolder}/IMG_XXXX.JPG",
   ],
   details: {
     manufacturer: CaliberBrandsEnum.${data.manufacturer},

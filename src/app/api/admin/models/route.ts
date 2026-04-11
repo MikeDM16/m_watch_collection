@@ -39,9 +39,7 @@ function listMovementKeys(): { key: string; importPath: string }[] {
   // Pattern: import VAR_NAME from "../movements/Manufacturer/File";
   const varToPath: Record<string, string> = {};
   for (const line of content.split("\n")) {
-    const importMatch = line.match(
-      /^import\s+(\w+)\s+from\s+"\.\.\/movements\/([^"]+)"/,
-    );
+    const importMatch = line.match(/^import\s+(\w+)\s+from\s+"\.\.\/movements\/([^"]+)"/);
     if (importMatch) {
       varToPath[importMatch[1]] = `movements/${importMatch[2]}`;
     }

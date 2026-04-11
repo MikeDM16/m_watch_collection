@@ -3,6 +3,7 @@ export const CaseDiameterEnum = {
   D_24: "24 mm",
   D_25: "25 mm",
   D_27: "27 mm",
+  D_28: "28 mm",
   D_32: "32 mm",
   D_33: "33 mm",
   D_34: "34 mm",

@@ -25,15 +25,53 @@ import { WatchDetails } from "../../watchDetails";
 
 const details: WatchDetails = {
   title: "1974 Arauto Silver Tuxedo Unitas 6325",
+
   sliderImages: [
-    "public/assets/Images/Arauto/1974_Arauto_Silver Tuxedo Unitas 6325/IMG_XXXX.JPG",
+    "public/assets/Images/Arauto/1974_Arauto_Silver_Tuxedo_U6325_17J/IMG_2743.JPG",
+
+    "public/assets/Images/Arauto/1974_Arauto_Silver_Tuxedo_U6325_17J/IMG_2701.JPG",
+    "public/assets/Images/Arauto/1974_Arauto_Silver_Tuxedo_U6325_17J/IMG_2703.JPG",
+    "public/assets/Images/Arauto/1974_Arauto_Silver_Tuxedo_U6325_17J/IMG_2706.JPG",
+    "public/assets/Images/Arauto/1974_Arauto_Silver_Tuxedo_U6325_17J/IMG_2708.JPG",
+    "public/assets/Images/Arauto/1974_Arauto_Silver_Tuxedo_U6325_17J/IMG_2704.JPG",
+    "public/assets/Images/Arauto/1974_Arauto_Silver_Tuxedo_U6325_17J/IMG_2705.JPG",
+
+    "public/assets/Images/Arauto/1974_Arauto_Silver_Tuxedo_U6325_17J/IMG_2716.JPG",
+    "public/assets/Images/Arauto/1974_Arauto_Silver_Tuxedo_U6325_17J/IMG_2717.JPG",
+    "public/assets/Images/Arauto/1974_Arauto_Silver_Tuxedo_U6325_17J/IMG_2718.JPG",
+    "public/assets/Images/Arauto/1974_Arauto_Silver_Tuxedo_U6325_17J/IMG_2719.JPG",
+    "public/assets/Images/Arauto/1974_Arauto_Silver_Tuxedo_U6325_17J/IMG_2721.JPG",
+    "public/assets/Images/Arauto/1974_Arauto_Silver_Tuxedo_U6325_17J/IMG_2723.JPG",
+    "public/assets/Images/Arauto/1974_Arauto_Silver_Tuxedo_U6325_17J/IMG_2724.JPG",
+    "public/assets/Images/Arauto/1974_Arauto_Silver_Tuxedo_U6325_17J/IMG_2725.JPG",
+
+    "public/assets/Images/Arauto/1974_Arauto_Silver_Tuxedo_U6325_17J/IMG_2710.JPG",
+    "public/assets/Images/Arauto/1974_Arauto_Silver_Tuxedo_U6325_17J/IMG_2711.JPG",
+    "public/assets/Images/Arauto/1974_Arauto_Silver_Tuxedo_U6325_17J/IMG_2713.JPG",
+    "public/assets/Images/Arauto/1974_Arauto_Silver_Tuxedo_U6325_17J/IMG_2714.JPG",
+    "public/assets/Images/Arauto/1974_Arauto_Silver_Tuxedo_U6325_17J/IMG_2715.JPG",
+
+    "public/assets/Images/Arauto/1974_Arauto_Silver_Tuxedo_U6325_17J/IMG_2726.JPG",
+    "public/assets/Images/Arauto/1974_Arauto_Silver_Tuxedo_U6325_17J/IMG_2727.JPG",
+    "public/assets/Images/Arauto/1974_Arauto_Silver_Tuxedo_U6325_17J/IMG_2728.JPG",
+    "public/assets/Images/Arauto/1974_Arauto_Silver_Tuxedo_U6325_17J/IMG_2729.JPG",
+    "public/assets/Images/Arauto/1974_Arauto_Silver_Tuxedo_U6325_17J/IMG_2730.JPG",
+    "public/assets/Images/Arauto/1974_Arauto_Silver_Tuxedo_U6325_17J/IMG_2731.JPG",
+    "public/assets/Images/Arauto/1974_Arauto_Silver_Tuxedo_U6325_17J/IMG_2732.JPG",
+    "public/assets/Images/Arauto/1974_Arauto_Silver_Tuxedo_U6325_17J/IMG_2733.JPG",
+    "public/assets/Images/Arauto/1974_Arauto_Silver_Tuxedo_U6325_17J/IMG_2734.JPG",
+    "public/assets/Images/Arauto/1974_Arauto_Silver_Tuxedo_U6325_17J/IMG_2735.JPG",
+    "public/assets/Images/Arauto/1974_Arauto_Silver_Tuxedo_U6325_17J/IMG_2736.JPG",
+    "public/assets/Images/Arauto/1974_Arauto_Silver_Tuxedo_U6325_17J/IMG_2737.JPG",
+    "public/assets/Images/Arauto/1974_Arauto_Silver_Tuxedo_U6325_17J/IMG_2738.JPG",
+    "public/assets/Images/Arauto/1974_Arauto_Silver_Tuxedo_U6325_17J/IMG_2739.JPG",
+    "public/assets/Images/Arauto/1974_Arauto_Silver_Tuxedo_U6325_17J/IMG_2740.JPG",
+    "public/assets/Images/Arauto/1974_Arauto_Silver_Tuxedo_U6325_17J/IMG_2741.JPG",
+    "public/assets/Images/Arauto/1974_Arauto_Silver_Tuxedo_U6325_17J/IMG_2742.JPG",
   ],
+
   technicalData: {
-    features: [
-    featuresEnum.SMALL_SECONDS,
-    featuresEnum.MECHANICAL,
-    featuresEnum.GOLD_PLATED_10M,
-    ],
+    features: [featuresEnum.SMALL_SECONDS, featuresEnum.MECHANICAL, featuresEnum.GOLD_PLATED_10M],
 
     information: {
       brand: BrandsEnum.ARAUTO,

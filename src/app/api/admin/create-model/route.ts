@@ -55,10 +55,12 @@ export async function POST(request: Request) {
     const collectionContent = fs.readFileSync(COLLECTION_DATA_FILE, "utf-8");
     const modelPath = `../watchModels/${brandFolder}/${filename.replace(".tsx", "")}`;
 
+    // Entry key drops the year prefix (first 5 chars: "YYYY ") since legend always starts with year
+    const entryKey = collectionEntry.legend.substring(5);
     const entry = `
-  "${collectionEntry.legend}": {
+  "${entryKey}": {
     brand: BrandsEnum.${collectionEntry.brandEnumKey},
-    legend: "${collectionEntry.legend}",
+    legend: "${entryKey}",
     year: ${collectionEntry.year},
     type: WatchTypeEnum.${collectionEntry.watchType},
     srcImage: "public/assets/Images/${brandFolder}/${collectionEntry.imgFolder}/IMG_XXXX.JPG",

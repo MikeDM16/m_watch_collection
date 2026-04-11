@@ -745,6 +745,20 @@
     },
     "modelFile": "Tissot/Tissot_Seastar_T12_Auto_1964"
   },
+  "Jomel Antimagnetic Lorsa 238": {
+    "brand": "Jomel",
+    "legend": "Jomel Antimagnetic Lorsa 238",
+    "year": 1965,
+    "type": "Casual",
+    "srcImage": "public/assets/Images/Jomel/1965_Jomel_Lorsa_238_17J/IMG_2691.JPG",
+    "hoverSrc": "public/assets/Images/Jomel/1965_Jomel_Lorsa_238_17J/IMG_2683.JPG",
+    "specialCollectionItem": false,
+    "collectionSet": false,
+    "series": "Antimagnetic",
+    "movementTitle": "Lorsa 238",
+    "saleReport": null,
+    "modelFile": "Jomel/Jomel_Antimagnetic_Lorsa_238_1965"
+  },
   "Certina DS Turtle Automatic 27 Jewels": {
     "brand": "Certina",
     "legend": "Certina DS Turtle Automatic 27 Jewels",
@@ -1143,6 +1157,20 @@
     },
     "modelFile": "Tissot/Tissot_Seastar_PR516_GL_784_1971"
   },
+  "1972 Tecnal Green Abyss Duromat 7522": {
+    "brand": "Tecnal",
+    "legend": "1972 Tecnal Green Abyss Duromat 7522",
+    "year": 1972,
+    "type": "Casual",
+    "srcImage": "public/assets/Images/Tecnal/1972_Tecnal_Green_abyss_7522_25J/IMG_2760.JPG",
+    "hoverSrc": "public/assets/Images/Tecnal/1972_Tecnal_Green_abyss_7522_25J/IMG_2747.JPG",
+    "specialCollectionItem": false,
+    "collectionSet": false,
+    "series": "Green Abyss",
+    "movementTitle": "Duromat 7522",
+    "saleReport": null,
+    "modelFile": "Tecnal/Tecnal_Green_Abyss_Duromat_7522_1972"
+  },
   "Utina Sunburst FE 233 17 Jewels": {
     "brand": "Utina",
     "legend": "Utina Sunburst FE 233 17 Jewels",
@@ -1174,6 +1202,34 @@
       "url": "https://www.catawiki.com/en/l/98682991"
     },
     "modelFile": "Tissot/Tissot_Seastar_T12_Chrono_Lemania_1972"
+  },
+  "Said Blue Linen Unitas 6325": {
+    "brand": "Said",
+    "legend": "Said Blue Linen Unitas 6325",
+    "year": 1973,
+    "type": "Casual",
+    "srcImage": "public/assets/Images/Said/1973_Said_Blue_Linen_U6325_17J/IMG_2623.JPG",
+    "hoverSrc": "public/assets/Images/Said/1973_Said_Blue_Linen_U6325_17J/IMG_2640.JPG",
+    "specialCollectionItem": false,
+    "collectionSet": false,
+    "series": "Blue Linen",
+    "movementTitle": "Unitas 6325",
+    "saleReport": null,
+    "modelFile": "Said/Said_Blue_Linen_Unitas_6325_1973"
+  },
+  "Arauto Silver Tuxedo Unitas 6325": {
+    "brand": "Arauto",
+    "legend": "Arauto Silver Tuxedo Unitas 6325",
+    "year": 1974,
+    "type": "Casual",
+    "srcImage": "public/assets/Images/Arauto/1974_Arauto_Silver_Tuxedo_U6325_17J/IMG_2721.JPG",
+    "hoverSrc": "public/assets/Images/Arauto/1974_Arauto_Silver_Tuxedo_U6325_17J/IMG_2723.JPG",
+    "specialCollectionItem": false,
+    "collectionSet": false,
+    "series": "Silver Tuxedo",
+    "movementTitle": "Unitas 6325",
+    "saleReport": null,
+    "modelFile": "Arauto/Arauto_Silver_Tuxedo_Unitas_6325_1974"
   },
   "Hipco Incabloc 17 Jewels": {
     "brand": "Hipco",
@@ -2286,6 +2342,20 @@
       "url": "https://www.catawiki.com/en/l/85968361-tag-heuer-professional-200-nos-dd2000-26-jewels-chronograph-ref-262-006-1-men-1987"
     },
     "modelFile": "Tag_Heuer/Tag_Heuer_ProChrono_2620061_1987"
+  },
+  "Breitling Sextant B55047": {
+    "brand": "Breitling",
+    "legend": "Breitling Sextant B55047",
+    "year": 1988,
+    "type": "Sports",
+    "srcImage": "public/assets/Images/Breitling/1998_Breitling_Sextant_B55047/IMG_2480.JPG",
+    "hoverSrc": "public/assets/Images/Breitling/1998_Breitling_Sextant_B55047/IMG_2476.JPG",
+    "specialCollectionItem": false,
+    "collectionSet": false,
+    "series": "Vintage Series",
+    "movementTitle": "Frédéric Piguet 1270",
+    "saleReport": null,
+    "modelFile": "Breitling/Breitling_Sextant_B55047_1998"
   },
   "Raymond Weil Tango 5563": {
     "brand": "Raymond Weil",
@@ -3761,6 +3831,20 @@
       "url": "https://www.catawiki.com/en/l/98063593"
     },
     "modelFile": "Tissot/Tissot_Heritage_150th_COSC_2003"
+  },
+  "Girard Perregaux Ferrari Ref. 8020": {
+    "brand": "Girard Perregaux",
+    "legend": "Girard Perregaux Ferrari Ref. 8020",
+    "year": 2004,
+    "type": "Sports",
+    "srcImage": "public/assets/Images/Girard_Perregaux/2024_Girard_Perregaux_Ferrari_R8020_45J/IMG_2575.JPG",
+    "hoverSrc": "public/assets/Images/Girard_Perregaux/2024_Girard_Perregaux_Ferrari_R8020_45J/IMG_2569.JPG",
+    "specialCollectionItem": false,
+    "collectionSet": false,
+    "series": "Ferrari",
+    "movementTitle": "Girard Perregaux 2280",
+    "saleReport": null,
+    "modelFile": "Girard_Perregaux/Girard_Perregaux_Ferrari_Ref_8020_2004"
   },
   "Mercedes Benz SLK Limited Edition": {
     "brand": "Mercedes Benz",

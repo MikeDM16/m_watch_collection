@@ -7,6 +7,7 @@ import CERTINA_331 from "../movements/Certina/Certina_331_15J";
 import DD_2000_ETA_955_232 from "../movements/Debois_Depraz/DD_2000_955";
 import DD_2000_ETA_2982 from "../movements/Debois_Depraz/DD_2000_2892";
 import DOXA_83_4_987_17J from "../movements/Doxa/Doxa_83_4_987_17J";
+import Duromat_7522 from "../movements/Duromat/Duromat_7522";
 import EBERHARD_16000_17J from "../movements/Eberhard/Eberhard_16000_17J";
 import ETA_C07_111 from "../movements/ETA/C07_111";
 import ETA_251_251 from "../movements/ETA/ETA_251_251_27J";
@@ -44,11 +45,13 @@ import FE_TRIPLE_CALENDAR_5J from "../movements/FE/FE_Triple_Calendar_5J";
 import FHF_96_4 from "../movements/FHF/FHF_96_4_17J";
 import FHF_974 from "../movements/FHF/FHF_974_17J";
 import FORTIS_AV_21J from "../movements/Fortis/Fortis_AV_21_jewels";
+import Girard_Perregaux_2280 from "../movements/Girard_Perregaux/Girard_Perregaux_2280";
 import Landeron_48_17J from "../movements/Landeron/Landeron_48_17J";
 import Landeron_51_17J from "../movements/Landeron/Landeron_51_17J_";
 import Landeron_159_17J from "../movements/Landeron/Landeron_159_17J";
 import LEMANIA_1281_17J from "../movements/Lemania/Lemania_1281_17_Jewels";
 import LEMANIA_1341 from "../movements/Lemania/Lemania_1341_17_Jewels";
+import Lorsa_238 from "../movements/Lorsa/Lorsa_238";
 import MIYOTA_OS10 from "../movements/Miyota/OS10";
 import MIYOTA_OS60 from "../movements/Miyota/OS60";
 import OMEGA_30T2 from "../movements/Omega/Omega_30T2_15J";
@@ -103,6 +106,7 @@ import TISSOT_794 from "../movements/Tissot/794_21J";
 import TISSOT_2031 from "../movements/Tissot/2031";
 import TISSOT_2060_7734_17J from "../movements/Tissot/2060_7734_17J";
 import TISSOT_2170 from "../movements/Tissot/2170_17J";
+import UNITAS_6325 from "../movements/Unitas/Unitas_6325";
 import UNITAS_6380 from "../movements/Unitas/Unitas_6380";
 import UNIVERSAL_GENEVE_262_17J from "../movements/Universal_Geneve/UG_Cal_262_17J";
 import VALJOIX_7734_17J from "../movements/Valjoux/7734_17J";
@@ -114,7 +118,6 @@ import ZENITH_106_15J from "../movements/Zenith/106_15J";
 import ZENITH_EL_PRIMERO_400Z from "../movements/Zenith/El_Primero_400Z";
 import ZENITH_EL_PRIMERO_4021 from "../movements/Zenith/El_Primero_4021";
 import ZENITH_P_12_4_50 from "../movements/Zenith/P_12_4_50";
-import UNITAS_6325 from "../movements/Unitas/Unitas_6325";
 
 // Types re-exported from caliberTypes.ts for backwards compatibility
 export type { Caliber, CaliberTechinicalDetails } from "../caliberTypes";
@@ -266,4 +269,7 @@ export const MovementsDataDB: Record<string, Caliber> = {
   ZENITH_106_15J: ZENITH_106_15J,
 
   UNIVERSAL_GENEVE_262_17J: UNIVERSAL_GENEVE_262_17J,
+  Duromat_7522: Duromat_7522,
+  LORSA_238: Lorsa_238,
+  Girard_Perregaux_2280: Girard_Perregaux_2280,
 };
