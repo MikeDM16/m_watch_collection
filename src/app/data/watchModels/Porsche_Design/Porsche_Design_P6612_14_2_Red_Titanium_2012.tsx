@@ -20,7 +20,7 @@ import { MovementWatchTypeEnum } from "@/app/enums/movementWatchTypeEnum";
 import { WatchStyleEnum } from "@/app/enums/watchStyleEnum";
 import { WaterResistanceEnum } from "@/app/enums/waterResistanceEnum";
 
-import { MovementsDataDB } from "../../movementsData";
+import movement_ETA_2894_2 from "../../movements/ETA/ETA_2894_2_37J";
 import { WatchDetails } from "../../watchDetails";
 import { PorscheDesignBrandSeries } from "./PorscheDesignBrandSeries";
 
@@ -155,7 +155,7 @@ const details: WatchDetails = {
       color: ColorEnum.BLACK,
     },
 
-    movement: MovementsDataDB.ETA_2894_2,
+    movement: movement_ETA_2894_2,
   },
 };
 

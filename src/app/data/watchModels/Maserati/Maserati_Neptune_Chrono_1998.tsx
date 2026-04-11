@@ -20,7 +20,7 @@ import { MovementWatchTypeEnum } from "@/app/enums/movementWatchTypeEnum";
 import { WatchStyleEnum } from "@/app/enums/watchStyleEnum";
 import { WaterResistanceEnum } from "@/app/enums/waterResistanceEnum";
 
-import { MovementsDataDB } from "../../movementsData";
+import movement_ETA_Valjoux_7750_17J from "../../movements/ETA/ETA_Valjoux_7750_17J";
 import { WatchDetails } from "../../watchDetails";
 
 const details: WatchDetails = {
@@ -132,7 +132,7 @@ const details: WatchDetails = {
       color: ColorEnum.STEEL_GOLD_INNER_LINKS,
     },
 
-    movement: MovementsDataDB.ETA_Valjoux_7750_17J,
+    movement: movement_ETA_Valjoux_7750_17J,
   },
 };
 

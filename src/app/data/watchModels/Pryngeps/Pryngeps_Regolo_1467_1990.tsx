@@ -20,7 +20,7 @@ import { MovementWatchTypeEnum } from "@/app/enums/movementWatchTypeEnum";
 import { WatchStyleEnum } from "@/app/enums/watchStyleEnum";
 import { WaterResistanceEnum } from "@/app/enums/waterResistanceEnum";
 
-import { MovementsDataDB } from "../../movementsData";
+import movement_FE_TRIPLE_CALENDAR_5J from "../../movements/FE/FE_Triple_Calendar_5J";
 import { WatchDetails } from "../../watchDetails";
 
 const details: WatchDetails = {
@@ -97,7 +97,7 @@ const details: WatchDetails = {
       color: ColorEnum.BROWN,
     },
 
-    movement: MovementsDataDB.FE_TRIPLE_CALENDAR_5J,
+    movement: movement_FE_TRIPLE_CALENDAR_5J,
   },
 };
 

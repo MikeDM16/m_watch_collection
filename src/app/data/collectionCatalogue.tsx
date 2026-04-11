@@ -1,4 +1,4 @@
-import { CollectionEntry } from "./collectionData";
+import type { CollectionEntry } from "./admin/collectionData";
 
 export interface CollectionCatalogue {
   title: string;

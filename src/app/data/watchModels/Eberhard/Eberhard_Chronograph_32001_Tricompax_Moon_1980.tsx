@@ -20,7 +20,7 @@ import { MovementWatchTypeEnum } from "@/app/enums/movementWatchTypeEnum";
 import { WatchStyleEnum } from "@/app/enums/watchStyleEnum";
 import { WaterResistanceEnum } from "@/app/enums/waterResistanceEnum";
 
-import { MovementsDataDB } from "../../movementsData";
+import movement_VALJOUX_726_88_17J from "../../movements/Valjoux/Valjoux_726_88_17J";
 import { WatchDetails } from "../../watchDetails";
 import { EberhardBrandSeries } from "./EberhardBrandSeries";
 
@@ -119,7 +119,7 @@ const details: WatchDetails = {
       color: ColorEnum.BROWN,
     },
 
-    movement: MovementsDataDB.VALJOUX_726_88_17J,
+    movement: movement_VALJOUX_726_88_17J,
   },
 };
 

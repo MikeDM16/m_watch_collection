@@ -20,7 +20,7 @@ import { MovementWatchTypeEnum } from "@/app/enums/movementWatchTypeEnum";
 import { WatchStyleEnum } from "@/app/enums/watchStyleEnum";
 import { WaterResistanceEnum } from "@/app/enums/waterResistanceEnum";
 
-import { MovementsDataDB } from "../../movementsData";
+import movement_ETA_Valjoux_7750_25J from "../../movements/ETA/ETA_Valjoux_7750_25J";
 import { WatchDetails } from "../../watchDetails";
 import { MauriceLacroixBrandSeries } from "./MauriceLacroixBrandSeries";
 
@@ -114,7 +114,7 @@ const details: WatchDetails = {
       color: ColorEnum.GREY,
     },
 
-    movement: MovementsDataDB.ETA_Valjoux_7750_25J,
+    movement: movement_ETA_Valjoux_7750_25J,
   },
 };
 

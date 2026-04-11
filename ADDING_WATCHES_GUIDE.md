@@ -11,9 +11,10 @@ Quick reference for all files that need to be created or modified when adding wa
 - [ ] **1. Add watch images** to `public/assets/Images/[Brand]/[Year]_[Brand]_[Model]/`
 - [ ] **2. Create watch model file** at `src/app/data/watchModels/[Brand]/[Brand]_[Model]_[Year].tsx`
 - [ ] **3. Register in collectionData** — add entry to `CollectionItemsDB` in `src/app/data/collectionData.tsx`
-- [ ] **4. (If new brand)** Add enum value, brand entry, and BrandSeries file (see Section D)
-- [ ] **5. (If new series for existing brand)** Add series constant to `src/app/data/watchModels/[Brand]/[Brand]BrandSeries.tsx`
-- [ ] **6. (If part of a collection set)** Add entry inside `src/app/data/watchModels/[Brand]/[Brand]_collection_set.tsx`
+- [ ] **4. Regenerate collection index** — runs automatically on `npm run dev` and `npm run build` (or manually: `npm run generate-index`)
+- [ ] **5. (If new brand)** Add enum value, brand entry, and BrandSeries file (see Section D)
+- [ ] **6. (If new series for existing brand)** Add series constant to `src/app/data/watchModels/[Brand]/[Brand]BrandSeries.tsx`
+- [ ] **7. (If part of a collection set)** Add entry inside `src/app/data/watchModels/[Brand]/[Brand]_collection_set.tsx`
 
 ### Step 2 — Watch Model File
 
@@ -51,7 +52,7 @@ import { MovementWatchTypeEnum } from "@/app/enums/movementWatchTypeEnum";
 import { WatchStyleEnum } from "@/app/enums/watchStyleEnum";
 import { WaterResistanceEnum } from "@/app/enums/waterResistanceEnum";
 
-import { MovementsDataDB } from "../../movementsData";
+import MOVEMENT_VAR from "../../movements/[Manufacturer]/[CaliberFile]";
 import { WatchDetails } from "../../watchDetails";
 
 // If brand has a BrandSeries file:
@@ -94,7 +95,7 @@ const details: WatchDetails = {
       width: BraceletWidthEnum.W_XX,
       color: ColorEnum.XXXX,
     },
-    movement: MovementsDataDB.XXXX,
+    movement: MOVEMENT_VAR,
     // Alternative: inline Caliber object (see Section E)
   },
   // Optional:
@@ -107,7 +108,9 @@ export default details;
 
 **Notes:**
 
-- The `movement` field can reference `MovementsDataDB.KEY` or be an inline `Caliber` object
+- The `movement` field uses a **direct import** of the specific movement file (e.g., `import MOVEMENT_VAR from "../../movements/ETA/ETA_2824"`)
+- Look up the movement file path in `movementsData.tsx` (the movement registry) to find the correct import path
+- Alternatively, for unique movements, use an inline `Caliber` object (see Section E)
 - `features` accepts both `featuresEnum.XXX` entries and plain strings for custom notes
 - `luminiscentIndexes` can concatenate values: `LuminescentIndexesEnum.HANDS + LuminescentIndexesEnum.TRITIUM`
 - `calendar` can concatenate too: `CalendarWatchTypeEnum.AT_3_OCLOCK + CalendarWatchTypeEnum.CYCLOPS_LENS`
@@ -132,6 +135,16 @@ Add entry inside the `CollectionItemsDB` object:
 ```
 
 **Important:** The entry key **must match** the `legend` value. Uses `require()` (not ES import). Entries are auto-sorted by year at export via `sortCollection()`.
+
+### Step 3b — Regenerate collection-index.json
+
+The collection index is **automatically regenerated** on `npm run dev` and `npm run build` (via `predev`/`prebuild` scripts). You can also run it manually:
+
+```bash
+npm run generate-index
+```
+
+This extracts the listing metadata (brand, legend, year, type, srcImage, series, movementTitle, saleReport) into `src/app/data/collection-index.json`. The homepage and listing pages read from this JSON index instead of loading all watch model files, which keeps dev mode fast.
 
 ### Step 6 — Collection Set (if applicable)
 
@@ -166,7 +179,7 @@ import {
 } from "@/app/enums/caliberEnums";
 import { MovementWatchTypeEnum } from "@/app/enums/movementWatchTypeEnum";
 
-import { Caliber } from "../../movementsData";
+import type { Caliber } from "../../movementsData";
 
 const VARIABLE_NAME: Caliber = {
   title: "[Manufacturer] [Model]",
@@ -193,7 +206,7 @@ const VARIABLE_NAME: Caliber = {
 export default VARIABLE_NAME;
 ```
 
-**Note on relative import path:** The `Caliber` import uses `"../../movementsData"` (two levels up from the manufacturer subfolder). If the file is directly in `movements/`, use `"../movementsData"`.
+**Note on import:** The `Caliber` type import uses `import type` to avoid loading the movements registry at runtime. The path is relative to the movement file's location (`"../../caliberTypes"` from a manufacturer subfolder).
 
 ### Step 3 — Register in movementsData.tsx
 
@@ -348,11 +361,15 @@ movement: {
 ```
 src/app/
   data/
-    collectionData.tsx          <-- Central watch registry (require() imports)
-    movementsData.tsx           <-- Central movement registry (ES imports)
+    collection-index.json       <-- Lightweight JSON index (generated, used at runtime)
+    collectionIndex.ts          <-- CollectionIndexEntry type + JSON import
+    caliberTypes.ts             <-- Caliber, CaliberTechinicalDetails types
     watchDetails.tsx            <-- WatchDetails, TechnicalData, ModelInformation types
     collectionCatalogue.tsx     <-- CollectionCatalogue type (for collection sets)
     brands.tsx                  <-- brandsDB array
+    admin/
+      collectionData.tsx        <-- Watch registry (require() imports, admin/scripts only)
+      movementsData.tsx         <-- Movement registry (ES imports, admin/scripts only)
     watchModels/
       [Brand]/
         [Brand]_[Model]_[Year].tsx     <-- Watch definition (export default)
@@ -365,30 +382,13 @@ src/app/
   enums/
     brandsEnum.tsx              <-- BrandsEnum
     caliberEnums.tsx            <-- CaliberBrandsEnum, FrequencyEnum, JewelsNumberEnum, ReserveHoursEnum
-    watchTypeEnum.tsx           <-- CASUAL, SPORTS, DIVE, DRESS
-    watchStyleEnum.tsx          <-- DRESS, CASUAL, SPORTS, DIVE (display values)
-    movementWatchTypeEnum.tsx   <-- QUARTZ, MECHANIQUE, AUTOMATIC, etc.
-    featuresEnum.tsx            <-- FeatureStruct objects with name + description
-    caseDiameterEnum.tsx        <-- D_23 through D_45
-    caseThicknessEnum.tsx       <-- T_5 through T_15
-    caseMaterialEnum.tsx        <-- SS, gold plated, titanium, etc.
-    caseFinishingEnum.tsx       <-- polished, brushed, sandblasted, etc.
-    bezelTypeEnum.tsx           <-- without, tachymeter, dive, compass, etc.
-    colorEnum.tsx               <-- shared colors for dial + bracelet
-    braceletMaterialEnum.tsx    <-- leather, SS links, rubber, etc.
-    braceletWidthEnum.tsx       <-- W_14 through W_25
-    buckleTypeEnum.tsx
-    calendarWatchTypeEnum.tsx
-    caseBackDetailsEnum.tsx
-    crownWatchTypeEnum.tsx
-    crystalMaterialEnum.tsx
-    dialMarketsEnum.tsx
-    finishingDetailsEnum.tsx    <-- dial finishing (distinct from caseFinishingEnum)
-    luminescentIndexesEnum.tsx
-    waterResistanceEnum.tsx
+    (... all other enum files)
   services/
-    collectionService.tsx       <-- Data access layer (no changes needed)
-    brandsService.tsx           <-- Brand data access (no changes unless new brand)
+    collectionService.tsx       <-- Reads from collection-index.json (no changes needed)
+    brandsService.tsx           <-- Reads from collection-index.json (no changes unless new brand)
+scripts/
+  generate-collection-index.ts  <-- Regenerates collection-index.json from collectionData.tsx
+  generate-pdf-book.tsx         <-- Generates PDF book from collectionData.tsx
 public/assets/Images/
   [Brand]/[Year]_[Brand]_[Model]/     <-- Watch photos
   Movements/[Manufacturer]/[Caliber]/ <-- Movement photos
@@ -402,10 +402,11 @@ public/assets/Images/
 - **Image paths** start with `public/assets/Images/` and use forward slashes
 - **Watch model files** use `export default details` where `details: WatchDetails`
 - **Movement files** use `export default VARIABLE_NAME` where variable is `Caliber`
-- **collectionData.tsx** uses `require()` for watch imports (CommonJS lazy loading)
-- **movementsData.tsx** uses ES `import` for movement imports
+- **Watch models import movements directly** — `import MOVEMENT from "../../movements/[Manufacturer]/[File]"` (not via MovementsDataDB hub)
+- **collectionData.tsx** (in `data/admin/`) uses `require()` for watch imports — only used by scripts, not by the app at runtime
+- **movementsData.tsx** (in `data/admin/`) is the movement registry — used by admin API routes and scripts
+- **collection-index.json** is the runtime data source — regenerate with `npx tsx scripts/generate-collection-index.ts` after any changes to collectionData.tsx
 - **Entry key must match `legend`** in `CollectionItemsDB`
-- **Movements are referenced** via `MovementsDataDB.KEY` or inline Caliber objects
 - **No manual route updates** — Next.js dynamic routing handles it via `generateStaticParams()`
 - **Brand folder names** use underscores for spaces (e.g., `Tag_Heuer`, `Maurice_Lacroix`)
 - **All technical fields use enums** — diameter, thickness, material, finishing, bezel, dial color, bracelet material/width/color all use dedicated enums. Do NOT use hardcoded strings for these fields

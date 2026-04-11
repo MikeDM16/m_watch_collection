@@ -20,7 +20,7 @@ import { MovementWatchTypeEnum } from "@/app/enums/movementWatchTypeEnum";
 import { WatchStyleEnum } from "@/app/enums/watchStyleEnum";
 import { WaterResistanceEnum } from "@/app/enums/waterResistanceEnum";
 
-import { MovementsDataDB } from "../../movementsData";
+import movement_ZENITH_P_12_4_50 from "../../movements/Zenith/P_12_4_50";
 import { WatchDetails } from "../../watchDetails";
 import { ZenithBrandSeries } from "./ZenithBrandSeries";
 
@@ -110,7 +110,7 @@ const details: WatchDetails = {
       color: ColorEnum.BROWN,
     },
 
-    movement: MovementsDataDB.ZENITH_P_12_4_50,
+    movement: movement_ZENITH_P_12_4_50,
   },
 };
 

@@ -20,7 +20,7 @@ import { MovementWatchTypeEnum } from "@/app/enums/movementWatchTypeEnum";
 import { WatchStyleEnum } from "@/app/enums/watchStyleEnum";
 import { WaterResistanceEnum } from "@/app/enums/waterResistanceEnum";
 
-import { MovementsDataDB } from "../../movementsData";
+import movement_CERTINA_331 from "../../movements/Certina/Certina_331_15J";
 import { WatchDetails } from "../../watchDetails";
 import { CertinaBrandSeries } from "./CertinaBrandSeries";
 
@@ -104,7 +104,7 @@ const details: WatchDetails = {
       color: ColorEnum.BROWN,
     },
 
-    movement: MovementsDataDB.CERTINA_331,
+    movement: movement_CERTINA_331,
   },
 };
 

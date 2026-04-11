@@ -20,7 +20,7 @@ import { MovementWatchTypeEnum } from "@/app/enums/movementWatchTypeEnum";
 import { WatchStyleEnum } from "@/app/enums/watchStyleEnum";
 import { WaterResistanceEnum } from "@/app/enums/waterResistanceEnum";
 
-import { MovementsDataDB } from "../../movementsData";
+import movement_OMEGA_1141_45J from "../../movements/Omega/Omega_1141";
 import { WatchDetails } from "../../watchDetails";
 import { OmegaBrandSeries } from "./OmegaBrandSeries";
 
@@ -163,7 +163,7 @@ const details: WatchDetails = {
       color: ColorEnum.SS_POLISHED,
     },
 
-    movement: MovementsDataDB.OMEGA_1141_45J,
+    movement: movement_OMEGA_1141_45J,
   },
 };
 

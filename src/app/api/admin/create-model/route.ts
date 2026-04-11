@@ -4,7 +4,7 @@ import { NextResponse } from "next/server";
 
 const DATA_DIR = path.join(process.cwd(), "src", "app", "data");
 const WATCH_MODELS_DIR = path.join(DATA_DIR, "watchModels");
-const COLLECTION_DATA_FILE = path.join(DATA_DIR, "collectionData.tsx");
+const COLLECTION_DATA_FILE = path.join(DATA_DIR, "admin", "collectionData.tsx");
 
 interface CreateModelRequest {
   brandFolder: string;
@@ -53,7 +53,7 @@ export async function POST(request: Request) {
 
     // Register in collectionData.tsx
     const collectionContent = fs.readFileSync(COLLECTION_DATA_FILE, "utf-8");
-    const modelPath = `./watchModels/${brandFolder}/${filename.replace(".tsx", "")}`;
+    const modelPath = `../watchModels/${brandFolder}/${filename.replace(".tsx", "")}`;
 
     const entry = `
   "${collectionEntry.legend}": {

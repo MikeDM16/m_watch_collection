@@ -20,7 +20,7 @@ import { MovementWatchTypeEnum } from "@/app/enums/movementWatchTypeEnum";
 import { WatchStyleEnum } from "@/app/enums/watchStyleEnum";
 import { WaterResistanceEnum } from "@/app/enums/waterResistanceEnum";
 
-import { MovementsDataDB } from "../../movementsData";
+import movement_TISSOT_2031 from "../../movements/Tissot/2031";
 import { WatchDetails } from "../../watchDetails";
 import { TissotBrandSeries } from "./TissotBrandSeries";
 
@@ -103,7 +103,7 @@ const details: WatchDetails = {
       color: ColorEnum.BLACK,
     },
 
-    movement: MovementsDataDB.TISSOT_2031,
+    movement: movement_TISSOT_2031,
   },
 };
 

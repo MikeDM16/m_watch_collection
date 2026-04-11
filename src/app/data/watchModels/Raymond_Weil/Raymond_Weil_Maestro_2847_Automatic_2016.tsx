@@ -20,7 +20,7 @@ import { MovementWatchTypeEnum } from "@/app/enums/movementWatchTypeEnum";
 import { WatchStyleEnum } from "@/app/enums/watchStyleEnum";
 import { WaterResistanceEnum } from "@/app/enums/waterResistanceEnum";
 
-import { MovementsDataDB } from "../../movementsData";
+import movement_RAYMON_WEIL_4200 from "../../movements/Raymond_Weil/RW_4200";
 import { WatchDetails } from "../../watchDetails";
 import { RaymondWeilBrandSeries } from "./RaymondWeilBrandSeries";
 
@@ -108,7 +108,7 @@ const details: WatchDetails = {
       color: ColorEnum.BROWN,
     },
 
-    movement: MovementsDataDB.RAYMON_WEIL_4200,
+    movement: movement_RAYMON_WEIL_4200,
   },
 };
 

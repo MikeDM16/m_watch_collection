@@ -20,7 +20,7 @@ import { MovementWatchTypeEnum } from "@/app/enums/movementWatchTypeEnum";
 import { WatchStyleEnum } from "@/app/enums/watchStyleEnum";
 import { WaterResistanceEnum } from "@/app/enums/waterResistanceEnum";
 
-import { MovementsDataDB } from "../../movementsData";
+import movement_DOXA_83_4_987_17J from "../../movements/Doxa/Doxa_83_4_987_17J";
 import { WatchDetails } from "../../watchDetails";
 
 const details: WatchDetails = {
@@ -107,7 +107,7 @@ const details: WatchDetails = {
       color: ColorEnum.BLACK,
     },
 
-    movement: MovementsDataDB.DOXA_83_4_987_17J,
+    movement: movement_DOXA_83_4_987_17J,
   },
 };
 

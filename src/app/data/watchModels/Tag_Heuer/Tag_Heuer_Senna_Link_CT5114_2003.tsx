@@ -20,7 +20,7 @@ import { MovementWatchTypeEnum } from "@/app/enums/movementWatchTypeEnum";
 import { WatchStyleEnum } from "@/app/enums/watchStyleEnum";
 import { WaterResistanceEnum } from "@/app/enums/waterResistanceEnum";
 
-import { MovementsDataDB } from "../../movementsData";
+import movement_TAG_HEUER_CALIBER_16 from "../../movements/Tag_Heuer/Tag_Heuer_Caliber_16_25J";
 import { WatchDetails } from "../../watchDetails";
 import { TagHeuerBrandSeries } from "./TagHeuerBrandSeries";
 
@@ -150,7 +150,7 @@ const details: WatchDetails = {
       color: ColorEnum.SS_GREY,
     },
 
-    movement: MovementsDataDB.TAG_HEUER_CALIBER_16,
+    movement: movement_TAG_HEUER_CALIBER_16,
   },
 };
 

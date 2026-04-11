@@ -20,7 +20,7 @@ import { MovementWatchTypeEnum } from "@/app/enums/movementWatchTypeEnum";
 import { WatchStyleEnum } from "@/app/enums/watchStyleEnum";
 import { WaterResistanceEnum } from "@/app/enums/waterResistanceEnum";
 
-import { MovementsDataDB } from "../../movementsData";
+import movement_RONDA_5030D from "../../movements/Ronda/Ronda_5030D";
 import { WatchDetails } from "../../watchDetails";
 import { PorscheDesignBrandSeries } from "./PorscheDesignBrandSeries";
 
@@ -117,7 +117,7 @@ const details: WatchDetails = {
       color: ColorEnum.BROWN,
     },
 
-    movement: MovementsDataDB.RONDA_5030D,
+    movement: movement_RONDA_5030D,
   },
 };
 

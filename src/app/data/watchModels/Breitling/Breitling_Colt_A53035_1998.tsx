@@ -20,7 +20,7 @@ import { MovementWatchTypeEnum } from "@/app/enums/movementWatchTypeEnum";
 import { WatchStyleEnum } from "@/app/enums/watchStyleEnum";
 import { WaterResistanceEnum } from "@/app/enums/waterResistanceEnum";
 
-import { MovementsDataDB } from "../../movementsData";
+import movement_ETA_251_262 from "../../movements/ETA/ETA_251_262_27J";
 import { WatchDetails } from "../../watchDetails";
 import { BreitlingBrandSeries } from "./BreitlingBrandSeries";
 
@@ -161,7 +161,7 @@ const details: WatchDetails = {
       color: ColorEnum.SS_POLISHED,
     },
 
-    movement: MovementsDataDB.ETA_251_262,
+    movement: movement_ETA_251_262,
   },
 };
 

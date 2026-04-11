@@ -55,7 +55,7 @@ export function generateWatchModelFile(data: {
     'import { WatchStyleEnum } from "@/app/enums/watchStyleEnum";',
     'import { WaterResistanceEnum } from "@/app/enums/waterResistanceEnum";',
     "",
-    'import { MovementsDataDB } from "../../movementsData";',
+    'import { MovementsDataDB } from "../../admin/movementsData";',
     'import { WatchDetails } from "../../watchDetails";',
   ];
 
@@ -175,7 +175,7 @@ export function generateMovementFile(data: {
   ReserveHoursEnum,
 } from "@/app/enums/caliberEnums";
 import { MovementWatchTypeEnum } from "@/app/enums/movementWatchTypeEnum";
-import { Caliber } from "../../movementsData";
+import type { Caliber } from "../../caliberTypes";
 
 const ${data.variableName}: Caliber = {
   title: "${data.title}",

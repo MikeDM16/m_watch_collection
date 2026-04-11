@@ -20,7 +20,7 @@ import { MovementWatchTypeEnum } from "@/app/enums/movementWatchTypeEnum";
 import { WatchStyleEnum } from "@/app/enums/watchStyleEnum";
 import { WaterResistanceEnum } from "@/app/enums/waterResistanceEnum";
 
-import { MovementsDataDB } from "../../movementsData";
+import movement_POLJOT_3133_25J from "../../movements/Poljot/Polot_3133_25_Jewels";
 import { WatchDetails } from "../../watchDetails";
 
 const details: WatchDetails = {
@@ -139,7 +139,7 @@ const details: WatchDetails = {
       color: ColorEnum.BORDEAUX,
     },
 
-    movement: MovementsDataDB.POLJOT_3133_25J,
+    movement: movement_POLJOT_3133_25J,
   },
 };
 

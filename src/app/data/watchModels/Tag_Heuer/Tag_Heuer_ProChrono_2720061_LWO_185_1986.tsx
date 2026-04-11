@@ -20,7 +20,7 @@ import { MovementWatchTypeEnum } from "@/app/enums/movementWatchTypeEnum";
 import { WatchStyleEnum } from "@/app/enums/watchStyleEnum";
 import { WaterResistanceEnum } from "@/app/enums/waterResistanceEnum";
 
-import { MovementsDataDB } from "../../movementsData";
+import movement_DD_2000_ETA_955_232 from "../../movements/Debois_Depraz/DD_2000_955";
 import { WatchDetails } from "../../watchDetails";
 import { TagHeuerBrandSeries } from "./TagHeuerBrandSeries";
 
@@ -133,7 +133,7 @@ const details: WatchDetails = {
       color: ColorEnum.BROWN,
     },
 
-    movement: MovementsDataDB.DD_2000_ETA_955_232,
+    movement: movement_DD_2000_ETA_955_232,
   },
 };
 

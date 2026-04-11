@@ -20,7 +20,7 @@ import { MovementWatchTypeEnum } from "@/app/enums/movementWatchTypeEnum";
 import { WatchStyleEnum } from "@/app/enums/watchStyleEnum";
 import { WaterResistanceEnum } from "@/app/enums/waterResistanceEnum";
 
-import { MovementsDataDB } from "../../movementsData";
+import movement_ETA_Valjoux_7753_27 from "../../movements/ETA/ETA_Valjoux_7753_27J";
 import { WatchDetails } from "../../watchDetails";
 import { PorscheDesignBrandSeries } from "./PorscheDesignBrandSeries";
 
@@ -114,7 +114,7 @@ const details: WatchDetails = {
       color: ColorEnum.BLUE,
     },
 
-    movement: MovementsDataDB.ETA_Valjoux_7753_27,
+    movement: movement_ETA_Valjoux_7753_27,
   },
 };
 

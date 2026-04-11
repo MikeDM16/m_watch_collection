@@ -20,7 +20,7 @@ import { MovementWatchTypeEnum } from "@/app/enums/movementWatchTypeEnum";
 import { WatchStyleEnum } from "@/app/enums/watchStyleEnum";
 import { WaterResistanceEnum } from "@/app/enums/waterResistanceEnum";
 
-import { MovementsDataDB } from "../../movementsData";
+import movement_RONDA_5040D from "../../movements/Ronda/Ronda_5040D";
 import { WatchDetails } from "../../watchDetails";
 import { TagHeuerBrandSeries } from "./TagHeuerBrandSeries";
 
@@ -141,7 +141,7 @@ const details: WatchDetails = {
       color: ColorEnum.GREY,
     },
 
-    movement: MovementsDataDB.RONDA_5040D,
+    movement: movement_RONDA_5040D,
   },
 };
 

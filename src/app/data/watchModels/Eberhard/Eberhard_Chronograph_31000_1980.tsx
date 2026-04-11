@@ -20,7 +20,7 @@ import { MovementWatchTypeEnum } from "@/app/enums/movementWatchTypeEnum";
 import { WatchStyleEnum } from "@/app/enums/watchStyleEnum";
 import { WaterResistanceEnum } from "@/app/enums/waterResistanceEnum";
 
-import { MovementsDataDB } from "../../movementsData";
+import movement_EXCELSIOR_PARK_40_68_17J from "../../movements/Excelsior_Park/Excelsior_Park_40_68_17J";
 import { WatchDetails } from "../../watchDetails";
 import { EberhardBrandSeries } from "./EberhardBrandSeries";
 
@@ -120,7 +120,7 @@ const details: WatchDetails = {
       color: ColorEnum.BORDEAUX,
     },
 
-    movement: MovementsDataDB.EXCELSIOR_PARK_40_68_17J,
+    movement: movement_EXCELSIOR_PARK_40_68_17J,
   },
 };
 

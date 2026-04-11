@@ -20,7 +20,7 @@ import { MovementWatchTypeEnum } from "@/app/enums/movementWatchTypeEnum";
 import { WatchStyleEnum } from "@/app/enums/watchStyleEnum";
 import { WaterResistanceEnum } from "@/app/enums/waterResistanceEnum";
 
-import { MovementsDataDB } from "../../movementsData";
+import movement_BREITLING_B40_38J from "../../movements/Breitling/Breitling_B40_38J";
 import { WatchDetails } from "../../watchDetails";
 import { BreitlingBrandSeries } from "./BreitlingBrandSeries";
 
@@ -123,7 +123,7 @@ const details: WatchDetails = {
       color: ColorEnum.LIGHT_BROWN,
     },
 
-    movement: MovementsDataDB.BREITLING_B40_38J,
+    movement: movement_BREITLING_B40_38J,
   },
 };
 

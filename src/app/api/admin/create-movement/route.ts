@@ -4,7 +4,7 @@ import { NextResponse } from "next/server";
 
 const DATA_DIR = path.join(process.cwd(), "src", "app", "data");
 const MOVEMENTS_DIR = path.join(DATA_DIR, "movements");
-const MOVEMENTS_DATA_FILE = path.join(DATA_DIR, "movementsData.tsx");
+const MOVEMENTS_DATA_FILE = path.join(DATA_DIR, "admin", "movementsData.tsx");
 
 interface CreateMovementRequest {
   manufacturerFolder: string;
@@ -54,7 +54,7 @@ export async function POST(request: Request) {
     for (let i = 0; i < lines.length; i++) {
       if (lines[i].trim().startsWith("import ")) lastImportIdx = i;
     }
-    const importLine = `import ${variableName} from "./movements/${manufacturerFolder}/${variableName}";`;
+    const importLine = `import ${variableName} from "../movements/${manufacturerFolder}/${variableName}";`;
     lines.splice(lastImportIdx + 1, 0, importLine);
     mvContent = lines.join("\n");
 

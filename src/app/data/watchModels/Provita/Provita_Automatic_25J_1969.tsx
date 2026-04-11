@@ -20,7 +20,7 @@ import { MovementWatchTypeEnum } from "@/app/enums/movementWatchTypeEnum";
 import { WatchStyleEnum } from "@/app/enums/watchStyleEnum";
 import { WaterResistanceEnum } from "@/app/enums/waterResistanceEnum";
 
-import { MovementsDataDB } from "../../movementsData";
+import movement_ETA_2783 from "../../movements/ETA/ETA_2783";
 import { WatchDetails } from "../../watchDetails";
 
 const details: WatchDetails = {
@@ -94,7 +94,7 @@ const details: WatchDetails = {
       color: ColorEnum.SS_GREY,
     },
 
-    movement: MovementsDataDB.ETA_2783,
+    movement: movement_ETA_2783,
   },
 };
 

@@ -56,8 +56,7 @@ const nextConfig: NextConfig = {
   },
 
   turbopack: {
-    resolveExtensions: [".mdx", ".tsx", ".ts", ".jsx", ".js", ".mjs", ".json"],
-    rules: {},
+    resolveExtensions: [".tsx", ".ts", ".js", ".json"],
   },
 };
 

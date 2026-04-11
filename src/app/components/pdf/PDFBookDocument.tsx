@@ -1,4 +1,4 @@
-import { CollectionEntry } from "@/app/data/collectionData";
+import { CollectionEntry } from "@/app/data/admin/collectionData";
 import { WatchDetails } from "@/app/data/watchDetails";
 import { Document, Page, StyleSheet, Text, View } from "@react-pdf/renderer";
 import React from "react";

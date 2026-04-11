@@ -20,7 +20,7 @@ import { MovementWatchTypeEnum } from "@/app/enums/movementWatchTypeEnum";
 import { WatchStyleEnum } from "@/app/enums/watchStyleEnum";
 import { WaterResistanceEnum } from "@/app/enums/waterResistanceEnum";
 
-import { MovementsDataDB } from "../../movementsData";
+import movement_ETA_2671 from "../../movements/ETA/ETA_2671_25J";
 import { WatchDetails } from "../../watchDetails";
 import { TissotBrandSeries } from "./TissotBrandSeries";
 
@@ -115,7 +115,7 @@ const details: WatchDetails = {
       color: ColorEnum.TWO_TONE_GREY_GOLD,
     },
 
-    movement: MovementsDataDB.ETA_2671,
+    movement: movement_ETA_2671,
   },
 };
 

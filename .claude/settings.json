@@ -47,7 +47,14 @@
       "Bash(du -sh /c/Users/migue/Documentos/GitHub/m_watch_collection/public/*)",
       "Bash(find /c/Users/migue/Documentos/GitHub/m_watch_collection/src/app/data -name \"*.tsx\" -type f -exec wc -l {} +)",
       "Bash(find /c/Users/migue/Documentos/GitHub/m_watch_collection/src/app/data/watchModels -name \"*.tsx\" -exec wc -l {} +)",
-      "Bash(xargs wc:*)"
+      "Bash(xargs wc:*)",
+      "Bash(ls -lh /c/Users/migue/Documentos/GitHub/m_watch_collection/public/*.pdf)",
+      "Bash(find src/app/data/movements -name \"*.tsx\" -exec sed -i 's/import { Caliber } from \"\\\\.\\\\.\\\\/\\\\.\\\\.\\\\/movementsData\";/import type { Caliber } from \"\\\\.\\\\.\\\\/\\\\.\\\\.\\\\/movementsData\";/' {} +)",
+      "Bash(git mv:*)",
+      "Bash(sed -i 's|require\\(\"\\\\./watchModels/|require\\(\"../watchModels/|g' src/app/data/admin/collectionData.tsx)",
+      "Bash(sed -i 's|from \"\\\\./watchDetails\"|from \"../watchDetails\"|' src/app/data/admin/collectionData.tsx)",
+      "Bash(find src/app/data/movements -mindepth 2 -name \"*.tsx\" -exec sed -i 's|from \"../../movementsData\"|from \"../../caliberTypes\"|g' {} +)",
+      "Bash(find src/app/data/movements -maxdepth 1 -name \"*.tsx\" -exec sed -i 's|from \"../movementsData\"|from \"../caliberTypes\"|g' {} +)"
     ]
   }
 }

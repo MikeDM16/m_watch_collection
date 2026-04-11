@@ -20,7 +20,7 @@ import { MovementWatchTypeEnum } from "@/app/enums/movementWatchTypeEnum";
 import { WatchStyleEnum } from "@/app/enums/watchStyleEnum";
 import { WaterResistanceEnum } from "@/app/enums/waterResistanceEnum";
 
-import { MovementsDataDB } from "../../movementsData";
+import movement_UNIVERSAL_GENEVE_262_17J from "../../movements/Universal_Geneve/UG_Cal_262_17J";
 import { WatchDetails } from "../../watchDetails";
 
 const details: WatchDetails = {
@@ -112,7 +112,7 @@ const details: WatchDetails = {
       color: ColorEnum.BLACK,
     },
 
-    movement: MovementsDataDB.UNIVERSAL_GENEVE_262_17J,
+    movement: movement_UNIVERSAL_GENEVE_262_17J,
   },
 };
 

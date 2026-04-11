@@ -33,7 +33,7 @@ function listBrandFolders(): string[] {
 }
 
 function listMovementKeys(): string[] {
-  const content = fs.readFileSync(path.join(DATA_DIR, "movementsData.tsx"), "utf-8");
+  const content = fs.readFileSync(path.join(DATA_DIR, "admin", "movementsData.tsx"), "utf-8");
   const keys: string[] = [];
   let inDb = false;
   for (const line of content.split("\n")) {

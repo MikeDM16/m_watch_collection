@@ -20,7 +20,7 @@ import { MovementWatchTypeEnum } from "@/app/enums/movementWatchTypeEnum";
 import { WatchStyleEnum } from "@/app/enums/watchStyleEnum";
 import { WaterResistanceEnum } from "@/app/enums/waterResistanceEnum";
 
-import { MovementsDataDB } from "../../movementsData";
+import movement_PIGUET_1270_22J from "../../movements/Piguet/Piguet_1270_22_Jewels";
 import { WatchDetails } from "../../watchDetails";
 import { BreitlingBrandSeries } from "./BreitlingBrandSeries";
 
@@ -139,7 +139,7 @@ const details: WatchDetails = {
       color: ColorEnum.SS_POLISHED,
     },
 
-    movement: MovementsDataDB.PIGUET_1270_22J,
+    movement: movement_PIGUET_1270_22J,
   },
 };
 

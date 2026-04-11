@@ -20,7 +20,7 @@ import { MovementWatchTypeEnum } from "@/app/enums/movementWatchTypeEnum";
 import { WatchStyleEnum } from "@/app/enums/watchStyleEnum";
 import { WaterResistanceEnum } from "@/app/enums/waterResistanceEnum";
 
-import { MovementsDataDB } from "../../movementsData";
+import movement_FHF_96_4 from "../../movements/FHF/FHF_96_4_17J";
 import { WatchDetails } from "../../watchDetails";
 import { CaunyBrandSeries } from "./CaunyBrandSeries";
 
@@ -110,7 +110,7 @@ const details: WatchDetails = {
       color: ColorEnum.BROWN,
     },
 
-    movement: MovementsDataDB.FHF_96_4,
+    movement: movement_FHF_96_4,
   },
 };
 

@@ -20,7 +20,7 @@ import { MovementWatchTypeEnum } from "@/app/enums/movementWatchTypeEnum";
 import { WatchStyleEnum } from "@/app/enums/watchStyleEnum";
 import { WaterResistanceEnum } from "@/app/enums/waterResistanceEnum";
 
-import { MovementsDataDB } from "../../movementsData";
+import movement_SEIKO_6306A from "../../movements/Seiko/6306A";
 import { WatchDetails } from "../../watchDetails";
 import { SeikoBrandSeries } from "./SeikoBrandSeries";
 
@@ -130,7 +130,7 @@ const details: WatchDetails = {
       color: ColorEnum.RED,
     },
 
-    movement: MovementsDataDB.SEIKO_6306A,
+    movement: movement_SEIKO_6306A,
   },
 };
 

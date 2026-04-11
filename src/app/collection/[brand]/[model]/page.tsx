@@ -8,7 +8,7 @@ import HeaderNavBar from "@/app/components/header/headerComponent";
 import BrandModelPageNotFoundComponent from "@/app/components/notFound/BrandModelPageNotFoundComponent";
 import BrandPageNotFoundComponent from "@/app/components/notFound/BrandPageNotFoundComponent";
 import saleReportComponent from "@/app/components/saleReport/saleReportComponent";
-import { Caliber } from "@/app/data/movementsData";
+import type { Caliber } from "@/app/data/caliberTypes";
 import {
   BraceletInformationToDisplayTextMapping,
   CaseInformationKeyToDisplayTextMapping,
@@ -53,18 +53,23 @@ export default async function BrandModelPage({
   const brand = getPathParameter(rawBrand);
   const model = getPathParameter(rawModel);
   const brandDetails = brandsService.getBrandInformation(brand);
-  const modelDetails = collectionService.getModelInformationByKey(model);
+  const indexEntry = collectionService.getIndexEntry(model);
 
   if (!brand || !brandDetails) {
     return <BrandPageNotFoundComponent unknownBrand={brand} />;
   }
 
-  if (!model || !modelDetails) {
+  if (!model || !indexEntry) {
     return <BrandModelPageNotFoundComponent brand={brand} unknownModel={model} />;
   }
 
-  const modelName: string = modelDetails.href.default.title;
-  const technicalData: TechnicalData = modelDetails.href.default.technicalData;
+  const watchDetails = await collectionService.getModelDetails(model);
+  if (!watchDetails) {
+    return <BrandModelPageNotFoundComponent brand={brand} unknownModel={model} />;
+  }
+
+  const modelName: string = watchDetails.title;
+  const technicalData: TechnicalData = watchDetails.technicalData;
   const caliberDetails: Caliber = technicalData.movement;
 
   const getTechnicalInformation = () => {
@@ -140,11 +145,11 @@ export default async function BrandModelPage({
     },
   ];
 
-  if (modelDetails.href.default.saleReport) {
-    const baseImgSrc = modelDetails.srcImage;
+  if (watchDetails.saleReport) {
+    const baseImgSrc = indexEntry.srcImage;
     accordionEntriesList.push({
       title: "Sale Report",
-      content: saleReportComponent(modelDetails.href.default.saleReport, baseImgSrc),
+      content: saleReportComponent(watchDetails.saleReport, baseImgSrc),
     });
   }
 
@@ -168,7 +173,7 @@ export default async function BrandModelPage({
               <div style={{ height: "50dvh" }}>
                 <div style={{ height: "inherit", overflow: "auto" }}>
                   <Suspense fallback={<div className="h-full bg-gray-100 animate-pulse rounded" />}>
-                    <ImageGalleryComponent galleryImages={modelDetails.href.default.sliderImages} />
+                    <ImageGalleryComponent galleryImages={watchDetails.sliderImages} />
                   </Suspense>
                 </div>
               </div>
