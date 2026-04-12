@@ -7,6 +7,7 @@ import { Suspense } from "react";
 
 import AnalyticsReporter from "./components/analytics/AnalyticsReporter";
 import BrandTitleDivisionComponent from "./components/brandPage/BrandTitleDivisionComponent";
+import LazySection from "./components/common/LazySection";
 import PageTitleDivisionComponent from "./components/common/pageTitleDivisionComponent";
 import ContactsComponent from "./components/contacts/contacts";
 import { Brand } from "./data/brands";
@@ -170,9 +171,14 @@ export default function Page() {
       <Suspense fallback={<div className="h-96" />}>
         <AboutMeContainer backgroundImage={divisionBackgrounds[1]} />
       </Suspense>
-      <Suspense fallback={<div className="h-96" />}>
-        <PreviousSalesComponent soldModels={soldModels} backgroundImage={divisionBackgrounds[2]} />
-      </Suspense>
+      <LazySection fallback={<div className="h-96" />}>
+        <Suspense fallback={<div className="h-96" />}>
+          <PreviousSalesComponent
+            soldModels={soldModels}
+            backgroundImage={divisionBackgrounds[2]}
+          />
+        </Suspense>
+      </LazySection>
       <ContactsComponent backgroundImage={divisionBackgrounds[3]} />
       <FooterComponent />
     </div>

@@ -212,17 +212,23 @@ async function main() {
       console.log(` done (${result.loadTime}ms, ${result.requests.length} requests)`);
     }
 
-    // Aggregate across runs
+    // Aggregate across runs — exclude Run 1 (cold start) from warm stats
+    const warmRuns = runResults.slice(1);
     const timings = {
-      ttfb: stats(runResults.map((r) => r.perfMetrics.ttfb).filter(Boolean)),
-      fcp: stats(runResults.map((r) => r.perfMetrics.fcp).filter(Boolean)),
-      lcp: stats(runResults.map((r) => r.perfMetrics.lcp).filter(Boolean)),
-      domContentLoaded: stats(
-        runResults.map((r) => r.perfMetrics.domContentLoaded).filter(Boolean),
-      ),
-      loadEvent: stats(runResults.map((r) => r.perfMetrics.loadEvent).filter(Boolean)),
-      domInteractive: stats(runResults.map((r) => r.perfMetrics.domInteractive).filter(Boolean)),
-      totalLoadTime: stats(runResults.map((r) => r.loadTime)),
+      ttfb: stats(warmRuns.map((r) => r.perfMetrics.ttfb).filter(Boolean)),
+      fcp: stats(warmRuns.map((r) => r.perfMetrics.fcp).filter(Boolean)),
+      lcp: stats(warmRuns.map((r) => r.perfMetrics.lcp).filter(Boolean)),
+      domContentLoaded: stats(warmRuns.map((r) => r.perfMetrics.domContentLoaded).filter(Boolean)),
+      loadEvent: stats(warmRuns.map((r) => r.perfMetrics.loadEvent).filter(Boolean)),
+      domInteractive: stats(warmRuns.map((r) => r.perfMetrics.domInteractive).filter(Boolean)),
+      totalLoadTime: stats(warmRuns.map((r) => r.loadTime)),
+    };
+
+    // Cold start metrics (Run 1 only)
+    const coldStart = {
+      fcp: runResults[0].perfMetrics.fcp,
+      lcp: runResults[0].perfMetrics.lcp,
+      loadTime: runResults[0].loadTime,
     };
 
     // Aggregate network metrics from last run (representative)
@@ -240,10 +246,8 @@ async function main() {
       .sort((a, b) => b.size - a.size);
 
     const networkAgg = {
-      totalRequests: stats(runResults.map((r) => r.requests.length)),
-      totalTransferSize: stats(
-        runResults.map((r) => r.requests.reduce((s, req) => s + req.size, 0)),
-      ),
+      totalRequests: stats(warmRuns.map((r) => r.requests.length)),
+      totalTransferSize: stats(warmRuns.map((r) => r.requests.reduce((s, req) => s + req.size, 0))),
       byType,
     };
 
@@ -251,6 +255,7 @@ async function main() {
       name: pageConfig.name,
       url: fullUrl,
       timing: timings,
+      coldStart,
       network: networkAgg,
       images,
       rawRuns: runResults.map((r) => ({
@@ -264,10 +269,13 @@ async function main() {
     // Print per-page summary
     console.log(`    ┌─────────────────────────────────────────`);
     console.log(
-      `    │ TTFB: ${timings.ttfb.avg}ms  FCP: ${timings.fcp.avg}ms  LCP: ${timings.lcp.avg}ms`,
+      `    │ Cold start: FCP=${coldStart.fcp}ms  LCP=${coldStart.lcp}ms  Load=${coldStart.loadTime}ms`,
     );
     console.log(
-      `    │ Load: ${timings.totalLoadTime.avg}ms  Requests: ${networkAgg.totalRequests.avg}  Size: ${formatBytes(networkAgg.totalTransferSize.avg)}`,
+      `    │ Warm avg:   FCP=${timings.fcp.avg}ms  LCP=${timings.lcp.avg}ms  Load=${timings.totalLoadTime.avg}ms`,
+    );
+    console.log(
+      `    │ Requests: ${networkAgg.totalRequests.avg}  Size: ${formatBytes(networkAgg.totalTransferSize.avg)}`,
     );
     console.log(
       `    │ Images: ${images.length} files, ${formatBytes(images.reduce((s, i) => s + i.size, 0))}`,
@@ -311,19 +319,19 @@ async function main() {
   console.log(`    Raw:     ${rawPath}`);
   console.log(`    Summary: ${summaryPath}`);
 
-  // Final summary table
+  // Final summary table — warm runs (excludes cold start Run 1)
   console.log(`\n  ═══════════════════════════════════════════════════════════════════════`);
-  console.log(`  SUMMARY`);
+  console.log(`  SUMMARY (warm runs only — Run 1 cold start excluded)`);
   console.log(`  ═══════════════════════════════════════════════════════════════════════`);
   console.log(
-    `  ${"Page".padEnd(40)} ${"TTFB".padStart(8)} ${"FCP".padStart(8)} ${"LCP".padStart(8)} ${"Load".padStart(8)} ${"Reqs".padStart(6)} ${"Size".padStart(10)}`,
+    `  ${"Page".padEnd(40)} ${"FCP".padStart(8)} ${"LCP".padStart(8)} ${"Load".padStart(8)} ${"Reqs".padStart(6)} ${"Size".padStart(10)} ${"ColdFCP".padStart(10)}`,
   );
   console.log(
-    `  ${"─".repeat(40)} ${"─".repeat(8)} ${"─".repeat(8)} ${"─".repeat(8)} ${"─".repeat(8)} ${"─".repeat(6)} ${"─".repeat(10)}`,
+    `  ${"─".repeat(40)} ${"─".repeat(8)} ${"─".repeat(8)} ${"─".repeat(8)} ${"─".repeat(6)} ${"─".repeat(10)} ${"─".repeat(10)}`,
   );
   for (const [path, data] of Object.entries(results)) {
     console.log(
-      `  ${data.name.padEnd(40)} ${(data.timing.ttfb.avg + "ms").padStart(8)} ${(data.timing.fcp.avg + "ms").padStart(8)} ${(data.timing.lcp.avg + "ms").padStart(8)} ${(data.timing.totalLoadTime.avg + "ms").padStart(8)} ${String(data.network.totalRequests.avg).padStart(6)} ${formatBytes(data.network.totalTransferSize.avg).padStart(10)}`,
+      `  ${data.name.padEnd(40)} ${(data.timing.fcp.avg + "ms").padStart(8)} ${(data.timing.lcp.avg + "ms").padStart(8)} ${(data.timing.totalLoadTime.avg + "ms").padStart(8)} ${String(data.network.totalRequests.avg).padStart(6)} ${formatBytes(data.network.totalTransferSize.avg).padStart(10)} ${(data.coldStart.fcp + "ms").padStart(10)}`,
     );
   }
   console.log(`  ═══════════════════════════════════════════════════════════════════════\n`);

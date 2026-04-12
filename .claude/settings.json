@@ -59,7 +59,8 @@
       "Bash(grep -i \"swiper\" /c/Users/migue/Documentos/GitHub/m_watch_collection/.next/static/css/*.css)",
       "Bash(grep -i \"font-display\" /c/Users/migue/Documentos/GitHub/m_watch_collection/.next/static/css/*.css)",
       "Bash(find /c/Users/migue/Documentos/GitHub/m_watch_collection/src -type f \\\\\\( -name \"*.tsx\" -o -name \"*.ts\" \\\\\\) -exec grep -l \"swiper\" {} \\\\;)",
-      "Bash(wc -l /c/Users/migue/Documentos/GitHub/m_watch_collection/.next/static/css/*.css)"
+      "Bash(wc -l /c/Users/migue/Documentos/GitHub/m_watch_collection/.next/static/css/*.css)",
+      "Bash(find /c/Users/migue/Documentos/GitHub/m_watch_collection/src -name \"*.tsx\" -exec grep -l \"previousSales\\\\|PreviousSales\" {} \\\\;)"
     ],
     "additionalDirectories": ["c:\\Users\\migue\\Documentos\\GitHub\\m_watch_collection\\profiling"]
   }
