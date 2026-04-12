@@ -121,8 +121,35 @@ export default function Page() {
   };
 
   const ListAllBrandsGroupByLetter = () => {
-    const offset = 5;
+    const NUM_COLUMNS = 4;
     const collectionStats = collectionService.getCollectionStatistic();
+
+    // Distribute letter groups across columns balanced by brand count
+    const entries = Object.entries(allBrands);
+    const totalBrands = entries.reduce((sum, [, brands]) => sum + brands.length, 0);
+    const target = totalBrands / NUM_COLUMNS;
+
+    const columns: [string, Brand[]][][] = [];
+    let currentColumn: [string, Brand[]][] = [];
+    let currentCount = 0;
+
+    for (const entry of entries) {
+      const brandCount = entry[1].length;
+      if (
+        currentColumn.length > 0 &&
+        columns.length < NUM_COLUMNS - 1 &&
+        currentCount + brandCount > target
+      ) {
+        columns.push(currentColumn);
+        currentColumn = [];
+        currentCount = 0;
+      }
+      currentColumn.push(entry as [string, Brand[]]);
+      currentCount += brandCount;
+    }
+    if (currentColumn.length > 0) {
+      columns.push(currentColumn);
+    }
 
     return (
       <div>
@@ -143,17 +170,13 @@ export default function Page() {
             })}
           </div>
           <div className="grid grid-cols-2 xl:grid-cols-4 gap-4">
-            {[0, 1, 2, 3].map((idx) => {
-              return (
-                <div key={`brands_listing_${idx}`}>
-                  {Object.entries(allBrands)
-                    .slice(idx * offset, idx * offset + offset)
-                    .map(([key_letter, brandNames]) => {
-                      return ListBrandsForLetter(key_letter, brandNames);
-                    })}
-                </div>
-              );
-            })}
+            {columns.map((columnEntries, idx) => (
+              <div key={`brands_listing_${idx}`}>
+                {columnEntries.map(([key_letter, brandNames]) =>
+                  ListBrandsForLetter(key_letter, brandNames),
+                )}
+              </div>
+            ))}
           </div>
         </div>
       </div>
