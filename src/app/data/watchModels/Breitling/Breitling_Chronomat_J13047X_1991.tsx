@@ -124,7 +124,7 @@ const details: WatchDetails = {
     case: {
       diameter: CaseDiameterEnum.D_39,
       thickness: CaseThicknessEnum.T_13,
-      material: CaseMaterialEnum.SOLID_WHITE_GOLD_18K_72G,
+      material: CaseMaterialEnum.SOLID_WHITE_GOLD_18K_76G,
       waterResistance: WaterResistanceEnum.WATERPROOF_50M,
       finishingDetails: CaseFinishingEnum.POLISHED,
       bezel: BezelTypeEnum.RIDERS_TABS_MINUTE,

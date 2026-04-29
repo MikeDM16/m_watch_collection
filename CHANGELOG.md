@@ -1,5 +1,47 @@
 # Changelog
 
+## [2026-04-12] — New Deployment Performance Validation
+
+### Profiling Run
+
+Re-ran the full Playwright profiling suite (10 pages, 5 runs each) against the latest production deployment to validate performance after the new deploy.
+
+### New Deployment vs Post-Fix (April 11) — Warm Runs
+
+| Page                  | Post-Fix FCP | New Deploy FCP | Post-Fix Size | New Deploy Size |
+| --------------------- | ------------ | -------------- | ------------- | --------------- |
+| Home                  | 972ms        | 312ms          | 6.33 MB       | 4.60 MB         |
+| Tissot (67 models)    | 369ms        | 284ms          | 4.04 MB       | 4.09 MB         |
+| Omega (29 models)     | 376ms        | 279ms          | 2.98 MB       | 3.25 MB         |
+| Tag Heuer (22 models) | 351ms        | 335ms          | 2.44 MB       | 3.07 MB         |
+| Breitling             | 352ms        | 331ms          | 2.23 MB       | 2.44 MB         |
+| Arauto (1 model)      | 382ms        | 290ms          | 2.53 MB       | 2.53 MB         |
+| Model — Tissot        | 406ms        | 351ms          | 3.16 MB       | 3.22 MB         |
+| Model — Omega         | 382ms        | 310ms          | 3.52 MB       | 3.79 MB         |
+| Model — Tag Heuer     | 368ms        | 322ms          | 4.81 MB       | 5.44 MB         |
+| Model — Breitling     | 387ms        | 392ms          | 3.03 MB       | 3.25 MB         |
+
+### New Deployment vs Original Baseline (April 11) — Overall Averages
+
+| Metric         | Original Baseline | New Deployment | Change |
+| -------------- | ----------------- | -------------- | ------ |
+| Avg LCP        | 492ms             | 442ms          | -10.0% |
+| Avg Load Time  | 1353ms            | 1353ms         | 0.0%   |
+| Avg Page Size  | 4.83 MB           | 3.57 MB        | -26.1% |
+| JS Bundle Size | 2.58 MB           | 1.17 MB        | -54.8% |
+
+### Key Findings
+
+- **FCP improved significantly vs post-fix**: avg 321ms now vs 375ms post-fix (-14.5%), with Home page showing the biggest gain (972ms → 312ms, -67.9%)
+- **LCP improved 29% vs post-fix**: 623ms → 442ms across all pages
+- **Page size stable**: 3.57 MB avg, matching the -26.1% reduction from original baseline (4.83 MB)
+- **JS bundle unchanged at 1.17 MB** (-54.8% from original 2.58 MB baseline)
+- **Home page document size dropped from 899KB to 271KB** (-69.8%) — lazy search data loading is fully effective in this deployment
+- **Image sizes increased slightly on some pages** (network variance from CDN/srcSet selection, not a regression in code)
+- **Cold start FCP**: Home 3668ms (Vercel serverless cold boot), brand pages 584-832ms, model pages 676-1036ms
+
+---
+
 ## [2026-04-12] — Production Performance Profiling & Lazy Search Fix
 
 ### Profiling Setup

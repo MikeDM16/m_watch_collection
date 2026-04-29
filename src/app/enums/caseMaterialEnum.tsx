@@ -30,7 +30,7 @@ export const CaseMaterialEnum = {
   SOLID_GOLD_18K: "Solid 18K Gold",
   SOLID_ROSE_GOLD_18K: "Solid Rose Gold 18K (0.750)",
   SOLID_WHITE_GOLD_18K: "Solid White Gold 18K (0.750)",
-  SOLID_WHITE_GOLD_18K_72G: "Solid White Gold 18K (0.750) (72g)",
+  SOLID_WHITE_GOLD_18K_76G: "Solid White Gold 18K (0.750) (76g)",
   SOLID_YELLOW_GOLD_18K: "Solid Yellow Gold 18K (0.750)",
   SOLID_YELLOW_GOLD_18K_13G: "Solid Yellow Gold 18K (0.750) (13g)",
   SOLID_STERLING_SILVER_925_GP: "Solid Sterling Silver (925) with 20µm Gold Plated",

@@ -279,9 +279,9 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     year: 2008,
     type: WatchTypeEnum.SPORTS,
     srcImage:
-      "public/assets/Images/Porsche_Design/2005_Porsche Design_Dashboard_P662_17_2_Red_Titanium/IMG_7069.JPG",
+      "public/assets/Images/Porsche_Design/2005_Porsche Design_Dashboard_P6612_17_2_Red_Titanium/IMG_7069.JPG",
     hoverSrc:
-      "public/assets/Images/Porsche_Design/2005_Porsche Design_Dashboard_P662_17_2_Red_Titanium/IMG_7063.JPG",
+      "public/assets/Images/Porsche_Design/2005_Porsche Design_Dashboard_P6612_17_2_Red_Titanium/IMG_7063.JPG",
     href: require("../watchModels/Porsche_Design/Porsche_Design_P6612_14_2_Red_Titanium_2012"),
     specialCollectionItem: true,
   },
@@ -558,15 +558,28 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     href: require("../watchModels/Zenith/Zenith_El_Primero_Port_Royal_V_2005"),
     specialCollectionItem: true,
   },
+  "Porsche Design Dashboard P6612/14 Titanium": {
+    brand: BrandsEnum.PORSCHE_DESIGN,
+    legend: "Porsche Design Dashboard P6612/14 Titanium",
+    year: 2005,
+    type: WatchTypeEnum.SPORTS,
+    srcImage:
+      "public/assets/Images/Porsche_Design/2025_Porsche_Design_P6612_Black_Titan/IMG_3305.JPG",
+    hoverSrc:
+      "public/assets/Images/Porsche_Design/2025_Porsche_Design_P6612_Black_Titan/IMG_3313.JPG",
+    href: require("../watchModels/Porsche_Design/Porsche_Design_Dashboard_P6612_14_Titanium_2005"),
+    specialCollectionItem: false,
+  },
+
   "Porsche Design Dashboard P6612 Titanium": {
     brand: BrandsEnum.PORSCHE_DESIGN,
     legend: "Porsche Design Dashboard P6612 Titanium",
     year: 2005,
     type: WatchTypeEnum.SPORTS,
     srcImage:
-      "public/assets/Images/Porsche_Design/2005_Porsche Design_Dashboard_P662_Titanium/IMG_4305.JPG",
+      "public/assets/Images/Porsche_Design/2005_Porsche Design_Dashboard_P6612_Titanium/IMG_4305.JPG",
     hoverSrc:
-      "public/assets/Images/Porsche_Design/2005_Porsche Design_Dashboard_P662_Titanium/IMG_4292.JPG",
+      "public/assets/Images/Porsche_Design/2005_Porsche Design_Dashboard_P6612_Titanium/IMG_4292.JPG",
     href: require("../watchModels/Porsche_Design/Porsche_Design_P6612_Titanium_2005"),
     specialCollectionItem: false,
   },
@@ -576,9 +589,9 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     year: 2005,
     type: WatchTypeEnum.SPORTS,
     srcImage:
-      "public/assets/Images/Porsche_Design/2005_Porsche Design_Dashboard_P662_10_1_Black_Titanium/IMG_0204.JPG",
+      "public/assets/Images/Porsche_Design/2005_Porsche Design_Dashboard_P6612_10_1_Black_Titanium/IMG_0204.JPG",
     hoverSrc:
-      "public/assets/Images/Porsche_Design/2005_Porsche Design_Dashboard_P662_10_1_Black_Titanium/IMG_0193.JPG",
+      "public/assets/Images/Porsche_Design/2005_Porsche Design_Dashboard_P6612_10_1_Black_Titanium/IMG_0193.JPG",
     href: require("../watchModels/Porsche_Design/Porsche_Design_P6612_10_1_Black_Titanium_2005"),
     specialCollectionItem: false,
   },
@@ -2480,7 +2493,8 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     legend: "Barrett Gran Turismo ETA 2472",
     year: 1965,
     type: WatchTypeEnum.CASUAL,
-    srcImage: "public/assets/Images/Barrett/1965_Barrett_Gran_Turismo_eta_2472/IMG_6171.JPG",
+    srcImage: "public/assets/Images/Barrett/1965_Barrett_Gran_Turismo_eta_2472/IMG_3272.JPG",
+    hoverSrc: "public/assets/Images/Barrett/1965_Barrett_Gran_Turismo_eta_2472/IMG_3289.JPG",
     href: require("../watchModels/Barrett/Barrett_Gran_Turismo_ETA_2472_1965"),
     specialCollectionItem: false,
   },
