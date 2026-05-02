@@ -161,7 +161,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     srcImage: "public/assets/Images/Tag_Heuer/2016_Tag_Heuer_formula_1_Indy_500/IMG_5409.JPG",
     hoverSrc: "public/assets/Images/Tag_Heuer/2016_Tag_Heuer_formula_1_Indy_500/IMG_5402.JPG",
     href: require("../watchModels/Tag_Heuer/Tag_Heuer_Formula_1_Indy_500_2016"),
-    specialCollectionItem: true,
+    specialCollectionItem: false,
   },
 
   "Lorus VD53 Sports Chronograph": {
@@ -842,8 +842,8 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     legend: "Chopard Mille Miglia Titanium",
     year: 2000,
     type: WatchTypeEnum.SPORTS,
-    srcImage: "public/assets/Images/Chopard/2000_Chopard_Mille_Miglia_Titanium/IMG_8038.JPG",
-    hoverSrc: "public/assets/Images/Chopard/2000_Chopard_Mille_Miglia_Titanium/IMG_7990.JPG",
+    srcImage: "public/assets/Images/Chopard/2000_Chopard_Mille_Miglia_Titanium/IMG_3548.JPG",
+    hoverSrc: "public/assets/Images/Chopard/2000_Chopard_Mille_Miglia_Titanium/IMG_3512.JPG",
     href: require("../watchModels/Chopard/Chopard_Mille_Miglia_2000_Titanium"),
     specialCollectionItem: true,
   },
@@ -1724,7 +1724,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     srcImage: "public/assets/Images/Tag_Heuer/1986_Tag_Heuer_Professional_200_LWO_185/IMG_1871.JPG",
     hoverSrc: "public/assets/Images/Tag_Heuer/1986_Tag_Heuer_Professional_200_LWO_185/IMG_1891.JPG",
     href: require("../watchModels/Tag_Heuer/Tag_Heuer_ProChrono_2720061_LWO_185_1986"),
-    specialCollectionItem: true,
+    specialCollectionItem: false,
   },
   "Tag Heuer Professional 272.006-1 Chronograph": {
     brand: BrandsEnum.TAG_HEUER,
@@ -2754,9 +2754,9 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     year: 1950,
     type: WatchTypeEnum.CASUAL,
     srcImage:
-      "public/assets/Images/Cuervo_y_Sobrinos/1950_Cuervo_y_Sobrinos_Habana_Landeron/IMG_2691.JPG",
+      "public/assets/Images/Cuervo_y_Sobrinos/1950_Cuervo_y_Sobrinos_Habana_Landeron/IMG_3417.JPG",
     hoverSrc:
-      "public/assets/Images/Cuervo_y_Sobrinos/1950_Cuervo_y_Sobrinos_Habana_Landeron/IMG_2684.JPG",
+      "public/assets/Images/Cuervo_y_Sobrinos/1950_Cuervo_y_Sobrinos_Habana_Landeron/IMG_3470.JPG",
     href: require("../watchModels/Cuervo_y_Sobrinos/Cuervo_y_Sobrinos_Hanava_Landeron_159_1950"),
     specialCollectionItem: true,
   },

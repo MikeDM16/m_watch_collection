@@ -276,8 +276,8 @@
     "legend": "Cuervo y Sobrinos Historiador Habana",
     "year": 1950,
     "type": "Casual",
-    "srcImage": "public/assets/Images/Cuervo_y_Sobrinos/1950_Cuervo_y_Sobrinos_Habana_Landeron/IMG_2691.JPG",
-    "hoverSrc": "public/assets/Images/Cuervo_y_Sobrinos/1950_Cuervo_y_Sobrinos_Habana_Landeron/IMG_2684.JPG",
+    "srcImage": "public/assets/Images/Cuervo_y_Sobrinos/1950_Cuervo_y_Sobrinos_Habana_Landeron/IMG_3417.JPG",
+    "hoverSrc": "public/assets/Images/Cuervo_y_Sobrinos/1950_Cuervo_y_Sobrinos_Habana_Landeron/IMG_3470.JPG",
     "specialCollectionItem": true,
     "collectionSet": false,
     "series": "Historiador",
@@ -1186,7 +1186,11 @@
     "collectionSet": false,
     "series": "Enamel Dial",
     "movementTitle": "FE (France Ebauche) Cal. 233-69",
-    "saleReport": null,
+    "saleReport": {
+      "price": 110,
+      "date": "22/04/2026",
+      "url": "https://www.catawiki.com/en/l/103018134"
+    },
     "modelFile": "Utina/Utina_Sunburst_FE233_1972"
   },
   "Tissot Seastar T.12 Chronograph Lemania 1281": {
@@ -1232,7 +1236,11 @@
     "collectionSet": false,
     "series": "Silver Tuxedo",
     "movementTitle": "Unitas 6325",
-    "saleReport": null,
+    "saleReport": {
+      "price": 133,
+      "date": "28/04/2026",
+      "url": "https://www.catawiki.com/en/l/103288884"
+    },
     "modelFile": "Arauto/Arauto_Silver_Tuxedo_Unitas_6325_1974"
   },
   "Hipco Incabloc 17 Jewels": {
@@ -2240,7 +2248,7 @@
     "type": "Sports",
     "srcImage": "public/assets/Images/Tag_Heuer/1986_Tag_Heuer_Professional_200_LWO_185/IMG_1871.JPG",
     "hoverSrc": "public/assets/Images/Tag_Heuer/1986_Tag_Heuer_Professional_200_LWO_185/IMG_1891.JPG",
-    "specialCollectionItem": true,
+    "specialCollectionItem": false,
     "collectionSet": false,
     "series": "Professional 2000 Series",
     "movementTitle": "LWO 185.30 - Dubois Depraz 2000 on ETA 955.232",
@@ -3519,7 +3527,7 @@
     "hoverSrc": "public/assets/Images/Porsche_Design/1998_Porsche_Design_911_JP_Jarier/IMG_8237.JPG",
     "specialCollectionItem": false,
     "collectionSet": false,
-    "series": "911",
+    "series": "Porsche Cup 911 GT2 - 1998",
     "movementTitle": "ETA Cal. 255.251",
     "saleReport": {
       "price": 1200,
@@ -3537,9 +3545,13 @@
     "hoverSrc": "public/assets/Images/Porsche_Design/1998_Porsche_Design_Eterna_911_GT2_Cup/IMG_1108.JPG",
     "specialCollectionItem": false,
     "collectionSet": false,
-    "series": "911",
+    "series": "Porsche Cup 911 GT2 - 1998",
     "movementTitle": "ETA Cal. 255.251",
-    "saleReport": null,
+    "saleReport": {
+      "price": 1801,
+      "date": "21/04/2026",
+      "url": "https://www.catawiki.com/en/l/102605935"
+    },
     "modelFile": "Porsche_Design/Porsche_Design_911_GT2_Cup_1998"
   },
   "Breitling Colt A53035 Chronograph": {
@@ -3685,7 +3697,11 @@
     "collectionSet": false,
     "series": "Timonier",
     "movementTitle": "ETA 251.262",
-    "saleReport": null,
+    "saleReport": {
+      "price": 321,
+      "date": "16/04/2026",
+      "url": "https://www.catawiki.com/en/l/102730648"
+    },
     "modelFile": "Pryngeps/Pryngeps_Timonier_Rattrapante_2000"
   },
   "Chopard Mille Miglia Titanium": {
@@ -3693,8 +3709,8 @@
     "legend": "Chopard Mille Miglia Titanium",
     "year": 2000,
     "type": "Sports",
-    "srcImage": "public/assets/Images/Chopard/2000_Chopard_Mille_Miglia_Titanium/IMG_8038.JPG",
-    "hoverSrc": "public/assets/Images/Chopard/2000_Chopard_Mille_Miglia_Titanium/IMG_7990.JPG",
+    "srcImage": "public/assets/Images/Chopard/2000_Chopard_Mille_Miglia_Titanium/IMG_3548.JPG",
+    "hoverSrc": "public/assets/Images/Chopard/2000_Chopard_Mille_Miglia_Titanium/IMG_3512.JPG",
     "specialCollectionItem": true,
     "collectionSet": false,
     "series": "Mille Miglia",
@@ -4814,7 +4830,7 @@
     "type": "Sports",
     "srcImage": "public/assets/Images/Tag_Heuer/2016_Tag_Heuer_formula_1_Indy_500/IMG_5409.JPG",
     "hoverSrc": "public/assets/Images/Tag_Heuer/2016_Tag_Heuer_formula_1_Indy_500/IMG_5402.JPG",
-    "specialCollectionItem": true,
+    "specialCollectionItem": false,
     "collectionSet": false,
     "series": "Formula-1 (Sixth Generation 2015-2023)",
     "movementTitle": "Ronda 5040.D",

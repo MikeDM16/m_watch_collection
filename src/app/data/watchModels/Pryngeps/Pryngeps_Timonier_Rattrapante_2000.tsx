@@ -75,6 +75,12 @@ const details: WatchDetails = {
     "public/assets/Images/Pryngeps/2000_Pryngeps_Timonier_Ratrappante_27_jewels/IMG_2247.JPG",
   ],
 
+  saleReport: {
+    price: 321,
+    date: "16/04/2026",
+    url: "https://www.catawiki.com/en/l/102730648",
+  },
+
   technicalData: {
     features: [featuresEnum.DATE, featuresEnum.CHRONOGRAPH, featuresEnum.WR_100_METERS],
 

@@ -83,6 +83,12 @@ const details: WatchDetails = {
     "public/assets/Images/Porsche_Design/1998_Porsche_Design_Eterna_911_GT2_Cup/IMG_0784.JPG",
   ],
 
+  saleReport: {
+    price: 1801,
+    date: "21/04/2026",
+    url: "https://www.catawiki.com/en/l/102605935",
+  },
+
   technicalData: {
     features: [
       featuresEnum.DATE,

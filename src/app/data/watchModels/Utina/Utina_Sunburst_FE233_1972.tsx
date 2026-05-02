@@ -70,6 +70,12 @@ const details: WatchDetails = {
     "public/assets/Images/Utina/1972_Utina_Sunburst_FE233/IMG_8116.JPG",
   ],
 
+  saleReport: {
+    price: 110,
+    date: "22/04/2026",
+    url: "https://www.catawiki.com/en/l/103018134",
+  },
+
   technicalData: {
     features: [featuresEnum.SMALL_SECONDS, featuresEnum.MECHANICAL],
 

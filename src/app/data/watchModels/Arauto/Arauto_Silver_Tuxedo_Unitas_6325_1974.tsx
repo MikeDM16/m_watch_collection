@@ -70,6 +70,12 @@ const details: WatchDetails = {
     "public/assets/Images/Arauto/1974_Arauto_Silver_Tuxedo_U6325_17J/IMG_2742.JPG",
   ],
 
+  saleReport: {
+    price: 133,
+    date: "28/04/2026",
+    url: "https://www.catawiki.com/en/l/103288884",
+  },
+
   technicalData: {
     features: [featuresEnum.SMALL_SECONDS, featuresEnum.MECHANICAL, featuresEnum.GOLD_PLATED_10M],
 
