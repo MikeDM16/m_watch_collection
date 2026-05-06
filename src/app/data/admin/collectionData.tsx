@@ -2494,7 +2494,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     year: 1965,
     type: WatchTypeEnum.CASUAL,
     srcImage: "public/assets/Images/Barrett/1965_Barrett_Gran_Turismo_eta_2472/IMG_3272.JPG",
-    hoverSrc: "public/assets/Images/Barrett/1965_Barrett_Gran_Turismo_eta_2472/IMG_3289.JPG",
+    hoverSrc: "public/assets/Images/Barrett/1965_Barrett_Gran_Turismo_eta_2472/IMG_3636.JPG",
     href: require("../watchModels/Barrett/Barrett_Gran_Turismo_ETA_2472_1965"),
     specialCollectionItem: false,
   },
