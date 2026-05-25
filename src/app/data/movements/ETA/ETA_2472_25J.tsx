@@ -48,7 +48,7 @@ const ETA_2472: Caliber = {
     // Frequency
     frequency: FrequencyEnum.F_18000,
     // Jewels
-    jewels: JewelsNumberEnum.J_17,
+    jewels: JewelsNumberEnum.J_25,
     // Reserve
     reserve: ReserveHoursEnum.R_42,
     // Functions

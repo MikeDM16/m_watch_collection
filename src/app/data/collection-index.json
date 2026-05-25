@@ -792,7 +792,11 @@
     "collectionSet": false,
     "series": "Gran Turismo",
     "movementTitle": "ETA 2472",
-    "saleReport": null,
+    "saleReport": {
+      "price": 184,
+      "date": "12/05/2026",
+      "url": "https://www.catawiki.com/en/l/103684194"
+    },
     "modelFile": "Barrett/Barrett_Gran_Turismo_ETA_2472_1965"
   },
   "Cauny Prima Swiss 17 Rubis": {
@@ -1172,7 +1176,11 @@
     "collectionSet": false,
     "series": "Green Abyss",
     "movementTitle": "Duromat 7522",
-    "saleReport": null,
+    "saleReport": {
+      "price": 114,
+      "date": "07/05/2026",
+      "url": "https://www.catawiki.com/en/l/103405858"
+    },
     "modelFile": "Tecnal/Tecnal_Green_Abyss_Duromat_7522_1972"
   },
   "Utina Sunburst FE 233 17 Jewels": {
@@ -2729,8 +2737,8 @@
     "legend": "Omega Olympia Winter Olympics Albertville Ltd. 820/3000",
     "year": 1992,
     "type": "Sports",
-    "srcImage": "public/assets/Images/Omega/1992_Polaris_Albertville_386_1031_3000/IMG_8710.JPG",
-    "hoverSrc": "public/assets/Images/Omega/1992_Polaris_Albertville_386_1031_3000/IMG_8707.JPG",
+    "srcImage": "public/assets/Images/Omega/1992_Polaris_Albertville_386_1031_3000/IMG_4029.JPG",
+    "hoverSrc": "public/assets/Images/Omega/1992_Polaris_Albertville_386_1031_3000/IMG_4025.JPG",
     "specialCollectionItem": false,
     "collectionSet": false,
     "series": "Olympia",
@@ -3947,7 +3955,11 @@
     "collectionSet": false,
     "series": "Dashboard Chronograph",
     "movementTitle": "ETA 2894",
-    "saleReport": null,
+    "saleReport": {
+      "price": 1700,
+      "date": "16/05/2026",
+      "url": "https://www.catawiki.com/en/l/103713359"
+    },
     "modelFile": "Porsche_Design/Porsche_Design_Dashboard_P6612_14_Titanium_2005"
   },
   "Porsche Design Dashboard P6612 Titanium": {

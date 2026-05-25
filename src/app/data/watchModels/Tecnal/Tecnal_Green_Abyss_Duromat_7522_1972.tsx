@@ -65,6 +65,12 @@ const details: WatchDetails = {
     "public/assets/Images/Tecnal/1972_Tecnal_Green_abyss_7522_25J/IMG_2782.JPG",
   ],
 
+  saleReport: {
+    price: 114,
+    date: "07/05/2026",
+    url: "https://www.catawiki.com/en/l/103405858",
+  },
+
   technicalData: {
     features: [featuresEnum.DATE, featuresEnum.AUTOMATIC],
 

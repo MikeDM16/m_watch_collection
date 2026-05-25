@@ -101,6 +101,13 @@ const details: WatchDetails = {
     "public/assets/Images/Porsche_Design/2025_Porsche_Design_P6612_Black_Titan/IMG_3361.JPG",
     "public/assets/Images/Porsche_Design/2025_Porsche_Design_P6612_Black_Titan/IMG_3362.JPG",
   ],
+
+  saleReport: {
+    price: 1700,
+    date: "16/05/2026",
+    url: "https://www.catawiki.com/en/l/103713359",
+  },
+
   technicalData: {
     features: [featuresEnum.DATE, featuresEnum.AUTOMATIC_CHRONOGRAPH],
 

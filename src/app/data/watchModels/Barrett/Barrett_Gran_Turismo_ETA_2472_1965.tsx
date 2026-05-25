@@ -75,6 +75,12 @@ const details: WatchDetails = {
     "public/assets/Images/Barrett/1965_Barrett_Gran_Turismo_eta_2472/IMG_3635.JPG",
   ],
 
+  saleReport: {
+    price: 184,
+    date: "12/05/2026",
+    url: "https://www.catawiki.com/en/l/103684194",
+  },
+
   technicalData: {
     features: [featuresEnum.DATE, featuresEnum.AUTOMATIC],
 
