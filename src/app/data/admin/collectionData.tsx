@@ -357,14 +357,14 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     specialCollectionItem: true,
   },
 
-  "Tissot PRS 516 Valjoux 7750": {
+  "Tissot PRS 516 Automatic Valjoux 7750": {
     brand: BrandsEnum.TISSOT,
-    legend: "Tissot PRS 516 Valjoux 7750",
+    legend: "Tissot PRS 516 Automatic Valjoux 7750",
     year: 2011,
     type: WatchTypeEnum.SPORTS,
     srcImage: "public/assets/Images/Tissot/2011_Tissot_PRS_516_Valjoux/IMG_6069.JPG",
     hoverSrc: "public/assets/Images/Tissot/2011_Tissot_PRS_516_Valjoux/IMG_6057.JPG",
-    href: require("../watchModels/Tissot//Tissot_PRS_516_Valjoux_2011"),
+    href: require("../watchModels/Tissot/Tissot_PRS_516_Valjoux_2011"),
     specialCollectionItem: false,
   },
 

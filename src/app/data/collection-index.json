@@ -4478,9 +4478,9 @@
     },
     "modelFile": "Tissot/Tissot_Heritage_1944_COSC_2011"
   },
-  "Tissot PRS 516 Valjoux 7750": {
+  "Tissot PRS 516 Automatic Valjoux 7750": {
     "brand": "Tissot",
-    "legend": "Tissot PRS 516 Valjoux 7750",
+    "legend": "Tissot PRS 516 Automatic Valjoux 7750",
     "year": 2011,
     "type": "Sports",
     "srcImage": "public/assets/Images/Tissot/2011_Tissot_PRS_516_Valjoux/IMG_6069.JPG",
@@ -4494,7 +4494,7 @@
       "date": "29/01/2025",
       "url": "https://www.catawiki.com/en/l/93182326-tissot-prs-516-carbon-nascar-racing-limited-edition-valjoux-7750-25-jewels-men-2011"
     },
-    "modelFile": "Tissot//Tissot_PRS_516_Valjoux_2011"
+    "modelFile": "Tissot/Tissot_PRS_516_Valjoux_2011"
   },
   "Tissot PRS 200 Silver T362/462": {
     "brand": "Tissot",
