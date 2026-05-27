@@ -24,11 +24,7 @@ import {
 } from "@/app/modelPage/technicalInformationUtils";
 import brandsService from "@/app/services/brandsService";
 import collectionService from "@/app/services/collectionService";
-import {
-  getPathParameter,
-  routeToCollectionBrandModelPage,
-  selectBackgroundImage,
-} from "@/app/services/commonFunctions";
+import { getPathParameter, routeToCollectionBrandModelPage } from "@/app/services/commonFunctions";
 import dynamic from "next/dynamic";
 import { Suspense } from "react";
 
@@ -192,7 +188,7 @@ export default async function BrandModelPage({
           </div>
         </div>
       </div>
-      <FooterComponent backgroudImage={selectBackgroundImage(brandDetails.backgrounImages)} />
+      <FooterComponent images={brandDetails.backgrounImages} />
     </div>
   );
 }

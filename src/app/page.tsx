@@ -27,7 +27,6 @@ const SpecialItemsComponent = dynamic(
 
 const PreviousSalesComponent = dynamic(
   () => import("./components/previousSales/previousSalesComponent"),
-  { ssr: true },
 );
 
 const AboutMeContainer = dynamic(() => import("./components/aboutMe/aboutMe"), { ssr: true });

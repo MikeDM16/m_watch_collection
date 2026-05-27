@@ -1,6 +1,6 @@
+import RandomBackgroundDiv from "@/app/components/common/RandomBackgroundDiv";
 import {
   background_images_paths,
-  getExternalResource,
   routeToCollectionBrandPage,
 } from "@/app/services/commonFunctions";
 import Link from "next/link";
@@ -10,7 +10,7 @@ export interface BrandTitleDivisionProps {
   description?: string;
   founded?: string;
   website?: string;
-  srcImage?: string;
+  images?: string[];
   textAlignement?: string;
   navigationPath?: Record<string, string>;
 }
@@ -35,11 +35,10 @@ export default function BrandTitleDivisionComponent(props: BrandTitleDivisionPro
   });
 
   return (
-    <div
+    <RandomBackgroundDiv
+      images={props.images}
+      fallback={background_images_paths[0]}
       className={`page-division title-division`}
-      style={{
-        backgroundImage: `url(${getExternalResource(props.srcImage || background_images_paths[0])})`,
-      }}
     >
       <div className={`page-title-overlay-aligned title-white-color ${textClassName}`}>
         {/** Layout need to be inside this div, because of the previous overlay */}
@@ -66,6 +65,6 @@ export default function BrandTitleDivisionComponent(props: BrandTitleDivisionPro
           </Link>
         </div>
       </div>
-    </div>
+    </RandomBackgroundDiv>
   );
 }

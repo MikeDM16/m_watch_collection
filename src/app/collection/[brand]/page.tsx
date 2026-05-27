@@ -13,7 +13,6 @@ import {
   getPathParameter,
   routeToCollectionBrandModelPage,
   routeToCollectionBrandPage,
-  selectBackgroundImage,
   SizeType,
 } from "@/app/services/commonFunctions";
 import Link from "next/link";
@@ -101,7 +100,7 @@ export default async function Page({ params }: { params: Promise<{ brand: string
       <AnalyticsReporter page={routeToCollectionBrandPage(brand)} title={brand} />
       <BrandPageTitleComponent brand={brandDetails} />
       {renderCollectionItem()}
-      <FooterComponent backgroudImage={selectBackgroundImage(brandDetails.backgrounImages)} />
+      <FooterComponent images={brandDetails.backgrounImages} />
     </div>
   );
 }

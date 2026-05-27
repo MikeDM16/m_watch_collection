@@ -1,22 +1,18 @@
-import {
-  background_images_paths,
-  getExternalResource,
-  getIconWithTextCentered,
-} from "@/app/services/commonFunctions";
+import RandomBackgroundDiv from "@/app/components/common/RandomBackgroundDiv";
+import { background_images_paths, getIconWithTextCentered } from "@/app/services/commonFunctions";
 import Link from "next/link";
 import { IoMdArrowRoundUp } from "react-icons/io";
 
 export interface FooterComponentProps {
-  backgroudImage?: string;
+  images?: string[];
 }
 
 export default function FooterComponent(props?: FooterComponentProps) {
   return (
-    <div
+    <RandomBackgroundDiv
+      images={props?.images}
+      fallback={background_images_paths[1]}
       className={`page-division title-division title-white-color`}
-      style={{
-        backgroundImage: `url(${getExternalResource(props?.backgroudImage || background_images_paths[1])})`,
-      }}
     >
       <div className={`page-division page-title-overlay-aligned centered-text`}>
         {/** Layout need to be inside this div, because of the previous overlay */}
@@ -30,6 +26,6 @@ export default function FooterComponent(props?: FooterComponentProps) {
           <em>{"Copyright © 2018-2026, MWatchCollection. All Rights Reserved."}</em>
         </div>
       </div>
-    </div>
+    </RandomBackgroundDiv>
   );
 }

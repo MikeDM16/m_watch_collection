@@ -88,16 +88,6 @@ export function routeToCollectionBrandModelPage(brandName: string, modelName: st
   return `/collection/${setPathParameter(brandName)}/${setPathParameter(modelName)}`;
 }
 
-export function selectBackgroundImage(images: string[] | undefined): string | undefined {
-  if (!images || images.length == 0) {
-    return undefined;
-  }
-
-  const currentHour = new Date().getHours();
-  const selectedIdx = currentHour % images.length;
-  return images[selectedIdx];
-}
-
 export function selectMultipleBackgroundImages(count: number): string[] {
   const allImages = brandsDB.flatMap((b) => b.backgrounImages || []);
 
