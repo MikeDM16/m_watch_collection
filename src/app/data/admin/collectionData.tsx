@@ -213,6 +213,16 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     href: require("../watchModels/Tissot/Tissot_PRS_516_Valjoux_2009"),
     specialCollectionItem: false,
   },
+  "Tissot PRS 516 NASCAR Racing White Chronograph": {
+    brand: BrandsEnum.TISSOT,
+    legend: "Tissot PRS 516 NASCAR Racing White Chronograph",
+    year: 2014,
+    type: WatchTypeEnum.SPORTS,
+    srcImage: "public/assets/Images/Tissot/2014_Tissot_NASCAR_Racing_White_Blue_V7750/IMG_4286.JPG",
+    hoverSrc: "public/assets/Images/Tissot/2014_Tissot_NASCAR_Racing_White_Blue_V7750/IMG_4289.JPG",
+    href: require("../watchModels/Tissot/Tissot_PRS_516_NASCAR_Racing_Chronograph_2014"),
+    specialCollectionItem: false,
+  },
 
   "Certina DS First White Ceramic": {
     brand: BrandsEnum.CERTINA,

@@ -4668,6 +4668,20 @@
     },
     "modelFile": "Tissot/Tissot_PRS_516_Valjoux_2009"
   },
+  "Tissot PRS 516 NASCAR Racing White Chronograph": {
+    "brand": "Tissot",
+    "legend": "Tissot PRS 516 NASCAR Racing White Chronograph",
+    "year": 2014,
+    "type": "Sports",
+    "srcImage": "public/assets/Images/Tissot/2014_Tissot_NASCAR_Racing_White_Blue_V7750/IMG_4286.JPG",
+    "hoverSrc": "public/assets/Images/Tissot/2014_Tissot_NASCAR_Racing_White_Blue_V7750/IMG_4289.JPG",
+    "specialCollectionItem": false,
+    "collectionSet": false,
+    "series": "PRS 516",
+    "movementTitle": "Valjoux 7750",
+    "saleReport": null,
+    "modelFile": "Tissot/Tissot_PRS_516_NASCAR_Racing_Chronograph_2014"
+  },
   "Certina DS First White Ceramic": {
     "brand": "Certina",
     "legend": "Certina DS First White Ceramic",
