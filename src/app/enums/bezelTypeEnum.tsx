@@ -60,6 +60,8 @@ export const BezelTypeEnum = {
   RIDERS_TABS_15_MIN: "Riders Tabs, 15-minute Graduated",
   RIDERS_TABS_MINUTE: "Riders Tabs, Minute Graduated",
 
+  GOLD_BEZEL: "Solid 18k Gold Bezel Ring",
+
   // Brushed
   CIRCULAR_BRUSHED: "Circular Brushed Bezel",
 };

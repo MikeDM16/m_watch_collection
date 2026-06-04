@@ -237,6 +237,10 @@ export const featuresEnum: Record<string, FeatureStruct> = {
     description:
       "A watch made with solid gold, offering a luxurious and timeless design. It provides the ultimate in prestige and durability.",
   },
+  SOLID_GOLD_BEZEL: {
+    name: "Solid Gold Bezel",
+    description: "Bezel ring made with solid 18k gold, offering a luxurious and timeless design.",
+  },
   SOLID_STERLING_SILVER: {
     name: "Solid Sterling Silver (925)",
     description:

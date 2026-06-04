@@ -786,6 +786,17 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     href: require("../watchModels/Tissot/Tissot_Ballade_C279379_Auto_2002"),
     specialCollectionItem: false,
   },
+  "Tissot Ballade Lady C227 327": {
+    brand: BrandsEnum.TISSOT,
+    legend: "Tissot Ballade Lady C227 327",
+    year: 2002,
+    type: WatchTypeEnum.CASUAL,
+    srcImage: "public/assets/Images/Tissot/2002_Tissot_Ballade_Lady_C227_327/IMG_4363.JPG",
+    hoverSrc: "public/assets/Images/Tissot/2002_Tissot_Ballade_Lady_C227_327/IMG_4355.JPG",
+    href: require("../watchModels/Tissot/Tissot_Ballade_Lady_C227_327_2002"),
+    specialCollectionItem: false,
+  },
+
   "Breitling Chronomat B13050.1": {
     brand: BrandsEnum.BREITLING,
     legend: "Breitling Chronomat B13050.1",
@@ -879,6 +890,19 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     specialCollectionItem: true,
   },
 
+  "Breitling Vitesse Serie Speciale Blue": {
+    brand: BrandsEnum.BREITLING,
+    legend: "Breitling Vitesse Serie Speciale Blue",
+    year: 1998,
+    type: WatchTypeEnum.SPORTS,
+    srcImage:
+      "public/assets/Images/Breitling/1998_Breitling_Vitesse_Serie_Speciale_Blue/IMG_4419.JPG",
+    hoverSrc:
+      "public/assets/Images/Breitling/1998_Breitling_Vitesse_Serie_Speciale_Blue/IMG_4394.JPG",
+    href: require("../watchModels/Breitling/Breitling_Vitesse_Serie_Speciale_Blue_1998"),
+    specialCollectionItem: false,
+  },
+
   "DuBois Grand Prix D'Europe Formula 1 - 1999": {
     brand: BrandsEnum.DUBOIS,
     legend: "DuBois Grand Prix D'Europe Formula 1 - 1999",
@@ -910,7 +934,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     specialCollectionItem: false,
   },
 
-  "Breitling Chronomat Vitesse Blue B13050": {
+  /*"Breitling Chronomat Vitesse Blue B13050": {
     brand: BrandsEnum.BREITLING,
     legend: "Breitling Chronomat Vitesse Blue B13050",
     year: 1998,
@@ -919,7 +943,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     hoverSrc: "public/assets/Images/Breitling/1998_Breitling_Chronomat_Vitesse_B13050/IMG_5097.JPG",
     href: require("../watchModels/Breitling/Breitling_Chronomat_B13050_Vitesse_1998"),
     specialCollectionItem: true,
-  },
+  },*/
   "Breitling Chronomat Vitesse Black B13050": {
     brand: BrandsEnum.BREITLING,
     legend: "Breitling Chronomat Vitesse Black B13050",
