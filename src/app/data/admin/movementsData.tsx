@@ -73,6 +73,7 @@ import OMEGA_1449 from "../movements/Omega/Omega_1449";
 import OMEGA_1665 from "../movements/Omega/Omega_1665";
 import OMEGA_1670 from "../movements/Omega/Omega_1670";
 import OMEGA_1675 from "../movements/Omega/Omega_1675";
+import OMEGA_3220_47J from "../movements/Omega/OMEGA_3220_47J";
 import OMEGA_T17 from "../movements/Omega/Omega_T17_15J";
 import ORIENT_46D40 from "../movements/Orient/Orient_46D40";
 import PIGUET_1270_22J from "../movements/Piguet/Piguet_1270_22_Jewels";
@@ -272,4 +273,5 @@ export const MovementsDataDB: Record<string, Caliber> = {
   Duromat_7522: Duromat_7522,
   LORSA_238: Lorsa_238,
   Girard_Perregaux_2280: Girard_Perregaux_2280,
+  OMEGA_3220_47J: OMEGA_3220_47J,
 };

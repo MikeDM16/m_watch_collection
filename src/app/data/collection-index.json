@@ -3676,6 +3676,20 @@
     },
     "modelFile": "Tag_Heuer/Tag_Heuer_Professional_2000_1999"
   },
+  "Omega Speedmaster Racing Schumacher - 2000 F1 World Champion - 3264/6000": {
+    "brand": "Omega",
+    "legend": "Omega Speedmaster Racing Schumacher - 2000 F1 World Champion - 3264/6000",
+    "year": 2000,
+    "type": "Sports",
+    "srcImage": "public/assets/Images/Omega/2000_Omega_Speedmaster_Racing_Schumacher_6000/IMG_4659.JPG",
+    "hoverSrc": "public/assets/Images/Omega/2000_Omega_Speedmaster_Racing_Schumacher_6000/IMG_4570.JPG",
+    "specialCollectionItem": true,
+    "collectionSet": false,
+    "series": "Speedmaster",
+    "movementTitle": "Omega Cal. 3220",
+    "saleReport": null,
+    "modelFile": "Omega/Omega_Speedmaster_Racing_Schumacher_2000_F1_World_Champion_2000"
+  },
   "Tissot Sport Chrono Black Chronograph": {
     "brand": "Tissot",
     "legend": "Tissot Sport Chrono Black Chronograph",

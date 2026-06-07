@@ -59,6 +59,13 @@ const details: WatchDetails = {
     "public/assets/Images/Tissot/2002_Tissot_Ballade_Lady_C227_327/IMG_4372.JPG",
     "public/assets/Images/Tissot/2002_Tissot_Ballade_Lady_C227_327/IMG_4373.JPG",
     "public/assets/Images/Tissot/2002_Tissot_Ballade_Lady_C227_327/IMG_4374.JPG",
+
+    "public/assets/Images/Tissot/2002_Tissot_Ballade_Lady_C227_327/IMG_4723.JPG",
+    "public/assets/Images/Tissot/2002_Tissot_Ballade_Lady_C227_327/IMG_4724.JPG",
+    "public/assets/Images/Tissot/2002_Tissot_Ballade_Lady_C227_327/IMG_4725.JPG",
+    "public/assets/Images/Tissot/2002_Tissot_Ballade_Lady_C227_327/IMG_4726.JPG",
+    "public/assets/Images/Tissot/2002_Tissot_Ballade_Lady_C227_327/IMG_4727.JPG",
+    "public/assets/Images/Tissot/2002_Tissot_Ballade_Lady_C227_327/IMG_4728.JPG",
   ],
 
   technicalData: {

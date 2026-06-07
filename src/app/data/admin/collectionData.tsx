@@ -836,6 +836,19 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     href: require("../watchModels/Pryngeps/Pryngeps_CR763_OS60_2001"),
     specialCollectionItem: false,
   },
+  "Omega Speedmaster Racing Schumacher - 2000 F1 World Champion - 3264/6000": {
+    brand: BrandsEnum.OMEGA,
+    legend: "Omega Speedmaster Racing Schumacher - 2000 F1 World Champion - 3264/6000",
+    year: 2000,
+    type: WatchTypeEnum.SPORTS,
+    srcImage:
+      "public/assets/Images/Omega/2000_Omega_Speedmaster_Racing_Schumacher_6000/IMG_4659.JPG",
+    hoverSrc:
+      "public/assets/Images/Omega/2000_Omega_Speedmaster_Racing_Schumacher_6000/IMG_4570.JPG",
+    href: require("../watchModels/Omega/Omega_Speedmaster_Racing_Schumacher_2000_F1_World_Champion_2000"),
+    specialCollectionItem: true,
+  },
+
   "Tissot Sport Chrono Black Chronograph": {
     brand: BrandsEnum.TISSOT,
     legend: "Tissot Sport Chrono Black Chronograph",
