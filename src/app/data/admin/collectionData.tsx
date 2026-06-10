@@ -615,6 +615,18 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     href: require("../watchModels/Tag_Heuer/Tag_Heuer_Aquaracer_CN2111_2005"),
     specialCollectionItem: false,
   },
+
+  "Baume Et Mercier Capeland Noir": {
+    brand: BrandsEnum.BAUME_MERCIER,
+    legend: "Baume Et Mercier Capeland Noir",
+    year: 2005,
+    type: WatchTypeEnum.CASUAL,
+    srcImage: "public/assets/Images/Baume_Mercier/2025_Baume_Mercier_Capeland_Noir/IMG_4970.JPG",
+    hoverSrc: "public/assets/Images/Baume_Mercier/2025_Baume_Mercier_Capeland_Noir/IMG_4972.JPG",
+    href: require("../watchModels/Baume_et_Mercier/Baume_et_Mercier_Capeland_Noir_2005"),
+    specialCollectionItem: false,
+  },
+
   "Raymond Weil Amadeus 200 7750": {
     brand: BrandsEnum.RAYMOND_WEIL,
     legend: "Raymond Weil Amadeus 200 7750",
@@ -903,9 +915,9 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     specialCollectionItem: true,
   },
 
-  "Breitling Vitesse Serie Speciale Blue": {
+  "Breitling Chronomat Vitesse Serie Speciale Blue": {
     brand: BrandsEnum.BREITLING,
-    legend: "Breitling Vitesse Serie Speciale Blue",
+    legend: "Breitling Chronomat Vitesse Serie Speciale Blue",
     year: 1998,
     type: WatchTypeEnum.SPORTS,
     srcImage:
@@ -1392,6 +1404,17 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     href: require("../watchModels/Lorus/Lorus_N945_7A90_MultiFunction_1993"),
     specialCollectionItem: false,
   },
+  "Eberhard Ref. 32031 Lemania 1873 Limited Edition 555/1000": {
+    brand: BrandsEnum.EBERHARD,
+    legend: "Eberhard Ref. 32031 Lemania 1873 Limited Edition 555/1000",
+    year: 1992,
+    type: WatchTypeEnum.DRESS,
+    srcImage: "public/assets/Images/Eberhard/1992_Eberhard_Ref_32031_Lemania_1873/IMG_4880.JPG",
+    hoverSrc: "public/assets/Images/Eberhard/1992_Eberhard_Ref_32031_Lemania_1873/IMG_4926.JPG",
+    href: require("../watchModels/Eberhard/Eberhard_Godron_Ref_32031_Lemania_1873_1992"),
+    specialCollectionItem: false,
+  },
+
   "Omega Olympia Winter Olympics Albertville Ltd. 305/499": {
     brand: BrandsEnum.OMEGA,
     legend: "Omega Olympia Winter Olympics Albertville Ltd. 305/499",

@@ -4,6 +4,7 @@ export const BrandsEnum = {
   AMYRIA: "Amyria",
   ARAUTO: "Arauto",
   ARGUS: "Argus",
+  BAUME_MERCIER: "Baume et Mercier",
   BELEX: "Belex",
   BERGEON: "Bergeon",
   BREITLING: "Breitling",

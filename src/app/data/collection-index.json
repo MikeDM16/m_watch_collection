@@ -2714,6 +2714,20 @@
     },
     "modelFile": "Tissot/Tissot_PRX_P475_Chrono_1991"
   },
+  "Eberhard Ref. 32031 Lemania 1873 Limited Edition 555/1000": {
+    "brand": "Eberhard",
+    "legend": "Eberhard Ref. 32031 Lemania 1873 Limited Edition 555/1000",
+    "year": 1992,
+    "type": "Dress",
+    "srcImage": "public/assets/Images/Eberhard/1992_Eberhard_Ref_32031_Lemania_1873/IMG_4880.JPG",
+    "hoverSrc": "public/assets/Images/Eberhard/1992_Eberhard_Ref_32031_Lemania_1873/IMG_4926.JPG",
+    "specialCollectionItem": false,
+    "collectionSet": false,
+    "series": "Godron",
+    "movementTitle": "Lemania 1873",
+    "saleReport": null,
+    "modelFile": "Eberhard/Eberhard_Godron_Ref_32031_Lemania_1873_1992"
+  },
   "Omega Olympia Winter Olympics Albertville Ltd. 305/499": {
     "brand": "Omega",
     "legend": "Omega Olympia Winter Olympics Albertville Ltd. 305/499",
@@ -3466,9 +3480,9 @@
     },
     "modelFile": "Tag_Heuer/Tag_Heuer_Professional_1500_1997"
   },
-  "Breitling Vitesse Serie Speciale Blue": {
+  "Breitling Chronomat Vitesse Serie Speciale Blue": {
     "brand": "Breitling",
-    "legend": "Breitling Vitesse Serie Speciale Blue",
+    "legend": "Breitling Chronomat Vitesse Serie Speciale Blue",
     "year": 1998,
     "type": "Sports",
     "srcImage": "public/assets/Images/Breitling/1998_Breitling_Vitesse_Serie_Speciale_Blue/IMG_4419.JPG",
@@ -4043,6 +4057,20 @@
       "url": "https://www.catawiki.com/en/l/90081043-tag-heuer-aquaracer-professional-2000-clous-de-paris-chronograph-caliber-16-valjoux-7750-25-jewels-cn2111-men-2010-2020"
     },
     "modelFile": "Tag_Heuer/Tag_Heuer_Aquaracer_CN2111_2005"
+  },
+  "Baume Et Mercier Capeland Noir": {
+    "brand": "Baume et Mercier",
+    "legend": "Baume Et Mercier Capeland Noir",
+    "year": 2005,
+    "type": "Casual",
+    "srcImage": "public/assets/Images/Baume_Mercier/2025_Baume_Mercier_Capeland_Noir/IMG_4970.JPG",
+    "hoverSrc": "public/assets/Images/Baume_Mercier/2025_Baume_Mercier_Capeland_Noir/IMG_4972.JPG",
+    "specialCollectionItem": false,
+    "collectionSet": false,
+    "series": "Capeland",
+    "movementTitle": "ETA 955.112",
+    "saleReport": null,
+    "modelFile": "Baume_et_Mercier/Baume_et_Mercier_Capeland_Noir_2005"
   },
   "Raymond Weil Amadeus 200 7750": {
     "brand": "Raymond Weil",

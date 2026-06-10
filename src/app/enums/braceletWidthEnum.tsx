@@ -1,5 +1,6 @@
 export const BraceletWidthEnum = {
   W_14: "14 mm",
+  W_15: "15 mm",
   W_16: "16 mm",
   W_17: "17 mm",
   W_18: "18 mm",

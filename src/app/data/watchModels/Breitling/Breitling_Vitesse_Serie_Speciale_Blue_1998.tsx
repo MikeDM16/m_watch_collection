@@ -25,7 +25,7 @@ import { WatchDetails } from "../../watchDetails";
 import { BreitlingBrandSeries } from "./BreitlingBrandSeries";
 
 const details: WatchDetails = {
-  title: "1998 Breitling Vitesse Serie Speciale Blue",
+  title: "1998 Breitling Chronomat Vitesse Serie Speciale Blue",
 
   sliderImages: [
     "public/assets/Images/Breitling/1998_Breitling_Vitesse_Serie_Speciale_Blue/IMG_4384.JPG",

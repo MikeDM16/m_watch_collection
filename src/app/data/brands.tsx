@@ -442,6 +442,19 @@ export const brandsDB: Brand[] = [
     displayBySeries: false,
   },
   {
+    name: BrandsEnum.BAUME_MERCIER,
+    logoImg: "public/assets/Images/Brands_Logos/baume_mercier_logo.PNG",
+    displayOrder: 32,
+    website: "https://www.baume-et-mercier.com/",
+    description:
+      "Baume et Mercier is a Swiss luxury watch brand. Since its origin, the brand continued production since its founding",
+    foundedInformation: {
+      year: 1830,
+      details: "Founded in Geneve, Switzerland",
+    },
+  },
+
+  {
     name: BrandsEnum.BELEX,
     logoImg: "public/assets/Images/Brands_Logos/belex_logo.PNG",
     displayOrder: undefined,
