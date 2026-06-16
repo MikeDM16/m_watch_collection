@@ -2878,6 +2878,20 @@
     },
     "modelFile": "Pryngeps/Pryngeps_Regolo_Triple_Calendar_1992"
   },
+  "Omega Seamaster 120M Cal. 1438": {
+    "brand": "Omega",
+    "legend": "Omega Seamaster 120M Cal. 1438",
+    "year": 1993,
+    "type": "Casual",
+    "srcImage": "public/assets/Images/Omega/1993_Omega_Seamaster_120m_1438/IMG_0151.JPG",
+    "hoverSrc": "public/assets/Images/Omega/1993_Omega_Seamaster_120m_1438/IMG_0146.JPG",
+    "specialCollectionItem": false,
+    "collectionSet": false,
+    "series": "Seamaster",
+    "movementTitle": "Omega Cal. 1438",
+    "saleReport": null,
+    "modelFile": "Omega/Omega_Seamaster_120M_1438_1993"
+  },
   "Tissot L395 Chronograph": {
     "brand": "Tissot",
     "legend": "Tissot L395 Chronograph",

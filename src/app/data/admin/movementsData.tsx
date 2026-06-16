@@ -68,6 +68,7 @@ import OMEGA_1141_45J from "../movements/Omega/Omega_1141";
 import OMEGA_1151 from "../movements/Omega/Omega_1151";
 import OMEGA_1370 from "../movements/Omega/Omega_1370";
 import OMEGA_1430 from "../movements/Omega/Omega_1430";
+import OMEGA_1438 from "../movements/Omega/Omega_1438";
 import OMEGA_1441 from "../movements/Omega/Omega_1441";
 import OMEGA_1445 from "../movements/Omega/Omega_1445";
 import OMEGA_1449 from "../movements/Omega/Omega_1449";
@@ -207,6 +208,7 @@ export const MovementsDataDB: Record<string, Caliber> = {
   OMEGA_1151: OMEGA_1151,
   OMEGA_1370: OMEGA_1370,
   OMEGA_1430: OMEGA_1430,
+  OMEGA_1438: OMEGA_1438,
   OMEGA_1441: OMEGA_1441,
   OMEGA_1445: OMEGA_1445,
   OMEGA_1449: OMEGA_1449,

@@ -1292,6 +1292,17 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     href: require("../watchModels/Seiko/Seiko_6M13_Perpetual_Calendar_1994"),
     specialCollectionItem: false,
   },
+  "Omega Seamaster 120M Cal. 1438": {
+    brand: BrandsEnum.OMEGA,
+    legend: "Omega Seamaster 120M Cal. 1438",
+    year: 1993,
+    type: WatchTypeEnum.CASUAL,
+    srcImage: "public/assets/Images/Omega/1993_Omega_Seamaster_120m_1438/IMG_0151.JPG",
+    hoverSrc: "public/assets/Images/Omega/1993_Omega_Seamaster_120m_1438/IMG_0146.JPG",
+    href: require("../watchModels/Omega/Omega_Seamaster_120M_1438_1993"),
+    specialCollectionItem: false,
+  },
+
   "Tissot L395 Chronograph": {
     brand: BrandsEnum.TISSOT,
     legend: "Tissot L395 Chronograph",
