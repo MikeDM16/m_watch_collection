@@ -29,20 +29,10 @@ const details: WatchDetails = {
 
   sliderImages: [
     "public/assets/Images/Breitling/1993_Breitling_Chronomat_D13047/IMG_0440.JPG",
-    "public/assets/Images/Breitling/1993_Breitling_Chronomat_D13047/IMG_0441.JPG",
     "public/assets/Images/Breitling/1993_Breitling_Chronomat_D13047/IMG_0442.JPG",
     "public/assets/Images/Breitling/1993_Breitling_Chronomat_D13047/IMG_0443.JPG",
     "public/assets/Images/Breitling/1993_Breitling_Chronomat_D13047/IMG_0444.JPG",
-    "public/assets/Images/Breitling/1993_Breitling_Chronomat_D13047/IMG_0445.JPG",
     "public/assets/Images/Breitling/1993_Breitling_Chronomat_D13047/IMG_0447.JPG",
-
-    "public/assets/Images/Breitling/1993_Breitling_Chronomat_D13047/IMG_0496.JPG",
-    "public/assets/Images/Breitling/1993_Breitling_Chronomat_D13047/IMG_0497.JPG",
-    "public/assets/Images/Breitling/1993_Breitling_Chronomat_D13047/IMG_0498.JPG",
-    "public/assets/Images/Breitling/1993_Breitling_Chronomat_D13047/IMG_0499.JPG",
-    "public/assets/Images/Breitling/1993_Breitling_Chronomat_D13047/IMG_0500.JPG",
-    "public/assets/Images/Breitling/1993_Breitling_Chronomat_D13047/IMG_0501.JPG",
-    "public/assets/Images/Breitling/1993_Breitling_Chronomat_D13047/IMG_0503.JPG",
 
     "public/assets/Images/Breitling/1993_Breitling_Chronomat_D13047/IMG_0504.JPG",
     "public/assets/Images/Breitling/1993_Breitling_Chronomat_D13047/IMG_0505.JPG",
@@ -52,6 +42,17 @@ const details: WatchDetails = {
     "public/assets/Images/Breitling/1993_Breitling_Chronomat_D13047/IMG_0509.JPG",
 
     "public/assets/Images/Breitling/1993_Breitling_Chronomat_D13047/IMG_0702.JPG",
+
+    "public/assets/Images/Breitling/1993_Breitling_Chronomat_D13047/IMG_0441.JPG",
+    "public/assets/Images/Breitling/1993_Breitling_Chronomat_D13047/IMG_0445.JPG",
+
+    "public/assets/Images/Breitling/1993_Breitling_Chronomat_D13047/IMG_0496.JPG",
+    "public/assets/Images/Breitling/1993_Breitling_Chronomat_D13047/IMG_0497.JPG",
+    "public/assets/Images/Breitling/1993_Breitling_Chronomat_D13047/IMG_0498.JPG",
+    "public/assets/Images/Breitling/1993_Breitling_Chronomat_D13047/IMG_0499.JPG",
+    "public/assets/Images/Breitling/1993_Breitling_Chronomat_D13047/IMG_0500.JPG",
+    "public/assets/Images/Breitling/1993_Breitling_Chronomat_D13047/IMG_0501.JPG",
+    "public/assets/Images/Breitling/1993_Breitling_Chronomat_D13047/IMG_0503.JPG",
 
     "public/assets/Images/Breitling/1993_Breitling_Chronomat_D13047/IMG_0448.JPG",
     "public/assets/Images/Breitling/1993_Breitling_Chronomat_D13047/IMG_0449.JPG",
@@ -64,7 +65,6 @@ const details: WatchDetails = {
     "public/assets/Images/Breitling/1993_Breitling_Chronomat_D13047/IMG_0458.JPG",
     "public/assets/Images/Breitling/1993_Breitling_Chronomat_D13047/IMG_0459.JPG",
 
-    "public/assets/Images/Breitling/1993_Breitling_Chronomat_D13047/IMG_0463.JPG",
     "public/assets/Images/Breitling/1993_Breitling_Chronomat_D13047/IMG_0465.JPG",
     "public/assets/Images/Breitling/1993_Breitling_Chronomat_D13047/IMG_0466.JPG",
     "public/assets/Images/Breitling/1993_Breitling_Chronomat_D13047/IMG_0467.JPG",
@@ -81,6 +81,7 @@ const details: WatchDetails = {
     "public/assets/Images/Breitling/1993_Breitling_Chronomat_D13047/IMG_0460.JPG",
     "public/assets/Images/Breitling/1993_Breitling_Chronomat_D13047/IMG_0461.JPG",
     "public/assets/Images/Breitling/1993_Breitling_Chronomat_D13047/IMG_0462.JPG",
+    "public/assets/Images/Breitling/1993_Breitling_Chronomat_D13047/IMG_0463.JPG",
 
     "public/assets/Images/Breitling/1993_Breitling_Chronomat_D13047/IMG_0478.JPG",
     "public/assets/Images/Breitling/1993_Breitling_Chronomat_D13047/IMG_0479.JPG",
