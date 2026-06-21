@@ -119,7 +119,7 @@ const details: WatchDetails = {
 
     information: {
       brand: BrandsEnum.OMEGA,
-      series: OmegaBrandSeries.SPEEDMASTER,
+      series: OmegaBrandSeries.SPEEDMASTER.RACING,
       catalogueReference: "Racing - Schumacher 2000 F1 World Champion 3264/6000 (3518.50)",
       productionYear: "2000",
       movementType: MovementWatchTypeEnum.AUTOMATIC,

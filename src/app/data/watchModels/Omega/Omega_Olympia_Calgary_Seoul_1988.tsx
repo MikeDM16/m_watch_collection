@@ -88,7 +88,7 @@ const details: WatchDetails = {
 
     information: {
       brand: BrandsEnum.OMEGA,
-      series: OmegaBrandSeries.OLYMPIA,
+      series: OmegaBrandSeries.OLYMPIA.WINTER_OLYMPICS_CALGARY_SEOUL,
       catalogueReference: "Winter Olympics Calgary Seoul 457/1000 (DB 386.1232)",
       productionYear: "1988",
       movementType: MovementWatchTypeEnum.QUARTZ,

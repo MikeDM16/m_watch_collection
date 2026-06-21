@@ -94,7 +94,7 @@ const details: WatchDetails = {
 
     information: {
       brand: BrandsEnum.OMEGA,
-      series: OmegaBrandSeries.OLYMPIA,
+      series: OmegaBrandSeries.OLYMPIA.WINTER_OLYMPICS_ALBERTVILLE,
       catalogueReference: "Winter Olympics Albertville Limited 820/3000 (DB 386.1031)",
       productionYear: "1992",
       movementType: MovementWatchTypeEnum.QUARTZ,

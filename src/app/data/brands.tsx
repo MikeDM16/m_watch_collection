@@ -97,7 +97,7 @@ export const brandsDB: Brand[] = [
       year: 1860,
       details: "Founded in Sonvilier, Switzerland",
     },
-    displayBySeries: true,
+    displayBySeries: false,
     backgrounImages: [
       "public/assets/Images/Brands_Backgrounds/Chopard_1_Background.JPG",
       "public/assets/Images/Brands_Backgrounds/Chopard_2_Background.JPG",
@@ -354,7 +354,7 @@ export const brandsDB: Brand[] = [
       "public/assets/Images/Brands_Backgrounds/Cuervo_y_Sobrinos_2_Background.JPG",
       "public/assets/Images/Brands_Backgrounds/Cuervo_y_Sobrinos_3_Background.JPG",
     ],
-    displayBySeries: true,
+    displayBySeries: false,
   },
 
   {

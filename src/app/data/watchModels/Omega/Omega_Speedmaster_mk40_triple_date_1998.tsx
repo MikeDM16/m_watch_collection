@@ -136,7 +136,7 @@ const details: WatchDetails = {
 
     information: {
       brand: BrandsEnum.OMEGA,
-      series: OmegaBrandSeries.SPEEDMASTER,
+      series: OmegaBrandSeries.SPEEDMASTER.MK40,
       catalogueReference: 'MK40 Triple Date "Schumacher" (175.0084 375.0084)',
       productionYear: "1996",
       movementType: MovementWatchTypeEnum.AUTOMATIC,

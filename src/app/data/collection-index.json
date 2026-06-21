@@ -2384,7 +2384,7 @@
     "hoverSrc": "public/assets/Images/Breitling/1998_Breitling_Sextant_B55047/IMG_2476.JPG",
     "specialCollectionItem": false,
     "collectionSet": false,
-    "series": "Vintage Series",
+    "series": "Vintage Series — Sextant",
     "movementTitle": "Frédéric Piguet 1270",
     "saleReport": null,
     "modelFile": "Breitling/Breitling_Sextant_B55047_1998"
@@ -2434,7 +2434,7 @@
     "hoverSrc": "public/assets/Images/Omega/1988_Polaris_Calgary_Seoul_386_1232_1000/IMG_0112.JPG",
     "specialCollectionItem": true,
     "collectionSet": false,
-    "series": "Olympia",
+    "series": "Olympia — Winter Olympics Calgary And Seoul",
     "movementTitle": "Omega Cal. 1670",
     "saleReport": null,
     "modelFile": "Omega/Omega_Olympia_Calgary_Seoul_1988"
@@ -2501,7 +2501,7 @@
     "hoverSrc": "public/assets/Images/Breitling/1989_Breitling_Chronomat_Sextant_1270_22J/IMG_7814.JPG",
     "specialCollectionItem": false,
     "collectionSet": false,
-    "series": "Vintage Series",
+    "series": "Vintage Series — Sextant",
     "movementTitle": "Frédéric Piguet 1270",
     "saleReport": {
       "price": 1600,
@@ -2637,7 +2637,7 @@
     "hoverSrc": "public/assets/Images/Breitling/1991_Breitling_J13047X_018/IMG_2982.JPG",
     "specialCollectionItem": true,
     "collectionSet": false,
-    "series": "Chronomat",
+    "series": "Chronomat — Early (1984-1996)",
     "movementTitle": "Valjoux 7750",
     "saleReport": null,
     "modelFile": "Breitling/Breitling_Chronomat_J13047X_1991"
@@ -2737,7 +2737,7 @@
     "hoverSrc": "public/assets/Images/Omega/1992_Polaris_Albertville_386_1031_500/IMG_8766.JPG",
     "specialCollectionItem": true,
     "collectionSet": false,
-    "series": "Olympia",
+    "series": "Olympia — Winter Olympics Albertville",
     "movementTitle": "Omega Cal. 1675",
     "saleReport": {
       "price": 2230,
@@ -2755,7 +2755,7 @@
     "hoverSrc": "public/assets/Images/Omega/1992_Polaris_Albertville_386_1031_3000/IMG_4025.JPG",
     "specialCollectionItem": false,
     "collectionSet": false,
-    "series": "Olympia",
+    "series": "Olympia — Winter Olympics Albertville",
     "movementTitle": "Omega Cal. 1675",
     "saleReport": null,
     "modelFile": "Omega/Omega_Olympia_Albertville_3000_386_1031_1992"
@@ -2877,6 +2877,20 @@
       "url": "https://www.catawiki.com/en/l/101514535"
     },
     "modelFile": "Pryngeps/Pryngeps_Regolo_Triple_Calendar_1992"
+  },
+  "Breitling Chronomat 81.950 Olive Dial": {
+    "brand": "Breitling",
+    "legend": "Breitling Chronomat 81.950 Olive Dial",
+    "year": 1993,
+    "type": "Sports",
+    "srcImage": "public/assets/Images/Breitling/1993_Breitling_Chronomat_81950_Green/IMG_0283.JPG",
+    "hoverSrc": "public/assets/Images/Breitling/1993_Breitling_Chronomat_81950_Green/IMG_0284.JPG",
+    "specialCollectionItem": false,
+    "collectionSet": false,
+    "series": "Chronomat — Early (1984-1996)",
+    "movementTitle": "Valjoux 7750",
+    "saleReport": null,
+    "modelFile": "Breitling/Breitling_Chronomat_81_950_Olive_Dial_1993"
   },
   "Omega Seamaster 120M Cal. 1438": {
     "brand": "Omega",
@@ -3001,7 +3015,7 @@
     "hoverSrc": "public/assets/Images/Breitling/1994_Breitling_Chronomat_10th_Anniversary_A13050/IMG_9283.JPG",
     "specialCollectionItem": true,
     "collectionSet": false,
-    "series": "Chronomat",
+    "series": "Chronomat — Early (1984-1996)",
     "movementTitle": "Valjoux 7750",
     "saleReport": {
       "price": 1981,
@@ -3277,7 +3291,7 @@
     "hoverSrc": "public/assets/Images/Omega/1998_Omega_Speedmaster_MK40_triple_date/IMG_7722.JPG",
     "specialCollectionItem": true,
     "collectionSet": false,
-    "series": "Speedmaster",
+    "series": "Speedmaster — MK40 Triple Calendar",
     "movementTitle": "Valjoux 7750",
     "saleReport": null,
     "modelFile": "Omega/Omega_Speedmaster_mk40_triple_date_1998"
@@ -3503,7 +3517,7 @@
     "hoverSrc": "public/assets/Images/Breitling/1998_Breitling_Vitesse_Serie_Speciale_Blue/IMG_4394.JPG",
     "specialCollectionItem": false,
     "collectionSet": false,
-    "series": "Chronomat Vitesse",
+    "series": "Chronomat — Vitesse (1997-2000)",
     "movementTitle": "Valjoux 7750",
     "saleReport": null,
     "modelFile": "Breitling/Breitling_Vitesse_Serie_Speciale_Blue_1998"
@@ -3531,7 +3545,7 @@
     "hoverSrc": "public/assets/Images/Breitling/1998_Breitling_Chronomat_Vitesse_B13050_Black/IMG_6654.JPG",
     "specialCollectionItem": false,
     "collectionSet": false,
-    "series": "Chronomat Vitesse",
+    "series": "Chronomat — Vitesse (1997-2000)",
     "movementTitle": "Valjoux 7750",
     "saleReport": {
       "price": 1700,
@@ -3549,7 +3563,7 @@
     "hoverSrc": "public/assets/Images/Omega/1998_Omega_Speedmaster_reduced/IMG_2296.JPG",
     "specialCollectionItem": true,
     "collectionSet": false,
-    "series": "Speedmaster",
+    "series": "Speedmaster — Reduced",
     "movementTitle": "Omega Cal. 1141",
     "saleReport": null,
     "modelFile": "Omega/Omega_Speedmaster_reduced_1998"
@@ -3599,7 +3613,7 @@
     "hoverSrc": "public/assets/Images/Breitling/1998_Breitling_Colt_A53035_Chronograph/IMG_9224.JPG",
     "specialCollectionItem": false,
     "collectionSet": false,
-    "series": "Vintage Series",
+    "series": "Vintage Series — Colt",
     "movementTitle": "ETA 251.262",
     "saleReport": {
       "price": 1005,
@@ -3713,7 +3727,7 @@
     "hoverSrc": "public/assets/Images/Omega/2000_Omega_Speedmaster_Racing_Schumacher_6000/IMG_4570.JPG",
     "specialCollectionItem": true,
     "collectionSet": false,
-    "series": "Speedmaster",
+    "series": "Speedmaster — Racing",
     "movementTitle": "Omega Cal. 3220",
     "saleReport": null,
     "modelFile": "Omega/Omega_Speedmaster_Racing_Schumacher_2000_F1_World_Champion_2000"
@@ -3859,7 +3873,7 @@
     "hoverSrc": "public/assets/Images/Breitling/2002_Breitling_Chronomat_B13050/IMG_5121.JPG",
     "specialCollectionItem": false,
     "collectionSet": false,
-    "series": "Chronomat",
+    "series": "Chronomat — Neo-Vintage",
     "movementTitle": "Valjoux 7750",
     "saleReport": null,
     "modelFile": "Breitling/Breitling_Chronomat_B13050_2002"
@@ -4367,7 +4381,7 @@
     "hoverSrc": "public/assets/Images/Breitling/2008_Breitling_Chronomat_Evolution_A13356/IMG_7131.JPG",
     "specialCollectionItem": true,
     "collectionSet": false,
-    "series": "Chronomat",
+    "series": "Chronomat — Evolution (2008-2011)",
     "movementTitle": "Valjoux 7750",
     "saleReport": {
       "price": 2900,

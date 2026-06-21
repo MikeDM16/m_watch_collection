@@ -1,6 +1,20 @@
 import CollectionIndex, { CollectionIndexEntry } from "../data/collectionIndex";
 import type { WatchDetails } from "../data/watchDetails";
+import { parseSeries } from "../data/watchModels/seriesGroup";
 import brandsService from "./brandsService";
+
+// A series can have a second level: a "group" (umbrella, e.g. Chronomat) holding several
+// sub-series. `label === ""` marks the base members rendered directly under the group title;
+// `group === ""` marks brands that don't display by series (a single untitled list).
+export interface SeriesSubGroup {
+  label: string;
+  models: CollectionIndexEntry[];
+}
+
+export interface SeriesGroup {
+  group: string;
+  subGroups: SeriesSubGroup[];
+}
 
 // Convert "DD/MM/YYYY" to a proper Date object
 const parseDate = (dateStr: string): number => {
@@ -8,37 +22,43 @@ const parseDate = (dateStr: string): number => {
   return new Date(year, month - 1, day).getTime(); // Convert to timestamp
 };
 
-function getCollectionModelsByBrand(
-  brand: string,
-  displayBySeries?: boolean,
-): Record<string, CollectionIndexEntry[]> {
-  let seriesKey: string | undefined = undefined;
-  const brandModels: Record<string, CollectionIndexEntry[]> = {};
-  const defaultSeriesKey = "";
-  brandModels[defaultSeriesKey] = [];
+function getCollectionModelsByBrand(brand: string, displayBySeries?: boolean): SeriesGroup[] {
+  const entries = Object.entries(CollectionIndex)
+    .filter(([, entry]) => entry.brand == brand)
+    .sort(([, va], [, vb]) => vb.year - va.year) // DESC order
+    .map(([, entry]) => entry);
 
-  Object.assign(
-    {},
-    Object.entries(CollectionIndex)
-      .filter(([, entry]) => entry.brand == brand)
-      .sort(([, va], [, vb]) => vb.year - va.year) // DESC order
-      .map(([, entry]) => {
-        seriesKey = entry.series;
-        if (seriesKey in brandModels) {
-          brandModels[seriesKey].push(entry);
-        } else if (displayBySeries == true) {
-          brandModels[seriesKey] = [entry];
-        } else {
-          brandModels[defaultSeriesKey].push(entry);
-        }
-      }),
-  );
+  if (entries.length === 0) return [];
 
-  if (brandModels[defaultSeriesKey].length == 0) {
-    delete brandModels[defaultSeriesKey];
+  // Brands that don't display by series: a single, untitled, flat list.
+  if (displayBySeries !== true) {
+    return [{ group: "", subGroups: [{ label: "", models: entries }] }];
   }
 
-  return brandModels;
+  // group -> (sub label -> models), preserving first-encounter (newest-first) order.
+  const groups = new Map<string, Map<string, CollectionIndexEntry[]>>();
+  for (const entry of entries) {
+    const { group, label } = parseSeries(entry.series);
+    let subGroups = groups.get(group);
+    if (!subGroups) {
+      subGroups = new Map<string, CollectionIndexEntry[]>();
+      groups.set(group, subGroups);
+    }
+    const models = subGroups.get(label);
+    if (models) {
+      models.push(entry);
+    } else {
+      subGroups.set(label, [entry]);
+    }
+  }
+
+  return Array.from(groups, ([group, subMap]) => {
+    const subGroups = Array.from(subMap, ([label, models]) => ({ label, models }));
+    // Pin base members (label "") first so they sit directly under the group title.
+    const base = subGroups.filter((s) => s.label === "");
+    const rest = subGroups.filter((s) => s.label !== "");
+    return { group, subGroups: [...base, ...rest] };
+  });
 }
 
 function getIndexEntry(key: string): CollectionIndexEntry | undefined {

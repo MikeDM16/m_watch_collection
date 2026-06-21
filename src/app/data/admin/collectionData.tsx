@@ -1292,6 +1292,18 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     href: require("../watchModels/Seiko/Seiko_6M13_Perpetual_Calendar_1994"),
     specialCollectionItem: false,
   },
+
+  "Breitling Chronomat 81.950 Olive Dial": {
+    brand: BrandsEnum.BREITLING,
+    legend: "Breitling Chronomat 81.950 Olive Dial",
+    year: 1993,
+    type: WatchTypeEnum.SPORTS,
+    srcImage: "public/assets/Images/Breitling/1993_Breitling_Chronomat_81950_Green/IMG_0283.JPG",
+    hoverSrc: "public/assets/Images/Breitling/1993_Breitling_Chronomat_81950_Green/IMG_0284.JPG",
+    href: require("../watchModels/Breitling/Breitling_Chronomat_81_950_Olive_Dial_1993"),
+    specialCollectionItem: false,
+  },
+
   "Omega Seamaster 120M Cal. 1438": {
     brand: BrandsEnum.OMEGA,
     legend: "Omega Seamaster 120M Cal. 1438",

@@ -13,7 +13,7 @@ Quick reference for all files that need to be created or modified when adding wa
 - [ ] **3. Register in collectionData** — add entry to `CollectionItemsDB` in `src/app/data/collectionData.tsx`
 - [ ] **4. Regenerate collection index** — runs automatically on `npm run dev` and `npm run build` (or manually: `npm run generate-index`)
 - [ ] **5. (If new brand)** Add enum value, brand entry, and BrandSeries file (see Section D)
-- [ ] **6. (If new series for existing brand)** Add series constant to `src/app/data/watchModels/[Brand]/[Brand]BrandSeries.tsx`
+- [ ] **6. (If new series for existing brand)** Add series constant to `src/app/data/watchModels/[Brand]/[Brand]BrandSeries.tsx` (or a sub-series under an umbrella group — see Section D2)
 - [ ] **7. (If part of a collection set)** Add entry inside `src/app/data/watchModels/[Brand]/[Brand]_collection_set.tsx`
 
 ### Step 2 — Watch Model File
@@ -323,6 +323,54 @@ All enums are in `src/app/enums/`. Check the individual files for full details a
 6. **Set `displayBySeries: true`** in `brands.tsx` if the brand page should group models by series
 
 No route changes needed — `[brand]/page.tsx` and `[brand]/[model]/page.tsx` use `generateStaticParams()`.
+
+---
+
+## D2. Series grouping and sub-series
+
+A brand's series live in `src/app/data/watchModels/[Brand]/[Brand]BrandSeries.tsx` as a constant
+mapping a KEY to its display string. A watch references one via `series: [Brand]BrandSeries.KEY`.
+The brand page groups watches by that value when `displayBySeries: true` is set in `brands.tsx`.
+
+**Flat series** (most brands):
+
+```tsx
+export const OmegaBrandSeries = {
+  SPEEDMASTER: "Speedmaster",
+  SEAMASTER: "Seamaster",
+};
+// watch: series: OmegaBrandSeries.SEAMASTER
+```
+
+**Sub-series (umbrella groups)** — when several series belong under one umbrella (e.g. Breitling's
+Chronomat lines), wrap them with the `seriesGroup` helper. The umbrella renders as a main heading
+with each sub-series as a smaller sub-heading beneath it:
+
+```tsx
+import { seriesGroup } from "../seriesGroup";
+
+export const BreitlingBrandSeries = {
+  CHRONOMAT: seriesGroup("Chronomat", {
+    CHRONOMAT_EVOLUTION: "Evolution (2008-2011)", // -> "Chronomat — Evolution (...)"
+    CHRONOMAT_VITESSE: "Vitesse (1997-2000)",
+  }),
+  COLT: "Colt", // flat series stay plain strings
+};
+// watch: series: BreitlingBrandSeries.CHRONOMAT.CHRONOMAT_EVOLUTION
+```
+
+How it works:
+
+- `seriesGroup("Group", { SUB: "label" })` stores the value `"Group — label"` (or just `"Group"`
+  when the label is `""`). The reserved separator is defined in
+  `src/app/data/watchModels/seriesGroup.ts` — never type it literally in a label.
+- The grouping service (`collectionService` / `parseSeries`) splits that value back into a group +
+  sub-label to render the two levels. A value with no separator is a normal flat series.
+- The base sub-key (label `""`) holds watches that belong to the umbrella but no specific
+  sub-series; they render directly under the umbrella title.
+
+When adding a watch via `scripts/create_watch_model.py`, the series picker automatically lists
+nested sub-series (e.g. `CHRONOMAT.CHRONOMAT_EVOLUTION`) and emits the correct nested reference.
 
 ---
 

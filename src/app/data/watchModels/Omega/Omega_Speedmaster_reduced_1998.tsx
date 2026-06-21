@@ -129,7 +129,7 @@ const details: WatchDetails = {
 
     information: {
       brand: BrandsEnum.OMEGA,
-      series: OmegaBrandSeries.SPEEDMASTER,
+      series: OmegaBrandSeries.SPEEDMASTER.REDUCED,
       catalogueReference: '"Reduced" (175.0032)',
       productionYear: "1998",
       movementType: MovementWatchTypeEnum.AUTOMATIC,

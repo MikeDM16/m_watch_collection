@@ -116,7 +116,7 @@ const details: WatchDetails = {
 
     information: {
       brand: BrandsEnum.BREITLING,
-      series: BreitlingBrandSeries.CHRONOMAT_VITESSE,
+      series: BreitlingBrandSeries.CHRONOMAT.CHRONOMAT_VITESSE,
       catalogueReference: "Serie Speciale - D13050 - 18K Gold Bezel (9g)",
       productionYear: "1998",
       movementType: MovementWatchTypeEnum.AUTOMATIC,

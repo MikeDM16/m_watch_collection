@@ -44,6 +44,19 @@
   color: var(--color-brand);
 }
 
+/* Per-card sub-series tag inside a series group (e.g. Chronomat -> Evolution). */
+.series-tag {
+  display: inline-block;
+  margin: 0.25rem 0;
+  padding: 0.05rem 0.5rem;
+  border-radius: 9999px;
+  background: rgba(0, 0, 0, 0.06);
+  color: var(--color-brand);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
 .main-page-title {
   font-family: "Goudy old Style";
   font-weight: bold;

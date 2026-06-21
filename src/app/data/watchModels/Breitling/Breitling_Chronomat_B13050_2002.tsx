@@ -81,7 +81,7 @@ const details: WatchDetails = {
 
     information: {
       brand: BrandsEnum.BREITLING,
-      series: BreitlingBrandSeries.CHRONOMAT,
+      series: BreitlingBrandSeries.CHRONOMAT.CHRONOMAT_NEO_VINTAGE,
       catalogueReference: "B13050.1",
       productionYear: "2002",
       movementType: MovementWatchTypeEnum.AUTOMATIC,

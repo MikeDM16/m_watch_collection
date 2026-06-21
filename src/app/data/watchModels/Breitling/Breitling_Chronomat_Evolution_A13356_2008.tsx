@@ -130,7 +130,7 @@ const details: WatchDetails = {
 
     information: {
       brand: BrandsEnum.BREITLING,
-      series: BreitlingBrandSeries.CHRONOMAT,
+      series: BreitlingBrandSeries.CHRONOMAT.CHRONOMAT_EVOLUTION,
       catalogueReference: "Evolution (A13356)",
       productionYear: "2008",
       movementType: MovementWatchTypeEnum.AUTOMATIC,

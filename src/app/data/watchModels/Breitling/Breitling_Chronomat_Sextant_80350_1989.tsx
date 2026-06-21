@@ -105,7 +105,7 @@ const details: WatchDetails = {
 
     information: {
       brand: BrandsEnum.BREITLING,
-      series: BreitlingBrandSeries.VINTAGE_SERIES,
+      series: BreitlingBrandSeries.VINTAGE_SERIES.SEXTANT,
       catalogueReference: "Chronomat Sextant (80350)",
       productionYear: "1989",
       movementType: MovementWatchTypeEnum.QUARTZ,
