@@ -66,6 +66,8 @@ export const brandsDB: Brand[] = [
       "public/assets/Images/Brands_Backgrounds/Breitling_1_Background.JPG",
       "public/assets/Images/Brands_Backgrounds/Images/B_IMG_7653.JPG",
       "public/assets/Images/Brands_Backgrounds/Images/B_IMG_7664.JPG",
+      "public/assets/Images/Brands_Backgrounds/Images/IMG_0517.JPG",
+      "public/assets/Images/Brands_Backgrounds/Images/IMG_0514.JPG",
     ],
   },
   {

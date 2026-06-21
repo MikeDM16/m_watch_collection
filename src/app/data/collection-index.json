@@ -2878,6 +2878,20 @@
     },
     "modelFile": "Pryngeps/Pryngeps_Regolo_Triple_Calendar_1992"
   },
+  "Breitling Chronomat D13047 Serie Speciale": {
+    "brand": "Breitling",
+    "legend": "Breitling Chronomat D13047 Serie Speciale",
+    "year": 1993,
+    "type": "Sports",
+    "srcImage": "public/assets/Images/Breitling/1993_Breitling_Chronomat_D13047/IMG_0455.JPG",
+    "hoverSrc": "public/assets/Images/Breitling/1993_Breitling_Chronomat_D13047/IMG_0443.JPG",
+    "specialCollectionItem": false,
+    "collectionSet": false,
+    "series": "Chronomat — Early (1984-1996)",
+    "movementTitle": "Valjoux 7750",
+    "saleReport": null,
+    "modelFile": "Breitling/Breitling_Chronomat_D13047_Serie_Speciale_1993"
+  },
   "Breitling Chronomat 81.950 Olive Dial": {
     "brand": "Breitling",
     "legend": "Breitling Chronomat 81.950 Olive Dial",

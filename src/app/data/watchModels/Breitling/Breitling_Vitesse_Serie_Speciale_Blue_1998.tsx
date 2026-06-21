@@ -102,6 +102,9 @@ const details: WatchDetails = {
     "public/assets/Images/Breitling/1998_Breitling_Vitesse_Serie_Speciale_Blue/IMG_4448.JPG",
     "public/assets/Images/Breitling/1998_Breitling_Vitesse_Serie_Speciale_Blue/IMG_4450.JPG",
     "public/assets/Images/Breitling/1998_Breitling_Vitesse_Serie_Speciale_Blue/IMG_4451.JPG",
+
+    "public/assets/Images/Breitling/1993_Breitling_Chronomat_D13047/IMG_0514.JPG",
+    "public/assets/Images/Breitling/1993_Breitling_Chronomat_D13047/IMG_0517.JPG",
   ],
 
   technicalData: {

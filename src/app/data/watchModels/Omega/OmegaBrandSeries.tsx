@@ -5,7 +5,7 @@ export const OmegaBrandSeries = {
   SPEEDMASTER: seriesGroup("Speedmaster", {
     RACING: "Racing",
     REDUCED: "Reduced",
-    MK40: "MK40 Triple Calendar"
+    MK40: "MK40 Triple Calendar",
   }),
 
   OLYMPIA: seriesGroup("Olympia", {

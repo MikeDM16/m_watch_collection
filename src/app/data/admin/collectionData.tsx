@@ -1293,6 +1293,17 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     specialCollectionItem: false,
   },
 
+  "Breitling Chronomat D13047 Serie Speciale": {
+    brand: BrandsEnum.BREITLING,
+    legend: "Breitling Chronomat D13047 Serie Speciale",
+    year: 1993,
+    type: WatchTypeEnum.SPORTS,
+    srcImage: "public/assets/Images/Breitling/1993_Breitling_Chronomat_D13047/IMG_0455.JPG",
+    hoverSrc: "public/assets/Images/Breitling/1993_Breitling_Chronomat_D13047/IMG_0443.JPG",
+    href: require("../watchModels/Breitling/Breitling_Chronomat_D13047_Serie_Speciale_1993"),
+    specialCollectionItem: false,
+  },
+
   "Breitling Chronomat 81.950 Olive Dial": {
     brand: BrandsEnum.BREITLING,
     legend: "Breitling Chronomat 81.950 Olive Dial",

@@ -88,6 +88,9 @@ const details: WatchDetails = {
     "public/assets/Images/Breitling/1993_Breitling_Chronomat_81950_Green/IMG_0307_1.JPG",
     "public/assets/Images/Breitling/1993_Breitling_Chronomat_81950_Green/IMG_0308_1.JPG",
     "public/assets/Images/Breitling/1993_Breitling_Chronomat_81950_Green/IMG_0309_1.JPG",
+
+    "public/assets/Images/Breitling/1993_Breitling_Chronomat_D13047/IMG_0514.JPG",
+    "public/assets/Images/Breitling/1993_Breitling_Chronomat_D13047/IMG_0517.JPG",
   ],
 
   technicalData: {

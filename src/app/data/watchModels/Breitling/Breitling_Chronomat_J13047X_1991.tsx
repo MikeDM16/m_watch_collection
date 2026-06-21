@@ -102,6 +102,9 @@ const details: WatchDetails = {
     "public/assets/Images/Breitling/1991_Breitling_J13047X_018/IMG_3048.JPG",
     "public/assets/Images/Breitling/1991_Breitling_J13047X_018/IMG_3049.JPG",
     "public/assets/Images/Breitling/1991_Breitling_J13047X_018/IMG_3050.JPG",
+
+    "public/assets/Images/Breitling/1993_Breitling_Chronomat_D13047/IMG_0514.JPG",
+    "public/assets/Images/Breitling/1993_Breitling_Chronomat_D13047/IMG_0517.JPG",
   ],
 
   technicalData: {
