@@ -1,20 +1,12 @@
 import AnalyticsReporter from "@/app/components/analytics/AnalyticsReporter";
+import BrandCollectionGrid, { CardData } from "@/app/components/brandPage/BrandCollectionGrid";
 import BrandPageTitleComponent from "@/app/components/brandPage/BrandPageTitleComponent";
-import ImageComponent from "@/app/components/common/ImageComponent";
 import FooterComponent from "@/app/components/footer/footerComponent";
 import HeaderNavBar from "@/app/components/header/headerComponent";
 import BrandPageNotFoundComponent from "@/app/components/notFound/BrandPageNotFoundComponent";
 import brandsService from "@/app/services/brandsService";
 import collectionService, { SeriesGroup } from "@/app/services/collectionService";
-import {
-  getExternalResource,
-  getImgURLForSizeType,
-  getPathParameter,
-  routeToCollectionBrandModelPage,
-  routeToCollectionBrandPage,
-  SizeType,
-} from "@/app/services/commonFunctions";
-import Link from "next/link";
+import { getPathParameter, routeToCollectionBrandPage } from "@/app/services/commonFunctions";
 
 export function generateStaticParams() {
   const allBrands = brandsService.getAllBrands();
@@ -41,81 +33,26 @@ export default async function Page({ params }: { params: Promise<{ brand: string
     brandDetails.displayBySeries,
   );
 
-  const renderCollectionItem = () => {
-    return (
-      <div
-        key={`brand_container_${brand}`}
-        className="section-container extended-screen-container centered-text"
-      >
-        {brandModels.map((group, groupIdx) => {
-          // Flatten all sub-series into one dense grid (cards keep their sub-series tag),
-          // then sort by year so the grid is chronological, not grouped by sub-series.
-          const cards = group.subGroups
-            .flatMap((sub) => sub.models.map((entry) => ({ entry, label: sub.label })))
-            .sort((a, b) => b.entry.year - a.entry.year);
-          return (
-            <div key={`brand_${brand}_group_${groupIdx}`} className="bottom-margin-m">
-              {group.group !== "" && (
-                <div key={`brand_${brand}_group_${groupIdx}_title`} className="container-title">
-                  <p className="border-bottom-text">{group.group}</p>
-                </div>
-              )}
+  // Flatten every series group into one continuous list. Group order is preserved (outer
+  // flatMap keeps the service's newest-first, first-encounter order) and cards are sorted by
+  // year within each group. Series context lives on the cards as tags, not as section titles.
+  const cards: CardData[] = brandModels.flatMap((group) =>
+    group.subGroups
+      .flatMap((sub) => sub.models.map((entry) => ({ entry, group: group.group, label: sub.label })))
+      .sort((a, b) => b.entry.year - a.entry.year),
+  );
 
-              <div
-                key={`brand_row_${brand}_${groupIdx}`}
-                className="flex flex-wrap justify-center gap-4"
-              >
-                {cards.map(({ entry, label }, idx) => {
-                  // On a single-brand page the legend's leading brand name is redundant.
-                  const displayLegend = entry.legend.startsWith(`${entry.brand} `)
-                    ? entry.legend.slice(entry.brand.length + 1)
-                    : entry.legend;
-                  return (
-                    <div
-                      key={`brand_${brand}_group_${groupIdx}_model_${idx}`}
-                      className="hover-animation bottom-margin-m w-[calc(50%-0.5rem)] sm:w-[calc(33%-0.5rem)] md:w-[calc(25%-0.75rem)] xl:w-[calc(20%-0.8rem)]"
-                    >
-                      <Link
-                        href={routeToCollectionBrandModelPage(brand, entry.legend)}
-                        className="info-text link"
-                      >
-                        <ImageComponent
-                          src={getExternalResource(
-                            getImgURLForSizeType(entry.srcImage, SizeType.GALLERY),
-                          )}
-                          hoverSrc={getExternalResource(
-                            getImgURLForSizeType(
-                              entry.hoverSrc ? entry.hoverSrc : entry.srcImage,
-                              SizeType.GALLERY,
-                            ),
-                          )}
-                          alt={`${entry.legend}`}
-                          priority={idx < 4}
-                        />
-                        {label !== "" && <div className="series-tag">{label}</div>}
-                        <div className="upper-text">{entry.brand}</div>
-                        <em>{displayLegend}</em>
-                        <div>
-                          <b>{entry.year}</b>
-                        </div>
-                      </Link>
-                    </div>
-                  );
-                })}
-              </div>
-            </div>
-          );
-        })}
-      </div>
-    );
-  };
+  // Distinct, non-empty group names in grid order — drives the series filter (skipped when < 2).
+  const groups = [...new Set(cards.map((c) => c.group))].filter((g) => g !== "");
 
   return (
     <div>
       <HeaderNavBar />
       <AnalyticsReporter page={routeToCollectionBrandPage(brand)} title={brand} />
       <BrandPageTitleComponent brand={brandDetails} />
-      {renderCollectionItem()}
+      <div className="section-container extended-screen-container centered-text">
+        <BrandCollectionGrid brand={brand} cards={cards} groups={groups} />
+      </div>
       <FooterComponent images={brandDetails.backgrounImages} />
     </div>
   );

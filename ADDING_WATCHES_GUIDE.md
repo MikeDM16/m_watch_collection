@@ -343,8 +343,10 @@ export const OmegaBrandSeries = {
 ```
 
 **Sub-series (umbrella groups)** — when several series belong under one umbrella (e.g. Breitling's
-Chronomat lines), wrap them with the `seriesGroup` helper. The umbrella renders as a main heading
-with each sub-series as a smaller sub-heading beneath it:
+Chronomat lines), wrap them with the `seriesGroup` helper. All of a brand's models render in one
+continuous grid; each card carries a filled brand-color **group tag** (the umbrella, e.g.
+`Chronomat`) and, when it belongs to a sub-series, a lighter **sub-series tag** (e.g.
+`Evolution (2008-2011)`):
 
 ```tsx
 import { seriesGroup } from "../seriesGroup";
@@ -365,12 +367,47 @@ How it works:
   when the label is `""`). The reserved separator is defined in
   `src/app/data/watchModels/seriesGroup.ts` — never type it literally in a label.
 - The grouping service (`collectionService` / `parseSeries`) splits that value back into a group +
-  sub-label to render the two levels. A value with no separator is a normal flat series.
+  sub-label to render the two tags. A value with no separator is a normal flat series (one tag).
 - The base sub-key (label `""`) holds watches that belong to the umbrella but no specific
-  sub-series; they render directly under the umbrella title.
+  sub-series; they show only the group tag.
+- Cards keep today's order: groups stay in their existing order and cards are sorted by year
+  (newest first) within each group; there are no per-group section headers.
 
 When adding a watch via `scripts/create_watch_model.py`, the series picker automatically lists
 nested sub-series (e.g. `CHRONOMAT.CHRONOMAT_EVOLUTION`) and emits the correct nested reference.
+
+### How the brand page renders & filters (maintenance notes)
+
+The brand collection page is split between a server and a client component:
+
+- **`src/app/collection/[brand]/page.tsx`** (server): fetches the grouped models, flattens them
+  into one `cards` list (`{ entry, group, label }`) keeping group order with year-descending
+  order inside each group, derives the distinct non-empty `groups`, and passes both to the grid.
+- **`src/app/components/brandPage/BrandCollectionGrid.tsx`** (`"use client"`): owns the filter
+  state and renders the cards.
+
+Layout & tags:
+
+- All models render in **one continuous grid** — no per-group section headers. Each card shows a
+  filled brand-color **group tag** and, for sub-series members, a lighter **sub-series tag**.
+- A watch with **no series** (or a `displayBySeries: false` brand) gets `group === ""` → no tags,
+  and no filter is shown.
+
+Series filter (only rendered when a brand has more than one group):
+
+- **Desktop**: an always-visible row of toggle chips — an `All` chip plus one per group.
+- **Mobile** (`< lg`): collapses into the shared `MultiSelect` dropdown (`src/components/ui/select.tsx`).
+- **Behavior**: state is the array of individually-selected groups. **Empty = "All"** (default),
+  which shows every model with only the `All` chip active. Selecting group chips narrows the grid
+  to just those groups; selecting *every* group collapses back to `All` (empty). Clicking `All`
+  resets to the default.
+- **Styling** lives in `src/app/styles/textStyles.css`: `.series-tag` / `.series-tag-group` (card
+  tags) and `.series-filter` / `.series-filter-chip(.is-active)` (filter chips). Note this file is
+  pulled into `globals.css` via `@import`; Turbopack dev (`next dev --turbopack`) may not hot-reload
+  edits to it — **restart the dev server** if new rules don't appear.
+
+Authors normally don't touch any of this — just set the watch's `series` (and `displayBySeries` on
+the brand). The grouping, tags, and filter all derive automatically.
 
 ---
 

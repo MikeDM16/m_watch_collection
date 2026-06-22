@@ -44,10 +44,17 @@
   color: var(--color-brand);
 }
 
-/* Per-card sub-series tag inside a series group (e.g. Chronomat -> Evolution). */
+/* Per-card series tags: group (e.g. Chronomat) and optional sub-series (e.g. Evolution). */
+.series-tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0.3rem;
+  margin: 0.25rem 0;
+}
 .series-tag {
   display: inline-block;
-  margin: 0.25rem 0;
   padding: 0.05rem 0.5rem;
   border-radius: 9999px;
   background: rgba(0, 0, 0, 0.06);
@@ -55,6 +62,51 @@
   font-size: 0.7rem;
   text-transform: uppercase;
   letter-spacing: 0.03em;
+}
+/* The umbrella group tag is emphasized as a filled brand-color pill. */
+.series-tag-group {
+  background: var(--color-brand);
+  color: #fff;
+}
+
+/* Series filter: a row of toggleable group chips (desktop) selecting which groups to show. */
+.series-filter-label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #6b7280;
+  margin-bottom: 0.5rem;
+}
+.series-filter {
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.4rem;
+}
+.series-filter-chip {
+  padding: 0.1rem 0.7rem;
+  border-radius: 9999px;
+  border: 1px solid var(--color-brand);
+  background: transparent;
+  color: var(--color-brand);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  cursor: pointer;
+  transition:
+    background 0.15s ease,
+    color 0.15s ease;
+}
+.series-filter-chip:hover {
+  background: rgba(0, 0, 0, 0.06);
+}
+/* Selected (shown) chip: filled brand-color pill. */
+.series-filter-chip.is-active {
+  background: var(--color-brand);
+  color: #fff;
+}
+.series-filter-chip.is-active:hover {
+  opacity: 0.9;
+  background: var(--color-brand);
 }
 
 .main-page-title {
