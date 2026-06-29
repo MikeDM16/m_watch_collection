@@ -38,7 +38,9 @@ export default async function Page({ params }: { params: Promise<{ brand: string
   // year within each group. Series context lives on the cards as tags, not as section titles.
   const cards: CardData[] = brandModels.flatMap((group) =>
     group.subGroups
-      .flatMap((sub) => sub.models.map((entry) => ({ entry, group: group.group, label: sub.label })))
+      .flatMap((sub) =>
+        sub.models.map((entry) => ({ entry, group: group.group, label: sub.label })),
+      )
       .sort((a, b) => b.entry.year - a.entry.year),
   );
 

@@ -1075,6 +1075,19 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     specialCollectionItem: true,
   },
 
+  "Breitling Chronomat B13050 Blue Dial": {
+    brand: BrandsEnum.BREITLING,
+    legend: "Breitling Chronomat B13050 Blue Dial",
+    year: 1996,
+    type: WatchTypeEnum.SPORTS,
+    srcImage:
+      "public/assets/Images/Breitling/1998_Breitling_Chronomat_B13050_Blue_Dial/IMG_0800.JPG",
+    hoverSrc:
+      "public/assets/Images/Breitling/1998_Breitling_Chronomat_B13050_Blue_Dial/IMG_0865.JPG",
+    href: require("../watchModels/Breitling/Breitling_Chronomat_B13050_Blue_Dial_1996"),
+    specialCollectionItem: false,
+  },
+
   "Tag Heuer Professional 2000 CK1111 Chronograph": {
     brand: BrandsEnum.TAG_HEUER,
     legend: "Tag Heuer Professional 2000 CK1111 Chronograph",
@@ -1438,6 +1451,20 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     href: require("../watchModels/Lorus/Lorus_N945_7A90_MultiFunction_1993"),
     specialCollectionItem: false,
   },
+
+  "Breitling Navitimer D30022 Tropical dial": {
+    brand: BrandsEnum.BREITLING,
+    legend: "Breitling Navitimer D30022 Tropical dial",
+    year: 1992,
+    type: WatchTypeEnum.CASUAL,
+    srcImage:
+      "public/assets/Images/Breitling/1992_Breitling_Navitimer_D30022_Tropical/IMG_0920.JPG",
+    hoverSrc:
+      "public/assets/Images/Breitling/1992_Breitling_Navitimer_D30022_Tropical/IMG_0922.JPG",
+    href: require("../watchModels/Breitling/Breitling_Navitimer_D30022_Tropical_dial_1992"),
+    specialCollectionItem: true,
+  },
+
   "Eberhard Ref. 32031 Lemania 1873 Limited Edition 555/1000": {
     brand: BrandsEnum.EBERHARD,
     legend: "Eberhard Ref. 32031 Lemania 1873 Limited Edition 555/1000",

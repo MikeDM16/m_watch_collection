@@ -2714,6 +2714,20 @@
     },
     "modelFile": "Tissot/Tissot_PRX_P475_Chrono_1991"
   },
+  "Breitling Navitimer D30022 Tropical dial": {
+    "brand": "Breitling",
+    "legend": "Breitling Navitimer D30022 Tropical dial",
+    "year": 1992,
+    "type": "Casual",
+    "srcImage": "public/assets/Images/Breitling/1992_Breitling_Navitimer_D30022_Tropical/IMG_0920.JPG",
+    "hoverSrc": "public/assets/Images/Breitling/1992_Breitling_Navitimer_D30022_Tropical/IMG_0922.JPG",
+    "specialCollectionItem": true,
+    "collectionSet": false,
+    "series": "Navitimer",
+    "movementTitle": "Breitling B30",
+    "saleReport": null,
+    "modelFile": "Breitling/Breitling_Navitimer_D30022_Tropical_dial_1992"
+  },
   "Eberhard Ref. 32031 Lemania 1873 Limited Edition 555/1000": {
     "brand": "Eberhard",
     "legend": "Eberhard Ref. 32031 Lemania 1873 Limited Edition 555/1000",
@@ -3309,6 +3323,20 @@
     "movementTitle": "Valjoux 7750",
     "saleReport": null,
     "modelFile": "Omega/Omega_Speedmaster_mk40_triple_date_1998"
+  },
+  "Breitling Chronomat B13050 Blue Dial": {
+    "brand": "Breitling",
+    "legend": "Breitling Chronomat B13050 Blue Dial",
+    "year": 1996,
+    "type": "Sports",
+    "srcImage": "public/assets/Images/Breitling/1998_Breitling_Chronomat_B13050_Blue_Dial/IMG_0800.JPG",
+    "hoverSrc": "public/assets/Images/Breitling/1998_Breitling_Chronomat_B13050_Blue_Dial/IMG_0865.JPG",
+    "specialCollectionItem": false,
+    "collectionSet": false,
+    "series": "Chronomat — Early (1984-1996)",
+    "movementTitle": "Valjoux 7750",
+    "saleReport": null,
+    "modelFile": "Breitling/Breitling_Chronomat_B13050_Blue_Dial_1996"
   },
   "Tag Heuer Professional 2000 CK1111 Chronograph": {
     "brand": "Tag Heuer",

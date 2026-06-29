@@ -11,7 +11,7 @@ import type { Caliber } from "../../caliberTypes";
 const Girard_Perregaux_2280: Caliber = {
   title: "Girard Perregaux 2280",
   description:
-    "Omega Girard Perregaux 2280 movements use a combination of an ETA automatic base movement with a Chronograph module from Debois Depraz. \n" +
+    "Girard Perregaux 2280 movements use a combination of an ETA automatic base movement with a Chronograph module from Debois Depraz. \n" +
     "The GP2280 is an automatic chronograph with 45 jewels, using a 24 jewels Debois Derpáz 2021 cronograph powered by a 21 jewels ETA 2892 base movement.",
   usefullLinks: {},
   sliderImages: [

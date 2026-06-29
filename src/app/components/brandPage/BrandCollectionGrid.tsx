@@ -7,10 +7,11 @@ import {
   routeToCollectionBrandModelPage,
   SizeType,
 } from "@/app/services/commonFunctions";
-import { cn } from "@/lib/utils";
 import { MultiSelect } from "@/components/ui/select";
+import { cn } from "@/lib/utils";
 import Link from "next/link";
 import { useState } from "react";
+
 import ImageComponent from "../common/ImageComponent";
 
 export interface CardData {
@@ -104,7 +105,9 @@ export default function BrandCollectionGrid({ brand, cards, groups }: BrandColle
                   className="info-text link"
                 >
                   <ImageComponent
-                    src={getExternalResource(getImgURLForSizeType(entry.srcImage, SizeType.GALLERY))}
+                    src={getExternalResource(
+                      getImgURLForSizeType(entry.srcImage, SizeType.GALLERY),
+                    )}
                     hoverSrc={getExternalResource(
                       getImgURLForSizeType(
                         entry.hoverSrc ? entry.hoverSrc : entry.srcImage,

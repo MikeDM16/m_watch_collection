@@ -399,7 +399,7 @@ Series filter (only rendered when a brand has more than one group):
 - **Mobile** (`< lg`): collapses into the shared `MultiSelect` dropdown (`src/components/ui/select.tsx`).
 - **Behavior**: state is the array of individually-selected groups. **Empty = "All"** (default),
   which shows every model with only the `All` chip active. Selecting group chips narrows the grid
-  to just those groups; selecting *every* group collapses back to `All` (empty). Clicking `All`
+  to just those groups; selecting _every_ group collapses back to `All` (empty). Clicking `All`
   resets to the default.
 - **Styling** lives in `src/app/styles/textStyles.css`: `.series-tag` / `.series-tag-group` (card
   tags) and `.series-filter` / `.series-filter-chip(.is-active)` (filter chips). Note this file is
