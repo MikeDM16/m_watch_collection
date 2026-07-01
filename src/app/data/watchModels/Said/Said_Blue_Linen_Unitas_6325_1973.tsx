@@ -68,6 +68,12 @@ const details: WatchDetails = {
     "public/assets/Images/Said/1973_Said_Blue_Linen_U6325_17J/IMG_2633.JPG",
   ],
 
+  saleReport: {
+    price: 112,
+    date: "22/05/2026",
+    url: "https://www.catawiki.pt/l/103805837",
+  },
+
   technicalData: {
     features: [featuresEnum.SMALL_SECONDS, featuresEnum.MECHANICAL],
 

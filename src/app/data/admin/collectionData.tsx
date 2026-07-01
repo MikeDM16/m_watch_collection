@@ -909,8 +909,8 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     legend: "Breitling Navitimer Premier A40035",
     year: 1999,
     type: WatchTypeEnum.CASUAL,
-    srcImage: "public/assets/Images/Breitling/1999_Breitling_Navitimer_Premier_A40035/IMG_2072.JPG",
-    hoverSrc: "public/assets/Images/Breitling/1999_Breitling_Navitimer_Premier_A40035/IMG_2073.JPG",
+    srcImage: "public/assets/Images/Breitling/1999_Breitling_Navitimer_Premier_A40035/IMG_1099.JPG",
+    hoverSrc: "public/assets/Images/Breitling/1999_Breitling_Navitimer_Premier_A40035/IMG_1094.JPG",
     href: require("../watchModels/Breitling/Breitling_Navitimer_Premier_A40035_1998"),
     specialCollectionItem: true,
   },
@@ -1458,9 +1458,9 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     year: 1992,
     type: WatchTypeEnum.CASUAL,
     srcImage:
-      "public/assets/Images/Breitling/1992_Breitling_Navitimer_D30022_Tropical/IMG_0920.JPG",
+      "public/assets/Images/Breitling/1992_Breitling_Navitimer_D30022_Tropical/IMG_1153.JPG",
     hoverSrc:
-      "public/assets/Images/Breitling/1992_Breitling_Navitimer_D30022_Tropical/IMG_0922.JPG",
+      "public/assets/Images/Breitling/1992_Breitling_Navitimer_D30022_Tropical/IMG_1173.JPG",
     href: require("../watchModels/Breitling/Breitling_Navitimer_D30022_Tropical_dial_1992"),
     specialCollectionItem: true,
   },

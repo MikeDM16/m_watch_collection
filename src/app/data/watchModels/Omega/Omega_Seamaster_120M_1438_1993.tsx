@@ -98,6 +98,13 @@ const details: WatchDetails = {
     "public/assets/Images/Omega/1993_Omega_Seamaster_120m_1438/IMG_0178.JPG",
     "public/assets/Images/Omega/1993_Omega_Seamaster_120m_1438/IMG_0179.JPG",
   ],
+
+  saleReport: {
+    price: 1100,
+    date: "26/06/2026",
+    url: "https://www.catawiki.pt/l/104745734",
+  },
+
   technicalData: {
     features: [featuresEnum.DATE, featuresEnum.WR_120_METERS, featuresEnum.SOLID_GOLD_BEZEL],
 

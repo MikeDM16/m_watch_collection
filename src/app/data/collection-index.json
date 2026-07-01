@@ -760,7 +760,11 @@
     "collectionSet": false,
     "series": "Antimagnetic",
     "movementTitle": "Lorsa 238",
-    "saleReport": null,
+    "saleReport": {
+      "price": 81,
+      "date": "15/06/2026",
+      "url": "https://www.catawiki.pt/l/104498880"
+    },
     "modelFile": "Jomel/Jomel_Antimagnetic_Lorsa_238_1965"
   },
   "Certina DS Turtle Automatic 27 Jewels": {
@@ -1230,7 +1234,11 @@
     "collectionSet": false,
     "series": "Blue Linen",
     "movementTitle": "Unitas 6325",
-    "saleReport": null,
+    "saleReport": {
+      "price": 112,
+      "date": "22/05/2026",
+      "url": "https://www.catawiki.pt/l/103805837"
+    },
     "modelFile": "Said/Said_Blue_Linen_Unitas_6325_1973"
   },
   "Arauto Silver Tuxedo Unitas 6325": {
@@ -2719,8 +2727,8 @@
     "legend": "Breitling Navitimer D30022 Tropical dial",
     "year": 1992,
     "type": "Casual",
-    "srcImage": "public/assets/Images/Breitling/1992_Breitling_Navitimer_D30022_Tropical/IMG_0920.JPG",
-    "hoverSrc": "public/assets/Images/Breitling/1992_Breitling_Navitimer_D30022_Tropical/IMG_0922.JPG",
+    "srcImage": "public/assets/Images/Breitling/1992_Breitling_Navitimer_D30022_Tropical/IMG_1153.JPG",
+    "hoverSrc": "public/assets/Images/Breitling/1992_Breitling_Navitimer_D30022_Tropical/IMG_1173.JPG",
     "specialCollectionItem": true,
     "collectionSet": false,
     "series": "Navitimer",
@@ -2931,7 +2939,11 @@
     "collectionSet": false,
     "series": "Seamaster",
     "movementTitle": "Omega Cal. 1438",
-    "saleReport": null,
+    "saleReport": {
+      "price": 1100,
+      "date": "26/06/2026",
+      "url": "https://www.catawiki.pt/l/104745734"
+    },
     "modelFile": "Omega/Omega_Seamaster_120M_1438_1993"
   },
   "Tissot L395 Chronograph": {
@@ -3715,8 +3727,8 @@
     "legend": "Breitling Navitimer Premier A40035",
     "year": 1999,
     "type": "Casual",
-    "srcImage": "public/assets/Images/Breitling/1999_Breitling_Navitimer_Premier_A40035/IMG_2072.JPG",
-    "hoverSrc": "public/assets/Images/Breitling/1999_Breitling_Navitimer_Premier_A40035/IMG_2073.JPG",
+    "srcImage": "public/assets/Images/Breitling/1999_Breitling_Navitimer_Premier_A40035/IMG_1099.JPG",
+    "hoverSrc": "public/assets/Images/Breitling/1999_Breitling_Navitimer_Premier_A40035/IMG_1094.JPG",
     "specialCollectionItem": true,
     "collectionSet": false,
     "series": "Navitimer",
@@ -4805,7 +4817,11 @@
     "collectionSet": false,
     "series": "PRS 516",
     "movementTitle": "Valjoux 7750",
-    "saleReport": null,
+    "saleReport": {
+      "price": 852,
+      "date": "24/06/2026",
+      "url": "https://www.catawiki.pt/l/104709762"
+    },
     "modelFile": "Tissot/Tissot_PRS_516_NASCAR_Racing_Chronograph_2014"
   },
   "Certina DS First White Ceramic": {

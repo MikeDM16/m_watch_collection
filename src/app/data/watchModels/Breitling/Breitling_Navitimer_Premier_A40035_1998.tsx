@@ -28,6 +28,64 @@ const details: WatchDetails = {
   title: "1999 Breitling Navitimer Premier A40035",
 
   sliderImages: [
+    "public/assets/Images/Breitling/1999_Breitling_Navitimer_Premier_A40035/IMG_1133.JPG",
+    "public/assets/Images/Breitling/1999_Breitling_Navitimer_Premier_A40035/IMG_1134.JPG",
+    "public/assets/Images/Breitling/1999_Breitling_Navitimer_Premier_A40035/IMG_1135.JPG",
+    "public/assets/Images/Breitling/1999_Breitling_Navitimer_Premier_A40035/IMG_1136.JPG",
+
+    "public/assets/Images/Breitling/1999_Breitling_Navitimer_Premier_A40035/IMG_1093.JPG",
+    "public/assets/Images/Breitling/1999_Breitling_Navitimer_Premier_A40035/IMG_1094.JPG",
+    "public/assets/Images/Breitling/1999_Breitling_Navitimer_Premier_A40035/IMG_1095.JPG",
+    "public/assets/Images/Breitling/1999_Breitling_Navitimer_Premier_A40035/IMG_1096.JPG",
+    "public/assets/Images/Breitling/1999_Breitling_Navitimer_Premier_A40035/IMG_1097.JPG",
+    "public/assets/Images/Breitling/1999_Breitling_Navitimer_Premier_A40035/IMG_1098.JPG",
+    "public/assets/Images/Breitling/1999_Breitling_Navitimer_Premier_A40035/IMG_1099.JPG",
+    "public/assets/Images/Breitling/1999_Breitling_Navitimer_Premier_A40035/IMG_1101.JPG",
+    "public/assets/Images/Breitling/1999_Breitling_Navitimer_Premier_A40035/IMG_1103.JPG",
+    "public/assets/Images/Breitling/1999_Breitling_Navitimer_Premier_A40035/IMG_2074.JPG",
+
+    "public/assets/Images/Breitling/1999_Breitling_Navitimer_Premier_A40035/IMG_1104.JPG",
+
+    "public/assets/Images/Breitling/1999_Breitling_Navitimer_Premier_A40035/IMG_1137.JPG",
+    "public/assets/Images/Breitling/1999_Breitling_Navitimer_Premier_A40035/IMG_1139.JPG",
+    "public/assets/Images/Breitling/1999_Breitling_Navitimer_Premier_A40035/IMG_1140.JPG",
+    "public/assets/Images/Breitling/1999_Breitling_Navitimer_Premier_A40035/IMG_2059.JPG",
+    "public/assets/Images/Breitling/1999_Breitling_Navitimer_Premier_A40035/IMG_2060.JPG",
+    "public/assets/Images/Breitling/1999_Breitling_Navitimer_Premier_A40035/IMG_2061.JPG",
+    "public/assets/Images/Breitling/1999_Breitling_Navitimer_Premier_A40035/IMG_2063.JPG",
+
+    "public/assets/Images/Breitling/1999_Breitling_Navitimer_Premier_A40035/IMG_1109.JPG",
+    "public/assets/Images/Breitling/1999_Breitling_Navitimer_Premier_A40035/IMG_1110.JPG",
+    "public/assets/Images/Breitling/1999_Breitling_Navitimer_Premier_A40035/IMG_1112.JPG",
+    "public/assets/Images/Breitling/1999_Breitling_Navitimer_Premier_A40035/IMG_1113.JPG",
+    "public/assets/Images/Breitling/1999_Breitling_Navitimer_Premier_A40035/IMG_1114.JPG",
+    "public/assets/Images/Breitling/1999_Breitling_Navitimer_Premier_A40035/IMG_1115.JPG",
+    "public/assets/Images/Breitling/1999_Breitling_Navitimer_Premier_A40035/IMG_1116.JPG",
+    "public/assets/Images/Breitling/1999_Breitling_Navitimer_Premier_A40035/IMG_1117.JPG",
+    "public/assets/Images/Breitling/1999_Breitling_Navitimer_Premier_A40035/IMG_1118.JPG",
+
+    "public/assets/Images/Breitling/1999_Breitling_Navitimer_Premier_A40035/IMG_1105.JPG",
+    "public/assets/Images/Breitling/1999_Breitling_Navitimer_Premier_A40035/IMG_1106.JPG",
+    "public/assets/Images/Breitling/1999_Breitling_Navitimer_Premier_A40035/IMG_1107.JPG",
+    "public/assets/Images/Breitling/1999_Breitling_Navitimer_Premier_A40035/IMG_1108.JPG",
+
+    "public/assets/Images/Breitling/1999_Breitling_Navitimer_Premier_A40035/IMG_1119.JPG",
+    "public/assets/Images/Breitling/1999_Breitling_Navitimer_Premier_A40035/IMG_1120.JPG",
+    "public/assets/Images/Breitling/1999_Breitling_Navitimer_Premier_A40035/IMG_1121.JPG",
+    "public/assets/Images/Breitling/1999_Breitling_Navitimer_Premier_A40035/IMG_1122.JPG",
+    "public/assets/Images/Breitling/1999_Breitling_Navitimer_Premier_A40035/IMG_1123.JPG",
+    "public/assets/Images/Breitling/1999_Breitling_Navitimer_Premier_A40035/IMG_1124.JPG",
+    "public/assets/Images/Breitling/1999_Breitling_Navitimer_Premier_A40035/IMG_1125.JPG",
+    "public/assets/Images/Breitling/1999_Breitling_Navitimer_Premier_A40035/IMG_1126.JPG",
+    "public/assets/Images/Breitling/1999_Breitling_Navitimer_Premier_A40035/IMG_1127.JPG",
+    "public/assets/Images/Breitling/1999_Breitling_Navitimer_Premier_A40035/IMG_1128.JPG",
+    "public/assets/Images/Breitling/1999_Breitling_Navitimer_Premier_A40035/IMG_1129.JPG",
+    "public/assets/Images/Breitling/1999_Breitling_Navitimer_Premier_A40035/IMG_1130.JPG",
+    "public/assets/Images/Breitling/1999_Breitling_Navitimer_Premier_A40035/IMG_1131.JPG",
+    "public/assets/Images/Breitling/1999_Breitling_Navitimer_Premier_A40035/IMG_1132.JPG",
+  ],
+
+  /*sliderImages: [
     "public/assets/Images/Breitling/1999_Breitling_Navitimer_Premier_A40035/IMG_2064.JPG",
     "public/assets/Images/Breitling/1999_Breitling_Navitimer_Premier_A40035/IMG_2065.JPG",
     "public/assets/Images/Breitling/1999_Breitling_Navitimer_Premier_A40035/IMG_2066.JPG",
@@ -77,7 +135,7 @@ const details: WatchDetails = {
     "public/assets/Images/Breitling/1999_Breitling_Navitimer_Premier_A40035/IMG_2095.JPG",
     "public/assets/Images/Breitling/1999_Breitling_Navitimer_Premier_A40035/IMG_2096.JPG",
     "public/assets/Images/Breitling/1999_Breitling_Navitimer_Premier_A40035/IMG_2097.JPG",
-  ],
+  ],*/
 
   technicalData: {
     features: [

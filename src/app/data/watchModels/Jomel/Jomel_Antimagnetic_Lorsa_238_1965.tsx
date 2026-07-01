@@ -72,6 +72,12 @@ const details: WatchDetails = {
     "public/assets/Images/Jomel/1965_Jomel_Lorsa_238_17J/IMG_2677.JPG",
   ],
 
+  saleReport: {
+    price: 81,
+    date: "15/06/2026",
+    url: "https://www.catawiki.pt/l/104498880",
+  },
+
   technicalData: {
     features: [featuresEnum.MECHANICAL, featuresEnum.GOLD_PLATED_10M],
 
