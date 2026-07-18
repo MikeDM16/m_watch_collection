@@ -87,6 +87,7 @@ export default function CreateModelPage() {
   const [modelName, setModelName] = useState("");
   const [year, setYear] = useState("");
   const [fileName, setFileName] = useState("");
+  const [imgFolderName, setImgFolderName] = useState("");
 
   // Step 4: Details fields
   const [title, setTitle] = useState("");
@@ -358,7 +359,10 @@ export default function CreateModelPage() {
         movementImportPath = found?.importPath || "";
       }
 
-      const imgFolder = `public/assets/Images/${brandFolder}/${year}_${brandFolder}_${modelName}`;
+      // Optional override: when the user leaves the field blank, fall back to
+      // the mechanically-derived folder name.
+      const effectiveImgFolder = imgFolderName.trim() || `${year}_${brandFolder}_${modelName}`;
+      const imgFolder = `public/assets/Images/${brandFolder}/${effectiveImgFolder}`;
 
       const fileContent = generateWatchModelFile({
         title,
@@ -407,7 +411,7 @@ export default function CreateModelPage() {
             brandEnumKey: brandKey,
             year: parseInt(year),
             watchType: STYLE_TO_TYPE[style] || "CASUAL",
-            imgFolder: `${year}_${brandFolder}_${modelName}`,
+            imgFolder: effectiveImgFolder,
           },
         }),
       });
@@ -602,6 +606,21 @@ export default function CreateModelPage() {
           </FieldRow>
           <FieldRow label="File Name">
             <span className="pt-2 text-sm font-mono text-muted-foreground">{fileName}</span>
+          </FieldRow>
+          <FieldRow label="Images Folder (optional)">
+            <div>
+              <Input
+                value={imgFolderName}
+                onChange={(e) => setImgFolderName(e.target.value)}
+                placeholder={`${year}_${brandFolder}_${modelName}`}
+                className="max-w-sm"
+              />
+              <p className="mt-1 text-xs text-muted-foreground">
+                Leave blank to use the derived name shown above. When set, this exact name is used
+                for the collectionData entry, the model file&apos;s sliderImages, and the created
+                image directory.
+              </p>
+            </div>
           </FieldRow>
           <div className="mt-6 flex gap-3">
             <Button variant="outline" onClick={() => setStep(1)}>
@@ -1031,6 +1050,10 @@ export default function CreateModelPage() {
               <code>
                 src/app/data/watchModels/{brandFolder}/{fileName}
               </code>
+            </p>
+            <p>
+              <strong>Images Folder:</strong>{" "}
+              <code>{imgFolderName.trim() || `${year}_${brandFolder}_${modelName}`}</code>
             </p>
             <p>
               <strong>Title:</strong> {title}

@@ -5,6 +5,12 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Prevent vertical scroll-chaining (iOS overscroll / pull-to-refresh) hygiene. */
+html,
+body {
+  overscroll-behavior-y: contain;
+}
+
 .bottom-margin-s {
   margin-bottom: 1rem;
 }

@@ -2981,7 +2981,11 @@
     "collectionSet": false,
     "series": "Chronomat — Early (1984-1996)",
     "movementTitle": "Valjoux 7750",
-    "saleReport": null,
+    "saleReport": {
+      "price": 1512,
+      "date": "14/07/2026",
+      "url": "https://www.catawiki.com/en/l/105105080"
+    },
     "modelFile": "Breitling/Breitling_Chronomat_81_950_Olive_Dial_1993"
   },
   "Omega Seamaster 120M Cal. 1438": {

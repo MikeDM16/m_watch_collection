@@ -93,6 +93,12 @@ const details: WatchDetails = {
     "public/assets/Images/Breitling/1993_Breitling_Chronomat_D13047/IMG_0517.JPG",
   ],
 
+  saleReport: {
+    price: 1512,
+    date: "14/07/2026",
+    url: "https://www.catawiki.com/en/l/105105080",
+  },
+
   technicalData: {
     features: [
       featuresEnum.DATE,
