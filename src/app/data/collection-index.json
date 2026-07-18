@@ -53,6 +53,20 @@
     },
     "modelFile": "Universal_Geneve/Universal_Geneve_Mecanique_cal_262_1942"
   },
+  "Tissot Antimagnetic Tuxedo Cal. 27-2": {
+    "brand": "Tissot",
+    "legend": "Tissot Antimagnetic Tuxedo Cal. 27-2",
+    "year": 1942,
+    "type": "Dress",
+    "srcImage": "public/assets/Images/Tissot/1942_Tissot_Antimagnetic_Tuxedo_27_2/IMG_2677.JPG",
+    "hoverSrc": "public/assets/Images/Tissot/1942_Tissot_Antimagnetic_Tuxedo_27_2/IMG_2697.JPG",
+    "specialCollectionItem": false,
+    "collectionSet": false,
+    "series": "Antimagnetic",
+    "movementTitle": "Tissot 31-21",
+    "saleReport": null,
+    "modelFile": "Tissot/Tissot_Antimagnetic_Tuxedo_Cal_272_1942"
+  },
   "Natalis WWII German Watch": {
     "brand": "Natalis",
     "legend": "Natalis WWII German Watch",
@@ -81,9 +95,9 @@
     "saleReport": null,
     "modelFile": "Tissot/Tissot_Antimagnetic_Tuxedo_1943"
   },
-  "Zenith Militare Cal 106 17 Jewels": {
+  "Zenith Militare Cal. 106 17 Jewels": {
     "brand": "Zenith",
-    "legend": "Zenith Militare Cal 106 17 Jewels",
+    "legend": "Zenith Militare Cal. 106 17 Jewels",
     "year": 1945,
     "type": "Casual",
     "srcImage": "public/assets/Images/Zenith/1945_Zenith_Militare_Cal_106/IMG_6145.JPG",
@@ -216,6 +230,20 @@
       "url": "https://www.catawiki.com/en/l/96206844-omega-seamaster-2504-5-cal-30t2-15-jewels-men-1946"
     },
     "modelFile": "Omega/Omega_166041_Cal_30T2_1946"
+  },
+  "Tissot Automatic Bumper 31 21": {
+    "brand": "Tissot",
+    "legend": "Tissot Automatic Bumper 31 21",
+    "year": 1946,
+    "type": "Dress",
+    "srcImage": "public/assets/Images/Tissot/1946_Tissot_Automatic_Bumper/IMG_2711.JPG",
+    "hoverSrc": "public/assets/Images/Tissot/1946_Tissot_Automatic_Bumper/IMG_2713.JPG",
+    "specialCollectionItem": false,
+    "collectionSet": false,
+    "series": "Antimagnetic",
+    "movementTitle": "Tissot 31-21",
+    "saleReport": null,
+    "modelFile": "Tissot/Tissot_Automatic_Bumper_31_21_1946"
   },
   "Fortis Pilot Chronograph Valjoux 77": {
     "brand": "Fortis",
@@ -704,7 +732,7 @@
     "hoverSrc": "public/assets/Images/Omega/1961_Omega_Geneve_Cal_268/IMG_6639.JPG",
     "specialCollectionItem": false,
     "collectionSet": false,
-    "series": "Geneve Collection",
+    "series": "Genève Collection",
     "movementTitle": "Omega Cal. 268",
     "saleReport": {
       "price": 751,
@@ -1024,7 +1052,7 @@
     "hoverSrc": "public/assets/Images/Omega/1969_Omega_Geneve_166_041__565/IMG_5357.JPG",
     "specialCollectionItem": false,
     "collectionSet": false,
-    "series": "Geneve Collection",
+    "series": "Genève Collection",
     "movementTitle": "Omega Cal. 565",
     "saleReport": {
       "price": 550,
@@ -1169,9 +1197,9 @@
     },
     "modelFile": "Tissot/Tissot_Seastar_PR516_GL_784_1971"
   },
-  "1972 Tecnal Green Abyss Duromat 7522": {
+  "Tecnal Green Abyss Duromat 7522": {
     "brand": "Tecnal",
-    "legend": "1972 Tecnal Green Abyss Duromat 7522",
+    "legend": "Tecnal Green Abyss Duromat 7522",
     "year": 1972,
     "type": "Casual",
     "srcImage": "public/assets/Images/Tecnal/1972_Tecnal_Green_abyss_7522_25J/IMG_2760.JPG",
@@ -1240,6 +1268,20 @@
       "url": "https://www.catawiki.pt/l/103805837"
     },
     "modelFile": "Said/Said_Blue_Linen_Unitas_6325_1973"
+  },
+  "Omega Geneve Automatic Cal. 1022": {
+    "brand": "Omega",
+    "legend": "Omega Geneve Automatic Cal. 1022",
+    "year": 1973,
+    "type": "Casual",
+    "srcImage": "public/assets/Images/Omega/1973_Omega_Geneve_1022/IMG_2630.JPG",
+    "hoverSrc": "public/assets/Images/Omega/1973_Omega_Geneve_1022/IMG_2631.JPG",
+    "specialCollectionItem": false,
+    "collectionSet": false,
+    "series": "Genève Collection",
+    "movementTitle": "Omega Cal. 1022",
+    "saleReport": null,
+    "modelFile": "Omega/Omega_Geneve_Automatic_Cal_1022_1973"
   },
   "Arauto Silver Tuxedo Unitas 6325": {
     "brand": "Arauto",
@@ -4321,6 +4363,20 @@
     "movementTitle": "ETA 2894",
     "saleReport": null,
     "modelFile": "Tag_Heuer/Tag_Heuer_Monza_Classic_2005"
+  },
+  "Tag Heuer Monza Automatic Cal. 6": {
+    "brand": "Tag Heuer",
+    "legend": "Tag Heuer Monza Automatic Cal. 6",
+    "year": 2005,
+    "type": "Sports",
+    "srcImage": "public/assets/Images/Tag_Heuer/2005_Tag_Heuer_Monza_WR2110_cal6/IMG_2581.JPG",
+    "hoverSrc": "public/assets/Images/Tag_Heuer/2005_Tag_Heuer_Monza_WR2110_cal6/IMG_2572.JPG",
+    "specialCollectionItem": false,
+    "collectionSet": false,
+    "series": "Monza",
+    "movementTitle": "Tag Heuer Caliber 6 (ETA 2895-2)",
+    "saleReport": null,
+    "modelFile": "Tag_Heuer/Tag_Heuer_Monza_Automatic_Cal_6_2005"
   },
   "Tissot Le Locle Automatic": {
     "brand": "Tissot",

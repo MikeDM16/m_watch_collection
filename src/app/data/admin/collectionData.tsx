@@ -726,6 +726,17 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     specialCollectionItem: false,
   },
 
+  "Tag Heuer Monza Automatic Cal. 6": {
+    brand: BrandsEnum.TAG_HEUER,
+    legend: "Tag Heuer Monza Automatic Cal. 6",
+    year: 2005,
+    type: WatchTypeEnum.SPORTS,
+    srcImage: "public/assets/Images/Tag_Heuer/2005_Tag_Heuer_Monza_WR2110_cal6/IMG_2581.JPG",
+    hoverSrc: "public/assets/Images/Tag_Heuer/2005_Tag_Heuer_Monza_WR2110_cal6/IMG_2572.JPG",
+    href: require("../watchModels/Tag_Heuer/Tag_Heuer_Monza_Automatic_Cal_6_2005"),
+    specialCollectionItem: false,
+  },
+
   "Girard Perregaux Ferrari Ref. 8020": {
     brand: BrandsEnum.GIRARD_PERREGAUX,
     legend: "Girard Perregaux Ferrari Ref. 8020",
@@ -2418,9 +2429,20 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     specialCollectionItem: false,
   },
 
-  "1972 Tecnal Green Abyss Duromat 7522": {
+  "Omega Geneve Automatic Cal. 1022": {
+    brand: BrandsEnum.OMEGA,
+    legend: "Omega Geneve Automatic Cal. 1022",
+    year: 1973,
+    type: WatchTypeEnum.CASUAL,
+    srcImage: "public/assets/Images/Omega/1973_Omega_Geneve_1022/IMG_2630.JPG",
+    hoverSrc: "public/assets/Images/Omega/1973_Omega_Geneve_1022/IMG_2631.JPG",
+    href: require("../watchModels/Omega/Omega_Geneve_Automatic_Cal_1022_1973"),
+    specialCollectionItem: false,
+  },
+
+  "Tecnal Green Abyss Duromat 7522": {
     brand: BrandsEnum.TECNAL,
-    legend: "1972 Tecnal Green Abyss Duromat 7522",
+    legend: "Tecnal Green Abyss Duromat 7522",
     year: 1972,
     type: WatchTypeEnum.CASUAL,
     srcImage: "public/assets/Images/Tecnal/1972_Tecnal_Green_abyss_7522_25J/IMG_2760.JPG",
@@ -3026,9 +3048,21 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     href: require("../watchModels/Omega/Omega_166041_Cal_30T2_1946"),
     specialCollectionItem: false,
   },
-  "Zenith Militare Cal 106 17 Jewels": {
+
+  "Tissot Automatic Bumper 31 21": {
+    brand: BrandsEnum.TISSOT,
+    legend: "Tissot Automatic Bumper 31 21",
+    year: 1946,
+    type: WatchTypeEnum.DRESS,
+    srcImage: "public/assets/Images/Tissot/1946_Tissot_Automatic_Bumper/IMG_2711.JPG",
+    hoverSrc: "public/assets/Images/Tissot/1946_Tissot_Automatic_Bumper/IMG_2713.JPG",
+    href: require("../watchModels/Tissot/Tissot_Automatic_Bumper_31_21_1946"),
+    specialCollectionItem: false,
+  },
+
+  "Zenith Militare Cal. 106 17 Jewels": {
     brand: BrandsEnum.ZENITH,
-    legend: "Zenith Militare Cal 106 17 Jewels",
+    legend: "Zenith Militare Cal. 106 17 Jewels",
     year: 1945,
     type: WatchTypeEnum.CASUAL,
     srcImage: "public/assets/Images/Zenith/1945_Zenith_Militare_Cal_106/IMG_6145.JPG",
@@ -3105,6 +3139,18 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     href: require("../watchModels/Universal_Geneve/Universal_Geneve_Mecanique_cal_262_1942"),
     specialCollectionItem: false,
   },
+
+  "Tissot Antimagnetic Tuxedo Cal. 27-2": {
+    brand: BrandsEnum.TISSOT,
+    legend: "Tissot Antimagnetic Tuxedo Cal. 27-2",
+    year: 1942,
+    type: WatchTypeEnum.DRESS,
+    srcImage: "public/assets/Images/Tissot/1942_Tissot_Antimagnetic_Tuxedo_27_2/IMG_2677.JPG",
+    hoverSrc: "public/assets/Images/Tissot/1942_Tissot_Antimagnetic_Tuxedo_27_2/IMG_2697.JPG",
+    href: require("../watchModels/Tissot/Tissot_Antimagnetic_Tuxedo_Cal_272_1942"),
+    specialCollectionItem: false,
+  },
+
   "Tissot Antimagnetic 27-2": {
     brand: BrandsEnum.TISSOT,
     legend: "Tissot Antimagnetic 27-2",

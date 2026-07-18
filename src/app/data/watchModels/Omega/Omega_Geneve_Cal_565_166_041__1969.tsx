@@ -22,6 +22,7 @@ import { WaterResistanceEnum } from "@/app/enums/waterResistanceEnum";
 
 import movement_OMEGA_565 from "../../movements/Omega/Omega_565_24J";
 import { WatchDetails } from "../../watchDetails";
+import { OmegaBrandSeries } from "./OmegaBrandSeries";
 
 const details: WatchDetails = {
   title: "1969 Omega Geneve Cal. 565 (166.041)",
@@ -81,7 +82,7 @@ const details: WatchDetails = {
 
     information: {
       brand: BrandsEnum.OMEGA,
-      series: "Geneve Collection",
+      series: OmegaBrandSeries.GENEVE_COLLECTION,
       catalogueReference: "166.041 (Caliber 29858967)",
       productionYear: "1969",
       movementType: MovementWatchTypeEnum.AUTOMATIC,

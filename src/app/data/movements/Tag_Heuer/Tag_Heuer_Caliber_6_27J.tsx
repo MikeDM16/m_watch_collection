@@ -10,6 +10,6 @@ TAG_HEUER_CALIBER_6.description =
 TAG_HEUER_CALIBER_6.sliderImages = [
   "public/assets/Images/Movements/Tag_Heuer/Tag_Heuer_Caliber_6/Tag_Heuer_Caliber_6_1.JPG",
   "public/assets/Images/Movements/Tag_Heuer/Tag_Heuer_Caliber_6/Tag_Heuer_Caliber_6_2.JPG",
-].concat(TAG_HEUER_CALIBER_6.sliderImages.slice(0, 2));
+].concat(TAG_HEUER_CALIBER_6.sliderImages.slice(1, 3));
 
 export default TAG_HEUER_CALIBER_6;

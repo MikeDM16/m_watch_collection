@@ -22,6 +22,7 @@ import { WaterResistanceEnum } from "@/app/enums/waterResistanceEnum";
 
 import movement_OMEGA_268 from "../../movements/Omega/Omega_268_17J";
 import { WatchDetails } from "../../watchDetails";
+import { OmegaBrandSeries } from "./OmegaBrandSeries";
 
 const details: WatchDetails = {
   title: "1961 Omega Geneve Honeycomb Cal. 268",
@@ -94,7 +95,7 @@ const details: WatchDetails = {
 
     information: {
       brand: BrandsEnum.OMEGA,
-      series: "Geneve Collection",
+      series: OmegaBrandSeries.GENEVE_COLLECTION,
       catalogueReference: "14713-61 (Caliber 18435708)",
       productionYear: "1961",
       movementType: MovementWatchTypeEnum.MECHANIQUE,

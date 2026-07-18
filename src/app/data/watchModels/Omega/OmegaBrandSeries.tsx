@@ -16,6 +16,7 @@ export const OmegaBrandSeries = {
   POLARIS: "Polaris",
   DE_VILLE_VINTAGE: "De Ville (Vintage)",
   SEAMASTER: "Seamaster",
+  GENEVE_COLLECTION: "Genève Collection",
   SEAMASTER_VINTAGE: "Seamaster (Vintage)",
   STAYBRITE: "Staybrite",
 };
