@@ -26,7 +26,7 @@ import { RaymondWeilBrandSeries } from "./RaymondWeilBrandSeries";
 
 const details: WatchDetails = {
   title: "1992 Raymond Weil Tradition Mécanique Automatic 2892 21 Jewels",
-  sliderImages: [
+  /*sliderImages: [
     "public/assets/Images/Raymond_Weil/1992_Raymond_Weil_Tradition_Mecanique_2892/IMG_9249.JPG",
     "public/assets/Images/Raymond_Weil/1992_Raymond_Weil_Tradition_Mecanique_2892/IMG_9250.JPG",
     "public/assets/Images/Raymond_Weil/1992_Raymond_Weil_Tradition_Mecanique_2892/IMG_9251.JPG",
@@ -73,6 +73,54 @@ const details: WatchDetails = {
     "public/assets/Images/Raymond_Weil/1992_Raymond_Weil_Tradition_Mecanique_2892/IMG_9284.JPG",
     "public/assets/Images/Raymond_Weil/1992_Raymond_Weil_Tradition_Mecanique_2892/IMG_9285.JPG",
     "public/assets/Images/Raymond_Weil/1992_Raymond_Weil_Tradition_Mecanique_2892/IMG_9286.JPG",
+  ],*/
+
+  sliderImages: [
+    "public/assets/Images/Raymond_Weil/1992_Raymond_Weil_Tradition_Mecanique_2892/IMG_2886.JPG",
+    "public/assets/Images/Raymond_Weil/1992_Raymond_Weil_Tradition_Mecanique_2892/IMG_2887.JPG",
+    "public/assets/Images/Raymond_Weil/1992_Raymond_Weil_Tradition_Mecanique_2892/IMG_2888.JPG",
+    "public/assets/Images/Raymond_Weil/1992_Raymond_Weil_Tradition_Mecanique_2892/IMG_2889.JPG",
+    "public/assets/Images/Raymond_Weil/1992_Raymond_Weil_Tradition_Mecanique_2892/IMG_2890.JPG",
+    "public/assets/Images/Raymond_Weil/1992_Raymond_Weil_Tradition_Mecanique_2892/IMG_2891.JPG",
+    "public/assets/Images/Raymond_Weil/1992_Raymond_Weil_Tradition_Mecanique_2892/IMG_2892.JPG",
+    "public/assets/Images/Raymond_Weil/1992_Raymond_Weil_Tradition_Mecanique_2892/IMG_2893.JPG",
+    "public/assets/Images/Raymond_Weil/1992_Raymond_Weil_Tradition_Mecanique_2892/IMG_2894.JPG",
+    "public/assets/Images/Raymond_Weil/1992_Raymond_Weil_Tradition_Mecanique_2892/IMG_2895.JPG",
+    "public/assets/Images/Raymond_Weil/1992_Raymond_Weil_Tradition_Mecanique_2892/IMG_2896.JPG",
+    "public/assets/Images/Raymond_Weil/1992_Raymond_Weil_Tradition_Mecanique_2892/IMG_2898.JPG",
+    "public/assets/Images/Raymond_Weil/1992_Raymond_Weil_Tradition_Mecanique_2892/IMG_2899.JPG",
+    "public/assets/Images/Raymond_Weil/1992_Raymond_Weil_Tradition_Mecanique_2892/IMG_2900.JPG",
+    "public/assets/Images/Raymond_Weil/1992_Raymond_Weil_Tradition_Mecanique_2892/IMG_2901.JPG",
+
+    "public/assets/Images/Raymond_Weil/1992_Raymond_Weil_Tradition_Mecanique_2892/IMG_2924.JPG",
+    "public/assets/Images/Raymond_Weil/1992_Raymond_Weil_Tradition_Mecanique_2892/IMG_2925.JPG",
+    "public/assets/Images/Raymond_Weil/1992_Raymond_Weil_Tradition_Mecanique_2892/IMG_2926.JPG",
+    "public/assets/Images/Raymond_Weil/1992_Raymond_Weil_Tradition_Mecanique_2892/IMG_2928.JPG",
+    "public/assets/Images/Raymond_Weil/1992_Raymond_Weil_Tradition_Mecanique_2892/IMG_2929.JPG",
+
+    "public/assets/Images/Raymond_Weil/1992_Raymond_Weil_Tradition_Mecanique_2892/IMG_2906.JPG",
+    "public/assets/Images/Raymond_Weil/1992_Raymond_Weil_Tradition_Mecanique_2892/IMG_2907.JPG",
+    "public/assets/Images/Raymond_Weil/1992_Raymond_Weil_Tradition_Mecanique_2892/IMG_2908.JPG",
+    "public/assets/Images/Raymond_Weil/1992_Raymond_Weil_Tradition_Mecanique_2892/IMG_2909.JPG",
+    "public/assets/Images/Raymond_Weil/1992_Raymond_Weil_Tradition_Mecanique_2892/IMG_2910.JPG",
+    "public/assets/Images/Raymond_Weil/1992_Raymond_Weil_Tradition_Mecanique_2892/IMG_2911.JPG",
+    "public/assets/Images/Raymond_Weil/1992_Raymond_Weil_Tradition_Mecanique_2892/IMG_2912.JPG",
+    "public/assets/Images/Raymond_Weil/1992_Raymond_Weil_Tradition_Mecanique_2892/IMG_2913.JPG",
+    "public/assets/Images/Raymond_Weil/1992_Raymond_Weil_Tradition_Mecanique_2892/IMG_2914.JPG",
+    "public/assets/Images/Raymond_Weil/1992_Raymond_Weil_Tradition_Mecanique_2892/IMG_2915.JPG",
+
+    "public/assets/Images/Raymond_Weil/1992_Raymond_Weil_Tradition_Mecanique_2892/IMG_2902.JPG",
+    "public/assets/Images/Raymond_Weil/1992_Raymond_Weil_Tradition_Mecanique_2892/IMG_2903.JPG",
+    "public/assets/Images/Raymond_Weil/1992_Raymond_Weil_Tradition_Mecanique_2892/IMG_2904.JPG",
+    "public/assets/Images/Raymond_Weil/1992_Raymond_Weil_Tradition_Mecanique_2892/IMG_2905.JPG",
+
+    "public/assets/Images/Raymond_Weil/1992_Raymond_Weil_Tradition_Mecanique_2892/IMG_2917.JPG",
+    "public/assets/Images/Raymond_Weil/1992_Raymond_Weil_Tradition_Mecanique_2892/IMG_2918.JPG",
+    "public/assets/Images/Raymond_Weil/1992_Raymond_Weil_Tradition_Mecanique_2892/IMG_2919.JPG",
+    "public/assets/Images/Raymond_Weil/1992_Raymond_Weil_Tradition_Mecanique_2892/IMG_2920.JPG",
+    "public/assets/Images/Raymond_Weil/1992_Raymond_Weil_Tradition_Mecanique_2892/IMG_2921.JPG",
+    "public/assets/Images/Raymond_Weil/1992_Raymond_Weil_Tradition_Mecanique_2892/IMG_2922.JPG",
+    "public/assets/Images/Raymond_Weil/1992_Raymond_Weil_Tradition_Mecanique_2892/IMG_2923.JPG",
   ],
 
   technicalData: {

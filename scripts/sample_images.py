@@ -4,8 +4,8 @@ from tqdm import tqdm
 from PIL import Image
 
 main_folder_path = "C:/Users/migue/Documentos/GitHub/MWatchCollectionResources/public/assets/Images/Brands_Backgrounds/"
-main_folder_path = "C:/Users/migue/Documentos/GitHub/MWatchCollectionResources/public/assets/Images/Dubois"
-main_folder_path = "C:/Users/migue/Documentos/GitHub/MWatchCollectionResources/public/assets/Images/Movements/Omega/Omega_cal_266/"
+main_folder_path = "C:/Users/migue/Documentos/GitHub/MWatchCollectionResources/public/assets/Images/Movements/Omega"
+main_folder_path = "C:/Users/migue/Documentos/GitHub/MWatchCollectionResources/public/assets/Images/Breitling/1998_Breitling_Chronomat_B13050_Blue_Dial"
 
 
 def remove_lower_extension_images():

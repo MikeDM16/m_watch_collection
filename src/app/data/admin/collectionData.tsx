@@ -1001,7 +1001,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     srcImage: "public/assets/Images/Omega/1998_Omega_Speedmaster_reduced/IMG_2336.JPG",
     hoverSrc: "public/assets/Images/Omega/1998_Omega_Speedmaster_reduced/IMG_2296.JPG",
     href: require("../watchModels/Omega/Omega_Speedmaster_reduced_1998"),
-    specialCollectionItem: true,
+    specialCollectionItem: false,
   },
 
   "Eterna - Porsche Design 911 - Jean-Pierre Jarier": {
@@ -1092,9 +1092,9 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     year: 1996,
     type: WatchTypeEnum.SPORTS,
     srcImage:
-      "public/assets/Images/Breitling/1998_Breitling_Chronomat_B13050_Blue_Dial/IMG_0800.JPG",
+      "public/assets/Images/Breitling/1998_Breitling_Chronomat_B13050_Blue_Dial/IMG_2818.JPG",
     hoverSrc:
-      "public/assets/Images/Breitling/1998_Breitling_Chronomat_B13050_Blue_Dial/IMG_0865.JPG",
+      "public/assets/Images/Breitling/1998_Breitling_Chronomat_B13050_Blue_Dial/IMG_2814.JPG",
     href: require("../watchModels/Breitling/Breitling_Chronomat_B13050_Blue_Dial_1996"),
     specialCollectionItem: false,
   },
@@ -1564,9 +1564,9 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     year: 1992,
     type: WatchTypeEnum.DRESS,
     srcImage:
-      "public/assets/Images/Raymond_Weil/1992_Raymond_Weil_Tradition_Mecanique_2892/IMG_9267.JPG",
+      "public/assets/Images/Raymond_Weil/1992_Raymond_Weil_Tradition_Mecanique_2892/IMG_2895.JPG",
     hoverSrc:
-      "public/assets/Images/Raymond_Weil/1992_Raymond_Weil_Tradition_Mecanique_2892/IMG_9288.JPG",
+      "public/assets/Images/Raymond_Weil/1992_Raymond_Weil_Tradition_Mecanique_2892/IMG_2891.JPG",
     href: require("../watchModels/Raymond_Weil/Raymond_Weil_Tradition_Mecanique_2892_1992"),
     specialCollectionItem: false,
   },
@@ -1845,7 +1845,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     srcImage: "public/assets/Images/Tag_Heuer/1987_Tag_Heuer_DD2000_262_0061/IMG_6720.JPG",
     hoverSrc: "public/assets/Images/Tag_Heuer/1987_Tag_Heuer_DD2000_262_0061/IMG_6707.JPG",
     href: require("../watchModels/Tag_Heuer/Tag_Heuer_ProChrono_2620061_1987"),
-    specialCollectionItem: true,
+    specialCollectionItem: false,
   },
   "Omega Polaris Multifunction Black LCD 386.0822": {
     brand: BrandsEnum.OMEGA,
@@ -2986,6 +2986,17 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     srcImage: "public/assets/Images/Omega/1950_Omega_Seamaster_Jumbo_CK2544/IMG_5768.JPG",
     hoverSrc: "public/assets/Images/Omega/1950_Omega_Seamaster_Jumbo_CK2544/IMG_5766.JPG",
     href: require("../watchModels/Omega/Omega_Seamaster_Jumbo_Cal_265_1950"),
+    specialCollectionItem: true,
+  },
+
+  "Breitling Premier Chronograph Venus 178": {
+    brand: BrandsEnum.BREITLING,
+    legend: "Breitling Premier Chronograph Venus 178",
+    year: 1948,
+    type: WatchTypeEnum.CASUAL,
+    srcImage: "public/assets/Images/Breitling/1950_Breitling_Premier_Venus_178/IMG_2750.JPG",
+    hoverSrc: "public/assets/Images/Breitling/1950_Breitling_Premier_Venus_178/IMG_2751.JPG",
+    href: require("../watchModels/Breitling/Breitling_Premier_Chronograph_Venus_178_1948"),
     specialCollectionItem: true,
   },
 

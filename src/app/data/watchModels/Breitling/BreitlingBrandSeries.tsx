@@ -14,4 +14,5 @@ export const BreitlingBrandSeries = {
     SEXTANT: "Sextant",
   }),
   NAVITIMER: "Navitimer",
+  PREMIER: "Premier",
 };
