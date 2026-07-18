@@ -35,7 +35,7 @@ const OMEGA_1141_45J: Caliber = {
     // Frequency
     frequency: FrequencyEnum.F_28800,
     // Jewels
-    jewels: JewelsNumberEnum.J_42,
+    jewels: JewelsNumberEnum.J_45,
     // Reserve
     reserve: ReserveHoursEnum.R_47,
     // Functions

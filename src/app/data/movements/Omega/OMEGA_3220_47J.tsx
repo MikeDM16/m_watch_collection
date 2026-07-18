@@ -28,7 +28,7 @@ const OMEGA_3220_47J: Caliber = {
     modelReference: "3220",
     type: MovementWatchTypeEnum.AUTOMATIC,
     frequency: FrequencyEnum.F_28800,
-    jewels: JewelsNumberEnum.J_42,
+    jewels: JewelsNumberEnum.J_47,
     reserve: ReserveHoursEnum.R_41,
     functions: "12 hour 30 minute chronograph, Hours, Minutes, Sub Seconds at 3 o'clock",
     battery: undefined,

@@ -65,6 +65,7 @@ import OMEGA_410 from "../movements/Omega/Omega_410_17J";
 import OMEGA_565 from "../movements/Omega/Omega_565_24J";
 import OMEGA_610_17J from "../movements/Omega/Omega_610_17J";
 import OMEGA_672_24J from "../movements/Omega/Omega_672_24J";
+import OMEGA_1022_23J from "../movements/Omega/Omega_1022";
 import OMEGA_1141_45J from "../movements/Omega/Omega_1141";
 import OMEGA_1151 from "../movements/Omega/Omega_1151";
 import OMEGA_1370 from "../movements/Omega/Omega_1370";
@@ -97,6 +98,7 @@ import TAG_HEUER_2_95 from "../movements/Tag_Heuer/Tag_Heuer_2_95";
 import HEUER_4_93 from "../movements/Tag_Heuer/Tag_Heuer_4_93";
 import HEUER_4_95 from "../movements/Tag_Heuer/Tag_Heuer_4_95";
 import HEUER_4_96 from "../movements/Tag_Heuer/Tag_Heuer_4_96";
+import TAG_HEUER_CALIBER_6 from "../movements/Tag_Heuer/Tag_Heuer_Caliber_6_27J";
 import TAG_HEUER_CALIBER_16 from "../movements/Tag_Heuer/Tag_Heuer_Caliber_16_25J";
 import TIMEX_M100 from "../movements/Timex/Timex_M100";
 import TISSOT_26_9_261 from "../movements/Tissot/26_9_621_17J";
@@ -104,6 +106,7 @@ import TISSOT_27_2 from "../movements/Tissot/27_2_17J";
 import TISSOT_27_3 from "../movements/Tissot/27_3_15J";
 import TISSOT_27B_1 from "../movements/Tissot/27B_1_15J";
 import TISSOT_27B_21 from "../movements/Tissot/27B_21_15J";
+import TISSOT_31_21_17J from "../movements/Tissot/31_21_17J";
 import TISSOT_781 from "../movements/Tissot/781_17J";
 import TISSOT_784 from "../movements/Tissot/784_21J";
 import TISSOT_794 from "../movements/Tissot/794_21J";
@@ -117,6 +120,7 @@ import VALJOIX_7734_17J from "../movements/Valjoux/7734_17J";
 import VALJOUX_77_17J from "../movements/Valjoux/Valjoux_77_17J";
 import VALJOUX_726_88_17J from "../movements/Valjoux/Valjoux_726_88_17J";
 import VENUS_170_17J from "../movements/Venus/Venus_170_17J";
+import VENUS_178_17J from "../movements/Venus/Venus_178_17J";
 import VOSTOK_2605_17J from "../movements/Vostok/Vostok_2605_17J";
 import ZENITH_106_15J from "../movements/Zenith/106_15J";
 import ZENITH_EL_PRIMERO_400Z from "../movements/Zenith/El_Primero_400Z";
@@ -193,6 +197,7 @@ export const MovementsDataDB: Record<string, Caliber> = {
   HEUER_4_95: HEUER_4_95,
   HEUER_4_96: HEUER_4_96,
   HEUER_2_00: HEUER_2_00,
+  TAG_HEUER_CALIBER_6: TAG_HEUER_CALIBER_6,
   TAG_HEUER_CALIBER_16: TAG_HEUER_CALIBER_16,
 
   LANDERON_48_17J: Landeron_48_17J,
@@ -206,6 +211,7 @@ export const MovementsDataDB: Record<string, Caliber> = {
   MIYOTA_OS10: MIYOTA_OS10,
   MIYOTA_OS60: MIYOTA_OS60,
 
+  OMEGA_1022_23J: OMEGA_1022_23J,
   OMEGA_1141_45J: OMEGA_1141_45J,
   OMEGA_1151: OMEGA_1151,
   OMEGA_1370: OMEGA_1370,
@@ -252,6 +258,7 @@ export const MovementsDataDB: Record<string, Caliber> = {
   TISSOT_27_2: TISSOT_27_2,
   TISSOT_27B_1: TISSOT_27B_1,
   TISSOT_27B_21: TISSOT_27B_21,
+  TISSOT_31_21_17J: TISSOT_31_21_17J,
   TISSOT_781: TISSOT_781,
   TISSOT_784: TISSOT_784,
   TISSOT_794: TISSOT_794,
@@ -264,6 +271,7 @@ export const MovementsDataDB: Record<string, Caliber> = {
   VALJOIX_7734_17J: VALJOIX_7734_17J,
 
   VENUS_170_17J: VENUS_170_17J,
+  VENUS_178_17J: VENUS_178_17J,
 
   VOSTOK_2605_17J: VOSTOK_2605_17J,
 
