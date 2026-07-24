@@ -2989,14 +2989,14 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     specialCollectionItem: true,
   },
 
-  "Breitling Premier Chronograph Venus 178": {
+  "Breitling Premier Chronograph Venus 175": {
     brand: BrandsEnum.BREITLING,
-    legend: "Breitling Premier Chronograph Venus 178",
+    legend: "Breitling Premier Chronograph Venus 175",
     year: 1948,
     type: WatchTypeEnum.CASUAL,
     srcImage: "public/assets/Images/Breitling/1950_Breitling_Premier_Venus_178/IMG_2750.JPG",
     hoverSrc: "public/assets/Images/Breitling/1950_Breitling_Premier_Venus_178/IMG_2751.JPG",
-    href: require("../watchModels/Breitling/Breitling_Premier_Chronograph_Venus_178_1948"),
+    href: require("../watchModels/Breitling/Breitling_Premier_Chronograph_Venus_175_1948"),
     specialCollectionItem: true,
   },
 

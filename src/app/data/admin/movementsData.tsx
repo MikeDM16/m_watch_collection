@@ -120,7 +120,7 @@ import VALJOIX_7734_17J from "../movements/Valjoux/7734_17J";
 import VALJOUX_77_17J from "../movements/Valjoux/Valjoux_77_17J";
 import VALJOUX_726_88_17J from "../movements/Valjoux/Valjoux_726_88_17J";
 import VENUS_170_17J from "../movements/Venus/Venus_170_17J";
-import VENUS_178_17J from "../movements/Venus/Venus_178_17J";
+import VENUS_175_17J from "../movements/Venus/Venus_175_17J";
 import VOSTOK_2605_17J from "../movements/Vostok/Vostok_2605_17J";
 import ZENITH_106_15J from "../movements/Zenith/106_15J";
 import ZENITH_EL_PRIMERO_400Z from "../movements/Zenith/El_Primero_400Z";
@@ -271,7 +271,7 @@ export const MovementsDataDB: Record<string, Caliber> = {
   VALJOIX_7734_17J: VALJOIX_7734_17J,
 
   VENUS_170_17J: VENUS_170_17J,
-  VENUS_178_17J: VENUS_178_17J,
+  VENUS_175_17J: VENUS_175_17J,
 
   VOSTOK_2605_17J: VOSTOK_2605_17J,
 

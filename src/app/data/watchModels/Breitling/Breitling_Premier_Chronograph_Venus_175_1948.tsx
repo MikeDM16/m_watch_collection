@@ -20,12 +20,12 @@ import { MovementWatchTypeEnum } from "@/app/enums/movementWatchTypeEnum";
 import { WatchStyleEnum } from "@/app/enums/watchStyleEnum";
 import { WaterResistanceEnum } from "@/app/enums/waterResistanceEnum";
 
-import movement_VENUS_178_17J from "../../movements/Venus/Venus_178_17J";
+import movement_VENUS_175_17J from "../../movements/Venus/Venus_175_17J";
 import { WatchDetails } from "../../watchDetails";
 import { BreitlingBrandSeries } from "./BreitlingBrandSeries";
 
 const details: WatchDetails = {
-  title: "1948 Breitling Premier Chronograph Venus 178",
+  title: "1948 Breitling Premier Chronograph Venus 175",
 
   sliderImages: [
     "public/assets/Images/Breitling/1950_Breitling_Premier_Venus_178/IMG_2742.JPG",
@@ -115,7 +115,7 @@ const details: WatchDetails = {
       color: ColorEnum.BLUE,
     },
 
-    movement: movement_VENUS_178_17J,
+    movement: movement_VENUS_175_17J,
   },
 };
 
