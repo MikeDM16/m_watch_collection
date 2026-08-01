@@ -137,6 +137,12 @@ const details: WatchDetails = {
     "public/assets/Images/Breitling/1999_Breitling_Navitimer_Premier_A40035/IMG_2097.JPG",
   ],*/
 
+  saleReport: {
+    price: 1651,
+    date: "17/07/2026",
+    url: "https://www.catawiki.com/en/l/105104096",
+  },
+
   technicalData: {
     features: [
       featuresEnum.CHRONOGRAPH,

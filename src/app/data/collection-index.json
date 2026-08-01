@@ -2592,6 +2592,20 @@
     },
     "modelFile": "Lorenz/Lorenz_Classic_Rattrapante_1989"
   },
+  "Baume et Mercier Le Roy Tank": {
+    "brand": "Baume et Mercier",
+    "legend": "Baume et Mercier Le Roy Tank",
+    "year": 1989,
+    "type": "Casual",
+    "srcImage": "public/assets/Images/Baume_Mercier/1999_Baume_Mercier_LeRoy_AnaDigital/IMG_0608.JPG",
+    "hoverSrc": "public/assets/Images/Baume_Mercier/1999_Baume_Mercier_LeRoy_AnaDigital/IMG_0609.JPG",
+    "specialCollectionItem": false,
+    "collectionSet": false,
+    "series": "Le Roy",
+    "movementTitle": "ETA Cal. 988.432",
+    "saleReport": null,
+    "modelFile": "Baume_et_Mercier/Baume_et_Mercier_LeRoy_Tank_1989"
+  },
   "Tag Heuer S/EL Digital Chrono Senna": {
     "brand": "Tag Heuer",
     "legend": "Tag Heuer S/EL Digital Chrono Senna",
@@ -2803,7 +2817,11 @@
     "collectionSet": false,
     "series": "Godron",
     "movementTitle": "Lemania 1873",
-    "saleReport": null,
+    "saleReport": {
+      "price": 1200,
+      "date": "17/07/2026",
+      "url": "https://www.catawiki.com/en/l/105221320"
+    },
     "modelFile": "Eberhard/Eberhard_Godron_Ref_32031_Lemania_1873_1992"
   },
   "Omega Olympia Winter Olympics Albertville Ltd. 305/499": {
@@ -3689,7 +3707,7 @@
     "type": "Sports",
     "srcImage": "public/assets/Images/Porsche_Design/1998_Porsche_Design_911_JP_Jarier/IMG_8266.JPG",
     "hoverSrc": "public/assets/Images/Porsche_Design/1998_Porsche_Design_911_JP_Jarier/IMG_8237.JPG",
-    "specialCollectionItem": false,
+    "specialCollectionItem": true,
     "collectionSet": false,
     "series": "Porsche Cup 911 GT2 - 1998",
     "movementTitle": "ETA Cal. 255.251",
@@ -3782,6 +3800,20 @@
     "saleReport": null,
     "modelFile": "Camel_Trophy/Camel_Trophy_M6612000009_1998"
   },
+  "Maurice Lacroix Lady Date": {
+    "brand": "Maurice Lacroix",
+    "legend": "Maurice Lacroix Lady Date",
+    "year": 1998,
+    "type": "Dress",
+    "srcImage": "public/assets/Images/Maurice_Lacroix/1999_Maurice_Lacroix_Lady/IMG_2438.JPG",
+    "hoverSrc": "public/assets/Images/Maurice_Lacroix/1999_Maurice_Lacroix_Lady/IMG_2427.JPG",
+    "specialCollectionItem": false,
+    "collectionSet": false,
+    "series": "Vintage Series",
+    "movementTitle": "ETA 955.112",
+    "saleReport": null,
+    "modelFile": "Maurice_Lacroix/Maurice_Lacroix_Lady_Date_1998"
+  },
   "Breitling Navitimer Premier A40035": {
     "brand": "Breitling",
     "legend": "Breitling Navitimer Premier A40035",
@@ -3793,7 +3825,11 @@
     "collectionSet": false,
     "series": "Navitimer",
     "movementTitle": "Breitling B40",
-    "saleReport": null,
+    "saleReport": {
+      "price": 1651,
+      "date": "17/07/2026",
+      "url": "https://www.catawiki.com/en/l/105104096"
+    },
     "modelFile": "Breitling/Breitling_Navitimer_Premier_A40035_1998"
   },
   "DuBois Grand Prix D'Europe Formula 1 - 1999": {
@@ -3975,7 +4011,11 @@
     "collectionSet": false,
     "series": "Ballade",
     "movementTitle": "ETA 955.112",
-    "saleReport": null,
+    "saleReport": {
+      "price": 95,
+      "date": "13/07/2026",
+      "url": "https://www.catawiki.com/en/l/105072110"
+    },
     "modelFile": "Tissot/Tissot_Ballade_Lady_C227_327_2002"
   },
   "Breitling Chronomat B13050.1": {
@@ -4211,7 +4251,11 @@
     "collectionSet": false,
     "series": "Capeland",
     "movementTitle": "ETA 955.112",
-    "saleReport": null,
+    "saleReport": {
+      "price": 370,
+      "date": "25/07/2026",
+      "url": "https://www.catawiki.com/en/l/105461763"
+    },
     "modelFile": "Baume_et_Mercier/Baume_et_Mercier_Capeland_Noir_2005"
   },
   "Raymond Weil Amadeus 200 7750": {
@@ -4879,6 +4923,20 @@
       "url": "https://www.catawiki.com/en/l/96350695"
     },
     "modelFile": "Tissot/Tissot_PRS_516_Valjoux_2009"
+  },
+  "Tissot PRS 516 Special Nascar Edition": {
+    "brand": "Tissot",
+    "legend": "Tissot PRS 516 Special Nascar Edition",
+    "year": 2014,
+    "type": "Sports",
+    "srcImage": "public/assets/Images/Tissot/2014_Tissot_NASCAR_Racing_White_Blue_7750/IMG_3121.JPG",
+    "hoverSrc": "public/assets/Images/Tissot/2014_Tissot_NASCAR_Racing_White_Blue_7750/IMG_3150.JPG",
+    "specialCollectionItem": false,
+    "collectionSet": false,
+    "series": "PRS 516",
+    "movementTitle": "Valjoux 7750",
+    "saleReport": null,
+    "modelFile": "Tissot/Tissot_PRS_516_Special_Nascar_Edition_2014"
   },
   "Tissot PRS 516 NASCAR Racing White Chronograph": {
     "brand": "Tissot",

@@ -93,6 +93,12 @@ const details: WatchDetails = {
     "public/assets/Images/Eberhard/1992_Eberhard_Ref_32031_Lemania_1873/IMG_4910.JPG",
   ],
 
+  saleReport: {
+    price: 1200,
+    date: "17/07/2026",
+    url: "https://www.catawiki.com/en/l/105221320",
+  },
+
   technicalData: {
     features: [
       featuresEnum.MECHANIQUE_CHRONOGRAPH,

@@ -86,6 +86,12 @@ const details: WatchDetails = {
     "public/assets/Images/Baume_Mercier/2025_Baume_Mercier_Capeland_Noir/IMG_5006.JPG",
   ],
 
+  saleReport: {
+    price: 370,
+    date: "25/07/2026",
+    url: "https://www.catawiki.com/en/l/105461763",
+  },
+
   technicalData: {
     features: [featuresEnum.DATE],
 

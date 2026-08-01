@@ -213,6 +213,18 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     href: require("../watchModels/Tissot/Tissot_PRS_516_Valjoux_2009"),
     specialCollectionItem: false,
   },
+
+  "Tissot PRS 516 Special Nascar Edition": {
+    brand: BrandsEnum.TISSOT,
+    legend: "Tissot PRS 516 Special Nascar Edition",
+    year: 2014,
+    type: WatchTypeEnum.SPORTS,
+    srcImage: "public/assets/Images/Tissot/2014_Tissot_NASCAR_Racing_White_Blue_7750/IMG_3121.JPG",
+    hoverSrc: "public/assets/Images/Tissot/2014_Tissot_NASCAR_Racing_White_Blue_7750/IMG_3150.JPG",
+    href: require("../watchModels/Tissot/Tissot_PRS_516_Special_Nascar_Edition_2014"),
+    specialCollectionItem: false,
+  },
+
   "Tissot PRS 516 NASCAR Racing White Chronograph": {
     brand: BrandsEnum.TISSOT,
     legend: "Tissot PRS 516 NASCAR Racing White Chronograph",
@@ -1012,7 +1024,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     srcImage: "public/assets/Images/Porsche_Design/1998_Porsche_Design_911_JP_Jarier/IMG_8266.JPG",
     hoverSrc: "public/assets/Images/Porsche_Design/1998_Porsche_Design_911_JP_Jarier/IMG_8237.JPG",
     href: require("../watchModels/Porsche_Design/Porsche_Design_911_JP_Jarier_1998"),
-    specialCollectionItem: false,
+    specialCollectionItem: true,
   },
   "Eterna - Porsche Design 911 - GT2 Cup": {
     brand: BrandsEnum.PORSCHE_DESIGN,
@@ -1061,6 +1073,17 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     type: WatchTypeEnum.CASUAL,
     srcImage: "public/assets/Images/Camel/1998_Camel_Trophy_Time_Date/8.JPG",
     href: require("../watchModels/Camel_Trophy/Camel_Trophy_M6612000009_1998"),
+    specialCollectionItem: false,
+  },
+
+  "Maurice Lacroix Lady Date": {
+    brand: BrandsEnum.MAURICE_LACROIX,
+    legend: "Maurice Lacroix Lady Date",
+    year: 1998,
+    type: WatchTypeEnum.DRESS,
+    srcImage: "public/assets/Images/Maurice_Lacroix/1999_Maurice_Lacroix_Lady/IMG_2438.JPG",
+    hoverSrc: "public/assets/Images/Maurice_Lacroix/1999_Maurice_Lacroix_Lady/IMG_2427.JPG",
+    href: require("../watchModels/Maurice_Lacroix/Maurice_Lacroix_Lady_Date_1998"),
     specialCollectionItem: false,
   },
 
@@ -1712,6 +1735,17 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     srcImage: "public/assets/Images/Lorenz/1989_Lorenz_Classic_Rattrapante/IMG_8717.JPG",
     hoverSrc: "public/assets/Images/Lorenz/1989_Lorenz_Classic_Rattrapante/IMG_8695.JPG",
     href: require("../watchModels/Lorenz/Lorenz_Classic_Rattrapante_1989"),
+    specialCollectionItem: false,
+  },
+
+  "Baume et Mercier Le Roy Tank": {
+    brand: BrandsEnum.BAUME_MERCIER,
+    legend: "Baume et Mercier Le Roy Tank",
+    year: 1989,
+    type: WatchTypeEnum.CASUAL,
+    srcImage: "public/assets/Images/Baume_Mercier/1999_Baume_Mercier_LeRoy_AnaDigital/IMG_0608.JPG",
+    hoverSrc: "public/assets/Images/Baume_Mercier/1999_Baume_Mercier_LeRoy_AnaDigital/IMG_0609.JPG",
+    href: require("../watchModels/Baume_et_Mercier/Baume_et_Mercier_LeRoy_Tank_1989"),
     specialCollectionItem: false,
   },
 

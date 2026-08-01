@@ -19,6 +19,7 @@ import ETA_900 from "../movements/ETA/ETA_900_17J";
 import ETA_902_101 from "../movements/ETA/ETA_902_101";
 import ETA_955_112 from "../movements/ETA/ETA_955_112";
 import ETA_955_114 from "../movements/ETA/ETA_955_114";
+import ETA_988_432 from "../movements/ETA/ETA_988_432_7J";
 import ETA_1256 from "../movements/ETA/ETA_1256";
 import ETA_2452 from "../movements/ETA/ETA_2452_17J";
 import ETA_2472 from "../movements/ETA/ETA_2472_25J";
@@ -169,6 +170,7 @@ export const MovementsDataDB: Record<string, Caliber> = {
   ETA_902_101: ETA_902_101,
   ETA_955_112: ETA_955_112,
   ETA_955_114: ETA_955_114,
+  ETA_988_432: ETA_988_432,
   ETA_A05_H31_27: ETA_A05_H31_27,
   ETA_C07_111: ETA_C07_111,
   ETA_G10_211: ETA_G10_211,

@@ -68,6 +68,12 @@ const details: WatchDetails = {
     "public/assets/Images/Tissot/2002_Tissot_Ballade_Lady_C227_327/IMG_4728.JPG",
   ],
 
+  saleReport: {
+    price: 95,
+    date: "13/07/2026",
+    url: "https://www.catawiki.com/en/l/105072110",
+  },
+
   technicalData: {
     features: [featuresEnum.DATE],
 
