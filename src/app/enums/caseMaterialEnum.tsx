@@ -6,6 +6,7 @@ export const CaseMaterialEnum = {
   SS_GOLD_DETAILS: "Stainless Steel with Gold Details",
   SS_GOLD_PLATED: "Stainless Steel - Gold Plated",
   SS_GOLD_PLATED_10: "Stainless Steel - Gold Plated 10 µm",
+  SS_GOLD_PLATED_12: "Stainless Steel - Gold Plated 12 µm",
   SS_GOLD_PLATED_20: "Stainless Steel - Gold Plated 20 µm",
   SS_GOLD_PUSHERS: "Stainless Steel - Gold Pushers",
   SS_ROSE_GOLD_PLATED: "Stainless Steel - Rose Gold Plated",

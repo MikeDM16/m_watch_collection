@@ -77,6 +77,12 @@ const details: WatchDetails = {
     "public/assets/Images/Omega/1973_Omega_Geneve_1022/IMG_2652.JPG",
   ],
 
+  saleReport: {
+    price: 650,
+    date: "30/07/2026",
+    url: "https://www.catawiki.com/l/105492929",
+  },
+
   technicalData: {
     features: [
       featuresEnum.AUTOMATIC,

@@ -76,6 +76,12 @@ const details: WatchDetails = {
     "public/assets/Images/Tissot/1946_Tissot_Automatic_Bumper/IMG_2734.JPG",
   ],
 
+  saleReport: {
+    price: 320,
+    date: "28/07/2026",
+    url: "https://www.catawiki.com/l/105493052",
+  },
+
   technicalData: {
     features: [
       featuresEnum.AUTOMATIC,

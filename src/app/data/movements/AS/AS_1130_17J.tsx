@@ -15,7 +15,8 @@ const AS_1130: Caliber = {
   description:
     'AS 1130 base movement. \n\
     It was also used in some prestigious brand, as for instance the caliber Girard-Perregaux 27 or the Alpina 652.\n\
-    This movement is known as the Wehrmachtswerk, which translates to "army movement", as it was deeply used in German military watches.',
+    This movement is known as the Wehrmachtswerk, which translates to "army movement", as it was deeply used in German military watches.\n\
+    This caliber can be found in variation of 15, 16 and 17 jewels',
   // UsefullLinks
   usefullLinks: {
     "Ranfft AS 1130": "http://www.ranfft.de/cgi-bin/bidfun-db.cgi?10&ranfft&0&2uswk&AS_1130",

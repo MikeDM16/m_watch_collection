@@ -407,11 +407,21 @@ export const brandsDB: Brand[] = [
     displayOrder: undefined,
   },
   {
+    name: BrandsEnum.AUREUS,
+    logoImg: "public/assets/Images/Brands_Logos/aureus_logo.PNG",
+    displayOrder: undefined,
+  },
+  {
     name: BrandsEnum.DOXA,
     logoImg: "public/assets/Images/Brands_Logos/doxa_logo.PNG",
     displayOrder: undefined,
   },
 
+  {
+    name: BrandsEnum.DOUGLAS,
+    logoImg: "public/assets/Images/Brands_Logos/douglas_logo.PNG",
+    displayOrder: undefined,
+  },
   {
     name: BrandsEnum.DUBOIS,
     logoImg: "public/assets/Images/Brands_Logos/dubois_logo.PNG",
@@ -468,6 +478,11 @@ export const brandsDB: Brand[] = [
     displayOrder: undefined,
   },
   {
+    name: BrandsEnum.BUREN,
+    logoImg: "public/assets/Images/Brands_Logos/buren_logo.PNG",
+    displayOrder: undefined,
+  },
+  {
     name: BrandsEnum.BARRETT,
     logoImg: "public/assets/Images/Brands_Logos/barrett_logo.PNG",
     displayOrder: undefined,
@@ -477,6 +492,11 @@ export const brandsDB: Brand[] = [
     logoImg: "public/assets/Images/Brands_Logos/cristal_watch_logo.PNG",
     displayOrder: undefined,
     description: "Vintage Portuguese brand with Swiss Made parts and assembly.",
+  },
+  {
+    name: BrandsEnum.CRISTALOR,
+    logoImg: "public/assets/Images/Brands_Logos/cristalor_logo.PNG",
+    displayOrder: undefined,
   },
   {
     name: BrandsEnum.CALYPSO,

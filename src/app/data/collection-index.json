@@ -242,8 +242,26 @@
     "collectionSet": false,
     "series": "Antimagnetic",
     "movementTitle": "Tissot 31-21",
-    "saleReport": null,
+    "saleReport": {
+      "price": 320,
+      "date": "28/07/2026",
+      "url": "https://www.catawiki.com/l/105493052"
+    },
     "modelFile": "Tissot/Tissot_Automatic_Bumper_31_21_1946"
+  },
+  "Douglas Antimagnetic Jumbo": {
+    "brand": "Douglas",
+    "legend": "Douglas Antimagnetic Jumbo",
+    "year": 1947,
+    "type": "Casual",
+    "srcImage": "public/assets/Images/Douglas/1947_Douglas_Antimagnetic_AS1130/IMG_3389_1.JPG",
+    "hoverSrc": "public/assets/Images/Douglas/1947_Douglas_Antimagnetic_AS1130/IMG_3378.JPG",
+    "specialCollectionItem": false,
+    "collectionSet": false,
+    "series": "Antimagnetic",
+    "movementTitle": "A. Schild 1130",
+    "saleReport": null,
+    "modelFile": "Douglas/Douglas_Antimagnetic_1947"
   },
   "Fortis Pilot Chronograph Valjoux 77": {
     "brand": "Fortis",
@@ -298,6 +316,34 @@
       "url": "https://www.catawiki.com/en/l/96948310"
     },
     "modelFile": "Tissot/Tissot_Antimagnetic_1947_white"
+  },
+  "Buren Gran Prix": {
+    "brand": "Buren",
+    "legend": "Buren Gran Prix",
+    "year": 1947,
+    "type": "Casual",
+    "srcImage": "public/assets/Images/Buren/1947_Buren_Grand_Prix_AS1130/IMG_3523.JPG",
+    "hoverSrc": "public/assets/Images/Buren/1947_Buren_Grand_Prix_AS1130/IMG_3518.JPG",
+    "specialCollectionItem": false,
+    "collectionSet": false,
+    "series": "Gran Prix",
+    "movementTitle": "A. Schild 1130",
+    "saleReport": null,
+    "modelFile": "Buren/Buren_Gran_Prix__1947"
+  },
+  "Aureus Extra Antimagnetic": {
+    "brand": "Aureus",
+    "legend": "Aureus Extra Antimagnetic",
+    "year": 1947,
+    "type": "Casual",
+    "srcImage": "public/assets/Images/Aureus/1947_Aureus_Extra_AS1130/IMG_3441.JPG",
+    "hoverSrc": "public/assets/Images/Aureus/1947_Aureus_Extra_AS1130/IMG_3417.JPG",
+    "specialCollectionItem": false,
+    "collectionSet": false,
+    "series": "Extra",
+    "movementTitle": "A. Schild 1130",
+    "saleReport": null,
+    "modelFile": "Aureus/Aureus_Extra_Antimagnetic_1947"
   },
   "Breitling Premier Chronograph Venus 175": {
     "brand": "Breitling",
@@ -790,6 +836,20 @@
       "url": "https://www.catawiki.com/en/l/97911370"
     },
     "modelFile": "Tissot/Tissot_Seastar_T12_Auto_1964"
+  },
+  "Cristalor Antimagnetic 17 Rubis": {
+    "brand": "Cristalor",
+    "legend": "Cristalor Antimagnetic 17 Rubis",
+    "year": 1965,
+    "type": "Dress",
+    "srcImage": "public/assets/Images/Cristalor/1965_Cristalor_Antimagnetic_AS1130/IMG_3478.JPG",
+    "hoverSrc": "public/assets/Images/Cristalor/1965_Cristalor_Antimagnetic_AS1130/IMG_3471.JPG",
+    "specialCollectionItem": false,
+    "collectionSet": false,
+    "series": "Antimagnetic 17 Rubis",
+    "movementTitle": "A. Schild 1130",
+    "saleReport": null,
+    "modelFile": "Cristalor/Cristalor_Antimagnetic_17_Rubis_1965"
   },
   "Jomel Antimagnetic Lorsa 238": {
     "brand": "Jomel",
@@ -1294,7 +1354,11 @@
     "collectionSet": false,
     "series": "Genève Collection",
     "movementTitle": "Omega Cal. 1022",
-    "saleReport": null,
+    "saleReport": {
+      "price": 650,
+      "date": "30/07/2026",
+      "url": "https://www.catawiki.com/l/105492929"
+    },
     "modelFile": "Omega/Omega_Geneve_Automatic_Cal_1022_1973"
   },
   "Arauto Silver Tuxedo Unitas 6325": {
@@ -2985,7 +3049,11 @@
     "collectionSet": false,
     "series": "Chronomat — Early (1984-1996)",
     "movementTitle": "Valjoux 7750",
-    "saleReport": null,
+    "saleReport": {
+      "price": 2200,
+      "date": "01/08/2026",
+      "url": "https://www.catawiki.com/l/104859587"
+    },
     "modelFile": "Breitling/Breitling_Chronomat_D13047_Serie_Speciale_1993"
   },
   "Breitling Chronomat 81.950 Olive Dial": {
@@ -3981,6 +4049,20 @@
       "url": "https://www.catawiki.pt/l/27028151-pryngeps-swiss-timonier-series-chronograph-cal-citizen-os60-homem-2000-2010"
     },
     "modelFile": "Pryngeps/Pryngeps_CR763_OS60_2001"
+  },
+  "Tag Heuer Kirium Formula 1 Chronograph": {
+    "brand": "Tag Heuer",
+    "legend": "Tag Heuer Kirium Formula 1 Chronograph",
+    "year": 2001,
+    "type": "Sports",
+    "srcImage": "public/assets/Images/Tag_Heuer/2001_Tag_Heuer_Kirium_F1_Titan/IMG_3337.JPG",
+    "hoverSrc": "public/assets/Images/Tag_Heuer/2001_Tag_Heuer_Kirium_F1_Titan/IMG_3340.JPG",
+    "specialCollectionItem": false,
+    "collectionSet": false,
+    "series": "Kirium",
+    "movementTitle": "ETA 251.262",
+    "saleReport": null,
+    "modelFile": "Tag_Heuer/Tag_Heuer_Kirium_Formula_1_Chronograph_2001"
   },
   "Tissot Ballade Automatic C279/379C": {
     "brand": "Tissot",

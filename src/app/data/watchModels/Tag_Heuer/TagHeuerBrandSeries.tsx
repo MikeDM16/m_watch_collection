@@ -9,4 +9,5 @@ export const TagHeuerBrandSeries = {
   S_EL: "S/EL (Sports and Elegance)",
   LINK: "Link",
   MONZA: "Monza",
+  KIRIUM: "Kirium",
 };

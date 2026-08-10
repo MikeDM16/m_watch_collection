@@ -852,6 +852,16 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     href: require("../watchModels/Mercedes/Mercedes_Benz_OS60_Chrono_2002"),
     specialCollectionItem: false,
   },
+  "Tag Heuer Kirium Formula 1 Chronograph": {
+    brand: BrandsEnum.TAG_HEUER,
+    legend: "Tag Heuer Kirium Formula 1 Chronograph",
+    year: 2001,
+    type: WatchTypeEnum.SPORTS,
+    srcImage: "public/assets/Images/Tag_Heuer/2001_Tag_Heuer_Kirium_F1_Titan/IMG_3337.JPG",
+    hoverSrc: "public/assets/Images/Tag_Heuer/2001_Tag_Heuer_Kirium_F1_Titan/IMG_3340.JPG",
+    href: require("../watchModels/Tag_Heuer/Tag_Heuer_Kirium_Formula_1_Chronograph_2001"),
+    specialCollectionItem: false,
+  },
   "Camel Trophy L2 M810.2080-2089": {
     brand: BrandsEnum.CAMEL_TROPHY,
     legend: "Camel Trophy L2 M810.2080-2089",
@@ -2654,6 +2664,17 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     specialCollectionItem: false,
   },
 
+  "Cristalor Antimagnetic 17 Rubis": {
+    brand: BrandsEnum.CRISTALOR,
+    legend: "Cristalor Antimagnetic 17 Rubis",
+    year: 1965,
+    type: WatchTypeEnum.DRESS,
+    srcImage: "public/assets/Images/Cristalor/1965_Cristalor_Antimagnetic_AS1130/IMG_3478.JPG",
+    hoverSrc: "public/assets/Images/Cristalor/1965_Cristalor_Antimagnetic_AS1130/IMG_3471.JPG",
+    href: require("../watchModels/Cristalor/Cristalor_Antimagnetic_17_Rubis_1965"),
+    specialCollectionItem: false,
+  },
+
   "Jomel Antimagnetic Lorsa 238": {
     brand: BrandsEnum.JOMEL,
     legend: "Jomel Antimagnetic Lorsa 238",
@@ -3034,6 +3055,17 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     specialCollectionItem: true,
   },
 
+  "Douglas Antimagnetic Jumbo": {
+    brand: BrandsEnum.DOUGLAS,
+    legend: "Douglas Antimagnetic Jumbo",
+    year: 1947,
+    type: WatchTypeEnum.CASUAL,
+    srcImage: "public/assets/Images/Douglas/1947_Douglas_Antimagnetic_AS1130/IMG_3389_1.JPG",
+    hoverSrc: "public/assets/Images/Douglas/1947_Douglas_Antimagnetic_AS1130/IMG_3378.JPG",
+    href: require("../watchModels/Douglas/Douglas_Antimagnetic_1947"),
+    specialCollectionItem: false,
+  },
+
   "Fortis Pilot Chronograph Valjoux 77": {
     brand: BrandsEnum.FORTIS,
     legend: "Fortis Pilot Chronograph Valjoux 77",
@@ -3061,6 +3093,28 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     srcImage: "public/assets/Images/Tissot/1947_Tissot_Antimagnetic_27_3/IMG_3203.JPG",
     hoverSrc: "public/assets/Images/Tissot/1947_Tissot_Antimagnetic_27_3/IMG_3207.JPG",
     href: require("../watchModels/Tissot/Tissot_Antimagnetic_1947_white"),
+    specialCollectionItem: false,
+  },
+
+  "Buren Gran Prix": {
+    brand: BrandsEnum.BUREN,
+    legend: "Buren Gran Prix",
+    year: 1947,
+    type: WatchTypeEnum.CASUAL,
+    srcImage: "public/assets/Images/Buren/1947_Buren_Grand_Prix_AS1130/IMG_3523.JPG",
+    hoverSrc: "public/assets/Images/Buren/1947_Buren_Grand_Prix_AS1130/IMG_3518.JPG",
+    href: require("../watchModels/Buren/Buren_Gran_Prix__1947"),
+    specialCollectionItem: false,
+  },
+
+  "Aureus Extra Antimagnetic": {
+    brand: BrandsEnum.AUREUS,
+    legend: "Aureus Extra Antimagnetic",
+    year: 1947,
+    type: WatchTypeEnum.CASUAL,
+    srcImage: "public/assets/Images/Aureus/1947_Aureus_Extra_AS1130/IMG_3441.JPG",
+    hoverSrc: "public/assets/Images/Aureus/1947_Aureus_Extra_AS1130/IMG_3417.JPG",
+    href: require("../watchModels/Aureus/Aureus_Extra_Antimagnetic_1947"),
     specialCollectionItem: false,
   },
 
