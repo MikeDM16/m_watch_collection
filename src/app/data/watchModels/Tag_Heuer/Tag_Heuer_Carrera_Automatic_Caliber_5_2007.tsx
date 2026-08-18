@@ -94,7 +94,7 @@ const details: WatchDetails = {
     },
 
     case: {
-      diameter: CaseDiameterEnum.D_38,
+      diameter: CaseDiameterEnum.D_36,
       thickness: CaseThicknessEnum.T_12,
       material: CaseMaterialEnum.STAINLESS_STEEL,
       waterResistance: WaterResistanceEnum.WATERPROOF_50M,
