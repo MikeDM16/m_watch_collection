@@ -3778,7 +3778,7 @@
     "specialCollectionItem": true,
     "collectionSet": false,
     "series": "Porsche Cup 911 GT2 - 1998",
-    "movementTitle": "ETA Cal. 255.251",
+    "movementTitle": "ETA Cal. 251.251",
     "saleReport": {
       "price": 1200,
       "date": "06/03/2026",
@@ -3796,13 +3796,27 @@
     "specialCollectionItem": false,
     "collectionSet": false,
     "series": "Porsche Cup 911 GT2 - 1998",
-    "movementTitle": "ETA Cal. 255.251",
+    "movementTitle": "ETA Cal. 251.251",
     "saleReport": {
       "price": 1801,
       "date": "21/04/2026",
       "url": "https://www.catawiki.com/en/l/102605935"
     },
     "modelFile": "Porsche_Design/Porsche_Design_911_GT2_Cup_1998"
+  },
+  "Eterna - Porsche Design 911 - GT2 Cup Limited Edition": {
+    "brand": "Porsche Design",
+    "legend": "Eterna - Porsche Design 911 - GT2 Cup Limited Edition",
+    "year": 1998,
+    "type": "Sports",
+    "srcImage": "public/assets/Images/Porsche_Design/1998_Porsche_Design_911_GT2_Limited_Edition/IMG_3756.JPG",
+    "hoverSrc": "public/assets/Images/Porsche_Design/1998_Porsche_Design_911_GT2_Limited_Edition/IMG_3815.JPG",
+    "specialCollectionItem": false,
+    "collectionSet": false,
+    "series": "Porsche Cup 911 GT2 - 1998",
+    "movementTitle": "ETA Cal. 251.251",
+    "saleReport": null,
+    "modelFile": "Porsche_Design/Porsche_Design_GT2_Cup_Limited_Edition_1998"
   },
   "Breitling Colt A53035 Chronograph": {
     "brand": "Breitling",
@@ -4018,6 +4032,20 @@
     },
     "modelFile": "Tissot/Tissot_Sports_E662_Chrono_2000"
   },
+  "Tag Heuer Kirium Formula 1 Chronograph": {
+    "brand": "Tag Heuer",
+    "legend": "Tag Heuer Kirium Formula 1 Chronograph",
+    "year": 2001,
+    "type": "Sports",
+    "srcImage": "public/assets/Images/Tag_Heuer/2001_Tag_Heuer_Kirium_F1_Titan/IMG_3337.JPG",
+    "hoverSrc": "public/assets/Images/Tag_Heuer/2001_Tag_Heuer_Kirium_F1_Titan/IMG_3340.JPG",
+    "specialCollectionItem": false,
+    "collectionSet": false,
+    "series": "Kirium",
+    "movementTitle": "ETA 251.262",
+    "saleReport": null,
+    "modelFile": "Tag_Heuer/Tag_Heuer_Kirium_Formula_1_Chronograph_2001"
+  },
   "Camel Trophy L2 M810.2080-2089": {
     "brand": "Camel Trophy",
     "legend": "Camel Trophy L2 M810.2080-2089",
@@ -4049,20 +4077,6 @@
       "url": "https://www.catawiki.pt/l/27028151-pryngeps-swiss-timonier-series-chronograph-cal-citizen-os60-homem-2000-2010"
     },
     "modelFile": "Pryngeps/Pryngeps_CR763_OS60_2001"
-  },
-  "Tag Heuer Kirium Formula 1 Chronograph": {
-    "brand": "Tag Heuer",
-    "legend": "Tag Heuer Kirium Formula 1 Chronograph",
-    "year": 2001,
-    "type": "Sports",
-    "srcImage": "public/assets/Images/Tag_Heuer/2001_Tag_Heuer_Kirium_F1_Titan/IMG_3337.JPG",
-    "hoverSrc": "public/assets/Images/Tag_Heuer/2001_Tag_Heuer_Kirium_F1_Titan/IMG_3340.JPG",
-    "specialCollectionItem": false,
-    "collectionSet": false,
-    "series": "Kirium",
-    "movementTitle": "ETA 251.262",
-    "saleReport": null,
-    "modelFile": "Tag_Heuer/Tag_Heuer_Kirium_Formula_1_Chronograph_2001"
   },
   "Tissot Ballade Automatic C279/379C": {
     "brand": "Tissot",
@@ -4521,6 +4535,20 @@
     "movementTitle": "Tag Heuer Caliber 6 (ETA 2895-2)",
     "saleReport": null,
     "modelFile": "Tag_Heuer/Tag_Heuer_Monza_Automatic_Cal_6_2005"
+  },
+  "Tag Heuer Carrera Automatic Caliber 5": {
+    "brand": "Tag Heuer",
+    "legend": "Tag Heuer Carrera Automatic Caliber 5",
+    "year": 2007,
+    "type": "Casual",
+    "srcImage": "public/assets/Images/Tag_Heuer/2007_Tag_Heuer_Carrera_WC2210/IMG_3689.JPG",
+    "hoverSrc": "public/assets/Images/Tag_Heuer/2007_Tag_Heuer_Carrera_WC2210/IMG_3735.JPG",
+    "specialCollectionItem": false,
+    "collectionSet": false,
+    "series": "Carrera",
+    "movementTitle": "Tag Heuer Caliber 5 (ETA 2824-2)",
+    "saleReport": null,
+    "modelFile": "Tag_Heuer/Tag_Heuer_Carrera_Automatic_Caliber_5_2007"
   },
   "Tissot Le Locle Automatic": {
     "brand": "Tissot",

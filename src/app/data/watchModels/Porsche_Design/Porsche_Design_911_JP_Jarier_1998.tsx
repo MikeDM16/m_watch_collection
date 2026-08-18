@@ -104,7 +104,7 @@ const details: WatchDetails = {
   technicalData: {
     features: [
       featuresEnum.DATE,
-      featuresEnum.AUTOMATIC_CHRONOGRAPH,
+      featuresEnum.CHRONOGRAPH,
       "Jean-Pierre Jarier is a former French professional racing driver whose career spanned multiple decades and disciplines, including Formula 1, Formula 2, sports cars, touring cars, LeMans and GT racing.",
       "This exclusive Porsche Design (Eterna) model was issued to Jean-Pierre Jarier after his victory in the 1998 FIA GT Championship.",
       "Exclusive autograph from the 2000 Budapest FIA GT race, the season in which Jarier finished 2nd in the Championship.",

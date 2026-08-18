@@ -549,6 +549,17 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     specialCollectionItem: false,
   },
 
+  "Tag Heuer Carrera Automatic Caliber 5": {
+    brand: BrandsEnum.TAG_HEUER,
+    legend: "Tag Heuer Carrera Automatic Caliber 5",
+    year: 2007,
+    type: WatchTypeEnum.CASUAL,
+    srcImage: "public/assets/Images/Tag_Heuer/2007_Tag_Heuer_Carrera_WC2210/IMG_3689.JPG",
+    hoverSrc: "public/assets/Images/Tag_Heuer/2007_Tag_Heuer_Carrera_WC2210/IMG_3735.JPG",
+    href: require("../watchModels/Tag_Heuer/Tag_Heuer_Carrera_Automatic_Caliber_5_2007"),
+    specialCollectionItem: false,
+  },
+
   "Tissot Le Locle Automatic": {
     brand: BrandsEnum.TISSOT,
     legend: "Tissot Le Locle Automatic",
@@ -1048,6 +1059,20 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     href: require("../watchModels/Porsche_Design/Porsche_Design_911_GT2_Cup_1998"),
     specialCollectionItem: false,
   },
+
+  "Eterna - Porsche Design 911 - GT2 Cup Limited Edition": {
+    brand: BrandsEnum.PORSCHE_DESIGN,
+    legend: "Eterna - Porsche Design 911 - GT2 Cup Limited Edition",
+    year: 1998,
+    type: WatchTypeEnum.SPORTS,
+    srcImage:
+      "public/assets/Images/Porsche_Design/1998_Porsche_Design_911_GT2_Limited_Edition/IMG_3756.JPG",
+    hoverSrc:
+      "public/assets/Images/Porsche_Design/1998_Porsche_Design_911_GT2_Limited_Edition/IMG_3815.JPG",
+    href: require("../watchModels/Porsche_Design/Porsche_Design_GT2_Cup_Limited_Edition_1998"),
+    specialCollectionItem: false,
+  },
+
   "Breitling Colt A53035 Chronograph": {
     brand: BrandsEnum.BREITLING,
     legend: "Breitling Colt A53035 Chronograph",

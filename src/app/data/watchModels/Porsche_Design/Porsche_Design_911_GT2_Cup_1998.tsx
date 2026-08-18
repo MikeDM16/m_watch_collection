@@ -92,7 +92,7 @@ const details: WatchDetails = {
   technicalData: {
     features: [
       featuresEnum.DATE,
-      featuresEnum.AUTOMATIC_CHRONOGRAPH,
+      featuresEnum.CHRONOGRAPH,
       "This exclusive Porsche Design was commissioned to Eterna as a victory prize for the 1998 FIA GT Championship.",
     ],
 
