@@ -3,7 +3,9 @@ import { CollectionIndexEntry } from "@/app/data/collectionIndex";
 // ─── Pure price helpers (moved verbatim from page.tsx) ──────────────────────
 export const priceOf = (e: CollectionIndexEntry): number => e.saleReport!.price;
 
-export const formatPrice = (n: number): string => "€" + Math.round(n).toLocaleString("de-DE");
+// en-GB to match the public sales table, which renders the same figures.
+// de-GB grouping ("€108.877") read as a decimal against the site's "€108,877".
+export const formatPrice = (n: number): string => "€" + Math.round(n).toLocaleString("en-GB");
 
 export function meanOf(entries: CollectionIndexEntry[]): number {
   if (entries.length === 0) return 0;

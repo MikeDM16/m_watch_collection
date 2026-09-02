@@ -1,4 +1,4 @@
-import { IconType } from "react-icons";
+import type { LucideIcon } from "lucide-react";
 
 import { brandsDB } from "../data/brands";
 
@@ -53,14 +53,25 @@ export function getImgURLForSizeType(imageUrl: string, type: string) {
   return `${imageUrl.split(".")[0]}_${type}.${imageUrl.split(".")[1]}`;
 }
 
-export function getIconWithTextCentered(Icon: IconType, text: string) {
+/**
+ * Icon plus label. A real component rather than a plain function call, so it
+ * gets its own fiber and key. One icon family across the site (lucide), one
+ * stroke weight.
+ */
+export function IconLabel({
+  icon: Icon,
+  text,
+  className = "",
+}: {
+  icon: LucideIcon;
+  text: string;
+  className?: string;
+}) {
   return (
-    <div key={`main_div_icon${text}`} className="centered-container">
-      <div key={`centered_div_icon${text}`} className="centered-container align-center gap-1">
-        <Icon />
-        <div>{text}</div>
-      </div>
-    </div>
+    <span className={`inline-flex items-center gap-2 ${className}`}>
+      <Icon aria-hidden strokeWidth={1.5} className="size-4 shrink-0" />
+      <span>{text}</span>
+    </span>
   );
 }
 
@@ -97,9 +108,25 @@ export function selectMultipleBackgroundImages(count: number): string[] {
   return shuffled.slice(0, count);
 }
 
+/**
+ * Fallback hero backgrounds, used when a brand carries no `backgrounImages`.
+ * TagHeuer_BG3.JPG and macro_mov_bg.JPG were listed here but both 404 on the
+ * resources CDN, so roughly half of those heroes rendered a broken band.
+ * Re-add them here once they exist in MWatchCollectionResources.
+ */
 export const background_images_paths = [
   "public/assets/Backgrouds/Tissot_BG1.jpg",
   "public/assets/Backgrouds/Tissot_BG3.jpg",
-  "public/assets/Backgrouds/TagHeuer_BG3.JPG",
-  "public/assets/Backgrouds/macro_mov_bg.JPG",
 ];
+
+/**
+ * Deterministic pick from a list, so the choice is stable across builds and
+ * identical on server and client. Replaces the old useEffect randomiser that
+ * made the hero and footer visibly swap after hydration.
+ */
+export function pickBackground(images: string[] | undefined, seed: string, fallback?: string) {
+  const pool = images?.length ? images : [fallback ?? background_images_paths[0]];
+  let hash = 0;
+  for (let i = 0; i < seed.length; i++) hash = (hash * 31 + seed.charCodeAt(i)) >>> 0;
+  return pool[hash % pool.length];
+}

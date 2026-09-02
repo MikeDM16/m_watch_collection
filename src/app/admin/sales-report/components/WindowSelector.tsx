@@ -22,7 +22,7 @@ export function WindowSelector({
 
   return (
     <div className="flex flex-wrap items-center gap-2">
-      <div className="inline-flex flex-wrap gap-1 rounded-md border border-border p-1">
+      <div className="inline-flex flex-wrap gap-1 border border-border p-1">
         {presets.map((o) => (
           <Button
             key={o.id}

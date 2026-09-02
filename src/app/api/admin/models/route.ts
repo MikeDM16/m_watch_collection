@@ -5,6 +5,8 @@ import { BrandsEnum } from "@/app/enums/brandsEnum";
 import { getExternalResource } from "@/app/services/commonFunctions";
 import { NextResponse } from "next/server";
 
+import { devOnly } from "../guard";
+
 const DATA_DIR = path.join(process.cwd(), "src", "app", "data");
 const WATCH_MODELS_DIR = path.join(DATA_DIR, "watchModels");
 
@@ -87,6 +89,9 @@ function listBrandSeries(brandFolder: string): Record<string, string> | null {
 }
 
 export async function GET(request: Request) {
+  const blocked = devOnly();
+  if (blocked) return blocked;
+
   const { searchParams } = new URL(request.url);
   const action = searchParams.get("action");
 

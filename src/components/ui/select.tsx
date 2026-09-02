@@ -64,6 +64,9 @@ function SearchableSelect({
       >
         <span className={cn("flex items-center gap-2", !selectedLabel && "text-muted-foreground")}>
           {selectedOption?.image && (
+            /* eslint-disable-next-line @next/next/no-img-element -- a 20px brand
+               logo, hidden on error. No layout to reserve, and this select only
+               exists in the dev-only authoring tools. */
             <img
               src={selectedOption.image}
               alt=""
@@ -109,6 +112,7 @@ function SearchableSelect({
                 )}
               >
                 {option.image && (
+                  /* eslint-disable-next-line @next/next/no-img-element -- see above */
                   <img
                     src={option.image}
                     alt=""

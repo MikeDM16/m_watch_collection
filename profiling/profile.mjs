@@ -75,6 +75,56 @@ function stats(arr) {
   };
 }
 
+/** CLS is a small fraction, so rounding to integers would flatten it to 0. */
+function statsFine(arr) {
+  if (arr.length === 0) return { avg: 0, min: 0, max: 0, p50: 0 };
+  const sorted = [...arr].sort((a, b) => a - b);
+  const round = (n) => Math.round(n * 1000) / 1000;
+  return {
+    avg: round(arr.reduce((s, v) => s + v, 0) / arr.length),
+    min: round(sorted[0]),
+    max: round(sorted[sorted.length - 1]),
+    p50: round(sorted[Math.floor(sorted.length / 2)]),
+  };
+}
+
+/**
+ * Installed before any of the page's own script runs, because both entry types
+ * are only buffered from the moment an observer exists.
+ *
+ * CLS and TBT are the two metrics the motion work actually put at risk — a
+ * pinned section that reflows, a rail that re-lays-out, a font swap that shifts
+ * a heading, a long GSAP setup task that blocks the main thread — and neither
+ * was being measured. FCP and LCP can be flat while both get worse.
+ */
+const OBSERVER_SCRIPT = () => {
+  const w = window;
+  w.__cls = 0;
+  w.__longTasks = [];
+
+  try {
+    new PerformanceObserver((list) => {
+      for (const entry of list.getEntries()) {
+        // Shifts within 500ms of a user interaction are expected, not layout
+        // instability, and the CLS definition excludes them.
+        if (!entry.hadRecentInput) w.__cls += entry.value;
+      }
+    }).observe({ type: "layout-shift", buffered: true });
+  } catch {
+    w.__cls = null;
+  }
+
+  try {
+    new PerformanceObserver((list) => {
+      for (const entry of list.getEntries()) {
+        w.__longTasks.push({ start: entry.startTime, duration: entry.duration });
+      }
+    }).observe({ type: "longtask", buffered: true });
+  } catch {
+    w.__longTasks = null;
+  }
+};
+
 function formatBytes(bytes) {
   if (bytes < 1024) return `${bytes} B`;
   if (bytes < 1024 * 1024) return `${(bytes / 1024).toFixed(1)} KB`;
@@ -91,6 +141,7 @@ async function profilePage(browser, url) {
   });
 
   const page = await context.newPage();
+  await page.addInitScript(OBSERVER_SCRIPT);
   const requests = [];
 
   // Intercept all responses to capture size + timing
@@ -172,6 +223,33 @@ async function profilePage(browser, url) {
     perfMetrics.lcp = lcpValue;
   }
 
+  // Give late shifts (lazy images settling, fonts swapping) a moment to land
+  // before reading the accumulator.
+  await page.waitForTimeout(500);
+
+  const stability = await page.evaluate((fcp) => {
+    const w = window;
+    const longTasks = w.__longTasks;
+
+    // Total Blocking Time: the part of every long task beyond 50ms, counted
+    // from FCP, which is the window the metric is defined over.
+    let tbt = null;
+    if (Array.isArray(longTasks)) {
+      const from = fcp ?? 0;
+      tbt = longTasks
+        .filter((t) => t.start + t.duration > from)
+        .reduce((sum, t) => sum + Math.max(0, t.duration - 50), 0);
+    }
+
+    return {
+      cls: w.__cls,
+      tbt,
+      longTaskCount: Array.isArray(longTasks) ? longTasks.length : null,
+    };
+  }, perfMetrics.fcp);
+
+  Object.assign(perfMetrics, stability);
+
   await context.close();
 
   return {
@@ -222,12 +300,19 @@ async function main() {
       loadEvent: stats(warmRuns.map((r) => r.perfMetrics.loadEvent).filter(Boolean)),
       domInteractive: stats(warmRuns.map((r) => r.perfMetrics.domInteractive).filter(Boolean)),
       totalLoadTime: stats(warmRuns.map((r) => r.loadTime)),
+      // A CLS of 0 is a real, good result, so these two filter on null rather
+      // than on falsiness the way the timings above do.
+      cls: statsFine(warmRuns.map((r) => r.perfMetrics.cls).filter((v) => v != null)),
+      tbt: stats(warmRuns.map((r) => r.perfMetrics.tbt).filter((v) => v != null)),
+      longTasks: stats(warmRuns.map((r) => r.perfMetrics.longTaskCount).filter((v) => v != null)),
     };
 
     // Cold start metrics (Run 1 only)
     const coldStart = {
       fcp: runResults[0].perfMetrics.fcp,
       lcp: runResults[0].perfMetrics.lcp,
+      cls: runResults[0].perfMetrics.cls,
+      tbt: runResults[0].perfMetrics.tbt,
       loadTime: runResults[0].loadTime,
     };
 
@@ -273,6 +358,9 @@ async function main() {
     );
     console.log(
       `    │ Warm avg:   FCP=${timings.fcp.avg}ms  LCP=${timings.lcp.avg}ms  Load=${timings.totalLoadTime.avg}ms`,
+    );
+    console.log(
+      `    │ Stability:  CLS=${timings.cls.avg}  TBT=${timings.tbt.avg}ms  (${timings.longTasks.avg} long tasks)`,
     );
     console.log(
       `    │ Requests: ${networkAgg.totalRequests.avg}  Size: ${formatBytes(networkAgg.totalTransferSize.avg)}`,
@@ -324,14 +412,14 @@ async function main() {
   console.log(`  SUMMARY (warm runs only — Run 1 cold start excluded)`);
   console.log(`  ═══════════════════════════════════════════════════════════════════════`);
   console.log(
-    `  ${"Page".padEnd(40)} ${"FCP".padStart(8)} ${"LCP".padStart(8)} ${"Load".padStart(8)} ${"Reqs".padStart(6)} ${"Size".padStart(10)} ${"ColdFCP".padStart(10)}`,
+    `  ${"Page".padEnd(40)} ${"FCP".padStart(8)} ${"LCP".padStart(8)} ${"CLS".padStart(7)} ${"TBT".padStart(8)} ${"Load".padStart(8)} ${"Reqs".padStart(6)} ${"Size".padStart(10)}`,
   );
   console.log(
-    `  ${"─".repeat(40)} ${"─".repeat(8)} ${"─".repeat(8)} ${"─".repeat(8)} ${"─".repeat(6)} ${"─".repeat(10)} ${"─".repeat(10)}`,
+    `  ${"─".repeat(40)} ${"─".repeat(8)} ${"─".repeat(8)} ${"─".repeat(7)} ${"─".repeat(8)} ${"─".repeat(8)} ${"─".repeat(6)} ${"─".repeat(10)}`,
   );
-  for (const [path, data] of Object.entries(results)) {
+  for (const [, data] of Object.entries(results)) {
     console.log(
-      `  ${data.name.padEnd(40)} ${(data.timing.fcp.avg + "ms").padStart(8)} ${(data.timing.lcp.avg + "ms").padStart(8)} ${(data.timing.totalLoadTime.avg + "ms").padStart(8)} ${String(data.network.totalRequests.avg).padStart(6)} ${formatBytes(data.network.totalTransferSize.avg).padStart(10)} ${(data.coldStart.fcp + "ms").padStart(10)}`,
+      `  ${data.name.padEnd(40)} ${(data.timing.fcp.avg + "ms").padStart(8)} ${(data.timing.lcp.avg + "ms").padStart(8)} ${String(data.timing.cls.avg).padStart(7)} ${(data.timing.tbt.avg + "ms").padStart(8)} ${(data.timing.totalLoadTime.avg + "ms").padStart(8)} ${String(data.network.totalRequests.avg).padStart(6)} ${formatBytes(data.network.totalTransferSize.avg).padStart(10)}`,
     );
   }
   console.log(`  ═══════════════════════════════════════════════════════════════════════\n`);

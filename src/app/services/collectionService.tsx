@@ -1,4 +1,5 @@
 import CollectionIndex, { CollectionIndexEntry } from "../data/collectionIndex";
+import { modelLoaders } from "../data/collectionModules.generated";
 import type { WatchDetails } from "../data/watchDetails";
 import { parseSeries } from "../data/watchModels/seriesGroup";
 import brandsService from "./brandsService";
@@ -65,16 +66,24 @@ function getIndexEntry(key: string): CollectionIndexEntry | undefined {
   return CollectionIndex[key];
 }
 
+/**
+ * Loads one model's full record.
+ *
+ * The loader comes from a generated map of literal `import()` calls rather than
+ * from `import(\`../data/watchModels/${...}\`)`. A template literal makes the
+ * bundler emit a context module spanning every file the pattern could match,
+ * which is what made this route slow to compile and flaky in dev.
+ *
+ * There is deliberately no try/catch: an unknown key is a 404, but a model file
+ * that fails to evaluate is a bug, and swallowing it here turned every such bug
+ * into a silent "model not found". Let it reach the error boundary.
+ */
 async function getModelDetails(key: string): Promise<WatchDetails | undefined> {
   const indexEntry = CollectionIndex[key];
-  if (!indexEntry) return undefined;
+  const load = indexEntry ? modelLoaders[indexEntry.modelFile] : undefined;
+  if (!load) return undefined;
 
-  try {
-    const modelModule = await import(`../data/watchModels/${indexEntry.modelFile}`);
-    return modelModule.default;
-  } catch {
-    return undefined;
-  }
+  return (await load()).default;
 }
 
 function getSoldModels(): CollectionIndexEntry[] {

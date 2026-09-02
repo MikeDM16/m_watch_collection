@@ -1,6 +1,6 @@
-import BrandPageTitleComponent from "@/app/components/brandPage/BrandPageTitleComponent";
-import FooterComponent from "@/app/components/footer/footerComponent";
-import HeaderNavBar from "@/app/components/header/headerComponent";
+import { routeToCollectionBrandPage, routeToMainPageHeader } from "@/app/services/commonFunctions";
+
+import NotFoundPanel from "./NotFoundPanel";
 
 export default function BrandModelPageNotFoundComponent({
   brand,
@@ -10,15 +10,13 @@ export default function BrandModelPageNotFoundComponent({
   unknownModel: string;
 }) {
   return (
-    <div>
-      <HeaderNavBar />
-      <BrandPageTitleComponent brand={{ name: brand, logoImg: "" }} />
-      <div className="centered-text extended-screen-container">
-        <div className="upper-text container-title centered-container border-bottom-text">
-          {`Informations for brand model ${unknownModel} not found.`}
-        </div>
-      </div>
-      <FooterComponent />
-    </div>
+    <NotFoundPanel
+      title={unknownModel || "Unknown model"}
+      message={`There is no “${unknownModel}” in the ${brand} collection.`}
+      actions={[
+        { href: routeToCollectionBrandPage(brand), label: `All ${brand}` },
+        { href: routeToMainPageHeader(), label: "Home" },
+      ]}
+    />
   );
 }

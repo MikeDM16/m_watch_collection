@@ -5,7 +5,10 @@ const Card = React.forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivElemen
   ({ className, ...props }, ref) => (
     <div
       ref={ref}
-      className={cn("rounded-xl border bg-card text-card-foreground shadow", className)}
+      // `rounded-lg` maps to --radius; `rounded-xl` is not remapped and would
+      // sit at 12px against a site that is now near-square. This file is
+      // imported by the admin tools only, so the change has no wider reach.
+      className={cn("rounded-lg border bg-card text-card-foreground", className)}
       {...props}
     />
   ),

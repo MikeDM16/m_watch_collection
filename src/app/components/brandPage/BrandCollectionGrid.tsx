@@ -1,18 +1,11 @@
 "use client";
 
 import type { CollectionIndexEntry } from "@/app/data/collectionIndex";
-import {
-  getExternalResource,
-  getImgURLForSizeType,
-  routeToCollectionBrandModelPage,
-  SizeType,
-} from "@/app/services/commonFunctions";
-import { MultiSelect } from "@/components/ui/select";
 import { cn } from "@/lib/utils";
-import Link from "next/link";
-import { useState } from "react";
+import { useMemo, useState } from "react";
 
-import ImageComponent from "../common/ImageComponent";
+import WatchTile from "../common/WatchTile";
+import Reveal from "../motion/Reveal";
 
 export interface CardData {
   entry: CollectionIndexEntry;
@@ -20,118 +13,163 @@ export interface CardData {
   label: string;
 }
 
-interface BrandCollectionGridProps {
+type Sort = "year-desc" | "year-asc" | "az";
+
+const SORTS: { key: Sort; label: string }[] = [
+  { key: "year-desc", label: "Newest" },
+  { key: "year-asc", label: "Oldest" },
+  { key: "az", label: "A-Z" },
+];
+
+/**
+ * The brand grid, its series filter (preserved), plus type and sort.
+ *
+ * Every control hides when it has fewer than two distinct values, so the 55
+ * single-watch brands get a clean page with no filter furniture.
+ *
+ * The grid is CSS Grid rather than the old flexbox percentage math. Incomplete
+ * final rows now left-align, which is the correct reading order for a contact
+ * sheet and a deliberate reversal of Fix 4 in the migration notes.
+ */
+export default function BrandCollectionGrid({
+  brand,
+  cards,
+  groups,
+}: {
   brand: string;
   cards: CardData[];
   groups: string[];
-}
-
-export default function BrandCollectionGrid({ brand, cards, groups }: BrandCollectionGridProps) {
-  // "All" mode = no individual groups chosen (empty selection). It shows every model and is the
-  // default. Selecting one or more groups narrows the grid to just those; selecting every group
-  // individually is the same as "All", so we collapse back to it.
+}) {
   const [selected, setSelected] = useState<string[]>([]);
+  const [types, setTypes] = useState<string[]>([]);
+  const [sort, setSort] = useState<Sort>("year-desc");
 
-  const allActive = selected.length === 0;
+  const allTypes = useMemo(
+    () => [...new Set(cards.map((c) => c.entry.type).filter(Boolean))].sort(),
+    [cards],
+  );
 
-  // "All" shows everything; otherwise only the chosen groups (group-less cards have nothing to
-  // filter on, so they only appear in "All" mode — non-series brands never render the filter).
-  const visible = allActive ? cards : cards.filter((c) => selected.includes(c.group));
+  const showSeries = groups.length > 1;
+  const showTypes = allTypes.length > 1;
+  const showSort = cards.length > 2;
+  const showBar = showSeries || showTypes || showSort;
 
-  const toggle = (group: string) => {
-    setSelected((prev) => {
-      const next = prev.includes(group) ? prev.filter((g) => g !== group) : [...prev, group];
-      // Choosing every group individually is equivalent to "All" — reset to it.
-      return next.length === groups.length ? [] : next;
-    });
+  const visible = useMemo(() => {
+    let out = cards;
+    if (selected.length) out = out.filter((c) => selected.includes(c.group));
+    if (types.length) out = out.filter((c) => types.includes(c.entry.type));
+
+    const sorted = [...out];
+    if (sort === "year-desc") sorted.sort((a, b) => b.entry.year - a.entry.year);
+    if (sort === "year-asc") sorted.sort((a, b) => a.entry.year - b.entry.year);
+    if (sort === "az") sorted.sort((a, b) => a.entry.legend.localeCompare(b.entry.legend));
+    return sorted;
+  }, [cards, selected, types, sort]);
+
+  const toggle = (value: string, list: string[], set: (v: string[]) => void, total: number) => {
+    const next = list.includes(value) ? list.filter((v) => v !== value) : [...list, value];
+    // Selecting everything individually is the same as "All".
+    set(next.length === total ? [] : next);
   };
 
-  const showFilter = groups.length > 1;
+  const reset = () => {
+    setSelected([]);
+    setTypes([]);
+  };
 
   return (
-    <div className="centered-text">
-      {showFilter && (
-        <div className="bottom-margin-m">
-          <p className="series-filter-label">Filter by series</p>
+    <div>
+      {showBar && (
+        <div className="sticky top-16 z-30 -mx-[clamp(1rem,4vw,3.5rem)] border-b border-border bg-background/92 px-[clamp(1rem,4vw,3.5rem)] py-3 backdrop-blur-md">
+          <div className="flex flex-wrap items-center gap-x-6 gap-y-3">
+            {showSeries && (
+              <div className="flex flex-wrap items-center gap-2">
+                <span className="series-filter-label">Series</span>
+                <button
+                  type="button"
+                  onClick={() => setSelected([])}
+                  className={cn("series-filter-chip", !selected.length && "is-active")}
+                >
+                  All
+                </button>
+                {groups.map((g) => (
+                  <button
+                    key={g}
+                    type="button"
+                    onClick={() => toggle(g, selected, setSelected, groups.length)}
+                    className={cn("series-filter-chip", selected.includes(g) && "is-active")}
+                  >
+                    {g}
+                  </button>
+                ))}
+              </div>
+            )}
 
-          {/* Desktop: always-visible chip row. */}
-          <div className="series-filter hidden lg:flex">
-            <button
-              type="button"
-              onClick={() => setSelected([])}
-              className={cn("series-filter-chip", allActive && "is-active")}
-            >
-              All
-            </button>
-            {groups.map((group) => (
-              <button
-                key={`filter_chip_${group}`}
-                type="button"
-                onClick={() => toggle(group)}
-                className={cn("series-filter-chip", selected.includes(group) && "is-active")}
-              >
-                {group}
-              </button>
-            ))}
-          </div>
+            {showTypes && (
+              <div className="flex flex-wrap items-center gap-2">
+                <span className="series-filter-label">Type</span>
+                {allTypes.map((t) => (
+                  <button
+                    key={t}
+                    type="button"
+                    onClick={() => toggle(t, types, setTypes, allTypes.length)}
+                    className={cn("series-filter-chip", types.includes(t) && "is-active")}
+                  >
+                    {t}
+                  </button>
+                ))}
+              </div>
+            )}
 
-          {/* Mobile: collapse into a multi-select dropdown. */}
-          <div className="lg:hidden mx-auto max-w-xs">
-            <MultiSelect
-              options={groups.map((g) => ({ value: g, label: g }))}
-              values={selected}
-              onChange={(vals) => setSelected(vals.length === groups.length ? [] : vals)}
-            />
+            {showSort && (
+              <div className="ml-auto flex items-center gap-2">
+                <span className="series-filter-label">Sort</span>
+                {SORTS.map((s) => (
+                  <button
+                    key={s.key}
+                    type="button"
+                    onClick={() => setSort(s.key)}
+                    className={cn("series-filter-chip", sort === s.key && "is-active")}
+                  >
+                    {s.label}
+                  </button>
+                ))}
+              </div>
+            )}
           </div>
         </div>
       )}
 
       {visible.length === 0 ? (
-        <p className="info-text">No series selected.</p>
+        <div className="py-24 text-center">
+          <p className="font-display text-title">Nothing matches these filters</p>
+          <p className="mt-2 text-sm text-muted-foreground">
+            {brand} has {cards.length} {cards.length === 1 ? "model" : "models"} in the collection.
+          </p>
+          <button
+            type="button"
+            onClick={reset}
+            className="series-filter-chip is-active mt-6 inline-block"
+          >
+            Clear filters
+          </button>
+        </div>
       ) : (
-        <div className="flex flex-wrap justify-center gap-4">
-          {visible.map(({ entry, group, label }, idx) => {
-            // On a single-brand page the legend's leading brand name is redundant.
-            const displayLegend = entry.legend.startsWith(`${entry.brand} `)
-              ? entry.legend.slice(entry.brand.length + 1)
-              : entry.legend;
-            return (
-              <div
-                key={`brand_${brand}_model_${idx}`}
-                className="hover-animation bottom-margin-m w-[calc(50%-0.5rem)] sm:w-[calc(33%-0.5rem)] md:w-[calc(25%-0.75rem)] xl:w-[calc(20%-0.8rem)]"
-              >
-                <Link
-                  href={routeToCollectionBrandModelPage(brand, entry.legend)}
-                  className="info-text link"
-                >
-                  <ImageComponent
-                    src={getExternalResource(
-                      getImgURLForSizeType(entry.srcImage, SizeType.GALLERY),
-                    )}
-                    hoverSrc={getExternalResource(
-                      getImgURLForSizeType(
-                        entry.hoverSrc ? entry.hoverSrc : entry.srcImage,
-                        SizeType.GALLERY,
-                      ),
-                    )}
-                    alt={`${entry.legend}`}
-                    priority={idx < 4}
-                  />
-                  {(group !== "" || label !== "") && (
-                    <div className="series-tags">
-                      {group !== "" && <span className="series-tag series-tag-group">{group}</span>}
-                      {label !== "" && <span className="series-tag">{label}</span>}
-                    </div>
-                  )}
-                  <div className="upper-text">{entry.brand}</div>
-                  <em>{displayLegend}</em>
-                  <div>
-                    <b>{entry.year}</b>
-                  </div>
-                </Link>
-              </div>
-            );
-          })}
+        <div className="grid grid-cols-2 gap-x-4 gap-y-10 py-10 sm:grid-cols-3 lg:grid-cols-4 2xl:grid-cols-5">
+          {visible.map(({ entry, group, label }, idx) => (
+            <Reveal key={`${entry.legend}-${idx}`} index={idx}>
+              <WatchTile
+                brand={brand}
+                legend={entry.legend}
+                year={entry.year}
+                srcImage={entry.srcImage}
+                hoverSrc={entry.hoverSrc}
+                group={group || undefined}
+                label={label || undefined}
+                priority={idx < 4}
+              />
+            </Reveal>
+          ))}
         </div>
       )}
     </div>

@@ -5,6 +5,7 @@ import { Input } from "@/components/ui/input";
 import { MultiSelect, SearchableSelect, SelectOption } from "@/components/ui/select";
 import { useCallback, useEffect, useState } from "react";
 
+import DevOnly from "../DevOnly";
 import { generateMovementFile, generateWatchModelFile } from "./generateFileContent";
 
 type Enums = Record<string, Record<string, string>>;
@@ -16,23 +17,21 @@ function enumToOptions(enumObj: Record<string, string>): SelectOption[] {
 // ─── Step Indicator ──────────────────────────────────
 function StepIndicator({ current, steps }: { current: number; steps: string[] }) {
   return (
-    <div className="mb-8 flex items-center gap-2">
+    <div className="mb-10 flex flex-wrap items-center gap-2">
       {steps.map((s, i) => (
         <div key={s} className="flex items-center gap-2">
           <div
-            className={`flex h-8 w-8 items-center justify-center rounded-full text-sm font-bold ${
+            className={`num flex h-8 w-8 items-center justify-center rounded-full text-xs font-medium ${
               i === current
-                ? "bg-primary text-primary-foreground"
+                ? "bg-brand text-brand-foreground"
                 : i < current
-                  ? "bg-green-600 text-white"
+                  ? "bg-success text-background"
                   : "bg-muted text-muted-foreground"
             }`}
           >
             {i < current ? "✓" : i + 1}
           </div>
-          <span className={`text-sm ${i === current ? "font-semibold" : "text-muted-foreground"}`}>
-            {s}
-          </span>
+          <span className={`lab ${i === current ? "text-foreground" : ""}`}>{s}</span>
           {i < steps.length - 1 && <div className="mx-1 h-px w-6 bg-border" />}
         </div>
       ))}
@@ -44,7 +43,7 @@ function StepIndicator({ current, steps }: { current: number; steps: string[] })
 function FieldRow({ label, children }: { label: string; children: React.ReactNode }) {
   return (
     <div className="grid grid-cols-[180px_1fr] items-start gap-3 py-1.5">
-      <label className="pt-2 text-sm font-medium text-muted-foreground">{label}</label>
+      <label className="lab pt-2.5">{label}</label>
       <div>{children}</div>
     </div>
   );
@@ -52,7 +51,11 @@ function FieldRow({ label, children }: { label: string; children: React.ReactNod
 
 // ─── Section Header ──────────────────────────────────
 function SectionHeader({ title }: { title: string }) {
-  return <h3 className="mb-3 mt-6 border-b border-border pb-1 text-lg font-semibold">{title}</h3>;
+  return (
+    <h2 className="mb-4 mt-10 border-t border-border pt-6 font-display text-title font-medium">
+      {title}
+    </h2>
+  );
 }
 
 const STEPS = ["Brand", "Template", "File Name", "Details", "Movement", "Features", "Review"];
@@ -142,6 +145,11 @@ export default function CreateModelPage() {
 
   // ─── Data Loading ──────────────────────────────────
   useEffect(() => {
+    // Never reach for the admin API outside a local checkout. The gate below
+    // used to sit after the `if (loading)` return, so in production these four
+    // requests went out and were answered before anything was gated.
+    if (process.env.NODE_ENV === "production") return;
+
     Promise.all([
       fetch("/api/admin/enums").then((r) => r.json()),
       fetch("/api/admin/models?action=allModels").then((r) => r.json()),
@@ -431,21 +439,18 @@ export default function CreateModelPage() {
     setSubmitting(false);
   };
 
+  // ─── Production gate ──────────────────────────────────
+  // Before the loading check, not after it. `loading` starts true and only
+  // clears once the admin API answers, so with the two the other way round
+  // this gate was unreachable: production either showed the tool's data or,
+  // once the API was gated too, hung on "Loading enums and data" forever.
+  if (process.env.NODE_ENV === "production") return <DevOnly />;
+
   // ─── Loading / Error ──────────────────────────────────
   if (loading) {
     return (
-      <div className="flex h-screen items-center justify-center">
-        <p className="text-lg">Loading enums and data...</p>
-      </div>
-    );
-  }
-
-  if (process.env.NODE_ENV === "production") {
-    return (
-      <div className="flex h-screen items-center justify-center">
-        <p className="text-lg text-muted-foreground">
-          This page is only available in development mode.
-        </p>
+      <div className="flex min-h-[60dvh] items-center justify-center">
+        <p className="lab">Loading enums and data</p>
       </div>
     );
   }
@@ -459,22 +464,20 @@ export default function CreateModelPage() {
 
   // ─── Render ──────────────────────────────────
   return (
-    <div className="mx-auto max-w-3xl px-4 py-8">
-      <div className="mb-2 flex items-center justify-between">
-        <h1 className="text-2xl font-bold">Create Watch Model</h1>
-        <Button variant="outline" size="sm" onClick={() => (window.location.href = "/")}>
-          Back to Site
-        </Button>
+    <div className="max-w-3xl pb-24">
+      <div className="mb-8 border-b border-border pb-6">
+        <p className="lab">Local tool</p>
+        <h1 className="mt-2 font-display text-display-m font-medium">Create Watch Model</h1>
+        <p className="mt-3 max-w-[58ch] text-sm leading-relaxed text-muted-foreground">
+          Writes a new watch model file into the collection data.
+        </p>
       </div>
-      <p className="mb-6 text-sm text-muted-foreground">
-        Dev-only tool for creating new watch model files.
-      </p>
 
       <StepIndicator current={step} steps={STEPS} />
 
       {result && (
         <div
-          className={`mb-6 rounded-md p-4 ${result.success ? "bg-green-500/10 text-green-400" : "bg-red-500/10 text-red-400"}`}
+          className={`mb-8 border p-5 ${result.success ? "border-success/40 bg-success/10" : "border-destructive/40 bg-destructive/10"}`}
         >
           <pre className="whitespace-pre-wrap text-sm">{result.message}</pre>
           {result.success && (
@@ -486,6 +489,10 @@ export default function CreateModelPage() {
                 <Button variant="outline" onClick={() => window.location.reload()}>
                   Create Another
                 </Button>
+                {/* eslint-disable-next-line @next/next/no-location-assign-relative-destination --
+                    a model was just written to disk. A soft router.push() would
+                    render the home page from the index as it stood before the
+                    write; a full navigation is the point. */}
                 <Button variant="outline" onClick={() => (window.location.href = "/")}>
                   Back to Home
                 </Button>
@@ -998,7 +1005,7 @@ export default function CreateModelPage() {
                 <span className="text-sm">{f}</span>
                 <button
                   onClick={() => setCustomFeatures(customFeatures.filter((_, j) => j !== i))}
-                  className="text-xs text-red-400 hover:text-red-300"
+                  className="lab text-destructive transition-opacity hover:opacity-70"
                 >
                   remove
                 </button>

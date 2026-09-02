@@ -82,6 +82,10 @@ function main() {
       { key: "ttfb", label: "TTFB (ms)" },
       { key: "fcp", label: "FCP (ms)" },
       { key: "lcp", label: "LCP (ms)" },
+      // The two the motion work puts at risk. A pin or a rail can leave FCP and
+      // LCP untouched while making both of these much worse.
+      { key: "cls", label: "CLS" },
+      { key: "tbt", label: "TBT (ms)" },
       { key: "domContentLoaded", label: "DOM Loaded (ms)" },
       { key: "loadEvent", label: "Load Event (ms)" },
       { key: "totalLoadTime", label: "Total Load (ms)" },
@@ -176,6 +180,21 @@ function main() {
   );
   console.log(
     `    Avg Page Size: ${formatBytes(avgBaseSize)} → ${formatBytes(avgCurrSize)}  ${colorize(pctChange(avgBaseSize, avgCurrSize))}`,
+  );
+
+  const avg = (pages, key) =>
+    pages.reduce((s, p) => s + (p.timing?.[key]?.avg ?? 0), 0) / (pages.length || 1);
+
+  const avgBaseCLS = avg(baselinePages, "cls");
+  const avgCurrCLS = avg(currentPages, "cls");
+  const avgBaseTBT = avg(baselinePages, "tbt");
+  const avgCurrTBT = avg(currentPages, "tbt");
+
+  console.log(
+    `    Avg CLS:       ${avgBaseCLS.toFixed(3)} → ${avgCurrCLS.toFixed(3)}  ${colorize(pctChange(avgBaseCLS, avgCurrCLS))}`,
+  );
+  console.log(
+    `    Avg TBT:       ${Math.round(avgBaseTBT)}ms → ${Math.round(avgCurrTBT)}ms  ${colorize(pctChange(avgBaseTBT, avgCurrTBT))}`,
   );
   console.log(`  ═══════════════════════════════════════════════════════════════════════\n`);
 }

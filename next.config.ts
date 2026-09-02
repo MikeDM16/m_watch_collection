@@ -39,8 +39,9 @@ const nextConfig: NextConfig = {
     },
   ],
 
-  eslint: {
-    dirs: ["src"],
+  // Barrel-file tree shaking. lucide-react in particular exports ~1500 icons.
+  experimental: {
+    optimizePackageImports: ["lucide-react"],
   },
 
   webpack: (config, { isServer }) => {

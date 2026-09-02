@@ -28,6 +28,8 @@ import { WatchTypeEnum } from "@/app/enums/watchTypeEnum";
 import { WaterResistanceEnum } from "@/app/enums/waterResistanceEnum";
 import { NextResponse } from "next/server";
 
+import { devOnly } from "../guard";
+
 // Flatten featuresEnum to {KEY: "display name"} like all other enums
 const featuresFlat: Record<string, string> = {};
 for (const [key, val] of Object.entries(featuresEnum)) {
@@ -35,6 +37,9 @@ for (const [key, val] of Object.entries(featuresEnum)) {
 }
 
 export async function GET() {
+  const blocked = devOnly();
+  if (blocked) return blocked;
+
   return NextResponse.json({
     BrandsEnum,
     WatchTypeEnum,

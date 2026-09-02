@@ -2,6 +2,8 @@ import fs from "fs";
 import path from "path";
 import { NextResponse } from "next/server";
 
+import { devOnly } from "../guard";
+
 const DATA_DIR = path.join(process.cwd(), "src", "app", "data");
 const MOVEMENTS_DIR = path.join(DATA_DIR, "movements");
 const MOVEMENTS_DATA_FILE = path.join(DATA_DIR, "admin", "movementsData.tsx");
@@ -13,6 +15,9 @@ interface CreateMovementRequest {
 }
 
 export async function POST(request: Request) {
+  const blocked = devOnly();
+  if (blocked) return blocked;
+
   try {
     const body: CreateMovementRequest = await request.json();
     const { manufacturerFolder, variableName, fileContent } = body;

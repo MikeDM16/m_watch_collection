@@ -1,173 +1,105 @@
-@import url("styles/accordion.css");
-@import url("styles/textStyles.css");
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Prevent vertical scroll-chaining (iOS overscroll / pull-to-refresh) hygiene. */
-html,
-body {
-  overscroll-behavior-y: contain;
-}
-
-.bottom-margin-s {
-  margin-bottom: 1rem;
-}
-.bottom-margin-m {
-  margin-bottom: 2rem;
-}
-
-.responsive-padded-left {
-  padding-left: 10%;
-}
-@media (max-width: 768px) {
-  .responsive-padded-left {
-    padding-left: 2%;
-  }
-}
-
-.header-navbar-entry {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.header-navbar-entry:hover {
-  color: var(--color-brand);
-}
-
-.centered-container {
-  display: flex;
-  justify-content: center;
-  align-content: center;
-}
-
-.align-center {
-  align-items: center;
-}
-
-.page-division {
-  width: 100%;
-  min-height: 20dvh;
-  background-position: center;
-  background-size: cover;
-  margin: auto;
-}
-
-.title-division {
-  min-height: 35dvh;
-}
-@media (max-width: 768px) {
-  .title-division {
-    min-height: 55dvh;
-  }
-}
-
-.page-title-overlay-aligned {
-  position: relative;
-  display: flex;
-  align-items: center;
-  background-color: rgba(0, 0, 0, 0.5);
-  padding: 5rem 0;
-  min-height: inherit;
-}
-
-.link {
-  text-decoration: none; /* Optional: Remove underline */
-  transition: color 0.3s ease; /* Smooth transition */
-}
-
-.link:hover {
-  color: var(--color-brand); /* Hover color */
-}
-
-.hover-animation {
-  text-decoration: none;
-  transition:
-    color 0.3s ease,
-    background-color 0.3s ease;
-}
-
-.hover-animation:hover {
-  color: var(--color-brand);
-  background-color: #c5718044;
-}
-
-.swiper-transition {
-  .swiper-wrapper {
-    -webkit-transition-timing-function: linear;
-    -o-transition-timing-function: linear;
-    transition-timing-function: linear;
-  }
-}
-
-.extended-screen-container {
-  display: flex;
-  flex-direction: column;
-  min-height: 70dvh; /* At least full screen height */
-}
-
-.feature-information-background {
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
+/* ============================================================================
+   TOKENS
+   One semantic set, shadcn HSL-triplet convention so the `/opacity` modifier
+   keeps working (bg-brand/10 etc). Light on :root, dark under .dark.
+   ========================================================================= */
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 0 0% 3.9%;
-    --card: 0 0% 100%;
-    --card-foreground: 0 0% 3.9%;
+    /* surfaces */
+    --background: 60 6% 97%; /* paper   #f7f7f6 */
+    --card: 0 0% 100%; /* raised  #ffffff */
+    --card-foreground: 240 8% 9%;
     --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 3.9%;
-    --primary: 0 0% 9%;
+    --popover-foreground: 240 8% 9%;
+    --muted: 48 6% 91%; /* sunken. Deep enough that white product shots
+                           still read as sitting on a plate. */
+    --muted-foreground: 240 4% 44%; /* #6b6b73 */
+
+    /* ink */
+    --foreground: 240 8% 9%; /* #16161a */
+
+    /* lines + controls */
+    --border: 60 5% 87%; /* #e0e0dd */
+    --input: 60 5% 87%;
+    --ring: 349 88% 41%;
+
+    /* shadcn's --accent is a subtle hover SURFACE, not the brand hue */
+    --accent: 60 3% 93%;
+    --accent-foreground: 240 8% 9%;
+    --primary: 240 8% 9%;
     --primary-foreground: 0 0% 98%;
-    --secondary: 0 0% 96.1%;
-    --secondary-foreground: 0 0% 9%;
-    --muted: 0 0% 96.1%;
-    --muted-foreground: 0 0% 45.1%;
-    --accent: 0 0% 96.1%;
-    --accent-foreground: 0 0% 9%;
-    --destructive: 0 84.2% 60.2%;
+    --secondary: 60 3% 93%;
+    --secondary-foreground: 240 8% 9%;
+    --destructive: 0 72% 45%;
     --destructive-foreground: 0 0% 98%;
-    --border: 0 0% 89.8%;
-    --input: 0 0% 89.8%;
-    --ring: 0 0% 3.9%;
-    --chart-1: 12 76% 61%;
-    --chart-2: 173 58% 39%;
-    --chart-3: 197 37% 24%;
-    --chart-4: 43 74% 66%;
-    --chart-5: 27 87% 67%;
-    --color-brand: #c40d2e;
-    --radius: 0.5rem;
+
+    /* the brand accent, finally reachable from Tailwind */
+    --brand: 349 88% 41%; /* #c40d2e */
+    --brand-foreground: 0 0% 100%;
+
+    /* chrome + photo furniture. The scrim sits on photography, so its
+       foreground is identical in both themes on purpose. */
+    --header: 240 8% 9%;
+    --header-foreground: 0 0% 100%;
+    --scrim: 0 0% 0%;
+    --scrim-foreground: 0 0% 84%; /* rgb(214,214,214) */
+    --success: 145 45% 38%;
+
+    --chart-1: 349 88% 41%;
+    --chart-2: 240 4% 44%;
+    --chart-3: 200 40% 40%;
+    --chart-4: 35 70% 50%;
+    --chart-5: 160 40% 40%;
+
+    --radius: 0.125rem;
+
+    /* Legacy alias. Keeps ~15 hand-written references theme-aware with zero
+       component edits while the visual pass lands. Retired in the last phase. */
+    --color-brand: hsl(var(--brand));
   }
+
   .dark {
-    --background: 0 0% 3.9%;
-    --foreground: 0 0% 98%;
-    --card: 0 0% 3.9%;
-    --card-foreground: 0 0% 98%;
-    --popover: 0 0% 3.9%;
-    --popover-foreground: 0 0% 98%;
-    --primary: 0 0% 98%;
-    --primary-foreground: 0 0% 9%;
-    --secondary: 0 0% 14.9%;
-    --secondary-foreground: 0 0% 98%;
-    --muted: 0 0% 14.9%;
-    --muted-foreground: 0 0% 63.9%;
-    --accent: 0 0% 14.9%;
-    --accent-foreground: 0 0% 98%;
-    --destructive: 0 62.8% 30.6%;
+    --background: 240 6% 7%; /* #111113 */
+    --card: 225 7% 11%; /* #191a1d */
+    --card-foreground: 60 3% 93%;
+    --popover: 225 7% 11%;
+    --popover-foreground: 60 3% 93%;
+    --muted: 240 8% 5%; /* #0b0b0d */
+    --muted-foreground: 240 4% 62%; /* #9a9aa2 */
+
+    --foreground: 60 3% 93%; /* #eeeeed */
+
+    --border: 228 6% 17%; /* #2a2b2f */
+    --input: 228 6% 17%;
+    --ring: 349 76% 60%;
+
+    --accent: 228 6% 17%;
+    --accent-foreground: 60 3% 93%;
+    --primary: 60 3% 93%;
+    --primary-foreground: 240 8% 9%;
+    --secondary: 228 6% 17%;
+    --secondary-foreground: 60 3% 93%;
+    --destructive: 0 62% 45%;
     --destructive-foreground: 0 0% 98%;
-    --border: 0 0% 14.9%;
-    --input: 0 0% 14.9%;
-    --ring: 0 0% 83.1%;
-    --chart-1: 220 70% 50%;
-    --chart-2: 160 60% 45%;
-    --chart-3: 30 80% 55%;
-    --chart-4: 280 65% 60%;
-    --chart-5: 340 75% 55%;
+
+    --brand: 349 76% 60%; /* #e74b68, AA on the dark ground */
+    --brand-foreground: 0 0% 100%;
+
+    --header: 240 8% 5%;
+    --header-foreground: 60 3% 93%;
+    --scrim: 0 0% 0%;
+    --scrim-foreground: 0 0% 84%;
+    --success: 145 45% 55%;
+
+    --chart-1: 349 76% 60%;
+    --chart-2: 240 4% 62%;
+    --chart-3: 200 45% 55%;
+    --chart-4: 35 75% 60%;
+    --chart-5: 160 45% 55%;
   }
 }
 
@@ -175,7 +107,219 @@ body {
   * {
     @apply border-border;
   }
+
+  html {
+    -webkit-text-size-adjust: 100%;
+  }
+
+  html,
   body {
-    @apply bg-background text-foreground;
+    /* Prevent vertical scroll-chaining (iOS overscroll / pull-to-refresh). */
+    overscroll-behavior-y: contain;
+  }
+
+  body {
+    @apply bg-background font-sans text-foreground antialiased;
+  }
+
+  ::selection {
+    background: hsl(var(--brand) / 0.22);
+  }
+
+  :focus-visible {
+    outline: 2px solid hsl(var(--brand));
+    outline-offset: 2px;
+  }
+}
+
+/* Global reduced-motion kill switch. Neutralises every CSS transition on the
+   site without touching a single component. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ============================================================================
+   PROJECT COMPONENTS
+   ========================================================================= */
+@layer components {
+  .shell {
+    width: 100%;
+    max-width: 1440px;
+    margin-inline: auto;
+    padding-inline: clamp(1rem, 4vw, 3.5rem);
+  }
+  .shell-wide {
+    max-width: 1720px;
+  }
+  .shell-read {
+    max-width: 68ch;
+  }
+
+  /* Small uppercase mono label used for spec keys and structural metadata. */
+  .lab {
+    font-family: var(--font-mono), ui-monospace, monospace;
+    font-size: 0.6875rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: hsl(var(--muted-foreground));
+  }
+
+  /* Tabular figures. Every year, price, diameter and calibre number. */
+  .num {
+    font-family: var(--font-mono), ui-monospace, monospace;
+    font-variant-numeric: tabular-nums;
+  }
+
+  /* Full-bleed photograph band with a directional scrim. The one photo
+     primitive that survives from the old design. */
+  .band {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    overflow: hidden;
+    background-color: hsl(var(--muted));
+    background-position: center;
+    background-size: cover;
+  }
+  .band::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    /* Dense where the type sits, clearing toward the watch. Carries a wide
+       display headline across a busy photograph at AA. */
+    background: linear-gradient(
+      100deg,
+      hsl(var(--scrim) / 0.88) 0%,
+      hsl(var(--scrim) / 0.7) 45%,
+      hsl(var(--scrim) / 0.3) 100%
+    );
+  }
+  .band > * {
+    position: relative;
+    z-index: 1;
+  }
+
+  /* Square image plate. Gives white product shots an edge in both themes. */
+  .plate {
+    aspect-ratio: 1;
+    width: 100%;
+    object-fit: contain;
+    background-color: hsl(var(--muted));
+  }
+
+  /* Brand logos normalised to one monochrome system, which also solves the
+     mixed-polarity PNG problem in dark mode. All 90 have real alpha. */
+  .logo-mono {
+    filter: brightness(0);
+    opacity: 0.5;
+    transition:
+      filter 0.25s ease,
+      opacity 0.25s ease;
+  }
+  .dark .logo-mono {
+    filter: brightness(0) invert(1);
+  }
+  /* Light: hover reveals the logo's true colour.
+     Dark: it must NOT, because many of the 90 marks are black-on-transparent
+     and would vanish against the ground. There it brightens to full white. */
+  .logo-mono:hover {
+    filter: none;
+    opacity: 1;
+  }
+  .dark .logo-mono:hover {
+    filter: brightness(0) invert(1);
+    opacity: 1;
+  }
+
+  /* Series pills. Preserved from the old design, retokenised. */
+  .series-tags {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 0.3rem;
+    margin: 0.35rem 0 0.25rem;
+  }
+  .series-tag {
+    display: inline-block;
+    padding: 0.05rem 0.5rem;
+    border-radius: 9999px;
+    background: hsl(var(--muted));
+    color: hsl(var(--muted-foreground));
+    font-family: var(--font-mono), ui-monospace, monospace;
+    font-size: 0.6rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  .series-tag-group {
+    background: hsl(var(--brand));
+    color: hsl(var(--brand-foreground));
+  }
+
+  .series-filter-label {
+    font-family: var(--font-mono), ui-monospace, monospace;
+    font-size: 0.6875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: hsl(var(--muted-foreground));
+  }
+  .series-filter {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+  }
+  .series-filter-chip {
+    padding: 0.15rem 0.7rem;
+    border-radius: 9999px;
+    border: 1px solid hsl(var(--border));
+    background: transparent;
+    color: hsl(var(--muted-foreground));
+    font-family: var(--font-mono), ui-monospace, monospace;
+    font-size: 0.6875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    cursor: pointer;
+    white-space: nowrap;
+    transition:
+      background 0.15s ease,
+      color 0.15s ease,
+      border-color 0.15s ease;
+  }
+  .series-filter-chip:hover {
+    border-color: hsl(var(--brand));
+    color: hsl(var(--brand));
+  }
+  .series-filter-chip.is-active {
+    background: hsl(var(--brand));
+    border-color: hsl(var(--brand));
+    color: hsl(var(--brand-foreground));
+  }
+
+  /* Scroll-reveal, driven by IntersectionObserver in Reveal.tsx. Kept in CSS
+     so the home page ships no animation library. */
+  .reveal {
+    opacity: 0;
+    transform: translateY(18px);
+    transition:
+      opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+      transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    transition-delay: var(--reveal-delay, 0ms);
+  }
+  .reveal.is-in {
+    opacity: 1;
+    transform: none;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .reveal {
+      opacity: 1;
+      transform: none;
+    }
   }
 }

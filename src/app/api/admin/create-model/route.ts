@@ -2,6 +2,8 @@ import fs from "fs";
 import path from "path";
 import { NextResponse } from "next/server";
 
+import { devOnly } from "../guard";
+
 const DATA_DIR = path.join(process.cwd(), "src", "app", "data");
 const WATCH_MODELS_DIR = path.join(DATA_DIR, "watchModels");
 const COLLECTION_DATA_FILE = path.join(DATA_DIR, "admin", "collectionData.tsx");
@@ -20,6 +22,9 @@ interface CreateModelRequest {
 }
 
 export async function POST(request: Request) {
+  const blocked = devOnly();
+  if (blocked) return blocked;
+
   try {
     const body: CreateModelRequest = await request.json();
     const { brandFolder, filename, fileContent, collectionEntry } = body;
