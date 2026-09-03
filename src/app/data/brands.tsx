@@ -7,7 +7,6 @@ export interface ReleaseDetails {
 export interface Brand {
   name: string;
   logoImg: string;
-  displayOrder?: number | undefined;
   website?: string;
   description?: string;
   foundedInformation?: ReleaseDetails;
@@ -15,11 +14,51 @@ export interface Brand {
   backgrounImages?: string[];
 }
 
+/**
+ * The homepage "Main Brands" logo wall, in the order it renders.
+ *
+ * This list *is* the order: add a brand to the wall by appending its
+ * BrandsEnum value, move one by moving its line. Every brand not listed here
+ * still appears in the A-Z index below the wall.
+ *
+ * It replaced a `displayOrder` number carried on each brand, which forced a
+ * renumber to insert anything and had already drifted into duplicates — three
+ * brands shared 32 and two shared 33, leaving five wall positions decided by
+ * position in brandsDB rather than by the number.
+ *
+ * A name here that is absent from brandsDB is skipped, with a warning, by
+ * brandsService.getMainBrands().
+ */
+export const mainBrandsOrder: string[] = [
+  BrandsEnum.ZENITH,
+  BrandsEnum.EBERHARD,
+  BrandsEnum.CUERVO_Y_SOBRINOS,
+  BrandsEnum.VACHERON_CONSTANTIN,
+  BrandsEnum.CHOPARD,
+  BrandsEnum.OMEGA,
+  BrandsEnum.BREITLING,
+  BrandsEnum.TAG_HEUER,
+  BrandsEnum.PORSCHE_DESIGN,
+  BrandsEnum.GIRARD_PERREGAUX,
+  BrandsEnum.TISSOT,
+  BrandsEnum.RAYMOND_WEIL,
+  BrandsEnum.MAURICE_LACROIX,
+  BrandsEnum.SEIKO,
+  BrandsEnum.DUBOIS,
+  BrandsEnum.BAUME_MERCIER,
+  BrandsEnum.UNIVERSAL_GENEVE,
+  BrandsEnum.PRYNGEPS,
+  BrandsEnum.NOVART,
+  BrandsEnum.CAUNY,
+  BrandsEnum.SOLVIL_ET_TITUS,
+  BrandsEnum.FORTIS,
+  BrandsEnum.ORFINA,
+];
+
 export const brandsDB: Brand[] = [
   {
     name: BrandsEnum.ZENITH,
     logoImg: "public/assets/Images/Brands_Logos/zenith_logo.PNG",
-    displayOrder: 20,
     website: "https://www.zenith-watches.com",
     description:
       " Zenith is renowned for its precision and innovation, especially the El Primero series, the world's first high-frequency automatic chronograph.",
@@ -36,7 +75,6 @@ export const brandsDB: Brand[] = [
   {
     name: BrandsEnum.EBERHARD,
     logoImg: "public/assets/Images/Brands_Logos/eberhard_logo.PNG",
-    displayOrder: 21,
     website: "https://www.eberhard-co-watches.ch",
     description:
       "Eberhard & Co. is a Swiss watchmaking company known for its chronographs and precision timepieces.",
@@ -53,7 +91,6 @@ export const brandsDB: Brand[] = [
   {
     name: BrandsEnum.BREITLING,
     logoImg: "public/assets/Images/Brands_Logos/breitling_logo.PNG",
-    displayOrder: 22,
     website: "https://www.breitling.com",
     description:
       "Breitling is a Swiss luxury watchmaker specializing in technical watches, particularly chronographs.",
@@ -73,7 +110,6 @@ export const brandsDB: Brand[] = [
   {
     name: BrandsEnum.OMEGA,
     logoImg: "public/assets/Images/Brands_Logos/omega_logo.PNG",
-    displayOrder: 23,
     website: "https://www.omegawatches.com",
     description: "Omega SA is a Swiss luxury watchmaker famed for its innovative watchmaking.",
     foundedInformation: {
@@ -91,7 +127,6 @@ export const brandsDB: Brand[] = [
   {
     name: BrandsEnum.CHOPARD,
     logoImg: "public/assets/Images/Brands_Logos/chopard_logo.PNG",
-    displayOrder: 24,
     website: "https://www.chopard.com",
     description:
       "Chopard is a Swiss manufacturer and retailer of luxury watches, jewelry, and accessories.",
@@ -108,7 +143,6 @@ export const brandsDB: Brand[] = [
   {
     name: BrandsEnum.TAG_HEUER,
     logoImg: "public/assets/Images/Brands_Logos/tag_heuer_logo.PNG",
-    displayOrder: 25,
     website: "https://www.tagheuer.com",
     description:
       "TAG Heuer is a Swiss luxury watchmaker known for its sports watches and chronographs.",
@@ -126,7 +160,6 @@ export const brandsDB: Brand[] = [
   {
     name: BrandsEnum.PORSCHE_DESIGN,
     logoImg: "public/assets/Images/Brands_Logos/porsche_design_logo.PNG",
-    displayOrder: 26,
     website: "https://www.porsche-design.com",
     description:
       "Porsche Design is a German company known for its high-end accessories, including watches.",
@@ -144,7 +177,6 @@ export const brandsDB: Brand[] = [
   {
     name: BrandsEnum.MAURICE_LACROIX,
     logoImg: "public/assets/Images/Brands_Logos/maurice_lacroix_logo.PNG",
-    displayOrder: 27,
     website: "https://www.mauricelacroix.com",
     description:
       "Maurice Lacroix is a Swiss luxury watchmaker recognized for its commitment to traditional watchmaking craftsmanship combined with modern design.",
@@ -161,7 +193,6 @@ export const brandsDB: Brand[] = [
   {
     name: BrandsEnum.RAYMOND_WEIL,
     logoImg: "public/assets/Images/Brands_Logos/Raymond_weil_logo.PNG",
-    displayOrder: 28,
     website: "https://www.raymond-weil.com",
     description:
       "Raymond Weil is a Swiss luxury watchmaker known for its elegant and refined timepieces.",
@@ -178,7 +209,6 @@ export const brandsDB: Brand[] = [
   {
     name: BrandsEnum.TISSOT,
     logoImg: "public/assets/Images/Brands_Logos/tissot_logo.PNG",
-    displayOrder: 29,
     website: "https://www.tissotwatches.com",
     description:
       "Tissot is a Swiss watchmaker offering a wide range of timepieces that combine precision and style.",
@@ -201,7 +231,6 @@ export const brandsDB: Brand[] = [
   {
     name: BrandsEnum.SEIKO,
     logoImg: "public/assets/Images/Brands_Logos/seiko_logo.PNG",
-    displayOrder: 30,
     website: "https://www.seikowatches.com",
     description:
       "Seiko is a Japanese watchmaker renowned for its technological advancements and wide range of timepieces.",
@@ -218,14 +247,12 @@ export const brandsDB: Brand[] = [
   {
     name: BrandsEnum.SAID,
     logoImg: "public/assets/Images/Brands_Logos/said_logo.PNG",
-    displayOrder: undefined,
     description: "Vintage Portuguese brand with Swiss Made parts and assembly.",
     displayBySeries: false,
   },
   {
     name: BrandsEnum.PRYNGEPS,
     logoImg: "public/assets/Images/Brands_Logos/pryngeps_logo.PNG",
-    displayOrder: 31,
     website: "https://www.pryngeps.it",
     description:
       "Pryngeps is an Italian watch brand known for its stylish and affordable timepieces.",
@@ -237,7 +264,6 @@ export const brandsDB: Brand[] = [
   {
     name: BrandsEnum.SOLVIL_ET_TITUS,
     logoImg: "public/assets/Images/Brands_Logos/titus_logo.PNG",
-    displayOrder: 32,
     website: "https://www.solvil-et-titus.com",
     description:
       "Solvil et Titus is a Swiss luxury watch brand known for its heritage and craftsmanship.",
@@ -249,7 +275,6 @@ export const brandsDB: Brand[] = [
   {
     name: BrandsEnum.VACHERON_CONSTANTIN,
     logoImg: "public/assets/Images/Brands_Logos/vacheron_constantin_logo.PNG",
-    displayOrder: 33,
     website: "https://www.vacheron-constantin.com",
     description:
       "Vacheron Constantin is the world's oldest watch Manufacture, operating continuously since 1755. The Maison creates timepieces with unique technical and aesthetic signatures, perpetuating a proud heritage through generations of master craftsmen.  ",
@@ -262,13 +287,11 @@ export const brandsDB: Brand[] = [
   /*{
     name: BrandsEnum.HEUER,
     logoImg: "public/assets/Images/Brands_Logos/heuer_logo.PNG",
-    displayOrder: undefined,
   },*/
 
   {
     name: BrandsEnum.UNIVERSAL_GENEVE,
     logoImg: "public/assets/Images/Brands_Logos/universal_geneve_logo.PNG",
-    displayOrder: 33,
     website: "https://www.universalgeneve.com/",
     description:
       "Universal Genéve is a Swiss luxury watch brand known for its heritage, in-house movements and craftsmanship.",
@@ -285,7 +308,6 @@ export const brandsDB: Brand[] = [
   {
     name: BrandsEnum.NOVART,
     logoImg: "public/assets/Images/Brands_Logos/novart_logo.PNG",
-    displayOrder: 35,
     description: "Vintage Portuguese brand with Swiss Made parts and assembly.",
     displayBySeries: true,
   },
@@ -293,7 +315,6 @@ export const brandsDB: Brand[] = [
   {
     name: BrandsEnum.TIMEX,
     logoImg: "public/assets/Images/Brands_Logos/timex_logo.PNG",
-    displayOrder: undefined,
     website: "https://www.timex.com",
     description:
       "Timex is an American watchmaker known for its wide range of affordable and durable timepieces.",
@@ -305,7 +326,6 @@ export const brandsDB: Brand[] = [
   {
     name: BrandsEnum.GIRARD_PERREGAUX,
     logoImg: "public/assets/Images/Brands_Logos/girard_perregaux_logo.PNG",
-    displayOrder: 38,
     website: "https://www.girard-perregaux.com/",
     description:
       "Swiss watchmaker founded in La Chaux-de-Fonds, Switzerland, and recognized as a high-end brand in the global luxury watch market.",
@@ -319,12 +339,10 @@ export const brandsDB: Brand[] = [
   {
     name: BrandsEnum.LUCERNE,
     logoImg: "public/assets/Images/Brands_Logos/Lucerne_logo.PNG",
-    displayOrder: undefined,
   },
   {
     name: BrandsEnum.LORUS,
     logoImg: "public/assets/Images/Brands_Logos/lorus_logo.PNG",
-    displayOrder: undefined,
     website: "https://www.loruswatches.com",
     description:
       "Lorus is a watch brand offering a variety of stylish and affordable timepieces, known for their reliability and value.",
@@ -336,12 +354,10 @@ export const brandsDB: Brand[] = [
   {
     name: BrandsEnum.CELSUS,
     logoImg: "public/assets/Images/Brands_Logos/celsus_logo.PNG",
-    displayOrder: undefined,
   },
   {
     name: BrandsEnum.CAUNY,
     logoImg: "public/assets/Images/Brands_Logos/cauny_logo.PNG",
-    displayOrder: 36,
     website: "https://www.cauny.com",
     description:
       "Cauny is a historic watch brand known for its elegant designs and quality craftsmanship.",
@@ -354,7 +370,6 @@ export const brandsDB: Brand[] = [
   {
     name: BrandsEnum.CUERVO_Y_SOBRINOS,
     logoImg: "public/assets/Images/Brands_Logos/cuervo_y_sobrinos_logo.PNG",
-    displayOrder: 34,
     website: "https://www.cuervoysobrinos.com/en/",
     description:
       "Cuervo y Sobrinos is a historic watch brand known for its elegant designs and quality craftsmanship. \n\
@@ -374,7 +389,6 @@ export const brandsDB: Brand[] = [
   {
     name: BrandsEnum.CERTINA,
     logoImg: "public/assets/Images/Brands_Logos/certina_logo.PNG",
-    displayOrder: undefined,
     website: "https://www.certina.com/en",
     description:
       "Certina is a historic watch brand known for its elegant designs and quality craftsmanship.",
@@ -387,19 +401,16 @@ export const brandsDB: Brand[] = [
   {
     name: BrandsEnum.CAMEL_TROPHY,
     logoImg: "public/assets/Images/Brands_Logos/camel_logo.PNG",
-    displayOrder: undefined,
   },
   {
     name: BrandsEnum.CORTICIMA,
     logoImg: "public/assets/Images/Brands_Logos/corticima_logo.PNG",
-    displayOrder: undefined,
     description: "Vintage Portuguese brand with Swiss Made parts and assembly.",
   },
 
   {
     name: BrandsEnum.ZODIAC,
     logoImg: "public/assets/Images/Brands_Logos/zodiac_logo.PNG",
-    displayOrder: undefined,
     website: "https://www.zodiacwatches.com",
     description:
       "Zodiac is a Swiss watch brand recognized for its adventurous spirit and innovative designs, particularly in dive watches.",
@@ -411,33 +422,27 @@ export const brandsDB: Brand[] = [
   {
     name: BrandsEnum.ADMES,
     logoImg: "public/assets/Images/Brands_Logos/admes_logo.PNG",
-    displayOrder: undefined,
   },
   {
     name: BrandsEnum.ARGUS,
     logoImg: "public/assets/Images/Brands_Logos/argus_logo.PNG",
-    displayOrder: undefined,
   },
   {
     name: BrandsEnum.AUREUS,
     logoImg: "public/assets/Images/Brands_Logos/aureus_logo.PNG",
-    displayOrder: undefined,
   },
   {
     name: BrandsEnum.DOXA,
     logoImg: "public/assets/Images/Brands_Logos/doxa_logo.PNG",
-    displayOrder: undefined,
   },
 
   {
     name: BrandsEnum.DOUGLAS,
     logoImg: "public/assets/Images/Brands_Logos/douglas_logo.PNG",
-    displayOrder: undefined,
   },
   {
     name: BrandsEnum.DUBOIS,
     logoImg: "public/assets/Images/Brands_Logos/dubois_logo.PNG",
-    displayOrder: 32,
     website: "https://duboisfils.ch/en/watches",
     description:
       "DuBois et fils is a Swiss luxury watch brand. It is recognized as Switzerland's oldest watch factory, continuing uninterrupted production since its founding",
@@ -449,26 +454,22 @@ export const brandsDB: Brand[] = [
   {
     name: BrandsEnum.AMER,
     logoImg: "public/assets/Images/Brands_Logos/amer_logo.PNG",
-    displayOrder: undefined,
     description: "Vintage Portuguese brand with Swiss Made parts and assembly.",
   },
   {
     name: BrandsEnum.AMYRIA,
     logoImg: "public/assets/Images/Brands_Logos/amyria_logo.PNG",
-    displayOrder: undefined,
     description: "Vintage Portuguese brand with Swiss Made parts and assembly.",
   },
   {
     name: BrandsEnum.ARAUTO,
     logoImg: "public/assets/Images/Brands_Logos/arauto_logo.PNG",
-    displayOrder: undefined,
     description: "Vintage Portuguese brand with Swiss Made parts and assembly.",
     displayBySeries: false,
   },
   {
     name: BrandsEnum.BAUME_MERCIER,
     logoImg: "public/assets/Images/Brands_Logos/baume_mercier_logo.PNG",
-    displayOrder: 32,
     website: "https://www.baume-et-mercier.com/",
     description:
       "Baume et Mercier is a Swiss luxury watch brand. Since its origin, the brand continued production since its founding",
@@ -481,54 +482,44 @@ export const brandsDB: Brand[] = [
   {
     name: BrandsEnum.BELEX,
     logoImg: "public/assets/Images/Brands_Logos/belex_logo.PNG",
-    displayOrder: undefined,
     description: "Vintage Portuguese brand with Swiss Made parts and assembly.",
   },
   {
     name: BrandsEnum.BERGEON,
     logoImg: "public/assets/Images/Brands_Logos/bergeon_logo.PNG",
-    displayOrder: undefined,
   },
   {
     name: BrandsEnum.BUREN,
     logoImg: "public/assets/Images/Brands_Logos/buren_logo.PNG",
-    displayOrder: undefined,
   },
   {
     name: BrandsEnum.BARRETT,
     logoImg: "public/assets/Images/Brands_Logos/barrett_logo.PNG",
-    displayOrder: undefined,
   },
   {
     name: BrandsEnum.CRISTAL_WATCH,
     logoImg: "public/assets/Images/Brands_Logos/cristal_watch_logo.PNG",
-    displayOrder: undefined,
     description: "Vintage Portuguese brand with Swiss Made parts and assembly.",
   },
   {
     name: BrandsEnum.CRISTALOR,
     logoImg: "public/assets/Images/Brands_Logos/cristalor_logo.PNG",
-    displayOrder: undefined,
   },
   {
     name: BrandsEnum.CALYPSO,
     logoImg: "public/assets/Images/Brands_Logos/calypso_logo.PNG",
-    displayOrder: undefined,
   },
   {
     name: BrandsEnum.ROYAL_GEOGRAPHICAL_SOCIETY,
     logoImg: "public/assets/Images/Brands_Logos/delma_logo.PNG",
-    displayOrder: undefined,
   },
   {
     name: BrandsEnum.EMES,
     logoImg: "public/assets/Images/Brands_Logos/Emes_logo.PNG",
-    displayOrder: undefined,
   },
   {
     name: BrandsEnum.ELETTA,
     logoImg: "public/assets/Images/Brands_Logos/eletta_logo.PNG",
-    displayOrder: undefined,
     description:
       "Eletta was created in 1950, being registered simultaneously in Portugal and Switzerland.",
     foundedInformation: {
@@ -540,7 +531,6 @@ export const brandsDB: Brand[] = [
   {
     name: BrandsEnum.FERRARI,
     logoImg: "public/assets/Images/Brands_Logos/Ferrari_Watches_logo.PNG",
-    displayOrder: undefined,
     website: "https://store.ferrari.com/en-us/men/watches",
     description:
       "Ferrari offers a collection of watches that embody the brand's passion for speed and excellence, featuring designs inspired by their iconic cars.",
@@ -552,7 +542,6 @@ export const brandsDB: Brand[] = [
   {
     name: BrandsEnum.FESTINA,
     logoImg: "public/assets/Images/Brands_Logos/Festina_Watches_logo.PNG",
-    displayOrder: undefined,
     website: "https://www.festina.com",
     description:
       "Festina is a Spanish watch brand offering a range of stylish and reliable timepieces, known for their quality and design.",
@@ -565,65 +554,53 @@ export const brandsDB: Brand[] = [
   {
     name: BrandsEnum.FONTAINE,
     logoImg: "public/assets/Images/Brands_Logos/fontaine_logo.PNG",
-    displayOrder: undefined,
   },
   {
     name: BrandsEnum.FORTIS,
     logoImg: "public/assets/Images/Brands_Logos/fortis_logo.PNG",
-    displayOrder: 40,
   },
   {
     name: BrandsEnum.GREENWICH,
     logoImg: "public/assets/Images/Brands_Logos/greenwich logo.PNG",
-    displayOrder: undefined,
   },
   {
     name: BrandsEnum.HELMA,
     logoImg: "public/assets/Images/Brands_Logos/helma_logo.PNG",
-    displayOrder: undefined,
   },
   {
     name: BrandsEnum.HERMES,
     logoImg: "public/assets/Images/Brands_Logos/hermes_logo.PNG",
-    displayOrder: undefined,
   },
   {
     name: BrandsEnum.HIPCO,
     logoImg: "public/assets/Images/Brands_Logos/hipco_logo.PNG",
-    displayOrder: undefined,
   },
   {
     name: BrandsEnum.JAGUAR_FRAGRANCES,
     logoImg: "public/assets/Images/Brands_Logos/jaguar_logo.PNG",
-    displayOrder: undefined,
   },
   {
     name: BrandsEnum.JOMEL,
     logoImg: "public/assets/Images/Brands_Logos/jomel_logo.PNG",
-    displayOrder: undefined,
     description: "Vintage Portuguese brand with Swiss Made parts and assembly.",
     displayBySeries: false,
   },
   {
     name: BrandsEnum.KELTON,
     logoImg: "public/assets/Images/Brands_Logos/kelton_logo.PNG",
-    displayOrder: undefined,
   },
   {
     name: BrandsEnum.LANCO,
     logoImg: "public/assets/Images/Brands_Logos/lanco_logo.PNG",
-    displayOrder: undefined,
   },
   {
     name: BrandsEnum.LATINO,
     logoImg: "public/assets/Images/Brands_Logos/latino_logo.PNG",
-    displayOrder: undefined,
     description: "Vintage Portuguese brand with Swiss Made parts and assembly.",
   },
   {
     name: BrandsEnum.LORENZ,
     logoImg: "public/assets/Images/Brands_Logos/lorenz_logo.PNG",
-    displayOrder: undefined,
     website: "https://www.lorenz.it",
     description:
       "Lorenz is an Italian watch brand known for its blend of traditional craftsmanship and modern design.",
@@ -635,153 +612,125 @@ export const brandsDB: Brand[] = [
   {
     name: BrandsEnum.MASERATI,
     logoImg: "public/assets/Images/Brands_Logos/maserati_logo.PNG",
-    displayOrder: undefined,
   },
   {
     name: BrandsEnum.MARTINI,
     logoImg: "public/assets/Images/Brands_Logos/martini_logo.PNG",
-    displayOrder: undefined,
     description: "Vintage Portuguese brand with Swiss Made parts and assembly.",
   },
   {
     name: BrandsEnum.MERCEDES_BENZ,
     logoImg: "public/assets/Images/Brands_Logos/mercedes_benz_logo.PNG",
-    displayOrder: undefined,
   },
   {
     name: BrandsEnum.MIURA,
     logoImg: "public/assets/Images/Brands_Logos/miura_logo.PNG",
-    displayOrder: undefined,
     description: "Vintage Portuguese brand with Swiss Made parts and assembly.",
   },
   {
     name: BrandsEnum.MONUMENTAL,
     logoImg: "public/assets/Images/Brands_Logos/monumental_logo.PNG",
-    displayOrder: undefined,
     description: "Vintage Portuguese brand with Swiss Made parts and assembly.",
   },
   {
     name: BrandsEnum.NATALIS,
     logoImg: "public/assets/Images/Brands_Logos/natalis_logo.PNG",
-    displayOrder: undefined,
   },
   {
     name: BrandsEnum.NOBREZA,
     logoImg: "public/assets/Images/Brands_Logos/nobreza_logo.PNG",
-    displayOrder: undefined,
     description: "Vintage Portuguese brand with Swiss Made parts and assembly.",
   },
 
   {
     name: BrandsEnum.ONE,
     logoImg: "public/assets/Images/Brands_Logos/One_logo.PNG",
-    displayOrder: undefined,
   },
   {
     name: BrandsEnum.OMODOX,
     logoImg: "public/assets/Images/Brands_Logos/omodox_logo.PNG",
-    displayOrder: undefined,
   },
   {
     name: BrandsEnum.OLMA,
     logoImg: "public/assets/Images/Brands_Logos/olma_logo.PNG",
-    displayOrder: undefined,
   },
   {
     name: BrandsEnum.ORFINA,
     logoImg: "public/assets/Images/Brands_Logos/orfina_logo.PNG",
-    displayOrder: undefined,
   },
   {
     name: BrandsEnum.ORIENT,
     logoImg: "public/assets/Images/Brands_Logos/orient_logo.PNG",
-    displayOrder: undefined,
   },
   {
     name: BrandsEnum.PROVITA,
     logoImg: "public/assets/Images/Brands_Logos/Provita_logo.PNG",
-    displayOrder: undefined,
   },
   {
     name: BrandsEnum.POLJOT,
     logoImg: "public/assets/Images/Brands_Logos/poljot_logo.PNG",
-    displayOrder: undefined,
   },
   {
     name: BrandsEnum.PHILIP_WATCH,
     logoImg: "public/assets/Images/Brands_Logos/philipe_watch_logo.PNG",
-    displayOrder: undefined,
   },
   {
     name: BrandsEnum.RADIANT,
     logoImg: "public/assets/Images/Brands_Logos/radiant_logo.PNG",
-    displayOrder: undefined,
   },
   {
     name: BrandsEnum.RELIDE,
     logoImg: "public/assets/Images/Brands_Logos/relide_logo.PNG",
-    displayOrder: undefined,
     description: "Vintage Portuguese brand with Swiss Made parts and assembly.",
   },
   {
     name: BrandsEnum.RONE,
     logoImg: "public/assets/Images/Brands_Logos/rone_logo.PNG",
-    displayOrder: undefined,
   },
   {
     name: BrandsEnum.ROMAR,
     logoImg: "public/assets/Images/Brands_Logos/romar_logo.PNG",
-    displayOrder: undefined,
     description: "Vintage Portuguese brand with Swiss Made parts and assembly.",
   },
   {
     name: BrandsEnum.UTINA,
     logoImg: "public/assets/Images/Brands_Logos/utina_logo.PNG",
-    displayOrder: undefined,
     description: "Vintage Portuguese brand with Swiss Made parts and assembly.",
   },
   {
     name: BrandsEnum.SIGNO,
     logoImg: "public/assets/Images/Brands_Logos/signo_logo.PNG",
-    displayOrder: undefined,
     description: "Vintage Portuguese brand with Swiss Made parts and assembly.",
   },
   {
     name: BrandsEnum.SECTOR,
     logoImg: "public/assets/Images/Brands_Logos/sector_logo.PNG",
-    displayOrder: undefined,
   },
   {
     name: BrandsEnum.SAINT_HONORE,
     logoImg: "public/assets/Images/Brands_Logos/saint_honore_logo.PNG",
-    displayOrder: undefined,
   },
   {
     name: BrandsEnum.TONINO_LAMBORGHINI,
     logoImg: "public/assets/Images/Brands_Logos/tonino_lamborghini_logo.PNG",
-    displayOrder: undefined,
   },
   {
     name: BrandsEnum.TOURIST,
     logoImg: "public/assets/Images/Brands_Logos/tourist_logo.PNG",
-    displayOrder: undefined,
   },
   {
     name: BrandsEnum.TISSOURE,
     logoImg: "public/assets/Images/Brands_Logos/tissoure_logo.PNG",
-    displayOrder: undefined,
     description: "Vintage Portuguese brand with Swiss Made parts and assembly.",
   },
   {
     name: BrandsEnum.TAUNUS,
     logoImg: "public/assets/Images/Brands_Logos/taunus_logo.PNG",
-    displayOrder: undefined,
     description: "Vintage Portuguese brand with Swiss Made parts and assembly.",
   },
   {
     name: BrandsEnum.TECNAL,
     logoImg: "public/assets/Images/Brands_Logos/tecnal_logo.PNG",
-    displayOrder: undefined,
     description: "Vintage Portuguese brand with Swiss Made parts and assembly.",
     displayBySeries: false,
   },

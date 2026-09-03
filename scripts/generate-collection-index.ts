@@ -1,11 +1,21 @@
 import fs from "fs";
 import path from "path";
+import prettier from "prettier";
 
 import CollectionItemsDB from "../src/app/data/admin/collectionData";
 
 // Read collectionData.tsx as text to extract require("./watchModels/...") paths
 const dataFilePath = path.resolve(__dirname, "../src/app/data/admin/collectionData.tsx");
 const fileContent = fs.readFileSync(dataFilePath, "utf-8");
+
+// Both outputs are committed, and lint-staged runs prettier over *.ts and *.json
+// on the way in. Writing them raw left the committed copy formatted and a fresh
+// run unformatted — the drift CI's "generated files are up to date" step catches.
+// Format here so what the generator writes is already what prettier would.
+async function writeFormatted(filePath: string, contents: string) {
+  const options = await prettier.resolveConfig(filePath);
+  fs.writeFileSync(filePath, await prettier.format(contents, { ...options, filepath: filePath }));
+}
 
 // Parse key -> modelFile mapping by scanning lines sequentially
 const keyToModelFile: Record<string, string> = {};
@@ -70,8 +80,6 @@ for (const [key, entry] of Object.entries(CollectionItemsDB)) {
 }
 
 const outputPath = path.resolve(__dirname, "../src/app/data/collection-index.json");
-fs.writeFileSync(outputPath, JSON.stringify(index, null, 2));
-console.log(`Generated collection index: ${Object.keys(index).length} entries → ${outputPath}`);
 
 // ── Explicit module map ───────────────────────────────────────────────
 //
@@ -98,5 +106,13 @@ ${modulePaths.map((p) => `  ${JSON.stringify(p)}: () => import(${JSON.stringify(
 `;
 
 const moduleMapPath = path.resolve(__dirname, "../src/app/data/collectionModules.generated.ts");
-fs.writeFileSync(moduleMapPath, moduleMap);
-console.log(`Generated module map:      ${modulePaths.length} loaders → ${moduleMapPath}`);
+
+async function main() {
+  await writeFormatted(outputPath, JSON.stringify(index, null, 2));
+  console.log(`Generated collection index: ${Object.keys(index).length} entries → ${outputPath}`);
+
+  await writeFormatted(moduleMapPath, moduleMap);
+  console.log(`Generated module map:      ${modulePaths.length} loaders → ${moduleMapPath}`);
+}
+
+void main();

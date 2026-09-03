@@ -1,21 +1,32 @@
-import { Brand, brandsDB } from "../data/brands";
+import { Brand, brandsDB, mainBrandsOrder } from "../data/brands";
 import CollectionIndex from "../data/collectionIndex";
 
 function getMainBrands(): Brand[] {
   /**
-   * Get main brands
-   * Defined with display order. Returned ordered by displayOrder
+   * Get main brands, in the order given by mainBrandsOrder.
+   *
+   * That list is the source of truth for the homepage logo wall: to move a
+   * brand, move its line there. A listed name with no matching entry in
+   * brandsDB is a typo or a brand queued before it was added — skip it so the
+   * wall still renders, and say so, because the alternative is a brand
+   * silently disappearing.
    */
-  return brandsDB
-    .filter((entry) => entry.displayOrder != undefined)
-    .sort((a, b) => (a.displayOrder ?? 0) - (b.displayOrder ?? 0));
+  return mainBrandsOrder.flatMap((name) => {
+    const brand = brandsDB.find((entry) => entry.name === name);
+    if (!brand) {
+      console.warn(`[brandsService] mainBrandsOrder lists "${name}", absent from brandsDB.`);
+      return [];
+    }
+    return [brand];
+  });
 }
 
 function getSecondaryBrands(): Brand[] {
   /**
-   * Get secondary brands, that don't have displayOrder
+   * Get secondary brands: every brand that is not on the main wall.
    */
-  return brandsDB.filter((entry) => entry.displayOrder == undefined);
+  const main = new Set(mainBrandsOrder);
+  return brandsDB.filter((entry) => !main.has(entry.name));
 }
 
 function getBrandInformation(brandName: string): Brand | undefined {

@@ -316,11 +316,16 @@ All enums are in `src/app/enums/`. Check the individual files for full details a
 1. **Add enum value** in `src/app/enums/brandsEnum.tsx`
 2. **Add brand entry** in `src/app/data/brands.tsx` — to the `brandsDB` array
    - Required fields: `name` (BrandsEnum value), `logoImg`
-   - Optional: `displayOrder`, `website`, `description`, `foundedInformation`, `displayBySeries`, `backgrounImages`
+   - Optional: `website`, `description`, `foundedInformation`, `displayBySeries`, `backgrounImages`
 3. **Add brand logo** to `public/assets/Images/Brands_Logos/[brand]_logo.PNG`
-4. **(If brand uses series grouping)** Create `src/app/data/watchModels/[Brand]/[Brand]BrandSeries.tsx`
-5. **(If brand has a collection set)** Create `src/app/data/watchModels/[Brand]/[Brand]_collection_set.tsx`
-6. **Set `displayBySeries: true`** in `brands.tsx` if the brand page should group models by series
+4. **(If the brand belongs on the homepage logo wall)** Add its `BrandsEnum` value to the
+   `mainBrandsOrder` array in `src/app/data/brands.tsx`. That array is the wall, in order —
+   its position in the list is its position on the wall, so append to put it last or insert
+   the line where you want it. Brands left out of the list still appear in the A-Z index
+   below the wall.
+5. **(If brand uses series grouping)** Create `src/app/data/watchModels/[Brand]/[Brand]BrandSeries.tsx`
+6. **(If brand has a collection set)** Create `src/app/data/watchModels/[Brand]/[Brand]_collection_set.tsx`
+7. **Set `displayBySeries: true`** in `brands.tsx` if the brand page should group models by series
 
 No route changes needed — `[brand]/page.tsx` and `[brand]/[model]/page.tsx` use `generateStaticParams()`.
 
@@ -373,8 +378,8 @@ How it works:
 - Cards keep today's order: groups stay in their existing order and cards are sorted by year
   (newest first) within each group; there are no per-group section headers.
 
-When adding a watch via `scripts/create_watch_model.py`, the series picker automatically lists
-nested sub-series (e.g. `CHRONOMAT.CHRONOMAT_EVOLUTION`) and emits the correct nested reference.
+When adding a watch by copying an existing model as a template, reference a nested sub-series by
+its full dotted path — `BrandSeries.CHRONOMAT.CHRONOMAT_EVOLUTION`, not just the sub-key.
 
 ### How the brand page renders & filters (maintenance notes)
 

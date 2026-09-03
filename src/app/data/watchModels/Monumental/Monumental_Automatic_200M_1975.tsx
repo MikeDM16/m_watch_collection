@@ -87,7 +87,7 @@ const details: WatchDetails = {
     ],
 
     information: {
-      brand: BrandsEnum.LUCERNE,
+      brand: BrandsEnum.MONUMENTAL,
       series: "Automatic",
       catalogueReference: "-",
       productionYear: "1975",

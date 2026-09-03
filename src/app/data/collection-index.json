@@ -2141,6 +2141,20 @@
     },
     "modelFile": "Amyria/Amyria_Blue_Shades_1977"
   },
+  "Vacheron Constantin Patrimony K1014": {
+    "brand": "Vacheron Constantin",
+    "legend": "Vacheron Constantin Patrimony K1014",
+    "year": 1978,
+    "type": "Dress",
+    "srcImage": "public/assets/Images/Vacheron_Constantin/1978_Vacheron_Constantin_Patrimony_K1014/IMG_3852.JPG",
+    "hoverSrc": "public/assets/Images/Vacheron_Constantin/1978_Vacheron_Constantin_Patrimony_K1014/IMG_3851.JPG",
+    "specialCollectionItem": false,
+    "collectionSet": false,
+    "series": "Patrimony",
+    "movementTitle": "Vacheron Constantin K1014",
+    "saleReport": null,
+    "modelFile": "Vacheron_Constantin/Vacheron_Constantin_Patrimony_K1014_1978"
+  },
   "Tissot Seastar Quartz Cal.2031": {
     "brand": "Tissot",
     "legend": "Tissot Seastar Quartz Cal.2031",

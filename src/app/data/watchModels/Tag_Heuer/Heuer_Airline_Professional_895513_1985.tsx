@@ -80,7 +80,7 @@ const details: WatchDetails = {
     ],
 
     information: {
-      brand: BrandsEnum.HEUER,
+      brand: BrandsEnum.TAG_HEUER,
       series: TagHeuerBrandSeries.AIRLINE_HEUER,
       catalogueReference: "985.513",
       productionYear: "1985 - 1988",

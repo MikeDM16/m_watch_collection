@@ -218,9 +218,9 @@ export default async function BrandModelPage({
               account is over its monthly transformation quota, and changing
               the origin URL busts every existing cache key), so this bypasses
               it rather than depend on quota or plan. The source is already a
-              correctly-sized, mozjpeg-optimised JPEG from sample_images.py —
-              this ships that file directly instead of a Vercel-recompressed
-              WebP. */}
+              correctly-sized, optimised JPEG from
+              scripts/images/2_make_variants.py — this ships that file directly
+              instead of a Vercel-recompressed WebP. */}
           <Image
             src={heroSrc}
             alt={watch.title}

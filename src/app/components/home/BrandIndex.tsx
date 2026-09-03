@@ -36,9 +36,10 @@ export default function BrandIndex({
         <div className="mx-auto max-w-shell px-[clamp(1rem,4vw,3.5rem)]">
           <h2 className="font-display text-display-m font-medium">Main Brands</h2>
           {/* Borders live on the cells, not as a painted container background.
-              There are 21 main brands, so the last row is always short (4 empty
-              cells at lg, 3 at sm) and a painted background would show through
-              them as one large lighter block. */}
+              The count comes from `mainBrandsOrder` in data/brands.tsx and is
+              rarely a multiple of the column count, so the last row is usually
+              short and a painted background would show through the empty cells
+              as one large lighter block. */}
           <div className="mt-8 grid grid-cols-3 border-l border-t border-border sm:grid-cols-4 lg:grid-cols-5">
             {mainBrands.map((b, i) => (
               <Link
@@ -49,9 +50,9 @@ export default function BrandIndex({
               >
                 {/* The logo is sized by the cell, not by caps of its own.
                     `fill` pins it to the cell box and `object-contain` fits
-                    each mark inside, so every one of the 21 comes out as large
-                    as its own proportions allow and none can ever be the reason
-                    a cell is taller than its neighbours.
+                    each mark inside, so every one comes out as large as its own
+                    proportions allow and none can ever be the reason a cell is
+                    taller than its neighbours.
                     Caps in rem cannot do this: the cell's height is derived
                     from its width by `aspect-ratio`, so a fixed pixel cap races
                     a height that moves with the column, the zoom and the root

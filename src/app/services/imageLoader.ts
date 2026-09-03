@@ -3,8 +3,8 @@
 import type { ImageLoaderProps } from "next/image";
 
 /**
- * The square variants scripts/sample_images.py writes beside every source photo,
- * ascending. Anything wider than the largest is served by the largest.
+ * The square variants scripts/images/2_make_variants.py writes beside every source
+ * photo, ascending. Anything wider than the largest is served by the largest.
  */
 const VARIANTS = [200, 500, 800, 1200] as const;
 
@@ -20,7 +20,7 @@ const VARIANT_SUFFIX = /_(200|500|800|1200)x\1(\.[^./]+)$/;
  * routing it through /_next/image.
  *
  * Every photo in MWatchCollectionResources already exists at 200/500/800/1200px,
- * written by sample_images.py at q70 and mozjpeg-optimised by optimize_images.py.
+ * written at q70 by scripts/images/2_make_variants.py.
  * Paying Vercel to resize an 800x800 q70 JPEG down to 640px is work we already
  * did offline, and it is billed per (url, w, q, Accept) cache key — so a single
  * 200x200 thumbnail could bill twenty transformations against a 5,000/month

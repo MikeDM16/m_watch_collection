@@ -598,6 +598,8 @@ export const modelLoaders: Record<string, () => Promise<{ default: WatchDetails 
   "Utina/Utina_Enamel_Dial_FE233_1968": () =>
     import("./watchModels/Utina/Utina_Enamel_Dial_FE233_1968"),
   "Utina/Utina_Sunburst_FE233_1972": () => import("./watchModels/Utina/Utina_Sunburst_FE233_1972"),
+  "Vacheron_Constantin/Vacheron_Constantin_Patrimony_K1014_1978": () =>
+    import("./watchModels/Vacheron_Constantin/Vacheron_Constantin_Patrimony_K1014_1978"),
   "Zenith/Zenith_El_Primero_ChronoMaster_2010": () =>
     import("./watchModels/Zenith/Zenith_El_Primero_ChronoMaster_2010"),
   "Zenith/Zenith_El_Primero_Port_Royal_V_2005": () =>

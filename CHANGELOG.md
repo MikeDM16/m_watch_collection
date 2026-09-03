@@ -1,5 +1,43 @@
 # Changelog
 
+## [2026-09-03] — scripts/ restructure
+
+`scripts/` had grown to seven files mixing three unrelated concerns, with nothing marking which were live. It is now two groups: npm-driven codegen at the root, and an ordered photo pipeline under `scripts/images/`.
+
+### The photo pipeline is three numbered steps
+
+`1_clean_jpg.py` → `2_make_variants.py` → `3_list_images.py`, from `convert_to_clean_jpg.py`, `sample_images.py` and `list_folder_images.py` respectively. Each now takes its folder as `argv[1]` instead of requiring you to edit a stack of reassigned path constants at the top of the file. They run against **MWatchCollectionResources**, not this repo — `scripts/README.md` says so, along with which npm script drives each codegen file.
+
+### Filename guards replace the `#PANDORA#` rename dance
+
+`getImgURLForSizeType` rebuilds a variant filename from the _source_ extension, while the generator writes variants uppercased. A lowercase `.jpg` original therefore points the site at a `_800x800.jpg` that exists on disk as `_800x800.JPG`, and GitHub raw is case-sensitive — a silent 404, not an error. `sample_images.py` handled this by round-tripping every file through a `#PANDORA#` temp name to force the case.
+
+Step 1 now always writes `.JPG` and deletes the differently-cased original, so the dance is unnecessary. Step 2 instead **reports and skips** anything that slipped through — lowercase extensions and filenames with a second dot, which break the `split(".")` on both the script and the app side. The failure is now loud at import time rather than a missing image in production.
+
+### The two steps no longer fight each other
+
+Found while verifying, and the reason the whole pipeline is now safe to re-run:
+
+- **Step 1 re-encoded step 2's variants.** Running it over a folder that already had them re-saved each q70 variant at q95 — a 200x200 thumbnail grew 50% (11 KB → 16.6 KB), the 800x800 by 54%, plus a generation of lossy loss every time. It now skips anything matching the variant suffix, and `saleReport.JPG`, which is deliberately kept at maximum quality.
+- **Step 1 re-encoded its own output.** Re-running it pushed each q82 original back up to q95, which made step 2 recompress it and regenerate all four variants — an endless loop shedding quality each round. It now recognises a metadata-free RGB JPEG as already clean and leaves it alone.
+
+Verified end to end on a copy of `Movements/Vacheron_Constantin/K1014`: a second pass of both steps changes zero bytes. Dirty inputs (lowercase extension, PNG, embedded EXIF, CMYK) still convert on the first pass and are skipped on the second.
+
+### Variant generation is idempotent
+
+It regenerated all four sizes for every photo in the tree on every run — 13,678 images. Variants that exist and are newer than their source are now skipped. The original is recompressed _before_ the variants are derived, so its bumped mtime cannot make the freshly-written variants look stale on the next pass.
+
+### `optimize_images.py` is gone, folded down to ~15 lines
+
+It was a scope mismatch, not a bad script. Variants are written at q70 and are ~80% of the resources tree; its size guard correctly refused to touch them, so 370 lines and four optional external encoders (mozjpeg, oxipng, jpegtran, pngquant) only ever had headroom on the full-size originals. That single useful pass — a Pillow re-encode at q82, kept only if it saves ≥4%, written via tmp + atomic replace — now lives in step 2 with no external dependencies. The ≥4% threshold is also what makes re-runs safe: a second pass fails it and leaves the file alone.
+
+### Files removed
+
+- `heic_to_png.py` — superseded by step 1, which needs no ImageMagick, bakes EXIF orientation, strips metadata, and does not delete `.MOV`/`.aae` files as a side effect.
+- `codemod-direct-movement-imports.ts` — one-time codemod, applied 2026-04-11.
+- `create_watch_model.py` — untracked and broken since the registry move: it wrote to `src/app/data/collectionData.tsx` and `movementsData.tsx`, both of which now live in `data/admin/`, and it emitted `MovementsDataDB` imports that models no longer use. The `ADDING_WATCHES_GUIDE.md` reference to its series picker now describes writing the nested `BrandSeries.GROUP.SUB` reference by hand.
+- `scripts/__pycache__/` — stale bytecode, including a `.pyc` for a `migrate_enums.py` that no longer exists.
+
 ## [2026-09-01] — Redesign follow-ups, round three
 
 ### The rail really does scroll on the wheel now

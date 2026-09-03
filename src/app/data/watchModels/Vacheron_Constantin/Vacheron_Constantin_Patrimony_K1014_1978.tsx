@@ -25,7 +25,64 @@ import { WatchDetails } from "../../watchDetails";
 
 const details: WatchDetails = {
   title: "1978 Vacheron Constantin Patrimony K1014",
-  sliderImages: ["public/assets/Images/Cauny/1978_Cauny_Patrimony_K1014/IMG_XXXX.JPG"],
+
+  sliderImages: [
+    "public/assets/Images/Vacheron_Constantin/1978_Vacheron_Constantin_Patrimony_K1014/IMG_3837.JPG",
+    "public/assets/Images/Vacheron_Constantin/1978_Vacheron_Constantin_Patrimony_K1014/IMG_3838.JPG",
+    "public/assets/Images/Vacheron_Constantin/1978_Vacheron_Constantin_Patrimony_K1014/IMG_3840.JPG",
+    "public/assets/Images/Vacheron_Constantin/1978_Vacheron_Constantin_Patrimony_K1014/IMG_3841.JPG",
+    "public/assets/Images/Vacheron_Constantin/1978_Vacheron_Constantin_Patrimony_K1014/IMG_3842.JPG",
+    "public/assets/Images/Vacheron_Constantin/1978_Vacheron_Constantin_Patrimony_K1014/IMG_3844.JPG",
+    "public/assets/Images/Vacheron_Constantin/1978_Vacheron_Constantin_Patrimony_K1014/IMG_3845.JPG",
+    "public/assets/Images/Vacheron_Constantin/1978_Vacheron_Constantin_Patrimony_K1014/IMG_3846.JPG",
+    "public/assets/Images/Vacheron_Constantin/1978_Vacheron_Constantin_Patrimony_K1014/IMG_3847.JPG",
+    "public/assets/Images/Vacheron_Constantin/1978_Vacheron_Constantin_Patrimony_K1014/IMG_3848.JPG",
+    "public/assets/Images/Vacheron_Constantin/1978_Vacheron_Constantin_Patrimony_K1014/IMG_3849.JPG",
+    "public/assets/Images/Vacheron_Constantin/1978_Vacheron_Constantin_Patrimony_K1014/IMG_3850.JPG",
+    "public/assets/Images/Vacheron_Constantin/1978_Vacheron_Constantin_Patrimony_K1014/IMG_3851.JPG",
+    "public/assets/Images/Vacheron_Constantin/1978_Vacheron_Constantin_Patrimony_K1014/IMG_3852.JPG",
+    "public/assets/Images/Vacheron_Constantin/1978_Vacheron_Constantin_Patrimony_K1014/IMG_3853.JPG",
+    "public/assets/Images/Vacheron_Constantin/1978_Vacheron_Constantin_Patrimony_K1014/IMG_3855.JPG",
+
+    "public/assets/Images/Vacheron_Constantin/1978_Vacheron_Constantin_Patrimony_K1014/IMG_3877.JPG",
+    "public/assets/Images/Vacheron_Constantin/1978_Vacheron_Constantin_Patrimony_K1014/IMG_3878.JPG",
+    "public/assets/Images/Vacheron_Constantin/1978_Vacheron_Constantin_Patrimony_K1014/IMG_4023.JPG",
+
+    "public/assets/Images/Vacheron_Constantin/1978_Vacheron_Constantin_Patrimony_K1014/IMG_3821.JPG",
+    "public/assets/Images/Vacheron_Constantin/1978_Vacheron_Constantin_Patrimony_K1014/IMG_3823.JPG",
+    "public/assets/Images/Vacheron_Constantin/1978_Vacheron_Constantin_Patrimony_K1014/IMG_4026.JPG",
+
+    "public/assets/Images/Vacheron_Constantin/1978_Vacheron_Constantin_Patrimony_K1014/IMG_4032.JPG",
+    "public/assets/Images/Vacheron_Constantin/1978_Vacheron_Constantin_Patrimony_K1014/IMG_4033.JPG",
+    "public/assets/Images/Vacheron_Constantin/1978_Vacheron_Constantin_Patrimony_K1014/IMG_4034.JPG",
+    "public/assets/Images/Vacheron_Constantin/1978_Vacheron_Constantin_Patrimony_K1014/IMG_4035.JPG",
+
+    "public/assets/Images/Vacheron_Constantin/1978_Vacheron_Constantin_Patrimony_K1014/IMG_3834.JPG",
+    "public/assets/Images/Vacheron_Constantin/1978_Vacheron_Constantin_Patrimony_K1014/IMG_3835.JPG",
+    "public/assets/Images/Vacheron_Constantin/1978_Vacheron_Constantin_Patrimony_K1014/IMG_3836.JPG",
+
+    "public/assets/Images/Vacheron_Constantin/1978_Vacheron_Constantin_Patrimony_K1014/IMG_3856.JPG",
+    "public/assets/Images/Vacheron_Constantin/1978_Vacheron_Constantin_Patrimony_K1014/IMG_3857.JPG",
+    "public/assets/Images/Vacheron_Constantin/1978_Vacheron_Constantin_Patrimony_K1014/IMG_3858.JPG",
+    "public/assets/Images/Vacheron_Constantin/1978_Vacheron_Constantin_Patrimony_K1014/IMG_3859.JPG",
+    "public/assets/Images/Vacheron_Constantin/1978_Vacheron_Constantin_Patrimony_K1014/IMG_3860.JPG",
+    "public/assets/Images/Vacheron_Constantin/1978_Vacheron_Constantin_Patrimony_K1014/IMG_3861.JPG",
+    "public/assets/Images/Vacheron_Constantin/1978_Vacheron_Constantin_Patrimony_K1014/IMG_3862.JPG",
+    "public/assets/Images/Vacheron_Constantin/1978_Vacheron_Constantin_Patrimony_K1014/IMG_3863.JPG",
+    "public/assets/Images/Vacheron_Constantin/1978_Vacheron_Constantin_Patrimony_K1014/IMG_3864.JPG",
+    "public/assets/Images/Vacheron_Constantin/1978_Vacheron_Constantin_Patrimony_K1014/IMG_3865.JPG",
+    "public/assets/Images/Vacheron_Constantin/1978_Vacheron_Constantin_Patrimony_K1014/IMG_3866.JPG",
+    "public/assets/Images/Vacheron_Constantin/1978_Vacheron_Constantin_Patrimony_K1014/IMG_3867.JPG",
+    "public/assets/Images/Vacheron_Constantin/1978_Vacheron_Constantin_Patrimony_K1014/IMG_3868.JPG",
+    "public/assets/Images/Vacheron_Constantin/1978_Vacheron_Constantin_Patrimony_K1014/IMG_3869.JPG",
+    "public/assets/Images/Vacheron_Constantin/1978_Vacheron_Constantin_Patrimony_K1014/IMG_3870.JPG",
+    "public/assets/Images/Vacheron_Constantin/1978_Vacheron_Constantin_Patrimony_K1014/IMG_3871.JPG",
+    "public/assets/Images/Vacheron_Constantin/1978_Vacheron_Constantin_Patrimony_K1014/IMG_3873.JPG",
+    "public/assets/Images/Vacheron_Constantin/1978_Vacheron_Constantin_Patrimony_K1014/IMG_3874.JPG",
+    "public/assets/Images/Vacheron_Constantin/1978_Vacheron_Constantin_Patrimony_K1014/IMG_3875.JPG",
+    "public/assets/Images/Vacheron_Constantin/1978_Vacheron_Constantin_Patrimony_K1014/IMG_3876.JPG",
+  ],
+
   technicalData: {
     features: [featuresEnum.MECHANICAL],
 
@@ -52,7 +109,7 @@ const details: WatchDetails = {
 
     dial: {
       color: ColorEnum.GOLD,
-      dialMarkers: DialMarketsEnum.ROMAN,
+      dialMarkers: DialMarketsEnum.DAGGER,
       finishingDetails: FinishingDetailsEnum.VERTICAL_BRUSHED,
       luminiscentIndexes: LuminescentIndexesEnum.NONE,
       calendar: CalendarWatchTypeEnum.WITHOUT,
