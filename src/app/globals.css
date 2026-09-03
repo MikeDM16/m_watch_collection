@@ -302,6 +302,74 @@
     color: hsl(var(--brand-foreground));
   }
 
+  /* The "open this" affordance on a product plate, borrowed from Omega's
+     catalogue. Flush to the plate's bottom edge and full width, so it reads as
+     a drawer rather than a tag floating on a photograph — and it lands on the
+     plate's own padding, because every shot is object-contain inside p-2/p-3.
+
+     Gated on `hover: hover and pointer: fine` rather than `not hover: none`:
+     opt in where a pointer is proven. That also means it does not exist on
+     touch, where the whole tile is already the link and a permanently visible
+     bar would just be clutter that sticks after a tap. */
+  /* Absent by default, not merely invisible. The rules below live in a media
+     query, so without a fine pointer the element has no styles at all — and an
+     unstyled span is an inline box that prints "Details" into the plate. */
+  .tile-cue {
+    display: none;
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    .tile-cue {
+      position: absolute;
+      inset-inline: 0;
+      bottom: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding-block: 0.5rem;
+      border-top: 1px solid hsl(var(--border));
+      background: hsl(var(--background) / 0.94);
+      backdrop-filter: blur(2px);
+      transform: translateY(100%);
+      opacity: 0;
+      transition:
+        transform 0.38s cubic-bezier(0.16, 1, 0.3, 1),
+        opacity 0.38s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .group:hover .tile-cue,
+    .group:focus-visible .tile-cue {
+      transform: none;
+      opacity: 1;
+    }
+  }
+
+  /* Film grain over the whole viewport. The one depth addition on a site that
+     otherwise gets its depth from photography and hairlines.
+
+     Deliberately NOT `mix-blend-mode`: that would force a stacking context the
+     size of the viewport and blend with the header. The tile is desaturated in
+     the filter instead, which is what lets one texture read as tooth on the
+     97% paper ground and on the 7% dark ground alike.
+
+     z-60 fits the existing scale: 30 sticky filter bar, 50 header, 100 mobile
+     nav + search palette, 200 skip link. Above the chrome, below the overlays.
+
+     `fixed` means it composites once and never repaints on scroll;
+     `pointer-events: none` means it cannot intercept the filter chips. */
+  .grain {
+    position: fixed;
+    inset: 0;
+    z-index: 60;
+    pointer-events: none;
+    opacity: 0.03;
+    background-repeat: repeat;
+    background-size: 180px 180px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+  .dark .grain {
+    opacity: 0.05;
+  }
+
   /* Scroll-reveal, driven by IntersectionObserver in Reveal.tsx. Kept in CSS
      so the home page ships no animation library. */
   .reveal {

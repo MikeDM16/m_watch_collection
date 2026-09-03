@@ -39,6 +39,20 @@ test.describe("reduced motion", () => {
   });
 });
 
+/**
+ * The grain overlay covers the viewport on every public page, so if it ever
+ * became interactive or scrollable it would break the sticky filter bar and the
+ * pin at once — and only on a real pointer, which is easy to miss.
+ */
+test("the grain layer is inert and does not scroll", async ({ page }) => {
+  await page.goto(MODEL_MECHANICAL);
+
+  const grain = page.locator(".grain");
+  await expect(grain).toHaveCount(1);
+  await expect(grain).toHaveCSS("position", "fixed");
+  await expect(grain).toHaveCSS("pointer-events", "none");
+});
+
 test.describe("full motion", () => {
   test.use({ contextOptions: { reducedMotion: "no-preference" } });
 

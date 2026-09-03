@@ -6,12 +6,12 @@ import {
   routeToCollectionBrandModelPage,
   SizeType,
 } from "@/app/services/commonFunctions";
-import collectionImageLoader from "@/app/services/imageLoader";
 import { Search, X } from "lucide-react";
-import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+
+import PlateImage from "../common/PlateImage";
 
 export interface SearchEntry {
   brand: string;
@@ -211,8 +211,7 @@ export default function SearchPalette() {
                         i === active ? "bg-accent" : ""
                       }`}
                     >
-                      <Image
-                        loader={collectionImageLoader}
+                      <PlateImage
                         src={getExternalResource(
                           getImgURLForSizeType(entry.srcImage, SizeType.THUMBNAIL),
                         )}

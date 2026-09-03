@@ -29,7 +29,8 @@ export default function ContactsComponent() {
             {EMAIL}
           </a>
 
-          <p className="lab mt-6">
+          {/* A place name is a value, not a label. */}
+          <p className="mt-6 text-sm text-muted-foreground">
             <IconLabel icon={MapPin} text="Porto, Portugal" />
           </p>
         </div>

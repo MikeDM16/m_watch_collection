@@ -59,6 +59,14 @@ test("the two fixtures together cover all 8 movement fields", async ({ page }) =
   expect(missing, `movement fields never rendered: ${missing.join(", ")}`).toHaveLength(0);
 });
 
+test("the Series row does not print the group separator", async ({ page }) => {
+  // The stored value is "<group> — <sub>". The tiles have always split it; the
+  // spec row was the last place showing the raw em-dash.
+  await page.goto(MODEL_MECHANICAL);
+  const values = await page.locator("dl dd").allTextContents();
+  for (const value of values) expect(value).not.toContain("—");
+});
+
 test("no spec row renders a label with an empty value", async ({ page }) => {
   await page.goto(MODEL_MECHANICAL);
   const values = await page.locator("dl dd").allTextContents();

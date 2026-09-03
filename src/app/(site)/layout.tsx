@@ -22,6 +22,10 @@ export default function SiteLayout({ children }: { children: React.ReactNode }) 
       </a>
 
       <SiteHeader />
+      {/* Grain lives here rather than in the root layout so /admin stays bare,
+          same reasoning as the header. A sibling of <main>, so ScrollTrigger's
+          pin-spacer on the model route never interacts with it. */}
+      <div aria-hidden className="grain" />
       <main id="main">{children}</main>
 
       {process.env.NODE_ENV === "production" && (

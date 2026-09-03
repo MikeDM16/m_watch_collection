@@ -25,6 +25,7 @@ export default function Page() {
     brand: e.brand,
     legend: e.legend,
     year: e.year,
+    movementTitle: e.movementTitle || undefined,
   }));
 
   const sales: SoldEntry[] = collectionService

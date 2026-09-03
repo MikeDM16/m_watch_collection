@@ -10,6 +10,9 @@ import Image from "next/image";
  *
  * No rule between rows. One hairline above the block. A 9-row Case block reads
  * as a single group rather than a nine-line hairline table.
+ *
+ * A boxed two-column cell grid was tried here and rejected: it reads as a
+ * table, which is precisely what this page is not.
  */
 export default function SpecBlock({
   title,

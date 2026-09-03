@@ -1,8 +1,9 @@
 "use client";
 
 import type { CollectionIndexEntry } from "@/app/data/collectionIndex";
+import { setQueryString, useQueryString } from "@/app/services/useQueryState";
 import { cn } from "@/lib/utils";
-import { useMemo, useState } from "react";
+import { useMemo } from "react";
 
 import WatchTile from "../common/WatchTile";
 import Reveal from "../motion/Reveal";
@@ -21,6 +22,13 @@ const SORTS: { key: Sort; label: string }[] = [
   { key: "az", label: "A-Z" },
 ];
 
+const DEFAULT_SORT: Sort = "year-desc";
+
+function readList(params: URLSearchParams, key: string): string[] {
+  const raw = params.get(key);
+  return raw ? raw.split(",").filter(Boolean) : [];
+}
+
 /**
  * The brand grid, its series filter (preserved), plus type and sort.
  *
@@ -30,6 +38,11 @@ const SORTS: { key: Sort; label: string }[] = [
  * The grid is CSS Grid rather than the old flexbox percentage math. Incomplete
  * final rows now left-align, which is the correct reading order for a contact
  * sheet and a deliberate reversal of Fix 4 in the migration notes.
+ *
+ * Filter state lives in the URL, so a filtered view can be shared, bookmarked
+ * and returned to with Back. Defaults are omitted from the query string, so an
+ * unfiltered page stays on the bare canonical URL. See useQueryState for why
+ * this cannot use useSearchParams on a prerendered route.
  */
 export default function BrandCollectionGrid({
   brand,
@@ -40,14 +53,28 @@ export default function BrandCollectionGrid({
   cards: CardData[];
   groups: string[];
 }) {
-  const [selected, setSelected] = useState<string[]>([]);
-  const [types, setTypes] = useState<string[]>([]);
-  const [sort, setSort] = useState<Sort>("year-desc");
+  const search = useQueryString();
+  const params = useMemo(() => new URLSearchParams(search), [search]);
 
   const allTypes = useMemo(
     () => [...new Set(cards.map((c) => c.entry.type).filter(Boolean))].sort(),
     [cards],
   );
+
+  // Read straight from the URL rather than mirroring it into state, so there
+  // is one source of truth and Back needs no reconciliation.
+  const selected = useMemo(
+    () => readList(params, "series").filter((g) => groups.includes(g)),
+    [params, groups],
+  );
+  const types = useMemo(
+    () => readList(params, "type").filter((t) => allTypes.includes(t)),
+    [params, allTypes],
+  );
+  const sort: Sort = useMemo(() => {
+    const raw = params.get("sort");
+    return SORTS.some((s) => s.key === raw) ? (raw as Sort) : DEFAULT_SORT;
+  }, [params]);
 
   const showSeries = groups.length > 1;
   const showTypes = allTypes.length > 1;
@@ -66,15 +93,31 @@ export default function BrandCollectionGrid({
     return sorted;
   }, [cards, selected, types, sort]);
 
-  const toggle = (value: string, list: string[], set: (v: string[]) => void, total: number) => {
+  const writeList = (key: string, values: string[]) => {
+    const next = new URLSearchParams(params);
+    if (values.length) next.set(key, values.join(","));
+    else next.delete(key);
+    setQueryString(next);
+  };
+
+  const toggle = (value: string, key: string, list: string[], total: number) => {
     const next = list.includes(value) ? list.filter((v) => v !== value) : [...list, value];
     // Selecting everything individually is the same as "All".
-    set(next.length === total ? [] : next);
+    writeList(key, next.length === total ? [] : next);
+  };
+
+  const setSort = (value: Sort) => {
+    const next = new URLSearchParams(params);
+    if (value === DEFAULT_SORT) next.delete("sort");
+    else next.set("sort", value);
+    setQueryString(next);
   };
 
   const reset = () => {
-    setSelected([]);
-    setTypes([]);
+    const next = new URLSearchParams(params);
+    next.delete("series");
+    next.delete("type");
+    setQueryString(next);
   };
 
   return (
@@ -87,7 +130,7 @@ export default function BrandCollectionGrid({
                 <span className="series-filter-label">Series</span>
                 <button
                   type="button"
-                  onClick={() => setSelected([])}
+                  onClick={() => writeList("series", [])}
                   className={cn("series-filter-chip", !selected.length && "is-active")}
                 >
                   All
@@ -96,7 +139,7 @@ export default function BrandCollectionGrid({
                   <button
                     key={g}
                     type="button"
-                    onClick={() => toggle(g, selected, setSelected, groups.length)}
+                    onClick={() => toggle(g, "series", selected, groups.length)}
                     className={cn("series-filter-chip", selected.includes(g) && "is-active")}
                   >
                     {g}
@@ -112,7 +155,7 @@ export default function BrandCollectionGrid({
                   <button
                     key={t}
                     type="button"
-                    onClick={() => toggle(t, types, setTypes, allTypes.length)}
+                    onClick={() => toggle(t, "type", types, allTypes.length)}
                     className={cn("series-filter-chip", types.includes(t) && "is-active")}
                   >
                     {t}
@@ -166,6 +209,7 @@ export default function BrandCollectionGrid({
                 hoverSrc={entry.hoverSrc}
                 group={group || undefined}
                 label={label || undefined}
+                movement={entry.movementTitle || undefined}
                 priority={idx < 4}
               />
             </Reveal>

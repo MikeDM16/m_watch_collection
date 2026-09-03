@@ -6,10 +6,10 @@ import {
   routeToCollectionBrandModelPage,
   SizeType,
 } from "@/app/services/commonFunctions";
-import collectionImageLoader from "@/app/services/imageLoader";
-import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
+
+import PlateImage from "../common/PlateImage";
 
 export interface SoldEntry {
   brand: string;
@@ -50,7 +50,7 @@ export default function SalesResults({ sales }: { sales: SoldEntry[] }) {
       <div className="mx-auto max-w-shell px-[clamp(1rem,4vw,3.5rem)]">
         <div className="flex flex-wrap items-baseline gap-4">
           <h2 className="font-display text-display-m font-medium">Previous Sales</h2>
-          <span className="lab ml-auto">{sales.length} lots</span>
+          <span className="num ml-auto text-xs text-muted-foreground">{sales.length} lots</span>
         </div>
         <p className="mt-3 max-w-[58ch] text-sm leading-relaxed text-muted-foreground">
           Pieces that have moved on, sold at auction through Catawiki.
@@ -74,8 +74,7 @@ export default function SalesResults({ sales }: { sales: SoldEntry[] }) {
                       href={routeToCollectionBrandModelPage(s.brand, s.legend)}
                       className="flex items-center gap-3 no-underline transition-colors hover:text-brand"
                     >
-                      <Image
-                        loader={collectionImageLoader}
+                      <PlateImage
                         src={getExternalResource(
                           getImgURLForSizeType(s.srcImage, SizeType.THUMBNAIL),
                         )}

@@ -12,6 +12,7 @@ import {
   DialInformationToDisplayTextMapping,
   ModelInformationKeyToDisplayTextMapping,
 } from "@/app/data/watchDetails";
+import { parseSeries } from "@/app/data/watchModels/seriesGroup";
 import type { FeatureStruct } from "@/app/enums/featuresEnum";
 import {
   getColumnBraceletBackgroud,
@@ -95,8 +96,23 @@ export default async function BrandModelPage({
   //
   const gallery = (watch.sliderImages ?? []).filter((s) => s !== indexEntry.srcImage);
 
-  const hasDescription = Boolean(watch.description?.text);
+  // WatchDetails.description is deprecated legacy data and is deliberately not
+  // read. It is brand history duplicated across a brand's model files, it
+  // carries raw <a> markup that React escapes into visible tag source, and its
+  // line continuations leave runs of source indentation under
+  // whitespace-pre-line. The blocks stay in the data files; nothing renders
+  // them. Caliber.description and FeatureStruct.description are unrelated
+  // fields and are still rendered below.
   const hasFeatures = (tech.features?.length ?? 0) > 0;
+
+  // The stored series carries both levels as "<group> — <sub>". The tiles have
+  // always split it into two pills; the spec row was the one place still
+  // showing the raw separator. Show the group: the sub-label is already a pill
+  // on every tile and a filter chip on the brand page.
+  const modelInformation = {
+    ...(tech.information as unknown as Record<string, string>),
+    ...(tech.information?.series ? { series: parseSeries(tech.information.series).group } : {}),
+  };
 
   // Fibonacci strides, so each step jumps further than the last. Walking the
   // gallery 0, 1, 2, 3 showed the same angle one shutter apart and looked
@@ -131,7 +147,6 @@ export default async function BrandModelPage({
     return f.key;
   };
 
-  const keyDescription = hasDescription ? pushSection("Description") : null;
   const keyFeatures = hasFeatures ? pushSection("Features") : null;
   const keyModel = pushSection("Model");
   const keyCase = pushSection("Case");
@@ -258,7 +273,10 @@ export default async function BrandModelPage({
                 <span className="num text-xl font-medium text-brand">
                   €{watch.saleReport.price.toLocaleString("en-GB")}
                 </span>
-                <span className="lab">Sold {watch.saleReport.date}</span>
+                {/* A date is a value, not a label. */}
+                <span className="num text-xs text-muted-foreground">
+                  Sold {watch.saleReport.date}
+                </span>
                 {watch.saleReport.url && (
                   <Link
                     href={watch.saleReport.url}
@@ -280,15 +298,6 @@ export default async function BrandModelPage({
 
         {/* Pinned viewer: photograph left, specification right */}
         <PinnedSpecViewer frames={frames}>
-          {watch.description?.text && (
-            <section data-frame={keyDescription!} className="border-t border-border pt-6">
-              <h2 className="font-display text-lg font-medium tracking-tight">Description</h2>
-              <p className="mt-3 max-w-[65ch] whitespace-pre-line text-[0.92rem] leading-relaxed text-muted-foreground">
-                {watch.description.text}
-              </p>
-            </section>
-          )}
-
           {tech.features?.length > 0 && (
             <section data-frame={keyFeatures!} className="border-t border-border pt-6">
               <h2 className="font-display text-lg font-medium tracking-tight">Features</h2>
@@ -314,7 +323,7 @@ export default async function BrandModelPage({
           <div data-frame={keyModel}>
             <SpecBlock
               title="Model"
-              values={tech.information as unknown as Record<string, string>}
+              values={modelInformation}
               labels={ModelInformationKeyToDisplayTextMapping}
             />
           </div>
@@ -368,7 +377,9 @@ export default async function BrandModelPage({
                       href={href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="lab text-brand underline-offset-4 hover:underline"
+                      // Sentence case: these are titles ("Ranfft Peseux 320"),
+                      // not labels, and .lab shouted four of them onto one line.
+                      className="text-xs text-brand underline-offset-4 hover:underline"
                     >
                       {label}
                     </Link>

@@ -6,10 +6,10 @@ import {
   routeToCollectionBrandModelPage,
   SizeType,
 } from "@/app/services/commonFunctions";
-import collectionImageLoader from "@/app/services/imageLoader";
-import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
+
+import PlateImage from "./PlateImage";
 
 /**
  * One watch in a grid. Borderless, as the old tiles were: depth comes from the
@@ -17,6 +17,12 @@ import { useState } from "react";
  *
  * The hover image crossfades instead of hard-swapping, and both frames are in
  * the DOM so the alternate is already decoded when the pointer arrives.
+ *
+ * Hover carries three coordinated signals and no scale. Growing an
+ * object-contain product shot pushes the watch past the plate padding it was
+ * composed against — at the 2-column mobile breakpoint 3% is ~5px a side
+ * against 8px of padding — and the reference catalogues this borrows from
+ * crossfade angles rather than zoom.
  */
 export default function WatchTile({
   brand,
@@ -26,7 +32,7 @@ export default function WatchTile({
   hoverSrc,
   group,
   label,
-  showBrand = false,
+  movement,
   priority = false,
 }: {
   brand: string;
@@ -36,7 +42,7 @@ export default function WatchTile({
   hoverSrc?: string | null;
   group?: string;
   label?: string;
-  showBrand?: boolean;
+  movement?: string;
   priority?: boolean;
 }) {
   const [hovered, setHovered] = useState(false);
@@ -56,8 +62,7 @@ export default function WatchTile({
       onMouseLeave={() => setHovered(false)}
     >
       <div className="relative aspect-square overflow-hidden bg-muted">
-        <Image
-          loader={collectionImageLoader}
+        <PlateImage
           src={primary}
           alt={legend}
           width={800}
@@ -65,21 +70,25 @@ export default function WatchTile({
           sizes="(max-width: 640px) 45vw, (max-width: 1024px) 30vw, 22vw"
           priority={priority}
           loading={priority ? undefined : "lazy"}
-          className={`absolute inset-0 size-full object-contain p-2 transition-[opacity,transform] duration-500 ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.03] ${
-            alt && hovered ? "opacity-0" : "opacity-100"
-          }`}
+          show={!(alt && hovered)}
+          className="absolute inset-0 size-full object-contain p-2"
         />
         {alt && hovered && (
-          <Image
-            loader={collectionImageLoader}
+          <PlateImage
             src={alt}
             alt=""
             width={800}
             height={800}
             sizes="(max-width: 640px) 45vw, (max-width: 1024px) 30vw, 22vw"
-            className="absolute inset-0 size-full scale-[1.03] object-contain p-2 transition-opacity duration-500"
+            className="absolute inset-0 size-full object-contain p-2"
           />
         )}
+
+        {/* aria-hidden: the Link already takes its accessible name from the
+            caption below, so announcing "Details" would only duplicate it. */}
+        <span aria-hidden className="tile-cue">
+          <span className="lab text-foreground">Details</span>
+        </span>
       </div>
 
       {(group || label) && (
@@ -90,11 +99,13 @@ export default function WatchTile({
       )}
 
       <div className={group || label ? "mt-1" : "mt-3"}>
-        {showBrand && <div className="lab">{brand}</div>}
         <div className="text-sm leading-snug transition-colors group-hover:text-brand">
           {display}
         </div>
-        <div className="num mt-0.5 text-xs text-muted-foreground">{year}</div>
+        <div className="mt-0.5 truncate text-xs text-muted-foreground">
+          <span className="num">{year}</span>
+          {movement && ` · ${movement}`}
+        </div>
       </div>
     </Link>
   );

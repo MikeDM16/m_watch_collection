@@ -5,10 +5,10 @@ import {
   getImgURLForSizeType,
   SizeType,
 } from "@/app/services/commonFunctions";
-import collectionImageLoader from "@/app/services/imageLoader";
 import dynamic from "next/dynamic";
-import Image from "next/image";
 import { useState } from "react";
+
+import PlateImage from "../common/PlateImage";
 
 const LightboxViewer = dynamic(() => import("../common/LightboxViewer"), { ssr: false });
 
@@ -50,8 +50,7 @@ export default function ContactSheet({ images }: { images: string[] }) {
             aria-label={`Open photograph ${i + 1} of ${images.length}`}
             className="group relative aspect-square overflow-hidden bg-muted"
           >
-            <Image
-              loader={collectionImageLoader}
+            <PlateImage
               src={getExternalResource(getImgURLForSizeType(src, SizeType.THUMBNAIL))}
               alt=""
               width={200}
@@ -59,7 +58,7 @@ export default function ContactSheet({ images }: { images: string[] }) {
               sizes="(max-width: 640px) 25vw, 120px"
               loading={i < 12 ? undefined : "lazy"}
               priority={false}
-              className="size-full object-contain transition-transform duration-300 ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-105"
+              className="size-full object-contain group-hover:scale-105"
             />
           </button>
         ))}
@@ -75,7 +74,8 @@ export default function ContactSheet({ images }: { images: string[] }) {
         </button>
       )}
 
-      <p className="lab mt-3 normal-case tracking-normal">
+      {/* Not .lab: this overrode both properties that define it. */}
+      <p className="mt-3 text-[0.7rem] text-muted-foreground">
         Shown in the order they were catalogued.
       </p>
 
