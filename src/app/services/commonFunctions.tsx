@@ -1,25 +1,34 @@
 import type { LucideIcon } from "lucide-react";
 
 import { brandsDB } from "../data/brands";
+import { SITE_URL } from "../siteConfig";
 
 /**
- * The single CDN URL builder. Everything that shows a resources-repo image goes
- * through here: next/image call sites, the HeroBand and SiteFooter CSS
- * backgrounds, and the PinnedSpecViewer raw <img> frames.
+ * The single resource-image URL builder. Everything that shows a
+ * resources-repo image goes through here: next/image call sites, the
+ * HeroBand/SiteFooter CSS backgrounds, the PinnedSpecViewer raw <img> frames,
+ * and the Open Graph / satori image resolution — which is why this returns an
+ * absolute URL rather than a same-origin relative path: social-preview
+ * crawlers and satori's server-side fetch can't resolve a relative one.
  *
- * raw.githubusercontent.com, not a general-purpose CDN in front of it. jsDelivr
- * was tried here — same warm latency, longer browser-cache TTL on paper — but
- * a burst of concurrent first-time requests (exactly what a photo-heavy page
- * produces) reproducibly dropped 2.5-4.5% of them with 403/404/timeout, and
- * jsDelivr cached some of those failures and kept serving them on retry. Raw
- * had zero failures on the identical burst. That is a correctness regression,
- * not a tuning tradeoff, so it stays reverted.
+ * `${SITE_URL}/img/...`, not raw.githubusercontent.com directly. GitHub's raw
+ * content sends `Cache-Control: max-age=300`, and that's theirs to set, not
+ * ours — there's no way to override a response header on a host we don't own.
+ * The `/img/:path*` rewrite in next.config.ts proxies this through our own
+ * origin instead, so our own `headers()` rule controls the Cache-Control
+ * (30 days: these photos don't change once published).
  *
- * Changing this host means changing images.remotePatterns in next.config.ts in
- * the same commit, or every image still on Vercel's optimiser 400s.
+ * jsDelivr was tried in front of raw.githubusercontent.com at one point — same
+ * warm latency, longer cache TTL on paper — but a burst of concurrent
+ * first-time requests (exactly what a photo-heavy page produces) reproducibly
+ * dropped 2.5-7.8% of them with 403/404/timeout, some persisting on retry. The
+ * `/img` rewrite's destination stays plain raw.githubusercontent.com.
+ *
+ * Changing the rewrite destination's host means changing this base path in
+ * the same commit, or every image 404s.
  */
 export function getExternalResource(image_url: string) {
-  const base_url = "https://raw.githubusercontent.com/MikeDM16/MWatchCollectionResources/master";
+  const base_url = `${SITE_URL}/img`;
   const proxy_url = `${encodeURI(base_url)}/${encodeURI(image_url)}`;
   return proxy_url;
 }

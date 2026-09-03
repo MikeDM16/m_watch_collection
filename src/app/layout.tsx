@@ -58,9 +58,10 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
     >
       <head>
         <script dangerouslySetInnerHTML={{ __html: themeScript }} />
-        {/* Must track the host in getExternalResource. */}
-        <link rel="preconnect" href="https://raw.githubusercontent.com" />
-        <link rel="dns-prefetch" href="https://raw.githubusercontent.com" />
+        {/* No preconnect to raw.githubusercontent.com here: getExternalResource
+            proxies resource images through our own origin (see next.config.ts's
+            /img rewrite), so the browser never opens a connection to that host
+            directly — preconnecting to it would just be a wasted connection. */}
       </head>
       <body>{children}</body>
     </html>
