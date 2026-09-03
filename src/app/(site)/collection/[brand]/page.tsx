@@ -112,7 +112,7 @@ export default async function Page({ params }: { params: Promise<{ brand: string
                 src={getExternalResource(brandDetails.logoImg)}
                 alt={brand}
                 fill
-                sizes="140px"
+                unoptimized
                 className="logo-mono object-contain object-left"
               />
             </span>

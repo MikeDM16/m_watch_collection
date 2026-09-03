@@ -17,12 +17,13 @@ export default function AboutMeContainer() {
         <h2 className="font-display text-display-m font-medium">About Me</h2>
 
         <div className="mt-10 grid items-center gap-10 md:grid-cols-[minmax(0,.8fr)_minmax(0,1.2fr)] md:gap-14">
+          {/* unoptimized: see the note on getExternalResource. */}
           <Image
             src={getExternalResource(PORTRAIT)}
             alt="Miguel dias Miranda"
             width={800}
             height={1000}
-            sizes="(max-width: 768px) 100vw, 34vw"
+            unoptimized
             loading="lazy"
             className="aspect-[4/5] max-h-[30rem] w-full bg-muted object-cover"
           />

@@ -47,17 +47,18 @@ export default function SpecBlock({
           ))}
         </dl>
 
-        {/* No `sizes` on the image below: it is fixed-width, and a `sizes` string
-            with no `vw` token makes getWidths fall through to the whole
-            deviceSizes+imageSizes array — the old "220px" asked Vercel for every
-            rung up to w=3840. Omitting it takes the [width, width*2] branch
-            instead, so these 34 local JPGs cost two cache keys each. */}
+        {/* unoptimized: see the note on getExternalResource in commonFunctions.tsx.
+            Vercel's /_next/image endpoint 402s every cache MISS while the
+            account is over its monthly transformation quota, and these 34
+            local JPGs are small decorative assets already — not worth routing
+            through an optimiser that might be unavailable at any given time. */}
         {image && (
           <Image
             src={image}
             alt={imageAlt}
             width={220}
             height={220}
+            unoptimized
             loading="lazy"
             className="hidden h-auto w-[140px] self-start object-contain opacity-80 sm:block"
           />

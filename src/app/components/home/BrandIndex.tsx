@@ -64,7 +64,7 @@ export default function BrandIndex({
                   src={getExternalResource(b.logoImg)}
                   alt={b.name}
                   fill
-                  sizes="(max-width: 640px) 33vw, (max-width: 1024px) 25vw, 20vw"
+                  unoptimized
                   priority={i < 5}
                   loading={i < 5 ? undefined : "lazy"}
                   className="logo-mono object-contain p-5"

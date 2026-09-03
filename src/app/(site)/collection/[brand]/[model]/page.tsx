@@ -203,7 +203,7 @@ export default async function BrandModelPage({
                   src={getExternalResource(brandDetails.logoImg)}
                   alt={brand}
                   fill
-                  sizes="110px"
+                  unoptimized
                   className="logo-mono object-contain object-right"
                 />
               </span>
@@ -213,12 +213,20 @@ export default async function BrandModelPage({
 
         {/* Hero plate */}
         <section className="grid items-center gap-8 py-10 lg:grid-cols-[1fr_1fr] lg:gap-14">
+          {/* unoptimized: see the note on getExternalResource. Vercel's own
+              /_next/image endpoint is 402ing every cache MISS right now (the
+              account is over its monthly transformation quota, and changing
+              the origin URL busts every existing cache key), so this bypasses
+              it rather than depend on quota or plan. The source is already a
+              correctly-sized, mozjpeg-optimised JPEG from sample_images.py —
+              this ships that file directly instead of a Vercel-recompressed
+              WebP. */}
           <Image
             src={heroSrc}
             alt={watch.title}
             width={1200}
             height={1200}
-            sizes="(max-width: 1024px) 100vw, 48vw"
+            unoptimized
             priority
             className="plate max-h-[58vh] p-4"
           />
