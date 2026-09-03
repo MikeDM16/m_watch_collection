@@ -31,7 +31,6 @@ test("a shared filtered URL renders the filtered grid on arrival", async ({ page
   await expect(chip(page, "Speedmaster")).toHaveClass(/is-active/);
   await expect(chip(page, "A-Z")).toHaveClass(/is-active/);
 
-  // Every visible tile belongs to the filtered series.
   const groupTags = page.locator(".series-tag-group");
   await expect(groupTags.first()).toBeVisible();
   for (const text of await groupTags.allTextContents()) {

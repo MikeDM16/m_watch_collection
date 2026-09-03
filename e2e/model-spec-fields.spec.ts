@@ -60,8 +60,6 @@ test("the two fixtures together cover all 8 movement fields", async ({ page }) =
 });
 
 test("the Series row does not print the group separator", async ({ page }) => {
-  // The stored value is "<group> — <sub>". The tiles have always split it; the
-  // spec row was the last place showing the raw em-dash.
   await page.goto(MODEL_MECHANICAL);
   const values = await page.locator("dl dd").allTextContents();
   for (const value of values) expect(value).not.toContain("—");

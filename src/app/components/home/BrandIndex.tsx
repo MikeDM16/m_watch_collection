@@ -60,7 +60,10 @@ export default function BrandIndex({
                     aspect-derived height is indefinite, so `max-height: 100%`
                     resolves to none and the squarest mark (Novart, 256x159)
                     overflowed by 6px. The padding lives on the image, where it
-                    shrinks the content box that object-contain fits into. */}
+                    shrinks the content box that object-contain fits into, so it
+                    scales with the cell: at three columns on a phone the cell is
+                    ~125px wide and a flat 1.25rem inset would swallow two thirds
+                    of it. */}
                 <Image
                   src={getExternalResource(b.logoImg)}
                   alt={b.name}
@@ -68,7 +71,7 @@ export default function BrandIndex({
                   unoptimized
                   priority={i < 5}
                   loading={i < 5 ? undefined : "lazy"}
-                  className="logo-mono object-contain p-5"
+                  className="logo-mono object-contain p-3.5 sm:p-4 lg:p-5"
                 />
               </Link>
             ))}

@@ -16,11 +16,11 @@ const ETA_G10_211: Caliber = {
   },
   // sliderImages
   sliderImages: [
-    "public/assets/Images/movements/ETA/ETA_G10_211/eta-caliber-g10-211.JPG",
-    "public/assets/Images/movements/ETA/ETA_G10_211/eta-caliber-g10-211-2.JPG",
-    "public/assets/Images/movements/ETA/ETA_G10_211/G10_211_1.JPG",
-    "public/assets/Images/movements/ETA/ETA_G10_211/G10_211_2.JPG",
-    "public/assets/Images/movements/ETA/ETA_G10_211/G10_211_3.JPG",
+    "public/assets/Images/Movements/ETA/ETA_G10_211/eta-caliber-g10-211.JPG",
+    "public/assets/Images/Movements/ETA/ETA_G10_211/eta-caliber-g10-211-2.JPG",
+    "public/assets/Images/Movements/ETA/ETA_G10_211/G10_211_1.JPG",
+    "public/assets/Images/Movements/ETA/ETA_G10_211/G10_211_2.JPG",
+    "public/assets/Images/Movements/ETA/ETA_G10_211/G10_211_3.JPG",
   ],
   // Details
   details: {

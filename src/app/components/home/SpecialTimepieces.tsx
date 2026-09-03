@@ -24,10 +24,6 @@ export interface SpecialItemEntry {
 /**
  * One figure in the rail. Split out because the hover crossfade needs state and
  * hooks cannot live inside the map.
- *
- * The rail has always received a `hoverSrc` for every piece and never rendered
- * it. It now behaves like the grid tile: two frames in the DOM, crossfaded, no
- * scale on an object-contain product shot.
  */
 function RailTile({ entry, priority }: { entry: SpecialItemEntry; priority: boolean }) {
   const [hovered, setHovered] = useState(false);

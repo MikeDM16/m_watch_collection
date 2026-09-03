@@ -96,19 +96,13 @@ export default async function BrandModelPage({
   //
   const gallery = (watch.sliderImages ?? []).filter((s) => s !== indexEntry.srcImage);
 
-  // WatchDetails.description is deprecated legacy data and is deliberately not
-  // read. It is brand history duplicated across a brand's model files, it
-  // carries raw <a> markup that React escapes into visible tag source, and its
-  // line continuations leave runs of source indentation under
-  // whitespace-pre-line. The blocks stay in the data files; nothing renders
-  // them. Caliber.description and FeatureStruct.description are unrelated
-  // fields and are still rendered below.
+  // WatchDetails.description is deprecated and deliberately not read.
+  // Caliber.description and FeatureStruct.description are unrelated fields and
+  // are still rendered below.
   const hasFeatures = (tech.features?.length ?? 0) > 0;
 
-  // The stored series carries both levels as "<group> — <sub>". The tiles have
-  // always split it into two pills; the spec row was the one place still
-  // showing the raw separator. Show the group: the sub-label is already a pill
-  // on every tile and a filter chip on the brand page.
+  // The stored series carries both levels as "<group> — <sub>"; the spec row
+  // shows the group, since the sub-label is already a pill on every tile.
   const modelInformation = {
     ...(tech.information as unknown as Record<string, string>),
     ...(tech.information?.series ? { series: parseSeries(tech.information.series).group } : {}),
@@ -122,21 +116,24 @@ export default async function BrandModelPage({
   const pickIndex = (n: number) =>
     gallery.length ? FIB_STRIDE[n % FIB_STRIDE.length] % gallery.length : 0;
 
-  const galleryFrame = (n: number, label: string) => ({
-    key: `sec-${n}`,
-    label,
-    images: [
-      {
-        src: getExternalResource(
-          getImgURLForSizeType(
-            gallery.length ? gallery[pickIndex(n)] : indexEntry.srcImage,
-            SizeType.GALLERY,
-          ),
-        ),
-        alt: watch.title,
-      },
-    ],
-  });
+  // The raw path travels with the frame. `gallery` has the hero filtered out,
+  // so a stride index is not an index into `watch.sliderImages`; the raw path
+  // is what maps a pinned photograph back onto the contact sheet, and it is
+  // also what the lightbox takes.
+  const galleryFrame = (n: number, label: string) => {
+    const raw = gallery.length ? gallery[pickIndex(n)] : indexEntry.srcImage;
+    return {
+      key: `sec-${n}`,
+      label,
+      images: [
+        {
+          src: getExternalResource(getImgURLForSizeType(raw, SizeType.GALLERY)),
+          alt: watch.title,
+          raw,
+        },
+      ],
+    };
+  };
 
   // Sections are pushed in render order, so each one takes the next gallery
   // photograph and the page and the viewer cannot drift apart.
@@ -153,31 +150,37 @@ export default async function BrandModelPage({
   const keyDial = pushSection("Dial");
   const keyBracelet = pushSection("Bracelet");
 
-  // The movement block cycles through every movement photograph it has.
+  // The movement block cycles through every movement photograph it has. Those
+  // are a separate album from the watch's own, so zooming one pages through the
+  // movement set rather than the record it is not part of. The fallback frame
+  // is a gallery photograph, so it goes back to the record like the rest.
   const keyMovement = "movement";
+  const hasMovementImages = (caliber.sliderImages?.length ?? 0) > 0;
+  const movementImages = hasMovementImages
+    ? caliber.sliderImages
+    : [gallery[0] ?? indexEntry.srcImage];
   frames.push({
     key: keyMovement,
     label: caliber.title,
-    images: (caliber.sliderImages?.length
-      ? caliber.sliderImages
-      : [gallery[0] ?? indexEntry.srcImage]
-    ).map((src) => ({
-      src: getExternalResource(getImgURLForSizeType(src, SizeType.GALLERY)),
+    images: movementImages.map((raw) => ({
+      src: getExternalResource(getImgURLForSizeType(raw, SizeType.GALLERY)),
       alt: `${caliber.title} movement`,
+      raw,
     })),
+    zoomSet: hasMovementImages ? caliber.sliderImages : undefined,
   });
 
   const keySale = "sale";
   if (watch.saleReport) {
+    const saleRaw = getSaleReportImage(indexEntry.srcImage);
     frames.push({
       key: keySale,
       label: "Sale report",
-      images: [
-        {
-          src: getExternalResource(getSaleReportImage(indexEntry.srcImage)),
-          alt: "Auction listing",
-        },
-      ],
+      // zoomSet null: saleReport.JPG is served full-size and deliberately has
+      // no size variants (scripts/README.md), so the lightbox's five-tier
+      // srcSet would be four 404s. The listing has its own link in the hero.
+      images: [{ src: getExternalResource(saleRaw), alt: "Auction listing", raw: saleRaw }],
+      zoomSet: null,
     });
   }
 
@@ -273,7 +276,6 @@ export default async function BrandModelPage({
                 <span className="num text-xl font-medium text-brand">
                   €{watch.saleReport.price.toLocaleString("en-GB")}
                 </span>
-                {/* A date is a value, not a label. */}
                 <span className="num text-xs text-muted-foreground">
                   Sold {watch.saleReport.date}
                 </span>
@@ -297,7 +299,7 @@ export default async function BrandModelPage({
         <ContactSheet images={watch.sliderImages ?? []} />
 
         {/* Pinned viewer: photograph left, specification right */}
-        <PinnedSpecViewer frames={frames}>
+        <PinnedSpecViewer frames={frames} photos={watch.sliderImages ?? []}>
           {tech.features?.length > 0 && (
             <section data-frame={keyFeatures!} className="border-t border-border pt-6">
               <h2 className="font-display text-lg font-medium tracking-tight">Features</h2>
@@ -377,8 +379,6 @@ export default async function BrandModelPage({
                       href={href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      // Sentence case: these are titles ("Ranfft Peseux 320"),
-                      // not labels, and .lab shouted four of them onto one line.
                       className="text-xs text-brand underline-offset-4 hover:underline"
                     >
                       {label}

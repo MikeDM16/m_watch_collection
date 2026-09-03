@@ -39,10 +39,8 @@ function readList(params: URLSearchParams, key: string): string[] {
  * final rows now left-align, which is the correct reading order for a contact
  * sheet and a deliberate reversal of Fix 4 in the migration notes.
  *
- * Filter state lives in the URL, so a filtered view can be shared, bookmarked
- * and returned to with Back. Defaults are omitted from the query string, so an
- * unfiltered page stays on the bare canonical URL. See useQueryState for why
- * this cannot use useSearchParams on a prerendered route.
+ * Filter state lives in the URL, with defaults omitted so an unfiltered page
+ * stays on the bare canonical URL. See useQueryState for the mechanism.
  */
 export default function BrandCollectionGrid({
   brand,
@@ -61,8 +59,8 @@ export default function BrandCollectionGrid({
     [cards],
   );
 
-  // Read straight from the URL rather than mirroring it into state, so there
-  // is one source of truth and Back needs no reconciliation.
+  // Read straight from the URL rather than mirroring it into state, so Back
+  // needs no reconciliation.
   const selected = useMemo(
     () => readList(params, "series").filter((g) => groups.includes(g)),
     [params, groups],

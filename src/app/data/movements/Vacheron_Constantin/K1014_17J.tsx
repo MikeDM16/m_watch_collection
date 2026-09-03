@@ -24,11 +24,11 @@ const VACHERON_CONSTANTIN_K1014_17J: Caliber = {
   },
   // sliderImages
   sliderImages: [
-    "public/assets/Images/movements/Vacheron_Constantin/K1014/K1014_1.JPG",
-    "public/assets/Images/movements/Vacheron_Constantin/K1014/K1014_2.JPG",
-    "public/assets/Images/movements/Vacheron_Constantin/K1014/K1014_3.JPG",
-    "public/assets/Images/movements/Vacheron_Constantin/K1014/K1014_4.JPG",
-    "public/assets/Images/movements/Vacheron_Constantin/K1014/K1014_5.JPG",
+    "public/assets/Images/Movements/Vacheron_Constantin/K1014/K1014_1.JPG",
+    "public/assets/Images/Movements/Vacheron_Constantin/K1014/K1014_2.JPG",
+    "public/assets/Images/Movements/Vacheron_Constantin/K1014/K1014_3.JPG",
+    "public/assets/Images/Movements/Vacheron_Constantin/K1014/K1014_4.JPG",
+    "public/assets/Images/Movements/Vacheron_Constantin/K1014/K1014_5.JPG",
   ],
   // Details
   details: {

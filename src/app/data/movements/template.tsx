@@ -21,9 +21,9 @@ const COOL: Caliber = {
   },
   // sliderImages
   sliderImages: [
-    "public/assets/Images/movements/ETA/ETA_1256/ETA_1256_1.JPG",
-    "public/assets/Images/movements/ETA/ETA_1256/ETA_1256_2.JPG",
-    "public/assets/Images/movements/ETA/ETA_1256/ETA_1256_3.JPG",
+    "public/assets/Images/Movements/ETA/ETA_1256/ETA_1256_1.JPG",
+    "public/assets/Images/Movements/ETA/ETA_1256/ETA_1256_2.JPG",
+    "public/assets/Images/Movements/ETA/ETA_1256/ETA_1256_3.JPG",
   ],
   // Details
   details: {

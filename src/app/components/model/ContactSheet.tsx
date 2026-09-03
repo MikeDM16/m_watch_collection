@@ -74,7 +74,6 @@ export default function ContactSheet({ images }: { images: string[] }) {
         </button>
       )}
 
-      {/* Not .lab: this overrode both properties that define it. */}
       <p className="mt-3 text-[0.7rem] text-muted-foreground">
         Shown in the order they were catalogued.
       </p>

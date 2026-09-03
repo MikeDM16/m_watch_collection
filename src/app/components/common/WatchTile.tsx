@@ -17,12 +17,6 @@ import PlateImage from "./PlateImage";
  *
  * The hover image crossfades instead of hard-swapping, and both frames are in
  * the DOM so the alternate is already decoded when the pointer arrives.
- *
- * Hover carries three coordinated signals and no scale. Growing an
- * object-contain product shot pushes the watch past the plate padding it was
- * composed against — at the 2-column mobile breakpoint 3% is ~5px a side
- * against 8px of padding — and the reference catalogues this borrows from
- * crossfade angles rather than zoom.
  */
 export default function WatchTile({
   brand,
@@ -84,8 +78,7 @@ export default function WatchTile({
           />
         )}
 
-        {/* aria-hidden: the Link already takes its accessible name from the
-            caption below, so announcing "Details" would only duplicate it. */}
+        {/* aria-hidden: the Link takes its accessible name from the caption. */}
         <span aria-hidden className="tile-cue">
           <span className="lab text-foreground">Details</span>
         </span>
