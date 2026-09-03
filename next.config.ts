@@ -37,24 +37,15 @@ const nextConfig: NextConfig = {
     minimumCacheTTL: 2678400, // 31 days, Vercel's documented CDN maximum
   },
 
-  // Proxies the resources repo through our own origin so we can set our own
-  // Cache-Control on it — raw.githubusercontent.com sends max-age=300 and we
-  // have no way to override a header on a response from a host we don't own.
-  // getExternalResource (commonFunctions.tsx) builds every image URL as
-  // `${SITE_URL}/img/...`, so this must stay in sync with that.
-  //
-  // This is a plain CDN passthrough, not next/image: nothing here creates a
-  // transformation or touches the Image Optimization quota. Vercel proxies an
-  // external-destination rewrite at the CDN/edge layer (no Function invoked),
-  // billed the same as any other static asset — Fast Data Transfer + Edge
-  // Requests, not Fast Origin Transfer.
-  rewrites: async () => [
-    {
-      source: "/img/:path*",
-      destination:
-        "https://raw.githubusercontent.com/MikeDM16/MWatchCollectionResources/master/:path*",
-    },
-  ],
+  // /img/[...path]/route.ts serves the resources repo through our own origin
+  // (getExternalResource builds every image URL as `${SITE_URL}/img/...`).
+  // That used to be a plain rewrite here, but a rewrite can only ever forward
+  // the upstream's own Cache-Control to the browser, never override it —
+  // raw.githubusercontent.com sends max-age=300, and Vercel's documented
+  // priority rule is that an origin's own Cache-Control always wins over one
+  // set in next.config.ts. The route handler sets its own response headers
+  // instead. The matching /img/:path* rule further down in `headers` asserts
+  // the same values again at the config level — see the comment there.
 
   headers: async () => [
     {
@@ -76,23 +67,21 @@ const nextConfig: NextConfig = {
       ],
     },
     {
-      // Must come after the generic /:path* rule above — header overriding is
-      // last-match-wins per key, and this narrower rule needs to win for /img.
-      //
-      // Cache-Control is what the browser honours directly. CDN-Cache-Control /
-      // Vercel-CDN-Cache-Control tell Vercel's own edge to cache the proxied
-      // bytes so most requests never reach GitHub at all. Vercel only honours
-      // upstream cache headers on external rewrites by default for projects
-      // created on or after 2026-04-06; x-vercel-enable-rewrite-caching forces
-      // it on regardless of project age. Vercel-Cache-Tag is there so the whole
-      // set can be purged in one call if a photo is ever replaced.
+      // Without this, the generic /:path* rule above wins here too — header
+      // overriding is last-match-wins per key, and /img/:path* also matches
+      // that catch-all. Confirmed by direct testing: the route handler's own
+      // explicit Cache-Control was getting overwritten by the value above.
+      // Vercel's docs say a Function's own response headers take priority
+      // over next.config.ts, which would make this redundant, but that
+      // priority is Vercel-platform behavior that a local `next start` server
+      // doesn't reproduce — asserting the same value again here at the
+      // config level is what's actually been verified to work, in whichever
+      // environment ends up applying it.
       source: "/img/:path*",
       headers: [
         { key: "Cache-Control", value: "public, max-age=2592000, immutable" },
         { key: "CDN-Cache-Control", value: "public, max-age=2592000" },
         { key: "Vercel-CDN-Cache-Control", value: "public, max-age=2592000" },
-        { key: "x-vercel-enable-rewrite-caching", value: "1" },
-        { key: "Vercel-Cache-Tag", value: "catalog-image" },
       ],
     },
   ],
