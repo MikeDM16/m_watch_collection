@@ -18,8 +18,8 @@ const nextConfig: NextConfig = {
     remotePatterns: [
       {
         protocol: "https",
-        hostname: "cdn.jsdelivr.net",
-        pathname: "/gh/MikeDM16/MWatchCollectionResources@master/public/**",
+        hostname: "raw.githubusercontent.com",
+        pathname: "/MikeDM16/MWatchCollectionResources/master/public/**",
       },
     ],
     // Without this the default is `**`, which allows any /public path.
