@@ -5,6 +5,7 @@ import {
   getImgURLForSizeType,
   SizeType,
 } from "@/app/services/commonFunctions";
+import collectionImageLoader from "@/app/services/imageLoader";
 import dynamic from "next/dynamic";
 import Image from "next/image";
 import { useState } from "react";
@@ -50,6 +51,7 @@ export default function ContactSheet({ images }: { images: string[] }) {
             className="group relative aspect-square overflow-hidden bg-muted"
           >
             <Image
+              loader={collectionImageLoader}
               src={getExternalResource(getImgURLForSizeType(src, SizeType.THUMBNAIL))}
               alt=""
               width={200}

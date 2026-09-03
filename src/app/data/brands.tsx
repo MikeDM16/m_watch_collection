@@ -246,6 +246,18 @@ export const brandsDB: Brand[] = [
       details: "Founded in La Chaux-de-Fonds, Switzerland",
     },
   },
+  {
+    name: BrandsEnum.VACHERON_CONSTANTIN,
+    logoImg: "public/assets/Images/Brands_Logos/vacheron_constantin_logo.PNG",
+    displayOrder: 33,
+    website: "https://www.vacheron-constantin.com",
+    description:
+      "Vacheron Constantin is the world's oldest watch Manufacture, operating continuously since 1755. The Maison creates timepieces with unique technical and aesthetic signatures, perpetuating a proud heritage through generations of master craftsmen.  ",
+    foundedInformation: {
+      year: 1755,
+      details: "Founded in Geneva, Switzerland",
+    },
+  },
 
   /*{
     name: BrandsEnum.HEUER,

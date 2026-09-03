@@ -118,6 +118,7 @@ import TISSOT_2170 from "../movements/Tissot/2170_17J";
 import UNITAS_6325 from "../movements/Unitas/Unitas_6325";
 import UNITAS_6380 from "../movements/Unitas/Unitas_6380";
 import UNIVERSAL_GENEVE_262_17J from "../movements/Universal_Geneve/UG_Cal_262_17J";
+import VACHERON_CONSTANTIN_K1014_17J from "../movements/Vacheron_Constantin/K1014_17J";
 import VALJOIX_7734_17J from "../movements/Valjoux/7734_17J";
 import VALJOUX_77_17J from "../movements/Valjoux/Valjoux_77_17J";
 import VALJOUX_726_88_17J from "../movements/Valjoux/Valjoux_726_88_17J";
@@ -278,6 +279,8 @@ export const MovementsDataDB: Record<string, Caliber> = {
   VENUS_175_17J: VENUS_175_17J,
 
   VOSTOK_2605_17J: VOSTOK_2605_17J,
+
+  VACHERON_CONSTANTIN_K1014_17J: VACHERON_CONSTANTIN_K1014_17J,
 
   UNITAS_6325: UNITAS_6325,
   UNITAS_6380: UNITAS_6380,

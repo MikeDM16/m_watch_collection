@@ -6,6 +6,7 @@ import {
   routeToCollectionBrandModelPage,
   SizeType,
 } from "@/app/services/commonFunctions";
+import collectionImageLoader from "@/app/services/imageLoader";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -45,6 +46,7 @@ export default function SpecialTimepieces({ items }: { items: SpecialItemEntry[]
               className="group block no-underline"
             >
               <Image
+                loader={collectionImageLoader}
                 src={getExternalResource(getImgURLForSizeType(entry.srcImage, SizeType.GALLERY))}
                 alt={entry.legend}
                 width={800}

@@ -3296,6 +3296,16 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     href: require("../watchModels/Omega/Omega_StayBrite_CK3416_T17_1934"),
     specialCollectionItem: true,
   },
+  /* "Vacheron Constantin Patrimony K1014": {
+    brand: BrandsEnum.CAUNY,
+    legend: "Vacheron Constantin Patrimony K1014",
+    year: 1978,
+    type: WatchTypeEnum.DRESS,
+    srcImage: "public/assets/Images/Cauny/1978_Cauny_Patrimony_K1014/IMG_XXXX.JPG",
+    hoverSrc: "public/assets/Images/Cauny/1978_Cauny_Patrimony_K1014/IMG_XXXX.JPG",
+    href: require("../watchModels/Cauny/Cauny_Patrimony_K1014_1978"),
+    specialCollectionItem: false,
+  },*/
 };
 
 function sortCollection(items: Record<string, CollectionEntry>) {

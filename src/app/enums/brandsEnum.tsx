@@ -89,6 +89,7 @@ export const BrandsEnum = {
   TOURIST: "Tourist",
   UNIVERSAL_GENEVE: "Universal Geneve",
   UTINA: "Utina",
+  VACHERON_CONSTANTIN: "Vacheron Constantin",
   ZENITH: "Zenith",
   ZODIAC: "Zodiac",
 };

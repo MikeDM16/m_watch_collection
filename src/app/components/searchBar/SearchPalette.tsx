@@ -6,6 +6,7 @@ import {
   routeToCollectionBrandModelPage,
   SizeType,
 } from "@/app/services/commonFunctions";
+import collectionImageLoader from "@/app/services/imageLoader";
 import { Search, X } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -211,6 +212,7 @@ export default function SearchPalette() {
                       }`}
                     >
                       <Image
+                        loader={collectionImageLoader}
                         src={getExternalResource(
                           getImgURLForSizeType(entry.srcImage, SizeType.THUMBNAIL),
                         )}

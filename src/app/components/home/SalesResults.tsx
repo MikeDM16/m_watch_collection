@@ -6,6 +6,7 @@ import {
   routeToCollectionBrandModelPage,
   SizeType,
 } from "@/app/services/commonFunctions";
+import collectionImageLoader from "@/app/services/imageLoader";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
@@ -74,6 +75,7 @@ export default function SalesResults({ sales }: { sales: SoldEntry[] }) {
                       className="flex items-center gap-3 no-underline transition-colors hover:text-brand"
                     >
                       <Image
+                        loader={collectionImageLoader}
                         src={getExternalResource(
                           getImgURLForSizeType(s.srcImage, SizeType.THUMBNAIL),
                         )}

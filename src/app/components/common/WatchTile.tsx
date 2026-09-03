@@ -6,6 +6,7 @@ import {
   routeToCollectionBrandModelPage,
   SizeType,
 } from "@/app/services/commonFunctions";
+import collectionImageLoader from "@/app/services/imageLoader";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
@@ -56,6 +57,7 @@ export default function WatchTile({
     >
       <div className="relative aspect-square overflow-hidden bg-muted">
         <Image
+          loader={collectionImageLoader}
           src={primary}
           alt={legend}
           width={800}
@@ -69,6 +71,7 @@ export default function WatchTile({
         />
         {alt && hovered && (
           <Image
+            loader={collectionImageLoader}
             src={alt}
             alt=""
             width={800}

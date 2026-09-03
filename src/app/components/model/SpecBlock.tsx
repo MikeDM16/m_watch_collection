@@ -47,13 +47,17 @@ export default function SpecBlock({
           ))}
         </dl>
 
+        {/* No `sizes` on the image below: it is fixed-width, and a `sizes` string
+            with no `vw` token makes getWidths fall through to the whole
+            deviceSizes+imageSizes array — the old "220px" asked Vercel for every
+            rung up to w=3840. Omitting it takes the [width, width*2] branch
+            instead, so these 34 local JPGs cost two cache keys each. */}
         {image && (
           <Image
             src={image}
             alt={imageAlt}
             width={220}
             height={220}
-            sizes="220px"
             loading="lazy"
             className="hidden h-auto w-[140px] self-start object-contain opacity-80 sm:block"
           />

@@ -30,6 +30,7 @@ export const CaliberBrandsEnum = {
   VALJOUX: "Valjoux",
   VENUS: "Venus",
   VOSTOK: "Vostok",
+  VACHERON_CONSTANTIN: "Vacheron Constantin",
   UNIVERSAL_GENEVE: "Universal Geneve",
   ZENITH: "Zenith",
 };

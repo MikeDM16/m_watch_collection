@@ -2,9 +2,23 @@ import type { LucideIcon } from "lucide-react";
 
 import { brandsDB } from "../data/brands";
 
+/**
+ * The single CDN URL builder. Everything that shows a resources-repo image goes
+ * through here: next/image call sites, the HeroBand and SiteFooter CSS
+ * backgrounds, and the PinnedSpecViewer raw <img> frames.
+ *
+ * jsDelivr rather than raw.githubusercontent.com. Once the catalogue stopped
+ * going through /_next/image this became the delivery layer, and raw serves
+ * `Cache-Control: max-age=300` and throttles hot-linking; jsDelivr serves the
+ * identical bytes with `max-age=604800`. Pinning `@<sha>` instead of `@master`
+ * would get permanent immutable caching, at the cost of a bump here every time
+ * a watch is added.
+ *
+ * Changing this host means changing images.remotePatterns in next.config.ts in
+ * the same commit, or every image still on Vercel's optimiser 400s.
+ */
 export function getExternalResource(image_url: string) {
-  //const url_begin = "https://github.com/MikeDM16/MWatchCollectionResources/raw/master";
-  const base_url = "https://raw.githubusercontent.com/MikeDM16/MWatchCollectionResources/master";
+  const base_url = "https://cdn.jsdelivr.net/gh/MikeDM16/MWatchCollectionResources@master";
   const proxy_url = `${encodeURI(base_url)}/${encodeURI(image_url)}`;
   return proxy_url;
 }
