@@ -270,11 +270,41 @@
     letter-spacing: 0.08em;
     color: hsl(var(--muted-foreground));
   }
-  .series-filter {
+
+  /* One row of filter chips. Wraps freely where there is room; below the
+     md breakpoint it turns into a horizontal scroller instead.
+
+     Tissot's 21 series chips wrap into nine rows on a phone, and the bar they
+     sit in is sticky, so those rows cover the grid for the whole scroll. As a
+     rail each facet costs exactly one row at any brand size. */
+  .filter-rail {
     display: flex;
     flex-wrap: wrap;
     gap: 0.4rem;
+    min-width: 0;
   }
+
+  @media (max-width: 767px) {
+    .filter-rail {
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      /* Keep a swipe that runs out of rail from scrolling the page behind it,
+         and off iOS's back gesture. */
+      overscroll-behavior-x: contain;
+      /* overflow-x also clips the block axis: leave the focus ring room. */
+      padding-block: 2px;
+      scrollbar-width: none;
+      /* Run the track out to the screen edge, past the bar's own padding, so a
+         chip is cut by the edge of the phone. That clipped chip is the only
+         "more this way" affordance the rail gets. */
+      margin-right: calc(-1 * clamp(1rem, 4vw, 3.5rem));
+      padding-right: clamp(1rem, 4vw, 3.5rem);
+    }
+    .filter-rail::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
   .series-filter-chip {
     padding: 0.15rem 0.7rem;
     border-radius: 9999px;
