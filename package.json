@@ -6,6 +6,7 @@
     "generate-index": "tsx scripts/generate-collection-index.ts",
     "predev": "npm run generate-index",
     "dev": "cross-env NODE_OPTIONS=--max-old-space-size=8192 next dev --turbopack",
+    "dev:clean": "node -e \"require('fs').rmSync('.next',{recursive:true,force:true})\" && npm run dev",
     "prebuild": "npm run generate-index",
     "build": "cross-env NODE_OPTIONS=--max-old-space-size=8192 next build",
     "analyze": "cross-env ANALYZE=true NODE_OPTIONS=--max-old-space-size=8192 next build",

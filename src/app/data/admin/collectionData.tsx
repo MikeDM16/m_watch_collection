@@ -1773,6 +1773,17 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     specialCollectionItem: false,
   },
 
+  "Osco Titanium": {
+    brand: BrandsEnum.OSCO,
+    legend: "Osco Titanium",
+    year: 1989,
+    type: WatchTypeEnum.CASUAL,
+    srcImage: "public/assets/Images/Osco/1989_Osco_Titan_ETA_955/IMG_4231.JPG",
+    hoverSrc: "public/assets/Images/Osco/1989_Osco_Titan_ETA_955/IMG_4253.JPG",
+    href: require("../watchModels/Osco/Osco_Titanium_1989"),
+    specialCollectionItem: false,
+  },
+
   "Baume et Mercier Le Roy Tank": {
     brand: BrandsEnum.BAUME_MERCIER,
     legend: "Baume et Mercier Le Roy Tank",
@@ -1857,6 +1868,18 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     href: require("../watchModels/Omega/Omega_DeVille_Lomgchamp_1910198_Cal_1430_1988"),
     specialCollectionItem: false,
   },
+
+  "Wyler Vetta Camper Chronograph": {
+    brand: BrandsEnum.WYLER_VETTA,
+    legend: "Wyler Vetta Camper Chronograph",
+    year: 1987,
+    type: WatchTypeEnum.SPORTS,
+    srcImage: "public/assets/Images/Wyler_Vetta/1987_Wyler_Vetta_Camper_DD_2000/IMG_4266.JPG",
+    hoverSrc: "public/assets/Images/Wyler_Vetta/1987_Wyler_Vetta_Camper_DD_2000/IMG_4268.JPG",
+    href: require("../watchModels/Wyler_Vetta/Wyler_Vetta_Camper_Chronograph_1987"),
+    specialCollectionItem: false,
+  },
+
   "Omega Seamaster Polaris 396.1022": {
     brand: BrandsEnum.OMEGA,
     legend: "Omega Seamaster Polaris 396.1022",
@@ -2130,6 +2153,17 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     href: require("../watchModels/Nobreza/Nobreza_Automatic_1977"),
     specialCollectionItem: false,
   },
+  "Eusi Incabloc Tank": {
+    brand: BrandsEnum.EUSI,
+    legend: "Eusi Incabloc Tank",
+    year: 1976,
+    type: WatchTypeEnum.CASUAL,
+    srcImage: "public/assets/Images/Eusi/1976_Eusi_Tank_FHF_69N/IMG_4193.JPG",
+    hoverSrc: "public/assets/Images/Eusi/1976_Eusi_Tank_FHF_69N/IMG_4194.JPG",
+    href: require("../watchModels/Eusi/Eusi_Incabloc_Tank_1976"),
+    specialCollectionItem: false,
+  },
+
   "Nobreza Shades 17 Jewels": {
     brand: BrandsEnum.NOBREZA,
     legend: "Nobreza Shades 17 Jewels",

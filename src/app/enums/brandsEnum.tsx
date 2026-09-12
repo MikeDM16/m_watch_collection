@@ -26,6 +26,7 @@ export const BrandsEnum = {
   EBERHARD: "Eberhard",
   ELETTA: "Eletta",
   EMES: "Emes",
+  EUSI: "Eusi",
   FESTINA: "Festina",
   FERRARI: "Ferrari",
   FONTAINE: "Fontaine",
@@ -59,6 +60,7 @@ export const BrandsEnum = {
   OMEGA: "Omega",
   OMODOX: "Omodox",
   ONE: "One",
+  OSCO: "Osco",
   ORIENT: "Orient",
   PHILIP_WATCH: "Philip Watch",
   POLJOT: "Poljot",
@@ -88,6 +90,7 @@ export const BrandsEnum = {
   UNIVERSAL_GENEVE: "Universal Geneve",
   UTINA: "Utina",
   VACHERON_CONSTANTIN: "Vacheron Constantin",
+  WYLER_VETTA: "Wyler Vetta",
   ZENITH: "Zenith",
   ZODIAC: "Zodiac",
 };

@@ -518,6 +518,10 @@ export const brandsDB: Brand[] = [
     logoImg: "public/assets/Images/Brands_Logos/Emes_logo.PNG",
   },
   {
+    name: BrandsEnum.EUSI,
+    logoImg: "public/assets/Images/Brands_Logos/eusi_logo.PNG",
+  },
+  {
     name: BrandsEnum.ELETTA,
     logoImg: "public/assets/Images/Brands_Logos/eletta_logo.PNG",
     description:
@@ -643,6 +647,10 @@ export const brandsDB: Brand[] = [
   },
 
   {
+    name: BrandsEnum.OSCO,
+    logoImg: "public/assets/Images/Brands_Logos/osco_logo.PNG",
+  },
+  {
     name: BrandsEnum.ONE,
     logoImg: "public/assets/Images/Brands_Logos/One_logo.PNG",
   },
@@ -733,5 +741,17 @@ export const brandsDB: Brand[] = [
     logoImg: "public/assets/Images/Brands_Logos/tecnal_logo.PNG",
     description: "Vintage Portuguese brand with Swiss Made parts and assembly.",
     displayBySeries: false,
+  },
+  {
+    name: BrandsEnum.WYLER_VETTA,
+    logoImg: "public/assets/Images/Brands_Logos/Wyler_Vetta_logo.PNG",
+    displayBySeries: false,
+    website: "https://wylervetta.com",
+    description:
+      "Wyler Vetta is an Italian watch brand known for its blend of traditional craftsmanship and modern design.",
+    foundedInformation: {
+      year: 1924,
+      details: "Founded in Biel, Switzerland, and Lake Maggiore, Italy",
+    },
   },
 ];

@@ -44,6 +44,7 @@ import EXCELSIOR_PARK_40_68_17J from "../movements/Excelsior_Park/Excelsior_Park
 import FE_140 from "../movements/FE/FE_140_17J";
 import FE_233_69 from "../movements/FE/FE_233_69_17J";
 import FE_TRIPLE_CALENDAR_5J from "../movements/FE/FE_Triple_Calendar_5J";
+import FHF_69N from "../movements/FHF/FHF_69N_17J";
 import FHF_96_4 from "../movements/FHF/FHF_96_4_17J";
 import FHF_974 from "../movements/FHF/FHF_974_17J";
 import FORTIS_AV_21J from "../movements/Fortis/Fortis_AV_21_jewels";
@@ -188,6 +189,7 @@ export const MovementsDataDB: Record<string, Caliber> = {
   FE_233_69: FE_233_69,
   FE_TRIPLE_CALENDAR_5J: FE_TRIPLE_CALENDAR_5J,
 
+  FHF_69N: FHF_69N,
   FHF_96_4: FHF_96_4,
   FHF_974: FHF_974,
 

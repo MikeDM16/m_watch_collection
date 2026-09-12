@@ -260,7 +260,11 @@
     "collectionSet": false,
     "series": "Antimagnetic",
     "movementTitle": "A. Schild 1130",
-    "saleReport": null,
+    "saleReport": {
+      "price": 200,
+      "date": "19/08/2026",
+      "url": "https://www.catawiki.com/l/106017516"
+    },
     "modelFile": "Douglas/Douglas_Antimagnetic_1947"
   },
   "Fortis Pilot Chronograph Valjoux 77": {
@@ -342,7 +346,11 @@
     "collectionSet": false,
     "series": "Extra",
     "movementTitle": "A. Schild 1130",
-    "saleReport": null,
+    "saleReport": {
+      "price": 314,
+      "date": "28/08/2026",
+      "url": "https://www.catawiki.com/l/106195877"
+    },
     "modelFile": "Aureus/Aureus_Extra_Antimagnetic_1947"
   },
   "Breitling Premier Chronograph Venus 175": {
@@ -356,7 +364,11 @@
     "collectionSet": false,
     "series": "Premier",
     "movementTitle": "Venus Cal. 175",
-    "saleReport": null,
+    "saleReport": {
+      "price": 2050,
+      "date": "16/08/2026",
+      "url": "https://www.catawiki.com/l/105860437"
+    },
     "modelFile": "Breitling/Breitling_Premier_Chronograph_Venus_175_1948"
   },
   "Cuervo y Sobrinos Historiador Habana": {
@@ -1897,6 +1909,20 @@
     },
     "modelFile": "Pryngeps/Pryngeps_Automatic_Chronograph_Valjoux_7750"
   },
+  "Eusi Incabloc Tank": {
+    "brand": "Eusi",
+    "legend": "Eusi Incabloc Tank",
+    "year": 1976,
+    "type": "Casual",
+    "srcImage": "public/assets/Images/Eusi/1976_Eusi_Tank_FHF_69N/IMG_4193.JPG",
+    "hoverSrc": "public/assets/Images/Eusi/1976_Eusi_Tank_FHF_69N/IMG_4194.JPG",
+    "specialCollectionItem": false,
+    "collectionSet": false,
+    "series": "Incabloc",
+    "movementTitle": "FHF Cal. 69",
+    "saleReport": null,
+    "modelFile": "Eusi/Eusi_Incabloc_Tank_1976"
+  },
   "Nobreza Shades 17 Jewels": {
     "brand": "Nobreza",
     "legend": "Nobreza Shades 17 Jewels",
@@ -2409,6 +2435,20 @@
     },
     "modelFile": "Tag_Heuer/Tag_Heuer_ProChrono_2720061_LWO_185_1986"
   },
+  "Wyler Vetta Camper Chronograph": {
+    "brand": "Wyler Vetta",
+    "legend": "Wyler Vetta Camper Chronograph",
+    "year": 1987,
+    "type": "Sports",
+    "srcImage": "public/assets/Images/Wyler_Vetta/1987_Wyler_Vetta_Camper_DD_2000/IMG_4266.JPG",
+    "hoverSrc": "public/assets/Images/Wyler_Vetta/1987_Wyler_Vetta_Camper_DD_2000/IMG_4268.JPG",
+    "specialCollectionItem": false,
+    "collectionSet": false,
+    "series": "Camper",
+    "movementTitle": "LWO 185.30 - Dubois Depraz 2000 on ETA 955.232",
+    "saleReport": null,
+    "modelFile": "Wyler_Vetta/Wyler_Vetta_Camper_Chronograph_1987"
+  },
   "Omega Seamaster Polaris 396.1022": {
     "brand": "Omega",
     "legend": "Omega Seamaster Polaris 396.1022",
@@ -2669,6 +2709,20 @@
       "url": "https://www.catawiki.com/l/100309951"
     },
     "modelFile": "Lorenz/Lorenz_Classic_Rattrapante_1989"
+  },
+  "Osco Titanium": {
+    "brand": "Osco",
+    "legend": "Osco Titanium",
+    "year": 1989,
+    "type": "Casual",
+    "srcImage": "public/assets/Images/Osco/1989_Osco_Titan_ETA_955/IMG_4231.JPG",
+    "hoverSrc": "public/assets/Images/Osco/1989_Osco_Titan_ETA_955/IMG_4253.JPG",
+    "specialCollectionItem": false,
+    "collectionSet": false,
+    "series": "Titan",
+    "movementTitle": "ETA 955.114",
+    "saleReport": null,
+    "modelFile": "Osco/Osco_Titanium_1989"
   },
   "Baume et Mercier Le Roy Tank": {
     "brand": "Baume et Mercier",
@@ -3031,7 +3085,11 @@
     "collectionSet": false,
     "series": "​Tradition Mécanique",
     "movementTitle": "ETA 2892",
-    "saleReport": null,
+    "saleReport": {
+      "price": 420,
+      "date": "04/09/2026",
+      "url": "https://www.catawiki.com/l/105496289"
+    },
     "modelFile": "Raymond_Weil/Raymond_Weil_Tradition_Mecanique_2892_1992"
   },
   "Pryngeps Regolo Triple Calendar": {

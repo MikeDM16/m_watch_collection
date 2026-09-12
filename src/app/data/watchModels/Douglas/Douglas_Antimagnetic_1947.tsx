@@ -70,6 +70,12 @@ const details: WatchDetails = {
     "public/assets/Images/Douglas/1947_Douglas_Antimagnetic_AS1130/IMG_3409.JPG",
   ],
 
+  saleReport: {
+    price: 200,
+    date: "19/08/2026",
+    url: "https://www.catawiki.com/l/106017516",
+  },
+
   technicalData: {
     features: [featuresEnum.MECHANICAL, featuresEnum.SMALL_SECONDS],
 

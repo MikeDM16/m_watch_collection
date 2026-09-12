@@ -123,6 +123,12 @@ const details: WatchDetails = {
     "public/assets/Images/Raymond_Weil/1992_Raymond_Weil_Tradition_Mecanique_2892/IMG_2923.JPG",
   ],
 
+  saleReport: {
+    price: 420,
+    date: "04/09/2026",
+    url: "https://www.catawiki.com/l/105496289",
+  },
+
   technicalData: {
     features: [
       featuresEnum.DATE,

@@ -121,6 +121,7 @@ export const modelLoaders: Record<string, () => Promise<{ default: WatchDetails 
     import("./watchModels/Eberhard/Eberhard_Godron_Ref_32031_Lemania_1873_1992"),
   "Eletta/Eletta_OS60_Chrono_1993": () => import("./watchModels/Eletta/Eletta_OS60_Chrono_1993"),
   "Emes/Emes_Chrono_OS60_2005": () => import("./watchModels/Emes/Emes_Chrono_OS60_2005"),
+  "Eusi/Eusi_Incabloc_Tank_1976": () => import("./watchModels/Eusi/Eusi_Incabloc_Tank_1976"),
   "Ferrari/Ferrari_Modena_Chronograph_2005": () =>
     import("./watchModels/Ferrari/Ferrari_Modena_Chronograph_2005"),
   "Ferrari/Ferrari_Monza_Chronograph_2005": () =>
@@ -306,6 +307,7 @@ export const modelLoaders: Record<string, () => Promise<{ default: WatchDetails 
     import("./watchModels/Orfina/Orfina_Pilot_Chronograph_17J_1945"),
   "Orient/Orient_Multi_year_calendar_EU3B0_1998": () =>
     import("./watchModels/Orient/Orient_Multi_year_calendar_EU3B0_1998"),
+  "Osco/Osco_Titanium_1989": () => import("./watchModels/Osco/Osco_Titanium_1989"),
   "Philipe_Watch/Philipe_Watch_AQ_1000_1996": () =>
     import("./watchModels/Philipe_Watch/Philipe_Watch_AQ_1000_1996"),
   "Poljot/Poljot_Jetfighter_Limited_2018": () =>
@@ -600,6 +602,8 @@ export const modelLoaders: Record<string, () => Promise<{ default: WatchDetails 
   "Utina/Utina_Sunburst_FE233_1972": () => import("./watchModels/Utina/Utina_Sunburst_FE233_1972"),
   "Vacheron_Constantin/Vacheron_Constantin_Patrimony_K1014_1978": () =>
     import("./watchModels/Vacheron_Constantin/Vacheron_Constantin_Patrimony_K1014_1978"),
+  "Wyler_Vetta/Wyler_Vetta_Camper_Chronograph_1987": () =>
+    import("./watchModels/Wyler_Vetta/Wyler_Vetta_Camper_Chronograph_1987"),
   "Zenith/Zenith_El_Primero_ChronoMaster_2010": () =>
     import("./watchModels/Zenith/Zenith_El_Primero_ChronoMaster_2010"),
   "Zenith/Zenith_El_Primero_Port_Royal_V_2005": () =>

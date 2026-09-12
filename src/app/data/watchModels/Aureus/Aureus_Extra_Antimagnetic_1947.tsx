@@ -77,6 +77,12 @@ const details: WatchDetails = {
     "public/assets/Images/Aureus/1947_Aureus_Extra_AS1130/IMG_3463.JPG",
   ],
 
+  saleReport: {
+    price: 314,
+    date: "28/08/2026",
+    url: "https://www.catawiki.com/l/106195877",
+  },
+
   technicalData: {
     features: [featuresEnum.MECHANICAL, featuresEnum.SMALL_SECONDS],
 

@@ -76,6 +76,12 @@ const details: WatchDetails = {
     "public/assets/Images/Breitling/1950_Breitling_Premier_Venus_178/IMG_2793.JPG",
   ],
 
+  saleReport: {
+    price: 2050,
+    date: "16/08/2026",
+    url: "https://www.catawiki.com/l/105860437",
+  },
+
   technicalData: {
     features: [featuresEnum.TACHYMETER, featuresEnum.MECHANIQUE_CHRONOGRAPH],
 
