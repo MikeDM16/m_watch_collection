@@ -53,6 +53,7 @@ export const mainBrandsOrder: string[] = [
   BrandsEnum.SOLVIL_ET_TITUS,
   BrandsEnum.FORTIS,
   BrandsEnum.ORFINA,
+  BrandsEnum.MOMO_DESIGN,
 ];
 
 export const brandsDB: Brand[] = [
@@ -635,6 +636,11 @@ export const brandsDB: Brand[] = [
     name: BrandsEnum.MONUMENTAL,
     logoImg: "public/assets/Images/Brands_Logos/monumental_logo.PNG",
     description: "Vintage Portuguese brand with Swiss Made parts and assembly.",
+  },
+  {
+    name: BrandsEnum.MOMO_DESIGN,
+    logoImg: "public/assets/Images/Brands_Logos/momo_design_logo.png",
+    website: "https://en.momodesign.com/",
   },
   {
     name: BrandsEnum.NATALIS,

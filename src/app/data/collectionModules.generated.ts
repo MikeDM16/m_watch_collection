@@ -201,6 +201,8 @@ export const modelLoaders: Record<string, () => Promise<{ default: WatchDetails 
     import("./watchModels/Mercedes/Mercedes_Benz_SLK_Edition_1996"),
   "Miura/Miura_Calendar_17Rubis_1975": () =>
     import("./watchModels/Miura/Miura_Calendar_17Rubis_1975"),
+  "Momo_Design/Momo_Design_Meccanico_Limited_Edition_033500_2021": () =>
+    import("./watchModels/Momo_Design/Momo_Design_Meccanico_Limited_Edition_033500_2021"),
   "Monumental/Monumental_Automatic_200M_1975": () =>
     import("./watchModels/Monumental/Monumental_Automatic_200M_1975"),
   "Natalis/Natalis_AS1130_1943": () => import("./watchModels/Natalis/Natalis_AS1130_1943"),
@@ -336,6 +338,8 @@ export const modelLoaders: Record<string, () => Promise<{ default: WatchDetails 
     import("./watchModels/Pryngeps/Pryngeps_Automatic_Chronograph_Valjoux_7750"),
   "Pryngeps/Pryngeps_CR763_OS60_2001": () =>
     import("./watchModels/Pryngeps/Pryngeps_CR763_OS60_2001"),
+  "Pryngeps/Pryngeps_Rattrapante_Chronograph_1995": () =>
+    import("./watchModels/Pryngeps/Pryngeps_Rattrapante_Chronograph_1995"),
   "Pryngeps/Pryngeps_Regolo_1467_1990": () =>
     import("./watchModels/Pryngeps/Pryngeps_Regolo_1467_1990"),
   "Pryngeps/Pryngeps_Regolo_1467_1991": () =>

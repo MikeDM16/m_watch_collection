@@ -52,6 +52,7 @@ export const BrandsEnum = {
   MASERATI: "Maserati",
   MIURA: "Miura",
   MONUMENTAL: "Monumental",
+  MOMO_DESIGN: "Momo Design",
   NATALIS: "Natalis",
   NOBREZA: "Nobreza",
   NOVART: "Novart",

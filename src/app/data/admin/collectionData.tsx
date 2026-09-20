@@ -28,6 +28,16 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     href: require("../watchModels/Celsus/Celsus_9168_Heritage_2022"),
     specialCollectionItem: false,
   },
+  "Momo Design Meccanico Limited Edition 033500": {
+    brand: BrandsEnum.MOMO_DESIGN,
+    legend: "Momo Design Meccanico Limited Edition 033500",
+    year: 2021,
+    type: WatchTypeEnum.SPORTS,
+    srcImage: "public/assets/Images/Momo_Design/2021_MomoDesign_MD175_Limited_033_500/IMG_4538.JPG",
+    hoverSrc: "public/assets/Images/Momo_Design/2021_MomoDesign_MD175_Limited_033_500/IMG_4524.JPG",
+    href: require("../watchModels/Momo_Design/Momo_Design_Meccanico_Limited_Edition_033500_2021"),
+    specialCollectionItem: false,
+  },
 
   "Maurice Lacroix Aikon Chrono": {
     brand: BrandsEnum.MAURICE_LACROIX,
@@ -1150,9 +1160,9 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     year: 1996,
     type: WatchTypeEnum.SPORTS,
     srcImage:
-      "public/assets/Images/Breitling/1998_Breitling_Chronomat_B13050_Blue_Dial/IMG_2818.JPG",
+      "public/assets/Images/Breitling/1998_Breitling_Chronomat_B13050_Blue_Dial/IMG_4427.JPG",
     hoverSrc:
-      "public/assets/Images/Breitling/1998_Breitling_Chronomat_B13050_Blue_Dial/IMG_2814.JPG",
+      "public/assets/Images/Breitling/1998_Breitling_Chronomat_B13050_Blue_Dial/IMG_4459.JPG",
     href: require("../watchModels/Breitling/Breitling_Chronomat_B13050_Blue_Dial_1996"),
     specialCollectionItem: false,
   },
@@ -1242,6 +1252,16 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     type: WatchTypeEnum.SPORTS,
     srcImage: "public/assets/Images/Philip_Watch/1996_Philip_Watch_AQ_1000/IMG_0086.JPG",
     href: require("../watchModels/Philipe_Watch/Philipe_Watch_AQ_1000_1996"),
+    specialCollectionItem: false,
+  },
+  "Pryngeps Rattrapante Chronograph": {
+    brand: BrandsEnum.PRYNGEPS,
+    legend: "Pryngeps Rattrapante Chronograph",
+    year: 1995,
+    type: WatchTypeEnum.DRESS,
+    srcImage: "public/assets/Images/Pryngeps/1995_Pryngeps_Rattrapante_251262/IMG_4491.JPG",
+    hoverSrc: "public/assets/Images/Pryngeps/1995_Pryngeps_Rattrapante_251262/IMG_4492.JPG",
+    href: require("../watchModels/Pryngeps/Pryngeps_Rattrapante_Chronograph_1995"),
     specialCollectionItem: false,
   },
 
