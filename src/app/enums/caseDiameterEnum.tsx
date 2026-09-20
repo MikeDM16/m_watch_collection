@@ -18,4 +18,6 @@ export const CaseDiameterEnum = {
   D_43: "43 mm",
   D_44: "44 mm",
   D_45: "45 mm",
+  D_46: "46 mm",
+  D_47: "47 mm",
 };

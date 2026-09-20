@@ -24,7 +24,7 @@ import movement_UNITAS_6497 from "../../movements/Unitas/Unitas_6497";
 import { WatchDetails } from "../../watchDetails";
 
 const details: WatchDetails = {
-  title: "2021 Momo Design Meccanico Limited Edition 033500",
+  title: "2021 Momo Design Meccanico Limited Edition 033/500",
 
   sliderImages: [
     "public/assets/Images/Momo_Design/2021_MomoDesign_MD175_Limited_033_500/IMG_4524.JPG",
@@ -60,14 +60,16 @@ const details: WatchDetails = {
     "public/assets/Images/Momo_Design/2021_MomoDesign_MD175_Limited_033_500/IMG_4545.JPG",
     "public/assets/Images/Momo_Design/2021_MomoDesign_MD175_Limited_033_500/IMG_4546.JPG",
     "public/assets/Images/Momo_Design/2021_MomoDesign_MD175_Limited_033_500/IMG_4547.JPG",
+
+    "public/assets/Images/Momo_Design/2021_MomoDesign_MD175_Limited_033_500/IMG_4554.JPG",
+    "public/assets/Images/Momo_Design/2021_MomoDesign_MD175_Limited_033_500/IMG_4555.JPG",
+
     "public/assets/Images/Momo_Design/2021_MomoDesign_MD175_Limited_033_500/IMG_4548.JPG",
     "public/assets/Images/Momo_Design/2021_MomoDesign_MD175_Limited_033_500/IMG_4549.JPG",
     "public/assets/Images/Momo_Design/2021_MomoDesign_MD175_Limited_033_500/IMG_4550.JPG",
     "public/assets/Images/Momo_Design/2021_MomoDesign_MD175_Limited_033_500/IMG_4551.JPG",
     "public/assets/Images/Momo_Design/2021_MomoDesign_MD175_Limited_033_500/IMG_4552.JPG",
     "public/assets/Images/Momo_Design/2021_MomoDesign_MD175_Limited_033_500/IMG_4553.JPG",
-    "public/assets/Images/Momo_Design/2021_MomoDesign_MD175_Limited_033_500/IMG_4554.JPG",
-    "public/assets/Images/Momo_Design/2021_MomoDesign_MD175_Limited_033_500/IMG_4555.JPG",
   ],
 
   technicalData: {
@@ -83,7 +85,7 @@ const details: WatchDetails = {
     },
 
     case: {
-      diameter: CaseDiameterEnum.D_45,
+      diameter: CaseDiameterEnum.D_46,
       thickness: CaseThicknessEnum.T_12,
       material: CaseMaterialEnum.TITANIUM_BLACK_PVD,
       waterResistance: WaterResistanceEnum.WATERPROOF_10M,

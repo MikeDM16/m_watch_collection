@@ -28,9 +28,9 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     href: require("../watchModels/Celsus/Celsus_9168_Heritage_2022"),
     specialCollectionItem: false,
   },
-  "Momo Design Meccanico Limited Edition 033500": {
+  "Momo Design Meccanico Limited Edition 033/500": {
     brand: BrandsEnum.MOMO_DESIGN,
-    legend: "Momo Design Meccanico Limited Edition 033500",
+    legend: "Momo Design Meccanico Limited Edition 033/500",
     year: 2021,
     type: WatchTypeEnum.SPORTS,
     srcImage: "public/assets/Images/Momo_Design/2021_MomoDesign_MD175_Limited_033_500/IMG_4538.JPG",

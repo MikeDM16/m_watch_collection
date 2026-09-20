@@ -101,6 +101,8 @@ const details: WatchDetails = {
     "public/assets/Images/Breitling/1998_Breitling_Chronomat_B13050_Blue_Dial/IMG_2855.JPG",
     "public/assets/Images/Breitling/1998_Breitling_Chronomat_B13050_Blue_Dial/IMG_2856.JPG",
     "public/assets/Images/Breitling/1998_Breitling_Chronomat_B13050_Blue_Dial/IMG_2857.JPG",
+    "public/assets/Images/Breitling/1998_Breitling_Chronomat_B13050_Blue_Dial/IMG_2858.JPG",
+    "public/assets/Images/Breitling/1998_Breitling_Chronomat_B13050_Blue_Dial/IMG_2859.JPG",
 
     "public/assets/Images/Breitling/1998_Breitling_Chronomat_B13050_Blue_Dial/IMG_4435.JPG",
     "public/assets/Images/Breitling/1998_Breitling_Chronomat_B13050_Blue_Dial/IMG_4436.JPG",
