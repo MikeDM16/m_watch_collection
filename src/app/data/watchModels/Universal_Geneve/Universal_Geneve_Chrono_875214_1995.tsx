@@ -24,7 +24,7 @@ import movement_ETA_251_262 from "../../movements/ETA/ETA_251_262_27J";
 import { WatchDetails } from "../../watchDetails";
 
 const details: WatchDetails = {
-  title: "1995 Universal Geneve 875.214 Chrono",
+  title: "1995 Universal Genève 875.214 Chrono",
   sliderImages: [
     "public/assets/Images/Universal_Geneve/1995_Universal_Geneve_875_214/IMG_6713.JPG",
     "public/assets/Images/Universal_Geneve/1995_Universal_Geneve_875_214/IMG_6714.JPG",

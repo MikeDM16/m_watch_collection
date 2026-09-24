@@ -100,7 +100,7 @@ const details: WatchDetails = {
     information: {
       brand: BrandsEnum.OMEGA,
       series: OmegaBrandSeries.SEAMASTER_VINTAGE,
-      catalogueReference: "Jumpo CK2544-1 (Caliber 12034059)",
+      catalogueReference: "Jumbo CK2544-1 (Caliber 12034059)",
       productionYear: "1950",
       movementType: MovementWatchTypeEnum.MECHANIQUE,
       style: WatchStyleEnum.DRESS,

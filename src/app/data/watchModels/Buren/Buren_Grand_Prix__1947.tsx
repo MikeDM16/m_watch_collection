@@ -24,7 +24,7 @@ import movement_AS_1130 from "../../movements/AS/AS_1130_17J";
 import { WatchDetails } from "../../watchDetails";
 
 const details: WatchDetails = {
-  title: "1947 Buren Gran Prix",
+  title: "1947 Buren Grand Prix",
 
   sliderImages: [
     "public/assets/Images/Buren/1947_Buren_Grand_Prix_AS1130/IMG_3512.JPG",
@@ -75,7 +75,7 @@ const details: WatchDetails = {
 
     information: {
       brand: BrandsEnum.BUREN,
-      series: "Gran Prix",
+      series: "Grand Prix",
       catalogueReference: "20511",
       productionYear: "1947",
       movementType: MovementWatchTypeEnum.MECHANIQUE,

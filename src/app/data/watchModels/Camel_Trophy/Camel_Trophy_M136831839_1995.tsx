@@ -23,7 +23,7 @@ import { WaterResistanceEnum } from "@/app/enums/waterResistanceEnum";
 import { WatchDetails } from "../../watchDetails";
 
 const details: WatchDetails = {
-  title: "2001 Camel Trophy M810.2080-2089 L2 Chrono",
+  title: "1995 Camel Trophy M136.831.839 Top Chrono",
 
   sliderImages: [
     "public/assets/Images/Camel/1999_Camel_Trophy_TopChrono/IMG_1338.JPG",

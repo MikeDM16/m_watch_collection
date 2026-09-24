@@ -24,7 +24,7 @@ import movement_FE_TRIPLE_CALENDAR_5J from "../../movements/FE/FE_Triple_Calenda
 import { WatchDetails } from "../../watchDetails";
 
 const details: WatchDetails = {
-  title: "1991 Pryngeps Regolo 1467",
+  title: "1990 Pryngeps Regolo 1467",
   sliderImages: [
     "public/assets/Images/Pryngeps/1990_Pryngeps_Regolo_II/IMG_0639.JPG",
     "public/assets/Images/Pryngeps/1990_Pryngeps_Regolo_II/IMG_0640.JPG",

@@ -64,7 +64,7 @@ const details: WatchDetails = {
 
     information: {
       brand: BrandsEnum.FORTIS,
-      series: "Mecanical",
+      series: "Mechanical",
       catalogueReference: "-",
       productionYear: "1957",
       movementType: MovementWatchTypeEnum.MECHANIQUE,

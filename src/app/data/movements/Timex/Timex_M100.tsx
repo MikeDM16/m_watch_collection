@@ -14,7 +14,7 @@ const TIMEX_M100: Caliber = {
 
   //Description
   description:
-    "Produced around the 1970s. Know has the 'siwss cheese' movement due the amount of holes in it.",
+    "Produced around the 1970s. Known as the 'Swiss cheese' movement due to the amount of holes in it.",
   // UsefullLinks
   usefullLinks: {
     "Ranfft M100": "http://www.ranfft.de/cgi-bin/bidfun-db.cgi?11&ranfft&0&2uswk&Timex_M100",

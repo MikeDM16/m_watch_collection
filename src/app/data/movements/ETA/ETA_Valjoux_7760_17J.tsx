@@ -14,8 +14,8 @@ const ETA_Valjoux_7760_17: Caliber = {
   //Description
   description:
     "High quality automatic chronograph from Valjoux. \n\
-  Based on the original Pré-ETA caliber with 17 jewels.\n\
-  Automaric Valjoux references:\n\
+  Based on the original Pre-ETA caliber with 17 jewels.\n\
+  Automatic Valjoux references:\n\
     - 7750: day, date\n\
     - 7751: day, date, month, moon phase\n\
     - 7753: date. minute counter at 3h instead 12h\n\

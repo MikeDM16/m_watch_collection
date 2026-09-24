@@ -107,7 +107,7 @@ const details: WatchDetails = {
         type: "Quartz",
         battery: "364 / SR621SW",
         jewels: "0 Jewels (None)",
-        functions: "Date, Hours, Minutes, Seconds ",
+        functions: "Date, Hours, Minutes, Seconds",
       },
     },
   },

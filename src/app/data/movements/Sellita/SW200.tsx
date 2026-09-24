@@ -14,7 +14,7 @@ const SELLITA_SW200: Caliber = {
   //Description
   description:
     "Sellita is a Swiss movement manufacturer that has a history of producing movements that are based on or inspired by ETA movements.\n\
-  The Sellita SW200 is a diret competitor to the ETA 2824-2, from whom shares a lot of similaraties. \n\
+  The Sellita SW200 is a direct competitor to the ETA 2824-2, with which it shares many similarities. \n\
   Introduced around 2012, the SW200-1 is an updated version of the initial SW200 caliber.\n",
   // UsefullLinks
   usefullLinks: {},

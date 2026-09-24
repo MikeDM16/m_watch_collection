@@ -114,7 +114,7 @@ const details: WatchDetails = {
         modelReference: "805.112",
         type: "Quartz",
         battery: "377",
-        jewels: "0 Jewels (None) ",
+        jewels: "0 (None) Jewels",
         functions: "Date, Hours, Minutes, Seconds",
       },
     },

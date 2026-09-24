@@ -13,14 +13,14 @@ const ETA_2892_2_21J: Caliber = {
   title: "ETA 2892",
   //Description
   description:
-    "High quality, extremely compact ETA automatic movement with Bi-diretional winding. \n \n" +
+    "High quality, extremely compact ETA automatic movement with Bi-directional winding. \n \n" +
     "It has been in production since 1983 until around 2000. \n\n" +
     "The 2892A2 has been widely used in the watch industry for many years as a base for brand specific caliber references. For example: \n" +
     "- Omega used this movement on calibers 1120, 1128 (GMT), and 2500\n" +
     "- Longines L619.2 and L888.4\n" +
     "- IWC 37524, 30110, and 30120\n" +
     "- TAG Heuer Calibre 7\n" +
-    "- Maurice LaCroix Calibre ML-129\n" +
+    "- Maurice Lacroix Calibre ML-129\n" +
     "- Ball Watch Company: RR1101, RR1201 and RR1801\n" +
     "- Breitling Automatic calibers\n" +
     "- Sellita caliber SW300-1",

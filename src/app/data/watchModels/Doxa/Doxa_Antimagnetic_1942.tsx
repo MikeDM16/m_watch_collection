@@ -24,7 +24,7 @@ import movement_DOXA_83_4_987_17J from "../../movements/Doxa/Doxa_83_4_987_17J";
 import { WatchDetails } from "../../watchDetails";
 
 const details: WatchDetails = {
-  title: "1942 Doxa Antimagnetic",
+  title: "1945 Doxa Antimagnetic",
   sliderImages: [
     "public/assets/Images/Doxa/1945_Doxa_Antimagnetic/IMG_2593.JPG",
     "public/assets/Images/Doxa/1945_Doxa_Antimagnetic/IMG_2594.JPG",

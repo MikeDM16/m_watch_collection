@@ -24,7 +24,7 @@ import movement_LANDERON_159_17J from "../../movements/Landeron/Landeron_159_17J
 import { WatchDetails } from "../../watchDetails";
 
 const details: WatchDetails = {
-  title: "1950 Cuervo y Sobrino Historiador Habana",
+  title: "1950 Cuervo y Sobrinos Historiador Habana",
 
   sliderImages: [
     "public/assets/Images/Cuervo_y_Sobrinos/1950_Cuervo_y_Sobrinos_Habana_Landeron/IMG_3405.JPG",

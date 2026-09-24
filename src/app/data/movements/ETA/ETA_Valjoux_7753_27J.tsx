@@ -15,7 +15,7 @@ const ETA_Valjoux_7753_27: Caliber = {
   description:
     "High quality automatic chronograph from Valjoux. \n\
   Based on the original caliber 7750, the 7753 offers a classic 3-6-9 subdial layout version with improvements for 27 jewels and COSC Certification. \n\
-  Date adjustment can be made in some references using a additional push button at 9 or 19 o'clock.",
+  Date adjustment can be made in some references using an additional push button at 9 or 10 o'clock.",
   // UsefullLinks
   usefullLinks: {
     "Calibercorner 7753 Caliber": "https://calibercorner.com/eta-caliber-7753/",

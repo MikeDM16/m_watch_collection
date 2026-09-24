@@ -20,7 +20,7 @@ export default function AboutMeContainer() {
           {/* unoptimized: see the note on getExternalResource. */}
           <Image
             src={getExternalResource(PORTRAIT)}
-            alt="Miguel dias Miranda"
+            alt="Miguel Dias Miranda"
             width={800}
             height={1000}
             unoptimized
@@ -38,10 +38,8 @@ export default function AboutMeContainer() {
             </div>
 
             <div className="mt-4 max-w-[60ch] space-y-3 text-[0.9rem] leading-relaxed text-muted-foreground">
-              <p>
-                Been collecting, restoring and documenting watches since around 2015. Nowadays, I
-                mostly search for vintage and dress watch models.
-              </p>
+              <p>Been collecting, restoring and documenting watches since around 2015.</p>
+              <p>Nowadays, I mostly search for vintage and dress watch models.</p>
               <p>
                 Part of the collection includes various Portuguese vintage brands, but also some
                 well known watchmaker brands.

@@ -13,7 +13,7 @@ const TISSOT_2060_7734_17J: Caliber = {
   title: "Tissot 2060 (Valjoux 7734 - Date)",
   //Description
   description:
-    "Chronograph based on the Valjoux 7734. Similar to the 7733, but adds a date complication at 6 0'clock. \n\n \
+    "Chronograph based on the Valjoux 7734. Similar to the 7733, but adds a date complication at 6 o'clock. \n\n \
   Produced from 1970 until around 1974.",
   // UsefullLinks
   usefullLinks: {},

@@ -25,7 +25,7 @@ import { WatchDetails } from "../../watchDetails";
 import { TissotBrandSeries } from "./TissotBrandSeries";
 
 const details: WatchDetails = {
-  title: "2012 Tissot T-Classic Luxury Powermartic 80",
+  title: "2012 Tissot T-Classic Luxury Powermatic 80",
   sliderImages: [
     "public/assets/Images/Tissot/2012_Tissot_Luxury_Powermatic/IMG_0919.JPG",
     "public/assets/Images/Tissot/2012_Tissot_Luxury_Powermatic/IMG_0921.JPG",

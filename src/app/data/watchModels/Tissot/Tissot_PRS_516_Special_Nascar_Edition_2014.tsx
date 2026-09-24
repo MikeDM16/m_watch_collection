@@ -25,7 +25,7 @@ import { WatchDetails } from "../../watchDetails";
 import { TissotBrandSeries } from "./TissotBrandSeries";
 
 const details: WatchDetails = {
-  title: "2014 Tissot PRS 516 Special Nascar Edition",
+  title: "2014 Tissot PRS 516 Special NASCAR Edition",
 
   sliderImages: [
     "public/assets/Images/Tissot/2014_Tissot_NASCAR_Racing_White_Blue_7750/IMG_3148.JPG",

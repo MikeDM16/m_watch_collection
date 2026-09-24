@@ -24,7 +24,7 @@ import movement_Girard_Perregaux_2280 from "../../movements/Girard_Perregaux/Gir
 import { WatchDetails } from "../../watchDetails";
 
 const details: WatchDetails = {
-  title: "2004 Girard Perregaux Ferrari Ref. 8020",
+  title: "2004 Girard-Perregaux Ferrari Ref. 8020",
 
   sliderImages: [
     "public/assets/Images/Girard_Perregaux/2024_Girard_Perregaux_Ferrari_R8020_45J/IMG_2567.JPG",

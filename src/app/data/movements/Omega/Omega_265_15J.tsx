@@ -20,7 +20,7 @@ const OMEGA_265: Caliber = {
   - 30T2PC: 15 jewels, Incabloc\n\
   - 260: =30T2 since 1949, 15 jewels\n\
   - 261: 17 jewels, antimagnetic\n\
-  - 262: 17 jewels, excenter regulator\n\
+  - 262: 17 jewels, eccentric regulator\n\
   - 265: 15 jewels, antimagnetic\n\
   - 266,267: 17 jewels, antimagnetic\n\
   - 268: ring- instead screw balance\n\
@@ -29,10 +29,10 @@ const OMEGA_265: Caliber = {
   Caliber series with Central Sweep second:\n\
   - 30SC: 16 jewels, no shock protection\n\
   - 30T1: 16 jewels, no shock protection\n\
-  - 30T2SC: 16 jwwels, no shock protection\n\
+  - 30T2SC: 16 jewels, no shock protection\n\
   - 30T2SCPC: 17/18 jewels, Incabloc\n\
   - 280: =Omega 30SC T2 since 1949, 17 jewels\n\
-  - 281: 17 jewels, excenter regulator\n\
+  - 281: 17 jewels, eccentric regulator\n\
   - 283,284: 17 jewels, antimagnetic\n\
   - 285: ring- instead screw balance\n\
   - 286: flat- instead Breguet-hairspring",

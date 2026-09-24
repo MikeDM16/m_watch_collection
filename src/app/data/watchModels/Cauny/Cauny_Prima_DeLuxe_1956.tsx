@@ -124,7 +124,7 @@ const details: WatchDetails = {
     movement: {
       title: "FEF 290",
       description:
-        "This movement was also used in some hight end brands, like for intance the Tudor Cal. 290.",
+        "This movement was also used in some high-end brands, like for instance the Tudor Cal. 290.",
       usefullLinks: {
         "Ranfft FEF 290": "http://www.ranfft.de/cgi-bin/bidfun-db.cgi?10&ranfft&0&2uswk&FEF_290_1",
         "FEF 290Parts Catalogue": "../Files/2731_FEF 290 310.pdf",
@@ -139,7 +139,7 @@ const details: WatchDetails = {
         modelReference: "290",
         type: "Mechanical",
         frequency: "18000 A/h",
-        jewels: "17 (Seventeen) Jewels ",
+        jewels: "17 (Seventeen) Jewels",
         reserve: "50 Hours",
         functions: "Hours, Minutes, Sub Seconds at 6 o'clock",
       },

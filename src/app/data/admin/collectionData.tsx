@@ -2646,7 +2646,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     type: WatchTypeEnum.CASUAL,
     srcImage: "public/assets/Images/Titus/1970_Titus_Tuning_Fork/IMG_1254.JPG",
     hoverSrc: "public/assets/Images/Titus/1970_Titus_Tuning_Fork/IMG_1254.JPG",
-    href: require("../watchModels/Titus/Titus_Tuning_Fork_F300Hz_1970"),
+    href: require("../watchModels/Solvil_et_Titus/Titus_Tuning_Fork_F300Hz_1970"),
     specialCollectionItem: false,
   },
   "Corticima Dress 17 Jewels": {
@@ -3085,7 +3085,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     type: WatchTypeEnum.DRESS,
     srcImage: "public/assets/Images/Titus/1950_Titus_Chronograph_18K_L48/IMG_8093.JPG",
     hoverSrc: "public/assets/Images/Titus/1950_Titus_Chronograph_18K_L48/IMG_8089.JPG",
-    href: require("../watchModels/Titus/Titus_Chronograph_L48_1950"),
+    href: require("../watchModels/Solvil_et_Titus/Titus_Chronograph_L48_1950"),
     specialCollectionItem: false,
   },
   "Omodox Precision 17 Rubis": {
@@ -3188,14 +3188,14 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     specialCollectionItem: false,
   },
 
-  "Buren Gran Prix": {
+  "Buren Grand Prix": {
     brand: BrandsEnum.BUREN,
-    legend: "Buren Gran Prix",
+    legend: "Buren Grand Prix",
     year: 1947,
     type: WatchTypeEnum.CASUAL,
     srcImage: "public/assets/Images/Buren/1947_Buren_Grand_Prix_AS1130/IMG_3523.JPG",
     hoverSrc: "public/assets/Images/Buren/1947_Buren_Grand_Prix_AS1130/IMG_3518.JPG",
-    href: require("../watchModels/Buren/Buren_Gran_Prix__1947"),
+    href: require("../watchModels/Buren/Buren_Grand_Prix__1947"),
     specialCollectionItem: false,
   },
 

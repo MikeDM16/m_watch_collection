@@ -8,7 +8,7 @@ const ETA_955_114: Caliber = {
   title: "ETA 955.114",
   //Description
   description:
-    "ETA 955.114 is part of vintage ETA Normflatline movements. It has 7 jewels with a stell plated finish. \n\
+    "ETA 955.114 is part of vintage ETA Normflatline movements. It has 7 jewels with a steel plated finish. \n\
   It is a “V8” movement, indicating that it is assembled in Switzerland.\n\
   It was produced from around the 1985 to 1995.\n\
   \n\

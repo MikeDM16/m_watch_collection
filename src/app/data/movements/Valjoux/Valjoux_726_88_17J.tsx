@@ -15,7 +15,7 @@ const VALJOUX_726_88_17J: Caliber = {
   description:
     "Valjoux Cal. 88 VZHCL (“Valjoux Counter Heures Calendrier Lune”) is a hand-winding chronograph movement in the Valjoux 72 family with “triple date” and moon phase. \n\
     It was used in high end watches from 1947 through 1974. Cal. 88 was replaced by Cal. 886 in the 1970s.\n\n\
-    Famaly References \n\
+    Family References \n\
     18000 A/h:\n\
     - 23 : base calibre\n\
     - 230: fly back\n\

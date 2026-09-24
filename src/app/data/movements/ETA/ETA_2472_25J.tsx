@@ -13,7 +13,7 @@ const ETA_2472: Caliber = {
   title: "ETA 2472",
   //Description
   description:
-    'High quality ETA automatic movement with gold plated finishing, shockabsorver and bi-diretional winding.\n\n\
+    'High quality ETA automatic movement with gold plated finishing, shock absorber and bi-directional winding.\n\n\
     Caliber References:\n\
     - 2390: manual wind, 10.5"\n\
     - 2391: manual wind\n\

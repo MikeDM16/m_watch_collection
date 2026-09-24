@@ -9,13 +9,13 @@ const SEIKO_8M25: Caliber = {
   //Description
   description:
     'The 8M Caliber family became known as the Dancing hand\'s movement and were manufactured from the late 1980s to the early 1990s. \n\
-    These calibers were also used in the  "Olimpic" and "Age of Discovery" series, receiving the names "Intelligent quartz" or "Intelligent calendar" \
+    These calibers were also used in the "Olympic" and "Age of Discovery" series, receiving the names "Intelligent quartz" or "Intelligent calendar" \
     as they were a quartz movement with several complex features. \n\n \
     \
     The functions are displayed on the subdial at the 6 O\'Clock position and changed by turning the crown - clockwise or counterclockwise. \n\
-    The watch case itself is made in a military style, with the multi-function pushers assemble in the left side of the case. \n\
+    The watch case itself is made in a military style, with the multi-function pushers assembled on the left side of the case. \n\
     All hands are also independently movable.\
-    To start the  "dancing hands", place the subdial selector on the 0 Match Position mode. The demo dancing hands mode can be activated by pressing the upperp usher and stopped with the lower pusher.\n\
+    To start the "dancing hands", place the subdial selector on the 0 Match Position mode. The demo dancing hands mode can be activated by pressing the upper pusher and stopped with the lower pusher.\n\
     \
     The Dancing hands mode stops after 2 min for battery saving or when manually stopped \n \
     \
@@ -48,7 +48,7 @@ const SEIKO_8M25: Caliber = {
     // Reserve
     reserve: undefined,
     // Functions
-    functions: "Alarm, Timer, Chronograpg, Hours, Minutes",
+    functions: "Alarm, Timer, Chronograph, Hours, Minutes",
     // Battery
     battery: "370",
   },

@@ -24,7 +24,7 @@ import movement_UNIVERSAL_GENEVE_262_17J from "../../movements/Universal_Geneve/
 import { WatchDetails } from "../../watchDetails";
 
 const details: WatchDetails = {
-  title: "1942 Universal Geneve Mécanique Cal. 262",
+  title: "1942 Universal Genève Mécanique Cal. 262",
   sliderImages: [
     "public/assets/Images/Universal_Geneve/1942_Universal_Geneve_cal_262/IMG_2623.JPG",
     "public/assets/Images/Universal_Geneve/1942_Universal_Geneve_cal_262/IMG_2624.JPG",

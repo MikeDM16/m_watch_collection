@@ -124,7 +124,7 @@ const details: WatchDetails = {
         modelReference: "158 31/7(CLD)",
         type: "Automatic wind",
         frequency: "18000 A/h",
-        jewels: "25 (Twenty-five) Jewels ",
+        jewels: "25 (Twenty-five) Jewels",
         reserve: "42 Hours",
         functions: "Day, Date, Hours, Minutes, Sweep Seconds",
       },

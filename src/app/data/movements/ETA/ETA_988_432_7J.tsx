@@ -8,8 +8,8 @@ const ETA_988_432: Caliber = {
   title: "ETA Cal. 988.432",
   //Description
   description:
-    "High end quartz caliber with analogic and digital functions. \n\
-    Function are selected by gently turning the crown in slow motions. Functions are adjusted by pressing the crown out and turning it.",
+    "High end quartz caliber with analogue and digital functions. \n\
+    Functions are selected by gently turning the crown in slow motions. Functions are adjusted by pressing the crown out and turning it.",
 
   // UsefullLinks
   usefullLinks: {},

@@ -21,7 +21,7 @@ const ZENITH_106_15J: Caliber = {
     -106-6: sub second, Incabloc\n\
     -106-50-6: sweep second, Incabloc\n\
     -106-S.C.: sweep second, Incabloc\n\
-    -106-7: stem unlocking from dlal side\n\
+    -106-7: stem unlocking from dial side\n\
     -106-P: Mouvement pincé\n\
     -extension B: cam disc regulator\n",
   // UsefullLinks

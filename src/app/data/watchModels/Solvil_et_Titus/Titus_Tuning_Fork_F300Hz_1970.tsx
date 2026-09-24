@@ -102,7 +102,7 @@ const details: WatchDetails = {
 
     information: {
       brand: BrandsEnum.SOLVIL_ET_TITUS,
-      series: "Tuning fork",
+      series: "Tuning Fork",
       catalogueReference: "9306",
       productionYear: "1970",
       movementType: MovementWatchTypeEnum.QUARTZ,
@@ -144,7 +144,7 @@ const details: WatchDetails = {
         "The ESA 9162 / ESA 9184 movements used by Omega were also designed by Max Hetzel, who had previously worked for \
              Bulova and created the Accutron 214. There is also a chronograph version of these tuning fork movements, known as the \
              ESA 9210 and was used in the Omega Speedsonic range of watches.\n \n" +
-        "The Omega watches employing these tuning fork movements were usually referred to as the �Omega F300Hz' models reflecting \
+        "The Omega watches employing these tuning fork movements were usually referred to as the 'Omega F300Hz' models reflecting \
             the frequency of the tuning fork. The non-chronograph f300s must have been produced in the tens of thousands and are often \
             seen on a popular auction site today.\n" +
         "Omega, like many other watch makers, allocated their own calibre numbers to these ESA movements: \n " +
@@ -167,7 +167,7 @@ const details: WatchDetails = {
       details: {
         manufacturer: "ETA-ESA",
         modelReference: "9162 (day Version) (Omega F300Hz)",
-        type: "Tunin Fork",
+        type: "Tuning Fork",
         battery: "343 (original mercury) / 344 (actual replacement)",
         jewels: "12 (Twelve) Jewels",
         frequency: "300 Hz",

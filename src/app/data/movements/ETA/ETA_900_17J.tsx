@@ -13,8 +13,7 @@ const ETA_900: Caliber = {
   title: "ETA 900",
   //Description
   description:
-    "Description\n\
-  - 900: 10.5, sub second \n\
+    "- 900: 10.5, sub second \n\
   - 901: 10.5, sweep second \n\
   - 930: 11.5, sub second \n\
   - 932: 11.5, sweep second \n",

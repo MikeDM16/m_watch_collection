@@ -45,7 +45,7 @@ const LANDERON_159_17J: Caliber = {
     reserve: ReserveHoursEnum.R_41,
     // Functions
     functions:
-      "Minutes, Sub Seconds at 9 o'clock, Central Chronograph hand with 12 o'clock 30 minutes Chronograph, Calendar at 6 0'clock position",
+      "Minutes, Sub Seconds at 9 o'clock, Central Chronograph hand with 12 o'clock 30 minutes Chronograph, Calendar at 6 o'clock position",
     // Battery
     battery: undefined,
   },

@@ -11,7 +11,7 @@ const RONDA_6004B: Caliber = {
 
   // UsefullLinks
   usefullLinks: {
-    "CalibeCorner Ronda 6004.B": "https://calibercorner.com/ronda-caliber-6004-b/",
+    "CaliberCorner Ronda 6004.B": "https://calibercorner.com/ronda-caliber-6004-b/",
   },
   // sliderImages
   sliderImages: [

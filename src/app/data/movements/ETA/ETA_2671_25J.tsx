@@ -13,9 +13,9 @@ const ETA_2671: Caliber = {
   title: "ETA 2671",
   //Description
   description:
-    "High quality ETA automatic movement with gold plated finishing, adjusted and bi-diretional winding. \n \n" +
-    "Launched in the 1970s was used in mostly every swiss made autometic ladies watch due to his smaller dimensions.\n\n" +
-    "Older versions can also be found with 21 and 17 Jewels ",
+    "High quality ETA automatic movement with gold plated finishing, adjusted and bi-directional winding. \n \n" +
+    "Launched in the 1970s, it was used in mostly every Swiss made automatic ladies watch due to its smaller dimensions.\n\n" +
+    "Older versions can also be found with 21 and 17 jewels.",
   // UsefullLinks
   usefullLinks: {},
   // sliderImages

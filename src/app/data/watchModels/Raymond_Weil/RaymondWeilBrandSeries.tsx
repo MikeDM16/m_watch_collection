@@ -1,5 +1,5 @@
 export const RaymondWeilBrandSeries = {
-  TRADITION_MECANIQUE: "​Tradition Mécanique",
+  TRADITION_MECANIQUE: "Tradition Mécanique",
   MAESTRO: "Maestro",
   SAXO: "Saxo",
   TANGO: "Tango",

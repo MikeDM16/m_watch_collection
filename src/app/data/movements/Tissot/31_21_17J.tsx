@@ -15,17 +15,17 @@ const TISSOT_31_21_17J: Caliber = {
   //Description
   description:
     "In-house Tissot movement produced around 1944 until 1956. \n\
-    Detailed references diferences:\n\
+    Detailed reference differences:\n\
     - 28-1 : sub second, base plate without mounting flange\n\
     - 28-21: sweep second, base plate without mounting flange\n\
     - 28.5-1 : sub second, base plate with mounting flange\n\
-    - 28,5-21: sweep second, base plate with mounting flange\n\
+    - 28.5-21: sweep second, base plate with mounting flange\n\
     - 31-1 : sub second, bigger base plate\n\
     - 31-21: sweep second, bigger base plate",
   // UsefullLinks
   usefullLinks: {
     "Ranfft Tissot 31-21": "https://ranfft.org/caliber/9960-Tissot-31-21",
-    "Emmy Eatch Tissot 31-21-2": "https://www.emmywatch.com/db/movement/tissot--31-21/",
+    "Emmy Watch Tissot 31-21": "https://www.emmywatch.com/db/movement/tissot--31-21/",
   },
   // sliderImages
   sliderImages: [

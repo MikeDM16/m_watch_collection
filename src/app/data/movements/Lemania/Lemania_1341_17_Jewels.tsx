@@ -13,8 +13,8 @@ const LEMANIA_1341: Caliber = {
   title: "Lemania 1341",
   //Description
   description:
-    "Tissot, Omega and Lemania were parter companies along the 1960s. \
-  This partnership lead to many Lemania movements beeing used and rebranded by Tissot and Omega. \n\
+    "Tissot, Omega and Lemania were partner companies throughout the 1960s. \
+  This partnership led to many Lemania movements being used and rebranded by Tissot and Omega. \n\
   The Lemania 1341 is used by Omega under the reference Cal. Omega 1040. \n\
   Caliber references: \n\
   - 1340: hour counter, 24h display\n\

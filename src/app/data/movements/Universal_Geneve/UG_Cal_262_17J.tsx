@@ -10,7 +10,7 @@ import type { Caliber } from "../../caliberTypes";
 
 const UNIVERSAL_GENEVE_262_17J: Caliber = {
   // Title
-  title: "Universal Geneve Cal. 262",
+  title: "Universal Genève Cal. 262",
   //Description
   description: "",
   // UsefullLinks

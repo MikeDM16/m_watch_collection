@@ -125,7 +125,7 @@ const details: WatchDetails = {
     },
 
     movement: {
-      title: "Shiojiri  N945",
+      title: "Shiojiri N945",
       description: "",
       usefullLinks: {
         "Instruction Manual from LORUS": "../Files/N945_instructions.pdf",

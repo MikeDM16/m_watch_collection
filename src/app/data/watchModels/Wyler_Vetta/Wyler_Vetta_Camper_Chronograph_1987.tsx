@@ -79,7 +79,7 @@ const details: WatchDetails = {
     information: {
       brand: BrandsEnum.WYLER_VETTA,
       series: "Camper",
-      catalogueReference: "91301,51",
+      catalogueReference: "91301.51",
       productionYear: "1987",
       movementType: MovementWatchTypeEnum.QUARTZ,
       style: WatchStyleEnum.SPORTS,

@@ -8,9 +8,9 @@ const OMEGA_1665: Caliber = {
   title: "Omega Cal. 1665",
   //Description
   description:
-    "Omega high end quartz caliber with analogic and digital functions. \n\
+    "Omega high end quartz caliber with analogue and digital functions. \n\
     Based on the ETA 988.432.\n\
-    Function are selected by gently turning the crown in slow motions. Functions are adjusted by pressing the crown out and turning it.",
+    Functions are selected by gently turning the crown in slow motions. Functions are adjusted by pressing the crown out and turning it.",
 
   // UsefullLinks
   usefullLinks: {},

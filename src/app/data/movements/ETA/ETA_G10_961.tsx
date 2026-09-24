@@ -9,7 +9,7 @@ const ETA_G10_961: Caliber = {
   //Description
   description:
     "Simple quartz chronograph movement with 4 jewels. Part of ETA Fashionline series of quartz movements.\n\
-    Additional 24 GMT Hour Hand at the 9 0'clock subdial.\n\n\
+    Additional 24-hour GMT hand at the 9 o'clock subdial.\n\n\
     GMT is adjusted using the external pusher: Click the GMT pusher once, release, press again to jump the GMT hand in 1-hour intervals.",
 
   // UsefullLinks
@@ -36,7 +36,7 @@ const ETA_G10_961: Caliber = {
     // Reserve
     reserve: undefined,
     // Functions
-    functions: "GMT Hand at 9'clock, Date, Hours, Minutes, Seconds at 6 o'clock",
+    functions: "GMT Hand at 9 o'clock, Date, Hours, Minutes, Seconds at 6 o'clock",
     // Battery
     battery: "394",
   },

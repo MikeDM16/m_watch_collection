@@ -107,7 +107,7 @@ const details: WatchDetails = {
 
     information: {
       brand: BrandsEnum.TAG_HEUER,
-      series: TagHeuerBrandSeries.FORMULA_1_6RD_GEN,
+      series: TagHeuerBrandSeries.FORMULA_1_6TH_GEN,
       catalogueReference: "Formula-1 Indy 500 - Limited Edition 529/1000 CAZ1016.EB0058",
       productionYear: "2016",
       movementType: MovementWatchTypeEnum.QUARTZ,

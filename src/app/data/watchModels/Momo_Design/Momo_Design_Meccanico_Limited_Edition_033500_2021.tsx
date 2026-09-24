@@ -78,7 +78,7 @@ const details: WatchDetails = {
     information: {
       brand: BrandsEnum.MOMO_DESIGN,
       series: "Meccanico",
-      catalogueReference: "MD 175  - Limited Edition 033/500",
+      catalogueReference: "MD 175 - Limited Edition 033/500",
       productionYear: "2021",
       movementType: MovementWatchTypeEnum.MECHANIQUE,
       style: WatchStyleEnum.SPORTS,

@@ -56,7 +56,7 @@ export const JewelsNumberEnum = {
   J_21: "21 (Twenty-One) Jewels",
   J_22: "22 (Twenty-Two) Jewels",
   J_23: "23 (Twenty-Three) Jewels",
-  J_24: "23 (Twenty-Four) Jewels",
+  J_24: "24 (Twenty-Four) Jewels",
   J_25: "25 (Twenty-Five) Jewels",
   J_26: "26 (Twenty-Six) Jewels",
   J_27: "27 (Twenty-Seven) Jewels",
@@ -64,12 +64,12 @@ export const JewelsNumberEnum = {
   J_30: "30 (Thirty) Jewels",
   J_31: "31 (Thirty-One) Jewels",
   J_37: "37 (Thirty-Seven) Jewels",
-  J_38: "38 (Thirty-Eigth) Jewels",
+  J_38: "38 (Thirty-Eight) Jewels",
   J_39: "39 (Thirty-Nine) Jewels",
   J_40: "40 (Forty) Jewels",
-  J_42: "42 (Forty-two) Jewels",
+  J_42: "42 (Forty-Two) Jewels",
   J_45: "45 (Forty-Five) Jewels",
-  J_47: "45 (Forty-Seven) Jewels",
+  J_47: "47 (Forty-Seven) Jewels",
 };
 
 export const ReserveHoursEnum = {

@@ -26,8 +26,8 @@ const TISSOT_784: Caliber = {
     "  - 792: manual wind, date, no second\n" +
     "  - 793: manual wind, day, date, no second\n" +
     "  - 794 (796): automatic, day, date\n" +
-    "  - 884: like 784-2, but polymide bearings\n" +
-    "  - 894: like 794, but polymide bearings\n" +
+    "  - 884: like 784-2, but polyamide bearings\n" +
+    "  - 894: like 794, but polyamide bearings\n" +
     "\nMain features:\n" +
     '  - Suffix "-1": new Incabloc, date jumper with long hole for date change by forth-and back setting. \
                    Therefore, it allows quick date set, by changing around 21:30-24h. \n' +

@@ -16,7 +16,7 @@ const ETA_2895_1_30J: Caliber = {
     "ETA caliber 2895-1 is a Swiss made automatic watch movement with 30 jewels and a frequency of 4 Hz (28,800 beats per hour).\n\
   The notable features of the 2895-1 are its small seconds subdial at 6:00 with a date.\n\n\
   \
-  The 2895-1 is available in 3 grades depending on the requirements of the watch it is being used in: Elabore, Top, or COSC Chronometer.",
+  The 2895-1 is available in 3 grades depending on the requirements of the watch it is being used in: Élaboré, Top, or COSC Chronometer.",
 
   // UsefullLinks
   usefullLinks: {},

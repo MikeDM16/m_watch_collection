@@ -98,7 +98,7 @@ const details: WatchDetails = {
     movement: {
       title: "FHF 251-3",
       description:
-        "Upgraded version of the base FHF 25 caliber, with calender hand around the dial.",
+        "Upgraded version of the base FHF 25 caliber, with calendar hand around the dial.",
       usefullLinks: {
         "Ranfft FHF 25": "http://www.ranfft.de/cgi-bin/bidfun-db.cgi?10&ranfft&0&2uswk&FHF_251_3",
         "FHF 28 Vintage technical information": "../Files/2923_FHF 28,281.pdf",

@@ -26,13 +26,13 @@ const OMEGA_610_17J: Caliber = {
     - 750: 17 jewels, day, quickset date\n\
     - 751: 24 jewels, day, quickset date, chronometer\n\
     - 752: 24 jewels, day, quickset date\n\n\
-    Manual wind Caliber serie:\n\
+    Manual wind Caliber series:\n\
     - 600: Reed's regulator\n\
-    - 601: excenter regulator\n\
-    - 602: excenter regulator, chronometer\n\
+    - 601: eccentric regulator\n\
+    - 602: eccentric regulator, chronometer\n\
     - 610: Reed's regulator, date\n\
-    - 611: excenter regulator, date\n\
-    - 613: excenter regulator, quickset date",
+    - 611: eccentric regulator, date\n\
+    - 613: eccentric regulator, quickset date",
 
   // UsefullLinks
   usefullLinks: {

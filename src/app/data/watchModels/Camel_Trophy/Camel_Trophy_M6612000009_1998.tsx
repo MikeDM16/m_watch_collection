@@ -114,7 +114,7 @@ const details: WatchDetails = {
 
     movement: {
       title: "Ronda 315",
-      description: "Entry level ronda movement. Reliable and made to last through time.",
+      description: "Entry level Ronda movement. Reliable and made to last through time.",
       usefullLinks: {},
       sliderImages: ["public/assets/Images/Camel/1998_Camel_Trophy_Time_Date/ronda315.PNG"],
 

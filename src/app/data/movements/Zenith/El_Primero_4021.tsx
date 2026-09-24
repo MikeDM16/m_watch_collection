@@ -14,7 +14,7 @@ const ZENITH_EL_PRIMERO_4021: Caliber = {
 
   //Description
   description:
-    "The Zenith El Primero 4021 is a automatic chronograph movement  movement with power reserve display.\n\
+    "The Zenith El Primero 4021 is an automatic chronograph movement with a power reserve display.\n\
   \n\
   The El Primero 4021 operates at a high frequency of 36,000 vibrations per hour (vph), allowing for a remarkable accuracy. \n\
   This high beat rate is a defining characteristic of the El Primero series and the Zenith chronographs.",

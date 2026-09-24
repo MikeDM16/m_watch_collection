@@ -59,7 +59,7 @@ const details: WatchDetails = {
 
     information: {
       brand: BrandsEnum.TAG_HEUER,
-      series: TagHeuerBrandSeries.FORMULA_1_2RD_GEN,
+      series: TagHeuerBrandSeries.FORMULA_1_2ND_GEN,
       catalogueReference: "WK1219",
       productionYear: "1995",
       movementType: MovementWatchTypeEnum.QUARTZ,

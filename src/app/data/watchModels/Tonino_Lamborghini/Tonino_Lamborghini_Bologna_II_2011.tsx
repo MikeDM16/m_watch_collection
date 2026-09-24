@@ -75,7 +75,7 @@ const details: WatchDetails = {
       brand: BrandsEnum.TONINO_LAMBORGHINI,
       series: "Bologna II",
       catalogueReference: "-",
-      productionYear: "1995",
+      productionYear: "2011",
       movementType: MovementWatchTypeEnum.QUARTZ,
       style: WatchStyleEnum.SPORTS,
     },

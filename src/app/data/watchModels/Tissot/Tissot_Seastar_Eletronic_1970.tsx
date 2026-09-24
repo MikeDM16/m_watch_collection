@@ -24,7 +24,7 @@ import { WatchDetails } from "../../watchDetails";
 import { TissotBrandSeries } from "./TissotBrandSeries";
 
 const details: WatchDetails = {
-  title: "1970 Tissot Seastar Eletronic",
+  title: "1970 Tissot Seastar Electronic",
   sliderImages: [
     "public/assets/Images/Tissot/1970_Tissot_Seastar_Eletronic/IMG_2228.JPG",
     "public/assets/Images/Tissot/1970_Tissot_Seastar_Eletronic/IMG_2229.JPG",
@@ -71,7 +71,7 @@ const details: WatchDetails = {
     information: {
       brand: BrandsEnum.TISSOT,
       series: TissotBrandSeries.SEASTAR,
-      catalogueReference: "Eletronic 652-40604-01",
+      catalogueReference: "Electronic 652-40604-01",
       productionYear: "1970",
       movementType: MovementWatchTypeEnum.ELETRONIC_WITH_BALANCE,
       style: WatchStyleEnum.DRESS,
@@ -107,12 +107,12 @@ const details: WatchDetails = {
     movement: {
       title: "ETA-ISA 9154 Dynotron",
       description:
-        "Launched in 1967, the ESA 9150 Dynotron was the first movement with a balance and a transistor assemble in the same caliber, \
+        "Launched in 1967, the ESA 9150 Dynotron was the first movement with a balance and a transistor assembled in the same caliber, \
                             running at 21,600 A/h. \n \n " +
         "The ESA 9154 is an updated version launched in 1970, having the date function and an increased frequency of 28,800 A/h. \n" +
         "Both the ESA 9150 and ESA 9154 look very similar. \n \n",
       usefullLinks: {
-        "Eletric watchs: Transistorised Movements with Balance Wheel":
+        "Electric watches: Transistorised Movements with Balance Wheel":
           "http://electric-watches.co.uk/movement-types/transistorised/",
         "Vintage technical information from ETA": "../Files/3540_ETA 9154.pdf",
       },
@@ -123,10 +123,10 @@ const details: WatchDetails = {
       ],
       details: {
         manufacturer: "ETA-ISA (Swiss Made)",
-        modelReference: "9154 Dynotron ",
-        type: "Eletronic",
+        modelReference: "9154 Dynotron",
+        type: "Electronic",
         frequency: "28800 A/h",
-        jewels: "13 (Thriteen) Jewels ",
+        jewels: "13 (Thirteen) Jewels",
         battery: "343 (original, mercury), 344 (current replacement) ",
         functions: "Date, Hours, Minutes, Sweep Seconds",
       },

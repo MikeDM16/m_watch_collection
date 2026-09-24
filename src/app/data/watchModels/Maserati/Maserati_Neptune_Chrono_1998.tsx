@@ -24,7 +24,7 @@ import movement_ETA_Valjoux_7750_17J from "../../movements/ETA/ETA_Valjoux_7750_
 import { WatchDetails } from "../../watchDetails";
 
 const details: WatchDetails = {
-  title: "1999 Maserati Neptune Chronograph Automatic",
+  title: "1998 Maserati Neptune Chronograph Automatic",
   sliderImages: [
     "public/assets/Images/Maserati/1998_Maserati_Neptune_Chronograph/IMG_6609.JPG",
     "public/assets/Images/Maserati/1998_Maserati_Neptune_Chronograph/IMG_6611.JPG",
@@ -98,7 +98,7 @@ const details: WatchDetails = {
 
     information: {
       brand: BrandsEnum.MASERATI,
-      series: "Maserati Oficial Timepieces",
+      series: "Maserati Official Timepieces",
       catalogueReference: "Neptune",
       productionYear: "1998",
       movementType: MovementWatchTypeEnum.AUTOMATIC,

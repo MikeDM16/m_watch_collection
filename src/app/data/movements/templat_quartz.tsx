@@ -3,7 +3,7 @@ import { MovementWatchTypeEnum } from "@/app/enums/movementWatchTypeEnum";
 
 import type { Caliber } from "../caliberTypes";
 
-const ETA_G10_211: Caliber = {
+const QUARTZ_TEMPLATE: Caliber = {
   // Title
   title: "",
   //Description
@@ -27,7 +27,7 @@ const ETA_G10_211: Caliber = {
     // Manufacturer
     manufacturer: CaliberBrandsEnum.ETA,
     // ModelReference
-    modelReference: "asasas",
+    modelReference: "",
     // Type
     type: MovementWatchTypeEnum.QUARTZ,
     // Frequency
@@ -43,4 +43,4 @@ const ETA_G10_211: Caliber = {
   },
 };
 
-export default ETA_G10_211;
+export default QUARTZ_TEMPLATE;

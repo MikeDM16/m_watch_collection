@@ -25,7 +25,7 @@ import { WatchDetails } from "../../watchDetails";
 import { NovartBrandSeries } from "./NovartBrandSeries";
 
 const details: WatchDetails = {
-  title: "1974 Monza Novart Desert Sand 17 Jewels",
+  title: "1974 Novart Monza Desert Sand 17 Jewels",
   sliderImages: [
     "public/assets/Images/Novart/1974_Novart_U6380_Desert_Sand/IMG_5841.JPG",
     "public/assets/Images/Novart/1974_Novart_U6380_Desert_Sand/IMG_5842.JPG",

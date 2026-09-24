@@ -25,7 +25,7 @@ import { WatchDetails } from "../../watchDetails";
 import { OmegaBrandSeries } from "./OmegaBrandSeries";
 
 const details: WatchDetails = {
-  title: "1992 Omega Polaris Ratrappante Chronograph 386 1031.1",
+  title: "1992 Omega Polaris Rattrapante Chronograph 386 1031.1",
 
   sliderImages: [
     "public/assets/Images/Omega/1992_Omega_Polaris_Ratrappante_386_1031/IMG_0673.JPG",
@@ -89,7 +89,7 @@ const details: WatchDetails = {
     information: {
       brand: BrandsEnum.OMEGA,
       series: OmegaBrandSeries.POLARIS,
-      catalogueReference: "Ratrappante Chronograpg (DB 386.1031)",
+      catalogueReference: "Rattrapante Chronograph (DB 386.1031)",
       productionYear: "1992",
       movementType: MovementWatchTypeEnum.QUARTZ,
       style: WatchStyleEnum.SPORTS,

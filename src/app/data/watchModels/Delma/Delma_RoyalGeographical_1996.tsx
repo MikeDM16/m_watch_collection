@@ -87,7 +87,7 @@ const details: WatchDetails = {
 
     information: {
       brand: BrandsEnum.ROYAL_GEOGRAPHICAL_SOCIETY,
-      series: "1º Gen Chrono (Limited 2500 pieces, assemble by Delma)",
+      series: "1st Gen Chrono (Limited 2500 pieces, assembled by Delma)",
       catalogueReference: "667230.1",
       productionYear: "1996",
       movementType: MovementWatchTypeEnum.QUARTZ,

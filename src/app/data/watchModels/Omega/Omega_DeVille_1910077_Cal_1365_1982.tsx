@@ -57,7 +57,7 @@ const details: WatchDetails = {
       brand: BrandsEnum.OMEGA,
       series: OmegaBrandSeries.DE_VILLE_VINTAGE,
       catalogueReference: "Classic 191.0077",
-      productionYear: "1979 -1984 (1982)",
+      productionYear: "1979-1984 (1982)",
       movementType: MovementWatchTypeEnum.QUARTZ,
       style: WatchStyleEnum.DRESS,
     },
@@ -93,8 +93,8 @@ const details: WatchDetails = {
       title: "Omega 1365",
       description:
         "De Ville quartz line movement. \n \n" +
-        "Minutes are set by pressing the crown entry repeatably, one push per minute. \
-                Hours are set by holding the crow pressed for around 3 seconds. The hour hand then moves in 1-hour step. Minutes stay the same.",
+        "Minutes are set by pressing the crown in repeatedly, one push per minute. \
+                Hours are set by holding the crown pressed for around 3 seconds. The hour hand then moves in 1-hour steps. Minutes stay the same.",
       usefullLinks: {
         "Technical Information from Omega": "../Files/omega_1365.pdf",
         "Omega Vintage Catalogue":
@@ -109,7 +109,7 @@ const details: WatchDetails = {
         modelReference: "1365",
         type: "Quartz",
         battery: "SR621SW",
-        jewels: "9 (Nine) Jewels ",
+        jewels: "9 (Nine) Jewels",
         functions: "Hours, Minutes",
       },
     },

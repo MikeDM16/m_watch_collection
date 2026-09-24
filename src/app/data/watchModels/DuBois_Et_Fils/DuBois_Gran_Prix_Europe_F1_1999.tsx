@@ -24,7 +24,7 @@ import movement_ETA_Valjoux_7750_25J from "../../movements/ETA/ETA_Valjoux_7750_
 import { WatchDetails } from "../../watchDetails";
 
 const details: WatchDetails = {
-  title: "1999 DuBois Grand Prix D'Europe Formula 1 - 1999",
+  title: "1999 DuBois Grand Prix d'Europe Formula 1",
 
   sliderImages: [
     "public/assets/Images/DuBois/1999_DuBois_Gran_Prix_Europe_F1_7750/IMG_9097.JPG",
@@ -81,7 +81,7 @@ const details: WatchDetails = {
 
     information: {
       brand: BrandsEnum.DUBOIS,
-      series: "Grand Prix D'Europe Formula 1 - 1999",
+      series: "Grand Prix d'Europe Formula 1 - 1999",
       catalogueReference: "Limited Edition 499",
       productionYear: "1999",
       movementType: MovementWatchTypeEnum.AUTOMATIC,

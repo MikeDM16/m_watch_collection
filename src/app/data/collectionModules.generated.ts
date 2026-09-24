@@ -61,7 +61,7 @@ export const modelLoaders: Record<string, () => Promise<{ default: WatchDetails 
     import("./watchModels/Breitling/Breitling_Sextant_B55047_1998"),
   "Breitling/Breitling_Vitesse_Serie_Speciale_Blue_1998": () =>
     import("./watchModels/Breitling/Breitling_Vitesse_Serie_Speciale_Blue_1998"),
-  "Buren/Buren_Gran_Prix__1947": () => import("./watchModels/Buren/Buren_Gran_Prix__1947"),
+  "Buren/Buren_Grand_Prix__1947": () => import("./watchModels/Buren/Buren_Grand_Prix__1947"),
   "Calypso/Calypso_OS10_Chrono_2001": () =>
     import("./watchModels/Calypso/Calypso_OS10_Chrono_2001"),
   "Camel_Trophy/Camel_Trophy_M136831839_1995": () =>
@@ -398,6 +398,10 @@ export const modelLoaders: Record<string, () => Promise<{ default: WatchDetails 
   "Signo/Signo_Small_Seconds_1947": () => import("./watchModels/Signo/Signo_Small_Seconds_1947"),
   "Solvil_et_Titus/Solvil_et_Titus_Genéve_Tank_1942": () =>
     import("./watchModels/Solvil_et_Titus/Solvil_et_Titus_Genéve_Tank_1942"),
+  "Solvil_et_Titus/Titus_Chronograph_L48_1950": () =>
+    import("./watchModels/Solvil_et_Titus/Titus_Chronograph_L48_1950"),
+  "Solvil_et_Titus/Titus_Tuning_Fork_F300Hz_1970": () =>
+    import("./watchModels/Solvil_et_Titus/Titus_Tuning_Fork_F300Hz_1970"),
   "Tag_Heuer/Heuer_Airline_Professional_895513_1985": () =>
     import("./watchModels/Tag_Heuer/Heuer_Airline_Professional_895513_1985"),
   "Tag_Heuer/Tag_Heuer_Aquaracer_CN2111_2005": () =>
@@ -591,10 +595,6 @@ export const modelLoaders: Record<string, () => Promise<{ default: WatchDetails 
     import("./watchModels/Tissot/Tissot_Visodate_Automatic_1958"),
   "Tissoure/Tissoure_Cronometro_17J_1975": () =>
     import("./watchModels/Tissoure/Tissoure_Cronometro_17J_1975"),
-  "Titus/Titus_Chronograph_L48_1950": () =>
-    import("./watchModels/Titus/Titus_Chronograph_L48_1950"),
-  "Titus/Titus_Tuning_Fork_F300Hz_1970": () =>
-    import("./watchModels/Titus/Titus_Tuning_Fork_F300Hz_1970"),
   "Tonino_Lamborghini/Tonino_Lamborghini_Bologna_II_2011": () =>
     import("./watchModels/Tonino_Lamborghini/Tonino_Lamborghini_Bologna_II_2011"),
   "Tourist/Tourist_Ancre_17Rubis_1950": () =>

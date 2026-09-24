@@ -24,7 +24,7 @@ import movement_MIYOTA_OS10 from "../../movements/Miyota/OS10";
 import { WatchDetails } from "../../watchDetails";
 
 const details: WatchDetails = {
-  title: "2001 Calypso Chronograph OS10",
+  title: "1998 Calypso Chronograph OS10",
 
   sliderImages: [
     "public/assets/Images/Calypso/2001_Calypso_Chrono_OS10/IMG_2951.JPG",

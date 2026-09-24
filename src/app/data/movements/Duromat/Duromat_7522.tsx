@@ -12,7 +12,7 @@ const Duromat_7522: Caliber = {
   title: "Duromat 7522",
   description: "",
   usefullLinks: {
-    "Rafft Duromat 7522": "https://ranfft.org/caliber/3008-Durowe-7522-INT",
+    "Ranfft Duromat 7522": "https://ranfft.org/caliber/3008-Durowe-7522-INT",
   },
 
   sliderImages: [

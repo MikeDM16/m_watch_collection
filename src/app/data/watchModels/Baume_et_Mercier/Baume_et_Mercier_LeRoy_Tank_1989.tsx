@@ -65,7 +65,7 @@ const details: WatchDetails = {
     information: {
       brand: BrandsEnum.BAUME_MERCIER,
       series: "Le Roy",
-      catalogueReference: "(Analogic-Digital",
+      catalogueReference: "(Analogue-Digital)",
       productionYear: "1989",
       movementType: MovementWatchTypeEnum.QUARTZ,
       style: WatchStyleEnum.CASUAL,

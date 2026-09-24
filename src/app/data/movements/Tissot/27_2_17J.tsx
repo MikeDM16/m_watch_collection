@@ -40,8 +40,8 @@ const TISSOT_27_2: Caliber = {
     - 27B-9: no second",
   // UsefullLinks
   usefullLinks: {
-    "Ranfft Tissot 27_2": "https://ranfft.org/caliber/9927-Tissot-27-2",
-    "Emmy Eatch Tissot 27-2": "https://www.emmywatch.com/db/movement/tissot--27-2/",
+    "Ranfft Tissot 27-2": "https://ranfft.org/caliber/9927-Tissot-27-2",
+    "Emmy Watch Tissot 27-2": "https://www.emmywatch.com/db/movement/tissot--27-2/",
   },
   // sliderImages
   sliderImages: [

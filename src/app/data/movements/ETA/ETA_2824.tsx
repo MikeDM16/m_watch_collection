@@ -13,8 +13,8 @@ const ETA_2824: Caliber = {
   title: "ETA 2824",
   //Description
   description:
-    "High quality ETA automatic movement with gold plated finishing, adjusted and bi-diretional winding. \n \n" +
-    "It has been in production since 1982 and was based off of the original Eterna caliber 1427.",
+    "High quality ETA automatic movement with gold plated finishing, adjusted and bi-directional winding. \n \n" +
+    "It has been in production since 1982 and was based on the original Eterna caliber 1427.",
   // UsefullLinks
   usefullLinks: {
     "Caliber Corner ETA 2824": "https://calibercorner.com/eta-caliber-2824-2/",

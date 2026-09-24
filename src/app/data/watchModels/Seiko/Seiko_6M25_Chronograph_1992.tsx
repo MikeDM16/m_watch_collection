@@ -43,7 +43,7 @@ const details: WatchDetails = {
       "<b>Timer mode</b>: hands can be set to countdown \n" +
       "<b>Set alarm</b> mode: hands can be set to the alarm time \n" +
       "<b>Alarm on</b> mode: alarm is active, deactivated by any buttons  \n" +
-      'Interesthing thread on WatchUSeek, to see a huge collection of mint condition 6M/8M Seiko watchs: <a href="https://forums.watchuseek.com/f21/loving-my-quartz-my-entire-seiko-6m-8m-collection-1823162.html"> link </a>	',
+      'Interesting thread on WatchUSeek, to see a huge collection of mint condition 6M/8M Seiko watchs: <a href="https://forums.watchuseek.com/f21/loving-my-quartz-my-entire-seiko-6m-8m-collection-1823162.html"> link </a>	',
     sliderImages: [],
   },
   sliderImages: [

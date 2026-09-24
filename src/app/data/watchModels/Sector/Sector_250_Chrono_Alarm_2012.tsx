@@ -114,7 +114,7 @@ const details: WatchDetails = {
         modelReference: "G10.791",
         type: "Quartz",
         battery: "394",
-        jewels: "4 (Four) Jewels ",
+        jewels: "4 (Four) Jewels",
         functions: "Chronograph, Alarm, Date, Hours, Minutes, Seconds at 6 o'clock",
       },
     },

@@ -24,7 +24,7 @@ import movement_FHF_30 from "../../movements/FHF/FHF_30_17J";
 import { WatchDetails } from "../../watchDetails";
 
 const details: WatchDetails = {
-  title: "1942 Solvil et Titus Genéve Tank",
+  title: "1942 Solvil et Titus Genève Tank",
 
   sliderImages: [
     "public/assets/Images/Titus/1942_Titus_Geneve_Tank_FHF_30/IMG_4567.JPG",
@@ -75,7 +75,7 @@ const details: WatchDetails = {
 
     information: {
       brand: BrandsEnum.SOLVIL_ET_TITUS,
-      series: "IncablocGenéve",
+      series: "Incabloc Genève",
       catalogueReference: "-",
       productionYear: "1942",
       movementType: MovementWatchTypeEnum.MECHANIQUE,

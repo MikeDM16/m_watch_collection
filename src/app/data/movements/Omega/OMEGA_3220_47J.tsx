@@ -11,8 +11,8 @@ import type { Caliber } from "../../caliberTypes";
 const OMEGA_3220_47J: Caliber = {
   title: "Omega Cal. 3220",
   description:
-    'Omega speedmaster "reduced" movements use a combination of an ETA automatic base movement with a Chronograph module from Debois Depraz. \n' +
-    "The Omega 3220 is an automatic chronograph with 47 jewels, using a 26 jewels Debois Derpáz 2020 cronograph powered by a 21 jewels ETA 2892-A2 base movement.",
+    'Omega Speedmaster "reduced" movements use a combination of an ETA automatic base movement with a Chronograph module from Dubois Depraz. \n' +
+    "The Omega 3220 is an automatic chronograph with 47 jewels, using a 26 jewels Dubois Depraz 2020 chronograph powered by a 21 jewels ETA 2892-A2 base movement.",
   usefullLinks: {
     "EmmyWatch Omega 3220": "https://www.emmywatch.com/db/movement/omega--3220/",
   },

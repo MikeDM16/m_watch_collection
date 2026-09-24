@@ -23,7 +23,7 @@ const ZENITH_P_12_4_50: Caliber = {
   Caliber series with Central Sweep second:\n\
   - 12-4-P-50: sweep second\n\
   - 12-4-P-50-6: sweep second, Incabloc\n\
-  - 12-4-P-7: stem unlocking from dlal side\n",
+  - 12-4-P-7: stem unlocking from dial side\n",
   // UsefullLinks
   usefullLinks: {},
   // sliderImages

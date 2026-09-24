@@ -14,10 +14,10 @@ const OMEGA_T17: Caliber = {
   //Description
   description:
     'Early Omega movement designed specifically for use in rectangular and other shaped cases. Protected by a metal casing. \
-    Charles Perregaux (under the direction of Henri Gerber) Description: The "T" designates this calibre\'s tonneau or barrel shape,\
+    Designed by Charles Perregaux under the direction of Henri Gerber. The "T" designates this calibre\'s tonneau or barrel shape,\
     and "17" its maximum width in millimetres (the calibre\'s length being of 24.5 mm).\n\
     With a 60-hour power reserve, the T-17 had the largest power reserve of all the mechanical wristwatch movements made by Omega until the calibre 8500 of 2006! \
-    This achievement was realised thanks to an enlarged barrel which rotated slower and a gearing ratio that allowed a considerable increase in the duration of the run, driving to an outstanding stability for the normal 24-hour daily rate separating consecutive windings.\n\
+    This achievement was realised thanks to an enlarged barrel which rotated slower and a gearing ratio that allowed a considerable increase in the duration of the run, leading to outstanding stability for the normal 24-hour daily rate separating consecutive windings.\n\
     The T-17 was produced in more than 167,000 pieces up to 1943.',
 
   // UsefullLinks

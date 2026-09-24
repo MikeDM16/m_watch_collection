@@ -6,7 +6,7 @@ HEUER_ETA_955.title = "Tag Heuer (ETA 955.412)";
 
 HEUER_ETA_955.description =
   HEUER_ETA_955.description +
-  "\n\nThis movement is used in several Tag Heuer qaurtz models with different code name brandings. \n\
+  "\n\nThis movement is used in several Tag Heuer quartz models with different code name brandings. \n\
   - ETA 955.112: Tag Heuer 3.89 and 4.00\n\
   - ETA 955.412: Tag Heuer 1.93/94/97, 4.93/96";
 

@@ -103,7 +103,7 @@ const details: WatchDetails = {
 
     movement: {
       title: "Langendorf 1305",
-      description: " Gold plated in-house Lanco Movement. Incabloc from factory.",
+      description: "Gold plated in-house Lanco Movement. Incabloc from factory.",
       usefullLinks: {
         "Ranfft Langendorf 1305":
           "http://www.ranfft.de/cgi-bin/bidfun-db.cgi?10&ranfft&&2uswk&Langendorf_1305",
@@ -114,11 +114,11 @@ const details: WatchDetails = {
         "public/assets/Images/Lanco/1960_Lanco/mov3.PNG",
       ],
       details: {
-        manufacturer: "Lanco (Lagendorf - Swiss Made)",
+        manufacturer: "Lanco (Langendorf - Swiss Made)",
         modelReference: "1305",
         type: "Mechanical",
         frequency: "18000 A/h",
-        jewels: "17 (Seventeen) Jewels ",
+        jewels: "17 (Seventeen) Jewels",
         reserve: "50 Hours",
         functions: "Hours, Minutes, Sub Seconds at 6 o'clock position",
       },

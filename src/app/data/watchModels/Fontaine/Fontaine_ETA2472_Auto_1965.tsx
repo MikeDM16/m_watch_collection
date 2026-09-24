@@ -111,7 +111,7 @@ const details: WatchDetails = {
         modelReference: "2472",
         type: "Automatic",
         frequency: "19800 A/h",
-        jewels: "25 (Twenty-five) Jewels ",
+        jewels: "25 (Twenty-five) Jewels",
         reserve: "42 Hours",
         functions: "Date, Hours, Minutes, Sweep Seconds",
       },

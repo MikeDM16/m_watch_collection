@@ -81,7 +81,7 @@ const details: WatchDetails = {
 
     information: {
       brand: BrandsEnum.UTINA,
-      series: "Enamel Dial",
+      series: "Sunburst",
       catalogueReference: "3300/69/20",
       productionYear: "1972",
       movementType: MovementWatchTypeEnum.MECHANIQUE,

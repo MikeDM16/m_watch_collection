@@ -136,7 +136,7 @@ const details: WatchDetails = {
     },
 
     movement: {
-      title: " ETA E40.305",
+      title: "ETA E40.305",
       description:
         "Second generation Tissot T-Touch movement. \n \n" +
         "Alarm, Altitude Indicator, Thermometer, Compass.",

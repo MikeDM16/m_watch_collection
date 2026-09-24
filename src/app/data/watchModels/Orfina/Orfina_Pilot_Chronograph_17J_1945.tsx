@@ -24,7 +24,7 @@ import movement_VENUS_170_17J from "../../movements/Venus/Venus_170_17J";
 import { WatchDetails } from "../../watchDetails";
 
 const details: WatchDetails = {
-  title: "1947 Orfina Pilot Chronograph Venus 170",
+  title: "1945 Orfina Pilot Chronograph Venus 170",
 
   sliderImages: [
     "public/assets/Images/Orfina/1945_Orfina_Pilot_Chronograph_Venus_170/IMG_8417.JPG",

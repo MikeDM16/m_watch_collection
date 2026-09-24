@@ -13,7 +13,7 @@ const VENUS_175_17J: Caliber = {
   title: "Venus Cal. 175",
   //Description
   description:
-    "The Venus 175 is the base model of a family of column wheel chronograph movements. Lauched in 1942, was substantially modified in 1949 and retired at about 1960.\n\
+    "The Venus 175 is the base model of a family of column wheel chronograph movements. Launched in 1942, was substantially modified in 1949 and retired at about 1960.\n\
     Cal. 175 can feature a 30 or 45 minute chronograph counter at 3:00.",
 
   // UsefullLinks

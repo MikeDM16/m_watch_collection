@@ -24,7 +24,7 @@ import movement_LANDERON_51_17J from "../../movements/Landeron/Landeron_51_17J_"
 import { WatchDetails } from "../../watchDetails";
 
 const details: WatchDetails = {
-  title: "1955 Hermes Landerom 51 Chronograph",
+  title: "1955 Hermès Landeron 51 Chronograph",
   sliderImages: [
     "public/assets/Images/Hermes/1955_Hermes_Chronograph/IMG_1926.JPG",
     "public/assets/Images/Hermes/1955_Hermes_Chronograph/IMG_1927.JPG",

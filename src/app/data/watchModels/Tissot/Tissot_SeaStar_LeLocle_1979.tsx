@@ -25,7 +25,7 @@ import { WatchDetails } from "../../watchDetails";
 import { TissotBrandSeries } from "./TissotBrandSeries";
 
 const details: WatchDetails = {
-  title: "1979 Tissot Seastar LeLocle Cal.2031",
+  title: "1979 Tissot Seastar Le Locle Cal.2031",
   sliderImages: [
     "public/assets/Images/Tissot/1979_Tissot_Seastar_LeLocle/IMG_0207.JPG",
     "public/assets/Images/Tissot/1979_Tissot_Seastar_LeLocle/IMG_0209.JPG",

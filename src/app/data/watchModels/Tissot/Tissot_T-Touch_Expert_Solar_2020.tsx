@@ -152,9 +152,9 @@ const details: WatchDetails = {
     },
 
     movement: {
-      title: " ETA E84.301",
+      title: "ETA E84.301",
       description:
-        "Movement for Tissot T-Touch. Functions include Air pressure , Alarm , Alarm II, Altimeter, Azimuth, Backlight, Chronograph, Compass, Date, Mulitple Time-zones, Multifunction Touch Features.",
+        "Movement for Tissot T-Touch. Functions include Air pressure, Alarm, Alarm II, Altimeter, Azimuth, Backlight, Chronograph, Compass, Date, Multiple Time-zones, Multifunction Touch Features.",
       usefullLinks: {},
       sliderImages: ["public/assets/Images/Tissot/2020_Tissot_T_Touch_Expert_Solar/E84_301_1.JPG"],
 

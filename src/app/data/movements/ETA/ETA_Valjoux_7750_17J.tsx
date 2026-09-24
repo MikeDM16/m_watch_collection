@@ -14,7 +14,7 @@ const ETA_Valjoux_7750_17: Caliber = {
   //Description
   description:
     "High quality automatic chronograph from Valjoux. \n\
-  Based on the original Pré-ETA caliber with 17 jewels.",
+  Based on the original Pre-ETA caliber with 17 jewels.",
   // UsefullLinks
   usefullLinks: {
     "Ranfft 7750 Caliber":

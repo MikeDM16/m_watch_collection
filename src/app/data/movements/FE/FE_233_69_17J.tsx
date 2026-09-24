@@ -13,7 +13,7 @@ const FE_233_69: Caliber = {
   title: "FE (France Ebauche) Cal. 233-69",
   //Description
   description:
-    "Previsouly known has Cupillard 233-69, before the brand joined France Ebauche.\n\
+    "Previously known as Cupillard 233-69, before the brand joined France Ebauche.\n\
   Caliber Family\n\
   - 233-68: No Date\n\
   - 233-69: Date\n\

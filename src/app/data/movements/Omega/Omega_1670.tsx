@@ -8,9 +8,9 @@ const OMEGA_1670: Caliber = {
   title: "Omega Cal. 1670",
   //Description
   description:
-    "Omega superquartz chronograph based on the ETA 255.251. Very rare caliber with 1/100th measuraments. \
+    "Omega superquartz chronograph based on the ETA 255.251. Very rare caliber with 1/100th measurements. \
     Caliber with small seconds subdial at 6 o'clock. \n\
-    Chronograph with 1/100 rattrapante seconds using a central chronograph hands. 12 hours subdial at 10 o'clock and split seconds chronograph function up to several laps with memory.\n\
+    Chronograph with 1/100 rattrapante seconds using a central chronograph hand. 12 hours subdial at 10 o'clock and split seconds chronograph function up to several laps with memory.\n\
     The month day is displayed on the right LCD screen. The month is displayed on the left LCD screen when the crown is in the second position.",
 
   // UsefullLinks

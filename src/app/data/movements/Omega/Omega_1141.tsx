@@ -13,8 +13,8 @@ const OMEGA_1141_45J: Caliber = {
   title: "Omega Cal. 1141",
   //Description
   description:
-    'Omega speedmaster "reduced" movements use a combination of an ETA automatic base movement with a Chronograph module from Debois Depraz. \n' +
-    "The Omega 1141 is an automatic chronograph with 45 jewels, using a 24 jewels Debois Derpáz 2020 cronograph powered by a 21 jewels ETA 2890-A2 base movement.",
+    'Omega Speedmaster "reduced" movements use a combination of an ETA automatic base movement with a Chronograph module from Dubois Depraz. \n' +
+    "The Omega 1141 is an automatic chronograph with 45 jewels, using a 24 jewels Dubois Depraz 2020 chronograph powered by a 21 jewels ETA 2892-A2 base movement.",
 
   // UsefullLinks
   usefullLinks: {},

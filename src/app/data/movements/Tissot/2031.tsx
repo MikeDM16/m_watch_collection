@@ -8,12 +8,12 @@ const TISSOT_2031: Caliber = {
   title: "Tissot Cal. 2031",
   //Description
   description:
-    "Vintage Tissot quartz eletronic movement, based on the Omega 1370.\n\
+    "Vintage Tissot quartz electronic movement, based on the Omega 1370.\n\
   Omega 1370 has 7 jewels where the Tissot version only has 4 jewels.\n\n" +
-    "Hours are set without altering the minutes hand. The hour hand is set by pulling the crown out and turn it in the desire direction. The hour hand jumps in 1h intervals. \n\n" +
-    "Minutes are set by pressing the crown inside by at least 5 seconds. Release it and press it again immediately. \
-              The second hands begins to turn rapidly, moving the minute hand along the movement. \
-              Stop pressing when the minute hand is under the desider minute. \n\n" +
+    "Hours are set without altering the minutes hand. The hour hand is set by pulling the crown out and turning it in the desired direction. The hour hand jumps in 1h intervals. \n\n" +
+    "Minutes are set by pressing the crown inside for at least 5 seconds. Release it and press it again immediately. \
+              The seconds hand begins to turn rapidly, moving the minute hand along the movement. \
+              Stop pressing when the minute hand is under the desired minute. \n\n" +
     "Seconds are set by pressing the crown inside. This will stop the seconds hand movement. \
               Release the crown when the time matches the current seconds hand position.",
   // UsefullLinks

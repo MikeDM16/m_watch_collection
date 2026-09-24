@@ -6,6 +6,7 @@ import {
   routeToMainPageAllBrandListing,
   routeToMainPageHeader,
 } from "@/app/services/commonFunctions";
+import { SOCIAL_PROFILES } from "@/app/siteConfig";
 import { ArrowUp } from "lucide-react";
 import Link from "next/link";
 
@@ -23,7 +24,10 @@ export default function SiteFooter({
 }) {
   const bg = pickBackground(images, seed, background_images_paths[1]);
 
-  const columns: { title: string; links: { href: string; label: string }[] }[] = [
+  const columns: {
+    title: string;
+    links: { href: string; label: string; external?: boolean }[];
+  }[] = [
     {
       title: "Collection",
       links: [
@@ -38,6 +42,11 @@ export default function SiteFooter({
         { href: "/#AboutMe", label: "About Me" },
         { href: "/#Contacts", label: "Contacts" },
       ],
+    },
+    {
+      // Same constant the About Me ledger reads, so the two can't drift.
+      title: "Elsewhere",
+      links: SOCIAL_PROFILES.map((p) => ({ href: p.href, label: p.label, external: true })),
     },
   ];
 
@@ -58,7 +67,8 @@ export default function SiteFooter({
             </Link>
           </div>
 
-          <div className="flex gap-12">
+          {/* Wraps: three columns at gap-12 overflow a ~360px viewport. */}
+          <div className="flex flex-wrap gap-x-12 gap-y-8">
             {columns.map((col) => (
               <nav key={col.title}>
                 <p className="font-mono text-[0.62rem] uppercase tracking-[0.12em] opacity-60">
@@ -69,6 +79,7 @@ export default function SiteFooter({
                     <li key={l.href}>
                       <Link
                         href={l.href}
+                        {...(l.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
                         className="text-sm no-underline opacity-85 transition-opacity hover:opacity-100"
                       >
                         {l.label}

@@ -18,7 +18,7 @@ const SEIKO_6306A: Caliber = {
                           It hacks and has a quickset day/date calendar mechanism with a Japanese/English day wheel \n \n" +
     "The 6306 divers are much rarer to find since they were Japan-only models that use a 21 jewels \
                            hackable movement (compared to the 17 jewels non-hacking movements in the 6309s). \n" +
-    "From the serial number, the watch dates to August 1976, beeing assembled in the first year of the model release.",
+    "From the serial number, the watch dates to August 1976, being assembled in the first year of the model release.",
 
   // UsefullLinks
   usefullLinks: {},

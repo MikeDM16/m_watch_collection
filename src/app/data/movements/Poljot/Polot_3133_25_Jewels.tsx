@@ -14,10 +14,10 @@ const POLJOT_3133_25J: Caliber = {
   //Description
   description:
     "In the 1970s, Valjoux sold the chronograph caliber 7734 patent and machinery to the USSR. \
-    The Russian factory Poljot then used this rigths to produce the chronograph movement 3133. \
+    The Russian factory Poljot then used these rights to produce the chronograph movement 3133. \
     Most of the parts of the Poljot 3133 are identical to the Valjoux 7734.\n\n\
     Different from the original ETA-Valjoux 7734 movement, all chronograph related gears run in jewels, and the Glucydur balance swings in a shock protection system that was developed by Poljot. \n\
-    The balance was modified to a smaller diameter that makes the 3133 beating at a higher 21,600H/h. (ETA 7734 runs runs at 18.000 vph). \n\
+    The balance was modified to a smaller diameter that makes the 3133 beating at a higher 21,600 A/h. (the 7734 runs at 18,000 A/h). \n\
     The Russian caliber is renowned for being robust, precise and reliable.",
   // UsefullLinks
   usefullLinks: {

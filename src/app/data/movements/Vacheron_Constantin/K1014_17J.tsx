@@ -13,8 +13,8 @@ const VACHERON_CONSTANTIN_K1014_17J: Caliber = {
   title: "Vacheron Constantin K1014",
   //Description
   description:
-    "Following the design from K1001, collapses the five-bridge into three bridges. \n\." +
-    "Based on Jaeger-LeCoultre 818",
+    "Following the design of the K1001, the K1014 collapses the five-bridge layout into three bridges. \n" +
+    "Based on Jaeger-LeCoultre 818.",
 
   // UsefullLinks
   usefullLinks: {

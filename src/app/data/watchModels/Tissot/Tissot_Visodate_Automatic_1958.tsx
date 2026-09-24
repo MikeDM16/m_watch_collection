@@ -109,7 +109,7 @@ const details: WatchDetails = {
       title: "Tissot 28.5R-621",
       description:
         "In-house Tissot movement produced around 1950s until 1960.\n \n" +
-        'Suffix "5R-621" reffers to the variant with automatic winding and date. \n',
+        'Suffix "5R-621" refers to the variant with automatic winding and date. \n',
       usefullLinks: {
         "Ranfft 28.5R-621":
           "http://www.ranfft.de/cgi-bin/bidfun-db.cgi?10&ranfft&&2uswk&Tissot_28_5R_621",
@@ -125,7 +125,7 @@ const details: WatchDetails = {
         modelReference: "28.5R-621",
         type: "Automatic",
         frequency: "19800 A/h",
-        jewels: "17 (Seventeen) Jewels ",
+        jewels: "17 (Seventeen) Jewels",
         reserve: "40 Hours",
         functions: "Date, Hours, Minutes, Sweep Seconds",
       },

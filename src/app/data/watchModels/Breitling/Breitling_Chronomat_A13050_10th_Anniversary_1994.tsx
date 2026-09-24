@@ -193,7 +193,7 @@ const details: WatchDetails = {
     information: {
       brand: BrandsEnum.BREITLING,
       series: BreitlingBrandSeries.CHRONOMAT.CHRONOMAT_EARLY,
-      catalogueReference: "10ht Anniversary Limited Edition 1157/1994 (A13050)",
+      catalogueReference: "10th Anniversary Limited Edition 1157/1994 (A13050)",
       productionYear: "1994",
       movementType: MovementWatchTypeEnum.AUTOMATIC,
       style: WatchStyleEnum.SPORTS,

@@ -124,7 +124,7 @@ const details: WatchDetails = {
         manufacturer: "Ronda",
         modelReference: "3540.D",
         type: "Quartz Chrono",
-        jewels: "5 (five) Jewels ",
+        jewels: "5 (Five) Jewels",
         functions: "Date, Hours, Minutes, Seconds at 6 o'clock, 30min 1/10 Chronograph",
       },
     },

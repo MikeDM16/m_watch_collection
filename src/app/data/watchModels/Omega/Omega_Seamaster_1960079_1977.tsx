@@ -126,11 +126,11 @@ const details: WatchDetails = {
     movement: {
       title: "Omega 1342",
       description:
-        "Vintage Omega quartz eletronic movement. \n \n" +
-        "Hours are set without altering the minutes hand. Hour is set by pulling the crown out and turn it in the desire direction. The hour hand jumps in 1h intervals. \n" +
-        "Minutes are set by pressing the crown inside by at least 5 seconds. Release it and press it again immediately. \
-                    The second hands begins to turn rapidly, moving the minute hand along the movement. \
-                    Stop pressing when the minute hand is under the desider minute. \n \n" +
+        "Vintage Omega quartz electronic movement. \n \n" +
+        "Hours are set without altering the minutes hand. Hour is set by pulling the crown out and turning it in the desired direction. The hour hand jumps in 1h intervals. \n" +
+        "Minutes are set by pressing the crown inside for at least 5 seconds. Release it and press it again immediately. \
+                    The seconds hand begins to turn rapidly, moving the minute hand along the movement. \
+                    Stop pressing when the minute hand is under the desired minute. \n \n" +
         "Seconds are set by pressing the crown inside. This will stop the seconds hand movement. \
                     Release the crown when the time matches the current seconds hand position.",
       usefullLinks: {
@@ -148,7 +148,7 @@ const details: WatchDetails = {
         modelReference: "1342",
         type: "Quartz",
         battery: "392",
-        jewels: "7 (Seven) Jewels ",
+        jewels: "7 (Seven) Jewels",
         functions: "Date, Hours, Minutes and seconds",
       },
     },

@@ -14,7 +14,7 @@ const CERTINA_25_261_27J: Caliber = {
   //Description
   description:
     "The Certina 25-651 is an automatic watch movement produced between 1960 and 1975. Within this period, the movement was primarily used in chronometers, with a total of 7221 units manufactured. \n\n\
-    Detailled References:\n\
+    Detailed References:\n\
     19800 A/h:\n\
     - 25-65: automatic\n\
     - 25-651: automatic, date\n\

@@ -24,7 +24,7 @@ import movement_LANDERON_48_17J from "../../movements/Landeron/Landeron_48_17J";
 import { WatchDetails } from "../../watchDetails";
 
 const details: WatchDetails = {
-  title: "1950 Titus Geneve Chronograph 18K Gold Landeron 48",
+  title: "1950 Titus Genève Chronograph 18K Gold Landeron 48",
   sliderImages: [
     "public/assets/Images/Titus/1950_Titus_Chronograph_18K_L48/IMG_8087.JPG",
     "public/assets/Images/Titus/1950_Titus_Chronograph_18K_L48/IMG_8088.JPG",

@@ -3,6 +3,6 @@ export const LuminescentIndexesEnum = {
   HANDS: "Hands",
   HANDS_AND_MARKERS: "Hands and Markers",
   MARKERS: "Markers around the dial",
-  TRITIUM: " (Trititum)",
-  LUMINOVA: " (Luminova)",
+  TRITIUM: "Tritium",
+  LUMINOVA: "LumiNova",
 };

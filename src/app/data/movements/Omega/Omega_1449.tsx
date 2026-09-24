@@ -9,8 +9,8 @@ const OMEGA_1449: Caliber = {
   //Description
   description:
     "Omega quartz caliber based on the ETA 255.265, with an additional GMT hand. \n\
-    GMT pointer is setted by turning the crown counter-clockwise. \n\
-    Date wheel is setted turning the crown clockwise.",
+    GMT pointer is set by turning the crown counter-clockwise. \n\
+    Date wheel is set by turning the crown clockwise.",
 
   // UsefullLinks
   usefullLinks: {},

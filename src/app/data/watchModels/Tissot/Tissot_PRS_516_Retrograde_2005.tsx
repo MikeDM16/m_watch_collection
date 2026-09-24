@@ -120,7 +120,7 @@ const details: WatchDetails = {
         modelReference: "G15.261",
         type: "Quartz",
         battery: "394",
-        jewels: "6 (Six) Jewels ",
+        jewels: "6 (Six) Jewels",
         functions: "Retrograde Chronograph, Date, Hours, Minutes, Seconds at 6 o'clock",
       },
     },
