@@ -1,4 +1,5 @@
 export const CaseDiameterEnum = {
+  D_22: "22 mm",
   D_23: "23 mm",
   D_24: "24 mm",
   D_25: "25 mm",

@@ -396,6 +396,8 @@ export const modelLoaders: Record<string, () => Promise<{ default: WatchDetails 
     import("./watchModels/Seiko/Seiko_8M25_Age_Of_Discoveries.1992"),
   "Seiko/Seiko_V732_0390_1990": () => import("./watchModels/Seiko/Seiko_V732_0390_1990"),
   "Signo/Signo_Small_Seconds_1947": () => import("./watchModels/Signo/Signo_Small_Seconds_1947"),
+  "Solvil_et_Titus/Solvil_et_Titus_Genéve_Tank_1942": () =>
+    import("./watchModels/Solvil_et_Titus/Solvil_et_Titus_Genéve_Tank_1942"),
   "Tag_Heuer/Heuer_Airline_Professional_895513_1985": () =>
     import("./watchModels/Tag_Heuer/Heuer_Airline_Professional_895513_1985"),
   "Tag_Heuer/Tag_Heuer_Aquaracer_CN2111_2005": () =>
