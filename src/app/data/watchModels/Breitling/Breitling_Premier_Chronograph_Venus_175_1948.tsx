@@ -25,7 +25,7 @@ import { WatchDetails } from "../../watchDetails";
 import { BreitlingBrandSeries } from "./BreitlingBrandSeries";
 
 const details: WatchDetails = {
-  title: "1948 Breitling Premier Chronograph Venus 175",
+  title: "1948 Breitling Premier Chronograph Venus 178",
 
   sliderImages: [
     "public/assets/Images/Breitling/1950_Breitling_Premier_Venus_178/IMG_2742.JPG",

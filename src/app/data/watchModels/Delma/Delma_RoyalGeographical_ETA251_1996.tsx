@@ -24,7 +24,7 @@ import movement_ETA_251_272 from "../../movements/ETA/ETA_251_272_22J";
 import { WatchDetails } from "../../watchDetails";
 
 const details: WatchDetails = {
-  title: "1996 Royal Geographical Society Chronograph",
+  title: "1996 Delma Royal Geographical Society Chronograph",
 
   sliderImages: [
     "public/assets/Images/Delma/1995_Delma_RoyalGeographical/IMG_4729.JPG",

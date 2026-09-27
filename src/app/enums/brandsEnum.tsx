@@ -32,7 +32,7 @@ export const BrandsEnum = {
   FONTAINE: "Fontaine",
   FORTIS: "Fortis",
   GREENWICH: "Greenwich",
-  GIRARD_PERREGAUX: "Girard Perregaux",
+  GIRARD_PERREGAUX: "Girard-Perregaux",
   BARRETT: "Barrett",
   HELMA: "Helma",
   HEUER: "Heuer",

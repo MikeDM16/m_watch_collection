@@ -37,7 +37,7 @@ const UNIVERSAL_GENEVE_262_17J: Caliber = {
     // Reserve
     reserve: ReserveHoursEnum.R_38,
     // Functions
-    functions: "Hours, Minutes, Sweep Seconds at 6 o'clock sub-dial",
+    functions: "Hours, Minutes, Sub Seconds at 6 o'clock",
     // Battery
     battery: undefined,
   },

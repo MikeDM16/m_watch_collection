@@ -30,7 +30,7 @@ const UNITAS_6497: Caliber = {
     frequency: FrequencyEnum.F_21600,
     jewels: JewelsNumberEnum.J_17,
     reserve: ReserveHoursEnum.R_45,
-    functions: "Hours, Minutes, Sweep seconds at 9 O'clock",
+    functions: "Hours, Minutes, Sub Seconds at 9 o'clock",
     battery: undefined,
   },
 };

@@ -25,7 +25,7 @@ const BREITLING_B30_38J: Caliber = {
     frequency: FrequencyEnum.F_28800,
     jewels: JewelsNumberEnum.J_38,
     reserve: ReserveHoursEnum.R_42,
-    functions: "Chronograph, Hours, Minutes, Sweep Seconds at 3 o'clock",
+    functions: "Chronograph, Hours, Minutes, Sub Seconds at 3 o'clock",
     battery: undefined,
   },
 };

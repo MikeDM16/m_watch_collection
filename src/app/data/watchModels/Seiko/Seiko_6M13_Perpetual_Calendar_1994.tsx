@@ -24,7 +24,7 @@ import { WatchDetails } from "../../watchDetails";
 import { SeikoBrandSeries } from "./SeikoBrandSeries";
 
 const details: WatchDetails = {
-  title: "1994 Seiko 6M13 Perpetual Calendar - Age of Discoveries",
+  title: "1994 Seiko 6M13 Perpetual Calendar - Age of Discovery",
 
   sliderImages: [
     "public/assets/Images/Seiko/1994_Seiko_6M13_Perpetual_Calendar/IMG_8172.JPG",

@@ -10,7 +10,7 @@ import type { Caliber } from "../../caliberTypes";
 
 const SELLITA_SW200: Caliber = {
   // Title
-  title: "ETA 2824",
+  title: "Sellita SW200",
   //Description
   description:
     "Sellita is a Swiss movement manufacturer that has a history of producing movements that are based on or inspired by ETA movements.\n\

@@ -14,7 +14,7 @@ const ETA_2834: Caliber = {
   //Description
   description:
     "High quality ETA automatic movement with detailed finishing, adjusted and bi-directional winding. Part of the Mecaline collection. \n \n" +
-    "Based on the ETA 2824-2 date movement, but with an added date complication.",
+    "Based on the ETA 2824-2 date movement, showing the date of the month.",
   // UsefullLinks
   usefullLinks: {},
   // sliderImages

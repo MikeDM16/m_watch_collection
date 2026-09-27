@@ -52,7 +52,7 @@ const ETA_2472: Caliber = {
     // Reserve
     reserve: ReserveHoursEnum.R_42,
     // Functions
-    functions: "Day, Hours, Minutes, Sweep Seconds, Quick date set and bi-directional winding",
+    functions: "Date, Hours, Minutes, Sweep Seconds, Quick date set and bi-directional winding",
     // Battery
     battery: undefined,
   },

@@ -38,7 +38,7 @@ const PIGUET_1270_22J: Caliber = {
     // ModelReference
     modelReference: "1270",
     // Type
-    type: MovementWatchTypeEnum.QUARTZ,
+    type: MovementWatchTypeEnum.MECA_QUARTZ,
     // Frequency
     frequency: FrequencyEnum.F_21600,
     // Jewels
@@ -47,7 +47,7 @@ const PIGUET_1270_22J: Caliber = {
     reserve: undefined,
     // Functions
     functions:
-      "Hours, Minutes, 6 o'clock sweep seconds, Central Chronograph seconds, 9 o'clock 30 minute subdial, 3 o'clock 12 hours subdial, date at 4 o'clock",
+      "Hours, Minutes, 6 o'clock sub seconds, Central Chronograph seconds, 9 o'clock 30 minute subdial, 3 o'clock 12 hours subdial, date at 4 o'clock",
     // Battery
     battery: undefined,
   },

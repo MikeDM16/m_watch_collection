@@ -25,7 +25,7 @@ import { WatchDetails } from "../../watchDetails";
 import { TissotBrandSeries } from "./TissotBrandSeries";
 
 const details: WatchDetails = {
-  title: "1979 Tissot Quartz Cal.2031",
+  title: "1979 Tissot PR 516 Quartz Cal.2031",
   sliderImages: [
     "public/assets/Images/Tissot/1979_Tissot_PR_516_Quartz/IMG_4791.JPG",
     "public/assets/Images/Tissot/1979_Tissot_PR_516_Quartz/IMG_4792.JPG",

@@ -40,7 +40,7 @@ const ETA_2894_2_37J: Caliber = {
     // Reserve
     reserve: ReserveHoursEnum.R_42,
     // Functions
-    functions: "Day, Chronograph, Hours, Minutes, Sweep Seconds at 3 o'clock",
+    functions: "Date, Chronograph, Hours, Minutes, Sub Seconds at 3 o'clock",
     // Battery
     battery: undefined,
   },

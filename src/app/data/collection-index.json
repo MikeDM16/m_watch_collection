@@ -35,9 +35,9 @@
     },
     "modelFile": "Tissot/Tissot_Antimagnetic_27_2_1940"
   },
-  "Universal Geneve Mécanique Cal. 262": {
+  "Universal Genève Mécanique Cal. 262": {
     "brand": "Universal Geneve",
-    "legend": "Universal Geneve Mécanique Cal. 262",
+    "legend": "Universal Genève Mécanique Cal. 262",
     "year": 1942,
     "type": "Dress",
     "srcImage": "public/assets/Images/Universal_Geneve/1942_Universal_Geneve_cal_262/IMG_2640.JPG",
@@ -53,9 +53,9 @@
     },
     "modelFile": "Universal_Geneve/Universal_Geneve_Mecanique_cal_262_1942"
   },
-  "Solvil et Titus Genéve Tank": {
+  "Solvil et Titus Genève Tank": {
     "brand": "Solvil et Titus",
-    "legend": "Solvil et Titus Genéve Tank",
+    "legend": "Solvil et Titus Genève Tank",
     "year": 1942,
     "type": "Casual",
     "srcImage": "public/assets/Images/Titus/1942_Titus_Geneve_Tank_FHF_30/IMG_4582.JPG",
@@ -367,9 +367,9 @@
     },
     "modelFile": "Aureus/Aureus_Extra_Antimagnetic_1947"
   },
-  "Breitling Premier Chronograph Venus 175": {
+  "Breitling Premier Chronograph Venus 178": {
     "brand": "Breitling",
-    "legend": "Breitling Premier Chronograph Venus 175",
+    "legend": "Breitling Premier Chronograph Venus 178",
     "year": 1948,
     "type": "Casual",
     "srcImage": "public/assets/Images/Breitling/1950_Breitling_Premier_Venus_178/IMG_2750.JPG",
@@ -377,7 +377,7 @@
     "specialCollectionItem": true,
     "collectionSet": false,
     "series": "Premier",
-    "movementTitle": "Venus Cal. 175",
+    "movementTitle": "Venus Cal. 178",
     "saleReport": {
       "price": 2050,
       "date": "16/08/2026",
@@ -435,9 +435,9 @@
     },
     "modelFile": "Certina/Certina_Dress_331_15_jewels_1950"
   },
-  "Titus Geneve Chronograph 18K Gold Landeron 48": {
+  "Titus Genève Chronograph 18K Gold Landeron 48": {
     "brand": "Solvil et Titus",
-    "legend": "Titus Geneve Chronograph 18K Gold Landeron 48",
+    "legend": "Titus Genève Chronograph 18K Gold Landeron 48",
     "year": 1950,
     "type": "Dress",
     "srcImage": "public/assets/Images/Titus/1950_Titus_Chronograph_18K_L48/IMG_8093.JPG",
@@ -591,9 +591,9 @@
     },
     "modelFile": "Relide/Relide_Militare_1955"
   },
-  "Hermes Landerom 51 Chronograph": {
+  "Hermès Landeron 51 Chronograph": {
     "brand": "Hermes",
-    "legend": "Hermes Landerom 51 Chronograph",
+    "legend": "Hermès Landeron 51 Chronograph",
     "year": 1955,
     "type": "Dress",
     "srcImage": "public/assets/Images/Hermes/1955_Hermes_Chronograph/IMG_1904.JPG",
@@ -905,7 +905,7 @@
     "specialCollectionItem": false,
     "collectionSet": false,
     "series": "Vintage Series",
-    "movementTitle": "Certina Cal. 25",
+    "movementTitle": "Certina Cal. 25-651",
     "saleReport": {
       "price": 265,
       "date": "18/11/2025",
@@ -1229,9 +1229,9 @@
     },
     "modelFile": "Corticima/Corticima_Dress_17Jewels_1970"
   },
-  "Tissot Seastar Eletronic": {
+  "Tissot Seastar Electronic": {
     "brand": "Tissot",
-    "legend": "Tissot Seastar Eletronic",
+    "legend": "Tissot Seastar Electronic",
     "year": 1970,
     "type": "Dress",
     "srcImage": "public/assets/Images/Tissot/1970_Tissot_Seastar_Eletronic/IMG_2236.JPG",
@@ -1423,9 +1423,9 @@
     },
     "modelFile": "Hipco/Hipco_Incabloc_17Jewels_1974"
   },
-  "Novart Monza Ligth Blue Date 17 Jewels": {
+  "Novart Monza Light Blue Date 17 Jewels": {
     "brand": "Novart",
-    "legend": "Novart Monza Ligth Blue Date 17 Jewels",
+    "legend": "Novart Monza Light Blue Date 17 Jewels",
     "year": 1974,
     "type": "Casual",
     "srcImage": "public/assets/Images/Novart/1974_Novart_U6380_Date_Blue/IMG_5643.JPG",
@@ -2231,9 +2231,9 @@
     },
     "modelFile": "Tissot/Tissot_PR_516_LeLocle_1979"
   },
-  "Tissot Seastar LeLocle Cal.2031": {
+  "Tissot Seastar Le Locle Cal.2031": {
     "brand": "Tissot",
-    "legend": "Tissot Seastar LeLocle Cal.2031",
+    "legend": "Tissot Seastar Le Locle Cal.2031",
     "year": 1979,
     "type": "Casual",
     "srcImage": "public/assets/Images/Tissot/1979_Tissot_Seastar_LeLocle/IMG_0215.JPG",
@@ -2295,9 +2295,9 @@
     "saleReport": null,
     "modelFile": "Eberhard/Eberhard_Chronograph_31000_1980"
   },
-  "Timex Marlim": {
+  "Timex Marlin": {
     "brand": "Timex",
-    "legend": "Timex Marlim",
+    "legend": "Timex Marlin",
     "year": 1980,
     "type": "Dress",
     "srcImage": "public/assets/Images/Timex/1980_Timex_Marlin_M100/IMG_0917.JPG",
@@ -2653,9 +2653,9 @@
     },
     "modelFile": "Omega/Omega_Polaris_MultiFunction_386_0826_1988"
   },
-  "Omega Polaris Multifunction Gray LCD 386.0822": {
+  "Omega Polaris Multifunction Gray LCD 386.0826": {
     "brand": "Omega",
-    "legend": "Omega Polaris Multifunction Gray LCD 386.0822",
+    "legend": "Omega Polaris Multifunction Gray LCD 386.0826",
     "year": 1988,
     "type": "Casual",
     "srcImage": "public/assets/Images/Omega/1988_Polaris_AnaDigi_Black_386_0826_Gold_plated/IMG_8655.JPG",
@@ -2766,9 +2766,9 @@
     "saleReport": null,
     "modelFile": "Tag_Heuer/Tag_Heuer_S-EL_Digitial_Senna_1990"
   },
-  "Pryngeps Regolo Prepetual 1467": {
+  "Pryngeps Regolo Perpetual 1467": {
     "brand": "Pryngeps",
-    "legend": "Pryngeps Regolo Prepetual 1467",
+    "legend": "Pryngeps Regolo Perpetual 1467",
     "year": 1990,
     "type": "Casual",
     "srcImage": "public/assets/Images/Pryngeps/1990_Pryngeps_Regolo_II/IMG_0656.JPG",
@@ -2834,9 +2834,9 @@
     },
     "modelFile": "Raymond_Weil/Raymond_Weil_Tradition_Mecanique_7760_1990"
   },
-  "Seiko 7T36 Moonphase Chrono - Age of Discoveries": {
+  "Seiko 7T36 Moonphase Chrono - Age of Discovery": {
     "brand": "Seiko",
-    "legend": "Seiko 7T36 Moonphase Chrono - Age of Discoveries",
+    "legend": "Seiko 7T36 Moonphase Chrono - Age of Discovery",
     "year": 1991,
     "type": "Casual",
     "srcImage": "public/assets/Images/Seiko/1991_Seiko_7T36_7410_Moonphase_chrono/IMG_3430.JPG",
@@ -2970,9 +2970,9 @@
     },
     "modelFile": "Eberhard/Eberhard_Godron_Ref_32031_Lemania_1873_1992"
   },
-  "Omega Olympia Winter Olympics Albertville Ltd. 305/499": {
+  "Omega Olympia Winter Olympics Albertville Limited 305/499": {
     "brand": "Omega",
-    "legend": "Omega Olympia Winter Olympics Albertville Ltd. 305/499",
+    "legend": "Omega Olympia Winter Olympics Albertville Limited 305/499",
     "year": 1992,
     "type": "Sports",
     "srcImage": "public/assets/Images/Omega/1992_Polaris_Albertville_386_1031_500/IMG_8770.JPG",
@@ -2988,9 +2988,9 @@
     },
     "modelFile": "Omega/Omega_Olympia_Albertville_500_386_1031_1992"
   },
-  "Omega Olympia Winter Olympics Albertville Ltd. 820/3000": {
+  "Omega Olympia Winter Olympics Albertville Limited 820/3000": {
     "brand": "Omega",
-    "legend": "Omega Olympia Winter Olympics Albertville Ltd. 820/3000",
+    "legend": "Omega Olympia Winter Olympics Albertville Limited 820/3000",
     "year": 1992,
     "type": "Sports",
     "srcImage": "public/assets/Images/Omega/1992_Polaris_Albertville_386_1031_3000/IMG_4029.JPG",
@@ -3002,9 +3002,9 @@
     "saleReport": null,
     "modelFile": "Omega/Omega_Olympia_Albertville_3000_386_1031_1992"
   },
-  "Omega Polaris Ratrappante Chronograph 386 1031.1": {
+  "Omega Polaris Rattrapante Chronograph 386 1031.1": {
     "brand": "Omega",
-    "legend": "Omega Polaris Ratrappante Chronograph 386 1031.1",
+    "legend": "Omega Polaris Rattrapante Chronograph 386 1031.1",
     "year": 1992,
     "type": "Sports",
     "srcImage": "public/assets/Images/Omega/1992_Omega_Polaris_Ratrappante_386_1031/IMG_0647.JPG",
@@ -3346,9 +3346,9 @@
     },
     "modelFile": "Tissot/Tissot_Sports_E662_Chrono_1995"
   },
-  "Universal Geneve 875.214 Chrono": {
+  "Universal Genève 875.214 Chrono": {
     "brand": "Universal Geneve",
-    "legend": "Universal Geneve 875.214 Chrono",
+    "legend": "Universal Genève 875.214 Chrono",
     "year": 1995,
     "type": "Sports",
     "srcImage": "public/assets/Images/Universal_Geneve/1995_Universal_Geneve_875_214/IMG_6690.JPG",
@@ -3578,7 +3578,7 @@
     "specialCollectionItem": true,
     "collectionSet": false,
     "series": "Speedmaster — MK40 Triple Calendar",
-    "movementTitle": "Valjoux 7750",
+    "movementTitle": "Omega Cal. 1151",
     "saleReport": null,
     "modelFile": "Omega/Omega_Speedmaster_mk40_triple_date_1998"
   },
@@ -3736,9 +3736,9 @@
     },
     "modelFile": "Philipe_Watch/Philipe_Watch_AQ_1000_1996"
   },
-  "Royal Geographical Society": {
+  "Delma - Royal Geographical": {
     "brand": "Royal Geographical Society",
-    "legend": "Royal Geographical Society",
+    "legend": "Delma - Royal Geographical",
     "year": 1996,
     "type": "Dress",
     "srcImage": "public/assets/Images/Delma/1996_Delma_Royal_Geographical/IMG_7005.JPG",
@@ -3754,9 +3754,9 @@
     },
     "modelFile": "Delma/Delma_RoyalGeographical_1996"
   },
-  "Royal Geographical Society Chronograph": {
+  "Delma - Royal Geographical ETA 251": {
     "brand": "Royal Geographical Society",
-    "legend": "Royal Geographical Society Chronograph",
+    "legend": "Delma - Royal Geographical ETA 251",
     "year": 1996,
     "type": "Dress",
     "srcImage": "public/assets/Images/Delma/1995_Delma_RoyalGeographical/IMG_4734.JPG",
@@ -3936,9 +3936,9 @@
     },
     "modelFile": "Breitling/Breitling_Colt_A53035_1998"
   },
-  "Calypso Chronograph OS60": {
+  "Calypso Chronograph OS10": {
     "brand": "Calypso (Festina Group)",
-    "legend": "Calypso Chronograph OS60",
+    "legend": "Calypso Chronograph OS10",
     "year": 1998,
     "type": "Sports",
     "srcImage": "public/assets/Images/Calypso/2001_Calypso_Chrono_OS10/IMG_2956.JPG",
@@ -4296,9 +4296,9 @@
     },
     "modelFile": "Tissot/Tissot_Heritage_150th_COSC_2003"
   },
-  "Girard Perregaux Ferrari Ref. 8020": {
-    "brand": "Girard Perregaux",
-    "legend": "Girard Perregaux Ferrari Ref. 8020",
+  "Girard-Perregaux Ferrari Ref. 8020": {
+    "brand": "Girard-Perregaux",
+    "legend": "Girard-Perregaux Ferrari Ref. 8020",
     "year": 2004,
     "type": "Sports",
     "srcImage": "public/assets/Images/Girard_Perregaux/2024_Girard_Perregaux_Ferrari_R8020_45J/IMG_2575.JPG",
@@ -4590,9 +4590,9 @@
     "saleReport": null,
     "modelFile": "Ferrari/Ferrari_Monza_Chronograph_2005"
   },
-  "Tissot Ballade Lady C229/339C": {
+  "Tissot Ballade Lady C229/329C": {
     "brand": "Tissot",
-    "legend": "Tissot Ballade Lady C229/339C",
+    "legend": "Tissot Ballade Lady C229/329C",
     "year": 2005,
     "type": "Dress",
     "srcImage": "public/assets/Images/Tissot/2005_Tissot_Ballada_Lady_C229_329C/IMG_8836.JPG",
@@ -5034,9 +5034,9 @@
     },
     "modelFile": "Tissot/Tissot_Heritage_Visodate_2012"
   },
-  "Tissot T-Classic Luxury Powermartic 80": {
+  "Tissot T-Classic Luxury Powermatic 80": {
     "brand": "Tissot",
-    "legend": "Tissot T-Classic Luxury Powermartic 80",
+    "legend": "Tissot T-Classic Luxury Powermatic 80",
     "year": 2012,
     "type": "Dress",
     "srcImage": "public/assets/Images/Tissot/2012_Tissot_Luxury_Powermatic/IMG_0929.JPG",
@@ -5134,9 +5134,9 @@
     },
     "modelFile": "Tissot/Tissot_PRS_516_Valjoux_2009"
   },
-  "Tissot PRS 516 Special Nascar Edition": {
+  "Tissot PRS 516 Special NASCAR Edition": {
     "brand": "Tissot",
-    "legend": "Tissot PRS 516 Special Nascar Edition",
+    "legend": "Tissot PRS 516 Special NASCAR Edition",
     "year": 2014,
     "type": "Sports",
     "srcImage": "public/assets/Images/Tissot/2014_Tissot_NASCAR_Racing_White_Blue_7750/IMG_3121.JPG",

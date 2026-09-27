@@ -27,7 +27,7 @@ const ETA_251_251: Caliber = {
     // Manufacturer
     manufacturer: CaliberBrandsEnum.ETA,
     // ModelReference
-    modelReference: "251.252",
+    modelReference: "251.251",
     // Type
     type: MovementWatchTypeEnum.QUARTZ,
     // Frequency

@@ -6,7 +6,7 @@ import BREITLING_B40_38J from "../movements/Breitling/Breitling_B40_38J";
 import CERTINA_25_261_27J from "../movements/Certina/Certina_25_261_28J";
 import CERTINA_331 from "../movements/Certina/Certina_331_15J";
 import DD_2000_ETA_955_232 from "../movements/Debois_Depraz/DD_2000_955";
-import DD_2000_ETA_2982 from "../movements/Debois_Depraz/DD_2000_2892";
+import DD_2000_ETA_2892 from "../movements/Debois_Depraz/DD_2000_2892";
 import DOXA_83_4_987_17J from "../movements/Doxa/Doxa_83_4_987_17J";
 import Duromat_7522 from "../movements/Duromat/Duromat_7522";
 import EBERHARD_16000_17J from "../movements/Eberhard/Eberhard_16000_17J";
@@ -122,7 +122,7 @@ import UNITAS_6380 from "../movements/Unitas/Unitas_6380";
 import UNITAS_6497 from "../movements/Unitas/Unitas_6497";
 import UNIVERSAL_GENEVE_262_17J from "../movements/Universal_Geneve/UG_Cal_262_17J";
 import VACHERON_CONSTANTIN_K1014_17J from "../movements/Vacheron_Constantin/K1014_17J";
-import VALJOIX_7734_17J from "../movements/Valjoux/7734_17J";
+import VALJOUX_7734_17J from "../movements/Valjoux/7734_17J";
 import VALJOUX_77_17J from "../movements/Valjoux/Valjoux_77_17J";
 import VALJOUX_726_88_17J from "../movements/Valjoux/Valjoux_726_88_17J";
 import VENUS_170_17J from "../movements/Venus/Venus_170_17J";
@@ -147,7 +147,7 @@ export const MovementsDataDB: Record<string, Caliber> = {
   CERTINA_331: CERTINA_331,
   CERTINA_25_261_27J: CERTINA_25_261_27J,
 
-  DD_2000_ETA_2982: DD_2000_ETA_2982,
+  DD_2000_ETA_2892: DD_2000_ETA_2892,
   DD_2000_ETA_955_232: DD_2000_ETA_955_232,
 
   DOXA_83_4_987_17J: DOXA_83_4_987_17J,
@@ -278,7 +278,7 @@ export const MovementsDataDB: Record<string, Caliber> = {
 
   VALJOUX_77_17J: VALJOUX_77_17J,
   VALJOUX_726_88_17J: VALJOUX_726_88_17J,
-  VALJOIX_7734_17J: VALJOIX_7734_17J,
+  VALJOUX_7734_17J: VALJOUX_7734_17J,
 
   VENUS_170_17J: VENUS_170_17J,
   VENUS_175_17J: VENUS_175_17J,

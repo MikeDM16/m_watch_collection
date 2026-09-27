@@ -10,7 +10,7 @@ import type { Caliber } from "../../caliberTypes";
 
 const VENUS_175_17J: Caliber = {
   // Title
-  title: "Venus Cal. 175",
+  title: "Venus Cal. 178",
   //Description
   description:
     "The Venus 175 is the base model of a family of column wheel chronograph movements. Launched in 1942, was substantially modified in 1949 and retired at about 1960.\n\

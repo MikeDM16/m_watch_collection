@@ -10,7 +10,7 @@ import type { Caliber } from "../../caliberTypes";
 
 const CERTINA_25_261_27J: Caliber = {
   // Title
-  title: "Certina Cal. 25",
+  title: "Certina Cal. 25-651",
   //Description
   description:
     "The Certina 25-651 is an automatic watch movement produced between 1960 and 1975. Within this period, the movement was primarily used in chronometers, with a total of 7221 units manufactured. \n\n\
@@ -47,7 +47,7 @@ const CERTINA_25_261_27J: Caliber = {
     // Manufacturer
     manufacturer: CaliberBrandsEnum.CERTINA,
     // ModelReference
-    modelReference: "Cal. 25-261",
+    modelReference: "Cal. 25-651",
     // Type
     type: MovementWatchTypeEnum.AUTOMATIC,
     // Frequency

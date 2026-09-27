@@ -37,7 +37,7 @@ const SEAGULL_ST2505: Caliber = {
     reserve: ReserveHoursEnum.R_45,
     // Functions
     functions:
-      "Central seconds, retrograde date at 9:30, power reserve at 2:30, open balance at 6:00",
+      "Hours, Minutes, Central seconds, retrograde date at 9:30, power reserve at 2:30, open balance at 6:00",
     // Battery
     battery: undefined,
   },

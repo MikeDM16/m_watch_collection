@@ -47,7 +47,7 @@ const LEMANIA_1281_17J: Caliber = {
     // Reserve
     reserve: ReserveHoursEnum.R_40,
     // Functions
-    functions: "Minutes, Sub Seconds at 9 o'clock, 12h Chronograph",
+    functions: "Hours, Minutes, Sub Seconds at 9 o'clock, 12h Chronograph",
     // Battery
     battery: undefined,
   },

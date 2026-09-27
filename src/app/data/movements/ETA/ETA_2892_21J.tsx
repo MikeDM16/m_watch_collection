@@ -49,7 +49,7 @@ const ETA_2892_2_21J: Caliber = {
     // Reserve
     reserve: ReserveHoursEnum.R_42,
     // Functions
-    functions: "Day, Hours, Minutes, Sweep Seconds",
+    functions: "Date, Hours, Minutes, Sweep Seconds",
     // Battery
     battery: undefined,
   },

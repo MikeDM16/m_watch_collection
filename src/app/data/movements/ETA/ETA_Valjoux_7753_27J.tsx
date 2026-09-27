@@ -44,7 +44,7 @@ const ETA_Valjoux_7753_27: Caliber = {
     // Reserve
     reserve: ReserveHoursEnum.R_42,
     // Functions
-    functions: "Day, Date, Hours, Minutes, Sub Seconds at 9 o'clock, 30 minute Chronograph",
+    functions: "Date, Hours, Minutes, Sub Seconds at 9 o'clock, 30 minute Chronograph",
     // Battery
     battery: undefined,
   },

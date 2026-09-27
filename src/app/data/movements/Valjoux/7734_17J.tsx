@@ -8,7 +8,7 @@ import { MovementWatchTypeEnum } from "@/app/enums/movementWatchTypeEnum";
 
 import type { Caliber } from "../../caliberTypes";
 
-const VALJOIX_7734_17J: Caliber = {
+const VALJOUX_7734_17J: Caliber = {
   // Title
   title: "Valjoux 7734",
   //Description
@@ -40,10 +40,10 @@ const VALJOIX_7734_17J: Caliber = {
     reserve: ReserveHoursEnum.R_44,
     // Functions
     functions:
-      "Hours, Minutes, Central Chronograph seconds, 9 o'clock sweep seconds subdial, 3 o'clock 30 minutes counter, date at 6 o'clock",
+      "Hours, Minutes, Central Chronograph seconds, 9 o'clock seconds subdial, 3 o'clock 30 minutes counter, date at 6 o'clock",
     // Battery
     battery: undefined,
   },
 };
 
-export default VALJOIX_7734_17J;
+export default VALJOUX_7734_17J;

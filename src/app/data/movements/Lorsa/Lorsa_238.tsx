@@ -23,7 +23,7 @@ const Lorsa_238: Caliber = {
     frequency: FrequencyEnum.F_18000,
     jewels: JewelsNumberEnum.J_17,
     reserve: ReserveHoursEnum.R_34,
-    functions: "Hours, Minutes, Sweep Seconds at 6 o'clock",
+    functions: "Hours, Minutes, Sub Seconds at 6 o'clock",
     battery: undefined,
   },
 };

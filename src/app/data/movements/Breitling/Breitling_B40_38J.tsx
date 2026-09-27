@@ -38,7 +38,7 @@ const BREITLING_B40_38J: Caliber = {
     // Reserve
     reserve: ReserveHoursEnum.R_42,
     // Functions
-    functions: "Minutes, Sub Seconds at 3 o'clock, 3 hours/10 minutes chronograph registers",
+    functions: "Hours, Minutes, Sub Seconds at 3 o'clock, 3 hours/10 minutes chronograph registers",
     // Battery
     battery: undefined,
   },

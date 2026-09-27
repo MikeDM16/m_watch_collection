@@ -25,7 +25,7 @@ import { WatchDetails } from "../../watchDetails";
 import { SeikoBrandSeries } from "./SeikoBrandSeries";
 
 const details: WatchDetails = {
-  title: "1992 Seiko 8M25 Dancing Hands - Age of Discoveries",
+  title: "1992 Seiko 8M25 Dancing Hands - Age of Discovery",
 
   sliderImages: [
     "public/assets/Images/Seiko/1992_Seiko_8M25_Age_Of_Discoveries/IMG_6671.JPG",

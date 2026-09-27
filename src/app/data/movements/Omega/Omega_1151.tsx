@@ -4,6 +4,8 @@ import ETA_Valjoux_7751_25 from "../ETA/ETA_Valjoux_7751_25J";
 
 const OMEGA_1151 = Object.assign({}, ETA_Valjoux_7751_25);
 
+OMEGA_1151.title = "Omega Cal. 1151";
+
 OMEGA_1151.description =
   "Full-calendar chronograph movement based on ETA / Valjoux 7750, introduced around 1986. \n\
   The date is displayed through an additional centrally-mounted hand; day and month is displayed with two discs at 12:00.";

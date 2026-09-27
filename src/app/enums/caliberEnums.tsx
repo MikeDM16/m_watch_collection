@@ -8,7 +8,7 @@ export const CaliberBrandsEnum = {
   EBERHARD: "Eberhard",
   ETA: "ETA",
   EXCELSIOR_PARK: "Excelsior Park",
-  GIRARD_PERREGAUX: "Girard Perregaux",
+  GIRARD_PERREGAUX: "Girard-Perregaux",
   FE: "FE (France Ebauche)",
   FHF: "FHF (Fabrique d'Horlogerie de Fontainemelon)",
   FORTIS: "Fortis",

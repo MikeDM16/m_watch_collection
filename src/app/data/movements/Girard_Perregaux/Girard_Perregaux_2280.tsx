@@ -25,7 +25,7 @@ const Girard_Perregaux_2280: Caliber = {
     frequency: FrequencyEnum.F_28800,
     jewels: JewelsNumberEnum.J_45,
     reserve: ReserveHoursEnum.R_42,
-    functions: "Chronograph, Hours, Minutes, Sweep Seconds at 3 o'clock",
+    functions: "Chronograph, Hours, Minutes, Sub Seconds at 3 o'clock",
     battery: undefined,
   },
 };

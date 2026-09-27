@@ -24,7 +24,7 @@ import { WatchDetails } from "../../watchDetails";
 import { SeikoBrandSeries } from "./SeikoBrandSeries";
 
 const details: WatchDetails = {
-  title: "1991 Seiko 7T36 Moonphase Chronograph - Age of Discoveries",
+  title: "1991 Seiko 7T36 Moonphase Chronograph - Age of Discovery",
 
   sliderImages: [
     "public/assets/Images/Seiko/1991_Seiko_7T36_7410_Moonphase_chrono/IMG_3421.JPG",
