@@ -1658,9 +1658,9 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     href: require("../watchModels/Pryngeps/Pryngeps_Regolo_Triple_Calendar_1992"),
     specialCollectionItem: false,
   },
-  "Seiko 7T36 Moonphase Chrono - Age of Discoveries": {
+  "Seiko 7T36 Moonphase Chrono - Age of Discovery": {
     brand: BrandsEnum.SEIKO,
-    legend: "Seiko 7T36 Moonphase Chrono - Age of Discoveries",
+    legend: "Seiko 7T36 Moonphase Chrono - Age of Discovery",
     year: 1991,
     type: WatchTypeEnum.CASUAL,
     srcImage: "public/assets/Images/Seiko/1991_Seiko_7T36_7410_Moonphase_chrono/IMG_3430.JPG",

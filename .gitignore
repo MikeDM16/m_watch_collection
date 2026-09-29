@@ -49,3 +49,13 @@ scripts/__pycache__
 profiling/node_modules
 profiling/results
 .playwright-cli
+
+# Catawiki review pipeline (scripts/catawiki): a browser profile holding live
+# session cookies, plus the raw scraped dumps. Never commit any of it.
+/.catawiki/
+
+# Sales margin pipeline (scripts/sales): the private ledger workbook (it also
+# holds bank balances and investments) and everything derived from it —
+# purchase prices, payouts, margins, match decisions. Never commit any of it.
+/scripts/*.xlsx
+/.sales/

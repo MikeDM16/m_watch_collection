@@ -74,4 +74,5 @@ export const ADMIN_ROUTES = [
   { method: "GET", path: "/api/admin/models?action=brands" },
   { method: "POST", path: "/api/admin/create-model" },
   { method: "POST", path: "/api/admin/create-movement" },
+  { method: "POST", path: "/api/admin/sales-review" },
 ] as const;

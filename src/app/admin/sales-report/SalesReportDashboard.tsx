@@ -6,9 +6,12 @@ import Link from "next/link";
 import { useMemo, useState } from "react";
 
 import { AdminTable, SectionHeader, StatTile, Th, WatchLink } from "./components/primitives";
+import { ProfitabilitySection } from "./components/ProfitabilitySection";
+import { ReconciliationPanel } from "./components/ReconciliationPanel";
 import { SalesByBrandChart } from "./components/SalesByBrandChart";
 import { SalesOverTimeChart } from "./components/SalesOverTimeChart";
 import { WindowSelector } from "./components/WindowSelector";
+import type { SalesFinancials } from "./salesData.types";
 import {
   brandBreakdown,
   bucketSalesOverTime,
@@ -24,7 +27,16 @@ import {
   yearWindowOptions,
 } from "./salesStats";
 
-export default function SalesReportDashboard({ sold }: { sold: CollectionIndexEntry[] }) {
+export default function SalesReportDashboard({
+  sold,
+  financials,
+  stale,
+}: {
+  sold: CollectionIndexEntry[];
+  /** The sales ledger's P&L, or null until `npm run sales:sync` has run. */
+  financials: SalesFinancials | null;
+  stale: boolean;
+}) {
   const [windowId, setWindowId] = useState<TimeWindowId>(DEFAULT_WINDOW_ID);
 
   const years = useMemo(() => yearWindowOptions(sold), [sold]);
@@ -38,9 +50,19 @@ export default function SalesReportDashboard({ sold }: { sold: CollectionIndexEn
 
   return (
     <div className="pb-24">
-      <div className="mb-8 border-b border-border pb-6">
-        <p className="lab">Local tool</p>
-        <h1 className="mt-2 font-display text-display-m font-medium">Sales Report</h1>
+      <div className="mb-8 flex flex-wrap items-end justify-between gap-4 border-b border-border pb-6">
+        <div>
+          <p className="lab">Local tool</p>
+          <h1 className="mt-2 font-display text-display-m font-medium">Sales Report</h1>
+        </div>
+        {financials && (
+          <Link
+            href="/admin/sales-report/review"
+            className="text-sm text-muted-foreground underline-offset-4 transition-colors hover:text-brand hover:underline"
+          >
+            Review ledger matches →
+          </Link>
+        )}
       </div>
 
       <div className="mb-6 flex flex-col gap-3">
@@ -76,6 +98,22 @@ export default function SalesReportDashboard({ sold }: { sold: CollectionIndexEn
               />
             )}
           </div>
+
+          {/* ───── Profitability (the sales ledger's P&L) ───── */}
+          {financials ? (
+            <ProfitabilitySection
+              entries={filtered}
+              fin={financials.byModel}
+              opt={opt}
+              stale={stale}
+            />
+          ) : (
+            <p className="mt-12 border border-dashed border-border p-6 text-sm text-muted-foreground">
+              No profit data yet. Run{" "}
+              <code className="font-mono text-foreground">npm run sales:sync</code> to link each
+              sale to the sales ledger and see real costs, profit and margin here.
+            </p>
+          )}
 
           {/* ───── Sales over time ───── */}
           <SectionHeader title="Sales over time" />
@@ -224,6 +262,14 @@ export default function SalesReportDashboard({ sold }: { sold: CollectionIndexEn
               ))}
             </tbody>
           </AdminTable>
+        </>
+      )}
+
+      {/* ───── Ledger reconciliation (all time, not windowed) ───── */}
+      {financials && (
+        <>
+          <SectionHeader title="Where the ledger's money went · all time" />
+          <ReconciliationPanel data={financials} />
         </>
       )}
     </div>

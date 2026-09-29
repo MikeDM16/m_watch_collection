@@ -1,5 +1,7 @@
 import { CollectionIndexEntry } from "@/app/data/collectionIndex";
 
+import type { WatchFinancials } from "./salesData.types";
+
 // ─── Pure price helpers (moved verbatim from page.tsx) ──────────────────────
 export const priceOf = (e: CollectionIndexEntry): number => e.saleReport!.price;
 
@@ -234,6 +236,16 @@ export interface TimeBucket {
   count: number;
 }
 
+export interface ProfitBucket {
+  key: string;
+  label: string;
+  /** Net cost (cost − refunds) and profit, which together make the payout. */
+  cost: number;
+  profit: number;
+  received: number;
+  count: number;
+}
+
 // Resolve the span the chart should draw. For fixed windows we cap the end at the
 // current bucket so we never project empty future buckets; for "all time" we span
 // the data's own min/max sale date.
@@ -265,34 +277,84 @@ function bucketingRange(
   };
 }
 
-// Revenue + count per time bucket, zero-filled across the span so lines/bars stay continuous.
+// Zero-filled buckets across the span, so lines and bars stay continuous. Every
+// over-time chart shares it; each fills in its own metric.
+function emptyBuckets<T>(
+  entries: CollectionIndexEntry[],
+  opt: TimeWindowOption,
+  now: Date,
+  init: (key: string, label: string) => T,
+): { g: Granularity; buckets: Map<string, T> } | null {
+  const g = pickGranularity(opt, now);
+  const range = bucketingRange(entries, opt, g, now);
+  if (!range) return null;
+
+  const multiYear = range.start.getFullYear() !== new Date(range.end.getTime() - 1).getFullYear();
+
+  const buckets = new Map<string, T>();
+  for (let cur = range.start; cur.getTime() < range.end.getTime(); cur = nextBucketStart(cur, g)) {
+    const key = bucketKey(cur, g);
+    buckets.set(key, init(key, bucketLabel(cur, g, multiYear)));
+  }
+  return { g, buckets };
+}
+
+// Revenue + count per time bucket.
 export function bucketSalesOverTime(
   entries: CollectionIndexEntry[],
   opt: TimeWindowOption,
   now: Date = new Date(),
 ): TimeBucket[] {
-  const g = pickGranularity(opt, now);
-  const range = bucketingRange(entries, opt, g, now);
-  if (!range) return [];
-
-  const multiYear = range.start.getFullYear() !== new Date(range.end.getTime() - 1).getFullYear();
-
-  const buckets = new Map<string, TimeBucket>();
-  for (let cur = range.start; cur.getTime() < range.end.getTime(); cur = nextBucketStart(cur, g)) {
-    const key = bucketKey(cur, g);
-    buckets.set(key, { key, label: bucketLabel(cur, g, multiYear), revenue: 0, count: 0 });
-  }
+  const sk = emptyBuckets(entries, opt, now, (key, label) => ({
+    key,
+    label,
+    revenue: 0,
+    count: 0,
+  }));
+  if (!sk) return [];
 
   for (const e of entries) {
     const d = saleDateOf(e);
     if (Number.isNaN(d.getTime())) continue;
-    const b = buckets.get(bucketKey(d, g));
+    const b = sk.buckets.get(bucketKey(d, sk.g));
     if (b) {
       b.revenue += priceOf(e);
       b.count += 1;
     }
   }
-  return [...buckets.values()];
+  return [...sk.buckets.values()];
+}
+
+// Net cost and profit per time bucket, over the sales that have a P&L.
+export function bucketProfitOverTime(
+  entries: CollectionIndexEntry[],
+  fin: Financials,
+  opt: TimeWindowOption,
+  now: Date = new Date(),
+): ProfitBucket[] {
+  const sk = emptyBuckets(entries, opt, now, (key, label) => ({
+    key,
+    label,
+    cost: 0,
+    profit: 0,
+    received: 0,
+    count: 0,
+  }));
+  if (!sk) return [];
+
+  for (const e of entries) {
+    const f = fin[e.modelFile];
+    const d = saleDateOf(e);
+    if (!f || Number.isNaN(d.getTime())) continue;
+    const b = sk.buckets.get(bucketKey(d, sk.g));
+    if (b) {
+      b.cost += netCostOf(f);
+      b.profit += f.profit;
+      b.received += f.received;
+      b.count += 1;
+    }
+  }
+  return [...sk.buckets.values()];
 }
 
 // ─── Brand chart dataset ────────────────────────────────────────────────────
@@ -407,5 +469,115 @@ export function computeReport(entries: CollectionIndexEntry[]): SalesReport {
     lowest: minBy(entries),
     yearRows,
     brandRows,
+  };
+}
+
+// ─── Profitability (.sales/financials.json, when the ledger has been synced) ─
+// Keyed by CollectionIndexEntry.modelFile. The window still filters on
+// saleReport.date, so a sale's profit lands in the period its auction did.
+export type Financials = Record<string, WatchFinancials>;
+
+/** Cost net of refunds: what separates the payout from the profit. */
+export const netCostOf = (f: WatchFinancials): number => f.cost - f.refunds;
+
+/** A brand needs this many sales with a P&L before its margin is ranked. */
+export const MIN_BRAND_SALES = 3;
+
+/** Flags that make a sale's margin a bookkeeping artefact rather than a result. */
+const UNRANKED_FLAGS = ["no-purchase", "negative-cost"];
+
+/** formatPrice with a proper minus for losses: "−€50", not "€-50" — and never "−€0". */
+export const formatMoney = (n: number): string => {
+  const r = Math.round(n);
+  return r < 0 ? `−${formatPrice(-r)}` : formatPrice(r);
+};
+
+export const formatPercent = (r: number | null): string =>
+  r === null ? "—" : `${(r * 100).toFixed(1)}%`;
+
+const medianNum = (xs: number[]): number => {
+  const s = [...xs].sort((a, b) => a - b);
+  const mid = Math.floor(s.length / 2);
+  return s.length % 2 === 0 ? (s[mid - 1] + s[mid]) / 2 : s[mid];
+};
+
+export interface ProfitTotals {
+  /** Sales in the window, and how many of them have a P&L. */
+  count: number;
+  covered: number;
+  received: number;
+  /** Net of refunds. */
+  cost: number;
+  profit: number;
+  /** Σprofit ÷ Σreceived — the ledger summary tables' own definition. */
+  margin: number | null;
+  /** Σprofit ÷ Σcost. */
+  roi: number | null;
+  medianDaysHeld: number | null;
+  meanDaysHeld: number | null;
+}
+
+export function profitTotals(entries: CollectionIndexEntry[], fin: Financials): ProfitTotals {
+  const rows = entries.flatMap((e) => (fin[e.modelFile] ? [fin[e.modelFile]] : []));
+  const received = rows.reduce((s, f) => s + f.received, 0);
+  const cost = rows.reduce((s, f) => s + netCostOf(f), 0);
+  const profit = rows.reduce((s, f) => s + f.profit, 0);
+  const days = rows.flatMap((f) => (f.daysHeld === null ? [] : [f.daysHeld]));
+  return {
+    count: entries.length,
+    covered: rows.length,
+    received,
+    cost,
+    profit,
+    margin: received > 0 ? profit / received : null,
+    roi: cost >= 1 ? profit / cost : null,
+    medianDaysHeld: days.length ? medianNum(days) : null,
+    meanDaysHeld: days.length ? days.reduce((s, d) => s + d, 0) / days.length : null,
+  };
+}
+
+export interface BrandProfitRow extends ProfitTotals {
+  brand: string;
+}
+
+/** Every brand with at least one sale with a P&L, most profitable first. */
+export function brandProfitability(
+  entries: CollectionIndexEntry[],
+  fin: Financials,
+): BrandProfitRow[] {
+  return [...groupBy(entries, (e) => e.brand).entries()]
+    .map(([brand, es]) => ({ brand, ...profitTotals(es, fin) }))
+    .filter((r) => r.covered > 0)
+    .sort((a, b) => b.profit - a.profit);
+}
+
+export interface Flip {
+  entry: CollectionIndexEntry;
+  f: WatchFinancials;
+}
+
+/** The sales with a P&L, joined to their catalogue entry. */
+export function withFinancials(entries: CollectionIndexEntry[], fin: Financials): Flip[] {
+  return entries.flatMap((entry) =>
+    fin[entry.modelFile] ? [{ entry, f: fin[entry.modelFile] }] : [],
+  );
+}
+
+export function flips(
+  entries: CollectionIndexEntry[],
+  fin: Financials,
+  n = 5,
+): { byProfit: Flip[]; byMargin: Flip[]; worst: Flip[] } {
+  const all = withFinancials(entries, fin);
+  const byProfit = [...all].sort((a, b) => b.f.profit - a.f.profit);
+  // A watch with no purchase line, or with costs netting negative, would top any
+  // margin ranking on a bookkeeping gap, so it sits the margin ranking out.
+  const byMargin = all
+    .filter((x) => x.f.margin !== null && !UNRANKED_FLAGS.some((flag) => x.f.flags.includes(flag)))
+    .sort((a, b) => b.f.margin! - a.f.margin!);
+  return {
+    byProfit: byProfit.slice(0, n),
+    byMargin: byMargin.slice(0, n),
+    worst: [...byProfit].reverse().slice(0, n),
   };
 }

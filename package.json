@@ -18,7 +18,11 @@
     "test:e2e:ui": "playwright test --ui",
     "prepare": "husky",
     "prettier": "npx prettier --write .",
-    "generate-pdf": "cross-env NODE_OPTIONS=--max-old-space-size=8192 tsx scripts/generate-pdf-book.tsx"
+    "generate-pdf": "cross-env NODE_OPTIONS=--max-old-space-size=8192 tsx scripts/generate-pdf-book.tsx",
+    "sales:parse": "python scripts/sales/1_parse_ledger.py",
+    "sales:match": "tsx scripts/sales/2_match.ts",
+    "sales:build": "tsx scripts/sales/3_build.ts",
+    "sales:sync": "npm run sales:parse && npm run sales:match && npm run sales:build"
   },
   "dependencies": {
     "@radix-ui/react-slot": "^1.2.3",

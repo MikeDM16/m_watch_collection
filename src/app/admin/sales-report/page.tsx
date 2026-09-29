@@ -1,12 +1,15 @@
 import collectionService from "@/app/services/collectionService";
 
 import DevOnly from "../DevOnly";
+import { loadFinancials } from "./loadSalesData";
 import SalesReportDashboard from "./SalesReportDashboard";
 
 export default function SalesReportPage() {
   if (process.env.NODE_ENV === "production") return <DevOnly />;
 
   const sold = collectionService.getSoldModels();
+  // After the gate, at request time: the sales ledger's P&L is local-only data.
+  const financials = loadFinancials();
 
   if (sold.length === 0) {
     return (
@@ -22,5 +25,11 @@ export default function SalesReportPage() {
     );
   }
 
-  return <SalesReportDashboard sold={sold} />;
+  return (
+    <SalesReportDashboard
+      sold={sold}
+      financials={financials?.data ?? null}
+      stale={financials?.stale ?? false}
+    />
+  );
 }

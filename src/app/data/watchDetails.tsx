@@ -1,10 +1,23 @@
 import { FeatureStruct } from "../enums/featuresEnum";
 import type { Caliber } from "./caliberTypes";
 
+// A review left by the buyer on the Catawiki order page, harvested by
+// `scripts/catawiki` and written in by its step 5 — see scripts/catawiki/README.md.
+// `text` is stored verbatim in whatever language it was written; no translation,
+// and no buyer name is captured (Catawiki does not show one).
+export interface BuyerReview {
+  text: string;
+  date: string;
+  lang?: string;
+  sentiment?: "positive" | "neutral" | "negative";
+  sellerReply?: { text: string; date: string };
+}
+
 export interface SellReport {
   price: number;
   date: string;
   url?: string;
+  review?: BuyerReview;
 }
 
 export const ModelInformationKeyToDisplayTextMapping: Record<string, string> = {

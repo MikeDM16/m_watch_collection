@@ -62,8 +62,9 @@ from PIL import Image, ImageOps
 from tqdm import tqdm
 
 # Used when no folder is passed on the command line.
-DEFAULT_FOLDER = "C:/Users/migue/Documentos/GitHub/MWatchCollectionResources/public/assets/Images/" \
-"Movements/Vacheron_Constantin"
+BASE_PATH = "C:/Users/migue/Documentos/GitHub/MWatchCollectionResources/public/assets/Images"
+DEFAULT_FOLDER = f"{BASE_PATH}/Movements/FHF/FHF_30"
+DEFAULT_FOLDER = f"{BASE_PATH}/Tissot/1942_Tissot_Antimagnetic_Tuxedo_27_2"
 
 # Must stay in sync with SizeType in src/app/services/commonFunctions.tsx and
 # VARIANTS in src/app/services/imageLoader.ts.

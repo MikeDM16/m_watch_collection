@@ -1,7 +1,16 @@
 # scripts/
 
-Two unrelated groups live here: build-time codegen that runs against **this** repo,
-and a photo pipeline that runs against the **MWatchCollectionResources** repo.
+Three unrelated groups live here: build-time codegen that runs against **this** repo,
+a photo pipeline that runs against the **MWatchCollectionResources** repo, and the
+sales margin pipeline, which reads a private workbook and writes only to the
+gitignored `.sales/` folder.
+
+## Sales margin pipeline (private, run by hand)
+
+`npm run sales:sync` links every catalogue sale to its section of the private sales
+ledger (`scripts/Relogios - Vendas.xlsx`, gitignored) and computes real cost, profit
+and margin for the local sales report. Nothing it produces is ever committed or
+bundled. See [`sales/README.md`](sales/README.md).
 
 ## Codegen (this repo, driven by npm)
 

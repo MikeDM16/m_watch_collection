@@ -86,6 +86,16 @@ const nextConfig: NextConfig = {
     },
   ],
 
+  // The sales margin pipeline (scripts/sales) keeps purchase prices and margins
+  // in the gitignored .sales/ folder, which the dev-only sales report reads with
+  // fs at request time. Those runtime reads make the file tracer copy that folder
+  // — and, through the workbook check, all of scripts/, the ledger workbook
+  // included — into the server bundle of any build made on a machine that has
+  // them. Nothing under either folder is ever needed at runtime.
+  outputFileTracingExcludes: {
+    "/*": [".sales/**/*", "scripts/**/*"],
+  },
+
   // Barrel-file tree shaking. lucide-react in particular exports ~1500 icons.
   experimental: {
     optimizePackageImports: ["lucide-react"],

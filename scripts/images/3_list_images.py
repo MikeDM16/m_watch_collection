@@ -30,8 +30,8 @@ import re
 import sys
 
 # Used when no arguments are passed on the command line.
-DEFAULT_BRAND = "Vacheron_Constantin"
-DEFAULT_FOLDER = "c:/Users/migue/Downloads/t/1978_Vacheron_Constantin_Patrimony_K1014"
+DEFAULT_BRAND = "Titus"
+DEFAULT_FOLDER = "c:/Users/migue/Downloads/t/1942_Titus_Geneve_Tank_FHF_30"
 
 IMAGE_EXTENSIONS = {".jpg", ".jpeg", ".png", ".gif", ".webp", ".svg", ".bmp"}
 

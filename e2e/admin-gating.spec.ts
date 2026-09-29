@@ -31,6 +31,11 @@ test("the admin pages are gated too", async ({ page }) => {
 
   await page.goto("/admin/sales-report");
   await expect(page.getByRole("heading", { name: "Development only" })).toBeVisible();
+  // The profit figures come from the private sales ledger: none of it may render.
+  await expect(page.getByText("Profitability")).toHaveCount(0);
+
+  await page.goto("/admin/sales-report/review");
+  await expect(page.getByRole("heading", { name: "Development only" })).toBeVisible();
 });
 
 test("the public search index is still served", async ({ request }) => {
