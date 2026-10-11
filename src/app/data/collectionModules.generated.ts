@@ -62,6 +62,8 @@ export const modelLoaders: Record<string, () => Promise<{ default: WatchDetails 
   "Breitling/Breitling_Vitesse_Serie_Speciale_Blue_1998": () =>
     import("./watchModels/Breitling/Breitling_Vitesse_Serie_Speciale_Blue_1998"),
   "Buren/Buren_Grand_Prix__1947": () => import("./watchModels/Buren/Buren_Grand_Prix__1947"),
+  "Bvlgari/Bvlgari_Diagono_Chronograph_CH35S_1999": () =>
+    import("./watchModels/Bvlgari/Bvlgari_Diagono_Chronograph_CH35S_1999"),
   "Calypso/Calypso_OS10_Chrono_2001": () =>
     import("./watchModels/Calypso/Calypso_OS10_Chrono_2001"),
   "Camel_Trophy/Camel_Trophy_M136831839_1995": () =>
@@ -84,6 +86,8 @@ export const modelLoaders: Record<string, () => Promise<{ default: WatchDetails 
     import("./watchModels/Celsus/Celsus_9168_Heritage_2022"),
   "Celsus/Celsus_PPAA782XG_2015": () => import("./watchModels/Celsus/Celsus_PPAA782XG_2015"),
   "Celsus/Celsus_PPAB942G_2020": () => import("./watchModels/Celsus/Celsus_PPAB942G_2020"),
+  "Certina/Certina_Blue_Ribbon_1977": () =>
+    import("./watchModels/Certina/Certina_Blue_Ribbon_1977"),
   "Certina/Certina_DS_Automatic_27_jewels_1965": () =>
     import("./watchModels/Certina/Certina_DS_Automatic_27_jewels_1965"),
   "Certina/Certina_DS_First_White_Ceramic_2014": () =>
@@ -92,8 +96,11 @@ export const modelLoaders: Record<string, () => Promise<{ default: WatchDetails 
     import("./watchModels/Certina/Certina_DS_Podium_Lady_MOP_2020"),
   "Certina/Certina_Dress_331_15_jewels_1950": () =>
     import("./watchModels/Certina/Certina_Dress_331_15_jewels_1950"),
+  "Certina/Certina_President_1971": () => import("./watchModels/Certina/Certina_President_1971"),
   "Chopard/Chopard_Mille_Miglia_2000_Titanium": () =>
     import("./watchModels/Chopard/Chopard_Mille_Miglia_2000_Titanium"),
+  "Cortebert/Cortebert_Precision_Tank_1942": () =>
+    import("./watchModels/Cortebert/Cortebert_Precision_Tank_1942"),
   "Corticima/Corticima_Dress_17Jewels_1970": () =>
     import("./watchModels/Corticima/Corticima_Dress_17Jewels_1970"),
   "Cristal_Watch/Cristal_Watch_Blue_Cushion_17J_1975": () =>
@@ -109,6 +116,8 @@ export const modelLoaders: Record<string, () => Promise<{ default: WatchDetails 
   "Douglas/Douglas_Antimagnetic_1947": () =>
     import("./watchModels/Douglas/Douglas_Antimagnetic_1947"),
   "Doxa/Doxa_Antimagnetic_1942": () => import("./watchModels/Doxa/Doxa_Antimagnetic_1942"),
+  "Doxa/Doxa_Conquistador_By_Synchron_1973": () =>
+    import("./watchModels/Doxa/Doxa_Conquistador_By_Synchron_1973"),
   "DuBois_Et_Fils/DuBois_Gran_Prix_Europe_F1_1999": () =>
     import("./watchModels/DuBois_Et_Fils/DuBois_Gran_Prix_Europe_F1_1999"),
   "Eberhard/Eberhard_Chronograph_31000_1980": () =>
@@ -121,6 +130,8 @@ export const modelLoaders: Record<string, () => Promise<{ default: WatchDetails 
     import("./watchModels/Eberhard/Eberhard_Godron_Ref_32031_Lemania_1873_1992"),
   "Eletta/Eletta_OS60_Chrono_1993": () => import("./watchModels/Eletta/Eletta_OS60_Chrono_1993"),
   "Emes/Emes_Chrono_OS60_2005": () => import("./watchModels/Emes/Emes_Chrono_OS60_2005"),
+  "Ernest_Borel/Ernest_Borel_Neuchatel_Incabloc_1962": () =>
+    import("./watchModels/Ernest_Borel/Ernest_Borel_Neuchatel_Incabloc_1962"),
   "Eusi/Eusi_Incabloc_Tank_1976": () => import("./watchModels/Eusi/Eusi_Incabloc_Tank_1976"),
   "Ferrari/Ferrari_Modena_Chronograph_2005": () =>
     import("./watchModels/Ferrari/Ferrari_Modena_Chronograph_2005"),
@@ -143,6 +154,8 @@ export const modelLoaders: Record<string, () => Promise<{ default: WatchDetails 
   "Helma/Helma_AS1130_1955": () => import("./watchModels/Helma/Helma_AS1130_1955"),
   "Hermes/Hermes_Landeron_51_Chrono_1955": () =>
     import("./watchModels/Hermes/Hermes_Landeron_51_Chrono_1955"),
+  "Hertig/Hertig_Certina_Fancy_Lugs_1943": () =>
+    import("./watchModels/Hertig/Hertig_Certina_Fancy_Lugs_1943"),
   "Hipco/Hipco_Incabloc_17Jewels_1974": () =>
     import("./watchModels/Hipco/Hipco_Incabloc_17Jewels_1974"),
   "Jaguar/Jaguar_Frag_Chromed_OS10_1995": () =>
@@ -370,6 +383,8 @@ export const modelLoaders: Record<string, () => Promise<{ default: WatchDetails 
     import("./watchModels/Raymond_Weil/Raymond_Weil_Tradition_Mecanique_7760_1990"),
   "Raymond_Weil/Raymond_Weil_Tradition_Mecanique_7760_A290703_1990": () =>
     import("./watchModels/Raymond_Weil/Raymond_Weil_Tradition_Mecanique_7760_A290703_1990"),
+  "Record/Record_Bumper_Tuxedo_1950": () =>
+    import("./watchModels/Record/Record_Bumper_Tuxedo_1950"),
   "Relide/Relide_Militare_1955": () => import("./watchModels/Relide/Relide_Militare_1955"),
   "Romar/Romar_Incabloc_17Jewels_1976": () =>
     import("./watchModels/Romar/Romar_Incabloc_17Jewels_1976"),
@@ -395,6 +410,8 @@ export const modelLoaders: Record<string, () => Promise<{ default: WatchDetails 
   "Seiko/Seiko_8M25_Age_Of_Discoveries.1992": () =>
     import("./watchModels/Seiko/Seiko_8M25_Age_Of_Discoveries.1992"),
   "Seiko/Seiko_V732_0390_1990": () => import("./watchModels/Seiko/Seiko_V732_0390_1990"),
+  "Sergines/Sergines_Incabloc_17_Rubis_1965": () =>
+    import("./watchModels/Sergines/Sergines_Incabloc_17_Rubis_1965"),
   "Signo/Signo_Small_Seconds_1947": () => import("./watchModels/Signo/Signo_Small_Seconds_1947"),
   "Solvil_et_Titus/Solvil_et_Titus_Genéve_Tank_1942": () =>
     import("./watchModels/Solvil_et_Titus/Solvil_et_Titus_Genéve_Tank_1942"),

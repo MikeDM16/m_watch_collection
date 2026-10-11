@@ -2,6 +2,10 @@
 
 Quick reference for all files that need to be created or modified when adding watches or movements to this collection app.
 
+To add a batch, paste it into Claude Code with `/add-watches`. The skill
+(`.claude/skills/add-watches/`) plans every file below, stops for review, and
+writes them only after you approve.
+
 ---
 
 ## A. Adding a New Watch Model
@@ -10,7 +14,7 @@ Quick reference for all files that need to be created or modified when adding wa
 
 - [ ] **1. Add watch images** to `public/assets/Images/[Brand]/[Year]_[Brand]_[Model]/`
 - [ ] **2. Create watch model file** at `src/app/data/watchModels/[Brand]/[Brand]_[Model]_[Year].tsx`
-- [ ] **3. Register in collectionData** — add entry to `CollectionItemsDB` in `src/app/data/collectionData.tsx`
+- [ ] **3. Register in collectionData** — add entry to `CollectionItemsDB` in `src/app/data/admin/collectionData.tsx`
 - [ ] **4. Regenerate collection index** — runs automatically on `npm run dev` and `npm run build` (or manually: `npm run generate-index`)
 - [ ] **5. (If new brand)** Add enum value, brand entry, and BrandSeries file (see Section D)
 - [ ] **6. (If new series for existing brand)** Add series constant to `src/app/data/watchModels/[Brand]/[Brand]BrandSeries.tsx` (or a sub-series under an umbrella group — see Section D2)
@@ -117,7 +121,7 @@ export default details;
 
 ### Step 3 — Register in collectionData.tsx
 
-**File:** `src/app/data/collectionData.tsx`
+**File:** `src/app/data/admin/collectionData.tsx`
 
 Add entry inside the `CollectionItemsDB` object:
 
@@ -160,7 +164,7 @@ Type is `CollectionCatalogue` with `modelsList` grouping entries by series. Coll
 
 - [ ] **1. Add movement images** to `public/assets/Images/Movements/[Manufacturer]/[CaliberModel]/`
 - [ ] **2. Create movement file** at `src/app/data/movements/[Manufacturer]/[CaliberModel].tsx`
-- [ ] **3. Register in movementsData** — add import + entry to `MovementsDataDB` in `src/app/data/movementsData.tsx`
+- [ ] **3. Register in movementsData** — add import + entry to `MovementsDataDB` in `src/app/data/admin/movementsData.tsx`
 - [ ] **4. (If new manufacturer)** Add to `CaliberBrandsEnum` in `src/app/enums/caliberEnums.tsx`
 
 ### Step 2 — Movement File
@@ -179,7 +183,7 @@ import {
 } from "@/app/enums/caliberEnums";
 import { MovementWatchTypeEnum } from "@/app/enums/movementWatchTypeEnum";
 
-import type { Caliber } from "../../movementsData";
+import type { Caliber } from "../../caliberTypes";
 
 const VARIABLE_NAME: Caliber = {
   title: "[Manufacturer] [Model]",
@@ -210,7 +214,7 @@ export default VARIABLE_NAME;
 
 ### Step 3 — Register in movementsData.tsx
 
-**File:** `src/app/data/movementsData.tsx`
+**File:** `src/app/data/admin/movementsData.tsx`
 
 1. Add ES `import` at the top:
 
@@ -229,6 +233,10 @@ MY_CALIBER: MY_CALIBER,
 ---
 
 ## C. Enum Quick Reference
+
+These tables lag behind the code. Keys such as `D_22`, `D_28`, `SS_GOLD_PLATED_12`, `J_47`, `R_34`
+and `W_15` exist but are not listed here. The files in `src/app/enums/` are authoritative.
+`npx tsx .claude/skills/add-watches/scripts/lookup.ts --enums` prints the current keys.
 
 ### Watch Classification
 

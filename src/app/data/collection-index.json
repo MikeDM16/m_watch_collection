@@ -53,6 +53,20 @@
     },
     "modelFile": "Universal_Geneve/Universal_Geneve_Mecanique_cal_262_1942"
   },
+  "Cortébert Precision Tank": {
+    "brand": "Cortébert",
+    "legend": "Cortébert Precision Tank",
+    "year": 1942,
+    "type": "Casual",
+    "srcImage": "public/assets/Images/Cortebert/1942_Cortebert_Precision_Tank_573/IMG_6007.JPG",
+    "hoverSrc": "public/assets/Images/Cortebert/1942_Cortebert_Precision_Tank_573/IMG_5987.JPG",
+    "specialCollectionItem": false,
+    "collectionSet": false,
+    "series": "Precision Incassable",
+    "movementTitle": "Cortébert Cal. 573",
+    "saleReport": null,
+    "modelFile": "Cortebert/Cortebert_Precision_Tank_1942"
+  },
   "Solvil et Titus Genève Tank": {
     "brand": "Solvil et Titus",
     "legend": "Solvil et Titus Genève Tank",
@@ -108,6 +122,20 @@
     "movementTitle": "Tissot 27B-1",
     "saleReport": null,
     "modelFile": "Tissot/Tissot_Antimagnetic_Tuxedo_1943"
+  },
+  "Hertig Certina “Fancy Lugs”": {
+    "brand": "Hertig",
+    "legend": "Hertig Certina “Fancy Lugs”",
+    "year": 1943,
+    "type": "Casual",
+    "srcImage": "public/assets/Images/Hertig/1943_Hertig_Certina_Fancy_Lugs_KF320B/IMG_5820.JPG",
+    "hoverSrc": "public/assets/Images/Hertig/1943_Hertig_Certina_Fancy_Lugs_KF320B/IMG_5821.JPG",
+    "specialCollectionItem": false,
+    "collectionSet": false,
+    "series": "Fancy Lugs",
+    "movementTitle": "Certina Cal. KF320B",
+    "saleReport": null,
+    "modelFile": "Hertig/Hertig_Certina_Fancy_Lugs_1943"
   },
   "Zenith Militare Cal. 106 17 Jewels": {
     "brand": "Zenith",
@@ -399,6 +427,20 @@
     "saleReport": null,
     "modelFile": "Cuervo_y_Sobrinos/Cuervo_y_Sobrinos_Hanava_Landeron_159_1950"
   },
+  "Record Bumper Tuxedo": {
+    "brand": "Record",
+    "legend": "Record Bumper Tuxedo",
+    "year": 1950,
+    "type": "Casual",
+    "srcImage": "public/assets/Images/Record/1950_Record_Bumper_Tuxedo_171/IMG_5914.JPG",
+    "hoverSrc": "public/assets/Images/Record/1950_Record_Bumper_Tuxedo_171/IMG_5889.JPG",
+    "specialCollectionItem": false,
+    "collectionSet": false,
+    "series": "Bumper",
+    "movementTitle": "Record Cal. 171",
+    "saleReport": null,
+    "modelFile": "Record/Record_Bumper_Tuxedo_1950"
+  },
   "Admes Automatic ETA 1246": {
     "brand": "Admes",
     "legend": "Admes Automatic ETA 1246",
@@ -423,7 +465,7 @@
     "year": 1950,
     "type": "Dress",
     "srcImage": "public/assets/Images/Certina/1950_Certina_Mechanical_331/IMG_0960.JPG",
-    "hoverSrc": null,
+    "hoverSrc": "public/assets/Images/Certina/1950_Certina_Mechanical_331/IMG_0970.JPG",
     "specialCollectionItem": false,
     "collectionSet": false,
     "series": "Vintage Series",
@@ -827,6 +869,20 @@
     },
     "modelFile": "Omega/Omega_Geneve_Cal_268_1961"
   },
+  "Ernest Borel Neuchâtel Incabloc": {
+    "brand": "Ernest Borel",
+    "legend": "Ernest Borel Neuchâtel Incabloc",
+    "year": 1962,
+    "type": "Casual",
+    "srcImage": "public/assets/Images/Ernest_Borel/1962_Ernest_Borel_Neuchatel_Incabloc_2391/IMG_5782.JPG",
+    "hoverSrc": "public/assets/Images/Ernest_Borel/1962_Ernest_Borel_Neuchatel_Incabloc_2391/IMG_5784.JPG",
+    "specialCollectionItem": false,
+    "collectionSet": false,
+    "series": "Neuchâtel",
+    "movementTitle": "ETA 2391",
+    "saleReport": null,
+    "modelFile": "Ernest_Borel/Ernest_Borel_Neuchatel_Incabloc_1962"
+  },
   "Tissot Seastar Seven": {
     "brand": "Tissot",
     "legend": "Tissot Seastar Seven",
@@ -901,7 +957,7 @@
     "year": 1965,
     "type": "Casual",
     "srcImage": "public/assets/Images/Certina/1965_Certina_DS_Automatic_25_651_27_jewels/IMG_7158.JPG",
-    "hoverSrc": null,
+    "hoverSrc": "public/assets/Images/Certina/1965_Certina_DS_Automatic_25_651_27_jewels/IMG_7161.JPG",
     "specialCollectionItem": false,
     "collectionSet": false,
     "series": "Vintage Series",
@@ -972,8 +1028,8 @@
     "legend": "Cauny Apollon Calendario 17 Rubis",
     "year": 1965,
     "type": "Casual",
-    "srcImage": "public/assets/Images/Cauny/1965_Cauny_Apollon_Calendario/IMG_1902.JPG",
-    "hoverSrc": null,
+    "srcImage": "public/assets/Images/Cauny/1965_Cauny_Apollon_Calendario/IMG_5958.JPG",
+    "hoverSrc": "public/assets/Images/Cauny/1965_Cauny_Apollon_Calendario/IMG_5961.JPG",
     "specialCollectionItem": false,
     "collectionSet": false,
     "series": "Apollon",
@@ -1016,6 +1072,20 @@
       "url": "https://www.catawiki.com/en/l/87004475"
     },
     "modelFile": "Tissot/Tissot_Seastar_PR516_Auto_1965"
+  },
+  "Sergines Incabloc 17 Rubis": {
+    "brand": "Sergines",
+    "legend": "Sergines Incabloc 17 Rubis",
+    "year": 1965,
+    "type": "Casual",
+    "srcImage": "public/assets/Images/Sergines/1965_Sergines_Incabloc_17_Rubis_980/IMG_5862.JPG",
+    "hoverSrc": "public/assets/Images/Sergines/1965_Sergines_Incabloc_17_Rubis_980/IMG_5864.JPG",
+    "specialCollectionItem": false,
+    "collectionSet": false,
+    "series": "Incabloc 17 Rubis",
+    "movementTitle": "A. Schild 980",
+    "saleReport": null,
+    "modelFile": "Sergines/Sergines_Incabloc_17_Rubis_1965"
   },
   "Belex Precision 17 Jewels": {
     "brand": "Belex",
@@ -1265,6 +1335,20 @@
     },
     "modelFile": "Tissot/Tissot_Seastar_PR516_1970"
   },
+  "Certina President - Linen Dial": {
+    "brand": "Certina",
+    "legend": "Certina President - Linen Dial",
+    "year": 1971,
+    "type": "Casual",
+    "srcImage": "public/assets/Images/Certina/1971_Certina_President_25_651/IMG_5700.JPG",
+    "hoverSrc": "public/assets/Images/Certina/1971_Certina_President_25_651/IMG_5692.JPG",
+    "specialCollectionItem": false,
+    "collectionSet": false,
+    "series": "Vintage Series",
+    "movementTitle": "Certina Cal. 25-651",
+    "saleReport": null,
+    "modelFile": "Certina/Certina_President_1971"
+  },
   "Tissot PR 516 GL  Cal. 794": {
     "brand": "Tissot",
     "legend": "Tissot PR 516 GL  Cal. 794",
@@ -1386,6 +1470,20 @@
       "url": "https://www.catawiki.com/l/105492929"
     },
     "modelFile": "Omega/Omega_Geneve_Automatic_Cal_1022_1973"
+  },
+  "Doxa Conquistador (By Synchron)": {
+    "brand": "Doxa",
+    "legend": "Doxa Conquistador (By Synchron)",
+    "year": 1973,
+    "type": "Casual",
+    "srcImage": "public/assets/Images/Doxa/1973_Doxa_Conquistador_By_Synchron_2750/IMG_5740.JPG",
+    "hoverSrc": "public/assets/Images/Doxa/1973_Doxa_Conquistador_By_Synchron_2750/IMG_5742.JPG",
+    "specialCollectionItem": false,
+    "collectionSet": false,
+    "series": "Conquistador",
+    "movementTitle": "ETA 2750",
+    "saleReport": null,
+    "modelFile": "Doxa/Doxa_Conquistador_By_Synchron_1973"
   },
   "Arauto Silver Tuxedo Unitas 6325": {
     "brand": "Arauto",
@@ -2162,6 +2260,20 @@
       "url": "https://www.catawiki.com/en/l/95829619"
     },
     "modelFile": "Nobreza/Nobreza_Automatic_1977"
+  },
+  "Certina Blue Ribbon": {
+    "brand": "Certina",
+    "legend": "Certina Blue Ribbon",
+    "year": 1977,
+    "type": "Casual",
+    "srcImage": "public/assets/Images/Certina/1977_Certina_Blue_Ribbon_25_651/IMG_5669.JPG",
+    "hoverSrc": "public/assets/Images/Certina/1977_Certina_Blue_Ribbon_25_651/IMG_5653.JPG",
+    "specialCollectionItem": false,
+    "collectionSet": false,
+    "series": "Vintage Series",
+    "movementTitle": "Certina Cal. 25-651",
+    "saleReport": null,
+    "modelFile": "Certina/Certina_Blue_Ribbon_1977"
   },
   "Amyria Blue Shades AS 1950": {
     "brand": "Amyria",
@@ -3996,6 +4108,20 @@
     "saleReport": null,
     "modelFile": "Maurice_Lacroix/Maurice_Lacroix_Lady_Date_1998"
   },
+  "Bvlgari Diagono Chronograph CH35S": {
+    "brand": "Bvlgari",
+    "legend": "Bvlgari Diagono Chronograph CH35S",
+    "year": 1999,
+    "type": "Sports",
+    "srcImage": "public/assets/Images/Bvlgari/1999_Bvlgari_Diagono_CH35S_2984/IMG_5616.JPG",
+    "hoverSrc": "public/assets/Images/Bvlgari/1999_Bvlgari_Diagono_CH35S_2984/IMG_5645.JPG",
+    "specialCollectionItem": true,
+    "collectionSet": false,
+    "series": "Diagono",
+    "movementTitle": "ETA 2894",
+    "saleReport": null,
+    "modelFile": "Bvlgari/Bvlgari_Diagono_Chronograph_CH35S_1999"
+  },
   "Breitling Navitimer Premier A40035": {
     "brand": "Breitling",
     "legend": "Breitling Navitimer Premier A40035",
@@ -5172,7 +5298,7 @@
     "year": 2014,
     "type": "Casual",
     "srcImage": "public/assets/Images/Certina/2014_Certina_DS_First_Ceramic_white/IMG_3167.JPG",
-    "hoverSrc": null,
+    "hoverSrc": "public/assets/Images/Certina/2014_Certina_DS_First_Ceramic_white/IMG_3152.JPG",
     "specialCollectionItem": false,
     "collectionSet": false,
     "series": "DS First",
@@ -5470,7 +5596,7 @@
     "year": 2020,
     "type": "Casual",
     "srcImage": "public/assets/Images/Certina/2020_Certina_DS_Podium_MOP_Lady/IMG_3135.JPG",
-    "hoverSrc": null,
+    "hoverSrc": "public/assets/Images/Certina/2020_Certina_DS_Podium_MOP_Lady/IMG_3137.JPG",
     "specialCollectionItem": false,
     "collectionSet": false,
     "series": "DS Podium",

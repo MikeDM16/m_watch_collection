@@ -24,6 +24,8 @@ const ETA_2894_2_37J: Caliber = {
     "public/assets/Images/Movements/ETA/ETA_2894/ETA_2894_2_3.JPG",
     "public/assets/Images/Movements/ETA/ETA_2894/ETA_2894_2_4.JPG",
     "public/assets/Images/Movements/ETA/ETA_2894/ETA_2894_2_5.JPG",
+    "public/assets/Images/Movements/ETA/ETA_2894/ETA_2894_2_6.JPG",
+    "public/assets/Images/Movements/ETA/ETA_2894/ETA_2894_2_7.JPG",
   ],
   // Details
   details: {

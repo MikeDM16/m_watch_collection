@@ -8,6 +8,7 @@ export const CalendarWatchTypeEnum = {
   AT_12_OCLOCK: "Date display at 12 o'clock position",
   AT_4_5_OCLOCK: "Date display between 4 and 5 o'clock position",
   CALENDAR_POINTER: "Calendar pointer around the dial",
+  DAY_AT_12_DATE_POINTER: "Day window at 12 o'clock, date by pointer around the dial",
   INNER_BEZEL: "Display around the inner bezels",
   ANUAL: "Anual Calendar (day, date and month)",
   PERPETUAL: "Perpetual Calendar (day, date, month and year)",

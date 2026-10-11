@@ -41,6 +41,8 @@ const CERTINA_25_261_27J: Caliber = {
     "public/assets/Images/Movements/Certina/Certina_25_261/Certina_25_261_4.JPG",
     "public/assets/Images/Movements/Certina/Certina_25_261/Certina_25_261_2.JPG",
     "public/assets/Images/Movements/Certina/Certina_25_261/Certina_25_261_3.JPG",
+    "public/assets/Images/Movements/Certina/Certina_25_261/Certina_25_261_5.JPG",
+    "public/assets/Images/Movements/Certina/Certina_25_261/Certina_25_261_6.JPG",
   ],
   // Details
   details: {

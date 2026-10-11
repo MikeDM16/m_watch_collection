@@ -250,4 +250,13 @@ export const featuresEnum: Record<string, FeatureStruct> = {
     name: "Titanium",
     description: "",
   },
+  BLUE_HEATED_COPPER_HANDS: {
+    name: "Heat-blued Copper hands",
+    description: "",
+  },
+  FANCY_LUGS: {
+    name: "Fancy curved lugs",
+
+    description: "",
+  },
 };

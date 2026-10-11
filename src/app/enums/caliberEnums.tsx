@@ -1,7 +1,9 @@
 export const CaliberBrandsEnum = {
   AS: "A. Schild",
+  BENRUS: "Benrus",
   BREITLING: "Breitling",
   CERTINA: "Certina",
+  CORTEBERT: "Cortébert",
   DUBOIS_DEPRAZ: "Dubois Depraz",
   DOXA: "Doxa",
   DUROMAT: "Duromat",
@@ -19,6 +21,7 @@ export const CaliberBrandsEnum = {
   OMEGA: "Omega",
   ORIENT: "Orient",
   POLJOT: "Poljot",
+  RECORD: "Record",
   RONDA: "Ronda",
   SEAGULL: "Seagull",
   SEIKO: "Seiko",
@@ -53,6 +56,7 @@ export const JewelsNumberEnum = {
   J_15: "15 (Fifteen) Jewels",
   J_16: "16 (Sixteen) Jewels",
   J_17: "17 (Seventeen) Jewels",
+  J_20: "20 (Twenty) Jewels",
   J_21: "21 (Twenty-One) Jewels",
   J_22: "22 (Twenty-Two) Jewels",
   J_23: "23 (Twenty-Three) Jewels",
@@ -74,6 +78,7 @@ export const JewelsNumberEnum = {
 
 export const ReserveHoursEnum = {
   R_34: "34 Hours",
+  R_37: "37 Hours",
   R_38: "38 Hours",
   R_40: "40 Hours",
   R_41: "41 Hours",

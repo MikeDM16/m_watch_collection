@@ -1,10 +1,14 @@
 import type { Caliber } from "../caliberTypes";
+import AS_980 from "../movements/AS/AS_980_17J";
 import AS_1130 from "../movements/AS/AS_1130_17J";
 import AS_1950 from "../movements/AS/AS_1950_17J";
+import BENRUS_CE13 from "../movements/Benrus/Benrus_CE13_17J";
 import BREITLING_B30_38J from "../movements/Breitling/Breitling_B30_38J";
 import BREITLING_B40_38J from "../movements/Breitling/Breitling_B40_38J";
 import CERTINA_25_261_27J from "../movements/Certina/Certina_25_261_28J";
 import CERTINA_331 from "../movements/Certina/Certina_331_15J";
+import CERTINA_KF320B from "../movements/Certina/Certina_KF320B_15J";
+import CORTEBERT_573 from "../movements/Cortebert/Cortebert_573_15J";
 import DD_2000_ETA_955_232 from "../movements/Debois_Depraz/DD_2000_955";
 import DD_2000_ETA_2892 from "../movements/Debois_Depraz/DD_2000_2892";
 import DOXA_83_4_987_17J from "../movements/Doxa/Doxa_83_4_987_17J";
@@ -21,9 +25,11 @@ import ETA_955_112 from "../movements/ETA/ETA_955_112";
 import ETA_955_114 from "../movements/ETA/ETA_955_114";
 import ETA_988_432 from "../movements/ETA/ETA_988_432_7J";
 import ETA_1256 from "../movements/ETA/ETA_1256";
+import ETA_2391 from "../movements/ETA/ETA_2391_21J";
 import ETA_2452 from "../movements/ETA/ETA_2452_17J";
 import ETA_2472 from "../movements/ETA/ETA_2472_25J";
 import ETA_2671 from "../movements/ETA/ETA_2671_25J";
+import ETA_2750 from "../movements/ETA/ETA_2750_17J";
 import ETA_2783 from "../movements/ETA/ETA_2783";
 import ETA_2824 from "../movements/ETA/ETA_2824";
 import ETA_2834 from "../movements/ETA/ETA_2834";
@@ -86,6 +92,7 @@ import ORIENT_46D40 from "../movements/Orient/Orient_46D40";
 import PIGUET_1270_22J from "../movements/Piguet/Piguet_1270_22_Jewels";
 import POLJOT_3133_25J from "../movements/Poljot/Polot_3133_25_Jewels";
 import RW_4200 from "../movements/Raymond_Weil/RW_4200";
+import RECORD_171 from "../movements/Record/Record_171_20J";
 import RONDA_5030D from "../movements/Ronda/Ronda_5030D";
 import RONDA_5040D from "../movements/Ronda/Ronda_5040D";
 import RONDA_6004B from "../movements/Ronda/Ronda_6004B";
@@ -140,12 +147,18 @@ export { CaliberTechinicalDetailskeyToDisplayTextmappings } from "../caliberType
 export const MovementsDataDB: Record<string, Caliber> = {
   AS_1130: AS_1130,
   AS_1950: AS_1950,
+  AS_980: AS_980,
+
+  BENRUS_CE13: BENRUS_CE13,
 
   BREITLING_B40_38J: BREITLING_B40_38J,
   BREITLING_B30_38J: BREITLING_B30_38J,
 
   CERTINA_331: CERTINA_331,
   CERTINA_25_261_27J: CERTINA_25_261_27J,
+  CERTINA_KF320B: CERTINA_KF320B,
+
+  CORTEBERT_573: CORTEBERT_573,
 
   DD_2000_ETA_2892: DD_2000_ETA_2892,
   DD_2000_ETA_955_232: DD_2000_ETA_955_232,
@@ -161,9 +174,11 @@ export const MovementsDataDB: Record<string, Caliber> = {
   ETA_251_262: ETA_251_262,
   ETA_251_265: ETA_251_265,
   ETA_251_272: ETA_251_272,
+  ETA_2391: ETA_2391,
   ETA_2452: ETA_2452,
   ETA_2472: ETA_2472,
   ETA_2671: ETA_2671,
+  ETA_2750: ETA_2750,
   ETA_2783: ETA_2783,
   ETA_2824: ETA_2824,
   ETA_2836: ETA_2836,
@@ -249,6 +264,8 @@ export const MovementsDataDB: Record<string, Caliber> = {
   POLJOT_3133_25J: POLJOT_3133_25J,
   PIGUET_1270_22J: PIGUET_1270_22J,
   RAYMON_WEIL_4200: RW_4200,
+
+  RECORD_171: RECORD_171,
 
   RONDA_5030D: RONDA_5030D,
   RONDA_5040D: RONDA_5040D,

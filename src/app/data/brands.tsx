@@ -40,6 +40,7 @@ export const mainBrandsOrder: string[] = [
   BrandsEnum.TAG_HEUER,
   BrandsEnum.PORSCHE_DESIGN,
   BrandsEnum.GIRARD_PERREGAUX,
+  BrandsEnum.BVLGARI,
   BrandsEnum.TISSOT,
   BrandsEnum.RAYMOND_WEIL,
   BrandsEnum.MAURICE_LACROIX,
@@ -759,5 +760,73 @@ export const brandsDB: Brand[] = [
       year: 1924,
       details: "Founded in Biel, Switzerland, and Lake Maggiore, Italy",
     },
+  },
+  {
+    name: BrandsEnum.CORTEBERT,
+    logoImg: "public/assets/Images/Brands_Logos/cortebert_logo.PNG",
+    description:
+      "Cortébert was a Swiss manufacture that made its own movements, supplied calibers to other brands and was known for its railway watches; it closed in the quartz crisis.",
+    foundedInformation: {
+      year: 1790,
+      details: "Founded in Cortébert, Switzerland",
+    },
+    displayBySeries: false,
+  },
+  {
+    name: BrandsEnum.HERTIG,
+    logoImg: "public/assets/Images/Brands_Logos/hertig_logo.PNG",
+    description:
+      "Charles Hertig's export house in Biel sold Certina-made watches under the Hertig name, mainly in Portugal, from the 1930s to the 1950s.",
+    displayBySeries: false,
+  },
+  {
+    name: BrandsEnum.ERNEST_BOREL,
+    logoImg: "public/assets/Images/Brands_Logos/ernest_borel_logo.PNG",
+    website: "https://www.ernestborel.ch/en/",
+    description:
+      "Ernest Borel is a Swiss watch brand founded in Neuchâtel by Jules Borel and Paul Courvoisier and run by the Borel family until 1975.",
+    foundedInformation: {
+      year: 1856,
+      details: "Founded in Neuchâtel, Switzerland",
+    },
+    displayBySeries: false,
+  },
+  {
+    name: BrandsEnum.SERGINES,
+    logoImg: "public/assets/Images/Brands_Logos/sergines_logo.PNG",
+  },
+  {
+    name: BrandsEnum.RECORD,
+    logoImg: "public/assets/Images/Brands_Logos/record_logo.PNG",
+    description:
+      "Record Watch Co. was a Swiss manufacture in Tramelan; Longines took a majority stake in 1961 and the brand closed in 1991.",
+    foundedInformation: {
+      year: 1903,
+      details: "Founded in Tramelan, Switzerland",
+    },
+    displayBySeries: false,
+  },
+  {
+    name: BrandsEnum.BENRUS,
+    logoImg: "public/assets/Images/Brands_Logos/benrus_logo.PNG",
+    description:
+      "Benrus is an American watch company founded by the Lazrus brothers, who imported Swiss movements and cased them in New York; its watches served the US military from WWII to Vietnam.",
+    foundedInformation: {
+      year: 1921,
+      details: "Founded in New York City, USA",
+    },
+    displayBySeries: false,
+  },
+  {
+    name: BrandsEnum.BVLGARI,
+    logoImg: "public/assets/Images/Brands_Logos/bvlgari_logo.png",
+    website: "https://www.bulgari.com",
+    description:
+      "Bvlgari is an Italian jeweller founded in Rome by Greek silversmith Sotirios Voulgaris; its watches are made in Switzerland, and the Diagono (1988) was its first sports watch.",
+    foundedInformation: {
+      year: 1884,
+      details: "Founded in Rome, Italy",
+    },
+    displayBySeries: false,
   },
 ];

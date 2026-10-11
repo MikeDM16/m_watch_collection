@@ -77,6 +77,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     year: 2020,
     type: WatchTypeEnum.CASUAL,
     srcImage: "public/assets/Images/Certina/2020_Certina_DS_Podium_MOP_Lady/IMG_3135.JPG",
+    hoverSrc: "public/assets/Images/Certina/2020_Certina_DS_Podium_MOP_Lady/IMG_3137.JPG",
     href: require("../watchModels/Certina/Certina_DS_Podium_Lady_MOP_2020"),
     specialCollectionItem: false,
   },
@@ -252,6 +253,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     year: 2014,
     type: WatchTypeEnum.CASUAL,
     srcImage: "public/assets/Images/Certina/2014_Certina_DS_First_Ceramic_white/IMG_3167.JPG",
+    hoverSrc: "public/assets/Images/Certina/2014_Certina_DS_First_Ceramic_white/IMG_3152.JPG",
     href: require("../watchModels/Certina/Certina_DS_First_White_Ceramic_2014"),
     specialCollectionItem: false,
   },
@@ -956,6 +958,17 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     hoverSrc: "public/assets/Images/Tissot/2000_Tissot_Sport_Chrono/IMG_0503.JPG",
     href: require("../watchModels/Tissot/Tissot_Sports_E662_Chrono_2000"),
     specialCollectionItem: false,
+  },
+
+  "Bvlgari Diagono Chronograph CH35S": {
+    brand: BrandsEnum.BVLGARI,
+    legend: "Bvlgari Diagono Chronograph CH35S",
+    year: 1999,
+    type: WatchTypeEnum.SPORTS,
+    srcImage: "public/assets/Images/Bvlgari/1999_Bvlgari_Diagono_CH35S_2984/IMG_5616.JPG",
+    hoverSrc: "public/assets/Images/Bvlgari/1999_Bvlgari_Diagono_CH35S_2984/IMG_5645.JPG",
+    href: require("../watchModels/Bvlgari/Bvlgari_Diagono_Chronograph_CH35S_1999"),
+    specialCollectionItem: true,
   },
 
   "Breitling Navitimer Premier A40035": {
@@ -2173,6 +2186,18 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     href: require("../watchModels/Nobreza/Nobreza_Automatic_1977"),
     specialCollectionItem: false,
   },
+
+  "Certina Blue Ribbon": {
+    brand: BrandsEnum.CERTINA,
+    legend: "Certina Blue Ribbon",
+    year: 1977,
+    type: WatchTypeEnum.CASUAL,
+    srcImage: "public/assets/Images/Certina/1977_Certina_Blue_Ribbon_25_651/IMG_5669.JPG",
+    hoverSrc: "public/assets/Images/Certina/1977_Certina_Blue_Ribbon_25_651/IMG_5653.JPG",
+    href: require("../watchModels/Certina/Certina_Blue_Ribbon_1977"),
+    specialCollectionItem: false,
+  },
+
   "Eusi Incabloc Tank": {
     brand: BrandsEnum.EUSI,
     legend: "Eusi Incabloc Tank",
@@ -2576,6 +2601,17 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     specialCollectionItem: false,
   },
 
+  "Doxa Conquistador (By Synchron)": {
+    brand: BrandsEnum.DOXA,
+    legend: "Doxa Conquistador (By Synchron)",
+    year: 1973,
+    type: WatchTypeEnum.CASUAL,
+    srcImage: "public/assets/Images/Doxa/1973_Doxa_Conquistador_By_Synchron_2750/IMG_5740.JPG",
+    hoverSrc: "public/assets/Images/Doxa/1973_Doxa_Conquistador_By_Synchron_2750/IMG_5742.JPG",
+    href: require("../watchModels/Doxa/Doxa_Conquistador_By_Synchron_1973"),
+    specialCollectionItem: false,
+  },
+
   "Tecnal Green Abyss Duromat 7522": {
     brand: BrandsEnum.TECNAL,
     legend: "Tecnal Green Abyss Duromat 7522",
@@ -2608,6 +2644,17 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
       "public/assets/Images/Tissot/1972_Tissot_Navigator_Seastar_T12_Lemania_1281/IMG_6422.JPG",
     href: require("../watchModels/Tissot/Tissot_Seastar_T12_Chrono_Lemania_1972"),
     specialCollectionItem: true,
+  },
+
+  "Certina President - Linen Dial": {
+    brand: BrandsEnum.CERTINA,
+    legend: "Certina President - Linen Dial",
+    year: 1971,
+    type: WatchTypeEnum.CASUAL,
+    srcImage: "public/assets/Images/Certina/1971_Certina_President_25_651/IMG_5700.JPG",
+    hoverSrc: "public/assets/Images/Certina/1971_Certina_President_25_651/IMG_5692.JPG",
+    href: require("../watchModels/Certina/Certina_President_1971"),
+    specialCollectionItem: false,
   },
 
   "Tissot PR 516 GL  Cal. 794": {
@@ -2785,6 +2832,8 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     type: WatchTypeEnum.CASUAL,
     srcImage:
       "public/assets/Images/Certina/1965_Certina_DS_Automatic_25_651_27_jewels/IMG_7158.JPG",
+    hoverSrc:
+      "public/assets/Images/Certina/1965_Certina_DS_Automatic_25_651_27_jewels/IMG_7161.JPG",
     href: require("../watchModels/Certina/Certina_DS_Automatic_27_jewels_1965"),
     specialCollectionItem: false,
   },
@@ -2821,7 +2870,8 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     legend: "Cauny Apollon Calendario 17 Rubis",
     year: 1965,
     type: WatchTypeEnum.CASUAL,
-    srcImage: "public/assets/Images/Cauny/1965_Cauny_Apollon_Calendario/IMG_1902.JPG",
+    srcImage: "public/assets/Images/Cauny/1965_Cauny_Apollon_Calendario/IMG_5958.JPG",
+    hoverSrc: "public/assets/Images/Cauny/1965_Cauny_Apollon_Calendario/IMG_5961.JPG",
     href: require("../watchModels/Cauny/Cauny_Apollon_17_jewels_1965"),
     specialCollectionItem: false,
   },
@@ -2844,6 +2894,18 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     href: require("../watchModels/Tissot/Tissot_Seastar_PR516_Auto_1965"),
     specialCollectionItem: false,
   },
+
+  "Sergines Incabloc 17 Rubis": {
+    brand: BrandsEnum.SERGINES,
+    legend: "Sergines Incabloc 17 Rubis",
+    year: 1965,
+    type: WatchTypeEnum.CASUAL,
+    srcImage: "public/assets/Images/Sergines/1965_Sergines_Incabloc_17_Rubis_980/IMG_5862.JPG",
+    hoverSrc: "public/assets/Images/Sergines/1965_Sergines_Incabloc_17_Rubis_980/IMG_5864.JPG",
+    href: require("../watchModels/Sergines/Sergines_Incabloc_17_Rubis_1965"),
+    specialCollectionItem: false,
+  },
+
   "Belex Precision 17 Jewels": {
     brand: BrandsEnum.BELEX,
     legend: "Belex Precision 17 Jewels",
@@ -2873,6 +2935,20 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     href: require("../watchModels/Tissot/Tissot_Seastar_Seven_1963"),
     specialCollectionItem: false,
   },
+
+  "Ernest Borel Neuchâtel Incabloc": {
+    brand: BrandsEnum.ERNEST_BOREL,
+    legend: "Ernest Borel Neuchâtel Incabloc",
+    year: 1962,
+    type: WatchTypeEnum.CASUAL,
+    srcImage:
+      "public/assets/Images/Ernest_Borel/1962_Ernest_Borel_Neuchatel_Incabloc_2391/IMG_5782.JPG",
+    hoverSrc:
+      "public/assets/Images/Ernest_Borel/1962_Ernest_Borel_Neuchatel_Incabloc_2391/IMG_5784.JPG",
+    href: require("../watchModels/Ernest_Borel/Ernest_Borel_Neuchatel_Incabloc_1962"),
+    specialCollectionItem: false,
+  },
+
   "Omega Geneve Honeycomb Cal. 268": {
     brand: BrandsEnum.OMEGA,
     legend: "Omega Geneve Honeycomb Cal. 268",
@@ -3060,6 +3136,18 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     href: require("../watchModels/Cuervo_y_Sobrinos/Cuervo_y_Sobrinos_Hanava_Landeron_159_1950"),
     specialCollectionItem: true,
   },
+
+  "Record Bumper Tuxedo": {
+    brand: BrandsEnum.RECORD,
+    legend: "Record Bumper Tuxedo",
+    year: 1950,
+    type: WatchTypeEnum.CASUAL,
+    srcImage: "public/assets/Images/Record/1950_Record_Bumper_Tuxedo_171/IMG_5914.JPG",
+    hoverSrc: "public/assets/Images/Record/1950_Record_Bumper_Tuxedo_171/IMG_5889.JPG",
+    href: require("../watchModels/Record/Record_Bumper_Tuxedo_1950"),
+    specialCollectionItem: false,
+  },
+
   "Admes Automatic ETA 1246": {
     brand: BrandsEnum.ADMES,
     legend: "Admes Automatic ETA 1246",
@@ -3075,6 +3163,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     year: 1950,
     type: WatchTypeEnum.DRESS,
     srcImage: "public/assets/Images/Certina/1950_Certina_Mechanical_331/IMG_0960.JPG",
+    hoverSrc: "public/assets/Images/Certina/1950_Certina_Mechanical_331/IMG_0970.JPG",
     href: require("../watchModels/Certina/Certina_Dress_331_15_jewels_1950"),
     specialCollectionItem: false,
   },
@@ -3320,6 +3409,18 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     href: require("../watchModels/Tissot/Tissot_Antimagnetic_Tuxedo_1943"),
     specialCollectionItem: true,
   },
+
+  "Hertig Certina “Fancy Lugs”": {
+    brand: BrandsEnum.HERTIG,
+    legend: "Hertig Certina “Fancy Lugs”",
+    year: 1943,
+    type: WatchTypeEnum.CASUAL,
+    srcImage: "public/assets/Images/Hertig/1943_Hertig_Certina_Fancy_Lugs_KF320B/IMG_5820.JPG",
+    hoverSrc: "public/assets/Images/Hertig/1943_Hertig_Certina_Fancy_Lugs_KF320B/IMG_5821.JPG",
+    href: require("../watchModels/Hertig/Hertig_Certina_Fancy_Lugs_1943"),
+    specialCollectionItem: false,
+  },
+
   "Universal Genève Mécanique Cal. 262": {
     brand: BrandsEnum.UNIVERSAL_GENEVE,
     legend: "Universal Genève Mécanique Cal. 262",
@@ -3330,6 +3431,17 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     href: require("../watchModels/Universal_Geneve/Universal_Geneve_Mecanique_cal_262_1942"),
     specialCollectionItem: false,
   },
+  "Cortébert Precision Tank": {
+    brand: BrandsEnum.CORTEBERT,
+    legend: "Cortébert Precision Tank",
+    year: 1942,
+    type: WatchTypeEnum.CASUAL,
+    srcImage: "public/assets/Images/Cortebert/1942_Cortebert_Precision_Tank_573/IMG_6007.JPG",
+    hoverSrc: "public/assets/Images/Cortebert/1942_Cortebert_Precision_Tank_573/IMG_5987.JPG",
+    href: require("../watchModels/Cortebert/Cortebert_Precision_Tank_1942"),
+    specialCollectionItem: false,
+  },
+
   "Solvil et Titus Genève Tank": {
     brand: BrandsEnum.SOLVIL_ET_TITUS,
     legend: "Solvil et Titus Genève Tank",
@@ -3372,6 +3484,18 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     href: require("../watchModels/Omega/Omega_StayBrite_CK3416_T17_1934"),
     specialCollectionItem: true,
   },
+
+  // Hidden until photos are added (MWatchCollectionResources/Images/Benrus/1950_Benrus_Day_Date_Pointer_CE13)
+  // "Benrus Day-Date Pointer": {
+  //   brand: BrandsEnum.BENRUS,
+  //   legend: "Benrus Day-Date Pointer",
+  //   year: 1950,
+  //   type: WatchTypeEnum.CASUAL,
+  //   srcImage: "public/assets/Images/Benrus/1950_Benrus_Day_Date_Pointer_CE13/IMG_XXXX.JPG",
+  //   hoverSrc: "public/assets/Images/Benrus/1950_Benrus_Day_Date_Pointer_CE13/IMG_YYYY.JPG",
+  //   href: require("../watchModels/Benrus/Benrus_Day_Date_Pointer_1950"),
+  //   specialCollectionItem: false,
+  // },
 };
 
 function sortCollection(items: Record<string, CollectionEntry>) {
