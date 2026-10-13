@@ -44,11 +44,11 @@ const details: WatchDetails = {
     "public/assets/Images/Bvlgari/1999_Bvlgari_Diagono_CH35S_2984/IMG_5609.JPG",
     "public/assets/Images/Bvlgari/1999_Bvlgari_Diagono_CH35S_2984/IMG_5610.JPG",
     "public/assets/Images/Bvlgari/1999_Bvlgari_Diagono_CH35S_2984/IMG_5611.JPG",
-    "public/assets/Images/Bvlgari/1999_Bvlgari_Diagono_CH35S_2984/IMG_5612.JPG",
 
     "public/assets/Images/Bvlgari/1999_Bvlgari_Diagono_CH35S_2984/IMG_5644.JPG",
     "public/assets/Images/Bvlgari/1999_Bvlgari_Diagono_CH35S_2984/IMG_5645.JPG",
 
+    "public/assets/Images/Bvlgari/1999_Bvlgari_Diagono_CH35S_2984/IMG_5612.JPG",
     "public/assets/Images/Bvlgari/1999_Bvlgari_Diagono_CH35S_2984/IMG_5613.JPG",
     "public/assets/Images/Bvlgari/1999_Bvlgari_Diagono_CH35S_2984/IMG_5614.JPG",
     "public/assets/Images/Bvlgari/1999_Bvlgari_Diagono_CH35S_2984/IMG_5615.JPG",
