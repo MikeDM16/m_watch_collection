@@ -76,6 +76,12 @@ const details: WatchDetails = {
     "public/assets/Images/Pryngeps/1995_Pryngeps_Rattrapante_251262/IMG_4517.JPG",
   ],
 
+  saleReport: {
+    price: 301,
+    date: "28/09/2026",
+    url: "https://www.catawiki.com/en/l/107032679",
+  },
+
   technicalData: {
     features: [featuresEnum.DATE, featuresEnum.CHRONOGRAPH, featuresEnum.GOLD_PLATED_10M],
 

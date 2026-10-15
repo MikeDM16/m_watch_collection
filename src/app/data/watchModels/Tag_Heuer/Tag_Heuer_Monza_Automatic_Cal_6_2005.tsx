@@ -86,6 +86,12 @@ const details: WatchDetails = {
     "public/assets/Images/Tag_Heuer/2005_Tag_Heuer_Monza_WR2110_cal6/IMG_2610.JPG",
   ],
 
+  saleReport: {
+    price: 1594,
+    date: "13/09/2026",
+    url: "https://www.catawiki.com/en/l/106602900",
+  },
+
   technicalData: {
     features: [featuresEnum.DATE, featuresEnum.AUTOMATIC],
 

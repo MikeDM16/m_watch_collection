@@ -70,6 +70,12 @@ const details: WatchDetails = {
     "public/assets/Images/Buren/1947_Buren_Grand_Prix_AS1130/IMG_3548.JPG",
   ],
 
+  saleReport: {
+    price: 140,
+    date: "06/10/2026",
+    url: "https://www.catawiki.com/en/l/107200945",
+  },
+
   technicalData: {
     features: [featuresEnum.MECHANICAL, featuresEnum.SMALL_SECONDS],
 

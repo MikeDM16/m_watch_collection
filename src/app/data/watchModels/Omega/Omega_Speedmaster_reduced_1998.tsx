@@ -120,6 +120,11 @@ const details: WatchDetails = {
     "public/assets/Images/Omega/1998_Omega_Speedmaster_reduced/IMG_2363.JPG",
   ],
 
+  saleReport: {
+    price: 2300,
+    date: "17/07/2026",
+  },
+
   technicalData: {
     features: [
       featuresEnum.AUTOMATIC_CHRONOGRAPH,

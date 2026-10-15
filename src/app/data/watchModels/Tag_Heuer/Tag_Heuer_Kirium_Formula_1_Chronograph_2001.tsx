@@ -76,6 +76,12 @@ const details: WatchDetails = {
     "public/assets/Images/Tag_Heuer/2001_Tag_Heuer_Kirium_F1_Titan/IMG_3366.JPG",
   ],
 
+  saleReport: {
+    price: 522,
+    date: "02/10/2026",
+    url: "https://www.catawiki.com/en/l/107187781",
+  },
+
   technicalData: {
     features: [
       featuresEnum.DATE,

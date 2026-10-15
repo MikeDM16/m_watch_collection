@@ -68,6 +68,12 @@ const details: WatchDetails = {
     "public/assets/Images/Eusi/1976_Eusi_Tank_FHF_69N/IMG_4214.JPG",
   ],
 
+  saleReport: {
+    price: 172,
+    date: "23/09/2026",
+    url: "https://www.catawiki.com/en/l/106819432",
+  },
+
   technicalData: {
     features: [featuresEnum.MECHANICAL],
 

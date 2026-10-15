@@ -70,6 +70,12 @@ const details: WatchDetails = {
     "public/assets/Images/Titus/1942_Titus_Geneve_Tank_FHF_30/IMG_4598.JPG",
   ],
 
+  saleReport: {
+    price: 85,
+    date: "03/10/2026",
+    url: "https://www.catawiki.com/en/l/107201183",
+  },
+
   technicalData: {
     features: [featuresEnum.MECHANICAL],
 

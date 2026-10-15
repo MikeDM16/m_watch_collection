@@ -77,6 +77,12 @@ const details: WatchDetails = {
     "public/assets/Images/Maurice_Lacroix/1996_Maurice_Lacroix_Monza_Schumacher_Chrono/IMG_1044.JPG",
   ],
 
+  saleReport: {
+    price: 510,
+    date: "02/10/2026",
+    url: "https://www.catawiki.com/en/l/104499248",
+  },
+
   technicalData: {
     features: [featuresEnum.DATE, featuresEnum.CHRONOGRAPH, featuresEnum.WR_50_METERS],
 

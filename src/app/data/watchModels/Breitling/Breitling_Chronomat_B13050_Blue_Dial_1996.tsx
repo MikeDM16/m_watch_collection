@@ -108,6 +108,12 @@ const details: WatchDetails = {
     "public/assets/Images/Breitling/1998_Breitling_Chronomat_B13050_Blue_Dial/IMG_4436.JPG",
   ],
 
+  saleReport: {
+    price: 1300,
+    date: "29/09/2026",
+    url: "https://www.vinted.pt/items/10146744928",
+  },
+
   technicalData: {
     features: [
       featuresEnum.DATE,

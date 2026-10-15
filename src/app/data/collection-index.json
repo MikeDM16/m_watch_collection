@@ -78,7 +78,11 @@
     "collectionSet": false,
     "series": "Incabloc Genève",
     "movementTitle": "FHF Cal. 30",
-    "saleReport": null,
+    "saleReport": {
+      "price": 85,
+      "date": "03/10/2026",
+      "url": "https://www.catawiki.com/en/l/107201183"
+    },
     "modelFile": "Solvil_et_Titus/Solvil_et_Titus_Genéve_Tank_1942"
   },
   "Tissot Antimagnetic Tuxedo Cal. 27-2": {
@@ -374,7 +378,11 @@
     "collectionSet": false,
     "series": "Grand Prix",
     "movementTitle": "A. Schild 1130",
-    "saleReport": null,
+    "saleReport": {
+      "price": 140,
+      "date": "06/10/2026",
+      "url": "https://www.catawiki.com/en/l/107200945"
+    },
     "modelFile": "Buren/Buren_Grand_Prix__1947"
   },
   "Aureus Extra Antimagnetic": {
@@ -2032,7 +2040,11 @@
     "collectionSet": false,
     "series": "Incabloc",
     "movementTitle": "FHF Cal. 69",
-    "saleReport": null,
+    "saleReport": {
+      "price": 172,
+      "date": "23/09/2026",
+      "url": "https://www.catawiki.com/en/l/106819432"
+    },
     "modelFile": "Eusi/Eusi_Incabloc_Tank_1976"
   },
   "Nobreza Shades 17 Jewels": {
@@ -3437,7 +3449,11 @@
     "collectionSet": false,
     "series": "Rattrapante Chronograph",
     "movementTitle": "ETA 251.262",
-    "saleReport": null,
+    "saleReport": {
+      "price": 301,
+      "date": "28/09/2026",
+      "url": "https://www.catawiki.com/en/l/107032679"
+    },
     "modelFile": "Pryngeps/Pryngeps_Rattrapante_Chronograph_1995"
   },
   "Tissot Sport Chronograph Panda E662/762M": {
@@ -3705,7 +3721,11 @@
     "collectionSet": false,
     "series": "Chronomat — Early (1984-1996)",
     "movementTitle": "Valjoux 7750",
-    "saleReport": null,
+    "saleReport": {
+      "price": 1300,
+      "date": "29/09/2026",
+      "url": "https://www.vinted.pt/items/10146744928"
+    },
     "modelFile": "Breitling/Breitling_Chronomat_B13050_Blue_Dial_1996"
   },
   "Tag Heuer Professional 2000 CK1111 Chronograph": {
@@ -3791,7 +3811,11 @@
     "collectionSet": false,
     "series": "Monza \"Schumacher\" Chronograph",
     "movementTitle": "ETA 251.262",
-    "saleReport": null,
+    "saleReport": {
+      "price": 510,
+      "date": "02/10/2026",
+      "url": "https://www.catawiki.com/en/l/104499248"
+    },
     "modelFile": "Maurice_Lacroix/Maurice_Lacroix_5872_Monza_Schumacher_Chrono_1996"
   },
   "Maurice Lacroix 5393 Monza Schumacher Red Chrono": {
@@ -3977,7 +4001,10 @@
     "collectionSet": false,
     "series": "Speedmaster — Reduced",
     "movementTitle": "Omega Cal. 1141",
-    "saleReport": null,
+    "saleReport": {
+      "price": 2300,
+      "date": "17/07/2026"
+    },
     "modelFile": "Omega/Omega_Speedmaster_reduced_1998"
   },
   "Eterna - Porsche Design 911 - Jean-Pierre Jarier": {
@@ -4269,7 +4296,11 @@
     "collectionSet": false,
     "series": "Kirium",
     "movementTitle": "ETA 251.262",
-    "saleReport": null,
+    "saleReport": {
+      "price": 522,
+      "date": "02/10/2026",
+      "url": "https://www.catawiki.com/en/l/107187781"
+    },
     "modelFile": "Tag_Heuer/Tag_Heuer_Kirium_Formula_1_Chronograph_2001"
   },
   "Camel Trophy L2 M810.2080-2089": {
@@ -4759,7 +4790,11 @@
     "collectionSet": false,
     "series": "Monza",
     "movementTitle": "Tag Heuer Caliber 6 (ETA 2895-2)",
-    "saleReport": null,
+    "saleReport": {
+      "price": 1594,
+      "date": "13/09/2026",
+      "url": "https://www.catawiki.com/en/l/106602900"
+    },
     "modelFile": "Tag_Heuer/Tag_Heuer_Monza_Automatic_Cal_6_2005"
   },
   "Tag Heuer Carrera Automatic Caliber 5": {
