@@ -55,7 +55,7 @@ except ImportError:
           "Install with: pip install pillow-heif")
 
 # Used when no folder is passed on the command line.
-DEFAULT_FOLDER = "C:/Users/migue/Downloads/t/"
+DEFAULT_FOLDER = "C:/Users/migue/Downloads/t/1971_Certina_President_25_651"
 
 # Extensions we will read and re-encode as clean JPGs.
 SUPPORTED_EXTENSIONS = {".jpg", ".jpeg", ".png", ".heic", ".heif", ".webp", ".bmp", ".gif"}

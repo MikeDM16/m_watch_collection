@@ -23,6 +23,22 @@ repo. See ADDING_WATCHES_GUIDE.md.
 Usage:
     python scripts/images/3_list_images.py <BrandFolder> <folder>
     python scripts/images/3_list_images.py           # uses the defaults below
+
+JOURNAL MODE
+    $ python scripts/images/3_list_images.py --journal "C:/.../Images/Journal/2026_Formula_Magica_Caramulo"
+
+Prints the photo half of a Journal entry (src/app/data/journal/entries/) instead.
+A square photo is just `{ src }`; one that is not (an event shot, a wide scene)
+also gets its pixel size, `{ src, w, h }`, because the page lays photos out at
+their real proportions. Within 2% counts as square. The folder's own
+photos become `photos` (the highlights); each subfolder becomes one entry in
+`sections`, titled from its name with any "01_" ordering prefix dropped. The
+resources-repo prefix is taken from the folder path itself, from
+"public/assets/Images" on, so the folder must already sit in
+MWatchCollectionResources. Needs Pillow, like steps 1 and 2.
+
+Run steps 1 and 2 first. Step 1 strips EXIF, so the date is only printed when
+the photos still carry it (run this on the original folder to read it).
 """
 
 import os
@@ -43,16 +59,20 @@ VARIANT_SUFFIX = re.compile(r"_(200|500|800|1200)x\1$", re.IGNORECASE)
 EXCLUDED_NAMES = {"salereport.jpg"}
 
 
-def generate_image_array(brand_name, folder_path):
-    """Print a TypeScript-style sliderImages array for one model folder."""
+def usable_images(folder_path):
+    """The folder's listable originals, plus what was skipped and why.
+
+    Returns (image_files, variant_count, unusable) or None if the folder cannot
+    be read.
+    """
     try:
         files = os.listdir(folder_path)
     except FileNotFoundError:
         print(f"Error: Folder '{folder_path}' not found.")
-        return
+        return None
     except PermissionError:
         print(f"Error: Permission denied to access '{folder_path}'.")
-        return
+        return None
 
     image_files = []
     variants = 0
@@ -77,14 +97,28 @@ def generate_image_array(brand_name, folder_path):
             continue
         image_files.append(f)
 
-    if unusable:
-        print(f"// WARNING: {len(unusable)} file(s) omitted - the site would 404 on them.")
-        for f in unusable:
-            reason = ("rename it: only one dot allowed" if f.count(".") != 1
-                      else "lowercase extension: re-run 1_clean_jpg.py")
-            print(f"//     {f}  ({reason})")
-        print("// Then re-run 2_make_variants.py and this script.")
-        print()
+    return image_files, variants, unusable
+
+
+def warn_unusable(unusable):
+    if not unusable:
+        return
+    print(f"// WARNING: {len(unusable)} file(s) omitted - the site would 404 on them.")
+    for f in unusable:
+        reason = ("rename it: only one dot allowed" if f.count(".") != 1
+                  else "lowercase extension: re-run 1_clean_jpg.py")
+        print(f"//     {f}  ({reason})")
+    print("// Then re-run 2_make_variants.py and this script.")
+    print()
+
+
+def generate_image_array(brand_name, folder_path):
+    """Print a TypeScript-style sliderImages array for one model folder."""
+    listing = usable_images(folder_path)
+    if listing is None:
+        return
+    image_files, variants, unusable = listing
+    warn_unusable(unusable)
 
     if not image_files:
         print(f"No usable source images found in '{folder_path}'.")
@@ -103,7 +137,115 @@ def generate_image_array(brand_name, folder_path):
     print(f", skipped {variants} generated variant(s)" if variants else "")
 
 
+# EXIF tags read in journal mode.
+EXIF_ORIENTATION = 274
+EXIF_DATETIME = 306
+EXIF_DATETIME_ORIGINAL = 36867
+
+# Sides within this fraction of each other print as square, with no size: the
+# page draws a sizeless photo square, and 2% of crop is not visible.
+SQUARE_TOLERANCE = 0.02
+
+
+def is_square(w, h):
+    return abs(w - h) <= SQUARE_TOLERANCE * max(w, h)
+
+
+def photo_record(path):
+    """(width, height, 'YYYY-MM-DD' or None) as the page will display it.
+
+    Orientations 5-8 store the pixels rotated a quarter turn, so the displayed
+    size is the stored one swapped. 1_clean_jpg.py bakes the rotation in and
+    strips EXIF, after which the stored size is already the displayed one.
+    """
+    from PIL import Image  # journal mode only; plain listing needs no Pillow
+
+    with Image.open(path) as im:
+        w, h = im.size
+        exif = im.getexif()
+        if exif.get(EXIF_ORIENTATION) in (5, 6, 7, 8):
+            w, h = h, w
+        stamp = exif.get_ifd(0x8769).get(EXIF_DATETIME_ORIGINAL) or exif.get(EXIF_DATETIME)
+    date = stamp[:10].replace(":", "-") if stamp else None
+    return w, h, date
+
+
+def section_title(folder_name):
+    """'01_Tag_Link' -> 'Tag Link'. The prefix only orders the folders."""
+    return re.sub(r"^\d+[_\- ]+", "", folder_name).replace("_", " ").strip()
+
+
+def generate_journal_listing(folder_path):
+    """Print `photos` and `sections` for a Journal entry, with pixel sizes."""
+    norm = folder_path.rstrip("/\\").replace("\\", "/")
+    marker = norm.find("public/assets/Images/")
+    if marker >= 0:
+        prefix = norm[marker:]
+    else:
+        # A dry run on the originals (still carrying EXIF), before the folder is
+        # copied into the resources repo: the paths assume where it will land.
+        leaf = norm.split("/")[-1]
+        prefix = f"public/assets/Images/Journal/{leaf}"
+        print(f"// DRY RUN: not under MWatchCollectionResources yet. Paths assume {prefix}/.")
+        print("// Copy it there, run 1_clean_jpg.py and 2_make_variants.py, then list it again.")
+        if " " in norm[len(norm) - len(leaf):] or any(" " in d for d in os.listdir(norm)):
+            print("// Folder names with spaces work, but underscores keep the URLs readable.")
+
+    dates = set()
+
+    def listing_for(path, rel):
+        found = usable_images(path)
+        if found is None:
+            return []
+        files, _, unusable = found
+        warn_unusable(unusable)
+        rows = []
+        for f in files:
+            w, h, date = photo_record(os.path.join(path, f))
+            if date:
+                dates.add(date)
+            size = "" if is_square(w, h) else f", w: {w}, h: {h}"
+            rows.append(f'{{ src: "{prefix}/{rel}{f}"{size} }}')
+        return rows
+
+    highlights = listing_for(norm, "")
+    subfolders = sorted(
+        d for d in os.listdir(norm) if os.path.isdir(os.path.join(norm, d))
+    )
+    sections = [(d, listing_for(os.path.join(norm, d), f"{d}/")) for d in subfolders]
+    sections = [(d, rows) for d, rows in sections if rows]
+
+    total = len(highlights) + sum(len(rows) for _, rows in sections)
+    print(f"// {norm.split('/')[-1]}: {len(highlights)} highlight(s), "
+          f"{len(sections)} section(s), {total} photo(s).")
+    if dates:
+        print(f'date: "{min(dates)}",' + (f"  // photos span to {max(dates)}" if len(dates) > 1 else ""))
+    else:
+        print('// date: no EXIF left (1_clean_jpg.py strips it). Run on the originals to read it.')
+
+    print("photos: [")
+    for row in highlights:
+        print(f"  {row},")
+    print("],")
+
+    if sections:
+        print("sections: [")
+        for folder, rows in sections:
+            print("  {")
+            print(f'    title: "{section_title(folder)}",')
+            print(f"    // watches: [],  <- a folder named after a watch: link it here")
+            print("    photos: [")
+            for row in rows:
+                print(f"      {row},")
+            print("    ],")
+            print("  },")
+        print("],")
+
+
 if __name__ == "__main__":
-    brand_name = sys.argv[1] if len(sys.argv) > 2 else DEFAULT_BRAND
-    folder_path = sys.argv[2] if len(sys.argv) > 2 else DEFAULT_FOLDER
-    generate_image_array(brand_name, folder_path)
+    if len(sys.argv) > 2 and sys.argv[1] == "--journal":
+        generate_journal_listing(sys.argv[2])
+    else:
+        brand_name = sys.argv[1] if len(sys.argv) > 2 else DEFAULT_BRAND
+        folder_path = sys.argv[2] if len(sys.argv) > 2 else DEFAULT_FOLDER
+        generate_image_array(brand_name, folder_path)

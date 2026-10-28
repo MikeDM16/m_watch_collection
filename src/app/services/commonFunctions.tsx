@@ -123,6 +123,15 @@ export function routeToCollectionBrandModelPage(brandName: string, modelName: st
   return `/collection/${setPathParameter(brandName)}/${setPathParameter(modelName)}`;
 }
 
+export function routeToJournal(): string {
+  return "/journal";
+}
+
+/** Journal slugs are ASCII by construction, so they need no encoding. */
+export function routeToJournalEntry(slug: string): string {
+  return `/journal/${slug}`;
+}
+
 export function selectMultipleBackgroundImages(count: number): string[] {
   const allImages = brandsDB.flatMap((b) => b.backgrounImages || []);
 

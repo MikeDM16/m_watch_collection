@@ -28,6 +28,7 @@ export default function WatchTile({
   label,
   movement,
   priority = false,
+  showBrand = false,
 }: {
   brand: string;
   legend: string;
@@ -38,11 +39,14 @@ export default function WatchTile({
   label?: string;
   movement?: string;
   priority?: boolean;
+  /** Keep the brand in the name, for grids that mix brands (a Journal event). */
+  showBrand?: boolean;
 }) {
   const [hovered, setHovered] = useState(false);
 
   // On a single-brand page the legend's leading brand name is redundant.
-  const display = legend.startsWith(`${brand} `) ? legend.slice(brand.length + 1) : legend;
+  const display =
+    !showBrand && legend.startsWith(`${brand} `) ? legend.slice(brand.length + 1) : legend;
   const primary = getExternalResource(getImgURLForSizeType(srcImage, SizeType.GALLERY));
   const alt = hoverSrc
     ? getExternalResource(getImgURLForSizeType(hoverSrc, SizeType.GALLERY))

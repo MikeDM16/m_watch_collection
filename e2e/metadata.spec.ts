@@ -1,6 +1,6 @@
 import { expect, test } from "@playwright/test";
 
-import { BRAND, CANONICAL_ORIGIN, HOME, MODEL_MECHANICAL } from "./fixtures";
+import { BRAND, CANONICAL_ORIGIN, HOME, JOURNAL_ENTRY, MODEL_MECHANICAL } from "./fixtures";
 
 /**
  * The host the site advertises.
@@ -29,8 +29,17 @@ test.describe("canonical host", () => {
     expect(og!.startsWith(`${CANONICAL_ORIGIN}/`)).toBe(true);
   });
 
+  test("a Journal entry's canonical and OG image are on the real host", async ({ page }) => {
+    await page.goto(JOURNAL_ENTRY);
+    const canonical = await page.locator('link[rel="canonical"]').getAttribute("href");
+    expect(canonical).toBe(`${CANONICAL_ORIGIN}${JOURNAL_ENTRY}`);
+
+    const og = await page.locator('meta[property="og:image"]').first().getAttribute("content");
+    expect(og!.startsWith(`${CANONICAL_ORIGIN}${JOURNAL_ENTRY}/opengraph-image`)).toBe(true);
+  });
+
   test("no page mentions a vercel.app host", async ({ page }) => {
-    for (const path of [HOME, BRAND, MODEL_MECHANICAL]) {
+    for (const path of [HOME, BRAND, MODEL_MECHANICAL, JOURNAL_ENTRY]) {
       const res = await page.request.get(path);
       expect(res.ok(), `${path} should serve`).toBe(true);
       expect(await res.text(), `${path} leaks a vercel.app host`).not.toContain("vercel.app");
@@ -57,5 +66,7 @@ test.describe("canonical host", () => {
 
     expect(locs).toContain(CANONICAL_ORIGIN);
     expect(locs.some((u) => u.startsWith(`${CANONICAL_ORIGIN}/collection/`))).toBe(true);
+    expect(locs).toContain(`${CANONICAL_ORIGIN}/journal`);
+    expect(locs).toContain(`${CANONICAL_ORIGIN}${JOURNAL_ENTRY}`);
   });
 });

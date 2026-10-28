@@ -63,8 +63,8 @@ from tqdm import tqdm
 
 # Used when no folder is passed on the command line.
 BASE_PATH = "C:/Users/migue/Documentos/GitHub/MWatchCollectionResources/public/assets/Images"
-DEFAULT_FOLDER = f"{BASE_PATH}/Tissot/1942_Tissot_Antimagnetic_Tuxedo_27_2"
 DEFAULT_FOLDER = f"{BASE_PATH}/Movements/ETA/ETA_2894/"
+DEFAULT_FOLDER = f"{BASE_PATH}/Omega/Omega_Polaris_Collection"
 
 # Must stay in sync with SizeType in src/app/services/commonFunctions.tsx and
 # VARIANTS in src/app/services/imageLoader.ts.

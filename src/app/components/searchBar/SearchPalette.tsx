@@ -10,6 +10,7 @@ import { Search, X } from "lucide-react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { createPortal } from "react-dom";
 
 import PlateImage from "../common/PlateImage";
 
@@ -19,6 +20,15 @@ export interface SearchEntry {
   year: number;
   srcImage: string;
   movementTitle?: string;
+  /** Set on a Journal entry; a watch has neither of these. */
+  kind?: "journal";
+  href?: string;
+  /** Extra text a Journal entry is matched on: place, brand, kind. */
+  terms?: string;
+}
+
+function hrefFor(entry: SearchEntry): string {
+  return entry.href ?? routeToCollectionBrandModelPage(entry.brand, entry.legend);
 }
 
 const MAX_RESULTS = 40;
@@ -86,7 +96,10 @@ export default function SearchPalette() {
     const q = query.toLowerCase();
     return Object.entries(data)
       .filter(
-        ([key, v]) => key.toLowerCase().includes(q) || v?.movementTitle?.toLowerCase().includes(q),
+        ([key, v]) =>
+          key.toLowerCase().includes(q) ||
+          v?.movementTitle?.toLowerCase().includes(q) ||
+          v?.terms?.toLowerCase().includes(q),
       )
       .slice(0, MAX_RESULTS);
   }, [data, query]);
@@ -124,7 +137,7 @@ export default function SearchPalette() {
       if (!entry) return;
       e.preventDefault();
       setOpen(false);
-      router.push(routeToCollectionBrandModelPage(entry.brand, entry.legend));
+      router.push(hrefFor(entry));
     }
   };
 
@@ -139,99 +152,109 @@ export default function SearchPalette() {
         <Search aria-hidden strokeWidth={1.5} className="size-[17px]" />
       </button>
 
-      {open && (
-        <div
-          className="fixed inset-0 z-[100] flex items-start justify-center bg-scrim/60 p-4 pt-[12vh] backdrop-blur-sm"
-          role="dialog"
-          aria-modal="true"
-          aria-label="Search the collection"
-          onMouseDown={(e) => {
-            if (!dialogRef.current?.contains(e.target as Node)) setOpen(false);
-          }}
-        >
+      {/* Portalled to <body>. Rendered in place it sat inside the header, whose
+          backdrop blur (once solid) makes it the containing block for fixed
+          descendants, so the scrim covered only the 64px strip. */}
+      {open &&
+        createPortal(
           <div
-            ref={dialogRef}
-            className="flex max-h-[70vh] w-full max-w-xl flex-col overflow-hidden border border-border bg-popover text-popover-foreground shadow-2xl"
+            className="fixed inset-0 z-[100] flex items-start justify-center bg-scrim/60 p-4 pt-[12vh] backdrop-blur-sm"
+            role="dialog"
+            aria-modal="true"
+            aria-label="Search the collection"
+            onMouseDown={(e) => {
+              if (!dialogRef.current?.contains(e.target as Node)) setOpen(false);
+            }}
           >
-            <div className="flex items-center gap-3 border-b border-border px-4">
-              <Search aria-hidden strokeWidth={1.5} className="size-4 text-muted-foreground" />
-              <input
-                ref={inputRef}
-                value={query}
-                onChange={(e) => setQuery(e.target.value)}
-                onKeyDown={onInputKeyDown}
-                placeholder={loading ? "Loading the index..." : "Brand, model or movement"}
-                className="w-full bg-transparent py-4 text-base outline-none placeholder:text-muted-foreground"
-                role="combobox"
-                aria-expanded={results.length > 0}
-                aria-controls="search-results"
-                aria-autocomplete="list"
-                aria-activedescendant={results.length ? `search-result-${active}` : undefined}
-              />
-              <button
-                type="button"
-                onClick={() => setOpen(false)}
-                aria-label="Close search"
-                className="text-muted-foreground transition-colors hover:text-foreground"
-              >
-                <X aria-hidden strokeWidth={1.5} className="size-4" />
-              </button>
-            </div>
+            <div
+              ref={dialogRef}
+              className="flex max-h-[70vh] w-full max-w-xl flex-col overflow-hidden border border-border bg-popover text-popover-foreground shadow-2xl"
+            >
+              <div className="flex items-center gap-3 border-b border-border px-4">
+                <Search aria-hidden strokeWidth={1.5} className="size-4 text-muted-foreground" />
+                <input
+                  ref={inputRef}
+                  value={query}
+                  onChange={(e) => setQuery(e.target.value)}
+                  onKeyDown={onInputKeyDown}
+                  placeholder={loading ? "Loading the index..." : "Brand, model or movement"}
+                  className="w-full bg-transparent py-4 text-base outline-none placeholder:text-muted-foreground"
+                  role="combobox"
+                  aria-expanded={results.length > 0}
+                  aria-controls="search-results"
+                  aria-autocomplete="list"
+                  aria-activedescendant={results.length ? `search-result-${active}` : undefined}
+                />
+                <button
+                  type="button"
+                  onClick={() => setOpen(false)}
+                  aria-label="Close search"
+                  className="text-muted-foreground transition-colors hover:text-foreground"
+                >
+                  <X aria-hidden strokeWidth={1.5} className="size-4" />
+                </button>
+              </div>
 
-            <div className="overflow-y-auto">
-              {query.trim() && !loading && results.length === 0 && (
-                <p className="px-4 py-8 text-center text-sm text-muted-foreground">
-                  Nothing matches “{query}”.
-                </p>
-              )}
+              <div className="overflow-y-auto">
+                {query.trim() && !loading && results.length === 0 && (
+                  <p className="px-4 py-8 text-center text-sm text-muted-foreground">
+                    Nothing matches “{query}”.
+                  </p>
+                )}
 
-              {!query.trim() && (
-                <p className="px-4 py-8 text-center text-sm text-muted-foreground">
-                  {/* Counted from the index rather than hardcoded, so it cannot
+                {!query.trim() && (
+                  <p className="px-4 py-8 text-center text-sm text-muted-foreground">
+                    {/* Counted from the index rather than hardcoded, so it cannot
                       go stale the next time a piece is catalogued. */}
-                  {data ? `${Object.keys(data).length} timepieces. ` : ""}Search by brand, model or
-                  movement.
-                </p>
-              )}
+                    {data
+                      ? `${Object.values(data).filter((v) => !v.kind).length} timepieces. `
+                      : ""}
+                    Search by brand, model or movement.
+                  </p>
+                )}
 
-              <ul ref={listRef} id="search-results" role="listbox" aria-label="Results">
-                {results.map(([key, entry], i) => (
-                  <li
-                    key={key}
-                    id={`search-result-${i}`}
-                    role="option"
-                    aria-selected={i === active}
-                  >
-                    <Link
-                      href={routeToCollectionBrandModelPage(entry.brand, entry.legend)}
-                      onClick={() => setOpen(false)}
-                      onMouseEnter={() => setActive(i)}
-                      tabIndex={-1}
-                      className={`flex items-center gap-3 border-b border-border px-4 py-2.5 transition-colors ${
-                        i === active ? "bg-accent" : ""
-                      }`}
+                <ul ref={listRef} id="search-results" role="listbox" aria-label="Results">
+                  {results.map(([key, entry], i) => (
+                    <li
+                      key={key}
+                      id={`search-result-${i}`}
+                      role="option"
+                      aria-selected={i === active}
                     >
-                      <PlateImage
-                        src={getExternalResource(
-                          getImgURLForSizeType(entry.srcImage, SizeType.THUMBNAIL),
+                      <Link
+                        href={hrefFor(entry)}
+                        onClick={() => setOpen(false)}
+                        onMouseEnter={() => setActive(i)}
+                        tabIndex={-1}
+                        className={`flex items-center gap-3 border-b border-border px-4 py-2.5 transition-colors ${
+                          i === active ? "bg-accent" : ""
+                        }`}
+                      >
+                        <PlateImage
+                          src={getExternalResource(
+                            getImgURLForSizeType(entry.srcImage, SizeType.THUMBNAIL),
+                          )}
+                          alt=""
+                          width={36}
+                          height={36}
+                          className={`size-9 shrink-0 bg-muted ${entry.kind ? "object-cover" : "object-contain"}`}
+                        />
+                        <span className="min-w-0 flex-1 truncate text-sm">{entry.legend}</span>
+                        {entry.kind && <span className="lab shrink-0">Journal</span>}
+                        {entry.year > 0 && (
+                          <span className="num shrink-0 text-xs text-muted-foreground">
+                            {entry.year}
+                          </span>
                         )}
-                        alt=""
-                        width={36}
-                        height={36}
-                        className="size-9 shrink-0 bg-muted object-contain"
-                      />
-                      <span className="min-w-0 flex-1 truncate text-sm">{entry.legend}</span>
-                      <span className="num shrink-0 text-xs text-muted-foreground">
-                        {entry.year}
-                      </span>
-                    </Link>
-                  </li>
-                ))}
-              </ul>
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
-          </div>
-        </div>
-      )}
+          </div>,
+          document.body,
+        )}
     </>
   );
 }

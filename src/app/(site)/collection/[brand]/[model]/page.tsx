@@ -1,5 +1,6 @@
 import Breadcrumbs from "@/app/components/common/Breadcrumbs";
 import WatchTile from "@/app/components/common/WatchTile";
+import { InTheJournalLine } from "@/app/components/journal/InTheJournal";
 import ContactSheet from "@/app/components/model/ContactSheet";
 import PinnedSpecViewer, { type PinnedFrame } from "@/app/components/model/PinnedSpecViewer";
 import SpecBlock from "@/app/components/model/SpecBlock";
@@ -31,6 +32,7 @@ import {
   routeToMainPageHeader,
   SizeType,
 } from "@/app/services/commonFunctions";
+import journalService from "@/app/services/journalService";
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
@@ -291,6 +293,8 @@ export default async function BrandModelPage({
                 )}
               </div>
             )}
+
+            <InTheJournalLine featuring={journalService.getFeaturing(indexEntry.modelFile)} />
           </div>
         </section>
 

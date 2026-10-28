@@ -21,7 +21,7 @@
  *     watch), and it keeps a sold watch's profit from moving when a sibling
  *     sells later. The unsold shares are counted as stock.
  * Blocks with no payout are stock (a watch not sold yet) or overhead (boxes,
- * batteries, strap stock). Pass-through rows — E equal to F: cancelled orders,
+ * batteries, strap stock, what sending a watch back cost). Pass-through rows — E equal to F: cancelled orders,
  * refunded purchases — net to zero and are left out.
  *
  * Whatever the heuristics decide, every euro of a block lands somewhere — in a
@@ -255,11 +255,22 @@ function isLotDescriptor(row: LedgerRow): boolean {
   return rawWords(source).some((w) => w === "relogios" || w === "watches");
 }
 
+/**
+ * A sale row whose note names a refund: "Venda Vinted" E=1300 F=130, note "Refund
+ * 130 chrono seconds hand alignement". The note is about F, a partial refund given
+ * to the buyer; E is still the payout.
+ */
+function isSaleRowRefund(row: LedgerRow): boolean {
+  return hasKeyword(row.text, SALE_WORDS) && hasKeyword(row.note, REFUND_WORDS);
+}
+
 function classifyCost(row: LedgerRow, firstMoneyRow: boolean, incomeOnRow: boolean): PartKind {
   const fromText = costKeyword(row.text);
   if (fromText) return fromText;
-  // The cost of sending something back ("Devolução F=13.59") buys nothing.
+  // The cost of sending something back ("Devolução F=13.59") buys nothing, and
+  // neither does a partial refund to the buyer.
   if (hasKeyword(row.text, REFUND_WORDS)) return "other";
+  if (incomeOnRow && isSaleRowRefund(row)) return "other";
   const spent = row.spent ?? 0;
   // A small amount whose note names a cost is that cost, whatever the text says:
   // "Dado que fiquei com o Timex" is a comment, and its note is "Envio Australia".
@@ -288,7 +299,8 @@ function classifyCost(row: LedgerRow, firstMoneyRow: boolean, incomeOnRow: boole
 function classifyIncome(row: LedgerRow, fKind: PartKind | null): PartKind {
   const received = row.received ?? 0;
   const spent = row.spent;
-  if (hasKeyword(row.text, REFUND_WORDS) || hasKeyword(row.note, REFUND_WORDS)) return "refund";
+  if (hasKeyword(row.text, REFUND_WORDS)) return "refund";
+  if (hasKeyword(row.note, REFUND_WORDS) && !isSaleRowRefund(row)) return "refund";
   // Money back on a strap or a box is a refund on that extra — unless it is far
   // more than the extra cost, when it is a payout written on that row.
   const category = costKeyword(row.text);
@@ -486,6 +498,27 @@ function newUnit(block: LedgerBlock, kind: BlockKind, lotSize: number, watch: Wa
   };
 }
 
+/** Share of its price that must come back on a purchase row for the watch to count as returned. */
+const RETURN_SHARE = 0.8;
+
+/**
+ * Purchase rows of watches sent back: most of the price came back on the same row
+ * ("Baume Mercier" F=269.45 E=263.20, "Returned"). The watch is gone, so what the
+ * return cost (its shipping) is overhead, not stock. A small refund on a watch that
+ * was kept ("Refund Massa Oscilante", €30 of €489.50) is not a return.
+ */
+function returnedRows(parts: Part[]): Set<LedgerRow> {
+  const rows = new Set<LedgerRow>();
+  for (const bought of parts) {
+    if (bought.side !== "F" || bought.kind !== "purchase") continue;
+    const back = parts
+      .filter((p) => p.row === bought.row && p.side === "E" && p.kind === "refund")
+      .reduce((sum, p) => sum + p.amount, 0);
+    if (back >= RETURN_SHARE * bought.amount) rows.add(bought.row);
+  }
+  return rows;
+}
+
 /** Lines overrides.json hands to a unit, applied once every unit has its key. */
 interface Forced {
   result: BlockResult;
@@ -514,8 +547,10 @@ function interpretBlock(block: LedgerBlock, ov: OverridesFile, forced: Forced[])
 
   // ── No payout: stock (a named watch not sold yet), overhead, or nothing at all.
   if (!sales.length) {
+    const back = returnedRows(money);
     const holdsWatch = money.some(
-      (p) => p.side === "F" && p.kind === "purchase" && nameTokens(p.row).length,
+      (p) =>
+        p.side === "F" && p.kind === "purchase" && nameTokens(p.row).length && !back.has(p.row),
     );
     if (
       Math.abs(block.computedTotal) < 1 &&
@@ -525,7 +560,8 @@ function interpretBlock(block: LedgerBlock, ov: OverridesFile, forced: Forced[])
       result.overhead.push(...all(money));
     } else if (holdsWatch && !(firstCost && CONSUMABLES.includes(firstCost.kind))) {
       result.kind = "unsold";
-      result.stock.push(...all(money));
+      result.stock.push(...all(money.filter((p) => !back.has(p.row))));
+      result.overhead.push(...all(money.filter((p) => back.has(p.row))));
     } else {
       result.kind = "overhead";
       result.overhead.push(...all(money));
@@ -741,9 +777,11 @@ function interpretBlock(block: LedgerBlock, ov: OverridesFile, forced: Forced[])
     if (shared > 1e-9) shareOut(part, shared);
   }
 
+  const back = returnedRows(money);
   for (const w of watches) {
     if (!w.sales.length) {
-      result.stock.push(...alloc.get(w)!);
+      const gone = w.purchase !== null && back.has(w.purchase.row);
+      (gone ? result.overhead : result.stock).push(...alloc.get(w)!);
       continue;
     }
     const unit = newUnit(block, "lot", lotSize, w);
@@ -856,19 +894,36 @@ export function interpretLedger(dump: LedgerDump, ov: OverridesFile): Interpreta
   return { blocks, units, unitByKey, unitByRow };
 }
 
+/** The payout less any partial refund given to the buyer. */
+function keptAfterBuyerRefunds(u: Unit): number {
+  const refunded = u.allocations
+    .filter(
+      ({ part }) =>
+        part.side === "F" &&
+        part.kind === "other" &&
+        (hasKeyword(part.row.text, REFUND_WORDS) || isSaleRowRefund(part.row)),
+    )
+    .reduce((sum, a) => sum + a.part.amount * a.share, 0);
+  return u.received - refunded;
+}
+
 /**
  * Tie the ledger's own summary rows to units: through the cells their formulas
  * reference when they have any, else through a matching payout and a shared word.
+ * A summary may record the payout before or after a refund to the buyer (R26's
+ * "Breitling B13050 Blue" received 1170: 1300 less the 130 refunded).
  */
 export function linkHints(interp: Interpretation, hints: SummaryHint[]): Map<SummaryHint, Unit> {
   const linked = new Map<SummaryHint, Unit>();
   for (const hint of hints) {
     const words = itemTokens(hint.name);
+    const samePayout = (u: Unit) =>
+      Math.abs(u.received - hint.received) <= 1 ||
+      Math.abs(keptAfterBuyerRefunds(u) - hint.received) <= 1;
     // A formula can reference any cell holding the right amount (`=M93-8-F82`
     // charges Arauto the €50 on Jomel's row), so a reference only links when the
     // names or the payouts agree as well.
-    const agrees = (u: Unit) =>
-      words.some((t) => hasToken(u.tokens, t)) || Math.abs(u.received - hint.received) <= 1;
+    const agrees = (u: Unit) => words.some((t) => hasToken(u.tokens, t)) || samePayout(u);
     const votes = new Map<Unit, number>();
     for (const ref of hint.refs) {
       const m = ref.match(/^(.+)!([A-Z]+)(\d+)$/);
@@ -880,7 +935,7 @@ export function linkHints(interp: Interpretation, hints: SummaryHint[]): Map<Sum
     if (!unit) {
       // Same payout and a shared word; a tie goes to the summary's own tab.
       const near = interp.units
-        .filter((u) => Math.abs(u.received - hint.received) <= 1)
+        .filter(samePayout)
         .map((u) => {
           const shared = words.filter((t) => hasToken(u.tokens, t)).length;
           return { u, score: shared ? shared + (u.block.sheet === hint.sheet ? 0.5 : 0) : 0 };
@@ -910,7 +965,11 @@ export function costLines(unit: Unit): CostLine[] {
       category: (a.part.kind === "purchase" || CONSUMABLES.includes(a.part.kind)
         ? a.part.kind
         : "other") as CostCategory,
-      label: a.part.row.text || a.part.row.note || "(no description)",
+      // A buyer refund's own description is the note; the text names the sale.
+      label:
+        (isSaleRowRefund(a.part.row) ? a.part.row.note : a.part.row.text) ||
+        a.part.row.note ||
+        "(no description)",
       amount: round2(a.part.amount * a.share),
       share: Math.round(a.share * 10_000) / 10_000,
       ref: a.part.ref,

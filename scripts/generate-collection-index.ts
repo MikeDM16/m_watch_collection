@@ -103,6 +103,12 @@ import type { WatchDetails } from "./watchDetails";
 export const modelLoaders: Record<string, () => Promise<{ default: WatchDetails }>> = {
 ${modulePaths.map((p) => `  ${JSON.stringify(p)}: () => import(${JSON.stringify(`./watchModels/${p}`)}),`).join("\n")}
 };
+
+// Every model file in the index, as a type. Journal entries point at watches
+// through it, so a typo, a renamed file or a watch hidden from collectionData
+// fails \`npm run typecheck\` instead of rendering a dead link.
+export type ModelFile =
+${modulePaths.map((p) => `  | ${JSON.stringify(p)}`).join("\n")};
 `;
 
 const moduleMapPath = path.resolve(__dirname, "../src/app/data/collectionModules.generated.ts");

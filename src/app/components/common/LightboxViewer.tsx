@@ -17,39 +17,39 @@ import "yet-another-react-lightbox/plugins/counter.css";
 import "yet-another-react-lightbox/plugins/thumbnails.css";
 
 /**
+ * A photograph for the lightbox. A bare path is a catalogue photo, which is
+ * always square; a Journal photo brings its real pixel size.
+ */
+export type LightboxImage = string | { src: string; w: number; h: number };
+
+/**
  * The lightbox half of the old ImageGalleryComponent, extracted verbatim so the
  * contact sheet and the movement strip can share one configuration.
- * The five-tier srcSet is unchanged.
+ *
+ * Five tiers. Each variant is fitted inside its box rather than cropped to it,
+ * so a 4032x3024 photograph's "_1200x1200" file is really 1200x900: the tiers
+ * declare that fitted size, or the lightbox would letterbox and mis-pick them.
  */
-export function buildSlides(images: string[]) {
-  return images.map((entry) => ({
-    src: getExternalResource(entry),
-    width: 2500,
-    height: 2500,
-    srcSet: [
-      { src: getExternalResource(entry), width: 2000, height: 2000 },
-      {
-        src: getExternalResource(getImgURLForSizeType(entry, SizeType.FULL_HD)),
-        width: 1200,
-        height: 1200,
-      },
-      {
-        src: getExternalResource(getImgURLForSizeType(entry, SizeType.GALLERY)),
-        width: 800,
-        height: 800,
-      },
-      {
-        src: getExternalResource(getImgURLForSizeType(entry, SizeType.SLIDER)),
-        width: 500,
-        height: 500,
-      },
-      {
-        src: getExternalResource(getImgURLForSizeType(entry, SizeType.THUMBNAIL)),
-        width: 200,
-        height: 200,
-      },
-    ],
-  }));
+export function buildSlides(images: LightboxImage[]) {
+  return images.map((entry) => {
+    const { src, w, h } = typeof entry === "string" ? { src: entry, w: 1, h: 1 } : entry;
+    const fit = (url: string, box: number) => {
+      const scale = box / Math.max(w, h);
+      return { src: url, width: Math.round(w * scale), height: Math.round(h * scale) };
+    };
+    const variant = (type: string) => getExternalResource(getImgURLForSizeType(src, type));
+
+    return {
+      ...fit(getExternalResource(src), 2500),
+      srcSet: [
+        fit(getExternalResource(src), 2000),
+        fit(variant(SizeType.FULL_HD), 1200),
+        fit(variant(SizeType.GALLERY), 800),
+        fit(variant(SizeType.SLIDER), 500),
+        fit(variant(SizeType.THUMBNAIL), 200),
+      ],
+    };
+  });
 }
 
 export default function LightboxViewer({
@@ -57,7 +57,7 @@ export default function LightboxViewer({
   index,
   onClose,
 }: {
-  images: string[];
+  images: LightboxImage[];
   index: number;
   onClose: () => void;
 }) {

@@ -1,5 +1,90 @@
 # Changelog
 
+## [2026-10-26] — Journal
+
+A third kind of page beside brands and watches, at `/journal`. An entry is an **event** (cars and watches, a museum, a meeting) or a **collection set** (several watches photographed together). Both use one template, chosen from a visual mock: a hero, a lab-over-value strip, an optional intro and pull-quote, the **highlights**, then optional **sections**, then the linked watches as the catalogue's own tiles.
+
+### The seven collection sets finally render
+
+`CollectionCatalogue` files for Breitling, Novart, Omega Polaris, Omega Olympics, Tag Heuer, Tissot and Zenith had been in `watchModels/` for years with no page reading them, and every legend inside them had drifted ("Ltd." became "Limited", years left the legends). Their `require("./…")` paths still matched the index's `modelFile`, so a one-off script turned each into a Journal entry. It kept the photo order and the group headings, and read each photo's pixel size from the resources repo. One reference, to a Breitling hidden in `collectionData.tsx`, was dropped rather than linked. The old files, the `CollectionCatalogue` type and the admin API's filename filter for them are gone.
+
+The six folders other than Novart never had their 200/500/800/1200 variants, so `2_make_variants.py` was run on them (824 files, no originals touched). The site reads photos from GitHub, so each set stays commented out in `data/journal/index.ts` until its folder is pushed, the same rule as a watch without photos.
+
+Novart and Breitling are live; the sets are being published one at a time. Breitling was reorganised first, into two subfolders that became its two sections:
+
+- **Breitling 90s Collections**: the Colt A53035, the Chronomat Vitesse Serie Speciale Blue and the Chronomat 10th Anniversary A13050.
+- **Breitling Chronomat, past and present**: the A13050 beside the A13356 Evolution.
+
+That made it the first entry with sections and no highlights. The page and the caption editor now leave the highlights block out entirely when it would be empty. A section's note now spans the full width instead of the 58ch reading measure, and a list of three watches reads "X, Y and Z".
+
+The sets are dated by when they were photographed. Polaris, Olympics and Novart were each shot in one session, so the entry carries the date. Breitling and Tag Heuer were shot section by section (Tag Heuer in 2019 and 2024), so each section carries its own, and `JournalSection.date` is new for that. An entry without a date of its own sorts by its latest section's, so the Journal now runs Breitling, Tag Heuer, Polaris, Olympics, Novart. A set's strip gains a "Photographed" item ("14 Feb 2024", "Jun-Jul 2024", "2019-2024"), and a dated section shows its date beside its photo count.
+
+A set's watches now read newest first, by the year in `collection-index.json` (matched on `modelFile`), in the bottom list, under each heading and in a section's "Photographed with" line. The page sorts them, so a set built from sections (Breitling, Tag Heuer) comes out in order too; the entry files were reordered to match. Tissot's grouped list became one plain list of its 16 pieces. An event's watches keep the order of its photographs.
+
+The dev header no longer lists each local tool. Add Model, Sales Report and Journal Captions became one **Admin** link to a new `/admin` page that lists the tools as a ledger, and a production build answers it with the Development only page, like the tools themselves. The same change fixed the phone menu and the search palette, which had been rendered inside the header: once the header turns solid, its backdrop blur makes it the containing block for fixed descendants, so the menu sheet came out 64px tall with its links spilling over the page, and the palette dimmed only the header strip. Both now render at the end of `<body>` through a portal.
+
+### Watches are linked by model file, and the type checks it
+
+The generator now also emits `ModelFile`, a union of every model file in the index. A Journal entry can only name a watch through it, so a typo, a renamed file or a hidden watch fails `npm run typecheck`. Verified by misspelling one path in the Novart entry: `TS2820 … Did you mean '"Novart/Novart_Monza_Red_17Jewels_1974"'?`. `journalService` resolves the same paths again at build time as a second guard.
+
+### Photos keep their proportions
+
+Event photos are not square, and everything else on the site assumes they are. Each Journal photo carries its pixel size (`3_list_images.py --journal` prints it), and the rows are **justified at build time**: of every way to cut the sequence into rows of at most six, `justify.ts` keeps the one whose row heights stay closest to the target. Each row then fills the width with items growing by aspect ratio. Phones get their own grouping, swapped at `sm`; the hidden copy costs nothing, because its lazy images are never fetched. A block longer than two rows opens on its first two and a "Show all".
+
+`buildSlides` takes `{ src, w, h }` too and declares each variant's fitted size. A 4032×3024 photo's `_1200x1200` file is really 1200×900, and declaring it square letterboxed the lightbox.
+
+### Sections come from folders
+
+The entry's folder top level is the highlights; each subfolder is a section, and a subfolder named after a watch links it once for every photo in it. `3_list_images.py --journal` prints both, and reads the EXIF date when run on the originals (step 1 strips it).
+
+### Linked from everywhere it belongs
+
+A Journal link in the header and footer; an "In the Journal" row on a brand's page (its sets, and events its watches were at); "In the Journal" under the sale line on each linked watch's page (the brand row's previews from lg up; a line of links below it); Journal results in search; sitemap entries; and an on-demand social card per entry, letterboxing the cover beside the title as the model cards do.
+
+### Upkeep
+
+`/add-journal` (`.claude/skills/add-journal/`) plans an entry from a folder and a few lines of text, resolving folder names to watches with its own lookup script, and writes only after approval. `JOURNAL_GUIDE.md` is the manual version. `ADDING_WATCHES_GUIDE.md` now points collection sets there.
+
+### Caption editor
+
+Captions written in a source file are written blind: forty lines of `IMG_6075.JPG` and no photographs. `/admin/journal` is a local tool like Add Model and Sales Report, gated the same way (`DevOnly`, `devOnly()`). It shows each photo with:
+
+- a caption box, where Enter jumps to the next;
+- a watch picker over the whole catalogue;
+- a cover radio.
+
+Each section has its title, note and section watch, and the entry has its dek, intro and quote. The thumbnails come from the local MWatchCollectionResources checkout through a dev-only `/api/admin/journal-image`, so captioning comes before the push, not after.
+
+Saving edits the entry file **through the TypeScript AST** (`admin/journal/journalEdit.ts`) rather than regenerating it. Each change is a text edit at its property's exact range, so the `BrandsEnum` reference, comments and field order come back untouched, and prettier tidies what changed.
+
+- Photos are addressed by position, because one file can sit in the highlights and in a section at once. A path that no longer matches means the file moved underneath, answered with a 409.
+- Unknown watches and a cover that is not the entry's own are answered with a 400.
+
+Verified on scratch copies:
+
+- Adding a caption, watch, cover, dek and intro changes only those lines.
+- Clearing them all returns the file to its original bytes. That took two fixes: a removed field left a blank line behind, and a re-expanded photo object stayed expanded. Edited photos are now rebuilt on one line and prettier decides the layout.
+- A no-op save writes nothing.
+- On a synthetic event, a caption on a photo present in both blocks landed on the section copy only.
+- In the browser against the dev server:
+  - Novart's 17 thumbnails and hidden Omega Polaris's photos load from disk;
+  - a caption saved, appeared on `/journal/1974-novart-watch-collection`, and cleared back to the original file.
+- The gating spec covers the page and both routes.
+
+### Verified
+
+- `npm run lint` and `npm run typecheck` are clean. `generate-index` is stable across runs.
+- Playwright against a production build: 148 passed, 4 skipped (the existing mobile skips).
+  - New `journal.spec.ts`: index to entry; photographs in the prerendered HTML; the lightbox opens at the clicked photo; every watch link resolves; brand and model pages link back; search finds the entry; an unknown slug is a real 404.
+  - `structure` and `metadata` cover both Journal routes.
+- `search.spec`'s empty-state count now excludes Journal entries, which are not timepieces.
+- The event layout, which no published entry uses yet, was checked on a temporary fixture (deleted). Clicking photo 8 opened the lightbox at "8 / 17" on desktop and phone. Sections, notes linking their watch, and mixed-brand tiles keeping the brand name all rendered.
+- `dynamicParams = false` stays on `/journal/[slug]`. With only `notFound()`, `loading.tsx` streams first, and a missing entry answered 200.
+
+### Files removed
+
+- `src/app/data/collectionCatalogue.tsx` and the seven set files under `watchModels/` (`*_collection_set.tsx`, `Omega_Polaris_set.tsx`, `Omega_Olympic_collection.tsx`), replaced by `src/app/data/journal/entries/`.
+
 ## [2026-09-03] — scripts/ restructure
 
 `scripts/` had grown to seven files mixing three unrelated concerns, with nothing marking which were live. It is now two groups: npm-driven codegen at the root, and an ordered photo pipeline under `scripts/images/`.

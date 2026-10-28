@@ -11,7 +11,8 @@ import { defineConfig, devices } from "@playwright/test";
  *
  * Note that `npm run build` and `npm run dev` must never be running at the same
  * time — they fight over `.next` and leave the CSS frozen. Stop the dev server
- * before running this.
+ * before running this; `prebuild` (scripts/dev-lock.ts) refuses to build while
+ * one is up.
  */
 export default defineConfig({
   testDir: "./e2e",

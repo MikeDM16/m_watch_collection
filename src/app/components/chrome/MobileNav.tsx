@@ -3,6 +3,7 @@
 import { Menu, X } from "lucide-react";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
+import { createPortal } from "react-dom";
 
 export interface NavLink {
   href: string;
@@ -68,45 +69,51 @@ export default function MobileNav({ links }: { links: NavLink[] }) {
         <Menu aria-hidden strokeWidth={1.5} className="size-[17px]" />
       </button>
 
-      {open && (
-        <div
-          className="fixed inset-0 z-[100] bg-scrim/60 backdrop-blur-sm lg:hidden"
-          onMouseDown={(e) => {
-            if (!panel.current?.contains(e.target as Node)) setOpen(false);
-          }}
-        >
+      {/* Portalled to <body>. Rendered in place it sat inside the header, whose
+          backdrop blur (once solid) makes it the containing block for fixed
+          descendants: the sheet came out 64px tall, with the links spilling
+          over the page below it. */}
+      {open &&
+        createPortal(
           <div
-            ref={panel}
-            role="dialog"
-            aria-modal="true"
-            aria-label="Navigation"
-            className="ml-auto flex h-full w-[min(20rem,85vw)] flex-col bg-background"
+            className="fixed inset-0 z-[100] bg-scrim/60 backdrop-blur-sm lg:hidden"
+            onMouseDown={(e) => {
+              if (!panel.current?.contains(e.target as Node)) setOpen(false);
+            }}
           >
-            <div className="flex h-16 items-center justify-end px-4">
-              <button
-                type="button"
-                onClick={() => setOpen(false)}
-                aria-label="Close navigation"
-                className="grid size-9 place-items-center rounded-full border border-border transition-colors hover:border-brand"
-              >
-                <X aria-hidden strokeWidth={1.5} className="size-[17px]" />
-              </button>
-            </div>
-            <nav className="flex flex-col px-4">
-              {links.map((l) => (
-                <Link
-                  key={l.href}
-                  href={l.href}
+            <div
+              ref={panel}
+              role="dialog"
+              aria-modal="true"
+              aria-label="Navigation"
+              className="ml-auto flex h-full w-[min(20rem,85vw)] flex-col bg-background"
+            >
+              <div className="flex h-16 items-center justify-end px-4">
+                <button
+                  type="button"
                   onClick={() => setOpen(false)}
-                  className="border-b border-border py-4 font-display text-lg tracking-tight transition-colors hover:text-brand"
+                  aria-label="Close navigation"
+                  className="grid size-9 place-items-center rounded-full border border-border transition-colors hover:border-brand"
                 >
-                  {l.label}
-                </Link>
-              ))}
-            </nav>
-          </div>
-        </div>
-      )}
+                  <X aria-hidden strokeWidth={1.5} className="size-[17px]" />
+                </button>
+              </div>
+              <nav className="flex flex-col px-4">
+                {links.map((l) => (
+                  <Link
+                    key={l.href}
+                    href={l.href}
+                    onClick={() => setOpen(false)}
+                    className="border-b border-border py-4 font-display text-lg tracking-tight transition-colors hover:text-brand"
+                  >
+                    {l.label}
+                  </Link>
+                ))}
+              </nav>
+            </div>
+          </div>,
+          document.body,
+        )}
     </>
   );
 }

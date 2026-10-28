@@ -18,6 +18,27 @@ export const MODEL_MECHANICAL = "/collection/Omega/Omega%20StayBrite%20Tank%20CK
 /** A quartz piece, which is the only way the 32nd field (Battery) renders. */
 export const MODEL_QUARTZ = "/collection/Omega/Omega%20De%20Ville%20191.0167%20Cal.%201365";
 
+export const JOURNAL = "/journal";
+
+/**
+ * A published Journal entry: the Novart set, 16 photographs and 11 watches, in
+ * one block long enough to fold. It stays the set fixture because a set is
+ * what the brand page lists.
+ */
+export const JOURNAL_ENTRY = "/journal/1974-novart-watch-collection";
+export const JOURNAL_ENTRY_PHOTOS = 16;
+
+/**
+ * The first event, for the paths a set never takes: sections, section watches,
+ * the event strip and an external link. 243 photographs across seven sections.
+ */
+export const JOURNAL_EVENT = "/journal/2026-formula-magica-caramulo";
+export const JOURNAL_EVENT_PHOTOS = 243;
+
+/** The brand of that entry, and one watch in it, for the links back into the Journal. */
+export const JOURNAL_BRAND = "/collection/Novart";
+export const JOURNAL_MODEL = "/collection/Novart/Novart%20Monza%20Red%2017%20Jewels";
+
 /**
  * The 32 specification labels, exactly as the page prints them. Sourced from
  * the four mappings in src/app/data/watchDetails.tsx plus
@@ -75,4 +96,10 @@ export const ADMIN_ROUTES = [
   { method: "POST", path: "/api/admin/create-model" },
   { method: "POST", path: "/api/admin/create-movement" },
   { method: "POST", path: "/api/admin/sales-review" },
+  { method: "POST", path: "/api/admin/journal" },
+  // A real photo path, so a missing gate would answer 200, not a 404 for the file.
+  {
+    method: "GET",
+    path: "/api/admin/journal-image?path=public/assets/Images/Novart/1974_Novart_set_Collection/IMG_5987.JPG",
+  },
 ] as const;

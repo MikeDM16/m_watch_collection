@@ -108,6 +108,17 @@ const details: WatchDetails = {
     "public/assets/Images/Omega/2000_Omega_Speedmaster_Racing_Schumacher_6000/IMG_4696.JPG",
     "public/assets/Images/Omega/2000_Omega_Speedmaster_Racing_Schumacher_6000/IMG_4697.JPG",
     "public/assets/Images/Omega/2000_Omega_Speedmaster_Racing_Schumacher_6000/IMG_4698.JPG",
+    // Fórmula Mágica, Museu do Caramulo, 2026
+    "public/assets/Images/Journals/18102026_Caramulo_Formula_Magica_F1/Favoritos/2000_Omega_Speedmaster_Racing_Schumacher_6000/IMG_6105.JPG",
+    "public/assets/Images/Journals/18102026_Caramulo_Formula_Magica_F1/Favoritos/2000_Omega_Speedmaster_Racing_Schumacher_6000/IMG_6110.JPG",
+    "public/assets/Images/Journals/18102026_Caramulo_Formula_Magica_F1/Favoritos/2000_Omega_Speedmaster_Racing_Schumacher_6000/IMG_6115.JPG",
+    "public/assets/Images/Journals/18102026_Caramulo_Formula_Magica_F1/Favoritos/2000_Omega_Speedmaster_Racing_Schumacher_6000/IMG_6177.JPG",
+    "public/assets/Images/Journals/18102026_Caramulo_Formula_Magica_F1/Favoritos/2000_Omega_Speedmaster_Racing_Schumacher_6000/IMG_6178.JPG",
+    "public/assets/Images/Journals/18102026_Caramulo_Formula_Magica_F1/Favoritos/2000_Omega_Speedmaster_Racing_Schumacher_6000/IMG_6180.JPG",
+    "public/assets/Images/Journals/18102026_Caramulo_Formula_Magica_F1/Favoritos/2000_Omega_Speedmaster_Racing_Schumacher_6000/IMG_6181.JPG",
+    "public/assets/Images/Journals/18102026_Caramulo_Formula_Magica_F1/Favoritos/2000_Omega_Speedmaster_Racing_Schumacher_6000/IMG_6186.JPG",
+    "public/assets/Images/Journals/18102026_Caramulo_Formula_Magica_F1/Favoritos/2000_Omega_Speedmaster_Racing_Schumacher_6000/IMG_6188.JPG",
+    "public/assets/Images/Journals/18102026_Caramulo_Formula_Magica_F1/Favoritos/2000_Omega_Speedmaster_Racing_Schumacher_6000/IMG_6267.JPG",
   ],
 
   technicalData: {

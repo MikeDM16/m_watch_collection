@@ -18,7 +18,7 @@ writes them only after you approve.
 - [ ] **4. Regenerate collection index** — runs automatically on `npm run dev` and `npm run build` (or manually: `npm run generate-index`)
 - [ ] **5. (If new brand)** Add enum value, brand entry, and BrandSeries file (see Section D)
 - [ ] **6. (If new series for existing brand)** Add series constant to `src/app/data/watchModels/[Brand]/[Brand]BrandSeries.tsx` (or a sub-series under an umbrella group — see Section D2)
-- [ ] **7. (If part of a collection set)** Add entry inside `src/app/data/watchModels/[Brand]/[Brand]_collection_set.tsx`
+- [ ] **7. (If part of a collection set)** Add its model file path to that set's Journal entry in `src/app/data/journal/entries/` (see Step 6)
 
 ### Step 2 — Watch Model File
 
@@ -152,9 +152,15 @@ This extracts the listing metadata (brand, legend, year, type, srcImage, series,
 
 ### Step 6 — Collection Set (if applicable)
 
-**Path:** `src/app/data/watchModels/[Brand]/[Brand]_collection_set.tsx`
+Collection sets are Journal entries now: `src/app/data/journal/entries/<slug>.ts`, with `kind: "set"`. A watch joins a set by its model file path, without the `.tsx`, in the entry's `watchGroups` (or `watches`):
 
-Type is `CollectionCatalogue` with `modelsList` grouping entries by series. Collection sets also need a corresponding entry in `collectionData.tsx` with `collectionSet: true`.
+```ts
+watchGroups: [
+  { title: "Chronograph Series", watches: ["Omega/Omega_Olympia_Calgary_Seoul_1988"] },
+],
+```
+
+The path is checked by `npm run typecheck`, so a typo or a hidden watch fails the check instead of rendering a dead link. Nothing goes in `collectionData.tsx` for the set itself. See `JOURNAL_GUIDE.md`.
 
 ---
 
@@ -332,7 +338,7 @@ All enums are in `src/app/enums/`. Check the individual files for full details a
    the line where you want it. Brands left out of the list still appear in the A-Z index
    below the wall.
 5. **(If brand uses series grouping)** Create `src/app/data/watchModels/[Brand]/[Brand]BrandSeries.tsx`
-6. **(If brand has a collection set)** Create `src/app/data/watchModels/[Brand]/[Brand]_collection_set.tsx`
+6. **(If brand has a collection set)** Create a Journal entry for it (see `JOURNAL_GUIDE.md`)
 7. **Set `displayBySeries: true`** in `brands.tsx` if the brand page should group models by series
 
 No route changes needed — `[brand]/page.tsx` and `[brand]/[model]/page.tsx` use `generateStaticParams()`.
@@ -463,8 +469,11 @@ src/app/
     collectionIndex.ts          <-- CollectionIndexEntry type + JSON import
     caliberTypes.ts             <-- Caliber, CaliberTechinicalDetails types
     watchDetails.tsx            <-- WatchDetails, TechnicalData, ModelInformation types
-    collectionCatalogue.tsx     <-- CollectionCatalogue type (for collection sets)
     brands.tsx                  <-- brandsDB array
+    journal/
+      journalTypes.ts           <-- JournalEntry, JournalPhoto, JournalSection types
+      index.ts                  <-- Journal registry (an unpublished entry stays commented out)
+      entries/<slug>.ts         <-- One event or collection set (see JOURNAL_GUIDE.md)
     admin/
       collectionData.tsx        <-- Watch registry (require() imports, admin/scripts only)
       movementsData.tsx         <-- Movement registry (ES imports, admin/scripts only)
@@ -472,7 +481,6 @@ src/app/
       [Brand]/
         [Brand]_[Model]_[Year].tsx     <-- Watch definition (export default)
         [Brand]BrandSeries.tsx         <-- Series constants (if brand uses series)
-        [Brand]_collection_set.tsx     <-- Collection set (if applicable)
     movements/
       template.tsx                     <-- Movement template (automatic)
       [Manufacturer]/

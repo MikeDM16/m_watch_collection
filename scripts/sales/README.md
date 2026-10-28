@@ -1,7 +1,9 @@
 # Sales margin pipeline
 
 Links every catalogue sale (`saleReport`: the gross hammer price and auction date)
-to its section of the private sales ledger, `scripts/Relogios - Vendas.xlsx`, and
+to its section of the private sales ledger, the original workbook in OneDrive
+(`~/OneDrive/Documentos/Excel Miguel/Relogios - Vendas.xlsx`, where it is kept up to
+date; pass another path to `1_parse_ledger.py` to read a different copy), and
 computes what each watch really earned: net payout, purchase and extras by
 category, profit, margin, return on cost and days held. The local sales report
 (`/admin/sales-report`, dev only) shows the result, and `/admin/sales-report/review`
@@ -9,8 +11,9 @@ is where matches are confirmed or corrected.
 
 ## Privacy
 
-- The workbook and everything derived from it are gitignored: `/scripts/*.xlsx` and
-  `/.sales/`. The workbook also holds bank balances and investments, but only its
+- The workbook lives outside the repo, and everything derived from it is gitignored
+  (`/.sales/`; `/scripts/*.xlsx` still covers any copy dropped there). The workbook
+  also holds bank balances and investments, but only its
   four year tabs (`R 17-23`, `R24`, `R25`, `R26`) are ever read.
 - Nothing is written to `collection-index.json` or to the model files. The index is
   sent to the browser on public pages.

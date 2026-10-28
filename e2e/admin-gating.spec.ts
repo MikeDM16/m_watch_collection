@@ -25,7 +25,16 @@ for (const { method, path } of ADMIN_ROUTES) {
   });
 }
 
+test("the header has no way into the tools", async ({ page }) => {
+  await page.goto("/");
+  await expect(page.locator('a[href="/admin"]')).toHaveCount(0);
+});
+
 test("the admin pages are gated too", async ({ page }) => {
+  // The index of the tools, which the dev header links to.
+  await page.goto("/admin");
+  await expect(page.getByRole("heading", { name: "Development only" })).toBeVisible();
+
   await page.goto("/admin/create-model");
   await expect(page.getByRole("heading", { name: "Development only" })).toBeVisible();
 
@@ -36,6 +45,11 @@ test("the admin pages are gated too", async ({ page }) => {
 
   await page.goto("/admin/sales-report/review");
   await expect(page.getByRole("heading", { name: "Development only" })).toBeVisible();
+
+  await page.goto("/admin/journal");
+  await expect(page.getByRole("heading", { name: "Development only" })).toBeVisible();
+  // It reads and writes entry files: none of the editor may render.
+  await expect(page.getByPlaceholder("Caption")).toHaveCount(0);
 });
 
 test("the public search index is still served", async ({ request }) => {

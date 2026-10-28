@@ -113,6 +113,19 @@ const details: WatchDetails = {
     "public/assets/Images/Tag_Heuer/1990_Tag_Heuer_S_EL_Digital_Senna/IMG_1321.JPG",
     "public/assets/Images/Tag_Heuer/1990_Tag_Heuer_S_EL_Digital_Senna/IMG_1322.JPG",
     "public/assets/Images/Tag_Heuer/1990_Tag_Heuer_S_EL_Digital_Senna/IMG_1323.JPG",
+    // Fórmula Mágica, Museu do Caramulo, 2026
+    "public/assets/Images/Journals/18102026_Caramulo_Formula_Magica_F1/Favoritos/2003_Tag_Heuer_Senna_Link_CT5114/IMG_6149.JPG",
+    "public/assets/Images/Journals/18102026_Caramulo_Formula_Magica_F1/Favoritos/2003_Tag_Heuer_Senna_Link_CT5114/IMG_6155.JPG",
+
+    "public/assets/Images/Journals/18102026_Caramulo_Formula_Magica_F1/Favoritos/1990_Tag_Heuer_S_EL_Digital_Senna/IMG_6082.JPG",
+    "public/assets/Images/Journals/18102026_Caramulo_Formula_Magica_F1/Favoritos/1990_Tag_Heuer_S_EL_Digital_Senna/IMG_6083.JPG",
+    "public/assets/Images/Journals/18102026_Caramulo_Formula_Magica_F1/Favoritos/1990_Tag_Heuer_S_EL_Digital_Senna/IMG_6136.JPG",
+    "public/assets/Images/Journals/18102026_Caramulo_Formula_Magica_F1/Favoritos/1990_Tag_Heuer_S_EL_Digital_Senna/IMG_6137.JPG",
+    "public/assets/Images/Journals/18102026_Caramulo_Formula_Magica_F1/Favoritos/1990_Tag_Heuer_S_EL_Digital_Senna/IMG_6138.JPG",
+    "public/assets/Images/Journals/18102026_Caramulo_Formula_Magica_F1/Favoritos/1990_Tag_Heuer_S_EL_Digital_Senna/IMG_6139.JPG",
+    "public/assets/Images/Journals/18102026_Caramulo_Formula_Magica_F1/Favoritos/1990_Tag_Heuer_S_EL_Digital_Senna/IMG_6140.JPG",
+    "public/assets/Images/Journals/18102026_Caramulo_Formula_Magica_F1/Favoritos/1990_Tag_Heuer_S_EL_Digital_Senna/IMG_6141.JPG",
+    "public/assets/Images/Journals/18102026_Caramulo_Formula_Magica_F1/Favoritos/1990_Tag_Heuer_S_EL_Digital_Senna/IMG_6142.JPG",
   ],
 
   technicalData: {

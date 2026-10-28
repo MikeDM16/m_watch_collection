@@ -15,15 +15,7 @@ function listModelsForBrand(brandFolder: string): string[] {
   if (!fs.existsSync(dir)) return [];
   return fs
     .readdirSync(dir)
-    .filter(
-      (f) =>
-        f.endsWith(".tsx") &&
-        !f.includes("collection_set") &&
-        !f.includes("Collection_set") &&
-        !f.includes("BrandSeries") &&
-        !f.includes("Olympic_collection") &&
-        !f.includes("Polaris_set"),
-    )
+    .filter((f) => f.endsWith(".tsx") && !f.includes("BrandSeries"))
     .sort();
 }
 

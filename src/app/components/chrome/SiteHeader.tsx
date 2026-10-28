@@ -1,6 +1,7 @@
 "use client";
 
 import {
+  routeToJournal,
   routeToMainPageAllBrandListing,
   routeToMainPageHeader,
 } from "@/app/services/commonFunctions";
@@ -16,7 +17,7 @@ import MobileNav, { type NavLink } from "./MobileNav";
  *
  * Transparent over the hero photograph on load, condensing to a solid surface
  * with a hairline once scrolled past it. Every href and label is byte-identical
- * to the old navbar; search and the theme toggle are additions.
+ * to the old navbar; search, the theme toggle and the Journal are additions.
  */
 export default function SiteHeader() {
   // Solid by default. Only pages that open with a photo band (home, brand) let
@@ -43,18 +44,16 @@ export default function SiteHeader() {
   const links: NavLink[] = [
     { href: routeToMainPageHeader(), label: "Collection" },
     { href: routeToMainPageAllBrandListing(), label: "All Brands" },
+    { href: routeToJournal(), label: "Journal" },
     { href: "/#PreviousSales", label: "Auctions" },
     { href: "/#AboutMe", label: "About Me" },
     { href: "/#Contacts", label: "Contacts" },
   ];
 
-  // The local authoring tools, exactly as the old navbar exposed them. Without
-  // these the pages still build but there is no way into them.
+  // The way into the local authoring tools. One link to the /admin page that
+  // lists them, so the header does not grow with every tool added.
   if (process.env.NODE_ENV !== "production") {
-    links.push(
-      { href: "/admin/create-model", label: "Add Model" },
-      { href: "/admin/sales-report", label: "Sales Report" },
-    );
+    links.push({ href: "/admin", label: "Admin" });
   }
 
   return (

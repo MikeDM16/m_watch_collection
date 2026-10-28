@@ -1,6 +1,7 @@
 import BrandCollectionGrid, { CardData } from "@/app/components/brandPage/BrandCollectionGrid";
 import Breadcrumbs from "@/app/components/common/Breadcrumbs";
 import HeroBand from "@/app/components/common/HeroBand";
+import { InTheJournalRow } from "@/app/components/journal/InTheJournal";
 import BrandPageNotFoundComponent from "@/app/components/notFound/BrandPageNotFoundComponent";
 import brandsService from "@/app/services/brandsService";
 import collectionService, { SeriesGroup } from "@/app/services/collectionService";
@@ -12,6 +13,7 @@ import {
   routeToMainPageAllBrandListing,
   routeToMainPageHeader,
 } from "@/app/services/commonFunctions";
+import journalService from "@/app/services/journalService";
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
@@ -147,6 +149,8 @@ export default async function Page({ params }: { params: Promise<{ brand: string
             </Link>
           )}
         </div>
+
+        <InTheJournalRow entries={journalService.getForBrand(brand)} brand={brand} />
 
         <BrandCollectionGrid brand={brand} cards={cards} groups={groups} />
       </div>

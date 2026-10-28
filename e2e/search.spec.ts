@@ -80,6 +80,11 @@ test("the empty state counts the catalogue rather than hardcoding it", async ({
   await openPalette(page);
   await page.getByRole("combobox").fill("");
 
-  const total = Object.keys(await (await request.get("/api/search-index")).json()).length;
+  // The index also carries Journal entries (they have a `kind`); only watches
+  // are timepieces.
+  const index: Record<string, { kind?: string }> = await (
+    await request.get("/api/search-index")
+  ).json();
+  const total = Object.values(index).filter((v) => !v.kind).length;
   await expect(page.getByText(`${total} timepieces.`, { exact: false })).toBeVisible();
 });

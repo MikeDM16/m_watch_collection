@@ -3,6 +3,7 @@ import {
   getExternalResource,
   IconLabel,
   pickBackground,
+  routeToJournal,
   routeToMainPageAllBrandListing,
   routeToMainPageHeader,
 } from "@/app/services/commonFunctions";
@@ -33,6 +34,7 @@ export default function SiteFooter({
       links: [
         { href: routeToMainPageHeader(), label: "Special Timepieces" },
         { href: routeToMainPageAllBrandListing(), label: "All Brands" },
+        { href: routeToJournal(), label: "Journal" },
         { href: "/#PreviousSales", label: "Auctions" },
       ],
     },

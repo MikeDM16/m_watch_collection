@@ -1,7 +1,8 @@
 """
 1_parse_ledger.py — step 1 of the sales margin pipeline.
 
-Reads the private sales ledger (scripts/Relogios - Vendas.xlsx) and writes a
+Reads the private sales ledger (OneDrive/Documentos/Excel Miguel/Relogios -
+Vendas.xlsx) and writes a
 faithful JSON copy of its per-watch blocks to .sales/ledger.json, for step 2
 (match) and step 3 (build) to work from. This step extracts; it does not
 interpret. Deciding which row is a purchase, a strap or a payout is step 2's job.
@@ -61,8 +62,10 @@ from openpyxl import load_workbook
 
 REPO_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
 
-# Used when no workbook is passed on the command line.
-DEFAULT_WORKBOOK = os.path.join(REPO_ROOT, "scripts", "Relogios - Vendas.xlsx")
+# Used when no workbook is passed on the command line: the original in OneDrive,
+# where the ledger is kept up to date, not a copy in the repo.
+DEFAULT_WORKBOOK = os.path.join(
+    os.path.expanduser("~"), "OneDrive", "Documentos", "Excel Miguel", "Relogios - Vendas.xlsx")
 
 OUT_DIR = os.path.join(REPO_ROOT, ".sales")
 OUT_FILE = os.path.join(OUT_DIR, "ledger.json")
@@ -338,10 +341,15 @@ def main(workbook):
     mismatches = [b for b in blocks if not b["exact"]]
 
     mtime, digest = file_facts(workbook)
+    # Relative inside the repo, absolute outside it. The admin page resolves this
+    # against the repo root to notice when the workbook has been edited since.
+    workbook = os.path.abspath(workbook)
     try:
-        shown = os.path.relpath(workbook, REPO_ROOT).replace("\\", "/")
+        rel = os.path.relpath(workbook, REPO_ROOT)
     except ValueError:  # another drive on Windows
-        shown = workbook
+        rel = os.pardir
+    outside = rel == os.pardir or rel.startswith(os.pardir + os.sep)
+    shown = (workbook if outside else rel).replace("\\", "/")
     out = {
         "version": 1,
         "generatedAt": dt.datetime.now().isoformat(timespec="seconds"),

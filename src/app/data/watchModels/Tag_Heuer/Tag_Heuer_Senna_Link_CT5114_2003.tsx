@@ -104,6 +104,19 @@ const details: WatchDetails = {
     "public/assets/Images/Tag_Heuer/2003_Tag_Heuer_Senna_Link_CT5114/IMG_3774.JPG",
     "public/assets/Images/Tag_Heuer/2003_Tag_Heuer_Senna_Link_CT5114/IMG_3775.JPG",
     "public/assets/Images/Tag_Heuer/2003_Tag_Heuer_Senna_Link_CT5114/IMG_3776.JPG",
+    // Fórmula Mágica, Museu do Caramulo, 2026
+    "public/assets/Images/Journals/18102026_Caramulo_Formula_Magica_F1/Favoritos/2003_Tag_Heuer_Senna_Link_CT5114/IMG_6149.JPG",
+    "public/assets/Images/Journals/18102026_Caramulo_Formula_Magica_F1/Favoritos/2003_Tag_Heuer_Senna_Link_CT5114/IMG_6155.JPG",
+    "public/assets/Images/Journals/18102026_Caramulo_Formula_Magica_F1/Favoritos/2003_Tag_Heuer_Senna_Link_CT5114/IMG_6152.JPG",
+    "public/assets/Images/Journals/18102026_Caramulo_Formula_Magica_F1/Favoritos/2003_Tag_Heuer_Senna_Link_CT5114/IMG_6153.JPG",
+    "public/assets/Images/Journals/18102026_Caramulo_Formula_Magica_F1/Favoritos/2003_Tag_Heuer_Senna_Link_CT5114/IMG_6154.JPG",
+    "public/assets/Images/Journals/18102026_Caramulo_Formula_Magica_F1/Favoritos/2003_Tag_Heuer_Senna_Link_CT5114/IMG_6082.JPG",
+    "public/assets/Images/Journals/18102026_Caramulo_Formula_Magica_F1/Favoritos/2003_Tag_Heuer_Senna_Link_CT5114/IMG_6083.JPG",
+    "public/assets/Images/Journals/18102026_Caramulo_Formula_Magica_F1/Favoritos/2003_Tag_Heuer_Senna_Link_CT5114/IMG_6157.JPG",
+    "public/assets/Images/Journals/18102026_Caramulo_Formula_Magica_F1/Favoritos/2003_Tag_Heuer_Senna_Link_CT5114/IMG_6159.JPG",
+    "public/assets/Images/Journals/18102026_Caramulo_Formula_Magica_F1/Favoritos/2003_Tag_Heuer_Senna_Link_CT5114/IMG_6158.JPG",
+    "public/assets/Images/Journals/18102026_Caramulo_Formula_Magica_F1/Favoritos/2003_Tag_Heuer_Senna_Link_CT5114/IMG_6160.JPG",
+    "public/assets/Images/Journals/18102026_Caramulo_Formula_Magica_F1/Favoritos/2003_Tag_Heuer_Senna_Link_CT5114/IMG_6161.JPG",
   ],
 
   technicalData: {

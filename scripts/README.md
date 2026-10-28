@@ -8,7 +8,7 @@ gitignored `.sales/` folder.
 ## Sales margin pipeline (private, run by hand)
 
 `npm run sales:sync` links every catalogue sale to its section of the private sales
-ledger (`scripts/Relogios - Vendas.xlsx`, gitignored) and computes real cost, profit
+ledger (`OneDrive/Documentos/Excel Miguel/Relogios - Vendas.xlsx`, outside the repo) and computes real cost, profit
 and margin for the local sales report. Nothing it produces is ever committed or
 bundled. See [`sales/README.md`](sales/README.md).
 
@@ -18,6 +18,15 @@ bundled. See [`sales/README.md`](sales/README.md).
 | ------------------------------ | ----------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `generate-collection-index.ts` | `npm run generate-index` — also `predev` and `prebuild`, so it is usually automatic | Rebuilds `src/app/data/collection-index.json` (the runtime data source) and `collectionModules.generated.ts` (one literal `import()` per model, which is what keeps the bundler from emitting a 343-file context module) from `data/admin/collectionData.tsx`. Run it after editing collectionData. |
 | `generate-pdf-book.tsx`        | `npm run generate-pdf`                                                              | Renders the collection to a PDF book. Output is gitignored (`*.pdf`).                                                                                                                                                                                                                               |
+
+## Dev server guard (this repo, driven by npm)
+
+`dev-lock.ts` reads `.next/dev/lock`, where `next dev` records its PID and port.
+`npm run dev:clean` runs it as `clean`: stop the dev server if it is still
+answering, then delete `.next`. `prebuild` runs it as `check`: refuse to build
+while a dev server is up. Deleting `.next` under a live server, or building
+beside one, leaves that server 404ing every route it has not compiled yet
+(every model page, in practice).
 
 ## Photo pipeline (MWatchCollectionResources, run by hand)
 
@@ -41,6 +50,10 @@ python scripts/images/3_list_images.py <Brand> <folder> # print the sliderImages
    variants are skipped, and the original is only rewritten if it actually shrinks.
 3. **`3_list_images.py`** — prints the `sliderImages` array for a model file. Lists
    originals only; the generated variants are filtered out.
+   With `--journal <folder>` it prints a Journal entry's `photos` and `sections`
+   instead (square photos as just `{ src }`, any other with its pixel size), the folder's own photos as the
+   highlights and each subfolder as a section. Run it on the originals first to
+   read the EXIF date that step 1 strips. See `JOURNAL_GUIDE.md`.
 
 All three are safe to re-run. Step 1 skips files it has already cleaned and never
 touches step 2's variants — without that it would re-encode q70 thumbnails at q95,

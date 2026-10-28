@@ -28,7 +28,8 @@ function readJson<T extends { version: number }>(name: string): T | null {
 /** True when the workbook has changed since the pipeline last read it. */
 function workbookChanged(source: SalesFinancials["source"]): boolean {
   try {
-    const bytes = fs.readFileSync(path.join(process.cwd(), source.file));
+    // Repo-relative, or absolute for the OneDrive original.
+    const bytes = fs.readFileSync(path.resolve(process.cwd(), source.file));
     return crypto.createHash("sha256").update(bytes).digest("hex") !== source.sha256;
   } catch {
     return false;
