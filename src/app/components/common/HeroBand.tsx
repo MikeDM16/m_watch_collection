@@ -1,10 +1,12 @@
 import { getExternalResource } from "@/app/services/commonFunctions";
 import Link from "next/link";
 
+import HeroImage from "./HeroImage";
+
 /**
  * The full-bleed photograph band with a directional scrim. The one photo
- * primitive kept from the old design, now used on the home hero and the brand
- * header only rather than above every section.
+ * primitive kept from the old design, now used on the home hero, the brand
+ * header and the Journal rather than above every section.
  *
  * The scrim is dark in both themes because it sits on photography, not on a
  * themed surface.
@@ -42,9 +44,9 @@ export default function HeroBand({
   return (
     <header
       data-hero-band
-      className={`band bg-cover bg-center ${size === "home" ? "min-h-[78dvh]" : "min-h-[46dvh]"}`}
-      style={{ backgroundImage: `url(${getExternalResource(image)})` }}
+      className={`band ${size === "home" ? "min-h-[78dvh]" : "min-h-[46dvh]"}`}
     >
+      <HeroImage src={getExternalResource(image)} />
       <div className="mx-auto w-full max-w-shell px-[clamp(1rem,4vw,3.5rem)] pb-[clamp(2.5rem,6vw,5rem)] pt-24">
         {eyebrow && <div className="mb-4">{eyebrow}</div>}
 

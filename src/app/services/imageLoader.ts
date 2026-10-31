@@ -1,5 +1,3 @@
-"use client";
-
 import type { ImageLoaderProps } from "next/image";
 
 /**
@@ -33,6 +31,11 @@ const VARIANT_SUFFIX = /_(200|500|800|1200)x\1(\.[^./]+)$/;
  *
  * URLs with no variant suffix — brand logos, saleReport.JPG — pass through
  * untouched; there is nothing to pick between.
+ *
+ * A plain module, not "use client": PlateImage hands it to next/image in the
+ * browser, and the Journal's photo rows call it on the server through
+ * getImageProps. A server component can therefore no longer pass it as a
+ * `loader` prop to <Image>; render a PlateImage instead.
  */
 export default function collectionImageLoader({ src, width }: ImageLoaderProps): string {
   if (!VARIANT_SUFFIX.test(src)) return src;

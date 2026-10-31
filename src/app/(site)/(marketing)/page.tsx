@@ -8,7 +8,6 @@ import brandsService from "@/app/services/brandsService";
 import collectionService from "@/app/services/collectionService";
 import {
   background_images_paths,
-  getExternalResource,
   routeToMainPageAllBrandListing,
 } from "@/app/services/commonFunctions";
 
@@ -65,8 +64,6 @@ export default function Page() {
 
   return (
     <>
-      <link rel="preload" as="image" href={getExternalResource(hero)} />
-
       <HeroBand
         image={hero}
         size="home"

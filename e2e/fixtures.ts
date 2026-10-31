@@ -30,10 +30,10 @@ export const JOURNAL_ENTRY_PHOTOS = 16;
 
 /**
  * The first event, for the paths a set never takes: sections, section watches,
- * the event strip and an external link. 243 photographs across seven sections.
+ * the event strip and an external link. 233 photographs across seven sections.
  */
 export const JOURNAL_EVENT = "/journal/2026-formula-magica-caramulo";
-export const JOURNAL_EVENT_PHOTOS = 243;
+export const JOURNAL_EVENT_PHOTOS = 233;
 
 /** The brand of that entry, and one watch in it, for the links back into the Journal. */
 export const JOURNAL_BRAND = "/collection/Novart";

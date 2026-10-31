@@ -53,10 +53,21 @@ export default function SiteFooter({
   ];
 
   return (
-    <footer
-      className="band mt-24 min-h-[42dvh] bg-cover bg-center"
-      style={{ backgroundImage: `url(${getExternalResource(bg)})` }}
-    >
+    <footer className="band mt-24 min-h-[42dvh]">
+      {/* A lazy <img> rather than a CSS background, which downloads with the
+          page however far below the fold it sits: on a phone that was up to
+          500 KB competing with the hero. Lazy, it waits until the reader nears
+          the bottom, and a lazy <img> puts no preload hint in the RSC data the
+          way an eager one would. z-0 puts it under the scrim, against
+          .band > *'s z-index 1. */}
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img
+        src={getExternalResource(bg)}
+        alt=""
+        loading="lazy"
+        decoding="async"
+        className="absolute inset-0 z-0 h-full w-full object-cover object-center"
+      />
       <div className="mx-auto w-full max-w-shell px-[clamp(1rem,4vw,3.5rem)] py-14 text-scrim-foreground">
         <div className="flex flex-wrap items-start justify-between gap-10">
           <div>

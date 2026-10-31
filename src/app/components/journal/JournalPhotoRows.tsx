@@ -3,10 +3,11 @@ import {
   getImgURLForSizeType,
   SizeType,
 } from "@/app/services/commonFunctions";
+import collectionImageLoader from "@/app/services/imageLoader";
+import { getImageProps } from "next/image";
 import Link from "next/link";
 
-import PlateImage from "../common/PlateImage";
-import { PhotoButton, ShowAllPhotos } from "./JournalLightbox";
+import { ShowAllPhotos } from "./JournalLightbox";
 import { DESKTOP, justify, PHONE } from "./justify";
 
 export interface PlacedPhoto {
@@ -25,6 +26,21 @@ export interface PlacedPhoto {
  */
 const OPEN_ROWS = 2;
 
+/**
+ * next/image writes a six-width ladder (128, 200, 500, 640, 800, 1200), but
+ * imageLoader has four files, so 128w and 200w name the same one, as do 640w
+ * and 800w. Keeping the widest width per file picks the same file at every
+ * size, and the ladder is written for every photograph twice over: desktop and
+ * phone rows, then again in the page's RSC data.
+ */
+function widestPerFile(srcSet = ""): string {
+  const byFile = new Map<string, string>();
+  for (const candidate of srcSet.split(", ")) {
+    byFile.set(candidate.slice(0, candidate.lastIndexOf(" ")), candidate);
+  }
+  return [...byFile.values()].join(", ");
+}
+
 function Figure({
   photo,
   sizes,
@@ -36,24 +52,41 @@ function Figure({
 }) {
   const alt = photo.caption || photo.watches[0]?.legend || fallbackAlt;
 
+  // The <img> next/image would render, without its client component: these
+  // rows can hold hundreds of photographs. JournalLightbox opens the button and
+  // sets data-loaded, which fades the image in as PlateImage does elsewhere.
+  const { props: image } = getImageProps({
+    src: getExternalResource(getImgURLForSizeType(photo.src, SizeType.GALLERY)),
+    alt,
+    fill: true,
+    sizes,
+    loading: "lazy",
+    loader: collectionImageLoader,
+  });
+
   // Growing in proportion to the aspect ratio gives every photo in the row the
   // same height, whatever width the row ends up at.
   return (
     <figure className="m-0 min-w-0" style={{ flex: `${(photo.w / photo.h).toFixed(4)} 1 0px` }}>
-      <PhotoButton
-        index={photo.index}
-        label={`Open photograph ${photo.index + 1}`}
-        ratio={`${photo.w} / ${photo.h}`}
+      <button
+        type="button"
+        data-photo={photo.index}
+        aria-label={`Open photograph ${photo.index + 1}`}
+        className="group relative block w-full cursor-zoom-in overflow-hidden bg-muted"
+        // The box holds the photo's shape before the image lands.
+        style={{ aspectRatio: `${photo.w} / ${photo.h}` }}
       >
-        <PlateImage
-          src={getExternalResource(getImgURLForSizeType(photo.src, SizeType.GALLERY))}
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          {...image}
+          srcSet={widestPerFile(image.srcSet)}
+          // fill's inline position style, as the classes below: it was repeated
+          // for every photograph.
+          style={undefined}
           alt={alt}
-          fill
-          sizes={sizes}
-          loading="lazy"
-          className="object-cover group-hover:scale-[1.02]"
+          className="absolute inset-0 h-full w-full object-cover text-transparent opacity-0 transition-[opacity,transform] duration-500 ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.02] data-[loaded]:opacity-100"
         />
-      </PhotoButton>
+      </button>
       {(photo.caption || photo.watches.length > 0) && (
         <figcaption className="mt-2 flex flex-wrap items-baseline gap-x-3 gap-y-1">
           {photo.caption && (
@@ -123,7 +156,8 @@ function splitAt(rows: PlacedPhoto[][], count: number): [PlacedPhoto[][], Placed
  * Rendered twice, grouped for a desktop width and for a phone, and swapped at
  * the sm breakpoint. Regrouping on the client instead would shift the whole
  * layout after hydration, and the copy that is not displayed costs no image
- * requests: its images are lazy, and a hidden lazy image is never fetched.
+ * requests: its images are lazy, and a hidden lazy image is never fetched. Nor
+ * does it cost hydration, since the photos are plain markup (see Figure).
  */
 export default function JournalPhotoRows({
   photos,

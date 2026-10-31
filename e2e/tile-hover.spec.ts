@@ -11,13 +11,17 @@ import { BRAND } from "./fixtures";
  * be pointing at, so nothing else would catch it.
  */
 
+// A catalogue tile, not just any `a.group`: the brand page's "In the Journal"
+// row comes first and its links are groups too, with no cue.
+const TILE = "a.group:has(.tile-cue)";
+
 test.describe("desktop", () => {
   test.skip(({ isMobile }) => Boolean(isMobile), "the cue only exists for a fine pointer");
 
   test("the cue is hidden at rest and revealed on hover", async ({ page }) => {
     await page.goto(BRAND);
 
-    const tile = page.locator("a.group").first();
+    const tile = page.locator(TILE).first();
     const cue = tile.locator(".tile-cue");
 
     await expect(cue).toHaveCSS("opacity", "0");
@@ -28,7 +32,7 @@ test.describe("desktop", () => {
   test("keyboard focus reveals the cue too", async ({ page }) => {
     await page.goto(BRAND);
 
-    const tile = page.locator("a.group").first();
+    const tile = page.locator(TILE).first();
     await tile.focus();
     await expect(tile.locator(".tile-cue")).toHaveCSS("opacity", "1");
   });
@@ -36,7 +40,7 @@ test.describe("desktop", () => {
   test("hovering does not change the tile's height", async ({ page }) => {
     await page.goto(BRAND);
 
-    const tile = page.locator("a.group").first();
+    const tile = page.locator(TILE).first();
     const before = (await tile.boundingBox())!.height;
 
     await tile.hover();
@@ -51,7 +55,7 @@ test("the cue has no layout box on a coarse pointer", async ({ page, isMobile })
   test.skip(!isMobile, "this is the touch case");
   await page.goto(BRAND);
 
-  const cue = page.locator("a.group").first().locator(".tile-cue");
+  const cue = page.locator(TILE).first().locator(".tile-cue");
   await expect(cue).toHaveCount(1);
   expect(await cue.boundingBox()).toBeNull();
 });
