@@ -1,6 +1,6 @@
 import fs from "fs";
 import path from "path";
-import { RESOURCES_DIR } from "@/app/admin/journal/journalSource";
+import { RESOURCES_DIR } from "@/app/admin/resourcesDir";
 import { getImgURLForSizeType, SizeType } from "@/app/services/commonFunctions";
 
 import { devOnly } from "../guard";

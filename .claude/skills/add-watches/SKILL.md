@@ -210,6 +210,12 @@ make it pass.
 
 ## When the photos arrive
 
+For a single watch the user may prefer `/admin/models` in `npm run dev`
+(`ADDING_WATCHES_GUIDE.md`, Step 3c): it lists the folder's photos, orders the
+gallery by drag, sets the tiles and uncomments a hidden entry on save. Mention
+it in the report for each watch left hidden. The steps below are for a batch,
+or when the user asks you to do it.
+
 The user names the photo folders, usually for several watches at once. For
 each folder:
 

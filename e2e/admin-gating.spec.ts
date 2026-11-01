@@ -1,6 +1,6 @@
 import { expect, test } from "@playwright/test";
 
-import { ADMIN_ROUTES } from "./fixtures";
+import { ADMIN_ROUTES, MODEL_MECHANICAL, MODEL_MECHANICAL_FILE } from "./fixtures";
 
 /**
  * The admin API is a local authoring tool and must not answer in production.
@@ -50,6 +50,18 @@ test("the admin pages are gated too", async ({ page }) => {
   await expect(page.getByRole("heading", { name: "Development only" })).toBeVisible();
   // It reads and writes entry files: none of the editor may render.
   await expect(page.getByPlaceholder("Caption")).toHaveCount(0);
+
+  await page.goto(`/admin/models?file=${encodeURIComponent(MODEL_MECHANICAL_FILE)}`);
+  await expect(page.getByRole("heading", { name: "Development only" })).toBeVisible();
+  // It reads and writes model files: none of the editor may render.
+  await expect(page.getByText("Photographs")).toHaveCount(0);
+});
+
+test("a model page has no way into the editor", async ({ page }) => {
+  // The dev build puts an Edit link in the breadcrumb strip.
+  await page.goto(MODEL_MECHANICAL);
+  await expect(page.locator("h1")).toBeVisible();
+  await expect(page.locator('a[href^="/admin"]')).toHaveCount(0);
 });
 
 test("the public search index is still served", async ({ request }) => {

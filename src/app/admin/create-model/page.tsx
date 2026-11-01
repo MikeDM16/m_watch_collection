@@ -3,6 +3,7 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { MultiSelect, SearchableSelect, SelectOption } from "@/components/ui/select";
+import Link from "next/link";
 import { useCallback, useEffect, useState } from "react";
 
 import DevOnly from "../DevOnly";
@@ -75,7 +76,12 @@ export default function CreateModelPage() {
   const [brandLogos, setBrandLogos] = useState<Record<string, string>>({});
   const [loading, setLoading] = useState(true);
   const [submitting, setSubmitting] = useState(false);
-  const [result, setResult] = useState<{ success: boolean; message: string } | null>(null);
+  const [result, setResult] = useState<{
+    success: boolean;
+    message: string;
+    /** The new model, `<Brand>/<File>`, to open in the model editor. */
+    modelFile?: string;
+  } | null>(null);
 
   // Step 1: Brand
   const [brandKey, setBrandKey] = useState("");
@@ -429,6 +435,9 @@ export default function CreateModelPage() {
         setResult({
           success: true,
           message: `Created:\n• ${data.modelFile}\n• ${data.imgFolder}\n• Registered in collectionData.tsx`,
+          modelFile: String(data.modelFile)
+            .replace(/^src\/app\/data\/watchModels\//, "")
+            .replace(/\.tsx$/, ""),
         });
       } else {
         setResult({ success: false, message: data.error });
@@ -483,9 +492,17 @@ export default function CreateModelPage() {
           {result.success && (
             <div className="mt-4 space-y-2">
               <p className="text-sm text-muted-foreground">
-                Next: add images to the folder, then update sliderImages/srcImage paths.
+                Next: add the photos to the folder, then add them, and pick the cover and hover
+                photo, in the model editor.
               </p>
               <div className="flex gap-3">
+                {result.modelFile && (
+                  <Button asChild>
+                    <Link href={`/admin/models?file=${encodeURIComponent(result.modelFile)}`}>
+                      Edit photos and fields
+                    </Link>
+                  </Button>
+                )}
                 <Button variant="outline" onClick={() => window.location.reload()}>
                   Create Another
                 </Button>

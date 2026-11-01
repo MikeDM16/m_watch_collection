@@ -14,6 +14,8 @@ export const BRAND = "/collection/Omega";
  * except Battery, which only a quartz movement has.
  */
 export const MODEL_MECHANICAL = "/collection/Omega/Omega%20StayBrite%20Tank%20CK3416";
+/** Its model file, as the model editor addresses it. */
+export const MODEL_MECHANICAL_FILE = "Omega/Omega_StayBrite_CK3416_T17_1934";
 
 /** A quartz piece, which is the only way the 32nd field (Battery) renders. */
 export const MODEL_QUARTZ = "/collection/Omega/Omega%20De%20Ville%20191.0167%20Cal.%201365";
@@ -97,6 +99,7 @@ export const ADMIN_ROUTES = [
   { method: "POST", path: "/api/admin/create-movement" },
   { method: "POST", path: "/api/admin/sales-review" },
   { method: "POST", path: "/api/admin/journal" },
+  { method: "POST", path: "/api/admin/model-edit" },
   // A real photo path, so a missing gate would answer 200, not a 404 for the file.
   {
     method: "GET",

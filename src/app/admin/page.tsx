@@ -10,6 +10,12 @@ const TOOLS = [
     description: "Writes a new watch model file into the collection data.",
   },
   {
+    href: "/admin/models",
+    title: "Watch Models",
+    description:
+      "Fields, photo order, cover and hover for any watch, including hidden ones waiting for photos.",
+  },
+  {
     href: "/admin/journal",
     title: "Journal Captions",
     description:

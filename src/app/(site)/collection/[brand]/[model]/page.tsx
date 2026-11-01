@@ -33,6 +33,7 @@ import {
   SizeType,
 } from "@/app/services/commonFunctions";
 import journalService from "@/app/services/journalService";
+import { cn } from "@/lib/utils";
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
@@ -227,6 +228,19 @@ export default async function BrandModelPage({
                   className="logo-mono object-contain object-right"
                 />
               </span>
+            </Link>
+          )}
+          {/* The local editor for this watch. NODE_ENV is inlined at build, so a
+              production build renders nothing here. */}
+          {process.env.NODE_ENV !== "production" && (
+            <Link
+              href={`/admin/models?file=${encodeURIComponent(indexEntry.modelFile)}`}
+              className={cn(
+                "lab shrink-0 text-muted-foreground no-underline transition-colors hover:text-brand",
+                !brandDetails.logoImg && "ml-auto",
+              )}
+            >
+              Edit
             </Link>
           )}
         </div>

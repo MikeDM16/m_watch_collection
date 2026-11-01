@@ -1,7 +1,6 @@
-import { execFile } from "child_process";
 import fs from "fs";
 import path from "path";
-import { promisify } from "util";
+import { run, serial, TSX_CLI } from "@/app/admin/runScript";
 import type {
   MatchesFile,
   MatchOverride,
@@ -22,12 +21,10 @@ import { devOnly } from "../guard";
  * duplicates their logic, it only records the decision and runs them.
  */
 
-const run = promisify(execFile);
 const ROOT = process.cwd();
 const WORK_DIR = path.join(ROOT, ".sales");
 const OVERRIDES = path.join(WORK_DIR, "overrides.json");
 const MATCHES = path.join(WORK_DIR, "matches.json");
-const TSX_CLI = path.join(ROOT, "node_modules", "tsx", "dist", "cli.mjs");
 const PYTHON = process.env.SALES_PYTHON ?? (process.platform === "win32" ? "python" : "python3");
 
 const ACTIONS = ["confirm", "confirm-many", "assign", "none", "reset", "resync"] as const;
@@ -39,14 +36,6 @@ interface ReviewRequest {
   unit?: string;
   /** confirm-many: every sale to confirm, each with the match the page showed. */
   items?: { modelFile: string; unit: string }[];
-}
-
-// One pipeline run at a time: two quick clicks must not interleave their writes.
-let chain: Promise<unknown> = Promise.resolve();
-function serial<T>(task: () => Promise<T>): Promise<T> {
-  const next = chain.then(task, task);
-  chain = next.catch(() => undefined);
-  return next;
 }
 
 function readJson<T>(file: string): T | null {
@@ -69,14 +58,7 @@ async function runPipeline(reparse: boolean) {
     [process.execPath, [TSX_CLI, "scripts/sales/2_match.ts"]],
     [process.execPath, [TSX_CLI, "scripts/sales/3_build.ts"]],
   ];
-  for (const [cmd, args] of steps) {
-    await run(cmd, args, {
-      cwd: ROOT,
-      timeout: 300_000,
-      maxBuffer: 16 * 1024 * 1024,
-      windowsHide: true,
-    });
-  }
+  for (const [cmd, args] of steps) await run(cmd, args);
 }
 
 export async function POST(request: Request) {

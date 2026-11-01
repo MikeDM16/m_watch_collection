@@ -1,18 +1,13 @@
 "use client";
 
-import {
-  getExternalResource,
-  getImgURLForSizeType,
-  SizeType,
-} from "@/app/services/commonFunctions";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { MultiSelect, type SelectOption } from "@/components/ui/select";
 import { cn } from "@/lib/utils";
-import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { useEffect, useMemo, useRef, useState } from "react";
 
+import { DropMark, Thumbnail, usePhotoSelection } from "../components/photoOrder";
 import type { EditorEntry, EditorPhoto, SaveCounts } from "./journalEdit";
 
 const TEXTAREA =
@@ -32,34 +27,6 @@ function countMoved(photos: EditorPhoto[]): number {
     next.set(p.at.section, i + 1);
     return p.at.index !== i;
   }).length;
-}
-
-type Side = "before" | "after";
-
-/**
- * `ids` moved, keeping their order, to one side of `target` in their block.
- * A null target is the block's start ("before") or its end ("after"). Photos
- * only move within their block; the other blocks keep their places.
- */
-function moveWithin(
-  photos: EditorPhoto[],
-  section: number | null,
-  ids: Set<string>,
-  target: string | null,
-  side: Side,
-): EditorPhoto[] {
-  const block = photos.filter((p) => p.at.section === section);
-  const moving = block.filter((p) => ids.has(idOf(p)));
-  const rest = block.filter((p) => !ids.has(idOf(p)));
-  const at =
-    target === null
-      ? side === "before"
-        ? 0
-        : rest.length
-      : rest.findIndex((p) => idOf(p) === target) + (side === "after" ? 1 : 0);
-  const next = [...rest.slice(0, at), ...moving, ...rest.slice(at)];
-  let i = 0;
-  return photos.map((p) => (p.at.section === section ? next[i++] : p));
 }
 
 /** How many fields differ between what the file holds and what is on screen. */
@@ -92,29 +59,6 @@ function describe(counts: SaveCounts): string {
   return parts.length ? `Saved: ${parts.join(", ")}.` : "Nothing to save.";
 }
 
-function Thumbnail({ photo }: { photo: EditorPhoto }) {
-  // The local checkout first, so photos not yet pushed still show; GitHub if
-  // the file is not on this machine.
-  const [src, setSrc] = useState(`/api/admin/journal-image?path=${encodeURIComponent(photo.src)}`);
-  return (
-    <div className="relative aspect-[4/3] overflow-hidden bg-muted">
-      {/* Not draggable itself: the tile around it is what gets dragged. */}
-      <Image
-        src={src}
-        alt=""
-        fill
-        unoptimized
-        draggable={false}
-        sizes="(max-width: 640px) 100vw, 400px"
-        className="object-contain"
-        onError={() =>
-          setSrc(getExternalResource(getImgURLForSizeType(photo.src, SizeType.SLIDER)))
-        }
-      />
-    </div>
-  );
-}
-
 export default function JournalCaptionEditor({
   entry,
   published,
@@ -128,9 +72,25 @@ export default function JournalCaptionEditor({
   const [draft, setDraft] = useState(entry);
   const [status, setStatus] = useState<{ text: string; error?: boolean } | null>(null);
   const [saving, setSaving] = useState(false);
-  // Selection, for moving several photos at once. Photos only move within
-  // their block, so a drag or a "To start" acts on each block's share of it.
-  const [selected, setSelected] = useState<Set<string>>(() => new Set());
+  // Selection and dragging, for moving several photos at once. Photos only
+  // move within their block, so a drag or a "To start" acts on each block's
+  // share of the selection.
+  const {
+    selected,
+    select,
+    clear,
+    moveSelected,
+    carried,
+    dropAt,
+    gridProps,
+    slotProps,
+    handleProps,
+  } = usePhotoSelection({
+    items: draft.photos,
+    setItems: (update) => setDraft((d) => ({ ...d, photos: update(d.photos) })),
+    idOf,
+    blockOf: (p) => p.at.section,
+  });
 
   // The file as last read or written: what the draft is compared against.
   const [base, setBase] = useState(entry);
@@ -138,7 +98,7 @@ export default function JournalCaptionEditor({
     setBase(file);
     setDraft(file);
     // Identities are file positions, and a saved reorder renumbers them.
-    setSelected(new Set());
+    clear();
   };
 
   // A save adopts the file it wrote straight from its answer. The refresh
@@ -150,44 +110,6 @@ export default function JournalCaptionEditor({
     setSeen(entry);
     if (JSON.stringify(entry) !== JSON.stringify(base)) adopt(entry);
   }
-
-  // Click toggles a photo; Shift-click selects the run from the last one clicked.
-  const anchor = useRef<EditorPhoto | null>(null);
-  const select = (photo: EditorPhoto, run: boolean) => {
-    const from = anchor.current;
-    setSelected((current) => {
-      const next = new Set(current);
-      if (run && from && from.at.section === photo.at.section) {
-        const block = draft.photos.filter((p) => p.at.section === photo.at.section);
-        const ends = [
-          block.findIndex((p) => sameAt(p, from)),
-          block.findIndex((p) => sameAt(p, photo)),
-        ];
-        const [a, b] = ends.sort((x, y) => x - y);
-        block.slice(a, b + 1).forEach((p) => next.add(idOf(p)));
-      } else if (next.has(idOf(photo))) next.delete(idOf(photo));
-      else next.add(idOf(photo));
-      return next;
-    });
-    anchor.current = photo;
-  };
-
-  useEffect(() => {
-    if (!selected.size) return;
-    const clear = (e: KeyboardEvent) => e.key === "Escape" && setSelected(new Set());
-    window.addEventListener("keydown", clear);
-    return () => window.removeEventListener("keydown", clear);
-  }, [selected.size]);
-
-  const moveSelected = (side: Side) =>
-    setDraft((d) => {
-      const sections = new Set(
-        d.photos.filter((p) => selected.has(idOf(p))).map((p) => p.at.section),
-      );
-      let photos = d.photos;
-      for (const s of sections) photos = moveWithin(photos, s, selected, null, side);
-      return { ...d, photos };
-    });
 
   // Removing marks a photo, and the save takes it out of the file. The cover
   // cannot go; another cover has to be picked first.
@@ -204,74 +126,6 @@ export default function JournalCaptionEditor({
     if (removable.length < selectedPhotos.length) {
       setStatus({ text: "The cover stays selected but is not removed. Pick another cover first." });
     }
-  };
-
-  // Dragging: the ref is read by the drop handlers, the state only dims the
-  // photos being carried.
-  const drag = useRef<{ section: number | null; ids: Set<string> } | null>(null);
-  const [carried, setCarried] = useState<Set<string> | null>(null);
-  const [dropAt, setDropAt] = useState<{ id: string; side: Side } | null>(null);
-
-  const startDrag = (e: React.DragEvent, photo: EditorPhoto) => {
-    // The selection in this block when the photo is part of it, else the photo alone.
-    const ids = selected.has(idOf(photo))
-      ? new Set(
-          draft.photos
-            .filter((p) => p.at.section === photo.at.section && selected.has(idOf(p)))
-            .map(idOf),
-        )
-      : new Set([idOf(photo)]);
-    if (!selected.has(idOf(photo))) {
-      setSelected(new Set([idOf(photo)]));
-      anchor.current = photo;
-    }
-    drag.current = { section: photo.at.section, ids };
-    setCarried(ids);
-    e.dataTransfer.effectAllowed = "move";
-    e.dataTransfer.setData("application/x-journal-photos", String(ids.size));
-    if (ids.size > 1) {
-      const label = document.createElement("div");
-      label.textContent = `${ids.size} photos`;
-      label.className = "lab border border-border bg-background px-3 py-2 text-foreground";
-      label.style.cssText = "position: fixed; top: -100px; left: 0;";
-      document.body.append(label);
-      e.dataTransfer.setDragImage(label, 0, 0);
-      requestAnimationFrame(() => label.remove());
-    }
-  };
-
-  const endDrag = () => {
-    drag.current = null;
-    setCarried(null);
-    setDropAt(null);
-  };
-
-  const overPhoto = (e: React.DragEvent<HTMLElement>, photo: EditorPhoto) => {
-    const d = drag.current;
-    if (!d || d.section !== photo.at.section) return;
-    e.preventDefault();
-    e.stopPropagation();
-    e.dataTransfer.dropEffect = "move";
-    if (d.ids.has(idOf(photo))) return setDropAt(null);
-    // Left half: before it. Right half: after it. The grid reads left to right.
-    const box = e.currentTarget.getBoundingClientRect();
-    const side: Side = e.clientX < box.left + box.width / 2 ? "before" : "after";
-    setDropAt((at) =>
-      at?.id === idOf(photo) && at.side === side ? at : { id: idOf(photo), side },
-    );
-  };
-
-  const drop = (e: React.DragEvent) => {
-    e.preventDefault();
-    e.stopPropagation();
-    const d = drag.current;
-    if (d && dropAt) {
-      setDraft((cur) => ({
-        ...cur,
-        photos: moveWithin(cur.photos, d.section, d.ids, dropAt.id, dropAt.side),
-      }));
-    }
-    endDrag();
   };
 
   const changes = useMemo(() => countChanges(base, draft), [base, draft]);
@@ -428,10 +282,7 @@ export default function JournalCaptionEditor({
               place last marked; each photo marks a side of itself. */}
           <div
             className="mt-6 grid gap-x-6 gap-y-10 sm:grid-cols-2 xl:grid-cols-3"
-            onDragOver={(e) => {
-              if (drag.current?.section === (section?.index ?? null)) e.preventDefault();
-            }}
-            onDrop={drop}
+            {...gridProps(section?.index ?? null)}
           >
             {photos.map((photo, i) => {
               const position = captionIndex++;
@@ -444,26 +295,10 @@ export default function JournalCaptionEditor({
               // twice in one block is told apart by its place.
               const repeat = photos.slice(0, i).filter((p) => p.src === photo.src).length;
               return (
-                <div
-                  key={`${photo.src}#${repeat}`}
-                  className="relative"
-                  onDragOver={(e) => overPhoto(e, photo)}
-                  onDrop={drop}
-                >
-                  {dropAt?.id === id && (
-                    <span
-                      aria-hidden
-                      className={cn(
-                        "absolute inset-y-0 w-0.5 bg-brand",
-                        dropAt.side === "before" ? "-left-3" : "-right-3",
-                      )}
-                    />
-                  )}
+                <div key={`${photo.src}#${repeat}`} className="relative" {...slotProps(photo)}>
+                  {dropAt?.id === id && <DropMark side={dropAt.side} />}
                   <div
-                    draggable
-                    onDragStart={(e) => startDrag(e, photo)}
-                    onDragEnd={endDrag}
-                    onClick={(e) => select(photo, e.shiftKey)}
+                    {...handleProps(photo)}
                     className={cn(
                       "cursor-grab active:cursor-grabbing",
                       isSelected && "ring-2 ring-brand ring-offset-4 ring-offset-background",
@@ -471,7 +306,7 @@ export default function JournalCaptionEditor({
                     )}
                   >
                     {/* Its fallback to GitHub is state, so it starts over for another file. */}
-                    <Thumbnail key={photo.src} photo={photo} />
+                    <Thumbnail key={photo.src} src={photo.src} />
                   </div>
                   <div className="mt-2 flex items-center gap-3">
                     <label className="flex cursor-pointer items-center gap-1.5">
@@ -595,7 +430,7 @@ export default function JournalCaptionEditor({
               >
                 {restoring ? "Undo remove" : "Remove"}
               </Button>
-              <Button variant="ghost" size="sm" onClick={() => setSelected(new Set())}>
+              <Button variant="ghost" size="sm" onClick={clear}>
                 Clear
               </Button>
             </div>

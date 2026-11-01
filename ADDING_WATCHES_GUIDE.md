@@ -150,6 +150,17 @@ npm run generate-index
 
 This extracts the listing metadata (brand, legend, year, type, srcImage, series, movementTitle, saleReport) into `src/app/data/collection-index.json`. The homepage and listing pages read from this JSON index instead of loading all watch model files, which keeps dev mode fast.
 
+### Step 3c — Photos, tiles and fields in the model editor
+
+Once a watch's photos are in its folder in the local MWatchCollectionResources checkout, it can be finished in **`/admin/models`** (`npm run dev`, Admin in the header, then Watch Models; or **Edit** in the breadcrumb strip of any model page in dev):
+
+- **In the folder, not listed** shows the folder's photos that are not in `sliderImages` yet: Add one, or Add all. Photos commented out in the file are marked.
+- The gallery reorders by drag, Shift-click selects a run, and Remove takes a photo out (the image file stays in the resources repo). The **Cover** and **Hover** marks set `srcImage` and `hoverSrc`.
+- The specification, series, movement, features, year, type and special flag are editable. The sale report, brand and legend are not.
+- A hidden watch (its entry commented out) is listed first in the picker. Tick **Show on the site with this save** to uncomment its entry; it needs a cover and a hover photo from its gallery.
+
+Save edits the model file and `collectionData.tsx` in place through the TypeScript AST, so untouched fields, comments and formatting stay as they were. It reruns `generate-index` when the collection entry, series or movement changed. Run `python scripts/images/2_make_variants.py "<folder>"` afterwards for any photo it reports without variants, and push the resources repo before committing.
+
 ### Step 6 — Collection Set (if applicable)
 
 Collection sets are Journal entries now: `src/app/data/journal/entries/<slug>.ts`, with `kind: "set"`. A watch joins a set by its model file path, without the `.tsx`, in the entry's `watchGroups` (or `watches`):

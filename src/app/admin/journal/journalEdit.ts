@@ -1,16 +1,27 @@
-import prettier from "prettier";
 import ts from "typescript";
 
+import {
+  applyTextEdits,
+  EditConflict,
+  EditInvalid,
+  literal,
+  num,
+  objects,
+  parse,
+  prop,
+  rebuildArray,
+  setFields,
+  str,
+  strs,
+  type Edit,
+  type Obj,
+} from "../sourceEdit";
+
+export { EditConflict, EditInvalid };
+
 /**
- * Reads and edits a Journal entry file as source, through the TypeScript AST.
- *
- * The caption editor changes a handful of fields; everything else in the file
- * (the `BrandsEnum.X` reference, comments, the order of fields) must come back
- * byte for byte. So nothing is regenerated: each change is a text edit at the
- * exact range of the property it touches, and prettier tidies the result.
- *
- * Kept free of Next and of the filesystem, so it can be exercised from a
- * script against a scratch copy.
+ * Reads and edits a Journal entry file as source. The general machinery, and
+ * why it edits rather than regenerates, is in ../sourceEdit.
  */
 
 /**
@@ -71,67 +82,9 @@ export interface SaveCounts {
   removed: number;
 }
 
-export class EditConflict extends Error {}
-export class EditInvalid extends Error {}
-
-type Obj = ts.ObjectLiteralExpression;
-
-function parse(text: string) {
-  const source = ts.createSourceFile(
-    "entry.ts",
-    text,
-    ts.ScriptTarget.Latest,
-    true,
-    ts.ScriptKind.TS,
-  );
-  let entry: Obj | undefined;
-  source.forEachChild(function visit(node) {
-    if (
-      ts.isVariableDeclaration(node) &&
-      node.name.getText(source) === "entry" &&
-      node.initializer &&
-      ts.isObjectLiteralExpression(node.initializer)
-    ) {
-      entry = node.initializer;
-    }
-    node.forEachChild(visit);
-  });
-  if (!entry) throw new EditInvalid("No `const entry: JournalEntry = { … }` in this file.");
-  return { source, entry };
-}
-
-function prop(obj: Obj, name: string): ts.PropertyAssignment | undefined {
-  return obj.properties.find(
-    (p): p is ts.PropertyAssignment =>
-      ts.isPropertyAssignment(p) && (p.name as ts.Identifier).text === name,
-  );
-}
-
-function str(obj: Obj, name: string): string {
-  const init = prop(obj, name)?.initializer;
-  return init && ts.isStringLiteralLike(init) ? init.text : "";
-}
-
-function strs(obj: Obj, name: string): string[] {
-  const init = prop(obj, name)?.initializer;
-  if (!init || !ts.isArrayLiteralExpression(init)) return [];
-  return init.elements.filter(ts.isStringLiteralLike).map((e) => e.text);
-}
-
-function num(obj: Obj, name: string): number {
-  const init = prop(obj, name)?.initializer;
-  return init && ts.isNumericLiteral(init) ? Number(init.text) : 0;
-}
-
-function objects(obj: Obj, name: string): Obj[] {
-  const init = prop(obj, name)?.initializer;
-  if (!init || !ts.isArrayLiteralExpression(init)) return [];
-  return init.elements.filter(ts.isObjectLiteralExpression);
-}
-
 /** The entry as the editor needs it: plain values, photos tagged with their position. */
 export function readEntry(text: string): EditorEntry {
-  const { entry } = parse(text);
+  const { obj: entry } = parse(text, "entry");
   const photo = (o: Obj, at: PhotoAt): EditorPhoto => ({
     at,
     src: str(o, "src"),
@@ -168,17 +121,11 @@ export function readEntry(text: string): EditorEntry {
 
 /** The entry's dates, which the editor doesn't edit, for ordering the entry list. */
 export function readDates(text: string): { date: string; sections: { date: string }[] } {
-  const { entry } = parse(text);
+  const { obj: entry } = parse(text, "entry");
   return {
     date: str(entry, "date"),
     sections: objects(entry, "sections").map((s) => ({ date: str(s, "date") })),
   };
-}
-
-interface Edit {
-  start: number;
-  end: number;
-  text: string;
 }
 
 /** Where each field sits in an object, so an added field lands in its usual place. */
@@ -203,82 +150,6 @@ const ORDER: Record<"section" | "entry", string[]> = {
   ],
 };
 
-const literal = (value: string | string[]) =>
-  Array.isArray(value)
-    ? `[${value.map((v) => JSON.stringify(v)).join(", ")}]`
-    : JSON.stringify(value);
-
-/**
- * The edits that give `obj` these field values. `undefined` removes a field.
- * A value equal to what is already there produces no edit, so an untouched
- * entry saves to an untouched file.
- */
-function setFields(
-  source: ts.SourceFile,
-  obj: Obj,
-  kind: keyof typeof ORDER,
-  fields: Record<string, string | string[] | undefined>,
-): Edit[] {
-  const text = source.getFullText();
-  const edits: Edit[] = [];
-  const inserts = new Map<number, string[]>();
-
-  const plan = Object.entries(fields).map(([name, value]) => {
-    const existing = prop(obj, name);
-    const current = existing
-      ? ts.isArrayLiteralExpression(existing.initializer)
-        ? literal(existing.initializer.elements.filter(ts.isStringLiteralLike).map((e) => e.text))
-        : ts.isStringLiteralLike(existing.initializer)
-          ? literal(existing.initializer.text)
-          : existing.initializer.getText(source)
-      : undefined;
-    return { name, existing, current, wanted: value === undefined ? undefined : literal(value) };
-  });
-
-  // An inserted field is anchored on a neighbour, and that neighbour must not
-  // be one this same call deletes, or the two edits would overlap.
-  const removed = new Set(
-    plan.filter((f) => f.existing && f.wanted === undefined).map((f) => f.name),
-  );
-  const kept = obj.properties.filter(
-    (p) => !(ts.isPropertyAssignment(p) && removed.has((p.name as ts.Identifier).text)),
-  );
-
-  for (const { name, existing, current, wanted } of plan) {
-    if (current === wanted) continue;
-
-    if (existing && wanted !== undefined) {
-      edits.push({
-        start: existing.initializer.getStart(source),
-        end: existing.initializer.end,
-        text: wanted,
-      });
-    } else if (existing) {
-      // The property, its comma and the line break before it. Leaving that
-      // break behind reads to prettier as a deliberate blank line, so a field
-      // added and then cleared would not come back to the original bytes.
-      let end = existing.end;
-      while (/\s/.test(text[end])) end++;
-      if (text[end] === ",") end++;
-      edits.push({ start: existing.getFullStart(), end, text: "" });
-    } else if (wanted !== undefined) {
-      // Before the first field that normally follows it, else after the last.
-      const order = ORDER[kind];
-      const next = order
-        .slice(order.indexOf(name) + 1)
-        .filter((n) => !removed.has(n))
-        .map((n) => prop(obj, n))
-        .find(Boolean);
-      const at = next ? next.getStart(source) : kept[kept.length - 1].end;
-      const piece = next ? `${name}: ${wanted}, ` : `, ${name}: ${wanted}`;
-      inserts.set(at, [...(inserts.get(at) ?? []), piece]);
-    }
-  }
-
-  for (const [at, pieces] of inserts) edits.push({ start: at, end: at, text: pieces.join("") });
-  return edits;
-}
-
 const clean = (s: string) => s.trim();
 
 /**
@@ -291,7 +162,7 @@ export async function applyEdits(
   validWatches: Set<string>,
   filepath: string,
 ): Promise<{ text: string; counts: SaveCounts }> {
-  const { source, entry } = parse(text);
+  const { source, obj: entry } = parse(text, "entry");
   const before = readEntry(text);
   const counts: SaveCounts = {
     captions: 0,
@@ -390,30 +261,15 @@ export async function applyEdits(
   }
 
   // A reordered block, or one losing photos, gets its array rewritten with the
-  // photos it keeps, in their new order. Each carries its own text, edited or
-  // as written, with what sits above it: a comment, or a blank line (prettier
-  // keeps one), so moving a photo back gives back the original bytes. A
-  // comment after the last one stays at the end.
+  // photos it keeps, in their new order (rebuildArray keeps each one's comment
+  // and spacing, so moving a photo back gives back the original bytes).
   for (const b of blocks.filter((x) => x.changed)) {
     const array = prop(b.owner, "photos")!.initializer as ts.ArrayLiteralExpression;
-    const pieces = b.order.map((index) => {
-      const node = b.list[index];
-      const above = text.slice(node.getFullStart(), node.getStart(source));
-      const blank = /\n[ \t]*\n/.test(above) ? "\n" : "";
-      const comment = above.trim();
-      const body = rebuilt.get(node) ?? node.getText(source);
-      return `${blank}${comment ? `${comment}\n` : ""}${body}`;
-    });
-    const tail = text
-      .slice(b.list[b.list.length - 1].end, array.end - 1)
-      .replace(/^\s*,/, "")
-      .trim();
-    const kept = pieces.join(",\n") + (pieces.length && tail ? "," : "");
-    edits.push({
-      start: array.getStart(source),
-      end: array.end,
-      text: `[${kept}${tail ? `\n${tail}\n` : ""}]`,
-    });
+    const items = b.order.map((index) => ({
+      node: b.list[index],
+      body: rebuilt.get(b.list[index]),
+    }));
+    edits.push(rebuildArray(text, source, array, items));
     counts.moved += b.moved;
     counts.removed += b.removed;
   }
@@ -426,7 +282,7 @@ export async function applyEdits(
     if (!clean(s.title)) throw new EditInvalid(`Section ${s.index + 1} needs a title.`);
     const note = clean(s.note);
     edits.push(
-      ...setFields(source, node, "section", {
+      ...setFields(source, node, ORDER.section, {
         title: clean(s.title),
         note: note || undefined,
         watches: s.watches.length ? s.watches : undefined,
@@ -440,7 +296,7 @@ export async function applyEdits(
   const dek = clean(wanted.dek);
   const quote = clean(wanted.quote);
   edits.push(
-    ...setFields(source, entry, "entry", {
+    ...setFields(source, entry, ORDER.entry, {
       dek: dek || undefined,
       intro,
       quote: quote || undefined,
@@ -455,10 +311,5 @@ export async function applyEdits(
 
   if (!edits.length) return { text, counts };
 
-  let out = text;
-  for (const e of edits.sort((a, b) => b.start - a.start)) {
-    out = out.slice(0, e.start) + e.text + out.slice(e.end);
-  }
-  const options = await prettier.resolveConfig(filepath);
-  return { text: await prettier.format(out, { ...options, filepath }), counts };
+  return { text: await applyTextEdits(text, edits, filepath), counts };
 }

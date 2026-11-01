@@ -1,5 +1,18 @@
 # Changelog
 
+## [2026-10-31] — Watch model editor
+
+`/admin/models` is a local tool for one watch's model file and collection entry, with its photographs in front of you. In dev, every model page has an **Edit** link after the brand logo; a production build renders nothing there, and the page and its `/api/admin/model-edit` route are gated like the other tools.
+
+- **Photographs:** the Journal editor's ordering, now shared (`admin/components/photoOrder.tsx`). Click to select, Shift-click for a run, drag, To start / To end, Remove and Undo. **Cover** and **Hover** marks set `srcImage` and `hoverSrc`, which can't be removed while they hold those roles. Photos missing from the resources checkout, or without size variants, are flagged.
+- **In the folder, not listed:** the photos in the watch's folder that the gallery doesn't list (originals only, by the rules of `3_list_images.py`), to Add one by one or all at once. Ones commented out in the file are marked.
+- **Fields:** title, series (from the brand's `*BrandSeries.tsx`, or text), the model, case, dial and bracelet specification (enum pickers; the two `A + B` fields as multi-selects, written in the enum's order), the movement (any calibre in `MovementsDataDB`), features, and the entry's year, type and special flag. The brand, legend, an inline movement and the sale report are shown, not edited.
+- **New watches:** a watch whose entry is still commented out (`// Hidden until photos are added`) is listed first in the picker, and **Show on the site with this save** uncomments it, once it has a cover and a hover photo. The create-model wizard links straight to the editor.
+
+Saving edits both files through the TypeScript AST, like the caption editor: each change is a text edit at its exact range, so enum references, comments and field order stay as written, and an untouched file comes back byte for byte. The shared machinery moved to `admin/sourceEdit.ts`. Its array rebuild now keeps each element's exact leading text, and a removed photo hands its comment (such as `// Fórmula Mágica, Museu do Caramulo, 2026`) to the next one. A save that touches the collection entry, the series or the movement reruns `generate-index`, which now skips writing files whose content is unchanged.
+
+Verified in memory against every model file: all 339 save untouched to the same bytes. Reversed and restored, every photo and comment comes back; 11 files lose only a blank line that reached the top of the list, which prettier always drops. Also covered: enum and join edits, series and movement switches (including movements imported under another name), features, and publishing the hidden Benrus entry. In the browser, every editor action ran with no save sent, and the Journal editor's drag and remove checks still pass.
+
 ## [2026-10-26] — Journal
 
 A third kind of page beside brands and watches, at `/journal`. An entry is an **event** (cars and watches, a museum, a meeting) or a **collection set** (several watches photographed together). Both use one template, chosen from a visual mock: a hero, a lab-over-value strip, an optional intro and pull-quote, the **highlights**, then optional **sections**, then the linked watches as the catalogue's own tiles.

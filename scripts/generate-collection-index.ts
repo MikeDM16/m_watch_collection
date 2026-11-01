@@ -12,9 +12,15 @@ const fileContent = fs.readFileSync(dataFilePath, "utf-8");
 // on the way in. Writing them raw left the committed copy formatted and a fresh
 // run unformatted — the drift CI's "generated files are up to date" step catches.
 // Format here so what the generator writes is already what prettier would.
+//
+// Unchanged output is not written at all. The model editor runs this on every
+// save that touches the collection, under a running dev server, and a rewrite
+// of identical bytes would still invalidate every module that imports them.
 async function writeFormatted(filePath: string, contents: string) {
   const options = await prettier.resolveConfig(filePath);
-  fs.writeFileSync(filePath, await prettier.format(contents, { ...options, filepath: filePath }));
+  const formatted = await prettier.format(contents, { ...options, filepath: filePath });
+  if (fs.existsSync(filePath) && fs.readFileSync(filePath, "utf-8") === formatted) return;
+  fs.writeFileSync(filePath, formatted);
 }
 
 // Parse key -> modelFile mapping by scanning lines sequentially

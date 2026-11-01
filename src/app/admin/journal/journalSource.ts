@@ -79,16 +79,3 @@ export async function saveEntry(wanted: EditorEntry) {
   // the next change and wipe it.
   return { counts, written: text !== before, entry: loadEntry(wanted.file) };
 }
-
-/**
- * The local MWatchCollectionResources checkout, where photos sit before they
- * are pushed. Same convention as the add-watches lookup script.
- *
- * turbopackIgnore: a path built from an env var makes the build trace the whole
- * project into the server output. This only ever runs in development, behind
- * the dev gate, so there is nothing to trace.
- */
-export const RESOURCES_DIR = path.resolve(
-  /*turbopackIgnore: true*/
-  process.env.WATCH_RESOURCES_DIR ?? path.join(process.cwd(), "..", "MWatchCollectionResources"),
-);

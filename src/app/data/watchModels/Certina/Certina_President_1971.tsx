@@ -35,6 +35,14 @@ const details: WatchDetails = {
     "public/assets/Images/Certina/1971_Certina_President_25_651/IMG_5693.JPG",
     "public/assets/Images/Certina/1971_Certina_President_25_651/IMG_5694.JPG",
     "public/assets/Images/Certina/1971_Certina_President_25_651/IMG_5695.JPG",
+
+    "public/assets/Images/Certina/1971_Certina_President_25_651/IMG_6568.JPG",
+    "public/assets/Images/Certina/1971_Certina_President_25_651/IMG_6569.JPG",
+    "public/assets/Images/Certina/1971_Certina_President_25_651/IMG_6570.JPG",
+    "public/assets/Images/Certina/1971_Certina_President_25_651/IMG_6571.JPG",
+    "public/assets/Images/Certina/1971_Certina_President_25_651/IMG_6572.JPG",
+    "public/assets/Images/Certina/1971_Certina_President_25_651/IMG_6574.JPG",
+
     "public/assets/Images/Certina/1971_Certina_President_25_651/IMG_5696.JPG",
     "public/assets/Images/Certina/1971_Certina_President_25_651/IMG_5697.JPG",
     "public/assets/Images/Certina/1971_Certina_President_25_651/IMG_5698.JPG",
