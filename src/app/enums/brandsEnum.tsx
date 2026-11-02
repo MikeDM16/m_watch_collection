@@ -98,6 +98,7 @@ export const BrandsEnum = {
   UNIVERSAL_GENEVE: "Universal Geneve",
   UTINA: "Utina",
   VACHERON_CONSTANTIN: "Vacheron Constantin",
+  WM_OF_SWITZERLAND: "WM of Switzerland",
   WYLER_VETTA: "Wyler Vetta",
   ZENITH: "Zenith",
   ZODIAC: "Zodiac",

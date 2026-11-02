@@ -888,7 +888,11 @@
     "collectionSet": false,
     "series": "Neuchâtel",
     "movementTitle": "ETA 2391",
-    "saleReport": null,
+    "saleReport": {
+      "price": 100,
+      "date": "25/10/2026",
+      "url": "https://www.catawiki.pt/l/107597983"
+    },
     "modelFile": "Ernest_Borel/Ernest_Borel_Neuchatel_Incabloc_1962"
   },
   "Tissot Seastar Seven": {
@@ -2284,7 +2288,11 @@
     "collectionSet": false,
     "series": "Vintage Series",
     "movementTitle": "Certina Cal. 25-651",
-    "saleReport": null,
+    "saleReport": {
+      "price": 180,
+      "date": "26/10/2026",
+      "url": "https://www.catawiki.pt/l/107597508"
+    },
     "modelFile": "Certina/Certina_Blue_Ribbon_1977"
   },
   "Amyria Blue Shades AS 1950": {
@@ -4797,6 +4805,20 @@
     },
     "modelFile": "Tag_Heuer/Tag_Heuer_Monza_Automatic_Cal_6_2005"
   },
+  "WM of Switzerland Grand Prix Formula A1 Limited Edition 269/999": {
+    "brand": "WM of Switzerland",
+    "legend": "WM of Switzerland Grand Prix Formula A1 Limited Edition 269/999",
+    "year": 2006,
+    "type": "Sports",
+    "srcImage": "public/assets/Images/WM_of_Switzerland/2006_WM_of_Switzerland_Grand_Prix_A1/IMG_6727.JPG",
+    "hoverSrc": "public/assets/Images/WM_of_Switzerland/2006_WM_of_Switzerland_Grand_Prix_A1/IMG_6708.JPG",
+    "specialCollectionItem": true,
+    "collectionSet": false,
+    "series": "Grand Prix A1",
+    "movementTitle": "Valjoux 7753",
+    "saleReport": null,
+    "modelFile": "WM_of_Switzerland/WM_of_Switzerland_Grand_Prix_Formula_A1_Limited_Edition_269999_2006"
+  },
   "Tag Heuer Carrera Automatic Caliber 5": {
     "brand": "Tag Heuer",
     "legend": "Tag Heuer Carrera Automatic Caliber 5",
@@ -5306,7 +5328,11 @@
     "collectionSet": false,
     "series": "PRS 516",
     "movementTitle": "Valjoux 7750",
-    "saleReport": null,
+    "saleReport": {
+      "price": 856,
+      "date": "27/10/2026",
+      "url": "https://www.catawiki.pt/l/107831720"
+    },
     "modelFile": "Tissot/Tissot_PRS_516_Special_Nascar_Edition_2014"
   },
   "Tissot PRS 516 NASCAR Racing White Chronograph": {

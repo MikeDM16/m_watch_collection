@@ -3496,6 +3496,19 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
   //   href: require("../watchModels/Benrus/Benrus_Day_Date_Pointer_1950"),
   //   specialCollectionItem: false,
   // },
+
+  "WM of Switzerland Grand Prix Formula A1 Limited Edition 269/999": {
+    brand: BrandsEnum.WM_OF_SWITZERLAND,
+    legend: "WM of Switzerland Grand Prix Formula A1 Limited Edition 269/999",
+    year: 2006,
+    type: WatchTypeEnum.SPORTS,
+    srcImage:
+      "public/assets/Images/WM_of_Switzerland/2006_WM_of_Switzerland_Grand_Prix_A1/IMG_6727.JPG",
+    hoverSrc:
+      "public/assets/Images/WM_of_Switzerland/2006_WM_of_Switzerland_Grand_Prix_A1/IMG_6708.JPG",
+    href: require("../watchModels/WM_of_Switzerland/WM_of_Switzerland_Grand_Prix_Formula_A1_Limited_Edition_269999_2006"),
+    specialCollectionItem: true,
+  },
 };
 
 function sortCollection(items: Record<string, CollectionEntry>) {

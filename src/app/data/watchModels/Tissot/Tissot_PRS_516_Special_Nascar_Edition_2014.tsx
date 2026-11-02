@@ -86,6 +86,12 @@ const details: WatchDetails = {
     "public/assets/Images/Tissot/2014_Tissot_NASCAR_Racing_White_Blue_7750/IMG_3147.JPG",
   ],
 
+  saleReport: {
+    price: 856,
+    date: "27/10/2026",
+    url: "https://www.catawiki.pt/l/107831720",
+  },
+
   technicalData: {
     features: [
       featuresEnum.DATE,

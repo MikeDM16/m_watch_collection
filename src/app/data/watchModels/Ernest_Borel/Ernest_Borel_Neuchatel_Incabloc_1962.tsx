@@ -65,6 +65,12 @@ const details: WatchDetails = {
     "public/assets/Images/Ernest_Borel/1962_Ernest_Borel_Neuchatel_Incabloc_2391/IMG_5801.JPG",
   ],
 
+  saleReport: {
+    price: 145,
+    date: "25/10/2026",
+    url: "https://www.catawiki.pt/l/107597983",
+  },
+
   technicalData: {
     features: [featuresEnum.MECHANICAL, featuresEnum.INCABLOC],
 

@@ -68,6 +68,12 @@ const details: WatchDetails = {
     "public/assets/Images/Certina/1977_Certina_Blue_Ribbon_25_651/IMG_5688.JPG",
   ],
 
+  saleReport: {
+    price: 180,
+    date: "26/10/2026",
+    url: "https://www.catawiki.pt/l/107597508",
+  },
+
   technicalData: {
     features: [featuresEnum.AUTOMATIC, featuresEnum.DATE],
 

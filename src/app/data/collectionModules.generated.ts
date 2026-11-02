@@ -625,6 +625,8 @@ export const modelLoaders: Record<string, () => Promise<{ default: WatchDetails 
   "Utina/Utina_Sunburst_FE233_1972": () => import("./watchModels/Utina/Utina_Sunburst_FE233_1972"),
   "Vacheron_Constantin/Vacheron_Constantin_Patrimony_K1014_1978": () =>
     import("./watchModels/Vacheron_Constantin/Vacheron_Constantin_Patrimony_K1014_1978"),
+  "WM_of_Switzerland/WM_of_Switzerland_Grand_Prix_Formula_A1_Limited_Edition_269999_2006": () =>
+    import("./watchModels/WM_of_Switzerland/WM_of_Switzerland_Grand_Prix_Formula_A1_Limited_Edition_269999_2006"),
   "Wyler_Vetta/Wyler_Vetta_Camper_Chronograph_1987": () =>
     import("./watchModels/Wyler_Vetta/Wyler_Vetta_Camper_Chronograph_1987"),
   "Zenith/Zenith_El_Primero_ChronoMaster_2010": () =>
@@ -973,6 +975,7 @@ export type ModelFile =
   | "Utina/Utina_Enamel_Dial_FE233_1968"
   | "Utina/Utina_Sunburst_FE233_1972"
   | "Vacheron_Constantin/Vacheron_Constantin_Patrimony_K1014_1978"
+  | "WM_of_Switzerland/WM_of_Switzerland_Grand_Prix_Formula_A1_Limited_Edition_269999_2006"
   | "Wyler_Vetta/Wyler_Vetta_Camper_Chronograph_1987"
   | "Zenith/Zenith_El_Primero_ChronoMaster_2010"
   | "Zenith/Zenith_El_Primero_Port_Royal_V_2005"

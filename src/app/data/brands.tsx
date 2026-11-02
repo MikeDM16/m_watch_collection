@@ -829,4 +829,8 @@ export const brandsDB: Brand[] = [
     },
     displayBySeries: false,
   },
+  {
+    name: BrandsEnum.WM_OF_SWITZERLAND,
+    logoImg: "public/assets/Images/Brands_Logos/wm_of_switzerland_logo.png",
+  },
 ];

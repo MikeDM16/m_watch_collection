@@ -11,4 +11,5 @@ export const CaseThicknessEnum = {
   T_13: "13 mm",
   T_14: "14 mm",
   T_15: "15 mm",
+  T_16: "16 mm",
 };
