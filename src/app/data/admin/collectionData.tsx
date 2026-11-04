@@ -3509,6 +3509,16 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     href: require("../watchModels/WM_of_Switzerland/WM_of_Switzerland_Grand_Prix_Formula_A1_Limited_Edition_269999_2006"),
     specialCollectionItem: true,
   },
+  "Tissot Heritage 150th Anniversary Chronograph 0986/8888": {
+    brand: BrandsEnum.TISSOT,
+    legend: "Tissot Heritage 150th Anniversary Chronograph 0986/8888",
+    year: 2003,
+    type: WatchTypeEnum.DRESS,
+    srcImage: "public/assets/Images/Tissot/2003_Tissot_150th_Heritage_Chrono_986_8888/IMG_6956.JPG",
+    hoverSrc: "public/assets/Images/Tissot/2003_Tissot_150th_Heritage_Chrono_986_8888/IMG_6927.JPG",
+    href: require("../watchModels/Tissot/Tissot_Heritage_150th_Anniversary_Chronograph_0986_8888_2003"),
+    specialCollectionItem: true,
+  },
 };
 
 function sortCollection(items: Record<string, CollectionEntry>) {

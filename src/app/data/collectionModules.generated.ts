@@ -508,6 +508,8 @@ export const modelLoaders: Record<string, () => Promise<{ default: WatchDetails 
     import("./watchModels/Tissot/Tissot_Fetes_Des_Vignerons_2019_2"),
   "Tissot/Tissot_Heritage_130th_Anniversary_7734_1983": () =>
     import("./watchModels/Tissot/Tissot_Heritage_130th_Anniversary_7734_1983"),
+  "Tissot/Tissot_Heritage_150th_Anniversary_Chronograph_0986_8888_2003": () =>
+    import("./watchModels/Tissot/Tissot_Heritage_150th_Anniversary_Chronograph_0986_8888_2003"),
   "Tissot/Tissot_Heritage_150th_COSC_2003": () =>
     import("./watchModels/Tissot/Tissot_Heritage_150th_COSC_2003"),
   "Tissot/Tissot_Heritage_150th_COSC_884_8888_2003": () =>
@@ -911,6 +913,7 @@ export type ModelFile =
   | "Tissot/Tissot_Fetes_Des_Vignerons_2019"
   | "Tissot/Tissot_Fetes_Des_Vignerons_2019_2"
   | "Tissot/Tissot_Heritage_130th_Anniversary_7734_1983"
+  | "Tissot/Tissot_Heritage_150th_Anniversary_Chronograph_0986_8888_2003"
   | "Tissot/Tissot_Heritage_150th_COSC_2003"
   | "Tissot/Tissot_Heritage_150th_COSC_884_8888_2003"
   | "Tissot/Tissot_Heritage_1944_COSC_2011"

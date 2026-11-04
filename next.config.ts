@@ -44,12 +44,20 @@ const nextConfig: NextConfig = {
   // raw.githubusercontent.com sends max-age=300, and Vercel's documented
   // priority rule is that an origin's own Cache-Control always wins over one
   // set in next.config.ts. The route handler sets its own response headers
-  // instead. The matching /img/:path* rule further down in `headers` asserts
-  // the same values again at the config level — see the comment there.
+  // instead, and decides them per response: 30 days for a photo, no-store for
+  // a miss.
+  //
+  // So no rule below may match /img. A config header is applied before the
+  // handler runs, and send-response.js never overwrites a header that is
+  // already set, so a matching rule here silently replaces the handler's
+  // value. That is how a /img/:path* rule here once stamped 30-day immutable
+  // headers on 404s too, and a photo opened before its push stayed broken at
+  // the edge and in the browser. The `(?!img/)` lookahead keeps both rules off
+  // /img in the runtime matcher and in the routes-manifest regex.
 
   headers: async () => [
     {
-      source: "/:all*(svg|jpg|jpeg|png|webp|avif|ico|woff2)",
+      source: "/:all((?!img/).*)(svg|jpg|jpeg|png|webp|avif|ico|woff2)",
       headers: [
         {
           key: "Cache-Control",
@@ -58,30 +66,12 @@ const nextConfig: NextConfig = {
       ],
     },
     {
-      source: "/:path*",
+      source: "/:path((?!img/).*)",
       headers: [
         {
           key: "Cache-Control",
           value: "public, max-age=0, s-maxage=86400, stale-while-revalidate=604800",
         },
-      ],
-    },
-    {
-      // Without this, the generic /:path* rule above wins here too — header
-      // overriding is last-match-wins per key, and /img/:path* also matches
-      // that catch-all. Confirmed by direct testing: the route handler's own
-      // explicit Cache-Control was getting overwritten by the value above.
-      // Vercel's docs say a Function's own response headers take priority
-      // over next.config.ts, which would make this redundant, but that
-      // priority is Vercel-platform behavior that a local `next start` server
-      // doesn't reproduce — asserting the same value again here at the
-      // config level is what's actually been verified to work, in whichever
-      // environment ends up applying it.
-      source: "/img/:path*",
-      headers: [
-        { key: "Cache-Control", value: "public, max-age=2592000, immutable" },
-        { key: "CDN-Cache-Control", value: "public, max-age=2592000" },
-        { key: "Vercel-CDN-Cache-Control", value: "public, max-age=2592000" },
       ],
     },
   ],

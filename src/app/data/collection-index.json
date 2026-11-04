@@ -889,7 +889,7 @@
     "series": "Neuchâtel",
     "movementTitle": "ETA 2391",
     "saleReport": {
-      "price": 100,
+      "price": 145,
       "date": "25/10/2026",
       "url": "https://www.catawiki.pt/l/107597983"
     },
@@ -4460,6 +4460,20 @@
       "url": "https://www.catawiki.com/en/l/98063593"
     },
     "modelFile": "Tissot/Tissot_Heritage_150th_COSC_2003"
+  },
+  "Tissot Heritage 150th Anniversary Chronograph 0986/8888": {
+    "brand": "Tissot",
+    "legend": "Tissot Heritage 150th Anniversary Chronograph 0986/8888",
+    "year": 2003,
+    "type": "Dress",
+    "srcImage": "public/assets/Images/Tissot/2003_Tissot_150th_Heritage_Chrono_986_8888/IMG_6956.JPG",
+    "hoverSrc": "public/assets/Images/Tissot/2003_Tissot_150th_Heritage_Chrono_986_8888/IMG_6927.JPG",
+    "specialCollectionItem": true,
+    "collectionSet": false,
+    "series": "Heritage",
+    "movementTitle": "ETA 2894",
+    "saleReport": null,
+    "modelFile": "Tissot/Tissot_Heritage_150th_Anniversary_Chronograph_0986_8888_2003"
   },
   "Girard-Perregaux Ferrari Ref. 8020": {
     "brand": "Girard-Perregaux",

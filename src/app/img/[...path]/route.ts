@@ -15,7 +15,22 @@ const ORIGIN = "https://raw.githubusercontent.com/MikeDM16/MWatchCollectionResou
  *
  * getExternalResource (commonFunctions.tsx) builds every image URL as
  * `${SITE_URL}/img/...`, so this file's location is load-bearing.
+ *
+ * Only a successful response is cached. A miss is usually a photo that is not pushed yet, or
+ * not yet visible through GitHub raw's own 5-minute cache. It was once served
+ * with the 30-day immutable headers, so the Vercel edge and the browser both
+ * kept the 404 long after the photo existed. Every non-200, including a failed
+ * fetch, now goes out as `no-store`. This only works because next.config.ts
+ * keeps all its Cache-Control rules off /img. A config header on the same key
+ * would silently win over the one set here (send-response.js never overwrites
+ * a header that is already set).
  */
+const NO_STORE = {
+  "Cache-Control": "no-store",
+  "CDN-Cache-Control": "no-store",
+  "Vercel-CDN-Cache-Control": "no-store",
+};
+
 export async function GET(_request: Request, { params }: { params: Promise<{ path: string[] }> }) {
   const { path } = await params;
 
@@ -28,9 +43,17 @@ export async function GET(_request: Request, { params }: { params: Promise<{ pat
   // segment before params is ever populated — confirmed directly, a request
   // for ".../Brands_Logos/../Brands_Logos/x.PNG" arrives here already
   // collapsed to ".../Brands_Logos/x.PNG". `path` can't contain one.
-  const upstream = await fetch(`${ORIGIN}/${path.map(encodeURIComponent).join("/")}`);
+  let upstream: Response;
+  try {
+    upstream = await fetch(`${ORIGIN}/${path.map(encodeURIComponent).join("/")}`);
+  } catch {
+    return new Response(null, { status: 502, headers: NO_STORE });
+  }
   if (!upstream.ok || !upstream.body) {
-    return new Response(null, { status: upstream.status });
+    return new Response(null, {
+      status: upstream.ok ? 502 : upstream.status,
+      headers: NO_STORE,
+    });
   }
 
   // Deliberately not forwarding upstream's own Cache-Control or ETag — that's
