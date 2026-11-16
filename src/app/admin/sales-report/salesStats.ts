@@ -248,9 +248,9 @@ export interface ProfitBucket {
 
 // Resolve the span the chart should draw. For fixed windows we cap the end at the
 // current bucket so we never project empty future buckets; for "all time" we span
-// the data's own min/max sale date.
+// the data's own min/max date.
 function bucketingRange(
-  entries: CollectionIndexEntry[],
+  dates: Date[],
   opt: TimeWindowOption,
   g: Granularity,
   now: Date,
@@ -264,8 +264,8 @@ function bucketingRange(
   }
   let min = Infinity;
   let max = -Infinity;
-  for (const e of entries) {
-    const t = saleDateOf(e).getTime();
+  for (const d of dates) {
+    const t = d.getTime();
     if (Number.isNaN(t)) continue;
     if (t < min) min = t;
     if (t > max) max = t;
@@ -280,13 +280,14 @@ function bucketingRange(
 // Zero-filled buckets across the span, so lines and bars stay continuous. Every
 // over-time chart shares it; each fills in its own metric.
 function emptyBuckets<T>(
-  entries: CollectionIndexEntry[],
+  dates: Date[],
   opt: TimeWindowOption,
   now: Date,
   init: (key: string, label: string) => T,
-): { g: Granularity; buckets: Map<string, T> } | null {
-  const g = pickGranularity(opt, now);
-  const range = bucketingRange(entries, opt, g, now);
+  granularity?: Granularity,
+): { g: Granularity; range: DateRange; buckets: Map<string, T> } | null {
+  const g = granularity ?? pickGranularity(opt, now);
+  const range = bucketingRange(dates, opt, g, now);
   if (!range) return null;
 
   const multiYear = range.start.getFullYear() !== new Date(range.end.getTime() - 1).getFullYear();
@@ -296,7 +297,7 @@ function emptyBuckets<T>(
     const key = bucketKey(cur, g);
     buckets.set(key, init(key, bucketLabel(cur, g, multiYear)));
   }
-  return { g, buckets };
+  return { g, range, buckets };
 }
 
 // Revenue + count per time bucket.
@@ -305,7 +306,7 @@ export function bucketSalesOverTime(
   opt: TimeWindowOption,
   now: Date = new Date(),
 ): TimeBucket[] {
-  const sk = emptyBuckets(entries, opt, now, (key, label) => ({
+  const sk = emptyBuckets(entries.map(saleDateOf), opt, now, (key, label) => ({
     key,
     label,
     revenue: 0,
@@ -332,7 +333,7 @@ export function bucketProfitOverTime(
   opt: TimeWindowOption,
   now: Date = new Date(),
 ): ProfitBucket[] {
-  const sk = emptyBuckets(entries, opt, now, (key, label) => ({
+  const sk = emptyBuckets(entries.map(saleDateOf), opt, now, (key, label) => ({
     key,
     label,
     cost: 0,
@@ -356,6 +357,70 @@ export function bucketProfitOverTime(
   }
   return [...sk.buckets.values()];
 }
+
+// ─── Running balances over time (the ledger's day-by-day money) ─────────────
+
+/** "2026-03-14" as a local date, like parseSaleDate: `new Date(iso)` would be UTC. */
+export function parseIsoDate(iso: string): Date {
+  const [y, m, d] = iso.split("-").map(Number);
+  return new Date(y, (m ?? 1) - 1, d ?? 1);
+}
+
+export type BalanceBucket<K extends string> = { key: string; label: string } & Record<K, number>;
+
+/**
+ * Running sums of dated deltas, valued at the end of each bucket. Whatever came
+ * before the window is its opening balance, so a windowed chart still shows the
+ * totals to date, not just the window's own flows. "All time" runs from the first
+ * point to today, so a balance that has stopped moving stays drawn up to now.
+ */
+export function cumulativeOverTime<K extends string>(
+  points: ({ date: string } & Record<K, number>)[],
+  keys: readonly K[],
+  opt: TimeWindowOption,
+  now: Date = new Date(),
+  granularity?: Granularity,
+): BalanceBucket<K>[] {
+  const dated = points.map((p) => ({ p, d: parseIsoDate(p.date) }));
+  const zero = () => Object.fromEntries(keys.map((k) => [k, 0])) as Record<K, number>;
+  const sk = emptyBuckets(
+    [...dated.map((x) => x.d), now],
+    opt,
+    now,
+    (key, label) => ({ key, label, ...zero() }) as BalanceBucket<K>,
+    granularity ?? (opt.id === "all" ? "month" : undefined),
+  );
+  if (!sk) return [];
+
+  const opening = zero();
+  const start = sk.range.start.getTime();
+  const end = sk.range.end.getTime();
+  for (const { p, d } of dated) {
+    const t = d.getTime();
+    if (Number.isNaN(t) || t >= end) continue;
+    const target = t < start ? opening : sk.buckets.get(bucketKey(d, sk.g));
+    if (!target) continue;
+    for (const k of keys) (target as Record<K, number>)[k] += p[k];
+  }
+
+  const running = { ...opening };
+  const out: BalanceBucket<K>[] = [];
+  for (const b of sk.buckets.values()) {
+    for (const k of keys) {
+      running[k] += b[k];
+      (b as Record<K, number>)[k] = running[k];
+    }
+    out.push(b);
+  }
+  return out;
+}
+
+/** Axis ticks: "€12.3k", "€850", "−€2k". */
+export const compactEuro = (v: number): string => {
+  const a = Math.abs(v);
+  const s = a >= 1000 ? `€${Math.round(a / 100) / 10}k` : `€${Math.round(a)}`;
+  return v < 0 ? `−${s}` : s;
+};
 
 // ─── Brand chart dataset ────────────────────────────────────────────────────
 export interface BrandDatum {

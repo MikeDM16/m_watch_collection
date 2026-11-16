@@ -24,6 +24,8 @@ export interface LedgerRow {
   date: string | null;
   /** Column H: a note or a quoted hammer. Never a total. */
   note: string | null;
+  /** The note as an amount, when it is a single number ("350", 550). */
+  noteNumber?: number;
 }
 
 export interface LedgerBlock {
@@ -66,6 +68,8 @@ export interface LedgerDump {
   source: { file: string; mtime: string; sha256: string };
   sheets: string[];
   blocks: LedgerBlock[];
+  /** The Collection tab: watches kept, never sold. Absent in dumps made before it was read. */
+  collection?: LedgerBlock[];
   hints: SummaryHint[];
   issues: LedgerIssue[];
 }

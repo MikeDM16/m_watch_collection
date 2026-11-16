@@ -8,7 +8,7 @@ import {
 } from "@/components/ui/chart";
 import { Bar, BarChart, Cell, XAxis, YAxis } from "recharts";
 
-import { BrandDatum, formatPrice } from "../salesStats";
+import { BrandDatum, compactEuro, formatPrice } from "../salesStats";
 
 const BAR_COLORS = [
   "hsl(var(--chart-1))",
@@ -19,9 +19,6 @@ const BAR_COLORS = [
 ];
 
 const chartConfig = { revenue: { label: "Revenue" } } satisfies ChartConfig;
-
-const compactEuro = (v: number): string =>
-  v >= 1000 ? `€${Math.round(v / 100) / 10}k` : `€${Math.round(v)}`;
 
 // Horizontal bars, top-N brands by revenue.
 export function SalesByBrandChart({ data }: { data: BrandDatum[] }) {

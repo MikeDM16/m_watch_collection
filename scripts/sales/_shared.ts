@@ -62,6 +62,8 @@ export function loadOverrides(): OverridesFile {
     matches: o.matches ?? {},
     rowTypes: o.rowTypes,
     attributions: o.attributions,
+    keptModels: o.keptModels,
+    keptLinks: o.keptLinks,
   };
 }
 
@@ -378,6 +380,46 @@ export const hasToken = (tokens: Iterable<string>, tok: string): boolean => {
  */
 export function hasKeyword(s: string | null | undefined, keywords: readonly string[]): boolean {
   return rawWords(s).some((w) => keywords.some((k) => (k.length >= 7 ? sameToken(w, k) : w === k)));
+}
+
+/** Matched rarity at which the words alone are enough evidence: about two rare words. */
+const TEXT_ENOUGH = 5;
+
+/**
+ * How well the ledger's words name a catalogue model, 0–1: the share of the
+ * description the model explains, weighted by rarity, scaled down when what
+ * matched is thin; a shared reference or calibre number counts on its own.
+ */
+export function tokenTextScore(
+  modelTokens: string[],
+  ledgerTokens: string[],
+  idf: (tok: string) => number,
+): { t: number; note: string } {
+  const unitTokens = [...new Set(ledgerTokens)];
+  if (!unitTokens.length) return { t: 0, note: "ledger names nothing" };
+  let total = 0;
+  let hit = 0;
+  const matched: string[] = [];
+  let reference = false;
+  for (const tok of unitTokens) {
+    // A word matched through a typo weighs what the catalogue's spelling weighs:
+    // the ledger's "Barrete" is as rare as the catalogue's "Barrett".
+    const found = findToken(modelTokens, tok);
+    const w = idf(found ?? tok);
+    total += w;
+    if (found) {
+      hit += w;
+      matched.push(tok);
+      if (isReferenceToken(tok)) reference = true;
+    }
+  }
+  // How much of the ledger's description this model explains, scaled down when
+  // what matched is thin: "Vinted Chronograph" explains itself fully with one
+  // common word, which says little about which chronograph.
+  const coverage = total ? hit / total : 0;
+  const strength = Math.min(1, hit / TEXT_ENOUGH);
+  const t = Math.max(coverage * strength, reference ? 0.85 : 0);
+  return { t, note: matched.length ? `words: ${matched.join(", ")}` : "no shared words" };
 }
 
 /** Fingerprint of a ledger row that survives inserted rows and moved blocks. */

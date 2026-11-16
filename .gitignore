@@ -59,3 +59,8 @@ profiling/results
 # purchase prices, payouts, margins, match decisions. Never commit any of it.
 /scripts/*.xlsx
 /.sales/
+
+# The back-office ledger (scripts/ledger, /admin/ledger): every watch's money,
+# entered in the back-office. Local only, and the one copy of what is entered
+# there — back it up. Never commit any of it.
+/.ledger/

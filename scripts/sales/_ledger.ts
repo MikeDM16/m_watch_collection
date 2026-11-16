@@ -149,16 +149,41 @@ export interface Unit {
   hints: SummaryHint[];
 }
 
+/**
+ * Something bought and not sold yet: one named watch, or a lot's unsold share
+ * ("Omega Polaris 8 Watches", the slots no payout claimed). A view of `stock`,
+ * grouped: the allocations are the very ones `BlockResult.stock` holds.
+ */
+export interface StockItem {
+  /** `fingerprint:stock` for a named watch, `fingerprint:rest` for a lot's share. */
+  key: string;
+  block: LedgerBlock;
+  kind: "watch" | "lot-share";
+  label: string;
+  /** The purchase row it stands for (the lump's, for a lot share). */
+  anchor: LedgerRow;
+  /** Watches it covers: 1, or the lot's unsold slots. */
+  count: number;
+  tokens: string[];
+  allocations: Allocation[];
+}
+
 export interface BlockResult {
   block: LedgerBlock;
   kind: BlockKind | "unsold" | "void";
   units: Unit[];
   /** Money in watches not sold yet. */
   stock: Allocation[];
+  /** The same money, grouped per watch (or lot share) not sold yet. */
+  stockItems: StockItem[];
   /** Money tied to no watch. */
   overhead: Allocation[];
+  /** Every part of the block, pass-throughs included, as read. */
+  parts: Part[];
   /** Block total minus everything attributed. Zero unless this module has a bug. */
   delta: number;
+  /** `stock` minus what its items hold. Zero unless this module has a bug. */
+  stockItemsDelta: number;
 }
 
 export interface Interpretation {
@@ -169,7 +194,7 @@ export interface Interpretation {
   unitByRow: Map<string, Unit>;
 }
 
-interface Watch {
+export interface Watch {
   name: string;
   tokens: string[];
   anchor: LedgerRow;
@@ -207,18 +232,19 @@ export function itemTokens(s: string | null | undefined): string[] {
 }
 
 /** A quoted hammer ("550") or a sum ("35+8") in H is a note about money, not a name. */
-const isQuotedNumber = (s: string | null): boolean => !!s && /^"?\s*[\d.,+ ]+\s*"?$/.test(s);
+export const isQuotedNumber = (s: string | null): boolean => !!s && /^"?\s*[\d.,+ ]+\s*"?$/.test(s);
 
 /** What a row is about: its text, or its note when the text names nothing. */
-function nameTokens(row: LedgerRow): string[] {
+export function nameTokens(row: LedgerRow): string[] {
   const fromText = itemTokens(row.text);
   if (fromText.length) return fromText;
   return isQuotedNumber(row.note) ? [] : itemTokens(row.note);
 }
 
-const isGeneric = (s: string | null | undefined): boolean => lettered(tokenize(s)).length === 0;
+export const isGeneric = (s: string | null | undefined): boolean =>
+  lettered(tokenize(s)).length === 0;
 
-function displayName(row: LedgerRow, fallback: string): string {
+export function displayName(row: LedgerRow, fallback: string): string {
   if (!isGeneric(row.text)) return row.text;
   if (row.note && !isQuotedNumber(row.note) && !isGeneric(row.note)) return row.note;
   return fallback;
@@ -260,7 +286,7 @@ function isLotDescriptor(row: LedgerRow): boolean {
  * 130 chrono seconds hand alignement". The note is about F, a partial refund given
  * to the buyer; E is still the payout.
  */
-function isSaleRowRefund(row: LedgerRow): boolean {
+export function isSaleRowRefund(row: LedgerRow): boolean {
   return hasKeyword(row.text, SALE_WORDS) && hasKeyword(row.note, REFUND_WORDS);
 }
 
@@ -399,7 +425,10 @@ function bestWatches(tokens: string[], watches: Watch[]): Watch[] {
  * two segments. Segments naming nothing in this block leave their portion in the
  * shared pool (`unnamed`).
  */
-function namedTargets(row: LedgerRow, watches: Watch[]): { groups: Watch[][]; unnamed: number } {
+export function namedTargets(
+  row: LedgerRow,
+  watches: Watch[],
+): { groups: Watch[][]; unnamed: number } {
   const attempt = (s: string) => {
     const segments = s
       .split(/\s+(?:e|and|&)\s+|\s*[+,]\s*/i)
@@ -416,7 +445,7 @@ function namedTargets(row: LedgerRow, watches: Watch[]): { groups: Watch[][]; un
 
 // ─── Blocks ─────────────────────────────────────────────────────────────────
 
-function makeParts(block: LedgerBlock, ov: OverridesFile): Part[] {
+export function makeParts(block: LedgerBlock, ov: OverridesFile): Part[] {
   const parts: Part[] = [];
   const firstMoneyRow = block.rows.find((r) => r.received !== null || r.spent !== null)?.row;
 
@@ -526,9 +555,103 @@ interface Forced {
   unitKey: string;
 }
 
+function newStockItem(
+  block: LedgerBlock,
+  kind: StockItem["kind"],
+  label: string,
+  anchor: LedgerRow,
+  count: number,
+  tokens: string[],
+): StockItem {
+  return {
+    key: "",
+    block,
+    kind,
+    label,
+    anchor,
+    count: Math.max(1, count),
+    tokens,
+    allocations: [],
+  };
+}
+
+/**
+ * An unsold block's money, per watch: each purchase row is an item (a lump, "5x
+ * Novart", one item covering its count), a line on an item's row is that item's,
+ * a line naming items goes to them, and the rest is spread by watch count — the
+ * lot rules, without the sales.
+ */
+function groupUnsold(block: LedgerBlock, parts: Part[], blockName: string): StockItem[] {
+  const items: StockItem[] = [];
+  const watches: Watch[] = [];
+  const itemOf = new Map<Watch, StockItem>();
+  const purchases = new Set<Part>();
+  for (const p of parts) {
+    if (p.side !== "F" || p.kind !== "purchase") continue;
+    const toks = nameTokens(p.row);
+    const lump = isLotDescriptor(p.row) || !toks.length;
+    const item = newStockItem(
+      block,
+      lump ? "lot-share" : "watch",
+      displayName(p.row, blockName),
+      p.row,
+      lump ? itemCount(lotSource(p.row)) : 1,
+      toks,
+    );
+    item.allocations.push({ part: p, share: 1 });
+    items.push(item);
+    purchases.add(p);
+    const w: Watch = {
+      name: item.label,
+      tokens: toks,
+      anchor: p.row,
+      purchase: p,
+      sales: [],
+      fromSale: false,
+    };
+    watches.push(w);
+    itemOf.set(w, item);
+  }
+  if (!items.length) return items;
+
+  const total = items.reduce((n, it) => n + it.count, 0);
+  const spread = (part: Part, portion: number) => {
+    for (const it of items) {
+      const share = (portion * it.count) / total;
+      if (share > 1e-9) it.allocations.push({ part, share });
+    }
+  };
+  for (const part of parts) {
+    if (purchases.has(part)) continue;
+    const rowOwner = items.find((it) => it.anchor === part.row);
+    if (rowOwner) {
+      rowOwner.allocations.push({ part, share: 1 });
+      continue;
+    }
+    const { groups, unnamed } = namedTargets(part.row, watches);
+    const segments = groups.length + unnamed;
+    for (const g of groups)
+      for (const w of g) itemOf.get(w)!.allocations.push({ part, share: 1 / segments / g.length });
+    const shared = segments ? unnamed / segments : 1;
+    if (shared > 1e-9) spread(part, shared);
+  }
+  return items;
+}
+
 function interpretBlock(block: LedgerBlock, ov: OverridesFile, forced: Forced[]): BlockResult {
-  const result: BlockResult = { block, kind: "void", units: [], stock: [], overhead: [], delta: 0 };
+  const result: BlockResult = {
+    block,
+    kind: "void",
+    units: [],
+    stock: [],
+    stockItems: [],
+    overhead: [],
+    parts: [],
+    delta: 0,
+    stockItemsDelta: 0,
+  };
   const parts = makeParts(block, ov);
+  result.parts = parts;
   const live: Part[] = [];
   for (const p of parts) {
     if (p.kind === "passthrough") continue;
@@ -560,7 +683,9 @@ function interpretBlock(block: LedgerBlock, ov: OverridesFile, forced: Forced[])
       result.overhead.push(...all(money));
     } else if (holdsWatch && !(firstCost && CONSUMABLES.includes(firstCost.kind))) {
       result.kind = "unsold";
-      result.stock.push(...all(money.filter((p) => !back.has(p.row))));
+      const held = money.filter((p) => !back.has(p.row));
+      result.stock.push(...all(held));
+      result.stockItems = groupUnsold(block, held, blockName);
       result.overhead.push(...all(money.filter((p) => back.has(p.row))));
     } else {
       result.kind = "overhead";
@@ -734,10 +859,27 @@ function interpretBlock(block: LedgerBlock, ov: OverridesFile, forced: Forced[])
   const give = (w: Watch, part: Part, share: number) => {
     if (share > 1e-9) alloc.get(w)!.push({ part, share });
   };
+  // The lot's unsold slots, as one stock item: what no watch in it has claimed.
+  let restItem: StockItem | null = null;
+  const toRest = (part: Part, share: number) => {
+    result.stock.push({ part, share });
+    if (!restItem) {
+      restItem = newStockItem(
+        block,
+        "lot-share",
+        lumps.length ? displayName(lumps[0].row, blockName) : blockName,
+        lumps[0]?.row ?? block.rows[0],
+        lotSize - watches.length,
+        lumpTokens.length ? lumpTokens : titleTokens,
+      );
+      result.stockItems.push(restItem);
+    }
+    restItem.allocations.push({ part, share });
+  };
   const shareOut = (part: Part, portion: number) => {
     for (const w of watches) give(w, part, portion / lotSize);
     const rest = portion * (1 - watches.length / lotSize);
-    if (rest > 1e-9) result.stock.push({ part, share: rest });
+    if (rest > 1e-9) toRest(part, rest);
   };
   const lumpRows = new Set(lumps.map((p) => p.row));
 
@@ -756,7 +898,7 @@ function interpretBlock(block: LedgerBlock, ov: OverridesFile, forced: Forced[])
       if (lumpSlots) {
         for (const w of fromSale) give(w, part, 1 / lumpSlots);
         const rest = 1 - fromSale.length / lumpSlots;
-        if (rest > 1e-9) result.stock.push({ part, share: rest });
+        if (rest > 1e-9) toRest(part, rest);
       } else shareOut(part, 1);
       continue;
     }
@@ -781,7 +923,13 @@ function interpretBlock(block: LedgerBlock, ov: OverridesFile, forced: Forced[])
   for (const w of watches) {
     if (!w.sales.length) {
       const gone = w.purchase !== null && back.has(w.purchase.row);
-      (gone ? result.overhead : result.stock).push(...alloc.get(w)!);
+      const own = alloc.get(w)!;
+      (gone ? result.overhead : result.stock).push(...own);
+      if (!gone && own.length) {
+        const item = newStockItem(block, "watch", w.name, w.anchor, 1, w.tokens);
+        item.allocations.push(...own);
+        result.stockItems.push(item);
+      }
       continue;
     }
     const unit = newUnit(block, "lot", lotSize, w);
@@ -891,7 +1039,34 @@ export function interpretLedger(dump: LedgerDump, ov: OverridesFile): Interpreta
   for (const b of blocks) for (const a of [...b.stock, ...b.overhead]) add(a.part, signed(a));
   for (const b of blocks) b.delta = round2(b.block.computedTotal - (sums.get(b.block) ?? 0));
 
+  // Stock items: keyed like units but in their own namespace, and checked
+  // against the stock they group.
+  const seenStock = new Map<string, number>();
+  for (const b of blocks) {
+    for (const it of b.stockItems) {
+      it.allocations = mergeAllocations(it.allocations);
+      const text = isGeneric(it.anchor.text) ? it.block.rows[0].text : it.anchor.text;
+      const base = `${rowFingerprint(it.block.sheet, text, it.anchor.received, it.anchor.spent)}:${it.kind === "watch" ? "stock" : "rest"}`;
+      const n = (seenStock.get(base) ?? 0) + 1;
+      seenStock.set(base, n);
+      it.key = n === 1 ? base : `${base}#${n}`;
+    }
+    const held = b.stock.reduce((s, a) => s + signed(a), 0);
+    const grouped = b.stockItems.reduce(
+      (s, it) => s + it.allocations.reduce((t, a) => t + signed(a), 0),
+      0,
+    );
+    b.stockItemsDelta = round2(held - grouped);
+  }
+
   return { blocks, units, unitByKey, unitByRow };
+}
+
+/** One ledger line reaching a holder twice becomes one allocation. */
+export function mergeAllocations(allocations: Allocation[]): Allocation[] {
+  const merged = new Map<Part, number>();
+  for (const a of allocations) merged.set(a.part, (merged.get(a.part) ?? 0) + a.share);
+  return [...merged].map(([part, share]) => ({ part, share }));
 }
 
 /** The payout less any partial refund given to the buyer. */
@@ -957,8 +1132,8 @@ export function linkHints(interp: Interpretation, hints: SummaryHint[]): Map<Sum
   return linked;
 }
 
-/** A unit's attributed costs, as the contract's cost lines. */
-export function costLines(unit: Unit): CostLine[] {
+/** A unit's (or a stock item's) attributed costs, as the contract's cost lines. */
+export function costLines(unit: { allocations: Allocation[] }): CostLine[] {
   return unit.allocations
     .filter((a) => a.part.side === "F")
     .map((a) => ({

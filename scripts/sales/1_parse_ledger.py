@@ -8,7 +8,8 @@ faithful JSON copy of its per-watch blocks to .sales/ledger.json, for step 2
 interpret. Deciding which row is a purchase, a strap or a payout is step 2's job.
 
 WHAT A BLOCK IS
-Every block in the four year tabs ends in a total cell in column H holding
+Every block in the four year tabs, and in the Collection tab, ends in a total
+cell in column H holding
 
     =SUM(Ex:Ey)-SUM(Fx:Fy)
 
@@ -30,6 +31,14 @@ N "Ganho Real", O name). Their formulas point at ledger cells (`=E190`,
 references are extracted too. R26's offers table in N–R is not one of them and
 falls out naturally: its names sit in N, not O.
 
+THE COLLECTION TAB
+The watches kept, not bought to sell: the same block layout, one block per
+watch (or per purchase holding several), with its straps, service and box. It
+goes to its own key, `collection`, never into `blocks`, so steps 2 and 3 can
+never take a kept watch for stock or its money for the year tabs'. A note in H
+holding a single number (the "350" a watch cost, its money booked in a lot in
+the year tabs) is also kept as `noteNumber`.
+
 WHY THE SELF-CHECK
 Excel's SUM silently skips numbers typed as text ("283,94", "-12.5"). They are
 skipped here the same way, and listed, so every block's recomputed total must
@@ -37,10 +46,11 @@ equal the total Excel cached. A mismatch means this parser misread the sheet,
 so the script exits 1 rather than hand a wrong ledger downstream.
 
 PRIVACY
-Only the four year tabs reach the output. The workbook's other tabs (bank
-balances, investments, gold) are never extracted. Everything written lands in
-.sales/, which is gitignored along with the workbook itself. The workbook is
-opened read-only and never saved: a save through openpyxl drops Excel features.
+Only the four year tabs and the Collection tab reach the output. The
+workbook's other tabs (Resumo with its bank balances, investments, gold) are
+never extracted. Everything written lands in .sales/, which is gitignored along
+with the workbook itself. The workbook is read once into memory and never
+saved: a save through openpyxl drops Excel features.
 
 Dependencies:
     pip install openpyxl
@@ -52,6 +62,7 @@ Usage:
 
 import datetime as dt
 import hashlib
+import io
 import json
 import os
 import re
@@ -70,8 +81,10 @@ DEFAULT_WORKBOOK = os.path.join(
 OUT_DIR = os.path.join(REPO_ROOT, ".sales")
 OUT_FILE = os.path.join(OUT_DIR, "ledger.json")
 
-# The year tabs. Everything else in the workbook is deliberately left unread.
+# The year tabs, and the tab of watches kept. Everything else in the workbook is
+# deliberately left unread.
 LEDGER_SHEETS = ("R 17-23", "R24", "R25", "R26")
+COLLECTION_SHEET = "Collection"
 
 # Tabs with a summary table, and the column holding its hammer price. R24's
 # summary has no hammer column (its L cells hold stray counts), so none is read.
@@ -89,6 +102,9 @@ CELL_REF = re.compile(r"(?:'([^']+)'!|([A-Za-z0-9_]+)!)?\$?([A-Z]{1,3})\$?(\d+)"
 
 # Text that Excel would have summed had it been typed as a number.
 NUMERIC_TEXT = re.compile(r"^-?\d+(?:[.,]\d+)?$")
+
+# A note that is one amount, quoted or not: "350", 350, "283,94".
+NOTE_NUMBER = re.compile(r'^"?\s*(\d+(?:[.,]\d+)?)\s*"?$')
 
 TOLERANCE = 0.005
 
@@ -139,11 +155,18 @@ def cell_name(sheet, column, row):
     return f"{sheet}!{letters}{row}"
 
 
-def file_facts(path):
-    with open(path, "rb") as fh:
-        digest = hashlib.sha256(fh.read()).hexdigest()
+def read_workbook_bytes(path):
+    """The workbook's bytes, its mtime and their sha256. Read once, so both
+    openpyxl loads and the digest describe the same file even if Excel or
+    OneDrive writes it mid-run."""
+    try:
+        with open(path, "rb") as fh:
+            data = fh.read()
+    except PermissionError:
+        sys.exit(f"Cannot read {path}: it is locked, probably mid-save in Excel or OneDrive. "
+                 "Wait a moment (or close it) and run again.")
     mtime = dt.datetime.fromtimestamp(os.path.getmtime(path)).isoformat(timespec="seconds")
-    return mtime, digest
+    return data, mtime, hashlib.sha256(data).hexdigest()
 
 
 def find_blocks(wf, sheet, issues):
@@ -213,6 +236,10 @@ def read_row(wf, wv, sheet, r, issues, today):
 
     h_raw = wf.cell(r, COL_H).value
     row["note"] = None if is_formula(h_raw) else (as_text(values[COL_H]) or None)
+    if row["note"]:
+        m = NOTE_NUMBER.match(row["note"])
+        if m:
+            row["noteNumber"] = round(float(m.group(1).replace(",", ".")), 2)
     return row
 
 
@@ -324,8 +351,9 @@ def main(workbook):
 
     # Twice: once for the formulas (block ranges, summary references), once for
     # the values Excel cached (numbers, dates, totals).
-    wbf = load_workbook(workbook, data_only=False)
-    wbv = load_workbook(workbook, data_only=True)
+    data, mtime, digest = read_workbook_bytes(workbook)
+    wbf = load_workbook(io.BytesIO(data), data_only=False)
+    wbv = load_workbook(io.BytesIO(data), data_only=True)
 
     missing = [s for s in LEDGER_SHEETS if s not in wbf.sheetnames]
     if missing:
@@ -338,9 +366,14 @@ def main(workbook):
         if sheet in SUMMARY_HAMMER_COLUMN:
             hints.extend(parse_summaries(wbf[sheet], wbv[sheet], sheet))
 
-    mismatches = [b for b in blocks if not b["exact"]]
+    collection = []
+    if COLLECTION_SHEET in wbf.sheetnames:
+        collection = parse_sheet(wbf[COLLECTION_SHEET], wbv[COLLECTION_SHEET], COLLECTION_SHEET,
+                                 issues, today)
+    else:
+        print(f"Warning: no '{COLLECTION_SHEET}' tab; the kept collection will be empty.")
 
-    mtime, digest = file_facts(workbook)
+    mismatches = [b for b in blocks + collection if not b["exact"]]
     # Relative inside the repo, absolute outside it. The admin page resolves this
     # against the repo root to notice when the workbook has been edited since.
     workbook = os.path.abspath(workbook)
@@ -356,6 +389,7 @@ def main(workbook):
         "source": {"file": shown, "mtime": mtime, "sha256": digest},
         "sheets": list(LEDGER_SHEETS),
         "blocks": blocks,
+        "collection": collection,
         "hints": hints,
         "issues": issues,
     }
@@ -376,6 +410,7 @@ def main(workbook):
     print(f"Blocks:          {len(blocks)}   ("
           + " · ".join(f"{s}: {per_sheet[s]}" for s in LEDGER_SHEETS) + ")")
     print(f"Rows with money: {money_rows}")
+    print(f"Collection:      {len(collection)} blocks of watches kept")
     print(f"Summary rows:    {len(hints)}   ({sum(1 for h in hints if h['hammer'])} with a hammer price)")
     print(f"Totals checked:  {len(blocks) - len(mismatches)} ok · {len(mismatches)} mismatched")
     if kinds:

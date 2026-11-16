@@ -9,6 +9,7 @@ import {
   parse,
   prop,
   rebuildArray,
+  setFields,
   type ArrayItem,
   type Edit,
   type Obj,
@@ -258,6 +259,55 @@ export function readModel(text: string): EditorModel {
         }
       : null,
   };
+}
+
+/** A model's public sale report: the hammer, the auction date, the listing. */
+export interface SaleReportValue {
+  price: number;
+  /** "DD/MM/YYYY", as the catalogue writes it. */
+  date: string;
+  url?: string;
+}
+
+/**
+ * The model file with this sale report: its fields updated in place (a `review`
+ * the Catawiki step added stays), or a new `saleReport` between the photos and
+ * the technical data, where every model file keeps it. The same report gives
+ * the same bytes back.
+ */
+export async function writeSaleReport(
+  text: string,
+  report: SaleReportValue,
+  filepath: string,
+): Promise<string> {
+  if (!(report.price > 0) || !Number.isFinite(report.price))
+    throw new EditInvalid("The sale report needs the hammer price.");
+  if (!/^\d{2}\/\d{2}\/\d{4}$/.test(report.date))
+    throw new EditInvalid("The sale report's date is DD/MM/YYYY.");
+  if (report.url && !/^https?:\/\//.test(report.url))
+    throw new EditInvalid("The listing's address starts with http.");
+  const { source, details } = locate(text);
+  const sale = objectAt(details, "saleReport");
+  const price = String(Math.round(report.price * 100) / 100);
+  const edits: Edit[] = sale
+    ? setFields(source, sale, ["price", "date", "url", "review"], {
+        price: { raw: price },
+        date: report.date,
+        url: report.url || undefined,
+      })
+    : setFields(
+        source,
+        details,
+        ["title", "description", "sliderImages", "saleReport", "technicalData"],
+        {
+          saleReport: {
+            // The line break after "{" keeps prettier writing it out one field a
+            // line, as every other model file has it.
+            raw: `{\n price: ${price}, date: ${JSON.stringify(report.date)}${report.url ? `, url: ${JSON.stringify(report.url)}` : ""} }`,
+          },
+        },
+      );
+  return edits.length ? applyTextEdits(text, edits, filepath) : text;
 }
 
 /** The rules 3_list_images.py lists photos by: an original, under Images/, one dot, upper-case type. */

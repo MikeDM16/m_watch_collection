@@ -5,16 +5,24 @@ to its section of the private sales ledger, the original workbook in OneDrive
 (`~/OneDrive/Documentos/Excel Miguel/Relogios - Vendas.xlsx`, where it is kept up to
 date; pass another path to `1_parse_ledger.py` to read a different copy), and
 computes what each watch really earned: net payout, purchase and extras by
-category, profit, margin, return on cost and days held. The local sales report
-(`/admin/sales-report`, dev only) shows the result, and `/admin/sales-report/review`
-is where matches are confirmed or corrected.
+category, profit, margin, return on cost and days held. It also reads the
+workbook's **Collection** tab (the watches kept) and keeps the ledger day by day,
+so the report can show how the money has moved over time: everything spent and
+received, and the capital held in watches at cost, kept and bought to sell. The
+local sales report (`/admin/sales-report`, dev only) shows the result, and
+`/admin/sales-report/review` is where matches are confirmed or corrected.
+
+The workbook stands beside a **back-office ledger** (`/admin/ledger`, see
+`scripts/ledger/README.md`): every sync ends with `ledger:snapshot`, the workbook read as a
+ledger, so the back-office can compare the two line by line and figure by figure.
 
 ## Privacy
 
 - The workbook lives outside the repo, and everything derived from it is gitignored
   (`/.sales/`; `/scripts/*.xlsx` still covers any copy dropped there). The workbook
   also holds bank balances and investments, but only its
-  four year tabs (`R 17-23`, `R24`, `R25`, `R26`) are ever read.
+  four year tabs (`R 17-23`, `R24`, `R25`, `R26`) and its `Collection` tab are ever
+  read. `Resumo` is not: its "Coleção Atual" is recomputed from the Collection blocks.
 - Nothing is written to `collection-index.json` or to the model files. The index is
   sent to the browser on public pages.
 - The admin pages read `.sales/` with `fs` at request time, after the `NODE_ENV`
@@ -52,7 +60,7 @@ loaded. The route calls `python` (`python3` off Windows); set
 | ------------------- | ----------------------------------------------- | ---------------------------------------------------- | ------------------------------------------------------------ |
 | `1_parse_ledger.py` | the workbook                                    | `ledger.json`                                        | a block's recomputed total differs from Excel's cached total |
 | `2_match.ts`        | `ledger.json`, the catalogue, `overrides.json`  | `matches.json`, `adjudicate.json`, `match-report.md` | — (it reports)                                               |
-| `3_build.ts`        | `ledger.json`, `matches.json`, `overrides.json` | `financials.json`, `build-report.md`                 | any block does not reconcile                                 |
+| `3_build.ts`        | `ledger.json`, `matches.json`, `overrides.json` | `financials.json`, `build-report.md`                 | any block, or any money-over-time series, does not reconcile |
 
 ## How the ledger is read
 
@@ -147,6 +155,60 @@ two rows are identical. It leaves out row numbers and dates, so inserting rows o
 fixing a date in the workbook does not break decisions. If a row's text or
 amounts change, the report lists the override as stale and that sale falls back to
 automatic matching.
+
+## Watches kept and money over time
+
+**The Collection tab** (`_collection.ts`) is read like a year tab, into its own
+`collection` key of `ledger.json`, never into `blocks`, so a kept watch is never
+taken for stock or its money for the year tabs'. Rows split into parts exactly as
+there (`rowTypes` overrides apply), then:
+
+- a named purchase row is a kept watch; so is a named row bought and cancelled
+  (E = F, re-bought on a later row) and a named row with no money but a price
+  noted beside it (`"350"`, kept as `noteNumber`);
+- a named "purchase" under 15% of the block's first one is an extra on it
+  ("Riders tabs"); a trade-in row ("Retoma", "troca") is part of the first
+  watch's cost and is flagged `trade-in`; an unnamed cost in a block whose watch
+  has no purchase left is that purchase (the re-buy after a cancelled order);
+- everything else goes to the watch it names, else is split evenly. Each block
+  must add up to its own total.
+
+**Stock items.** `_ledger.ts` groups the stock it already counts into items: one
+per named watch not sold yet (`…:stock`) and one per lot's unsold share
+(`…:rest`, "Omega Polaris 8 Watches"). They are a view: `stock` itself is
+unchanged, and each block's items must add up to its stock.
+
+**Kept ↔ catalogue and ↔ stock** (`_kept.ts`, in step 2). Each kept watch is
+matched to a catalogue model with no sale report, on words alone, rarity counted
+over the whole catalogue; a clear, mutual best is accepted (`high`). A kept watch
+whose money is not in the Collection tab (`no-cost`, `no-purchase`) is proposed a
+link to the stock item holding it; once linked, that item's money counts as kept,
+from the same days, and leaves "bought to sell". A lot share covering N unsold
+watches gives min(1, kept/N) of itself, split evenly. A watch kept out of a
+year-tab block whose other watches sold (the Polaris lot, the Cuervo Habana)
+costs **effectively** what that block has not earned back: nothing, once the
+others' sales covered the whole block. Its own Collection-tab money (a later
+strap) still counts. A kept watch with its own purchase that reads like a stock
+item is flagged `possible-double-count`; "No link" on the review page clears it.
+
+Decisions live in `overrides.json` as `keptModels` and `keptLinks` (keyed by kept
+key, `Collection|text|received|spent`), set on the review page's **Watches kept**
+section or written by Claude with a reason. "Not in the catalogue" stays decided
+until a model no other kept watch is clearly matches it (it was added to the
+catalogue since): then the watch comes back for review.
+
+**Day by day.** `financials.json` `daily` holds, per date: payouts (`received`),
+year-tab spending net of refunds (`spent`), Collection spending
+(`collectionSpent`), and the change in capital at cost held as stock
+(`stockDelta`) and as kept watches (`keptDelta`). A sold watch holds its costs
+from the day each was paid until it sold (the payout day when the ledger's date is
+one, else the catalogue's auction day); a line paid after the sale counts on the
+sale day. Future dates count on the build day and are listed in `build-report.md`.
+Step 3 refuses to write unless:
+
+- received − spent − collectionSpent = the year tabs' total + the Collection's;
+- the stock series ends at the stock still for sale, and the kept series at the
+  Collection's cost plus the stock linked to it.
 
 ## Reading the figures
 

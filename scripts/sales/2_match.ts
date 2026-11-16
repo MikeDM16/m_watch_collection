@@ -42,12 +42,15 @@ import type {
   MatchStatus,
   ModelMatch,
 } from "../../src/app/admin/sales-report/salesData.types";
-import { loadCatalogue, type CatalogueSale } from "./_catalogue";
+import { loadCatalogue, loadOwned, type CatalogueSale } from "./_catalogue";
+import { interpretCollection } from "./_collection";
+import { matchKept } from "./_kept";
 import {
   costLines,
   interpretLedger,
   itemTokens,
   linkHints,
+  signed,
   type Interpretation,
   type Unit,
 } from "./_ledger";
@@ -56,9 +59,7 @@ import {
   catawikiFit,
   daysBetween,
   directFit,
-  findToken,
   hasToken,
-  isReferenceToken,
   LEDGER_JSON,
   loadOverrides,
   MATCH_REPORT,
@@ -67,6 +68,7 @@ import {
   readJson,
   requireFile,
   round2,
+  tokenTextScore,
   writeFileAtomic,
   writeJsonAtomic,
 } from "./_shared";
@@ -141,36 +143,8 @@ function dateScore(model: CatalogueSale, u: Unit): { d: number; note: string } {
   return { d, note: `paid ${lag} days after the auction` };
 }
 
-/** Matched rarity at which the words alone are enough evidence: about two rare words. */
-const TEXT_ENOUGH = 5;
-
-function textScore(model: CatalogueSale, u: Unit, idf: Idf): { t: number; note: string } {
-  const unitTokens = [...new Set(u.tokens)];
-  if (!unitTokens.length) return { t: 0, note: "ledger names nothing" };
-  let total = 0;
-  let hit = 0;
-  const matched: string[] = [];
-  let reference = false;
-  for (const tok of unitTokens) {
-    // A word matched through a typo weighs what the catalogue's spelling weighs:
-    // the ledger's "Barrete" is as rare as the catalogue's "Barrett".
-    const found = findToken(model.tokens, tok);
-    const w = idf(found ?? tok);
-    total += w;
-    if (found) {
-      hit += w;
-      matched.push(tok);
-      if (isReferenceToken(tok)) reference = true;
-    }
-  }
-  // How much of the ledger's description this model explains, scaled down when
-  // what matched is thin: "Vinted Chronograph" explains itself fully with one
-  // common word, which says little about which chronograph.
-  const coverage = total ? hit / total : 0;
-  const strength = Math.min(1, hit / TEXT_ENOUGH);
-  const t = Math.max(coverage * strength, reference ? 0.85 : 0);
-  return { t, note: matched.length ? `words: ${matched.join(", ")}` : "no shared words" };
-}
+const textScore = (model: CatalogueSale, u: Unit, idf: Idf) =>
+  tokenTextScore(model.tokens, u.tokens, idf);
 
 function score(model: CatalogueSale, u: Unit, idf: Idf, brandTokens: Set<string>): Scored {
   const price = priceScore(model, u);
@@ -531,6 +505,20 @@ function main() {
   for (const u of interp.units) units[u.key] = summarize(u);
   const unclaimed = interp.units.filter((u) => !taken.has(u)).map((u) => u.key);
 
+  // The watches kept: their catalogue model, and where their money sits.
+  const coll = interpretCollection(dump.collection ?? [], overrides);
+  const { owned, allTokens } = loadOwned();
+  const kept = matchKept(coll, interp, owned, allTokens, overrides);
+  const stockItems = interp.blocks
+    .flatMap((b) => b.stockItems)
+    .map((it) => ({
+      key: it.key,
+      label: it.label,
+      ref: `${it.block.sheet}!${it.anchor.row}`,
+      purchaseDate: it.anchor.date,
+      net: round2(-it.allocations.reduce((s, a) => s + signed(a), 0)),
+    }));
+
   const out: MatchesFile = {
     version: 1,
     generatedAt: new Date().toISOString(),
@@ -539,6 +527,11 @@ function main() {
     byModel,
     unclaimed,
     staleOverrides: stale,
+    kept,
+    stockItems,
+    ownedModels: owned
+      .map(({ modelFile, brand, legend }) => ({ modelFile, brand, legend }))
+      .sort((a, b) => a.legend.localeCompare(b.legend)),
   };
   writeJsonAtomic(MATCHES_JSON, out);
 
@@ -600,6 +593,10 @@ function main() {
     `${pad("Needs review:")}${count("ambiguous") + count("unmatched") + count("stale-override")}  (ambiguous ${count("ambiguous")} · unmatched ${count("unmatched")} · stale ${count("stale-override")})`,
   );
   console.log(`${pad("Confirmed no ledger entry:")}${count("no-ledger")}`);
+  const keptCount = (f: (k: (typeof kept)[number]) => boolean) => kept.filter(f).length;
+  console.log(
+    `${pad("Watches kept:")}${kept.length}  (model: ${keptCount((k) => !!k.model.modelFile)} matched, ${keptCount((k) => ["ambiguous", "unmatched", "stale-override"].includes(k.model.status))} to review · links: ${keptCount((k) => !!k.link?.stock)} made, ${keptCount((k) => !!k.link && !k.link.stock && k.link.status !== "no-ledger")} to review)`,
+  );
   console.log(
     `${pad("Answer key (bonus off):")}${key.correct}/${key.total} summary-table links ranked first`,
   );

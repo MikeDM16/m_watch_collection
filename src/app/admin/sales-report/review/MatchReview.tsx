@@ -9,6 +9,7 @@ import { Fragment, useMemo, useState } from "react";
 import { AdminTable, Th } from "../components/primitives";
 import type { LedgerUnitSummary, MatchesFile, MatchStatus, ModelMatch } from "../salesData.types";
 import { formatMoney, parseSaleDate } from "../salesStats";
+import { KeptReview, type KeptBody } from "./KeptReview";
 
 const STATUS_LABEL: Record<MatchStatus, string> = {
   user: "You",
@@ -52,7 +53,8 @@ type ReviewBody =
   | { action: "confirm" | "assign"; modelFile: string; unit: string }
   | { action: "none" | "reset"; modelFile: string }
   | { action: "confirm-many"; items: { modelFile: string; unit: string }[] }
-  | { action: "resync" };
+  | { action: "resync" }
+  | KeptBody;
 
 const unitLine = (u: LedgerUnitSummary) =>
   `${u.label} · ${u.sheet}!${u.saleRow} · ${formatMoney(u.received)}${u.payoutDate ? ` · ${u.payoutDate}` : ""}`;
@@ -134,7 +136,7 @@ export default function MatchReview({ matches }: { matches: MatchesFile }) {
   };
 
   async function send(body: ReviewBody) {
-    setBusy("modelFile" in body ? body.modelFile : body.action);
+    setBusy("modelFile" in body ? body.modelFile : "key" in body ? body.key : body.action);
     setError(null);
     try {
       const res = await fetch("/api/admin/sales-review", {
@@ -470,6 +472,8 @@ export default function MatchReview({ matches }: { matches: MatchesFile }) {
           </tbody>
         </AdminTable>
       )}
+
+      <KeptReview matches={matches} busy={busy} send={send} />
 
       <UnclaimedList matches={matches} />
     </div>

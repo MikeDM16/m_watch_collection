@@ -18,17 +18,8 @@ import {
 } from "../salesStats";
 import { BrandProfitTable } from "./BrandProfitTable";
 import { PnlTable } from "./PnlTable";
-import { SectionHeader, StatTile, WatchLink } from "./primitives";
+import { SectionHeader, StatTile, SubHeader, WatchLink } from "./primitives";
 import { ProfitOverTimeChart } from "./ProfitOverTimeChart";
-
-function SubHeader({ title, note }: { title: string; note?: string }) {
-  return (
-    <div className="mb-3 mt-10 flex flex-wrap items-baseline justify-between gap-2">
-      <h3 className="font-display text-lg font-medium">{title}</h3>
-      {note && <p className="text-xs text-muted-foreground">{note}</p>}
-    </div>
-  );
-}
 
 function FlipList({
   title,

@@ -5,6 +5,13 @@ const withAnalyzer = withBundleAnalyzer({
   enabled: process.env.ANALYZE === "true",
 });
 
+// Same flag and origin as IMAGE_PROXY_ENABLED and RESOURCES_ORIGIN in
+// src/app/siteConfig.ts. They are repeated here because next.config.ts module
+// resolution is CommonJS-only and can't import that file. Keep them in step.
+const IMAGE_PROXY_ENABLED = process.env.NEXT_PUBLIC_IMAGE_PROXY === "true";
+const RESOURCES_ORIGIN =
+  "https://raw.githubusercontent.com/MikeDM16/MWatchCollectionResources/master";
+
 const nextConfig: NextConfig = {
   // Vercel bills one image transformation per unique (url, w, q, Accept) cache
   // key. The catalogue is ~13.7k unique photos against a 5,000/month quota, so
@@ -37,8 +44,31 @@ const nextConfig: NextConfig = {
     minimumCacheTTL: 2678400, // 31 days, Vercel's documented CDN maximum
   },
 
-  // /img/[...path]/route.ts serves the resources repo through our own origin
-  // (getExternalResource builds every image URL as `${SITE_URL}/img/...`).
+  // Photos go straight to GitHub raw by default. The /img proxy below only runs
+  // with NEXT_PUBLIC_IMAGE_PROXY=true, because it is a Vercel Function and its
+  // Fast Origin Transfer got the Hobby team paused (see IMAGE_PROXY_ENABLED in
+  // siteConfig.ts).
+  //
+  // With the proxy off, any /img URL still out there (crawlers, cached HTML,
+  // shared links) is redirected to the same file on GitHub raw. Redirects are
+  // checked before the filesystem, so the route handler never runs: Vercel
+  // answers it at the CDN routing layer, with no function and no Fast Origin
+  // Transfer. It is a 307, not a 308, because browsers cache a 308 forever and
+  // that would outlive switching the proxy back on.
+  redirects: async () =>
+    IMAGE_PROXY_ENABLED
+      ? []
+      : [
+          {
+            source: "/img/:path*",
+            destination: `${RESOURCES_ORIGIN}/:path*`,
+            permanent: false,
+          },
+        ],
+
+  // With the proxy on, /img/[...path]/route.ts serves the resources repo
+  // through our own origin, and getExternalResource builds every image URL as
+  // `${SITE_URL}/img/...`.
   // That used to be a plain rewrite here, but a rewrite can only ever forward
   // the upstream's own Cache-Control to the browser, never override it —
   // raw.githubusercontent.com sends max-age=300, and Vercel's documented
@@ -81,9 +111,10 @@ const nextConfig: NextConfig = {
   // fs at request time. Those runtime reads make the file tracer copy that folder
   // — and, through the workbook check, all of scripts/, the ledger workbook
   // included — into the server bundle of any build made on a machine that has
-  // them. Nothing under either folder is ever needed at runtime.
+  // them. Nothing under either folder is ever needed at runtime. The back-office
+  // ledger (.ledger/) is private the same way.
   outputFileTracingExcludes: {
-    "/*": [".sales/**/*", "scripts/**/*"],
+    "/*": [".sales/**/*", ".ledger/**/*", "scripts/**/*"],
   },
 
   // Barrel-file tree shaking. lucide-react in particular exports ~1500 icons.

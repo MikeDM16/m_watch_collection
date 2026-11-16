@@ -42,9 +42,15 @@ test("the admin pages are gated too", async ({ page }) => {
   await expect(page.getByRole("heading", { name: "Development only" })).toBeVisible();
   // The profit figures come from the private sales ledger: none of it may render.
   await expect(page.getByText("Profitability")).toHaveCount(0);
+  await expect(page.getByText("Money over time")).toHaveCount(0);
 
   await page.goto("/admin/sales-report/review");
   await expect(page.getByRole("heading", { name: "Development only" })).toBeVisible();
+
+  await page.goto("/admin/ledger");
+  await expect(page.getByRole("heading", { name: "Development only" })).toBeVisible();
+  // Every watch's money: none of the ledger may render.
+  await expect(page.getByText("Compare with workbook")).toHaveCount(0);
 
   await page.goto("/admin/journal");
   await expect(page.getByRole("heading", { name: "Development only" })).toBeVisible();

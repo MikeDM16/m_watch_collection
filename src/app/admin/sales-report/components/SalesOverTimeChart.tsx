@@ -8,15 +8,12 @@ import {
 } from "@/components/ui/chart";
 import { Bar, CartesianGrid, ComposedChart, Line, XAxis, YAxis } from "recharts";
 
-import { formatPrice, TimeBucket } from "../salesStats";
+import { compactEuro, formatPrice, TimeBucket } from "../salesStats";
 
 const chartConfig = {
   revenue: { label: "Revenue", color: "hsl(var(--chart-1))" },
   count: { label: "Sales", color: "hsl(var(--chart-2))" },
 } satisfies ChartConfig;
-
-const compactEuro = (v: number): string =>
-  v >= 1000 ? `€${Math.round(v / 100) / 10}k` : `€${Math.round(v)}`;
 
 // Revenue as bars (left axis), sales count as a line (right axis).
 export function SalesOverTimeChart({ data }: { data: TimeBucket[] }) {

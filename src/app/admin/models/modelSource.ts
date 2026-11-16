@@ -1,6 +1,6 @@
 import fs from "fs";
 import path from "path";
-import { getImgURLForSizeType, SizeType } from "@/app/services/commonFunctions";
+import { getImgURLForSizeType, getSaleReportImage, SizeType } from "@/app/services/commonFunctions";
 
 import { RESOURCES_DIR } from "../resourcesDir";
 import { runTsx, serial } from "../runScript";
@@ -16,8 +16,10 @@ import {
   applyModelEdits,
   photoProblem,
   readModel,
+  writeSaleReport,
   type EditorModel,
   type ModelCounts,
+  type SaleReportValue,
 } from "./modelEdit";
 
 /**
@@ -188,6 +190,33 @@ export interface SaveResult {
   /** Photos kept in the gallery that have no size variants yet. */
   noVariants: number;
   loaded: LoadedModel;
+}
+
+/** Is the sale report's screenshot (saleReport.JPG, beside the cover photo) in the resources checkout? */
+export function saleImageExists(srcImage: string): boolean {
+  return exists(getSaleReportImage(srcImage));
+}
+
+/**
+ * Writes a model's public sale report (hammer, date, listing), then the
+ * collection index, which copies it. The model page shows saleReport.JPG for
+ * every model with a report, so callers check saleImageExists first.
+ */
+export async function saveSaleReport(
+  file: string,
+  report: SaleReportValue,
+): Promise<{ changed: boolean; warnings: string[] }> {
+  const filepath = modelPath(file);
+  const before = fs.readFileSync(filepath, "utf-8");
+  const after = await writeSaleReport(before, report, filepath);
+  if (after === before) return { changed: false, warnings: [] };
+  fs.writeFileSync(filepath, after, "utf-8");
+  const { stdout, stderr } = await serial(() => runTsx("scripts/generate-collection-index.ts"));
+  const warnings = `${stderr}\n${stdout}`
+    .split("\n")
+    .map((l) => l.trim())
+    .filter((l) => /warn|different|No modelFile/i.test(l));
+  return { changed: true, warnings };
 }
 
 export async function saveModel(wanted: SaveRequest): Promise<SaveResult> {

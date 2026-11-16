@@ -98,6 +98,7 @@ export const ADMIN_ROUTES = [
   { method: "POST", path: "/api/admin/create-model" },
   { method: "POST", path: "/api/admin/create-movement" },
   { method: "POST", path: "/api/admin/sales-review" },
+  { method: "POST", path: "/api/admin/ledger" },
   { method: "POST", path: "/api/admin/journal" },
   { method: "POST", path: "/api/admin/model-edit" },
   // A real photo path, so a missing gate would answer 200, not a 404 for the file.

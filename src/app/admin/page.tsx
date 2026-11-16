@@ -32,6 +32,12 @@ const TOOLS = [
     title: "Ledger matches",
     description: "How the sync matched each sale to the ledger, to confirm or correct.",
   },
+  {
+    href: "/admin/ledger",
+    title: "Ledger",
+    description:
+      "Every watch's money, entered here beside the workbook: lines, watches, lots, and where the two disagree.",
+  },
 ];
 
 /**

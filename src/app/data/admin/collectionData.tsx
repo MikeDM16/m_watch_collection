@@ -3515,7 +3515,7 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     year: 2003,
     type: WatchTypeEnum.DRESS,
     srcImage: "public/assets/Images/Tissot/2003_Tissot_150th_Heritage_Chrono_986_8888/IMG_6956.JPG",
-    hoverSrc: "public/assets/Images/Tissot/2003_Tissot_150th_Heritage_Chrono_986_8888/IMG_6927.JPG",
+    hoverSrc: "public/assets/Images/Tissot/2003_Tissot_150th_Heritage_Chrono_986_8888/IMG_6930.JPG",
     href: require("../watchModels/Tissot/Tissot_Heritage_150th_Anniversary_Chronograph_0986_8888_2003"),
     specialCollectionItem: true,
   },

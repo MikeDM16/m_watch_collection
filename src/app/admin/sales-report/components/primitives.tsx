@@ -45,6 +45,16 @@ export function SectionHeader({ title }: { title: string }) {
   );
 }
 
+/** A sub-section heading inside a section, with an optional note to its right. */
+export function SubHeader({ title, note }: { title: string; note?: string }) {
+  return (
+    <div className="mb-3 mt-10 flex flex-wrap items-baseline justify-between gap-2">
+      <h3 className="font-display text-lg font-medium">{title}</h3>
+      {note && <p className="text-xs text-muted-foreground">{note}</p>}
+    </div>
+  );
+}
+
 /** Table shells, so both admin tables and the site's sales table agree. */
 export function AdminTable({ children }: { children: React.ReactNode }) {
   return (

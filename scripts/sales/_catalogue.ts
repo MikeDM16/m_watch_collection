@@ -44,6 +44,63 @@ export interface Catalogue {
   brandTokens: Set<string>;
 }
 
+type Entry = (typeof CollectionItemsDB)[string];
+
+/** What a model says about itself: brand, legend, title, reference, movement, and extra words. */
+function describe(entry: Entry, extra = "") {
+  const details = entry.href.default;
+  const info = details.technicalData?.information;
+  const title = details.title ?? "";
+  const reference = info?.catalogueReference ?? "";
+  const movement = details.technicalData?.movement?.title ?? "";
+  const brandTokens = tokenize(entry.brand);
+  const tokens = [
+    ...new Set([
+      ...brandTokens,
+      ...tokenize(entry.legend),
+      ...tokenize(title),
+      ...tokenize(reference),
+      ...tokenize(movement),
+      ...tokenize(extra),
+    ]),
+  ];
+  return { title, reference, movement, brandTokens, tokens };
+}
+
+/** A catalogue model with no sale report: a watch still owned, or never recorded as sold. */
+export interface OwnedModel {
+  modelFile: string;
+  brand: string;
+  legend: string;
+  brandTokens: string[];
+  tokens: string[];
+}
+
+/**
+ * Every model without a sale report (what a kept watch can be), and the tokens
+ * of every model, sold or not (for rarity weights over the whole catalogue).
+ */
+export function loadOwned(): { owned: OwnedModel[]; allTokens: string[][] } {
+  const index = readJson<Record<string, CollectionIndexEntry>>(INDEX_JSON);
+  const owned: OwnedModel[] = [];
+  const allTokens: string[][] = [];
+  for (const [key, entry] of Object.entries(CollectionItemsDB)) {
+    const report = entry.href.default.saleReport;
+    const d = describe(entry, slugWords(report?.url));
+    allTokens.push(d.tokens);
+    const indexed = index[key];
+    if (report || !indexed) continue;
+    owned.push({
+      modelFile: indexed.modelFile,
+      brand: entry.brand,
+      legend: entry.legend,
+      brandTokens: d.brandTokens,
+      tokens: d.tokens,
+    });
+  }
+  return { owned, allTokens };
+}
+
 export function loadCatalogue(): Catalogue {
   const index = readJson<Record<string, CollectionIndexEntry>>(INDEX_JSON);
   const sales: CatalogueSale[] = [];
@@ -58,20 +115,7 @@ export function loadCatalogue(): Catalogue {
     const indexed = index[key];
     if (!report || !indexed) continue;
 
-    const info = details.technicalData?.information;
-    const title = details.title ?? "";
-    const reference = info?.catalogueReference ?? "";
-    const movement = details.technicalData?.movement?.title ?? "";
-    const tokens = [
-      ...new Set([
-        ...brandToks,
-        ...tokenize(entry.legend),
-        ...tokenize(title),
-        ...tokenize(reference),
-        ...tokenize(movement),
-        ...tokenize(slugWords(report.url)),
-      ]),
-    ];
+    const { title, reference, movement, tokens } = describe(entry, slugWords(report.url));
 
     sales.push({
       key,

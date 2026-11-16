@@ -1,17 +1,19 @@
 "use client";
 
 import { CollectionIndexEntry } from "@/app/data/collectionIndex";
+import { routeToCollectionBrandModelPage } from "@/app/services/commonFunctions";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import Link from "next/link";
 import { useMemo, useState } from "react";
 
+import { MoneySection } from "./components/MoneySection";
 import { AdminTable, SectionHeader, StatTile, Th, WatchLink } from "./components/primitives";
 import { ProfitabilitySection } from "./components/ProfitabilitySection";
 import { ReconciliationPanel } from "./components/ReconciliationPanel";
 import { SalesByBrandChart } from "./components/SalesByBrandChart";
 import { SalesOverTimeChart } from "./components/SalesOverTimeChart";
 import { WindowSelector } from "./components/WindowSelector";
-import type { SalesFinancials } from "./salesData.types";
+import type { KeptWatchFinancials, SalesFinancials } from "./salesData.types";
 import {
   brandBreakdown,
   bucketSalesOverTime,
@@ -27,16 +29,48 @@ import {
   yearWindowOptions,
 } from "./salesStats";
 
+/** Where the report's money figures come from. */
+export type ReportSource = "workbook" | "ledger";
+
+const SOURCES: { id: ReportSource; label: string; href: string }[] = [
+  { id: "workbook", label: "Workbook", href: "/admin/sales-report" },
+  { id: "ledger", label: "Back-office", href: "/admin/sales-report?source=ledger" },
+];
+
 export default function SalesReportDashboard({
   sold,
   financials,
   stale,
+  keptModels = {},
+  source = "workbook",
+  hasLedger = false,
+  ledgerIssues = [],
 }: {
   sold: CollectionIndexEntry[];
-  /** The sales ledger's P&L, or null until `npm run sales:sync` has run. */
+  /** The P&L from the active source, or null until it exists. */
   financials: SalesFinancials | null;
   stale: boolean;
+  /** Catalogue brand and legend of each kept watch's model, by modelFile. */
+  keptModels?: Record<string, { brand: string; legend: string }>;
+  source?: ReportSource;
+  /** Has the back-office ledger been seeded (`npm run ledger:import`)? */
+  hasLedger?: boolean;
+  /** Problems the ledger build found: a line not fully held, a sold watch with no sale. */
+  ledgerIssues?: string[];
 }) {
+  const keptLink = (k: KeptWatchFinancials) => {
+    const m = k.modelFile ? keptModels[k.modelFile] : undefined;
+    if (!m) return k.label;
+    return (
+      <Link
+        href={routeToCollectionBrandModelPage(m.brand, m.legend)}
+        className="underline-offset-4 transition-colors hover:text-brand hover:underline"
+        title={k.label === m.legend ? undefined : `Collection tab: ${k.label}`}
+      >
+        {m.legend}
+      </Link>
+    );
+  };
   const [windowId, setWindowId] = useState<TimeWindowId>(DEFAULT_WINDOW_ID);
 
   const years = useMemo(() => yearWindowOptions(sold), [sold]);
@@ -55,15 +89,58 @@ export default function SalesReportDashboard({
           <p className="lab">Local tool</p>
           <h1 className="mt-2 font-display text-display-m font-medium">Sales Report</h1>
         </div>
-        {financials && (
-          <Link
-            href="/admin/sales-report/review"
-            className="text-sm text-muted-foreground underline-offset-4 transition-colors hover:text-brand hover:underline"
-          >
-            Review ledger matches →
-          </Link>
-        )}
+        <div className="flex flex-col items-end gap-3">
+          {hasLedger && (
+            <nav aria-label="Figures from" className="flex items-center gap-1 text-sm">
+              <span className="lab mr-2">Figures from</span>
+              {SOURCES.map((s) => (
+                <Link
+                  key={s.id}
+                  href={s.href}
+                  aria-current={source === s.id ? "page" : undefined}
+                  className={`rounded-sm border px-2.5 py-1 text-xs transition-colors ${
+                    source === s.id
+                      ? "border-brand text-brand"
+                      : "border-border text-muted-foreground hover:text-foreground"
+                  }`}
+                >
+                  {s.label}
+                </Link>
+              ))}
+            </nav>
+          )}
+          <div className="flex gap-4 text-sm">
+            {hasLedger && (
+              <Link
+                href="/admin/ledger"
+                className="text-muted-foreground underline-offset-4 transition-colors hover:text-brand hover:underline"
+              >
+                Back-office ledger →
+              </Link>
+            )}
+            {financials && source === "workbook" && (
+              <Link
+                href="/admin/sales-report/review"
+                className="text-muted-foreground underline-offset-4 transition-colors hover:text-brand hover:underline"
+              >
+                Review workbook matches →
+              </Link>
+            )}
+          </div>
+        </div>
       </div>
+
+      {ledgerIssues.length > 0 && (
+        <div className="mb-6 border border-brand/40 bg-brand/5 px-4 py-3 text-sm">
+          The back-office ledger has {ledgerIssues.length}{" "}
+          {ledgerIssues.length === 1 ? "problem" : "problems"}, so some figures may be off:
+          <ul className="mt-2 list-disc pl-5 text-xs text-muted-foreground">
+            {ledgerIssues.slice(0, 8).map((i) => (
+              <li key={i}>{i}</li>
+            ))}
+          </ul>
+        </div>
+      )}
 
       <div className="mb-6 flex flex-col gap-3">
         <WindowSelector
@@ -114,7 +191,16 @@ export default function SalesReportDashboard({
               sale to the sales ledger and see real costs, profit and margin here.
             </p>
           )}
+        </>
+      )}
 
+      {/* ───── Money over time (the ledger day by day; shown even with no sales in the window) ───── */}
+      {financials && (
+        <MoneySection data={financials} opt={opt} keptLink={keptLink} source={source} />
+      )}
+
+      {!isEmpty && (
+        <>
           {/* ───── Sales over time ───── */}
           <SectionHeader title="Sales over time" />
           <Card>

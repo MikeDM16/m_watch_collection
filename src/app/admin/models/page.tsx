@@ -2,10 +2,14 @@ import { routeToCollectionBrandModelPage } from "@/app/services/commonFunctions"
 import Link from "next/link";
 
 import DevOnly from "../DevOnly";
+import { watchSummaries } from "../ledger/buildFinancials";
+import type { ModelLedgerData } from "../ledger/editorTypes";
+import { LedgerPanel } from "../ledger/LedgerPanel";
+import { loadStore, readCatalogue } from "../ledger/ledgerStore";
 import { brandSeries, enumOptions, listMovements } from "./catalogue";
 import ModelEditor from "./ModelEditor";
 import ModelPicker from "./ModelPicker";
-import { listModels, loadModel } from "./modelSource";
+import { listModels, loadModel, saleImageExists } from "./modelSource";
 
 /**
  * A watch's fields and photographs, edited with the photos in front of you:
@@ -104,6 +108,42 @@ export default async function ModelsPage({
       )}
 
       <ModelEditor key={file} loaded={loaded} options={{ enums, series, movements }} />
+      <LedgerPanel data={modelLedger(file, loaded.collection.legend, loaded.model.saleReport)} />
     </div>
   );
+}
+
+/** This model's money in the back-office ledger, after the dev gate; null before the ledger exists. */
+function modelLedger(
+  file: string,
+  legend: string,
+  saleReport: ModelLedgerData["saleReport"],
+): ModelLedgerData | null {
+  const loaded = loadStore();
+  if (!loaded) return null;
+  const { store } = loaded;
+  const watches = store.watches.filter((w) => w.modelFile === file);
+  const ids = new Set(watches.map((w) => w.id));
+  const items = readCatalogue();
+  const entry = items.find((e) => e.modelFile === file);
+  return {
+    version: loaded.version,
+    modelFile: file,
+    legend: entry?.legend ?? legend ?? file,
+    watches,
+    lines: store.lines.filter((l) => l.holders.some((h) => ids.has(h.id))),
+    summaries: watchSummaries(store),
+    allWatches: store.watches,
+    groups: store.groups,
+    models: items
+      .map((e) => ({
+        modelFile: e.modelFile,
+        brand: e.brand,
+        legend: e.legend,
+        sold: !!e.saleReport,
+      }))
+      .sort((a, b) => a.legend.localeCompare(b.legend)),
+    saleReport,
+    saleImage: entry ? saleImageExists(entry.srcImage) : false,
+  };
 }

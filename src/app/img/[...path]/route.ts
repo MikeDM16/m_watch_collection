@@ -1,6 +1,13 @@
-const ORIGIN = "https://raw.githubusercontent.com/MikeDM16/MWatchCollectionResources/master";
+import { RESOURCES_ORIGIN as ORIGIN } from "../../siteConfig";
 
 /**
+ * Only reached when NEXT_PUBLIC_IMAGE_PROXY=true. Off by default:
+ * getExternalResource then builds GitHub raw URLs directly, and next.config.ts
+ * redirects any leftover /img URL to GitHub raw before this handler runs.
+ * Every photo this handler serves without a CDN cache hit is billed as Fast
+ * Origin Transfer, which is what got the Hobby team paused on 2026-11-15. See
+ * IMAGE_PROXY_ENABLED in siteConfig.ts.
+ *
  * Proxies the resources repo through our own origin, same as the /img rewrite
  * this replaces — but as a real Route Handler rather than a next.config.ts
  * rewrite, because a rewrite can only ever forward the upstream's OWN

@@ -43,7 +43,11 @@ export function ReconciliationPanel({ data }: { data: SalesFinancials }) {
         <StatTile
           label="In stock"
           value={formatMoney(totals.stock)}
-          sub="spent on watches not sold yet"
+          sub={
+            totals.stockKept
+              ? `not sold yet: ${formatMoney(-(totals.stockForSale ?? totals.stock))} for sale, ${formatMoney(-totals.stockKept)} kept (in the Collection tab)`
+              : "spent on watches not sold yet"
+          }
         />
       </div>
 
@@ -51,6 +55,10 @@ export function ReconciliationPanel({ data }: { data: SalesFinancials }) {
         {allOk
           ? `All ${reconciliation.blocks} ledger sections add up to their own totals, to the cent.`
           : `${reconciliation.blocks - reconciliation.ok} of ${reconciliation.blocks} ledger sections do not add up — re-run the sync and check the build output.`}{" "}
+        {data.collection &&
+          (data.collection.ok === data.collection.blocks
+            ? `The Collection tab is separate: ${data.kept?.length ?? 0} watches kept, ${formatMoney(-data.collection.net)} at cost, all ${data.collection.blocks} sections adding up. `
+            : `${data.collection.blocks - data.collection.ok} of the Collection tab's ${data.collection.blocks} sections do not add up. `)}
         {/* Sliced, not locale-formatted, so the server and the browser render the same text. */}
         Synced {data.generatedAt.slice(0, 16).replace("T", " ")} UTC from {data.source.file}.
       </p>

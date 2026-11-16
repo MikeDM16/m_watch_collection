@@ -1,7 +1,7 @@
 import type { LucideIcon } from "lucide-react";
 
 import { brandsDB } from "../data/brands";
-import { SITE_URL } from "../siteConfig";
+import { IMAGE_PROXY_ENABLED, RESOURCES_ORIGIN, SITE_URL } from "../siteConfig";
 
 /**
  * The single resource-image URL builder. Everything that shows a
@@ -11,26 +11,21 @@ import { SITE_URL } from "../siteConfig";
  * absolute URL rather than a same-origin relative path: social-preview
  * crawlers and satori's server-side fetch can't resolve a relative one.
  *
- * `${SITE_URL}/img/...`, not raw.githubusercontent.com directly. GitHub's raw
- * content sends `Cache-Control: max-age=300`, and that's theirs to set, not
- * ours — there's no way to override a response header on a host we don't own.
- * The `/img/:path*` rewrite in next.config.ts proxies this through our own
- * origin instead, so our own `headers()` rule controls the Cache-Control
- * (30 days: these photos don't change once published).
+ * By default the URL points straight at GitHub raw (RESOURCES_ORIGIN), so a
+ * photo never touches Vercel. With NEXT_PUBLIC_IMAGE_PROXY=true it is
+ * `${SITE_URL}/img/...` instead, served by src/app/img/[...path]/route.ts.
+ * That route sets a 30-day Cache-Control, where GitHub raw sends its own
+ * `max-age=300`. But it is a Vercel Function, and the Fast Origin Transfer it
+ * bills is what got the Hobby team paused. See IMAGE_PROXY_ENABLED.
  *
  * jsDelivr was tried in front of raw.githubusercontent.com at one point — same
  * warm latency, longer cache TTL on paper — but a burst of concurrent
  * first-time requests (exactly what a photo-heavy page produces) reproducibly
- * dropped 2.5-7.8% of them with 403/404/timeout, some persisting on retry. The
- * `/img` rewrite's destination stays plain raw.githubusercontent.com.
- *
- * Changing the rewrite destination's host means changing this base path in
- * the same commit, or every image 404s.
+ * dropped 2.5-7.8% of them with 403/404/timeout, some persisting on retry.
  */
 export function getExternalResource(image_url: string) {
-  const base_url = `${SITE_URL}/img`;
-  const proxy_url = `${encodeURI(base_url)}/${encodeURI(image_url)}`;
-  return proxy_url;
+  const base_url = IMAGE_PROXY_ENABLED ? `${SITE_URL}/img` : RESOURCES_ORIGIN;
+  return `${encodeURI(base_url)}/${encodeURI(image_url)}`;
 }
 
 /**

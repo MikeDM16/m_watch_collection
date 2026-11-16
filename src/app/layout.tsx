@@ -2,7 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Archivo, Geist, Geist_Mono, Sorts_Mill_Goudy } from "next/font/google";
 
 import { themeScript } from "./components/theme/themeScript";
-import { SITE_URL } from "./siteConfig";
+import { IMAGE_PROXY_ENABLED, SITE_URL } from "./siteConfig";
 
 import "./globals.css";
 
@@ -58,10 +58,11 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
     >
       <head>
         <script dangerouslySetInnerHTML={{ __html: themeScript }} />
-        {/* No preconnect to raw.githubusercontent.com here: getExternalResource
-            proxies resource images through our own origin (see next.config.ts's
-            /img rewrite), so the browser never opens a connection to that host
-            directly — preconnecting to it would just be a wasted connection. */}
+        {/* By default getExternalResource points every photo at GitHub raw, so
+            open that connection early. With NEXT_PUBLIC_IMAGE_PROXY=true photos
+            come from our own origin instead, and a preconnect to GitHub would
+            just be a wasted connection. */}
+        {!IMAGE_PROXY_ENABLED && <link rel="preconnect" href="https://raw.githubusercontent.com" />}
       </head>
       <body>{children}</body>
     </html>

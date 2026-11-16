@@ -9,7 +9,7 @@ import {
 } from "@/components/ui/chart";
 import { Bar, BarChart, CartesianGrid, XAxis, YAxis } from "recharts";
 
-import { formatMoney, formatPercent, ProfitBucket } from "../salesStats";
+import { compactEuro, formatMoney, formatPercent, ProfitBucket } from "../salesStats";
 
 // Profit wears the brand red, as the site's charts do; cost a blue validated
 // against it (colour-blind separation and contrast) on both the light and the
@@ -18,12 +18,6 @@ const chartConfig = {
   cost: { label: "Cost", theme: { light: "#2a78d6", dark: "#3987e5" } },
   profit: { label: "Profit", color: "hsl(var(--chart-1))" },
 } satisfies ChartConfig;
-
-const compactEuro = (v: number): string => {
-  const a = Math.abs(v);
-  const s = a >= 1000 ? `€${Math.round(a / 100) / 10}k` : `€${Math.round(a)}`;
-  return v < 0 ? `−${s}` : s;
-};
 
 function ProfitTooltip({
   active,

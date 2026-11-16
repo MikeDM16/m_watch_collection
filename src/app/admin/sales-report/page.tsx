@@ -1,15 +1,39 @@
 import collectionService from "@/app/services/collectionService";
 
 import DevOnly from "../DevOnly";
+import { ledgerExists, ledgerFinancials } from "../ledger/ledgerStore";
 import { loadFinancials } from "./loadSalesData";
-import SalesReportDashboard from "./SalesReportDashboard";
+import SalesReportDashboard, { type ReportSource } from "./SalesReportDashboard";
 
-export default function SalesReportPage() {
+/**
+ * The sales report, from either source: the workbook (the pipeline's last
+ * `npm run sales:sync`, the default) or the back-office ledger (`?source=ledger`,
+ * built at request time). Both give the same figures' shape, so every section
+ * reads the same; the compare view on /admin/ledger shows where they differ.
+ */
+export default async function SalesReportPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ source?: string }>;
+}) {
   if (process.env.NODE_ENV === "production") return <DevOnly />;
 
+  const { source: requested } = await searchParams;
   const sold = collectionService.getSoldModels();
-  // After the gate, at request time: the sales ledger's P&L is local-only data.
-  const financials = loadFinancials();
+  // After the gate, at request time: both sources are local-only data.
+  const hasLedger = ledgerExists();
+  const source: ReportSource = requested === "ledger" && hasLedger ? "ledger" : "workbook";
+  const workbook = source === "workbook" ? loadFinancials() : null;
+  const ledger =
+    source === "ledger"
+      ? ledgerFinancials(
+          sold.map((e) => ({
+            modelFile: e.modelFile,
+            price: e.saleReport!.price,
+            date: e.saleReport!.date,
+          })),
+        )
+      : null;
 
   if (sold.length === 0) {
     return (
@@ -25,11 +49,26 @@ export default function SalesReportPage() {
     );
   }
 
+  // The catalogue entries of the watches kept, so their names can link to their pages.
+  const financials = (source === "ledger" ? ledger?.data : workbook?.data) ?? null;
+  const keptFiles = new Set(
+    (financials?.kept ?? []).flatMap((k) => (k.modelFile ? [k.modelFile] : [])),
+  );
+  const keptModels = Object.fromEntries(
+    Object.values(collectionService.getAllCollectionItems())
+      .filter((e) => keptFiles.has(e.modelFile))
+      .map((e) => [e.modelFile, { brand: e.brand, legend: e.legend }]),
+  );
+
   return (
     <SalesReportDashboard
       sold={sold}
-      financials={financials?.data ?? null}
-      stale={financials?.stale ?? false}
+      financials={financials}
+      stale={workbook?.stale ?? false}
+      keptModels={keptModels}
+      source={source}
+      hasLedger={hasLedger}
+      ledgerIssues={ledger?.issues ?? []}
     />
   );
 }
