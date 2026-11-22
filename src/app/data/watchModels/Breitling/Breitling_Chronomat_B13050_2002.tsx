@@ -103,7 +103,7 @@ const details: WatchDetails = {
     dial: {
       color: ColorEnum.BLUE,
       dialMarkers: DialMarketsEnum.DAGGER,
-      finishingDetails: FinishingDetailsEnum.TEXTURED,
+      finishingDetails: FinishingDetailsEnum.GUILLOCHE,
       luminiscentIndexes: LuminescentIndexesEnum.HANDS_AND_MARKERS + LuminescentIndexesEnum.TRITIUM,
       calendar: CalendarWatchTypeEnum.AT_3_OCLOCK,
     },

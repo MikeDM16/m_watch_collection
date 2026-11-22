@@ -419,6 +419,8 @@ export const modelLoaders: Record<string, () => Promise<{ default: WatchDetails 
     import("./watchModels/Solvil_et_Titus/Titus_Chronograph_L48_1950"),
   "Solvil_et_Titus/Titus_Tuning_Fork_F300Hz_1970": () =>
     import("./watchModels/Solvil_et_Titus/Titus_Tuning_Fork_F300Hz_1970"),
+  "Studio/Studio_Tank_15_Rubis_1927": () =>
+    import("./watchModels/Studio/Studio_Tank_15_Rubis_1927"),
   "Tag_Heuer/Heuer_Airline_Professional_895513_1985": () =>
     import("./watchModels/Tag_Heuer/Heuer_Airline_Professional_895513_1985"),
   "Tag_Heuer/Tag_Heuer_Aquaracer_CN2111_2005": () =>
@@ -620,6 +622,8 @@ export const modelLoaders: Record<string, () => Promise<{ default: WatchDetails 
     import("./watchModels/Tourist/Tourist_Ancre_17Rubis_1950"),
   "Universal_Geneve/Universal_Geneve_Chrono_875214_1995": () =>
     import("./watchModels/Universal_Geneve/Universal_Geneve_Chrono_875214_1995"),
+  "Universal_Geneve/Universal_Geneve_Mecanique_Cal_332_1950": () =>
+    import("./watchModels/Universal_Geneve/Universal_Geneve_Mecanique_Cal_332_1950"),
   "Universal_Geneve/Universal_Geneve_Mecanique_cal_262_1942": () =>
     import("./watchModels/Universal_Geneve/Universal_Geneve_Mecanique_cal_262_1942"),
   "Utina/Utina_Enamel_Dial_FE233_1968": () =>
@@ -867,6 +871,7 @@ export type ModelFile =
   | "Solvil_et_Titus/Solvil_et_Titus_Genéve_Tank_1942"
   | "Solvil_et_Titus/Titus_Chronograph_L48_1950"
   | "Solvil_et_Titus/Titus_Tuning_Fork_F300Hz_1970"
+  | "Studio/Studio_Tank_15_Rubis_1927"
   | "Tag_Heuer/Heuer_Airline_Professional_895513_1985"
   | "Tag_Heuer/Tag_Heuer_Aquaracer_CN2111_2005"
   | "Tag_Heuer/Tag_Heuer_Aquaracer_WAF1010_2010"
@@ -974,6 +979,7 @@ export type ModelFile =
   | "Tonino_Lamborghini/Tonino_Lamborghini_Bologna_II_2011"
   | "Tourist/Tourist_Ancre_17Rubis_1950"
   | "Universal_Geneve/Universal_Geneve_Chrono_875214_1995"
+  | "Universal_Geneve/Universal_Geneve_Mecanique_Cal_332_1950"
   | "Universal_Geneve/Universal_Geneve_Mecanique_cal_262_1942"
   | "Utina/Utina_Enamel_Dial_FE233_1968"
   | "Utina/Utina_Sunburst_FE233_1972"

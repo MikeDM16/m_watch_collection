@@ -23,6 +23,7 @@ export const CaseMaterialEnum = {
   GP_CASE_AND_BACK: "Gold Plated Case and Back",
   GP_20_CASE_AND_BACK: "Gold Plated Case and Back (20 µm)",
   GP_14K_20_SS_BACK: "14K Gold Plated (20 µm) - Stainless Steel Backcase",
+  GP_18K_30: "18K Gold Plated (30 µm)",
 
   // Electroplated / Mixed
   GOLD_18K_ELECTROPLATED: "18K Gold Electroplated",

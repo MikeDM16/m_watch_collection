@@ -1,4 +1,18 @@
 {
+  "Studio Tank 15 Rubis": {
+    "brand": "Studio",
+    "legend": "Studio Tank 15 Rubis",
+    "year": 1927,
+    "type": "Casual",
+    "srcImage": "public/assets/Images/Studio/1927_Studio_Tank_17_rubis/IMG_7402.JPG",
+    "hoverSrc": "public/assets/Images/Studio/1927_Studio_Tank_17_rubis/IMG_7380.JPG",
+    "specialCollectionItem": false,
+    "collectionSet": false,
+    "series": "Tank",
+    "movementTitle": "Cyma Cal. 012",
+    "saleReport": null,
+    "modelFile": "Studio/Studio_Tank_15_Rubis_1927"
+  },
   "Omega StayBrite Tank CK3416": {
     "brand": "Omega",
     "legend": "Omega StayBrite Tank CK3416",
@@ -576,6 +590,20 @@
       "url": "https://www.catawiki.com/en/l/100052954"
     },
     "modelFile": "Omega/Omega_Seamaster_Jumbo_Cal_265_1950"
+  },
+  "Universal Genève Mécanique Cal. 332": {
+    "brand": "Universal Geneve",
+    "legend": "Universal Genève Mécanique Cal. 332",
+    "year": 1950,
+    "type": "Casual",
+    "srcImage": "public/assets/Images/Universal_Geneve/1950_Universal_Geneve_Cal_332/IMG_7491.JPG",
+    "hoverSrc": "public/assets/Images/Universal_Geneve/1950_Universal_Geneve_Cal_332/IMG_7612.JPG",
+    "specialCollectionItem": false,
+    "collectionSet": false,
+    "series": "Mécanique",
+    "movementTitle": "Universal Genève Cal. 332",
+    "saleReport": null,
+    "modelFile": "Universal_Geneve/Universal_Geneve_Mecanique_Cal_332_1950"
   },
   "Omega Trésor Honeycomb Cal. 266 18K Gold": {
     "brand": "Omega",

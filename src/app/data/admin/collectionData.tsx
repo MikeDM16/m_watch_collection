@@ -3519,6 +3519,208 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
     href: require("../watchModels/Tissot/Tissot_Heritage_150th_Anniversary_Chronograph_0986_8888_2003"),
     specialCollectionItem: true,
   },
+
+  // Hidden until photos are added (MWatchCollectionResources/Images/Ancora/1945_Ancora_17_Rubis_Hammer_Dial_1130)
+  // "Ancora 17 Rubis Hammer Dial": {
+  //   brand: BrandsEnum.ANCORA,
+  //   legend: "Ancora 17 Rubis Hammer Dial",
+  //   year: 1945,
+  //   type: WatchTypeEnum.CASUAL,
+  //   srcImage: "public/assets/Images/Ancora/1945_Ancora_17_Rubis_Hammer_Dial_1130/IMG_XXXX.JPG",
+  //   hoverSrc: "public/assets/Images/Ancora/1945_Ancora_17_Rubis_Hammer_Dial_1130/IMG_YYYY.JPG",
+  //   href: require("../watchModels/Ancora/Ancora_17_Rubis_Hammer_Dial_1945"),
+  //   specialCollectionItem: false,
+  // },
+
+  // Hidden until photos are added (MWatchCollectionResources/Images/Roamer/1963_Roamer_Louvre_Cushion_450)
+  // "Roamer Louvre Cushion": {
+  //   brand: BrandsEnum.ROAMER,
+  //   legend: "Roamer Louvre Cushion",
+  //   year: 1963,
+  //   type: WatchTypeEnum.CASUAL,
+  //   srcImage: "public/assets/Images/Roamer/1963_Roamer_Louvre_Cushion_450/IMG_XXXX.JPG",
+  //   hoverSrc: "public/assets/Images/Roamer/1963_Roamer_Louvre_Cushion_450/IMG_YYYY.JPG",
+  //   href: require("../watchModels/Roamer/Roamer_Louvre_Cushion_1963"),
+  //   specialCollectionItem: false,
+  // },
+
+  // Hidden until photos are added (MWatchCollectionResources/Images/Ruby/1945_Ruby_Precision_15_Rubis_1130)
+  // "Ruby Precision 15 Rubis": {
+  //   brand: BrandsEnum.RUBY,
+  //   legend: "Ruby Precision 15 Rubis",
+  //   year: 1945,
+  //   type: WatchTypeEnum.CASUAL,
+  //   srcImage: "public/assets/Images/Ruby/1945_Ruby_Precision_15_Rubis_1130/IMG_XXXX.JPG",
+  //   hoverSrc: "public/assets/Images/Ruby/1945_Ruby_Precision_15_Rubis_1130/IMG_YYYY.JPG",
+  //   href: require("../watchModels/Ruby/Ruby_Precision_15_Rubis_1945"),
+  //   specialCollectionItem: false,
+  // },
+
+  // Hidden until photos are added (MWatchCollectionResources/Images/Rhodes/1953_Rhodes_Tetra_Antimagnetic_811)
+  // "Rhodes Tetra Antimagnetic": {
+  //   brand: BrandsEnum.RHODES,
+  //   legend: "Rhodes Tetra Antimagnetic",
+  //   year: 1953,
+  //   type: WatchTypeEnum.CASUAL,
+  //   srcImage: "public/assets/Images/Rhodes/1953_Rhodes_Tetra_Antimagnetic_811/IMG_XXXX.JPG",
+  //   hoverSrc: "public/assets/Images/Rhodes/1953_Rhodes_Tetra_Antimagnetic_811/IMG_YYYY.JPG",
+  //   href: require("../watchModels/Rhodes/Rhodes_Tetra_Antimagnetic_1953"),
+  //   specialCollectionItem: false,
+  // },
+
+  // Hidden until photos are added (MWatchCollectionResources/Images/Carfo/1975_Carfo_Datomatic_Engine_turned_Bezel_866)
+  // "Carfo Datomatic Engine-turned Bezel": {
+  //   brand: BrandsEnum.CARFO,
+  //   legend: "Carfo Datomatic Engine-turned Bezel",
+  //   year: 1975,
+  //   type: WatchTypeEnum.CASUAL,
+  //   srcImage: "public/assets/Images/Carfo/1975_Carfo_Datomatic_Engine_turned_Bezel_866/IMG_XXXX.JPG",
+  //   hoverSrc: "public/assets/Images/Carfo/1975_Carfo_Datomatic_Engine_turned_Bezel_866/IMG_YYYY.JPG",
+  //   href: require("../watchModels/Carfo/Carfo_Datomatic_Engine_turned_Bezel_1975"),
+  //   specialCollectionItem: false,
+  // },
+
+  // Hidden until photos are added (MWatchCollectionResources/Images/Almery/1978_Almery_Dynamic_17_Rubis_115_1)
+  // "Almery Dynamic 17 Rubis": {
+  //   brand: BrandsEnum.ALMERY,
+  //   legend: "Almery Dynamic 17 Rubis",
+  //   year: 1978,
+  //   type: WatchTypeEnum.CASUAL,
+  //   srcImage: "public/assets/Images/Almery/1978_Almery_Dynamic_17_Rubis_115_1/IMG_XXXX.JPG",
+  //   hoverSrc: "public/assets/Images/Almery/1978_Almery_Dynamic_17_Rubis_115_1/IMG_YYYY.JPG",
+  //   href: require("../watchModels/Almery/Almery_Dynamic_17_Rubis_1978"),
+  //   specialCollectionItem: false,
+  // },
+
+  // Hidden until photos are added (MWatchCollectionResources/Images/Anker/1965_Anker_Classic_Automatic_197)
+  // "Anker Classic Automatic": {
+  //   brand: BrandsEnum.ANKER,
+  //   legend: "Anker Classic Automatic",
+  //   year: 1965,
+  //   type: WatchTypeEnum.CASUAL,
+  //   srcImage: "public/assets/Images/Anker/1965_Anker_Classic_Automatic_197/IMG_XXXX.JPG",
+  //   hoverSrc: "public/assets/Images/Anker/1965_Anker_Classic_Automatic_197/IMG_YYYY.JPG",
+  //   href: require("../watchModels/Anker/Anker_Classic_Automatic_1965"),
+  //   specialCollectionItem: false,
+  // },
+
+  "Studio Tank 15 Rubis": {
+    brand: BrandsEnum.STUDIO,
+    legend: "Studio Tank 15 Rubis",
+    year: 1927,
+    type: WatchTypeEnum.CASUAL,
+    srcImage: "public/assets/Images/Studio/1927_Studio_Tank_17_rubis/IMG_7402.JPG",
+    hoverSrc: "public/assets/Images/Studio/1927_Studio_Tank_17_rubis/IMG_7380.JPG",
+    href: require("../watchModels/Studio/Studio_Tank_15_Rubis_1927"),
+    specialCollectionItem: false,
+  },
+
+  // Hidden until photos are added (MWatchCollectionResources/Images/Sorel/1976_Sorel_Festa_De_Luxe_Green_Marble_7046)
+  // "Sorel Festa De Luxe - Green Marble": {
+  //   brand: BrandsEnum.SOREL,
+  //   legend: "Sorel Festa De Luxe - Green Marble",
+  //   year: 1976,
+  //   type: WatchTypeEnum.CASUAL,
+  //   srcImage: "public/assets/Images/Sorel/1976_Sorel_Festa_De_Luxe_Green_Marble_7046/IMG_XXXX.JPG",
+  //   hoverSrc: "public/assets/Images/Sorel/1976_Sorel_Festa_De_Luxe_Green_Marble_7046/IMG_YYYY.JPG",
+  //   href: require("../watchModels/Sorel/Sorel_Festa_De_Luxe_Green_Marble_1976"),
+  //   specialCollectionItem: false,
+  // },
+
+  // Hidden until photos are added (MWatchCollectionResources/Images/Alpina/1945_Alpina_Bumper_Automatic_582)
+  // "Alpina Bumper Automatic": {
+  //   brand: BrandsEnum.ALPINA,
+  //   legend: "Alpina Bumper Automatic",
+  //   year: 1945,
+  //   type: WatchTypeEnum.CASUAL,
+  //   srcImage: "public/assets/Images/Alpina/1945_Alpina_Bumper_Automatic_582/IMG_XXXX.JPG",
+  //   hoverSrc: "public/assets/Images/Alpina/1945_Alpina_Bumper_Automatic_582/IMG_YYYY.JPG",
+  //   href: require("../watchModels/Alpina/Alpina_Bumper_Automatic_1945"),
+  //   specialCollectionItem: false,
+  // },
+
+  // Hidden until photos are added (MWatchCollectionResources/Images/Regines/1935_Regines_Deluxe_Tank_811)
+  // "Regines Deluxe Tank": {
+  //   brand: BrandsEnum.REGINES,
+  //   legend: "Regines Deluxe Tank",
+  //   year: 1935,
+  //   type: WatchTypeEnum.CASUAL,
+  //   srcImage: "public/assets/Images/Regines/1935_Regines_Deluxe_Tank_811/IMG_XXXX.JPG",
+  //   hoverSrc: "public/assets/Images/Regines/1935_Regines_Deluxe_Tank_811/IMG_YYYY.JPG",
+  //   href: require("../watchModels/Regines/Regines_Deluxe_Tank_1935"),
+  //   specialCollectionItem: false,
+  // },
+
+  // Hidden until photos are added (MWatchCollectionResources/Images/Darwil/1968_Darwil_Special_Flat_Luxe_66_7041)
+  // "Darwil Special Flat Luxe 66": {
+  //   brand: BrandsEnum.DARWIL,
+  //   legend: "Darwil Special Flat Luxe 66",
+  //   year: 1968,
+  //   type: WatchTypeEnum.CASUAL,
+  //   srcImage: "public/assets/Images/Darwil/1968_Darwil_Special_Flat_Luxe_66_7041/IMG_XXXX.JPG",
+  //   hoverSrc: "public/assets/Images/Darwil/1968_Darwil_Special_Flat_Luxe_66_7041/IMG_YYYY.JPG",
+  //   href: require("../watchModels/Darwil/Darwil_Special_Flat_Luxe_66_1968"),
+  //   specialCollectionItem: false,
+  // },
+
+  // Hidden until photos are added (MWatchCollectionResources/Images/Cristalor/1944_Cristalor_Guilloche_Fancy_Lugs_190)
+  // "Cristalor Guilloché “Fancy Lugs”": {
+  //   brand: BrandsEnum.CRISTALOR,
+  //   legend: "Cristalor Guilloché “Fancy Lugs”",
+  //   year: 1944,
+  //   type: WatchTypeEnum.CASUAL,
+  //   srcImage: "public/assets/Images/Cristalor/1944_Cristalor_Guilloche_Fancy_Lugs_190/IMG_XXXX.JPG",
+  //   hoverSrc: "public/assets/Images/Cristalor/1944_Cristalor_Guilloche_Fancy_Lugs_190/IMG_YYYY.JPG",
+  //   href: require("../watchModels/Cristalor/Cristalor_Guilloche_Fancy_Lugs_1944"),
+  //   specialCollectionItem: false,
+  // },
+
+  // Hidden until photos are added (MWatchCollectionResources/Images/Mathey_Tissot/1978_Mathey_Tissot_Grand_Prix_Marble_Dial_1861)
+  // "Mathey-Tissot Grand Prix - Marble Dial": {
+  //   brand: BrandsEnum.MATHEY_TISSOT,
+  //   legend: "Mathey-Tissot Grand Prix - Marble Dial",
+  //   year: 1978,
+  //   type: WatchTypeEnum.CASUAL,
+  //   srcImage: "public/assets/Images/Mathey_Tissot/1978_Mathey_Tissot_Grand_Prix_Marble_Dial_1861/IMG_XXXX.JPG",
+  //   hoverSrc: "public/assets/Images/Mathey_Tissot/1978_Mathey_Tissot_Grand_Prix_Marble_Dial_1861/IMG_YYYY.JPG",
+  //   href: require("../watchModels/Mathey_Tissot/Mathey_Tissot_Grand_Prix_Marble_Dial_1978"),
+  //   specialCollectionItem: false,
+  // },
+
+  // Hidden until photos are added (MWatchCollectionResources/Images/Cornavin/1956_Cornavin_Datocor_Big_Date_221)
+  // "Cornavin Datocor Big Date": {
+  //   brand: BrandsEnum.CORNAVIN,
+  //   legend: "Cornavin Datocor Big Date",
+  //   year: 1956,
+  //   type: WatchTypeEnum.CASUAL,
+  //   srcImage: "public/assets/Images/Cornavin/1956_Cornavin_Datocor_Big_Date_221/IMG_XXXX.JPG",
+  //   hoverSrc: "public/assets/Images/Cornavin/1956_Cornavin_Datocor_Big_Date_221/IMG_YYYY.JPG",
+  //   href: require("../watchModels/Cornavin/Cornavin_Datocor_Big_Date_1956"),
+  //   specialCollectionItem: false,
+  // },
+
+  // Hidden until photos are added (MWatchCollectionResources/Images/Longines/1995_Longines_La_Grande_Classique_L263_2)
+  // "Longines La Grande Classique": {
+  //   brand: BrandsEnum.LONGINES,
+  //   legend: "Longines La Grande Classique",
+  //   year: 1995,
+  //   type: WatchTypeEnum.CASUAL,
+  //   srcImage: "public/assets/Images/Longines/1995_Longines_La_Grande_Classique_L263_2/IMG_XXXX.JPG",
+  //   hoverSrc: "public/assets/Images/Longines/1995_Longines_La_Grande_Classique_L263_2/IMG_YYYY.JPG",
+  //   href: require("../watchModels/Longines/Longines_La_Grande_Classique_1995"),
+  //   specialCollectionItem: false,
+  // },
+
+  "Universal Genève Mécanique Cal. 332": {
+    brand: BrandsEnum.UNIVERSAL_GENEVE,
+    legend: "Universal Genève Mécanique Cal. 332",
+    year: 1950,
+    type: WatchTypeEnum.CASUAL,
+    srcImage: "public/assets/Images/Universal_Geneve/1950_Universal_Geneve_Cal_332/IMG_7491.JPG",
+    hoverSrc: "public/assets/Images/Universal_Geneve/1950_Universal_Geneve_Cal_332/IMG_7612.JPG",
+    href: require("../watchModels/Universal_Geneve/Universal_Geneve_Mecanique_Cal_332_1950"),
+    specialCollectionItem: false,
+  },
 };
 
 function sortCollection(items: Record<string, CollectionEntry>) {

@@ -1,14 +1,21 @@
 import type { Caliber } from "../caliberTypes";
+import ALPINA_582 from "../movements/Alpina/Alpina_582_17J";
 import AS_980 from "../movements/AS/AS_980_17J";
+import AS_1130_15J from "../movements/AS/AS_1130_15J";
 import AS_1130 from "../movements/AS/AS_1130_17J";
+import AS_1861 from "../movements/AS/AS_1861_17J";
 import AS_1950 from "../movements/AS/AS_1950_17J";
+import BAUMGARTNER_866 from "../movements/Baumgartner/Baumgartner_866_1J";
 import BENRUS_CE13 from "../movements/Benrus/Benrus_CE13_17J";
+import BIFORA_115_1 from "../movements/Bifora/Bifora_115_1_17J";
 import BREITLING_B30_38J from "../movements/Breitling/Breitling_B30_38J";
 import BREITLING_B40_38J from "../movements/Breitling/Breitling_B40_38J";
 import CERTINA_25_261_27J from "../movements/Certina/Certina_25_261_28J";
 import CERTINA_331 from "../movements/Certina/Certina_331_15J";
 import CERTINA_KF320B from "../movements/Certina/Certina_KF320B_15J";
 import CORTEBERT_573 from "../movements/Cortebert/Cortebert_573_15J";
+import CYMA_012 from "../movements/Cyma/Cyma_012_15J";
+import DARWIL_7041 from "../movements/Darwil/Darwil_7041_17J";
 import DD_2000_ETA_955_232 from "../movements/Debois_Depraz/DD_2000_955";
 import DD_2000_ETA_2892 from "../movements/Debois_Depraz/DD_2000_2892";
 import DOXA_83_4_987_17J from "../movements/Doxa/Doxa_83_4_987_17J";
@@ -19,6 +26,7 @@ import ETA_251_251 from "../movements/ETA/ETA_251_251_27J";
 import ETA_251_262 from "../movements/ETA/ETA_251_262_27J";
 import ETA_251_265 from "../movements/ETA/ETA_251_265_23J";
 import ETA_251_272 from "../movements/ETA/ETA_251_272_22J";
+import ETA_811 from "../movements/ETA/ETA_811_15J";
 import ETA_900 from "../movements/ETA/ETA_900_17J";
 import ETA_902_101 from "../movements/ETA/ETA_902_101";
 import ETA_955_112 from "../movements/ETA/ETA_955_112";
@@ -50,10 +58,12 @@ import EXCELSIOR_PARK_40_68_17J from "../movements/Excelsior_Park/Excelsior_Park
 import FE_140 from "../movements/FE/FE_140_17J";
 import FE_233_69 from "../movements/FE/FE_233_69_17J";
 import FE_TRIPLE_CALENDAR_5J from "../movements/FE/FE_Triple_Calendar_5J";
+import FEF_190 from "../movements/FEF/FEF_190_15J";
 import FHF_30 from "../movements/FHF/FHF_30_17J";
 import FHF_69N from "../movements/FHF/FHF_69N_17J";
 import FHF_96_4 from "../movements/FHF/FHF_96_4_17J";
 import FHF_974 from "../movements/FHF/FHF_974_17J";
+import FORSTER_197 from "../movements/Forster/Forster_197_25J";
 import FORTIS_AV_21J from "../movements/Fortis/Fortis_AV_21_jewels";
 import Girard_Perregaux_2280 from "../movements/Girard_Perregaux/Girard_Perregaux_2280";
 import Landeron_48_17J from "../movements/Landeron/Landeron_48_17J";
@@ -62,9 +72,11 @@ import Landeron_159_17J from "../movements/Landeron/Landeron_159_17J";
 import LEMANIA_1281_17J from "../movements/Lemania/Lemania_1281_17_Jewels";
 import LEMANIA_1341 from "../movements/Lemania/Lemania_1341_17_Jewels";
 import LEMANIA_1873_17J from "../movements/Lemania/Lemania_1873_17_Jewels";
+import LONGINES_L263_2 from "../movements/Longines/Longines_L263_2";
 import Lorsa_238 from "../movements/Lorsa/Lorsa_238";
 import MIYOTA_OS10 from "../movements/Miyota/OS10";
 import MIYOTA_OS60 from "../movements/Miyota/OS60";
+import MST_450 from "../movements/MST/MST_450_15J";
 import OMEGA_30T2 from "../movements/Omega/Omega_30T2_15J";
 import OMEGA_265 from "../movements/Omega/Omega_265_15J";
 import OMEGA_266_17J from "../movements/Omega/Omega_266_17J";
@@ -89,6 +101,7 @@ import OMEGA_1675 from "../movements/Omega/Omega_1675";
 import OMEGA_3220_47J from "../movements/Omega/OMEGA_3220_47J";
 import OMEGA_T17 from "../movements/Omega/Omega_T17_15J";
 import ORIENT_46D40 from "../movements/Orient/Orient_46D40";
+import PESEUX_7046 from "../movements/Peseux/Peseux_7046_17J";
 import PIGUET_1270_22J from "../movements/Piguet/Piguet_1270_22_Jewels";
 import POLJOT_3133_25J from "../movements/Poljot/Polot_3133_25_Jewels";
 import RW_4200 from "../movements/Raymond_Weil/RW_4200";
@@ -128,12 +141,14 @@ import UNITAS_6325 from "../movements/Unitas/Unitas_6325";
 import UNITAS_6380 from "../movements/Unitas/Unitas_6380";
 import UNITAS_6497 from "../movements/Unitas/Unitas_6497";
 import UNIVERSAL_GENEVE_262_17J from "../movements/Universal_Geneve/UG_Cal_262_17J";
+import UNIVERSAL_GENEVE_332 from "../movements/Universal_Geneve/UG_Cal_332_17J";
 import VACHERON_CONSTANTIN_K1014_17J from "../movements/Vacheron_Constantin/K1014_17J";
 import VALJOUX_7734_17J from "../movements/Valjoux/7734_17J";
 import VALJOUX_77_17J from "../movements/Valjoux/Valjoux_77_17J";
 import VALJOUX_726_88_17J from "../movements/Valjoux/Valjoux_726_88_17J";
 import VENUS_170_17J from "../movements/Venus/Venus_170_17J";
 import VENUS_175_17J from "../movements/Venus/Venus_175_17J";
+import VENUS_221 from "../movements/Venus/Venus_221_17J";
 import VOSTOK_2605_17J from "../movements/Vostok/Vostok_2605_17J";
 import ZENITH_106_15J from "../movements/Zenith/106_15J";
 import ZENITH_EL_PRIMERO_400Z from "../movements/Zenith/El_Primero_400Z";
@@ -145,9 +160,14 @@ export type { Caliber, CaliberTechinicalDetails } from "../caliberTypes";
 export { CaliberTechinicalDetailskeyToDisplayTextmappings } from "../caliberTypes";
 
 export const MovementsDataDB: Record<string, Caliber> = {
+  ALPINA_582: ALPINA_582,
   AS_1130: AS_1130,
+  AS_1130_15J: AS_1130_15J,
+  AS_1861: AS_1861,
   AS_1950: AS_1950,
   AS_980: AS_980,
+  BAUMGARTNER_866: BAUMGARTNER_866,
+  BIFORA_115_1: BIFORA_115_1,
 
   BENRUS_CE13: BENRUS_CE13,
 
@@ -159,6 +179,8 @@ export const MovementsDataDB: Record<string, Caliber> = {
   CERTINA_KF320B: CERTINA_KF320B,
 
   CORTEBERT_573: CORTEBERT_573,
+  CYMA_012: CYMA_012,
+  DARWIL_7041: DARWIL_7041,
 
   DD_2000_ETA_2892: DD_2000_ETA_2892,
   DD_2000_ETA_955_232: DD_2000_ETA_955_232,
@@ -168,6 +190,7 @@ export const MovementsDataDB: Record<string, Caliber> = {
   EBERHARD_16000_17J: EBERHARD_16000_17J,
   EXCELSIOR_PARK_40_68_17J: EXCELSIOR_PARK_40_68_17J,
 
+  ETA_811: ETA_811,
   ETA_900: ETA_900,
   ETA_1256: ETA_1256,
   ETA_251_251: ETA_251_251,
@@ -205,12 +228,14 @@ export const MovementsDataDB: Record<string, Caliber> = {
   FE_233: FE_233_69,
   FE_233_69: FE_233_69,
   FE_TRIPLE_CALENDAR_5J: FE_TRIPLE_CALENDAR_5J,
+  FEF_190: FEF_190,
 
   FHF_30: FHF_30,
   FHF_69N: FHF_69N,
   FHF_96_4: FHF_96_4,
   FHF_974: FHF_974,
 
+  FORSTER_197: FORSTER_197,
   FORTIS_AV_21J: FORTIS_AV_21J,
 
   // same base ETA 955.112 / 412
@@ -232,9 +257,11 @@ export const MovementsDataDB: Record<string, Caliber> = {
   LEMANIA_1341: LEMANIA_1341,
   LEMANIA_1281_17J: LEMANIA_1281_17J,
   LEMANIA_1873_17J: LEMANIA_1873_17J,
+  LONGINES_L263_2: LONGINES_L263_2,
 
   MIYOTA_OS10: MIYOTA_OS10,
   MIYOTA_OS60: MIYOTA_OS60,
+  MST_450: MST_450,
 
   OMEGA_1022_23J: OMEGA_1022_23J,
   OMEGA_1141_45J: OMEGA_1141_45J,
@@ -261,6 +288,7 @@ export const MovementsDataDB: Record<string, Caliber> = {
 
   ORIENT_46D40: ORIENT_46D40,
 
+  PESEUX_7046: PESEUX_7046,
   POLJOT_3133_25J: POLJOT_3133_25J,
   PIGUET_1270_22J: PIGUET_1270_22J,
   RAYMON_WEIL_4200: RW_4200,
@@ -299,6 +327,7 @@ export const MovementsDataDB: Record<string, Caliber> = {
 
   VENUS_170_17J: VENUS_170_17J,
   VENUS_175_17J: VENUS_175_17J,
+  VENUS_221: VENUS_221,
 
   VOSTOK_2605_17J: VOSTOK_2605_17J,
 
@@ -314,6 +343,7 @@ export const MovementsDataDB: Record<string, Caliber> = {
   ZENITH_106_15J: ZENITH_106_15J,
 
   UNIVERSAL_GENEVE_262_17J: UNIVERSAL_GENEVE_262_17J,
+  UNIVERSAL_GENEVE_332: UNIVERSAL_GENEVE_332,
   Duromat_7522: Duromat_7522,
   LORSA_238: Lorsa_238,
   Girard_Perregaux_2280: Girard_Perregaux_2280,

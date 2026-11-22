@@ -833,4 +833,101 @@ export const brandsDB: Brand[] = [
     name: BrandsEnum.WM_OF_SWITZERLAND,
     logoImg: "public/assets/Images/Brands_Logos/wm_of_switzerland_logo.png",
   },
+  {
+    name: BrandsEnum.ANCORA,
+    logoImg: "public/assets/Images/Brands_Logos/ancora_logo.PNG",
+  },
+  {
+    name: BrandsEnum.ROAMER,
+    logoImg: "public/assets/Images/Brands_Logos/roamer_logo.PNG",
+    website: "https://roamer.ch",
+    description:
+      "Roamer is a Swiss watch manufacturer founded in Solothurn by Fritz Meyer; its movements were made in-house under the MST (Meyer & Stüdeli) name.",
+    foundedInformation: {
+      year: 1888,
+      details: "Founded in Solothurn, Switzerland",
+    },
+    displayBySeries: false,
+  },
+  {
+    name: BrandsEnum.RUBY,
+    logoImg: "public/assets/Images/Brands_Logos/ruby_logo.PNG",
+  },
+  {
+    name: BrandsEnum.RHODES,
+    logoImg: "public/assets/Images/Brands_Logos/rhodes_logo.PNG",
+  },
+  {
+    name: BrandsEnum.CARFO,
+    logoImg: "public/assets/Images/Brands_Logos/carfo_logo.PNG",
+  },
+  {
+    name: BrandsEnum.ALMERY,
+    logoImg: "public/assets/Images/Brands_Logos/almery_logo.PNG",
+    description: "Vintage brand imported to Portugal, with both German-made and Swiss-made models.",
+    displayBySeries: false,
+  },
+  {
+    name: BrandsEnum.ANKER,
+    logoImg: "public/assets/Images/Brands_Logos/anker_logo.PNG",
+  },
+  {
+    name: BrandsEnum.STUDIO,
+    logoImg: "public/assets/Images/Brands_Logos/studio_logo.PNG",
+  },
+  {
+    name: BrandsEnum.SOREL,
+    logoImg: "public/assets/Images/Brands_Logos/sorel_logo.PNG",
+  },
+  {
+    name: BrandsEnum.ALPINA,
+    logoImg: "public/assets/Images/Brands_Logos/alpina_logo.PNG",
+    website: "https://alpinawatches.com",
+    description:
+      "Alpina is a Swiss watch brand founded in Winterthur by Gottlieb Hauser as the Alpina Union Horlogère, a cooperative of independent Swiss watchmakers.",
+    foundedInformation: {
+      year: 1883,
+      details: "Founded in Winterthur, Switzerland",
+    },
+    displayBySeries: false,
+  },
+  {
+    name: BrandsEnum.REGINES,
+    logoImg: "public/assets/Images/Brands_Logos/regines_logo.PNG",
+  },
+  {
+    name: BrandsEnum.DARWIL,
+    logoImg: "public/assets/Images/Brands_Logos/darwil_logo.PNG",
+  },
+  {
+    name: BrandsEnum.MATHEY_TISSOT,
+    logoImg: "public/assets/Images/Brands_Logos/mathey_tissot_logo.PNG",
+    website: "https://matheytissot.com/",
+    description:
+      "Mathey-Tissot is a Swiss watch manufacturer founded by Edmond Mathey-Tissot in Les Ponts-de-Martel, known for its repeater pocket watches; it is unrelated to Tissot.",
+    foundedInformation: {
+      year: 1886,
+      details: "Founded in Les Ponts-de-Martel, Switzerland",
+    },
+    displayBySeries: false,
+  },
+  {
+    name: BrandsEnum.CORNAVIN,
+    logoImg: "public/assets/Images/Brands_Logos/cornavin_logo.PNG",
+    description:
+      "Cornavin is a Geneva watch brand named after the city's Cornavin district; its signature appears on Venus big-date calibres of the 1950s.",
+    displayBySeries: false,
+  },
+  {
+    name: BrandsEnum.LONGINES,
+    logoImg: "public/assets/Images/Brands_Logos/longines_logo.PNG",
+    website: "https://www.longines.com",
+    description:
+      "Longines is a Swiss watch manufacturer founded by Auguste Agassiz in Saint-Imier; it has been part of the Swatch Group since 1983.",
+    foundedInformation: {
+      year: 1832,
+      details: "Founded in Saint-Imier, Switzerland",
+    },
+    displayBySeries: false,
+  },
 ];

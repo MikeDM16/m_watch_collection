@@ -18,4 +18,7 @@ export const FinishingDetailsEnum = {
   HONEYCOMB: "Honeycomb Patterm",
   CLOUD_DE_PARIS: "Clous de Paris dial",
   TUXEDO: "Tuxedo Dial",
+  TUXEDO_HAMMERED: "Tuxedo Dial with Hammered Centre",
+  MARBLE: "Marble Dial",
+  GUILLOCHE: "Guilloché Dial",
 };

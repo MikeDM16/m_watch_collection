@@ -228,6 +228,11 @@ export const featuresEnum: Record<string, FeatureStruct> = {
     description:
       "A 10-micron gold-plated finish, offering a more affordable gold look with less durability compared to thicker plating options.",
   },
+  GOLD_PLATED_30M: {
+    name: "Gold Plated 30 ㎛",
+    description:
+      "A 30-micron gold-plated finish, thicker and more durable than the common 10 and 20 micron plating.",
+  },
   GOLD_PLATED_80M: {
     name: "Gold Plated 80 \u339B",
     description: "A high-quality thick 80-micron gold-plated finish on the watch.",
