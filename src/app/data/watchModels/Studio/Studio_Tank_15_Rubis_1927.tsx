@@ -8,6 +8,7 @@ import { CaseBackDetailsEnum } from "@/app/enums/caseBackDetailsEnum";
 import { CaseDiameterEnum } from "@/app/enums/caseDiameterEnum";
 import { CaseFinishingEnum } from "@/app/enums/caseFinishingEnum";
 import { CaseMaterialEnum } from "@/app/enums/caseMaterialEnum";
+import { CaseThicknessEnum } from "@/app/enums/caseThicknessEnum";
 import { ColorEnum } from "@/app/enums/colorEnum";
 import { CrownWatchTypeEnum } from "@/app/enums/crownWatchTypeEnum";
 import { CrystalMaterialEnum } from "@/app/enums/crystalMaterialEnum";
@@ -49,11 +50,11 @@ const details: WatchDetails = {
     "public/assets/Images/Studio/1927_Studio_Tank_17_rubis/IMG_7400.JPG",
     "public/assets/Images/Studio/1927_Studio_Tank_17_rubis/IMG_7401.JPG",
     "public/assets/Images/Studio/1927_Studio_Tank_17_rubis/IMG_7402.JPG",
-    "public/assets/Images/Studio/1927_Studio_Tank_17_rubis/IMG_7403.JPG",
 
     "public/assets/Images/Studio/1927_Studio_Tank_17_rubis/IMG_7418.JPG",
     "public/assets/Images/Studio/1927_Studio_Tank_17_rubis/IMG_7420.JPG",
 
+    "public/assets/Images/Studio/1927_Studio_Tank_17_rubis/IMG_7403.JPG",
     "public/assets/Images/Studio/1927_Studio_Tank_17_rubis/IMG_7404.JPG",
     "public/assets/Images/Studio/1927_Studio_Tank_17_rubis/IMG_7405.JPG",
     "public/assets/Images/Studio/1927_Studio_Tank_17_rubis/IMG_7406.JPG",
@@ -83,7 +84,7 @@ const details: WatchDetails = {
 
     case: {
       diameter: CaseDiameterEnum.D_25,
-      thickness: "- mm",
+      thickness: CaseThicknessEnum.T_9,
       material: CaseMaterialEnum.STAINLESS_STEEL,
       waterResistance: WaterResistanceEnum.WATER_RESISTANT,
       finishingDetails: CaseFinishingEnum.POLISHED,

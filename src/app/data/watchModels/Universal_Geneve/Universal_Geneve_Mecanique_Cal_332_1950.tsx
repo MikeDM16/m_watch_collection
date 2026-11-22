@@ -8,6 +8,7 @@ import { CaseBackDetailsEnum } from "@/app/enums/caseBackDetailsEnum";
 import { CaseDiameterEnum } from "@/app/enums/caseDiameterEnum";
 import { CaseFinishingEnum } from "@/app/enums/caseFinishingEnum";
 import { CaseMaterialEnum } from "@/app/enums/caseMaterialEnum";
+import { CaseThicknessEnum } from "@/app/enums/caseThicknessEnum";
 import { ColorEnum } from "@/app/enums/colorEnum";
 import { CrownWatchTypeEnum } from "@/app/enums/crownWatchTypeEnum";
 import { CrystalMaterialEnum } from "@/app/enums/crystalMaterialEnum";
@@ -95,7 +96,7 @@ const details: WatchDetails = {
 
     case: {
       diameter: CaseDiameterEnum.D_34,
-      thickness: "- mm",
+      thickness: CaseThicknessEnum.T_8,
       material: CaseMaterialEnum.GP_18K_30,
       waterResistance: WaterResistanceEnum.WATER_RESISTANT,
       finishingDetails: CaseFinishingEnum.POLISHED,
