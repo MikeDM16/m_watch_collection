@@ -31,6 +31,18 @@ export interface LedgerGroup {
 
 export type WatchStatus = "for-sale" | "kept" | "sold" | "returned" | "gone";
 
+/**
+ * Where watches are bought: a platform (eBay, Vinted…) or a person. The list
+ * lives in the store, not in code, so it can grow without a release and a
+ * private seller's name never reaches the public repo. A watch's `source` must
+ * be one of these ids.
+ */
+export interface LedgerSource {
+  /** UPPER_SNAKE: "EBAY", "MARKETPLACE". */
+  id: string;
+  label: string;
+}
+
 /** A physical watch that money went into: sold, for sale, or kept. */
 export interface LedgerWatch {
   id: string;
@@ -55,6 +67,8 @@ export interface LedgerWatch {
   /** Archived flags from the workbook reading (lot-share, paired-by-order, trade-in…). */
   flags?: string[];
   note?: string;
+  /** Where it was bought: a LedgerSource id. */
+  source?: string;
   archive?: {
     /** The workbook summary's own "Ganho Real". */
     userGain?: number;
@@ -109,6 +123,14 @@ export interface LedgerStore {
   groups: LedgerGroup[];
   watches: LedgerWatch[];
   lines: LedgerLine[];
+  /** Where watches are bought, for LedgerWatch.source. */
+  sources?: LedgerSource[];
+  /**
+   * Where a catalogue watch with no ledger watch yet was bought: modelFile → a
+   * LedgerSource id. No money is recorded for it. A ledger watch linked to the
+   * model later takes the source over, and the entry goes.
+   */
+  modelSources?: Record<string, string>;
 }
 
 /**

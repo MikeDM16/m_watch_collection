@@ -25,7 +25,8 @@
     "sales:sync": "npm run sales:parse && npm run sales:match && npm run sales:build && npm run ledger:snapshot",
     "ledger:snapshot": "tsx scripts/ledger/snapshot.ts",
     "ledger:import": "tsx scripts/ledger/import.ts",
-    "ledger:verify": "tsx scripts/ledger/verify.ts"
+    "ledger:verify": "tsx scripts/ledger/verify.ts",
+    "ledger:sources": "tsx scripts/ledger/sources.ts"
   },
   "dependencies": {
     "@radix-ui/react-slot": "^1.2.3",

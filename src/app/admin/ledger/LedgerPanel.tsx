@@ -130,6 +130,12 @@ function PanelBody({ data }: { data: ModelLedgerData }) {
                 {STATUS_LABEL[w.status]}
               </span>
               <span className="num text-muted-foreground">bought {dmy(w.acquired)}</span>
+              <span className="text-muted-foreground">
+                from{" "}
+                {w.source
+                  ? (data.sources.find((x) => x.id === w.source)?.label ?? w.source)
+                  : "— (not set)"}
+              </span>
               {w.origin && <span className="num text-xs text-muted-foreground">{w.origin}</span>}
               <Link
                 href={`/admin/ledger?view=lines&watch=${encodeURIComponent(w.id)}`}

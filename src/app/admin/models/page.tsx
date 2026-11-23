@@ -135,6 +135,7 @@ function modelLedger(
     summaries: watchSummaries(store),
     allWatches: store.watches,
     groups: store.groups,
+    sources: store.sources ?? [],
     models: items
       .map((e) => ({
         modelFile: e.modelFile,

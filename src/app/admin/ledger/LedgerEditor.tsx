@@ -10,7 +10,7 @@ import { useMemo, useState } from "react";
 import { AdminTable, Th } from "../sales-report/components/primitives";
 import { CompareView } from "./CompareView";
 import type { LedgerPageData, LedgerView, ModelOption } from "./editorTypes";
-import type { LedgerLine, LedgerWatch, WatchStatus } from "./ledger.types";
+import type { LedgerLine, LedgerSource, LedgerWatch, WatchStatus } from "./ledger.types";
 import { OVERHEAD, WATCH_STATUSES, type LedgerAction } from "./ledgerActions";
 import {
   button,
@@ -35,6 +35,9 @@ const TABS: { id: LedgerView; label: string }[] = [
 ];
 
 const PAGE = 100;
+
+/** The Watches filter's value for watches with no source yet. */
+const NO_SOURCE = "__none__";
 
 export default function LedgerEditor({ data }: { data: LedgerPageData }) {
   const { busy, setBusy, status, setStatus, send } = useLedgerSend(data.version);
@@ -311,6 +314,7 @@ function WatchForm({
   const [count, setCount] = useState(initial?.count ? String(initial.count) : "");
   const [paidNote, setPaidNote] = useState(initial?.paidNote ? String(initial.paidNote) : "");
   const [note, setNote] = useState(initial?.note ?? "");
+  const [source, setSource] = useState(initial?.source ?? "");
   const taken = useMemo(
     () =>
       new Set(
@@ -341,6 +345,7 @@ function WatchForm({
       count: count ? Number(count) : undefined,
       paidNote: paidNote ? Number(paidNote) : undefined,
       note: note.trim() || undefined,
+      source: source || undefined,
     });
     if (ok) onCancel();
   }
@@ -419,7 +424,8 @@ function WatchForm({
             onChange={(e) => setPaidNote(e.target.value)}
           />
         </label>
-        <label className="md:col-span-3">
+        <SourceSelect sources={data.store.sources} value={source} onChange={setSource} />
+        <label className="md:col-span-2">
           <span className={lab}>Note</span>
           <input className={field} value={note} onChange={(e) => setNote(e.target.value)} />
         </label>
@@ -436,12 +442,39 @@ function WatchForm({
   );
 }
 
+/** Where a watch was bought, from the ledger's own list of sources. */
+function SourceSelect({
+  sources,
+  value,
+  onChange,
+}: {
+  sources: LedgerSource[] | undefined;
+  value: string;
+  onChange: (id: string) => void;
+}) {
+  return (
+    <label>
+      <span className="lab mb-1 block">Bought from</span>
+      <select className={field} value={value} onChange={(e) => onChange(e.target.value)}>
+        <option value="">Not set</option>
+        {(sources ?? []).map((s) => (
+          <option key={s.id} value={s.id}>
+            {s.label}
+          </option>
+        ))}
+      </select>
+    </label>
+  );
+}
+
 /** A purchase: one watch, or a lot (one name per line), bought on one payment. */
 function PurchaseForm({
+  sources,
   busy,
   send,
   onDone,
 }: {
+  sources: LedgerSource[] | undefined;
   busy: boolean;
   send: (a: LedgerAction) => Promise<boolean>;
   onDone: () => void;
@@ -450,7 +483,7 @@ function PurchaseForm({
   const [status, setStatus] = useState<"for-sale" | "kept">("for-sale");
   const [date, setDate] = useState(todayIso());
   const [amount, setAmount] = useState("");
-  const [channel, setChannel] = useState("");
+  const [source, setSource] = useState("");
   const [text, setText] = useState("");
   const [error, setError] = useState<string | null>(null);
   const list = names
@@ -467,7 +500,8 @@ function PurchaseForm({
       action: "record-purchase",
       watches: list.map((label) => ({ label })),
       status,
-      purchase: { date, amount: value, channel, text },
+      purchase: { date, amount: value, text },
+      source: source || undefined,
     });
     if (ok) onDone();
   }
@@ -514,15 +548,7 @@ function PurchaseForm({
             <option value="kept">Keep (collection)</option>
           </select>
         </label>
-        <label>
-          <span className={lab}>Channel</span>
-          <input
-            className={field}
-            value={channel}
-            onChange={(e) => setChannel(e.target.value)}
-            placeholder="eBay, OLX…"
-          />
-        </label>
+        <SourceSelect sources={sources} value={source} onChange={setSource} />
         <label className="md:col-span-4">
           <span className={lab}>Description</span>
           <input
@@ -564,10 +590,16 @@ function WatchesView({
   send: (a: LedgerAction) => Promise<boolean>;
 }) {
   const [status, setStatus] = useState<WatchStatus | "">("");
+  /** "" every source, NO_SOURCE the untagged, else a source id. */
+  const [from, setFrom] = useState("");
   const [query, setQuery] = useState("");
   const [editing, setEditing] = useState<LedgerWatch | "new" | null>(null);
   const [buying, setBuying] = useState(false);
   const [shown, setShown] = useState(PAGE);
+  const sourceLabel = useMemo(
+    () => new Map((data.store.sources ?? []).map((s) => [s.id, s.label])),
+    [data.store.sources],
+  );
 
   const counts = useMemo(() => {
     const c: Partial<Record<WatchStatus, number>> = {};
@@ -578,13 +610,14 @@ function WatchesView({
     const q = query.trim().toLowerCase();
     return data.store.watches
       .filter((w) => !status || w.status === status)
+      .filter((w) => !from || (from === NO_SOURCE ? !w.source : w.source === from))
       .filter((w) => {
         if (!q) return true;
         const m = w.modelFile ? models.get(w.modelFile) : undefined;
         return `${w.label} ${m?.legend ?? ""} ${w.origin ?? ""}`.toLowerCase().includes(q);
       })
       .sort((a, b) => (b.acquired ?? "").localeCompare(a.acquired ?? ""));
-  }, [data.store.watches, status, query, models]);
+  }, [data.store.watches, status, from, query, models]);
 
   return (
     <div>
@@ -599,7 +632,14 @@ function WatchesView({
           onCancel={() => setEditing(null)}
         />
       )}
-      {buying && <PurchaseForm busy={busy} send={send} onDone={() => setBuying(false)} />}
+      {buying && (
+        <PurchaseForm
+          sources={data.store.sources}
+          busy={busy}
+          send={send}
+          onDone={() => setBuying(false)}
+        />
+      )}
       <div className="mb-4 flex flex-wrap items-center gap-2">
         {!editing && !buying && (
           <>
@@ -627,6 +667,20 @@ function WatchesView({
             <span className="num">{s ? (counts[s] ?? 0) : data.store.watches.length}</span>
           </button>
         ))}
+        <select
+          aria-label="Bought from"
+          value={from}
+          onChange={(e) => setFrom(e.target.value)}
+          className={`${inlineField} w-auto`}
+        >
+          <option value="">Any source</option>
+          <option value={NO_SOURCE}>No source yet</option>
+          {(data.store.sources ?? []).map((s) => (
+            <option key={s.id} value={s.id}>
+              {s.label}
+            </option>
+          ))}
+        </select>
         <input
           type="search"
           value={query}
@@ -641,6 +695,7 @@ function WatchesView({
             <Th>Watch</Th>
             <Th>Status</Th>
             <Th>Bought</Th>
+            <Th>From</Th>
             <Th>Cost</Th>
             <Th>Received</Th>
             <Th>Profit</Th>
@@ -670,6 +725,9 @@ function WatchesView({
                 </td>
                 <td className="py-2 pr-4 text-xs">{STATUS_LABEL[w.status]}</td>
                 <td className="num whitespace-nowrap py-2 pr-4">{dmy(w.acquired)}</td>
+                <td className="py-2 pr-4 text-xs">
+                  {w.source ? (sourceLabel.get(w.source) ?? w.source) : "—"}
+                </td>
                 <td className="num py-2 pr-4">{s ? money(s.cost - s.refunds) : "—"}</td>
                 <td className="num py-2 pr-4">{s?.received ? money(s.received) : "—"}</td>
                 <td className="num py-2 pr-4">

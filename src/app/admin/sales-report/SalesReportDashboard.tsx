@@ -6,12 +6,14 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import Link from "next/link";
 import { useMemo, useState } from "react";
 
+import type { SourceReport } from "../ledger/ledgerSources";
 import { MoneySection } from "./components/MoneySection";
 import { AdminTable, SectionHeader, StatTile, Th, WatchLink } from "./components/primitives";
 import { ProfitabilitySection } from "./components/ProfitabilitySection";
 import { ReconciliationPanel } from "./components/ReconciliationPanel";
 import { SalesByBrandChart } from "./components/SalesByBrandChart";
 import { SalesOverTimeChart } from "./components/SalesOverTimeChart";
+import { SourceSection, type SourceModels } from "./components/SourceSection";
 import { WindowSelector } from "./components/WindowSelector";
 import type { KeptWatchFinancials, SalesFinancials } from "./salesData.types";
 import {
@@ -45,6 +47,8 @@ export default function SalesReportDashboard({
   source = "workbook",
   hasLedger = false,
   ledgerIssues = [],
+  sources = null,
+  sourceModels = {},
 }: {
   sold: CollectionIndexEntry[];
   /** The P&L from the active source, or null until it exists. */
@@ -57,6 +61,10 @@ export default function SalesReportDashboard({
   hasLedger?: boolean;
   /** Problems the ledger build found: a line not fully held, a sold watch with no sale. */
   ledgerIssues?: string[];
+  /** Where the watches were bought, from the ledger; null before it exists. */
+  sources?: SourceReport | null;
+  /** Catalogue brand and legend of the watches under each source, by modelFile. */
+  sourceModels?: SourceModels;
 }) {
   const keptLink = (k: KeptWatchFinancials) => {
     const m = k.modelFile ? keptModels[k.modelFile] : undefined;
@@ -192,6 +200,16 @@ export default function SalesReportDashboard({
             </p>
           )}
         </>
+      )}
+
+      {/* ───── Where they came from (the ledger's sources; bought and spent are all time) ───── */}
+      {sources && (
+        <SourceSection
+          entries={filtered}
+          fin={financials?.byModel ?? null}
+          report={sources}
+          models={sourceModels}
+        />
       )}
 
       {/* ───── Money over time (the ledger day by day; shown even with no sales in the window) ───── */}

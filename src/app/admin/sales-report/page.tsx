@@ -1,7 +1,8 @@
 import collectionService from "@/app/services/collectionService";
 
 import DevOnly from "../DevOnly";
-import { ledgerExists, ledgerFinancials } from "../ledger/ledgerStore";
+import { sourceReport } from "../ledger/ledgerSources";
+import { ledgerExists, ledgerFinancials, loadStore } from "../ledger/ledgerStore";
 import { loadFinancials } from "./loadSalesData";
 import SalesReportDashboard, { type ReportSource } from "./SalesReportDashboard";
 
@@ -49,6 +50,21 @@ export default async function SalesReportPage({
     );
   }
 
+  // Where the watches were bought: from the ledger, whichever figures are shown.
+  const store = hasLedger ? loadStore()?.store : undefined;
+  const sources = store ? sourceReport(store) : null;
+  // Names and links for the watches its rows open onto.
+  const sourceFiles = new Set(
+    Object.values(sources?.watches ?? {}).flatMap((ws) =>
+      ws.flatMap((w) => (w.modelFile ? [w.modelFile] : [])),
+    ),
+  );
+  const sourceModels = Object.fromEntries(
+    Object.values(collectionService.getAllCollectionItems())
+      .filter((e) => sourceFiles.has(e.modelFile))
+      .map((e) => [e.modelFile, { brand: e.brand, legend: e.legend }]),
+  );
+
   // The catalogue entries of the watches kept, so their names can link to their pages.
   const financials = (source === "ledger" ? ledger?.data : workbook?.data) ?? null;
   const keptFiles = new Set(
@@ -69,6 +85,8 @@ export default async function SalesReportPage({
       source={source}
       hasLedger={hasLedger}
       ledgerIssues={ledger?.issues ?? []}
+      sources={sources}
+      sourceModels={sourceModels}
     />
   );
 }

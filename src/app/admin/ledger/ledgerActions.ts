@@ -7,6 +7,7 @@
 import { OVERHEAD_ID } from "./buildFinancials";
 import type {
   LedgerLine,
+  LedgerSource,
   LedgerStore,
   LedgerWatch,
   LineKind,
@@ -64,7 +65,16 @@ export type LedgerAction =
       watches: { label: string; modelFile?: string | null }[];
       status: "for-sale" | "kept";
       purchase: { date: string; amount: number; channel?: string; text: string };
-    };
+      /** Where it was bought (a LedgerSource id), set on every watch of the purchase. */
+      source?: string;
+    }
+  /** Adds a source, or renames one already there. */
+  | { action: "save-source"; source: LedgerSource }
+  | { action: "delete-source"; id: string }
+  /** Sets (or, with null, clears) where several watches were bought: a whole lot at once. */
+  | { action: "set-source"; watchIds: string[]; source: string | null }
+  /** The same, for catalogue models with no ledger watch yet (LedgerStore.modelSources). */
+  | { action: "set-model-source"; modelFiles: string[]; source: string | null };
 
 export class ActionRefused extends Error {}
 
@@ -113,6 +123,23 @@ function checkWatch(w: LedgerWatch, store: LedgerStore, models: Set<string>) {
     throw new ActionRefused("A lot share stands for a whole number of watches.");
   if (w.group && !store.groups.some((g) => g.id === w.group))
     throw new ActionRefused(`Unknown group ${w.group}.`);
+  if (w.source && !(store.sources ?? []).some((s) => s.id === w.source))
+    throw new ActionRefused(`Unknown source ${w.source}.`);
+}
+
+const SOURCE_ID = /^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$/;
+
+/**
+ * A watch now linked to a model that had a source on its own (no ledger watch
+ * then): the watch takes it, unless it has one already, and the entry goes.
+ */
+function adoptModelSource(store: LedgerStore, w: LedgerWatch): LedgerWatch {
+  const source = w.modelFile ? store.modelSources?.[w.modelFile] : undefined;
+  if (!source) return w;
+  const rest = { ...store.modelSources };
+  delete rest[w.modelFile!];
+  store.modelSources = rest;
+  return w.source ? w : { ...w, source };
 }
 
 /**
@@ -130,6 +157,8 @@ export function applyAction(
     lines: [...store.lines],
     watches: [...store.watches],
     groups: [...store.groups],
+    ...(store.sources ? { sources: [...store.sources] } : {}),
+    ...(store.modelSources ? { modelSources: { ...store.modelSources } } : {}),
   };
 
   switch (a.action) {
@@ -149,10 +178,11 @@ export function applyAction(
       return next;
     }
     case "save-watch": {
-      const watch = { ...a.watch, id: a.watch.id ?? newId("w") } as LedgerWatch;
+      let watch = { ...a.watch, id: a.watch.id ?? newId("w") } as LedgerWatch;
       for (const k of Object.keys(watch) as (keyof LedgerWatch)[])
         if (watch[k] === "" || watch[k] === undefined) delete watch[k];
       watch.modelFile = a.watch.modelFile || null;
+      watch = adoptModelSource(next, watch);
       checkWatch(watch, next, models);
       const i = next.watches.findIndex((w) => w.id === watch.id);
       if (a.watch.id && i < 0) throw new ActionRefused("That watch no longer exists.");
@@ -254,16 +284,21 @@ export function applyAction(
           size: labels.length,
         });
       }
+      const source = a.source ? next.sources?.find((s) => s.id === a.source) : undefined;
+      if (a.source && !source) throw new ActionRefused(`Unknown source ${a.source}.`);
       const created: LedgerWatch[] = a.watches
         .filter((w) => w.label.trim())
-        .map((w) => ({
-          id: newId("w"),
-          label: w.label.trim(),
-          modelFile: w.modelFile || null,
-          status: a.status,
-          acquired: a.purchase.date,
-          ...(group ? { group } : {}),
-        }));
+        .map((w) =>
+          adoptModelSource(next, {
+            id: newId("w"),
+            label: w.label.trim(),
+            modelFile: w.modelFile || null,
+            status: a.status,
+            acquired: a.purchase.date,
+            ...(group ? { group } : {}),
+            ...(source ? { source: source.id } : {}),
+          }),
+        );
       for (const w of created) {
         checkWatch(
           w,
@@ -279,7 +314,7 @@ export function applyAction(
         amount: Math.round(a.purchase.amount * 100) / 100,
         kind: "purchase",
         text: a.purchase.text.trim() || labels.join(" + "),
-        channel: a.purchase.channel?.trim() || undefined,
+        channel: a.purchase.channel?.trim() || source?.label,
         book: a.status === "kept" ? "collection" : "trade",
         ...(group ? { group } : {}),
         holders: created.map((w) => ({ id: w.id, share: 1 / created.length })),
@@ -291,6 +326,68 @@ export function applyAction(
     case "sale-report":
       // Public only: nothing in the ledger changes.
       return store;
+    case "save-source": {
+      const id = a.source.id?.trim() ?? "";
+      const label = a.source.label?.trim() ?? "";
+      if (!SOURCE_ID.test(id))
+        throw new ActionRefused(`A source id is UPPER_SNAKE (EBAY, SR_NAME): not "${id}".`);
+      if (!label) throw new ActionRefused("A source needs a name.");
+      const sources = next.sources ?? [];
+      const clash = sources.find(
+        (s) => s.id !== id && s.label.toLowerCase() === label.toLowerCase(),
+      );
+      if (clash) throw new ActionRefused(`"${label}" is already the source ${clash.id}.`);
+      next.sources = sources.some((s) => s.id === id)
+        ? sources.map((s) => (s.id === id ? { id, label } : s))
+        : [...sources, { id, label }];
+      return next;
+    }
+    case "delete-source": {
+      if (!next.sources?.some((s) => s.id === a.id)) throw new ActionRefused("No such source.");
+      const using =
+        next.watches.filter((w) => w.source === a.id).length +
+        Object.values(next.modelSources ?? {}).filter((s) => s === a.id).length;
+      if (using)
+        throw new ActionRefused(
+          `${using} watch(es) still came from ${a.id}: move or clear them first.`,
+        );
+      next.sources = next.sources.filter((s) => s.id !== a.id);
+      return next;
+    }
+    case "set-source": {
+      if (!a.watchIds.length) throw new ActionRefused("Name the watches to set.");
+      if (a.source !== null && !next.sources?.some((s) => s.id === a.source))
+        throw new ActionRefused(`Unknown source ${a.source}.`);
+      const ids = new Set(a.watchIds);
+      for (const id of ids)
+        if (!next.watches.some((w) => w.id === id)) throw new ActionRefused(`Unknown watch ${id}.`);
+      next.watches = next.watches.map((w) => {
+        if (!ids.has(w.id)) return w;
+        const watch = { ...w };
+        if (a.source === null) delete watch.source;
+        else watch.source = a.source;
+        return watch;
+      });
+      return next;
+    }
+    case "set-model-source": {
+      if (!a.modelFiles.length) throw new ActionRefused("Name the models to set.");
+      if (a.source !== null && !next.sources?.some((s) => s.id === a.source))
+        throw new ActionRefused(`Unknown source ${a.source}.`);
+      const entries = { ...next.modelSources };
+      for (const modelFile of new Set(a.modelFiles)) {
+        if (!models.has(modelFile)) throw new ActionRefused(`No catalogue model ${modelFile}.`);
+        const linked = next.watches.find((w) => w.modelFile === modelFile);
+        if (linked)
+          throw new ActionRefused(
+            `${modelFile} is the ledger's "${linked.label}" (${linked.id}): tag the watch instead.`,
+          );
+        if (a.source === null) delete entries[modelFile];
+        else entries[modelFile] = a.source;
+      }
+      next.modelSources = entries;
+      return next;
+    }
     case "pull-line": {
       // A workbook line the ledger lacks, already split between its watches.
       const line = snapshot?.lines.find((l) => l.id === a.id);
@@ -306,7 +403,7 @@ export function applyAction(
         // A watch the back-office already has under the same model takes it.
         const existing = proposed.modelFile ? byModel.get(proposed.modelFile) : undefined;
         if (existing) remap.set(h.id, existing.id);
-        else next.watches.push(proposed);
+        else next.watches.push(adoptModelSource(next, proposed));
       }
       if (line.group && !next.groups.some((g) => g.id === line.group)) {
         const g = snapshot!.groups.find((x) => x.id === line.group);

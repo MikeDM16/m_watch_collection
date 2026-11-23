@@ -2,7 +2,13 @@
 
 import type { WatchSummary } from "./buildFinancials";
 import type { FigureDiff } from "./compareLedger";
-import type { LedgerGroup, LedgerLine, LedgerStore, LedgerWatch } from "./ledger.types";
+import type {
+  LedgerGroup,
+  LedgerLine,
+  LedgerSource,
+  LedgerStore,
+  LedgerWatch,
+} from "./ledger.types";
 
 /** One catalogue model's money, for the Ledger panel under its model editor. */
 export interface ModelLedgerData {
@@ -17,6 +23,8 @@ export interface ModelLedgerData {
   /** For a line's holders and groups. */
   allWatches: LedgerWatch[];
   groups: LedgerGroup[];
+  /** Where watches are bought, to name a watch's source. */
+  sources: LedgerSource[];
   models: ModelOption[];
   /** The model file's public sale report, and whether its screenshot exists. */
   saleReport: { price: number; date: string; url?: string } | null;

@@ -85,3 +85,58 @@ It lists:
   public sale report (hammer, date, listing) to the model file, but only once `saleReport.JPG` sits
   beside the photos in the resources checkout, because the model page shows that screenshot for
   every report.
+
+## Sources: where each watch was bought
+
+Each watch can record where it was bought (`LedgerWatch.source`). The value is an id from the
+store's own list (`LedgerStore.sources`, e.g. `{ "id": "EBAY", "label": "eBay" }`).
+
+**Privacy.** The list lives in the store, not in code, because a seller can be a private person
+and the repo is public. Never put a source's name in a model file, a script or a commit.
+
+**Rules** (`ledgerActions.ts`):
+
+- `save-source`: an id is UPPER_SNAKE, and no two sources share a name.
+- `delete-source`: refused while any watch still uses the source.
+- `set-source`: sets or clears the source on several watches at once, for a whole lot.
+- `save-watch` and `record-purchase` refuse an id that isn't in the list. A purchase recorded with
+  a source tags every watch it buys, and puts the source's name in the line's `channel`.
+
+**Commands.** `npm run ledger:sources` does it in bulk:
+
+```bash
+npm run ledger:sources                          # how many watches each source has
+npm run ledger:sources -- untagged [--status s] # watches with no source, with what they paid and a hint
+npm run ledger:sources -- find <text>           # watches whose name, model or purchase text match
+npm run ledger:sources -- apply <file.json> [--dry]
+```
+
+- The apply file's format is at the top of `sources.ts`. Its keys are a watch id, a linked
+  `modelFile`, or `group:<id>` for every watch of a lot.
+- A write backs up like a back-office save, and is refused if the ledger changed while it ran.
+- A hint comes from a watch's purchase text naming a source ("Compra Ebay…"). It is never applied
+  on its own.
+
+**In the back-office:**
+
+- On `/admin/ledger`, the watch form and **Record a purchase** have a **Bought from** dropdown.
+  The Watches list has a source column and a filter.
+- The model editor's Ledger panel shows each watch's source.
+
+**In the sales report.** The **Where they came from** section has a row per source, plus Untagged:
+
+- Watches bought and spent on purchases, all time.
+- Sales, profit, margin and days held, for the time window and from whichever figures the report
+  shows.
+
+**Catalogue watches not in the ledger.**
+
+- `LedgerStore.modelSources` holds where a catalogue model with no ledger watch yet was bought
+  (modelFile → source id). No money is recorded for these.
+- The CLI sets them with `model:<Brand/File>` keys, through `set-model-source`. That covers model
+  files kept out of the collection index until their photos are listed.
+- They count as bought on the report (shown as "n not in ledger"), and a sale of the model counts
+  under its source.
+- When a ledger watch is later linked to the model, it takes the source over, unless it has its
+  own, and the entry is dropped.
+- `set-model-source` is refused for a model a ledger watch already links to: tag the watch instead.
