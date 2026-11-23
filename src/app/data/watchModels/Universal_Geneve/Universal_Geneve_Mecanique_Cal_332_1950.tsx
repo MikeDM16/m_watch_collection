@@ -91,7 +91,7 @@ const details: WatchDetails = {
       catalogueReference: "-",
       productionYear: "1950",
       movementType: MovementWatchTypeEnum.MECHANIQUE,
-      style: WatchStyleEnum.CASUAL,
+      style: WatchStyleEnum.DRESS,
     },
 
     case: {
