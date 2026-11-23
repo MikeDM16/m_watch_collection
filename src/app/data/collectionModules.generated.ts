@@ -72,6 +72,8 @@ export const modelLoaders: Record<string, () => Promise<{ default: WatchDetails 
     import("./watchModels/Camel_Trophy/Camel_Trophy_M6612000009_1998"),
   "Camel_Trophy/Camel_Trophy_M81020802089_2001": () =>
     import("./watchModels/Camel_Trophy/Camel_Trophy_M81020802089_2001"),
+  "Carfo/Carfo_Datomatic_Engine_turned_Bezel_1975": () =>
+    import("./watchModels/Carfo/Carfo_Datomatic_Engine_turned_Bezel_1975"),
   "Cauny/Cauny_Apollon_17Rubis_1957": () =>
     import("./watchModels/Cauny/Cauny_Apollon_17Rubis_1957"),
   "Cauny/Cauny_Apollon_17_jewels_1965": () =>
@@ -391,6 +393,8 @@ export const modelLoaders: Record<string, () => Promise<{ default: WatchDetails 
   "Romar/Romar_Incabloc_17Jewels_Green_1976": () =>
     import("./watchModels/Romar/Romar_Incabloc_17Jewels_Green_1976"),
   "Rone/Rone_Calendar_Pointer_1950": () => import("./watchModels/Rone/Rone_Calendar_Pointer_1950"),
+  "Ruby/Ruby_Precision_15_Rubis_1945": () =>
+    import("./watchModels/Ruby/Ruby_Precision_15_Rubis_1945"),
   "Said/Said_Blue_Linen_Unitas_6325_1973": () =>
     import("./watchModels/Said/Said_Blue_Linen_Unitas_6325_1973"),
   "Saint_Honore/Saint_Honore_Classic_Rattrapante_1996": () =>
@@ -685,6 +689,7 @@ export type ModelFile =
   | "Camel_Trophy/Camel_Trophy_M136831839_1995"
   | "Camel_Trophy/Camel_Trophy_M6612000009_1998"
   | "Camel_Trophy/Camel_Trophy_M81020802089_2001"
+  | "Carfo/Carfo_Datomatic_Engine_turned_Bezel_1975"
   | "Cauny/Cauny_Apollon_17Rubis_1957"
   | "Cauny/Cauny_Apollon_17_jewels_1965"
   | "Cauny/Cauny_Prima_17Rubis_1965"
@@ -855,6 +860,7 @@ export type ModelFile =
   | "Romar/Romar_Incabloc_17Jewels_1976"
   | "Romar/Romar_Incabloc_17Jewels_Green_1976"
   | "Rone/Rone_Calendar_Pointer_1950"
+  | "Ruby/Ruby_Precision_15_Rubis_1945"
   | "Said/Said_Blue_Linen_Unitas_6325_1973"
   | "Saint_Honore/Saint_Honore_Classic_Rattrapante_1996"
   | "Sector/Sector_250_Chrono_Alarm_2012"

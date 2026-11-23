@@ -8,6 +8,7 @@ import { CaseBackDetailsEnum } from "@/app/enums/caseBackDetailsEnum";
 import { CaseDiameterEnum } from "@/app/enums/caseDiameterEnum";
 import { CaseFinishingEnum } from "@/app/enums/caseFinishingEnum";
 import { CaseMaterialEnum } from "@/app/enums/caseMaterialEnum";
+import { CaseThicknessEnum } from "@/app/enums/caseThicknessEnum";
 import { ColorEnum } from "@/app/enums/colorEnum";
 import { CrownWatchTypeEnum } from "@/app/enums/crownWatchTypeEnum";
 import { CrystalMaterialEnum } from "@/app/enums/crystalMaterialEnum";
@@ -26,7 +27,48 @@ const details: WatchDetails = {
   title: "1975 Carfo Datomatic Engine-turned Bezel",
 
   sliderImages: [
-    "public/assets/Images/Carfo/1975_Carfo_Datomatic_Engine_turned_Bezel_866/IMG_XXXX.JPG",
+    "public/assets/Images/Carfo/1975_Carfo_Datomatic/IMG_7614.JPG",
+    "public/assets/Images/Carfo/1975_Carfo_Datomatic/IMG_7615.JPG",
+    "public/assets/Images/Carfo/1975_Carfo_Datomatic/IMG_7616.JPG",
+    "public/assets/Images/Carfo/1975_Carfo_Datomatic/IMG_7617.JPG",
+    "public/assets/Images/Carfo/1975_Carfo_Datomatic/IMG_7618.JPG",
+    "public/assets/Images/Carfo/1975_Carfo_Datomatic/IMG_7620.JPG",
+    "public/assets/Images/Carfo/1975_Carfo_Datomatic/IMG_7621.JPG",
+    "public/assets/Images/Carfo/1975_Carfo_Datomatic/IMG_7622.JPG",
+    "public/assets/Images/Carfo/1975_Carfo_Datomatic/IMG_7623.JPG",
+    "public/assets/Images/Carfo/1975_Carfo_Datomatic/IMG_7624.JPG",
+    "public/assets/Images/Carfo/1975_Carfo_Datomatic/IMG_7625.JPG",
+    "public/assets/Images/Carfo/1975_Carfo_Datomatic/IMG_7626.JPG",
+    "public/assets/Images/Carfo/1975_Carfo_Datomatic/IMG_7627.JPG",
+    "public/assets/Images/Carfo/1975_Carfo_Datomatic/IMG_7628.JPG",
+    "public/assets/Images/Carfo/1975_Carfo_Datomatic/IMG_7630.JPG",
+    "public/assets/Images/Carfo/1975_Carfo_Datomatic/IMG_7631.JPG",
+    "public/assets/Images/Carfo/1975_Carfo_Datomatic/IMG_7633.JPG",
+    "public/assets/Images/Carfo/1975_Carfo_Datomatic/IMG_7634.JPG",
+    "public/assets/Images/Carfo/1975_Carfo_Datomatic/IMG_7635.JPG",
+
+    "public/assets/Images/Carfo/1975_Carfo_Datomatic/IMG_7653.JPG",
+    "public/assets/Images/Carfo/1975_Carfo_Datomatic/IMG_7654.JPG",
+    "public/assets/Images/Carfo/1975_Carfo_Datomatic/IMG_7748.JPG",
+    "public/assets/Images/Carfo/1975_Carfo_Datomatic/IMG_7749.JPG",
+
+    "public/assets/Images/Carfo/1975_Carfo_Datomatic/IMG_7636.JPG",
+    "public/assets/Images/Carfo/1975_Carfo_Datomatic/IMG_7637.JPG",
+    "public/assets/Images/Carfo/1975_Carfo_Datomatic/IMG_7638.JPG",
+    "public/assets/Images/Carfo/1975_Carfo_Datomatic/IMG_7639.JPG",
+    "public/assets/Images/Carfo/1975_Carfo_Datomatic/IMG_7640.JPG",
+    "public/assets/Images/Carfo/1975_Carfo_Datomatic/IMG_7641.JPG",
+    "public/assets/Images/Carfo/1975_Carfo_Datomatic/IMG_7642.JPG",
+    "public/assets/Images/Carfo/1975_Carfo_Datomatic/IMG_7643.JPG",
+    "public/assets/Images/Carfo/1975_Carfo_Datomatic/IMG_7644.JPG",
+    "public/assets/Images/Carfo/1975_Carfo_Datomatic/IMG_7645.JPG",
+    "public/assets/Images/Carfo/1975_Carfo_Datomatic/IMG_7646.JPG",
+    "public/assets/Images/Carfo/1975_Carfo_Datomatic/IMG_7647.JPG",
+    "public/assets/Images/Carfo/1975_Carfo_Datomatic/IMG_7648.JPG",
+    "public/assets/Images/Carfo/1975_Carfo_Datomatic/IMG_7649.JPG",
+    "public/assets/Images/Carfo/1975_Carfo_Datomatic/IMG_7650.JPG",
+    "public/assets/Images/Carfo/1975_Carfo_Datomatic/IMG_7651.JPG",
+    "public/assets/Images/Carfo/1975_Carfo_Datomatic/IMG_7652.JPG",
   ],
 
   technicalData: {
@@ -43,7 +85,7 @@ const details: WatchDetails = {
 
     case: {
       diameter: CaseDiameterEnum.D_35,
-      thickness: "- mm",
+      thickness: CaseThicknessEnum.T_9,
       material: CaseMaterialEnum.STAINLESS_STEEL,
       waterResistance: WaterResistanceEnum.WATER_RESISTANT,
       finishingDetails: CaseFinishingEnum.POLISHED,

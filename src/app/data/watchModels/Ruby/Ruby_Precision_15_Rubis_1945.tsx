@@ -8,6 +8,7 @@ import { CaseBackDetailsEnum } from "@/app/enums/caseBackDetailsEnum";
 import { CaseDiameterEnum } from "@/app/enums/caseDiameterEnum";
 import { CaseFinishingEnum } from "@/app/enums/caseFinishingEnum";
 import { CaseMaterialEnum } from "@/app/enums/caseMaterialEnum";
+import { CaseThicknessEnum } from "@/app/enums/caseThicknessEnum";
 import { ColorEnum } from "@/app/enums/colorEnum";
 import { CrownWatchTypeEnum } from "@/app/enums/crownWatchTypeEnum";
 import { CrystalMaterialEnum } from "@/app/enums/crystalMaterialEnum";
@@ -25,7 +26,49 @@ import { WatchDetails } from "../../watchDetails";
 const details: WatchDetails = {
   title: "1945 Ruby Precision 15 Rubis",
 
-  sliderImages: ["public/assets/Images/Ruby/1945_Ruby_Precision_15_Rubis_1130/IMG_XXXX.JPG"],
+  sliderImages: [
+    "public/assets/Images/Ruby/1945_Ruby_Precision_15_Rubis/IMG_7699.JPG",
+    "public/assets/Images/Ruby/1945_Ruby_Precision_15_Rubis/IMG_7701.JPG",
+    "public/assets/Images/Ruby/1945_Ruby_Precision_15_Rubis/IMG_7702.JPG",
+    "public/assets/Images/Ruby/1945_Ruby_Precision_15_Rubis/IMG_7703.JPG",
+    "public/assets/Images/Ruby/1945_Ruby_Precision_15_Rubis/IMG_7704.JPG",
+    "public/assets/Images/Ruby/1945_Ruby_Precision_15_Rubis/IMG_7705.JPG",
+    "public/assets/Images/Ruby/1945_Ruby_Precision_15_Rubis/IMG_7706.JPG",
+    "public/assets/Images/Ruby/1945_Ruby_Precision_15_Rubis/IMG_7707.JPG",
+    "public/assets/Images/Ruby/1945_Ruby_Precision_15_Rubis/IMG_7708.JPG",
+    "public/assets/Images/Ruby/1945_Ruby_Precision_15_Rubis/IMG_7709.JPG",
+    "public/assets/Images/Ruby/1945_Ruby_Precision_15_Rubis/IMG_7710.JPG",
+    "public/assets/Images/Ruby/1945_Ruby_Precision_15_Rubis/IMG_7711.JPG",
+    "public/assets/Images/Ruby/1945_Ruby_Precision_15_Rubis/IMG_7712.JPG",
+    "public/assets/Images/Ruby/1945_Ruby_Precision_15_Rubis/IMG_7713.JPG",
+    "public/assets/Images/Ruby/1945_Ruby_Precision_15_Rubis/IMG_7714.JPG",
+    "public/assets/Images/Ruby/1945_Ruby_Precision_15_Rubis/IMG_7715.JPG",
+    "public/assets/Images/Ruby/1945_Ruby_Precision_15_Rubis/IMG_7716.JPG",
+    "public/assets/Images/Ruby/1945_Ruby_Precision_15_Rubis/IMG_7717.JPG",
+    "public/assets/Images/Ruby/1945_Ruby_Precision_15_Rubis/IMG_7718.JPG",
+    "public/assets/Images/Ruby/1945_Ruby_Precision_15_Rubis/IMG_7719.JPG",
+
+    "public/assets/Images/Ruby/1945_Ruby_Precision_15_Rubis/IMG_7739.JPG",
+    "public/assets/Images/Ruby/1945_Ruby_Precision_15_Rubis/IMG_7740.JPG",
+
+    "public/assets/Images/Ruby/1945_Ruby_Precision_15_Rubis/IMG_7720.JPG",
+    "public/assets/Images/Ruby/1945_Ruby_Precision_15_Rubis/IMG_7723.JPG",
+    "public/assets/Images/Ruby/1945_Ruby_Precision_15_Rubis/IMG_7724.JPG",
+    "public/assets/Images/Ruby/1945_Ruby_Precision_15_Rubis/IMG_7725.JPG",
+    "public/assets/Images/Ruby/1945_Ruby_Precision_15_Rubis/IMG_7726.JPG",
+    "public/assets/Images/Ruby/1945_Ruby_Precision_15_Rubis/IMG_7727.JPG",
+    "public/assets/Images/Ruby/1945_Ruby_Precision_15_Rubis/IMG_7728.JPG",
+    "public/assets/Images/Ruby/1945_Ruby_Precision_15_Rubis/IMG_7729.JPG",
+    "public/assets/Images/Ruby/1945_Ruby_Precision_15_Rubis/IMG_7730.JPG",
+    "public/assets/Images/Ruby/1945_Ruby_Precision_15_Rubis/IMG_7731.JPG",
+    "public/assets/Images/Ruby/1945_Ruby_Precision_15_Rubis/IMG_7732.JPG",
+    "public/assets/Images/Ruby/1945_Ruby_Precision_15_Rubis/IMG_7733.JPG",
+    "public/assets/Images/Ruby/1945_Ruby_Precision_15_Rubis/IMG_7734.JPG",
+    "public/assets/Images/Ruby/1945_Ruby_Precision_15_Rubis/IMG_7735.JPG",
+    "public/assets/Images/Ruby/1945_Ruby_Precision_15_Rubis/IMG_7736.JPG",
+    "public/assets/Images/Ruby/1945_Ruby_Precision_15_Rubis/IMG_7737.JPG",
+    "public/assets/Images/Ruby/1945_Ruby_Precision_15_Rubis/IMG_7738.JPG",
+  ],
 
   technicalData: {
     features: [
@@ -45,7 +88,7 @@ const details: WatchDetails = {
 
     case: {
       diameter: CaseDiameterEnum.D_34,
-      thickness: "- mm",
+      thickness: CaseThicknessEnum.T_9,
       material: CaseMaterialEnum.STAINLESS_STEEL,
       waterResistance: WaterResistanceEnum.WATER_RESISTANT,
       finishingDetails: CaseFinishingEnum.POLISHED,

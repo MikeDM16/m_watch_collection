@@ -237,6 +237,20 @@
     },
     "modelFile": "Argus/Argus_Tuxedo_Militare_1945"
   },
+  "Ruby Precision 15 Rubis": {
+    "brand": "Ruby",
+    "legend": "Ruby Precision 15 Rubis",
+    "year": 1945,
+    "type": "Casual",
+    "srcImage": "public/assets/Images/Ruby/1945_Ruby_Precision_15_Rubis/IMG_7715.JPG",
+    "hoverSrc": "public/assets/Images/Ruby/1945_Ruby_Precision_15_Rubis/IMG_7716.JPG",
+    "specialCollectionItem": false,
+    "collectionSet": false,
+    "series": "Precision",
+    "movementTitle": "A. Schild 1130 (15 Jewels)",
+    "saleReport": null,
+    "modelFile": "Ruby/Ruby_Precision_15_Rubis_1945"
+  },
   "Tissot Antimagnetic": {
     "brand": "Tissot",
     "legend": "Tissot Antimagnetic",
@@ -2060,6 +2074,20 @@
       "url": "https://www.catawiki.com/en/l/85394479-pryngeps-autavia-nos-valjoux-7750-chrono-25-jewels-men-1980-1989"
     },
     "modelFile": "Pryngeps/Pryngeps_Automatic_Chronograph_Valjoux_7750"
+  },
+  "Carfo Datomatic Engine-turned Bezel": {
+    "brand": "Carfo",
+    "legend": "Carfo Datomatic Engine-turned Bezel",
+    "year": 1975,
+    "type": "Casual",
+    "srcImage": "public/assets/Images/Carfo/1975_Carfo_Datomatic/IMG_7633.JPG",
+    "hoverSrc": "public/assets/Images/Carfo/1975_Carfo_Datomatic/IMG_7630.JPG",
+    "specialCollectionItem": false,
+    "collectionSet": false,
+    "series": "Datomatic",
+    "movementTitle": "Baumgartner (BFG) Cal. 866",
+    "saleReport": null,
+    "modelFile": "Carfo/Carfo_Datomatic_Engine_turned_Bezel_1975"
   },
   "Eusi Incabloc Tank": {
     "brand": "Eusi",

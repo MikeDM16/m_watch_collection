@@ -26,7 +26,10 @@ const BAUMGARTNER_866: Caliber = {
     "OldSwissWatches BFG 866": "https://oldswisswatches.com/tag/bfg-calibre/",
   },
   // sliderImages
-  sliderImages: [],
+  sliderImages: [
+    "public/assets/Images/Movements/Baumgartner/Baumgartner_866/Baumgartner_866_01.JPG",
+    "public/assets/Images/Movements/Baumgartner/Baumgartner_866/Baumgartner_866_02.JPG",
+  ],
   // Details
   details: {
     // Manufacturer

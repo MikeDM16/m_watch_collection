@@ -3544,17 +3544,16 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
   //   specialCollectionItem: false,
   // },
 
-  // Hidden until photos are added (MWatchCollectionResources/Images/Ruby/1945_Ruby_Precision_15_Rubis_1130)
-  // "Ruby Precision 15 Rubis": {
-  //   brand: BrandsEnum.RUBY,
-  //   legend: "Ruby Precision 15 Rubis",
-  //   year: 1945,
-  //   type: WatchTypeEnum.CASUAL,
-  //   srcImage: "public/assets/Images/Ruby/1945_Ruby_Precision_15_Rubis_1130/IMG_XXXX.JPG",
-  //   hoverSrc: "public/assets/Images/Ruby/1945_Ruby_Precision_15_Rubis_1130/IMG_YYYY.JPG",
-  //   href: require("../watchModels/Ruby/Ruby_Precision_15_Rubis_1945"),
-  //   specialCollectionItem: false,
-  // },
+  "Ruby Precision 15 Rubis": {
+    brand: BrandsEnum.RUBY,
+    legend: "Ruby Precision 15 Rubis",
+    year: 1945,
+    type: WatchTypeEnum.CASUAL,
+    srcImage: "public/assets/Images/Ruby/1945_Ruby_Precision_15_Rubis/IMG_7715.JPG",
+    hoverSrc: "public/assets/Images/Ruby/1945_Ruby_Precision_15_Rubis/IMG_7716.JPG",
+    href: require("../watchModels/Ruby/Ruby_Precision_15_Rubis_1945"),
+    specialCollectionItem: false,
+  },
 
   // Hidden until photos are added (MWatchCollectionResources/Images/Rhodes/1953_Rhodes_Tetra_Antimagnetic_811)
   // "Rhodes Tetra Antimagnetic": {
@@ -3568,17 +3567,16 @@ let CollectionItemsDB: Record<string, CollectionEntry> = {
   //   specialCollectionItem: false,
   // },
 
-  // Hidden until photos are added (MWatchCollectionResources/Images/Carfo/1975_Carfo_Datomatic_Engine_turned_Bezel_866)
-  // "Carfo Datomatic Engine-turned Bezel": {
-  //   brand: BrandsEnum.CARFO,
-  //   legend: "Carfo Datomatic Engine-turned Bezel",
-  //   year: 1975,
-  //   type: WatchTypeEnum.CASUAL,
-  //   srcImage: "public/assets/Images/Carfo/1975_Carfo_Datomatic_Engine_turned_Bezel_866/IMG_XXXX.JPG",
-  //   hoverSrc: "public/assets/Images/Carfo/1975_Carfo_Datomatic_Engine_turned_Bezel_866/IMG_YYYY.JPG",
-  //   href: require("../watchModels/Carfo/Carfo_Datomatic_Engine_turned_Bezel_1975"),
-  //   specialCollectionItem: false,
-  // },
+  "Carfo Datomatic Engine-turned Bezel": {
+    brand: BrandsEnum.CARFO,
+    legend: "Carfo Datomatic Engine-turned Bezel",
+    year: 1975,
+    type: WatchTypeEnum.CASUAL,
+    srcImage: "public/assets/Images/Carfo/1975_Carfo_Datomatic/IMG_7633.JPG",
+    hoverSrc: "public/assets/Images/Carfo/1975_Carfo_Datomatic/IMG_7630.JPG",
+    href: require("../watchModels/Carfo/Carfo_Datomatic_Engine_turned_Bezel_1975"),
+    specialCollectionItem: false,
+  },
 
   // Hidden until photos are added (MWatchCollectionResources/Images/Almery/1978_Almery_Dynamic_17_Rubis_115_1)
   // "Almery Dynamic 17 Rubis": {
