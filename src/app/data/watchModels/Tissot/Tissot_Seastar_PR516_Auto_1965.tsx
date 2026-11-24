@@ -60,7 +60,6 @@ const details: WatchDetails = {
     "public/assets/Images/Tissot/1965_Tissot_PR_516_Automatic/tissot_manufacturing_dates.JPG",
 
     "public/assets/Images/Tissot/1965_Tissot_PR_516_Automatic/IMG_7768.JPG",
-    "public/assets/Images/Tissot/1965_Tissot_PR_516_Automatic/IMG_7769.JPG",
     "public/assets/Images/Tissot/1965_Tissot_PR_516_Automatic/IMG_7770.JPG",
     "public/assets/Images/Tissot/1965_Tissot_PR_516_Automatic/IMG_7771.JPG",
     "public/assets/Images/Tissot/1965_Tissot_PR_516_Automatic/IMG_7772.JPG",

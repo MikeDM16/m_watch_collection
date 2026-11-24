@@ -33,11 +33,11 @@
   --yarl__thumbnails_thumbnail_background: transparent;
   --yarl__thumbnails_container_padding: 2px 16px 14px;
 
-  /* Near-black from the dark theme's --muted, never #000. Opaque enough, with
-     the blur, that the page behind reads as nothing at all. */
-  background-color: hsl(240 8% 4% / 0.94);
-  -webkit-backdrop-filter: blur(24px);
-  backdrop-filter: blur(24px);
+  /* Near-black from the dark theme's --muted, never #000. Opaque, so the page
+     behind reads as nothing at all. No backdrop-filter: at 94% it only ever
+     blurred the last few percent, and Firefox paid for a full-screen blur on
+     every frame to do it. */
+  background-color: hsl(240 8% 4%);
 }
 
 @media (max-width: 639px) {
@@ -51,8 +51,13 @@
    Ambient glow. Opacity lives on the wrapper and each layer is opaque, so a
    new layer fading in fully covers the one before rather than stacking on it.
    z-index -1 inside the portal's stacking context: above its ground, below
-   everything else. Each layer is blurred once and only its opacity animates,
-   which stays on the compositor.
+   everything else.
+
+   Each layer is a canvas a couple of dozen pixels wide (see Glow), stretched
+   to cover. The smoothing of that stretch is the blur, so there is no
+   `filter` here: Firefox redraws a filter this size every frame. A layer
+   fades in once its photograph has been drawn, so a slow thumbnail leaves the
+   previous glow in place instead of fading in an empty canvas.
    ------------------------------------------------------------------------ */
 .lb .lb-ambient {
   position: absolute;
@@ -62,20 +67,19 @@
   opacity: 0.3;
   pointer-events: none;
 }
-.lb .lb-ambient > div {
+.lb .lb-ambient > canvas {
   position: absolute;
-  /* Overscan, or the blur fades to transparent at the viewport edge. */
-  inset: -12%;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  filter: blur(64px) saturate(1.3);
-  animation: lb-fade-in 0.7s var(--lb-ease) both;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* Overscan: the photograph's own edges are the least interesting part. */
+  scale: 1.24;
+  opacity: 0;
+  transition: opacity 0.7s var(--lb-ease);
 }
-@keyframes lb-fade-in {
-  from {
-    opacity: 0;
-  }
+.lb .lb-ambient > canvas[data-ready] {
+  opacity: 1;
 }
 
 /* ---------------------------------------------------------------------------

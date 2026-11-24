@@ -84,7 +84,6 @@ const details: WatchDetails = {
     "public/assets/Images/Seiko/1976_Seiko_6306_7001/IMG_6458.JPG",
     "public/assets/Images/Seiko/1976_Seiko_6306_7001/IMG_6459.JPG",
     "public/assets/Images/Seiko/1976_Seiko_6306_7001/IMG_6460.JPG",
-    "public/assets/Images/Seiko/1976_Seiko_6306_7001/IMG_6461.JPG",
   ],
   technicalData: {
     features: [

@@ -56,7 +56,6 @@ const details: WatchDetails = {
     "public/assets/Images/Tissot/2015_Tissot_T_Sports_GMT_Titanium/IMG_5972.JPG",
     "public/assets/Images/Tissot/2015_Tissot_T_Sports_GMT_Titanium/IMG_5973.JPG",
     "public/assets/Images/Tissot/2015_Tissot_T_Sports_GMT_Titanium/IMG_5975.JPG",
-    "public/assets/Images/Tissot/2015_Tissot_T_Sports_GMT_Titanium/IMG_5970.JPG",
     "public/assets/Images/Tissot/2015_Tissot_T_Sports_GMT_Titanium/IMG_5976.JPG",
     "public/assets/Images/Tissot/2015_Tissot_T_Sports_GMT_Titanium/IMG_5977.JPG",
     "public/assets/Images/Tissot/2015_Tissot_T_Sports_GMT_Titanium/IMG_5978.JPG",
@@ -65,9 +64,6 @@ const details: WatchDetails = {
     "public/assets/Images/Tissot/2015_Tissot_T_Sports_GMT_Titanium/IMG_5981.JPG",
     "public/assets/Images/Tissot/2015_Tissot_T_Sports_GMT_Titanium/IMG_5982.JPG",
 
-    "public/assets/Images/Tissot/2015_Tissot_T_Sports_GMT_Titanium/IMG_5996.JPG",
-    "public/assets/Images/Tissot/2015_Tissot_T_Sports_GMT_Titanium/IMG_5997.JPG",
-
     "public/assets/Images/Tissot/2015_Tissot_T_Sports_GMT_Titanium/IMG_5983.JPG",
     "public/assets/Images/Tissot/2015_Tissot_T_Sports_GMT_Titanium/IMG_5984.JPG",
     "public/assets/Images/Tissot/2015_Tissot_T_Sports_GMT_Titanium/IMG_5985.JPG",
@@ -75,7 +71,6 @@ const details: WatchDetails = {
     "public/assets/Images/Tissot/2015_Tissot_T_Sports_GMT_Titanium/IMG_5987.JPG",
     "public/assets/Images/Tissot/2015_Tissot_T_Sports_GMT_Titanium/IMG_5988.JPG",
     "public/assets/Images/Tissot/2015_Tissot_T_Sports_GMT_Titanium/IMG_5989.JPG",
-    "public/assets/Images/Tissot/2015_Tissot_T_Sports_GMT_Titanium/IMG_5990.JPG",
   ],
 
   saleReport: {

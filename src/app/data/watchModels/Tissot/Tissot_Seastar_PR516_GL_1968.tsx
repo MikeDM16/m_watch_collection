@@ -41,7 +41,6 @@ const details: WatchDetails = {
     "public/assets/Images/Tissot/1968_Tissot_Seastar_PR516_GL/IMG_4189.JPG",
     "public/assets/Images/Tissot/1968_Tissot_Seastar_PR516_GL/IMG_4190.JPG",
     "public/assets/Images/Tissot/1968_Tissot_Seastar_PR516_GL/IMG_4191.JPG",
-    "public/assets/Images/Tissot/1968_Tissot_Seastar_PR516_GL/IMG_4190.JPG",
 
     "public/assets/Images/Tissot/1968_Tissot_Seastar_PR516_GL/IMG_4183.JPG",
     "public/assets/Images/Tissot/1968_Tissot_Seastar_PR516_GL/IMG_4184.JPG",

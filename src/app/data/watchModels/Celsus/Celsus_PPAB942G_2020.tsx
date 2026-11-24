@@ -45,7 +45,6 @@ const details: WatchDetails = {
     "public/assets/Images/Celsus/2020_Celsus_AB942G/IMG_6067.JPG",
     "public/assets/Images/Celsus/2020_Celsus_AB942G/IMG_6068.JPG",
     "public/assets/Images/Celsus/2020_Celsus_AB942G/IMG_6069.JPG",
-    "public/assets/Images/Celsus/2020_Celsus_AB942G/IMG_6011.JPG",
     "public/assets/Images/Celsus/2020_Celsus_AB942G/IMG_6012.JPG",
     "public/assets/Images/Celsus/2020_Celsus_AB942G/IMG_6013.JPG",
   ],

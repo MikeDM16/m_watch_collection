@@ -48,7 +48,6 @@ const details: WatchDetails = {
     "public/assets/Images/Tissot/1995_Tissot_Chrono_E662762M/IMG_1317.JPG",
     "public/assets/Images/Tissot/1995_Tissot_Chrono_E662762M/IMG_1318.JPG",
     "public/assets/Images/Tissot/1995_Tissot_Chrono_E662762M/IMG_1319.JPG",
-    "public/assets/Images/Tissot/1995_Tissot_Chrono_E662762M/IMG_1319.JPG",
     "public/assets/Images/Tissot/1995_Tissot_Chrono_E662762M/IMG_1320.JPG",
     "public/assets/Images/Tissot/1995_Tissot_Chrono_E662762M/IMG_1320-1.JPG",
     "public/assets/Images/Tissot/1995_Tissot_Chrono_E662762M/IMG_1321.JPG",

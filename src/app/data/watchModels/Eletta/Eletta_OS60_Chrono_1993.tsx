@@ -49,8 +49,6 @@ const details: WatchDetails = {
     "public/assets/Images/Elleta/Eletta_Chrono_OS60_1993/IMG_7392.JPG",
     "public/assets/Images/Elleta/Eletta_Chrono_OS60_1993/IMG_7393.JPG",
     "public/assets/Images/Elleta/Eletta_Chrono_OS60_1993/IMG_7394.JPG",
-    "public/assets/Images/Elleta/Eletta_Chrono_OS60_1993/IMG_7393.JPG",
-    "public/assets/Images/Elleta/Eletta_Chrono_OS60_1993/IMG_7394.JPG",
     "public/assets/Images/Elleta/Eletta_Chrono_OS60_1993/IMG_7395.JPG",
     "public/assets/Images/Elleta/Eletta_Chrono_OS60_1993/IMG_7396.JPG",
     "public/assets/Images/Elleta/Eletta_Chrono_OS60_1993/IMG_7397.JPG",

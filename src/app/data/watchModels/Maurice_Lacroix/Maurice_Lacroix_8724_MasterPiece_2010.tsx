@@ -53,7 +53,6 @@ const details: WatchDetails = {
     "public/assets/Images/Maurice_Lacroix/2021_Maurice_Lacroix_8724_MasterPiece_Auto/IMG_1618.JPG",
     "public/assets/Images/Maurice_Lacroix/2021_Maurice_Lacroix_8724_MasterPiece_Auto/IMG_1619.JPG",
     "public/assets/Images/Maurice_Lacroix/2021_Maurice_Lacroix_8724_MasterPiece_Auto/IMG_1620.JPG",
-    "public/assets/Images/Maurice_Lacroix/2021_Maurice_Lacroix_8724_MasterPiece_Auto/IMG_1620.JPG",
     "public/assets/Images/Maurice_Lacroix/2021_Maurice_Lacroix_8724_MasterPiece_Auto/IMG_1621.JPG",
     "public/assets/Images/Maurice_Lacroix/2021_Maurice_Lacroix_8724_MasterPiece_Auto/IMG_1622.JPG",
     "public/assets/Images/Maurice_Lacroix/2021_Maurice_Lacroix_8724_MasterPiece_Auto/IMG_1623.JPG",

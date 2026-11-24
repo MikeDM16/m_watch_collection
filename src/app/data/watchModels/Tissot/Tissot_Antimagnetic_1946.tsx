@@ -30,7 +30,6 @@ const details: WatchDetails = {
     "public/assets/Images/Tissot/1946_Tissot_Antimagnetic/IMG_1003.JPG",
     "public/assets/Images/Tissot/1946_Tissot_Antimagnetic/IMG_1004.JPG",
     "public/assets/Images/Tissot/1946_Tissot_Antimagnetic/IMG_1005.JPG",
-    "public/assets/Images/Tissot/1946_Tissot_Antimagnetic/IMG_1003.JPG",
     "public/assets/Images/Tissot/1946_Tissot_Antimagnetic/IMG_1006.JPG",
     "public/assets/Images/Tissot/1946_Tissot_Antimagnetic/IMG_1007.JPG",
     "public/assets/Images/Tissot/1946_Tissot_Antimagnetic/IMG_1008.JPG",

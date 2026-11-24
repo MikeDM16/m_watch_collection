@@ -46,7 +46,6 @@ const details: WatchDetails = {
     "public/assets/Images/Timex/2008_Timex_T2M515_Power_Reserve/IMG_0330.JPG",
     "public/assets/Images/Timex/2008_Timex_T2M515_Power_Reserve/IMG_0331.JPG",
     "public/assets/Images/Timex/2008_Timex_T2M515_Power_Reserve/IMG_0332.JPG",
-    "public/assets/Images/Timex/2008_Timex_T2M515_Power_Reserve/IMG_0330.JPG",
 
     "public/assets/Images/Timex/2008_Timex_T2M515_Power_Reserve/IMG_0334.JPG",
     "public/assets/Images/Timex/2008_Timex_T2M515_Power_Reserve/IMG_0335.JPG",

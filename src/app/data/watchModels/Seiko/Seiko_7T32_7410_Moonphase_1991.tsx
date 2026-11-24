@@ -55,7 +55,6 @@ const details: WatchDetails = {
     "public/assets/Images/Seiko/1991_Seiko_7T36_7410_Moonphase_chrono/IMG_3449.JPG",
     "public/assets/Images/Seiko/1991_Seiko_7T36_7410_Moonphase_chrono/IMG_3450.JPG",
     "public/assets/Images/Seiko/1991_Seiko_7T36_7410_Moonphase_chrono/IMG_3451.JPG",
-    "public/assets/Images/Seiko/1991_Seiko_7T36_7410_Moonphase_chrono/IMG_3442.JPG",
   ],
   saleReport: {
     price: 510,

@@ -44,7 +44,6 @@ const details: WatchDetails = {
     "public/assets/Images/Tissot/2014_Tissot_V8/IMG_3624.JPG",
     "public/assets/Images/Tissot/2014_Tissot_V8/IMG_3625.JPG",
     "public/assets/Images/Tissot/2014_Tissot_V8/IMG_3626.JPG",
-    "public/assets/Images/Tissot/2014_Tissot_V8/IMG_3617.JPG",
     "public/assets/Images/Tissot/2014_Tissot_V8/IMG_3628.JPG",
     "public/assets/Images/Tissot/2014_Tissot_V8/IMG_3629.JPG",
     "public/assets/Images/Tissot/2014_Tissot_V8/IMG_3630.JPG",

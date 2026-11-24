@@ -59,6 +59,10 @@ export function useMedia(query: string) {
    Ambient glow
    ------------------------------------------------------------------------- */
 
+/** Width the glow is drawn at. Stretched across the screen from this, the
+    browser's own image smoothing does the blurring. */
+const GLOW_WIDTH = 16;
+
 /**
  * The current photograph, blurred far past recognition, behind everything in
  * the viewer. It is a plugin rather than a render slot because the slots all
@@ -71,18 +75,75 @@ function AmbientLayer() {
   const src = currentSlide?.thumbnail;
 
   // The last two photographs, oldest first. The newest fades in over the one
-  // before it, which is then dropped on the next change. Raised during render,
-  // the pattern React documents for state derived from earlier renders.
-  const [layers, setLayers] = useState<string[]>(src ? [src] : []);
-  if (src && layers[layers.length - 1] !== src) setLayers([...layers.slice(-1), src]);
+  // before it, which is then dropped on the next change. Keyed by a running
+  // id, not the URL, so paging back to a photograph fades it in again. Raised
+  // during render, the pattern React documents for state derived from earlier
+  // renders.
+  const [layers, setLayers] = useState(src ? [{ id: 0, src }] : []);
+  const last = layers[layers.length - 1];
+  if (src && last?.src !== src) {
+    setLayers([...layers.slice(-1), { id: (last?.id ?? -1) + 1, src }]);
+  }
 
   return (
     <div aria-hidden className="lb-ambient">
-      {layers.map((url) => (
-        <div key={url} style={{ backgroundImage: `url("${url}")` }} />
+      {layers.map((layer) => (
+        <Glow key={layer.id} src={layer.src} />
       ))}
     </div>
   );
+}
+
+/**
+ * One photograph of the glow: its thumbnail drawn into a canvas GLOW_WIDTH
+ * pixels wide, which CSS stretches to cover the screen.
+ *
+ * Not a CSS `filter: blur()`. Firefox re-runs a filter that size on every
+ * frame anything above it moves, which took the viewer there to about ten
+ * frames a second. Drawn this small once, the blur costs nothing afterwards
+ * in any browser.
+ *
+ * The canvas is tainted by the cross-origin photograph, which only stops it
+ * being read back, never shown. No `crossOrigin` on the image, so it reuses
+ * the filmstrip's cached request for the same file.
+ */
+function Glow({ src }: { src: string }) {
+  const ref = useRef<HTMLCanvasElement>(null);
+
+  useEffect(() => {
+    const canvas = ref.current;
+    if (!canvas) return;
+    const img = new Image();
+    img.onload = () => {
+      // Halved a step at a time: one 8x reduction with bilinear sampling skips
+      // most of the source pixels and can come out speckled.
+      let from: CanvasImageSource = img;
+      let w = img.naturalWidth;
+      let h = img.naturalHeight;
+      while (w > GLOW_WIDTH * 2) {
+        const step = document.createElement("canvas");
+        step.width = w = Math.ceil(w / 2);
+        step.height = h = Math.ceil(h / 2);
+        step.getContext("2d")?.drawImage(from, 0, 0, w, h);
+        from = step;
+      }
+      canvas.width = GLOW_WIDTH;
+      canvas.height = Math.max(1, Math.round((GLOW_WIDTH * h) / w));
+      const ctx = canvas.getContext("2d");
+      if (!ctx) return;
+      // Ignored where canvas filters are unsupported; the glow is then a touch
+      // less vivid, nothing worse.
+      ctx.filter = "saturate(1.3)";
+      ctx.drawImage(from, 0, 0, canvas.width, canvas.height);
+      canvas.dataset.ready = "";
+    };
+    img.src = src;
+    return () => {
+      img.onload = null;
+    };
+  }, [src]);
+
+  return <canvas ref={ref} width={1} height={1} />;
 }
 
 export const Ambient: Plugin = ({ addChild }) => {

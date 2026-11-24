@@ -30,7 +30,6 @@ const details: WatchDetails = {
     "public/assets/Images/Tissot/2005_Tissot_Ballada_Lady_C229_329C/IMG_8832.JPG",
     "public/assets/Images/Tissot/2005_Tissot_Ballada_Lady_C229_329C/IMG_8833.JPG",
     "public/assets/Images/Tissot/2005_Tissot_Ballada_Lady_C229_329C/IMG_8834.JPG",
-    "public/assets/Images/Tissot/2005_Tissot_Ballada_Lady_C229_329C/IMG_8834.JPG",
     "public/assets/Images/Tissot/2005_Tissot_Ballada_Lady_C229_329C/IMG_8835.JPG",
     "public/assets/Images/Tissot/2005_Tissot_Ballada_Lady_C229_329C/IMG_8836.JPG",
     "public/assets/Images/Tissot/2005_Tissot_Ballada_Lady_C229_329C/IMG_8837.JPG",

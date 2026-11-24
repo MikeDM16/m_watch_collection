@@ -60,7 +60,6 @@ const details: WatchDetails = {
     "public/assets/Images/Tissot/2007_Tissot_Le_Locle_Auto/IMG_5737.JPG",
     "public/assets/Images/Tissot/2007_Tissot_Le_Locle_Auto/IMG_5739.JPG",
     "public/assets/Images/Tissot/2007_Tissot_Le_Locle_Auto/IMG_5740.JPG",
-    "public/assets/Images/Tissot/2007_Tissot_Le_Locle_Auto/IMG_5740.JPG",
     "public/assets/Images/Tissot/2007_Tissot_Le_Locle_Auto/IMG_5741.JPG",
     "public/assets/Images/Tissot/2007_Tissot_Le_Locle_Auto/IMG_5742.JPG",
     "public/assets/Images/Tissot/2007_Tissot_Le_Locle_Auto/IMG_5743.JPG",

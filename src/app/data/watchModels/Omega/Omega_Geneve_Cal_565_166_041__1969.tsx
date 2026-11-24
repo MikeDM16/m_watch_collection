@@ -60,7 +60,6 @@ const details: WatchDetails = {
 
     "public/assets/Images/Omega/1969_Omega_Geneve_166_041__565/IMG_5358.JPG",
     "public/assets/Images/Omega/1969_Omega_Geneve_166_041__565/IMG_5359.JPG",
-    "public/assets/Images/Omega/1969_Omega_Geneve_166_041__565/IMG_5350.JPG",
     "public/assets/Images/Omega/1969_Omega_Geneve_166_041__565/IMG_5361.JPG",
     "public/assets/Images/Omega/1969_Omega_Geneve_166_041__565/IMG_5362.JPG",
     "public/assets/Images/Omega/1969_Omega_Geneve_166_041__565/IMG_5363.JPG",

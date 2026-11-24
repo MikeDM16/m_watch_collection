@@ -51,7 +51,6 @@ const details: WatchDetails = {
     "public/assets/Images/Tissot/1978_Tissot_Seastar_Quartz/IMG_1005.JPG",
     "public/assets/Images/Tissot/1978_Tissot_Seastar_Quartz/IMG_1006.JPG",
     "public/assets/Images/Tissot/1978_Tissot_Seastar_Quartz/IMG_1007.JPG",
-    "public/assets/Images/Tissot/1978_Tissot_Seastar_Quartz/IMG_1005.JPG",
     "public/assets/Images/Tissot/1978_Tissot_Seastar_Quartz/IMG_1010.JPG",
     "public/assets/Images/Tissot/1978_Tissot_Seastar_Quartz/IMG_1011.JPG",
     "public/assets/Images/Tissot/1978_Tissot_Seastar_Quartz/IMG_1012.JPG",

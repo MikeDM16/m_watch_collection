@@ -49,7 +49,6 @@ const details: WatchDetails = {
     "public/assets/Images/Zodiac/2004_Zodiac_SeaDragon/IMG_1304.JPG",
     "public/assets/Images/Zodiac/2004_Zodiac_SeaDragon/IMG_1281.JPG",
     "public/assets/Images/Zodiac/2004_Zodiac_SeaDragon/IMG_1282.JPG",
-    "public/assets/Images/Zodiac/2004_Zodiac_SeaDragon/IMG_1287.JPG",
     "public/assets/Images/Zodiac/2004_Zodiac_SeaDragon/IMG_1277.JPG",
   ],
   saleReport: {

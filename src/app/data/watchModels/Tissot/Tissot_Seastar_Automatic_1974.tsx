@@ -39,7 +39,7 @@ const details: WatchDetails = {
     "public/assets/Images/Tissot/1974_Tissot_Seastar_Automatic/IMG_4699.JPG",
     "public/assets/Images/Tissot/1974_Tissot_Seastar_Automatic/IMG_4700.JPG",
     "public/assets/Images/Tissot/1974_Tissot_Seastar_Automatic/IMG_4701.JPG",
-    "public/assets/Images/Tissot/1974_Tissot_Seastar_Automatic/IMG_4700.JPG",
+    "public/assets/Images/Tissot/1974_Tissot_Seastar_Automatic/IMG_4702.JPG",
     "public/assets/Images/Tissot/1974_Tissot_Seastar_Automatic/IMG_4703.JPG",
     "public/assets/Images/Tissot/1974_Tissot_Seastar_Automatic/IMG_4704.JPG",
     "public/assets/Images/Tissot/1974_Tissot_Seastar_Automatic/IMG_4705.JPG",

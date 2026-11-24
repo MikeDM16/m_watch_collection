@@ -75,7 +75,6 @@ const details: WatchDetails = {
 
     "public/assets/Images/Tag_Heuer/1996_Tag_Heuer_Professional_2000_CK1111/IMG_3248.JPG",
     "public/assets/Images/Tag_Heuer/1996_Tag_Heuer_Professional_2000_CK1111/IMG_3249.JPG",
-    "public/assets/Images/Tag_Heuer/1996_Tag_Heuer_Professional_2000_CK1111/IMG_3250.JPG",
     "public/assets/Images/Tag_Heuer/1996_Tag_Heuer_Professional_2000_CK1111/IMG_3251.JPG",
 
     "public/assets/Images/Tag_Heuer/1996_Tag_Heuer_Professional_2000_CK1111/IMG_3235.JPG",
