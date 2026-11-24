@@ -8,7 +8,8 @@ import { Fragment, useMemo, useState } from "react";
 import { dmy, STATUS_LABEL } from "../../ledger/ledgerFormat";
 import { UNTAGGED, type SourceReport, type SourceWatch } from "../../ledger/ledgerSources";
 import { Financials, formatMoney, formatPercent, profitTotals, ProfitTotals } from "../salesStats";
-import { AdminTable, SectionHeader, Th } from "./primitives";
+import { AdminTable, SectionHeader } from "./primitives";
+import { sortRows, SortTh, useSort } from "./sortable";
 
 /** Catalogue brand and legend by modelFile, for the watch lists' names and links. */
 export type SourceModels = Record<string, { brand: string; legend: string }>;
@@ -25,7 +26,37 @@ interface Row {
   sales: ProfitTotals;
 }
 
-const COLUMNS = 7;
+type SortKey = "source" | "bought" | "spent" | "sold" | "profit" | "margin" | "days";
+
+const COLUMNS: { key: SortKey; label: string; firstDir?: "asc" }[] = [
+  { key: "source", label: "Source", firstDir: "asc" },
+  { key: "bought", label: "Bought" },
+  { key: "spent", label: "Spent" },
+  { key: "sold", label: "Sold" },
+  { key: "profit", label: "Profit" },
+  { key: "margin", label: "Margin" },
+  { key: "days", label: "Avg days" },
+];
+
+/** What each column sorts by; P&L figures are missing (null) when there is none. */
+const sorter = (key: SortKey, pnl: boolean): ((r: Row) => number | string | null) => {
+  switch (key) {
+    case "source":
+      return (r) => r.label;
+    case "bought":
+      return (r) => r.bought;
+    case "spent":
+      return (r) => r.spent;
+    case "sold":
+      return (r) => r.sales.count;
+    case "profit":
+      return (r) => (pnl && r.sales.covered ? r.sales.profit : null);
+    case "margin":
+      return (r) => (pnl ? r.sales.margin : null);
+    case "days":
+      return (r) => (pnl ? r.sales.meanDaysHeld : null);
+  }
+};
 
 /** "Roamer/Roamer_Louvre_Cushion_1963" → "Roamer Louvre Cushion 1963", for a model not listed yet. */
 const fileName = (modelFile: string) => (modelFile.split("/")[1] ?? modelFile).replace(/_+/g, " ");
@@ -116,6 +147,7 @@ export function SourceSection({
   models: SourceModels;
 }) {
   const [open, setOpen] = useState<Set<string>>(new Set());
+  const [sort, toggleSort] = useSort<SortKey>({ key: "bought", dir: "desc" });
   const toggle = (key: string) =>
     setOpen((prev) => {
       const next = new Set(prev);
@@ -126,20 +158,27 @@ export function SourceSection({
 
   const rows = useMemo<Row[]>(() => {
     const of = (e: CollectionIndexEntry) => report.byModel[e.modelFile] ?? UNTAGGED;
-    return report.rows
-      .map((r) => ({
-        key: r.id ?? UNTAGGED,
-        label: r.label,
-        bought: r.bought,
-        outside: r.outside,
-        spent: r.spent,
-        sales: profitTotals(
-          entries.filter((e) => of(e) === r.label),
-          fin ?? {},
-        ),
-      }))
-      .sort((a, b) => (a.key === UNTAGGED ? 1 : b.key === UNTAGGED ? -1 : b.bought - a.bought));
-  }, [entries, fin, report]);
+    const all = report.rows.map((r) => ({
+      key: r.id ?? UNTAGGED,
+      label: r.label,
+      bought: r.bought,
+      outside: r.outside,
+      spent: r.spent,
+      sales: profitTotals(
+        entries.filter((e) => of(e) === r.label),
+        fin ?? {},
+      ),
+    }));
+    // Untagged is the catch-all: last, whichever way the rest sort.
+    return [
+      ...sortRows(
+        all.filter((r) => r.key !== UNTAGGED),
+        sorter(sort.key, fin !== null),
+        sort.dir,
+      ),
+      ...all.filter((r) => r.key === UNTAGGED),
+    ];
+  }, [entries, fin, report, sort]);
 
   const scale = Math.max(1, ...rows.map((r) => Math.abs(r.sales.profit)));
   const { tagged, total, outside } = report.coverage;
@@ -157,7 +196,7 @@ export function SourceSection({
           </>
         )}
         . Bought and spent are all time; sales and profit follow the window. Open a source for its
-        watches.
+        watches; click a column to sort, again to reverse.
       </p>
       {!report.defined ? (
         <p className="border border-dashed border-border p-6 text-sm text-muted-foreground">
@@ -168,13 +207,16 @@ export function SourceSection({
         <AdminTable>
           <thead>
             <tr className="border-b border-border">
-              <Th>Source</Th>
-              <Th>Bought</Th>
-              <Th>Spent</Th>
-              <Th>Sold</Th>
-              <Th>Profit</Th>
-              <Th>Margin</Th>
-              <Th>Avg days</Th>
+              {COLUMNS.map((c) => (
+                <SortTh
+                  key={c.key}
+                  k={c.key}
+                  label={c.label}
+                  sort={sort}
+                  onSort={toggleSort}
+                  firstDir={c.firstDir}
+                />
+              ))}
             </tr>
           </thead>
           <tbody>
@@ -247,7 +289,7 @@ export function SourceSection({
                   </tr>
                   {isOpen && (
                     <tr className="border-b border-border/60 bg-muted/30">
-                      <td colSpan={COLUMNS} className="px-6 py-3">
+                      <td colSpan={COLUMNS.length} className="px-6 py-3">
                         {watches.length ? (
                           <WatchList watches={watches} models={models} fin={fin} />
                         ) : (

@@ -1,10 +1,9 @@
 "use client";
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { useMemo } from "react";
+import { Fragment, useMemo } from "react";
 
 import {
-  byPurchaseDateDesc,
   capitalOverTime,
   daysSince,
   extrasOf,
@@ -20,6 +19,7 @@ import { formatMoney, type TimeWindowOption } from "../salesStats";
 import { CapitalAtCostChart, type CapitalSeries } from "./CapitalAtCostChart";
 import { MoneyOverTimeChart } from "./MoneyOverTimeChart";
 import { AdminTable, SectionHeader, StatTile, SubHeader, Th } from "./primitives";
+import { sortRows, SortTh, useSort, type SortDir } from "./sortable";
 
 // Kept at the bottom of the stack (the steady part), bought-to-sell above it.
 // The brand red and the cost blue: the pair validated for the profit chart.
@@ -31,28 +31,96 @@ const CAPITAL_SERIES: CapitalSeries[] = [
 /** "2024-02-14" → "14/02/2024", the catalogue's own order. */
 const dmy = (iso: string | null): string => (iso ? iso.split("-").reverse().join("/") : "—");
 
+/** The columns both holding tables sort by; Held runs opposite to Bought. */
+type HoldingKey = "watch" | "bought" | "held" | "purchase" | "extras" | "cost" | "ledger";
+
+const HOLDING_COLUMNS: { key: HoldingKey; label: string; firstDir?: SortDir }[] = [
+  { key: "watch", label: "Watch", firstDir: "asc" },
+  { key: "bought", label: "Bought" },
+  { key: "held", label: "Held" },
+  { key: "purchase", label: "Purchase" },
+  { key: "extras", label: "Extras" },
+  { key: "cost", label: "At cost" },
+  { key: "ledger", label: "Ledger", firstDir: "asc" },
+];
+
+type Holding = StockItemFinancials | KeptWatchFinancials;
+
+/** What a holding sorts by in a column, given its name and its capital at cost. */
+function holdingValue<T extends Holding>(
+  key: HoldingKey,
+  name: (x: T) => string,
+  atCost: (x: T) => number,
+): (x: T) => number | string | null {
+  switch (key) {
+    case "watch":
+      return name;
+    case "bought":
+      return (x) => x.purchaseDate;
+    case "held":
+      return (x) => daysSince(x.purchaseDate);
+    case "purchase":
+      return (x) => x.costByCategory.purchase ?? 0;
+    case "extras":
+      return (x) => extrasOf(x);
+    case "cost":
+      return atCost;
+    case "ledger":
+      return (x) => x.ref;
+  }
+}
+
+function HoldingHeads({
+  sort,
+  onSort,
+  notes = false,
+}: {
+  sort: { key: HoldingKey; dir: SortDir };
+  onSort: (key: HoldingKey, firstDir: SortDir) => void;
+  /** The kept table's Notes column, unsorted, before Ledger. */
+  notes?: boolean;
+}) {
+  return (
+    <tr className="border-b border-border">
+      {HOLDING_COLUMNS.map((c) => (
+        <Fragment key={c.key}>
+          {notes && c.key === "ledger" && <Th>Notes</Th>}
+          <SortTh k={c.key} label={c.label} sort={sort} onSort={onSort} firstDir={c.firstDir} />
+        </Fragment>
+      ))}
+    </tr>
+  );
+}
+
+const keptLabel = (k: KeptWatchFinancials) => k.label;
+const stockLabel = (i: StockItemFinancials) => i.label;
+
 function KeptTable({
-  watches,
+  watches: unsorted,
   link,
+  name = keptLabel,
 }: {
   watches: KeptWatchFinancials[];
   link?: (k: KeptWatchFinancials) => React.ReactNode;
+  /** The name shown for it, so Watch sorts by what is read. */
+  name?: (k: KeptWatchFinancials) => string;
 }) {
+  const [sort, toggleSort] = useSort<HoldingKey>({ key: "bought", dir: "desc" });
+  const watches = useMemo(
+    () =>
+      sortRows(
+        unsorted,
+        holdingValue(sort.key, name, (k) => k.net),
+        sort.dir,
+      ),
+    [unsorted, sort, name],
+  );
   const total = watches.reduce((s, k) => s + k.net, 0);
   const effective = watches.reduce((s, k) => s + k.effective, 0);
   return (
     <AdminTable>
       <thead>
-        <tr className="border-b border-border">
-          <Th>Watch</Th>
-          <Th>Bought</Th>
-          <Th>Held</Th>
-          <Th>Purchase</Th>
-          <Th>Extras</Th>
-          <Th>At cost</Th>
-          <Th>Notes</Th>
-          <Th>Ledger</Th>
-        </tr>
+        <HoldingHeads sort={sort} onSort={toggleSort} notes />
       </thead>
       <tbody>
         {watches.map((k) => {
@@ -93,20 +161,17 @@ function KeptTable({
 }
 
 /** Bought to sell and not sold yet; an item a kept watch claims in part shows the rest. */
-function StockTable({ items }: { items: StockItemFinancials[] }) {
+function StockTable({ items: unsorted }: { items: StockItemFinancials[] }) {
+  const [sort, toggleSort] = useSort<HoldingKey>({ key: "bought", dir: "desc" });
+  const items = useMemo(
+    () => sortRows(unsorted, holdingValue(sort.key, stockLabel, forSaleNet), sort.dir),
+    [unsorted, sort],
+  );
   const total = items.reduce((s, i) => s + forSaleNet(i), 0);
   return (
     <AdminTable>
       <thead>
-        <tr className="border-b border-border">
-          <Th>Watch</Th>
-          <Th>Bought</Th>
-          <Th>Held</Th>
-          <Th>Purchase</Th>
-          <Th>Extras</Th>
-          <Th>At cost</Th>
-          <Th>Ledger</Th>
-        </tr>
+        <HoldingHeads sort={sort} onSort={toggleSort} />
       </thead>
       <tbody>
         {items.map((i) => (
@@ -207,12 +272,15 @@ export function MoneySection({
   data,
   opt,
   keptLink,
+  keptName,
   source = "workbook",
 }: {
   data: SalesFinancials;
   opt: TimeWindowOption;
   /** Renders a kept watch's name, linked to its catalogue page when it has one. */
   keptLink?: (k: KeptWatchFinancials) => React.ReactNode;
+  /** The name keptLink shows, as text, for sorting by it. */
+  keptName?: (k: KeptWatchFinancials) => string;
   /** Which source the figures come from, for the section's wording. */
   source?: "workbook" | "ledger";
 }) {
@@ -222,7 +290,7 @@ export function MoneySection({
     () => (data.stockItems ?? []).filter((i) => (i.keptShare ?? 0) < 1),
     [data.stockItems],
   );
-  const kept = useMemo(() => byPurchaseDateDesc(data.kept ?? []), [data.kept]);
+  const kept = useMemo(() => data.kept ?? [], [data.kept]);
   const totals = useMemo(() => moneyTotals(daily, opt), [daily, opt]);
   const money = useMemo(() => moneyOverTime(daily, opt), [daily, opt]);
   const capital = useMemo(() => capitalOverTime(daily, opt), [daily, opt]);
@@ -325,16 +393,22 @@ export function MoneySection({
 
       {data.kept && (
         <>
-          <SubHeader title="Watches kept" note="The Collection tab, today, whatever the window." />
+          <SubHeader
+            title="Watches kept"
+            note="The Collection tab, today, whatever the window. Click a column to sort, again to reverse."
+          />
           {kept.length ? (
-            <KeptTable watches={kept} link={keptLink} />
+            <KeptTable watches={kept} link={keptLink} name={keptName} />
           ) : (
             <p className="text-sm text-muted-foreground">The Collection tab is empty.</p>
           )}
         </>
       )}
 
-      <SubHeader title="Bought to sell, not sold yet" note="Today, whatever the window." />
+      <SubHeader
+        title="Bought to sell, not sold yet"
+        note="Today, whatever the window. Click a column to sort, again to reverse."
+      />
       {items.length ? (
         <StockTable items={items} />
       ) : (

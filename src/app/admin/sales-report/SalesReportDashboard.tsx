@@ -4,7 +4,7 @@ import { CollectionIndexEntry } from "@/app/data/collectionIndex";
 import { routeToCollectionBrandModelPage } from "@/app/services/commonFunctions";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import Link from "next/link";
-import { useMemo, useState } from "react";
+import { useCallback, useMemo, useState } from "react";
 
 import type { SourceReport } from "../ledger/ledgerSources";
 import { MoneySection } from "./components/MoneySection";
@@ -79,6 +79,11 @@ export default function SalesReportDashboard({
       </Link>
     );
   };
+  // The name keptLink shows, so the kept table sorts by what is read.
+  const keptName = useCallback(
+    (k: KeptWatchFinancials) => (k.modelFile && keptModels[k.modelFile]?.legend) || k.label,
+    [keptModels],
+  );
   const [windowId, setWindowId] = useState<TimeWindowId>(DEFAULT_WINDOW_ID);
 
   const years = useMemo(() => yearWindowOptions(sold), [sold]);
@@ -214,7 +219,13 @@ export default function SalesReportDashboard({
 
       {/* ───── Money over time (the ledger day by day; shown even with no sales in the window) ───── */}
       {financials && (
-        <MoneySection data={financials} opt={opt} keptLink={keptLink} source={source} />
+        <MoneySection
+          data={financials}
+          opt={opt}
+          keptLink={keptLink}
+          keptName={keptName}
+          source={source}
+        />
       )}
 
       {!isEmpty && (

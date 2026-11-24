@@ -127,7 +127,7 @@ export function ProfitabilitySection({
             </CardContent>
           </Card>
 
-          <SubHeader title="Brand profitability" note="Click a column to rank by it." />
+          <SubHeader title="Brand profitability" note="Click a column to sort, again to reverse." />
           <BrandProfitTable rows={brands} />
 
           <SubHeader title="Best & worst sales" />
@@ -151,7 +151,7 @@ export function ProfitabilitySection({
 
           <SubHeader
             title="Every sale"
-            note="Open a row for its cost lines and how it was matched."
+            note="Open a row for its cost lines and how it was matched. Click a column to sort, again to reverse."
           />
           <PnlTable rows={rows} />
         </>

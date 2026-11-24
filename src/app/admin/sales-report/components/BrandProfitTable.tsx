@@ -4,17 +4,19 @@ import Link from "next/link";
 import { useMemo, useState } from "react";
 
 import { BrandProfitRow, formatMoney, formatPercent, MIN_BRAND_SALES } from "../salesStats";
-import { AdminTable, Th } from "./primitives";
+import { AdminTable } from "./primitives";
+import { sortRows, SortTh, useSort, type SortDir } from "./sortable";
 
-type SortKey = "profit" | "margin" | "roi" | "covered" | "meanDaysHeld";
+type SortKey = "brand" | "profit" | "margin" | "roi" | "covered" | "meanDaysHeld";
 
-const COLUMNS: { key: SortKey; label: string; ascending?: boolean }[] = [
+const COLUMNS: { key: SortKey; label: string; firstDir?: SortDir }[] = [
+  { key: "brand", label: "Brand", firstDir: "asc" },
   { key: "covered", label: "Sales" },
   { key: "profit", label: "Profit" },
   { key: "margin", label: "Margin" },
   { key: "roi", label: "Return" },
   // Fewer days held is better, so this one sorts shortest first.
-  { key: "meanDaysHeld", label: "Avg days", ascending: true },
+  { key: "meanDaysHeld", label: "Avg days", firstDir: "asc" },
 ];
 
 /**
@@ -24,15 +26,13 @@ const COLUMNS: { key: SortKey; label: string; ascending?: boolean }[] = [
  * least MIN_BRAND_SALES sales with a P&L are listed.
  */
 export function BrandProfitTable({ rows }: { rows: BrandProfitRow[] }) {
-  const [sort, setSort] = useState<SortKey>("profit");
+  const [sort, toggleSort] = useSort<SortKey>({ key: "profit", dir: "desc" });
   const [enoughOnly, setEnoughOnly] = useState(true);
 
   const shown = useMemo(() => {
-    const col = COLUMNS.find((c) => c.key === sort)!;
     const base = enoughOnly ? rows.filter((r) => r.covered >= MIN_BRAND_SALES) : rows;
     // Missing values (no cost, no dates) always sink to the bottom.
-    const value = (r: BrandProfitRow) => r[sort] ?? (col.ascending ? Infinity : -Infinity);
-    return [...base].sort((a, b) => (col.ascending ? value(a) - value(b) : value(b) - value(a)));
+    return sortRows(base, (r) => r[sort.key], sort.dir);
   }, [rows, sort, enoughOnly]);
 
   const scale = Math.max(1, ...shown.map((r) => Math.abs(r.profit)));
@@ -53,22 +53,15 @@ export function BrandProfitTable({ rows }: { rows: BrandProfitRow[] }) {
       <AdminTable>
         <thead>
           <tr className="border-b border-border">
-            <Th>Brand</Th>
             {COLUMNS.map((c) => (
-              <th
+              <SortTh
                 key={c.key}
-                className="lab py-2 pr-4 text-left font-medium"
-                aria-sort={sort === c.key ? (c.ascending ? "ascending" : "descending") : "none"}
-              >
-                <button
-                  type="button"
-                  onClick={() => setSort(c.key)}
-                  className={`uppercase transition-colors hover:text-foreground ${sort === c.key ? "text-foreground" : ""}`}
-                >
-                  {c.label}
-                  {sort === c.key ? (c.ascending ? " ↑" : " ↓") : ""}
-                </button>
-              </th>
+                k={c.key}
+                label={c.label}
+                sort={sort}
+                onSort={toggleSort}
+                firstDir={c.firstDir}
+              />
             ))}
           </tr>
         </thead>

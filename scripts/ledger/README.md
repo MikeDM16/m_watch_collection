@@ -51,6 +51,14 @@ The import refuses to overwrite an existing ledger (`--force` replaces it, after
 - **Book.** Money for watches kept is the collection's (`book: "collection"`), everything else
   trading. It separates the Collection tab's figures from the year tabs'.
 
+### Market values beside it
+
+`.ledger/market.json` holds what Chrono24 says the watches are worth, linked to ledger
+watch ids. It is a separate file, so an import never trips the save check on
+`ledger.json`, with the same backup rules (`market-<stamp>.json` in `.ledger/backups/`).
+The valuation report PDFs are written to `.ledger/reports/`. See
+[`../chrono24/README.md`](../chrono24/README.md).
+
 ## How the report is built
 
 `src/app/admin/ledger/buildFinancials.ts` turns the store into the same `SalesFinancials` the

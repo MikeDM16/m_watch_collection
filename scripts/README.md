@@ -1,5 +1,7 @@
 # scripts/
 
+Every command at a glance, and the local-only data to back up: [`OPERATIONS.md`](../OPERATIONS.md).
+
 Three unrelated groups live here: build-time codegen that runs against **this** repo,
 a photo pipeline that runs against the **MWatchCollectionResources** repo, and the
 sales margin pipeline, which reads a private workbook and writes only to the
@@ -11,6 +13,13 @@ gitignored `.sales/` folder.
 ledger (`OneDrive/Documentos/Excel Miguel/Relogios - Vendas.xlsx`, outside the repo) and computes real cost, profit
 and margin for the local sales report. Nothing it produces is ever committed or
 bundled. See [`sales/README.md`](sales/README.md).
+
+## Chrono24 market values (private, run by hand)
+
+A bookmark in your own Chrome exports Chrono24's Watch Collection (estimates, purchase
+data, value history), then `npm run chrono24:sync` links it to the ledger's watches
+(`.ledger/market.json`) and writes the valuation report PDFs (Portuguese and English) for
+insurance. See [`chrono24/README.md`](chrono24/README.md).
 
 ## Codegen (this repo, driven by npm)
 

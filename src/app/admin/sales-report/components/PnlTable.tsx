@@ -5,6 +5,7 @@ import { Fragment, useMemo, useState } from "react";
 import type { Confidence, CostCategory } from "../salesData.types";
 import { Flip, formatMoney, formatPercent, netCostOf, parseSaleDate } from "../salesStats";
 import { AdminTable, Th, WatchLink } from "./primitives";
+import { sortRows, SortTh, useSort } from "./sortable";
 
 type SortKey = "date" | "received" | "cost" | "profit" | "margin" | "days";
 
@@ -17,13 +18,14 @@ const COLUMNS: { key: SortKey; label: string }[] = [
   { key: "days", label: "Days" },
 ];
 
-const SORTERS: Record<SortKey, (x: Flip) => number> = {
+const SORTERS: Record<SortKey | "watch", (x: Flip) => number | string | null> = {
+  watch: (x) => x.entry.legend,
   date: (x) => parseSaleDate(x.entry.saleReport!.date).getTime(),
   received: (x) => x.f.received,
   cost: (x) => netCostOf(x.f),
   profit: (x) => x.f.profit,
-  margin: (x) => x.f.margin ?? -Infinity,
-  days: (x) => x.f.daysHeld ?? -Infinity,
+  margin: (x) => x.f.margin,
+  days: (x) => x.f.daysHeld,
 };
 
 export const CONFIDENCE_LABEL: Record<Confidence, string> = {
@@ -57,7 +59,7 @@ export const FLAG_LABEL: Record<string, string> = {
 const PAGE = 25;
 
 export function PnlTable({ rows }: { rows: Flip[] }) {
-  const [sort, setSort] = useState<SortKey>("date");
+  const [sort, toggleSort] = useSort<SortKey | "watch">({ key: "date", dir: "desc" });
   const [query, setQuery] = useState("");
   const [open, setOpen] = useState<string | null>(null);
   const [all, setAll] = useState(false);
@@ -66,8 +68,7 @@ export function PnlTable({ rows }: { rows: Flip[] }) {
     const q = query.trim().toLowerCase();
     const hit = (x: Flip) =>
       !q || `${x.entry.legend} ${x.entry.brand} ${x.f.label}`.toLowerCase().includes(q);
-    const by = SORTERS[sort];
-    return rows.filter(hit).sort((a, b) => by(b) - by(a));
+    return sortRows(rows.filter(hit), SORTERS[sort.key], sort.dir);
   }, [rows, sort, query]);
   const visible = all ? sorted : sorted.slice(0, PAGE);
 
@@ -83,22 +84,9 @@ export function PnlTable({ rows }: { rows: Flip[] }) {
       <AdminTable>
         <thead>
           <tr className="border-b border-border">
-            <Th>Watch</Th>
+            <SortTh k="watch" label="Watch" sort={sort} onSort={toggleSort} firstDir="asc" />
             {COLUMNS.map((c) => (
-              <th
-                key={c.key}
-                className="lab py-2 pr-4 text-left font-medium"
-                aria-sort={sort === c.key ? "descending" : "none"}
-              >
-                <button
-                  type="button"
-                  onClick={() => setSort(c.key)}
-                  className={`uppercase transition-colors hover:text-foreground ${sort === c.key ? "text-foreground" : ""}`}
-                >
-                  {c.label}
-                  {sort === c.key ? " ↓" : ""}
-                </button>
-              </th>
+              <SortTh key={c.key} k={c.key} label={c.label} sort={sort} onSort={toggleSort} />
             ))}
             <Th>Match</Th>
           </tr>
