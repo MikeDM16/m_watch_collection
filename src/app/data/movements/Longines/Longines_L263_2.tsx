@@ -18,7 +18,11 @@ const LONGINES_L263_2: Caliber = {
     "CaliberCorner Longines L263": "https://calibercorner.com/longines-caliber-l263/",
   },
   // sliderImages
-  sliderImages: ["public/assets/Images/Movements/ETA/ETA_955_112/955_412_1.JPG"],
+  sliderImages: [
+    "public/assets/Images/Movements/ETA/ETA_955_112/955_412_1.JPG",
+    "public/assets/Images/Movements/ETA/ETA_955_112/955_412_2.JPG",
+    "public/assets/Images/Movements/ETA/ETA_955_112/955_412_3.JPG",
+  ],
   // Details
   details: {
     // Manufacturer

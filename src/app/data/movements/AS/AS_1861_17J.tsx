@@ -29,7 +29,11 @@ const AS_1861: Caliber = {
     "Ranfft AS 1861": "https://ranfft.org/caliber/857-AS-1861",
   },
   // sliderImages
-  sliderImages: [],
+  sliderImages: [
+    "public/assets/Images/Movements/AS/AS_1861/AS_1861_1.JPG",
+    "public/assets/Images/Movements/AS/AS_1861/AS_1861_2.JPG",
+    "public/assets/Images/Movements/AS/AS_1861/AS_1861_3.JPG",
+  ],
   // Details
   details: {
     // Manufacturer

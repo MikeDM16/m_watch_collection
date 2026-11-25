@@ -155,6 +155,20 @@
     "saleReport": null,
     "modelFile": "Hertig/Hertig_Certina_Fancy_Lugs_1943"
   },
+  "Cristalor Guilloché “Fancy Lugs”": {
+    "brand": "Cristalor",
+    "legend": "Cristalor Guilloché “Fancy Lugs”",
+    "year": 1944,
+    "type": "Casual",
+    "srcImage": "public/assets/Images/Cristalor/1944_Cristalor_Fancy_lugs/IMG_7801.JPG",
+    "hoverSrc": "public/assets/Images/Cristalor/1944_Cristalor_Fancy_lugs/IMG_7802.JPG",
+    "specialCollectionItem": false,
+    "collectionSet": false,
+    "series": "Guilloché",
+    "movementTitle": "FEF (Fabrique d'Ébauches de Fleurier) Cal. 190",
+    "saleReport": null,
+    "modelFile": "Cristalor/Cristalor_Guilloche_Fancy_Lugs_1944"
+  },
   "Zenith Militare Cal. 106 17 Jewels": {
     "brand": "Zenith",
     "legend": "Zenith Militare Cal. 106 17 Jewels",
@@ -609,7 +623,7 @@
     "brand": "Universal Geneve",
     "legend": "Universal Genève Mécanique Cal. 332",
     "year": 1950,
-    "type": "Casual",
+    "type": "Dress",
     "srcImage": "public/assets/Images/Universal_Geneve/1950_Universal_Geneve_Cal_332/IMG_7491.JPG",
     "hoverSrc": "public/assets/Images/Universal_Geneve/1950_Universal_Geneve_Cal_332/IMG_7612.JPG",
     "specialCollectionItem": false,
@@ -2247,6 +2261,20 @@
     },
     "modelFile": "Novart/Novart_Incabloc_white_17Jewels_1976"
   },
+  "Sorel Festa De Luxe - Green Marble Dial": {
+    "brand": "Sorel",
+    "legend": "Sorel Festa De Luxe - Green Marble Dial",
+    "year": 1976,
+    "type": "Casual",
+    "srcImage": "public/assets/Images/Sorel/1976_Sorel_Festa_De_Luxe_7046/IMG_7980.JPG",
+    "hoverSrc": "public/assets/Images/Sorel/1976_Sorel_Festa_De_Luxe_7046/IMG_7981.JPG",
+    "specialCollectionItem": false,
+    "collectionSet": false,
+    "series": "Festa",
+    "movementTitle": "Peseux Cal. 7046",
+    "saleReport": null,
+    "modelFile": "Sorel/Sorel_Festa_De_Luxe_Green_Marble_1976"
+  },
   "Nobreza Racing Chronograph 7734 17 Jewels": {
     "brand": "Nobreza",
     "legend": "Nobreza Racing Chronograph 7734 17 Jewels",
@@ -2400,6 +2428,34 @@
       "url": "https://www.catawiki.com/l/44308901"
     },
     "modelFile": "Tissot/Tissot_SeaStar_Quartz_1978"
+  },
+  "Almery Dynamic 17 Jewels": {
+    "brand": "Almery",
+    "legend": "Almery Dynamic 17 Jewels",
+    "year": 1978,
+    "type": "Casual",
+    "srcImage": "public/assets/Images/Almery/1978_Almery_Dynamic_17_Jewels/IMG_7894.JPG",
+    "hoverSrc": "public/assets/Images/Almery/1978_Almery_Dynamic_17_Jewels/IMG_7896.JPG",
+    "specialCollectionItem": false,
+    "collectionSet": false,
+    "series": "Dynamic",
+    "movementTitle": "Bifora Cal. 115/1",
+    "saleReport": null,
+    "modelFile": "Almery/Almery_Dynamic_17_Jewels_1978"
+  },
+  "Mathey-Tissot Grand Prix - Red Marble Dial": {
+    "brand": "Mathey-Tissot",
+    "legend": "Mathey-Tissot Grand Prix - Red Marble Dial",
+    "year": 1978,
+    "type": "Casual",
+    "srcImage": "public/assets/Images/Mathey_Tissot/1978_Mathey_Tissot_Grand_Prix/IMG_7937.JPG",
+    "hoverSrc": "public/assets/Images/Mathey_Tissot/1978_Mathey_Tissot_Grand_Prix/IMG_7939.JPG",
+    "specialCollectionItem": false,
+    "collectionSet": false,
+    "series": "Grand Prix",
+    "movementTitle": "A. Schild 1861",
+    "saleReport": null,
+    "modelFile": "Mathey_Tissot/Mathey_Tissot_Grand_Prix_Marble_Dial_1978"
   },
   "Tissot PR 516 Quartz": {
     "brand": "Tissot",
@@ -3759,6 +3815,20 @@
       "url": "https://www.catawiki.com/l/22969801-tissot-t-classic-seastar-a665-765k-eta-men-2000-2010"
     },
     "modelFile": "Tissot/Tissot_Ballade_Seastar_1995"
+  },
+  "Longines La Grande Classique": {
+    "brand": "Longines",
+    "legend": "Longines La Grande Classique",
+    "year": 1995,
+    "type": "Dress",
+    "srcImage": "public/assets/Images/Longines/1995_Longines_La_Grande_Classique_L263/IMG_7850.JPG",
+    "hoverSrc": "public/assets/Images/Longines/1995_Longines_La_Grande_Classique_L263/IMG_7835.JPG",
+    "specialCollectionItem": false,
+    "collectionSet": false,
+    "series": "La Grande Classique",
+    "movementTitle": "Longines L263.2 (ETA 955.412)",
+    "saleReport": null,
+    "modelFile": "Longines/Longines_La_Grande_Classique_1995"
   },
   "Omega Speedmaster MK40 Triple Date Schumacher": {
     "brand": "Omega",

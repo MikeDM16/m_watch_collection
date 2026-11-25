@@ -68,7 +68,8 @@ Two sources stand side by side and are compared: the **workbook** in OneDrive
 
 ## Market values: Chrono24
 
-Chrono24's Watch Collection estimates what each watch is worth. Details:
+Chrono24's Watch Collection estimates what each watch is worth. The result shows in the
+PDFs and in the **Market value** section of `/admin/sales-report`. Details:
 [scripts/chrono24/README.md](scripts/chrono24/README.md).
 
 | Command                        | When                                                           | Reads → writes                                                                           |

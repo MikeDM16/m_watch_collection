@@ -8,6 +8,7 @@ import { CaseBackDetailsEnum } from "@/app/enums/caseBackDetailsEnum";
 import { CaseDiameterEnum } from "@/app/enums/caseDiameterEnum";
 import { CaseFinishingEnum } from "@/app/enums/caseFinishingEnum";
 import { CaseMaterialEnum } from "@/app/enums/caseMaterialEnum";
+import { CaseThicknessEnum } from "@/app/enums/caseThicknessEnum";
 import { ColorEnum } from "@/app/enums/colorEnum";
 import { CrownWatchTypeEnum } from "@/app/enums/crownWatchTypeEnum";
 import { CrystalMaterialEnum } from "@/app/enums/crystalMaterialEnum";
@@ -23,10 +24,53 @@ import movement_AS_1861 from "../../movements/AS/AS_1861_17J";
 import { WatchDetails } from "../../watchDetails";
 
 const details: WatchDetails = {
-  title: "1978 Mathey-Tissot Grand Prix - Marble Dial",
+  title: "1978 Mathey-Tissot Grand Prix - Red Marble Dial",
 
   sliderImages: [
-    "public/assets/Images/Mathey_Tissot/1978_Mathey_Tissot_Grand_Prix_Marble_Dial_1861/IMG_XXXX.JPG",
+    "public/assets/Images/Mathey_Tissot/1978_Mathey_Tissot_Grand_Prix/IMG_7924.JPG",
+    "public/assets/Images/Mathey_Tissot/1978_Mathey_Tissot_Grand_Prix/IMG_7925.JPG",
+    "public/assets/Images/Mathey_Tissot/1978_Mathey_Tissot_Grand_Prix/IMG_7926.JPG",
+    "public/assets/Images/Mathey_Tissot/1978_Mathey_Tissot_Grand_Prix/IMG_7927.JPG",
+    "public/assets/Images/Mathey_Tissot/1978_Mathey_Tissot_Grand_Prix/IMG_7928.JPG",
+    "public/assets/Images/Mathey_Tissot/1978_Mathey_Tissot_Grand_Prix/IMG_7929.JPG",
+    "public/assets/Images/Mathey_Tissot/1978_Mathey_Tissot_Grand_Prix/IMG_7930.JPG",
+    "public/assets/Images/Mathey_Tissot/1978_Mathey_Tissot_Grand_Prix/IMG_7931.JPG",
+    "public/assets/Images/Mathey_Tissot/1978_Mathey_Tissot_Grand_Prix/IMG_7932.JPG",
+    "public/assets/Images/Mathey_Tissot/1978_Mathey_Tissot_Grand_Prix/IMG_7933.JPG",
+    "public/assets/Images/Mathey_Tissot/1978_Mathey_Tissot_Grand_Prix/IMG_7934.JPG",
+    "public/assets/Images/Mathey_Tissot/1978_Mathey_Tissot_Grand_Prix/IMG_7935.JPG",
+    "public/assets/Images/Mathey_Tissot/1978_Mathey_Tissot_Grand_Prix/IMG_7936.JPG",
+    "public/assets/Images/Mathey_Tissot/1978_Mathey_Tissot_Grand_Prix/IMG_7937.JPG",
+    "public/assets/Images/Mathey_Tissot/1978_Mathey_Tissot_Grand_Prix/IMG_7938.JPG",
+    "public/assets/Images/Mathey_Tissot/1978_Mathey_Tissot_Grand_Prix/IMG_7939.JPG",
+    "public/assets/Images/Mathey_Tissot/1978_Mathey_Tissot_Grand_Prix/IMG_7941.JPG",
+
+    "public/assets/Images/Mathey_Tissot/1978_Mathey_Tissot_Grand_Prix/IMG_7586.JPG",
+    "public/assets/Images/Mathey_Tissot/1978_Mathey_Tissot_Grand_Prix/IMG_7587.JPG",
+    "public/assets/Images/Mathey_Tissot/1978_Mathey_Tissot_Grand_Prix/IMG_7607.JPG",
+    "public/assets/Images/Mathey_Tissot/1978_Mathey_Tissot_Grand_Prix/IMG_7608.JPG",
+
+    "public/assets/Images/Mathey_Tissot/1978_Mathey_Tissot_Grand_Prix/IMG_7942.JPG",
+
+    "public/assets/Images/Mathey_Tissot/1978_Mathey_Tissot_Grand_Prix/IMG_7961.JPG",
+    "public/assets/Images/Mathey_Tissot/1978_Mathey_Tissot_Grand_Prix/IMG_7963.JPG",
+
+    "public/assets/Images/Mathey_Tissot/1978_Mathey_Tissot_Grand_Prix/IMG_7943.JPG",
+    "public/assets/Images/Mathey_Tissot/1978_Mathey_Tissot_Grand_Prix/IMG_7944.JPG",
+    "public/assets/Images/Mathey_Tissot/1978_Mathey_Tissot_Grand_Prix/IMG_7945.JPG",
+    "public/assets/Images/Mathey_Tissot/1978_Mathey_Tissot_Grand_Prix/IMG_7946.JPG",
+    "public/assets/Images/Mathey_Tissot/1978_Mathey_Tissot_Grand_Prix/IMG_7947.JPG",
+    "public/assets/Images/Mathey_Tissot/1978_Mathey_Tissot_Grand_Prix/IMG_7948.JPG",
+    "public/assets/Images/Mathey_Tissot/1978_Mathey_Tissot_Grand_Prix/IMG_7949.JPG",
+    "public/assets/Images/Mathey_Tissot/1978_Mathey_Tissot_Grand_Prix/IMG_7950.JPG",
+    "public/assets/Images/Mathey_Tissot/1978_Mathey_Tissot_Grand_Prix/IMG_7952.JPG",
+    "public/assets/Images/Mathey_Tissot/1978_Mathey_Tissot_Grand_Prix/IMG_7953.JPG",
+    "public/assets/Images/Mathey_Tissot/1978_Mathey_Tissot_Grand_Prix/IMG_7955.JPG",
+    "public/assets/Images/Mathey_Tissot/1978_Mathey_Tissot_Grand_Prix/IMG_7956.JPG",
+    "public/assets/Images/Mathey_Tissot/1978_Mathey_Tissot_Grand_Prix/IMG_7957.JPG",
+    "public/assets/Images/Mathey_Tissot/1978_Mathey_Tissot_Grand_Prix/IMG_7958.JPG",
+    "public/assets/Images/Mathey_Tissot/1978_Mathey_Tissot_Grand_Prix/IMG_7959.JPG",
+    "public/assets/Images/Mathey_Tissot/1978_Mathey_Tissot_Grand_Prix/IMG_7960.JPG",
   ],
 
   technicalData: {
@@ -43,7 +87,7 @@ const details: WatchDetails = {
 
     case: {
       diameter: CaseDiameterEnum.D_34,
-      thickness: "- mm",
+      thickness: CaseThicknessEnum.T_7,
       material: CaseMaterialEnum.STAINLESS_STEEL,
       waterResistance: WaterResistanceEnum.WATER_RESISTANT,
       finishingDetails: CaseFinishingEnum.POLISHED,

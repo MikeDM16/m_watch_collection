@@ -54,6 +54,11 @@ profiling/results
 # session cookies, plus the raw scraped dumps. Never commit any of it.
 /.catawiki/
 
+# Chrono24 market values (scripts/chrono24): the exports of the Watch
+# Collection, link decisions and the HAR probe — values and purchase prices.
+# Never commit any of it.
+/.chrono24/
+
 # Sales margin pipeline (scripts/sales): the private ledger workbook (it also
 # holds bank balances and investments) and everything derived from it —
 # purchase prices, payouts, margins, match decisions. Never commit any of it.

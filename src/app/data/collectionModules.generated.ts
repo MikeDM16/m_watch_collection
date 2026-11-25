@@ -9,6 +9,8 @@ import type { WatchDetails } from "./watchDetails";
 export const modelLoaders: Record<string, () => Promise<{ default: WatchDetails }>> = {
   "Admes/Admes_ETA1246_Automatic_1950": () =>
     import("./watchModels/Admes/Admes_ETA1246_Automatic_1950"),
+  "Almery/Almery_Dynamic_17_Jewels_1978": () =>
+    import("./watchModels/Almery/Almery_Dynamic_17_Jewels_1978"),
   "Amer/Amer_Campos_1975_17_jewels": () => import("./watchModels/Amer/Amer_Campos_1975_17_jewels"),
   "Amer/Amer_Campos_Racing_Red_1975_17_jewels": () =>
     import("./watchModels/Amer/Amer_Campos_Racing_Red_1975_17_jewels"),
@@ -109,6 +111,8 @@ export const modelLoaders: Record<string, () => Promise<{ default: WatchDetails 
     import("./watchModels/Cristal_Watch/Cristal_Watch_Blue_Cushion_17J_1975"),
   "Cristalor/Cristalor_Antimagnetic_17_Rubis_1965": () =>
     import("./watchModels/Cristalor/Cristalor_Antimagnetic_17_Rubis_1965"),
+  "Cristalor/Cristalor_Guilloche_Fancy_Lugs_1944": () =>
+    import("./watchModels/Cristalor/Cristalor_Guilloche_Fancy_Lugs_1944"),
   "Cuervo_y_Sobrinos/Cuervo_y_Sobrinos_Hanava_Landeron_159_1950": () =>
     import("./watchModels/Cuervo_y_Sobrinos/Cuervo_y_Sobrinos_Hanava_Landeron_159_1950"),
   "Delma/Delma_RoyalGeographical_1996": () =>
@@ -170,6 +174,8 @@ export const modelLoaders: Record<string, () => Promise<{ default: WatchDetails 
     import("./watchModels/Jomel/Jomel_Antimagnetic_Lorsa_238_1965"),
   "Lanco/Lanco_Cal1305_1960": () => import("./watchModels/Lanco/Lanco_Cal1305_1960"),
   "Latino/Latino_Excellence_1995": () => import("./watchModels/Latino/Latino_Excellence_1995"),
+  "Longines/Longines_La_Grande_Classique_1995": () =>
+    import("./watchModels/Longines/Longines_La_Grande_Classique_1995"),
   "Lorenz/Lorenz_Classic_Chrono_7760_1996": () =>
     import("./watchModels/Lorenz/Lorenz_Classic_Chrono_7760_1996"),
   "Lorenz/Lorenz_Classic_Rattrapante_1989": () =>
@@ -192,6 +198,8 @@ export const modelLoaders: Record<string, () => Promise<{ default: WatchDetails 
     import("./watchModels/Martini/Martini_Special_17Rubis_1975"),
   "Maserati/Maserati_Neptune_Chrono_1998": () =>
     import("./watchModels/Maserati/Maserati_Neptune_Chrono_1998"),
+  "Mathey_Tissot/Mathey_Tissot_Grand_Prix_Marble_Dial_1978": () =>
+    import("./watchModels/Mathey_Tissot/Mathey_Tissot_Grand_Prix_Marble_Dial_1978"),
   "Maurice_Lacroix/Maurice_Lacroix_5393_Chrono_2021": () =>
     import("./watchModels/Maurice_Lacroix/Maurice_Lacroix_5393_Chrono_2021"),
   "Maurice_Lacroix/Maurice_Lacroix_5872_Chrono_2021": () =>
@@ -423,6 +431,8 @@ export const modelLoaders: Record<string, () => Promise<{ default: WatchDetails 
     import("./watchModels/Solvil_et_Titus/Titus_Chronograph_L48_1950"),
   "Solvil_et_Titus/Titus_Tuning_Fork_F300Hz_1970": () =>
     import("./watchModels/Solvil_et_Titus/Titus_Tuning_Fork_F300Hz_1970"),
+  "Sorel/Sorel_Festa_De_Luxe_Green_Marble_1976": () =>
+    import("./watchModels/Sorel/Sorel_Festa_De_Luxe_Green_Marble_1976"),
   "Studio/Studio_Tank_15_Rubis_1927": () =>
     import("./watchModels/Studio/Studio_Tank_15_Rubis_1927"),
   "Tag_Heuer/Heuer_Airline_Professional_895513_1985": () =>
@@ -655,6 +665,7 @@ export const modelLoaders: Record<string, () => Promise<{ default: WatchDetails 
 // fails `npm run typecheck` instead of rendering a dead link.
 export type ModelFile =
   | "Admes/Admes_ETA1246_Automatic_1950"
+  | "Almery/Almery_Dynamic_17_Jewels_1978"
   | "Amer/Amer_Campos_1975_17_jewels"
   | "Amer/Amer_Campos_Racing_Red_1975_17_jewels"
   | "Amer/Amer_Campos_Racing_Yellow_1975_17_jewels"
@@ -710,6 +721,7 @@ export type ModelFile =
   | "Corticima/Corticima_Dress_17Jewels_1970"
   | "Cristal_Watch/Cristal_Watch_Blue_Cushion_17J_1975"
   | "Cristalor/Cristalor_Antimagnetic_17_Rubis_1965"
+  | "Cristalor/Cristalor_Guilloche_Fancy_Lugs_1944"
   | "Cuervo_y_Sobrinos/Cuervo_y_Sobrinos_Hanava_Landeron_159_1950"
   | "Delma/Delma_RoyalGeographical_1996"
   | "Delma/Delma_RoyalGeographical_ETA251_1996"
@@ -744,6 +756,7 @@ export type ModelFile =
   | "Jomel/Jomel_Antimagnetic_Lorsa_238_1965"
   | "Lanco/Lanco_Cal1305_1960"
   | "Latino/Latino_Excellence_1995"
+  | "Longines/Longines_La_Grande_Classique_1995"
   | "Lorenz/Lorenz_Classic_Chrono_7760_1996"
   | "Lorenz/Lorenz_Classic_Rattrapante_1989"
   | "Lorenz/Lorenz_Classic_Rattrapante_1992"
@@ -755,6 +768,7 @@ export type ModelFile =
   | "Lucerne/Lucerne_Three_Stars_1975"
   | "Martini/Martini_Special_17Rubis_1975"
   | "Maserati/Maserati_Neptune_Chrono_1998"
+  | "Mathey_Tissot/Mathey_Tissot_Grand_Prix_Marble_Dial_1978"
   | "Maurice_Lacroix/Maurice_Lacroix_5393_Chrono_2021"
   | "Maurice_Lacroix/Maurice_Lacroix_5872_Chrono_2021"
   | "Maurice_Lacroix/Maurice_Lacroix_5872_Monza_Schumacher_Chrono_1996"
@@ -877,6 +891,7 @@ export type ModelFile =
   | "Solvil_et_Titus/Solvil_et_Titus_Genéve_Tank_1942"
   | "Solvil_et_Titus/Titus_Chronograph_L48_1950"
   | "Solvil_et_Titus/Titus_Tuning_Fork_F300Hz_1970"
+  | "Sorel/Sorel_Festa_De_Luxe_Green_Marble_1976"
   | "Studio/Studio_Tank_15_Rubis_1927"
   | "Tag_Heuer/Heuer_Airline_Professional_895513_1985"
   | "Tag_Heuer/Tag_Heuer_Aquaracer_CN2111_2005"

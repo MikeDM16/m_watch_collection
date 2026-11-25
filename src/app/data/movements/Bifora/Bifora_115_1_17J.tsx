@@ -25,7 +25,10 @@ const BIFORA_115_1: Caliber = {
     "Ranfft Bifora 115/1": "https://ranfft.org/caliber/1237-Bifora-1151",
   },
   // sliderImages
-  sliderImages: [],
+  sliderImages: [
+    "public/assets/Images/Movements/Bifora/Bifora_115_1/Bifora_115_1_1.JPG",
+    "public/assets/Images/Movements/Bifora/Bifora_115_1/Bifora_115_1_2.JPG",
+  ],
   // Details
   details: {
     // Manufacturer

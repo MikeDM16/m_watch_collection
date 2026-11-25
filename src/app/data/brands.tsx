@@ -47,6 +47,7 @@ export const mainBrandsOrder: string[] = [
   BrandsEnum.SEIKO,
   BrandsEnum.DUBOIS,
   BrandsEnum.UNIVERSAL_GENEVE,
+  BrandsEnum.LONGINES,
   BrandsEnum.BAUME_MERCIER,
   BrandsEnum.PRYNGEPS,
   BrandsEnum.NOVART,
@@ -54,7 +55,6 @@ export const mainBrandsOrder: string[] = [
   BrandsEnum.SOLVIL_ET_TITUS,
   BrandsEnum.FORTIS,
   BrandsEnum.ORFINA,
-  BrandsEnum.MOMO_DESIGN,
 ];
 
 export const brandsDB: Brand[] = [

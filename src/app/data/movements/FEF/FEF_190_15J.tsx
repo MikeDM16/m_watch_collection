@@ -25,7 +25,10 @@ const FEF_190: Caliber = {
     "17jewels FEF 190": "https://17jewels.info/movements/f/fef/fef-190/",
   },
   // sliderImages
-  sliderImages: [],
+  sliderImages: [
+    "public/assets/Images/Movements/FE/FE_190/FE_190_1.JPG",
+    "public/assets/Images/Movements/FE/FE_190/FE_190_2.JPG",
+  ],
   // Details
   details: {
     // Manufacturer

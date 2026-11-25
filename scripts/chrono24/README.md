@@ -92,7 +92,21 @@ rules: a backup in `.ledger/backups/market-<stamp>.json` (the last 30, plus
 - `collectionHistory`: Chrono24's own series for the whole collection.
 
 `src/app/admin/ledger/valuation.ts` turns ledger + store into per-watch value, cost and
-unrealized gain. It is pure, for the report now and the admin dashboards later.
+unrealized gain, and the month-by-month value against cost. It is pure: the PDF report and
+the admin page both use it.
+
+## On the Sales Report
+
+`/admin/sales-report` has a **Market value** section after "Money over time":
+
+- **Tiles:** estimated value, cost, unrealized gain, and Chrono24's own total.
+- **Chart:** value against cost, month by month.
+- **Table:** watch by watch, sortable, each with its Chrono24 name, reference and link.
+- **Stock:** for-sale watches Chrono24 also values, listed apart.
+
+It reads `.ledger/market.json` through `loadMarket()` in `ledgerStore.ts`, after the
+dev-only check, and shows the last export whatever the report's window or source. When the
+export is over 45 days old, the section says it is due for a refresh.
 
 ## The report
 

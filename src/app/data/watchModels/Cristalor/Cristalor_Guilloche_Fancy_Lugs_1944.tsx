@@ -8,6 +8,7 @@ import { CaseBackDetailsEnum } from "@/app/enums/caseBackDetailsEnum";
 import { CaseDiameterEnum } from "@/app/enums/caseDiameterEnum";
 import { CaseFinishingEnum } from "@/app/enums/caseFinishingEnum";
 import { CaseMaterialEnum } from "@/app/enums/caseMaterialEnum";
+import { CaseThicknessEnum } from "@/app/enums/caseThicknessEnum";
 import { ColorEnum } from "@/app/enums/colorEnum";
 import { CrownWatchTypeEnum } from "@/app/enums/crownWatchTypeEnum";
 import { CrystalMaterialEnum } from "@/app/enums/crystalMaterialEnum";
@@ -26,7 +27,49 @@ const details: WatchDetails = {
   title: "1944 Cristalor Guilloché “Fancy Lugs”",
 
   sliderImages: [
-    "public/assets/Images/Cristalor/1944_Cristalor_Guilloche_Fancy_Lugs_190/IMG_XXXX.JPG",
+    "public/assets/Images/Cristalor/1944_Cristalor_Fancy_lugs/IMG_7824.JPG",
+    "public/assets/Images/Cristalor/1944_Cristalor_Fancy_lugs/IMG_7825.JPG",
+
+    "public/assets/Images/Cristalor/1944_Cristalor_Fancy_lugs/IMG_7781.JPG",
+    "public/assets/Images/Cristalor/1944_Cristalor_Fancy_lugs/IMG_7782.JPG",
+    "public/assets/Images/Cristalor/1944_Cristalor_Fancy_lugs/IMG_7785.JPG",
+    "public/assets/Images/Cristalor/1944_Cristalor_Fancy_lugs/IMG_7786.JPG",
+    "public/assets/Images/Cristalor/1944_Cristalor_Fancy_lugs/IMG_7787.JPG",
+    "public/assets/Images/Cristalor/1944_Cristalor_Fancy_lugs/IMG_7788.JPG",
+    "public/assets/Images/Cristalor/1944_Cristalor_Fancy_lugs/IMG_7789.JPG",
+    "public/assets/Images/Cristalor/1944_Cristalor_Fancy_lugs/IMG_7790.JPG",
+    "public/assets/Images/Cristalor/1944_Cristalor_Fancy_lugs/IMG_7791.JPG",
+    "public/assets/Images/Cristalor/1944_Cristalor_Fancy_lugs/IMG_7793.JPG",
+    "public/assets/Images/Cristalor/1944_Cristalor_Fancy_lugs/IMG_7794.JPG",
+    "public/assets/Images/Cristalor/1944_Cristalor_Fancy_lugs/IMG_7796.JPG",
+    "public/assets/Images/Cristalor/1944_Cristalor_Fancy_lugs/IMG_7797.JPG",
+    "public/assets/Images/Cristalor/1944_Cristalor_Fancy_lugs/IMG_7798.JPG",
+    "public/assets/Images/Cristalor/1944_Cristalor_Fancy_lugs/IMG_7799.JPG",
+    "public/assets/Images/Cristalor/1944_Cristalor_Fancy_lugs/IMG_7800.JPG",
+    "public/assets/Images/Cristalor/1944_Cristalor_Fancy_lugs/IMG_7801.JPG",
+    "public/assets/Images/Cristalor/1944_Cristalor_Fancy_lugs/IMG_7802.JPG",
+    "public/assets/Images/Cristalor/1944_Cristalor_Fancy_lugs/IMG_7803.JPG",
+    "public/assets/Images/Cristalor/1944_Cristalor_Fancy_lugs/IMG_7804.JPG",
+    "public/assets/Images/Cristalor/1944_Cristalor_Fancy_lugs/IMG_7805.JPG",
+
+    "public/assets/Images/Cristalor/1944_Cristalor_Fancy_lugs/IMG_7831.JPG",
+
+    "public/assets/Images/Cristalor/1944_Cristalor_Fancy_lugs/IMG_7806.JPG",
+    "public/assets/Images/Cristalor/1944_Cristalor_Fancy_lugs/IMG_7807.JPG",
+    "public/assets/Images/Cristalor/1944_Cristalor_Fancy_lugs/IMG_7808.JPG",
+    "public/assets/Images/Cristalor/1944_Cristalor_Fancy_lugs/IMG_7809.JPG",
+    "public/assets/Images/Cristalor/1944_Cristalor_Fancy_lugs/IMG_7810.JPG",
+    "public/assets/Images/Cristalor/1944_Cristalor_Fancy_lugs/IMG_7811.JPG",
+    "public/assets/Images/Cristalor/1944_Cristalor_Fancy_lugs/IMG_7812.JPG",
+    "public/assets/Images/Cristalor/1944_Cristalor_Fancy_lugs/IMG_7813.JPG",
+    "public/assets/Images/Cristalor/1944_Cristalor_Fancy_lugs/IMG_7814.JPG",
+    "public/assets/Images/Cristalor/1944_Cristalor_Fancy_lugs/IMG_7815.JPG",
+    "public/assets/Images/Cristalor/1944_Cristalor_Fancy_lugs/IMG_7816.JPG",
+    "public/assets/Images/Cristalor/1944_Cristalor_Fancy_lugs/IMG_7817.JPG",
+    "public/assets/Images/Cristalor/1944_Cristalor_Fancy_lugs/IMG_7819.JPG",
+    "public/assets/Images/Cristalor/1944_Cristalor_Fancy_lugs/IMG_7820.JPG",
+    "public/assets/Images/Cristalor/1944_Cristalor_Fancy_lugs/IMG_7821.JPG",
+    "public/assets/Images/Cristalor/1944_Cristalor_Fancy_lugs/IMG_7822.JPG",
   ],
 
   technicalData: {
@@ -43,8 +86,8 @@ const details: WatchDetails = {
 
     case: {
       diameter: CaseDiameterEnum.D_34,
-      thickness: "- mm",
-      material: CaseMaterialEnum.STAINLESS_STEEL,
+      thickness: CaseThicknessEnum.T_9,
+      material: CaseMaterialEnum.SS_CHROMED,
       waterResistance: WaterResistanceEnum.WATER_RESISTANT,
       finishingDetails: CaseFinishingEnum.POLISHED,
       bezel: BezelTypeEnum.WITHOUT,
@@ -57,7 +100,7 @@ const details: WatchDetails = {
       color: ColorEnum.WHITE,
       dialMarkers: DialMarketsEnum.ARABIC_STICKS,
       finishingDetails: FinishingDetailsEnum.GUILLOCHE,
-      luminiscentIndexes: LuminescentIndexesEnum.NONE,
+      luminiscentIndexes: LuminescentIndexesEnum.MARKERS,
       calendar: CalendarWatchTypeEnum.WITHOUT,
     },
 

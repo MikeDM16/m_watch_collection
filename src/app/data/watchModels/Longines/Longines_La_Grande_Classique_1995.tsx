@@ -8,6 +8,7 @@ import { CaseBackDetailsEnum } from "@/app/enums/caseBackDetailsEnum";
 import { CaseDiameterEnum } from "@/app/enums/caseDiameterEnum";
 import { CaseFinishingEnum } from "@/app/enums/caseFinishingEnum";
 import { CaseMaterialEnum } from "@/app/enums/caseMaterialEnum";
+import { CaseThicknessEnum } from "@/app/enums/caseThicknessEnum";
 import { ColorEnum } from "@/app/enums/colorEnum";
 import { CrownWatchTypeEnum } from "@/app/enums/crownWatchTypeEnum";
 import { CrystalMaterialEnum } from "@/app/enums/crystalMaterialEnum";
@@ -26,7 +27,49 @@ const details: WatchDetails = {
   title: "1995 Longines La Grande Classique",
 
   sliderImages: [
-    "public/assets/Images/Longines/1995_Longines_La_Grande_Classique_L263_2/IMG_XXXX.JPG",
+    "public/assets/Images/Longines/1995_Longines_La_Grande_Classique_L263/IMG_7834.JPG",
+    "public/assets/Images/Longines/1995_Longines_La_Grande_Classique_L263/IMG_7835.JPG",
+    "public/assets/Images/Longines/1995_Longines_La_Grande_Classique_L263/IMG_7836.JPG",
+    "public/assets/Images/Longines/1995_Longines_La_Grande_Classique_L263/IMG_7837.JPG",
+    "public/assets/Images/Longines/1995_Longines_La_Grande_Classique_L263/IMG_7838.JPG",
+    "public/assets/Images/Longines/1995_Longines_La_Grande_Classique_L263/IMG_7839.JPG",
+    "public/assets/Images/Longines/1995_Longines_La_Grande_Classique_L263/IMG_7840.JPG",
+    "public/assets/Images/Longines/1995_Longines_La_Grande_Classique_L263/IMG_7841.JPG",
+    "public/assets/Images/Longines/1995_Longines_La_Grande_Classique_L263/IMG_7843.JPG",
+    "public/assets/Images/Longines/1995_Longines_La_Grande_Classique_L263/IMG_7844.JPG",
+    "public/assets/Images/Longines/1995_Longines_La_Grande_Classique_L263/IMG_7845.JPG",
+    "public/assets/Images/Longines/1995_Longines_La_Grande_Classique_L263/IMG_7846.JPG",
+    "public/assets/Images/Longines/1995_Longines_La_Grande_Classique_L263/IMG_7847.JPG",
+    "public/assets/Images/Longines/1995_Longines_La_Grande_Classique_L263/IMG_7848.JPG",
+    "public/assets/Images/Longines/1995_Longines_La_Grande_Classique_L263/IMG_7849.JPG",
+    "public/assets/Images/Longines/1995_Longines_La_Grande_Classique_L263/IMG_7850.JPG",
+    "public/assets/Images/Longines/1995_Longines_La_Grande_Classique_L263/IMG_7852.JPG",
+    "public/assets/Images/Longines/1995_Longines_La_Grande_Classique_L263/IMG_7853.JPG",
+    "public/assets/Images/Longines/1995_Longines_La_Grande_Classique_L263/IMG_7854.JPG",
+
+    "public/assets/Images/Longines/1995_Longines_La_Grande_Classique_L263/IMG_7875.JPG",
+    "public/assets/Images/Longines/1995_Longines_La_Grande_Classique_L263/IMG_7876.JPG",
+
+    "public/assets/Images/Longines/1995_Longines_La_Grande_Classique_L263/IMG_7855.JPG",
+    "public/assets/Images/Longines/1995_Longines_La_Grande_Classique_L263/IMG_7856.JPG",
+    "public/assets/Images/Longines/1995_Longines_La_Grande_Classique_L263/IMG_7857.JPG",
+    "public/assets/Images/Longines/1995_Longines_La_Grande_Classique_L263/IMG_7858.JPG",
+    "public/assets/Images/Longines/1995_Longines_La_Grande_Classique_L263/IMG_7859.JPG",
+    "public/assets/Images/Longines/1995_Longines_La_Grande_Classique_L263/IMG_7860.JPG",
+    "public/assets/Images/Longines/1995_Longines_La_Grande_Classique_L263/IMG_7861.JPG",
+    "public/assets/Images/Longines/1995_Longines_La_Grande_Classique_L263/IMG_7862.JPG",
+    "public/assets/Images/Longines/1995_Longines_La_Grande_Classique_L263/IMG_7863.JPG",
+    "public/assets/Images/Longines/1995_Longines_La_Grande_Classique_L263/IMG_7864.JPG",
+    "public/assets/Images/Longines/1995_Longines_La_Grande_Classique_L263/IMG_7865.JPG",
+    "public/assets/Images/Longines/1995_Longines_La_Grande_Classique_L263/IMG_7866.JPG",
+    "public/assets/Images/Longines/1995_Longines_La_Grande_Classique_L263/IMG_7867.JPG",
+    "public/assets/Images/Longines/1995_Longines_La_Grande_Classique_L263/IMG_7868.JPG",
+    "public/assets/Images/Longines/1995_Longines_La_Grande_Classique_L263/IMG_7869.JPG",
+    "public/assets/Images/Longines/1995_Longines_La_Grande_Classique_L263/IMG_7870.JPG",
+    "public/assets/Images/Longines/1995_Longines_La_Grande_Classique_L263/IMG_7871.JPG",
+    "public/assets/Images/Longines/1995_Longines_La_Grande_Classique_L263/IMG_7872.JPG",
+    "public/assets/Images/Longines/1995_Longines_La_Grande_Classique_L263/IMG_7873.JPG",
+    "public/assets/Images/Longines/1995_Longines_La_Grande_Classique_L263/IMG_7874.JPG",
   ],
 
   technicalData: {
@@ -35,7 +78,7 @@ const details: WatchDetails = {
     information: {
       brand: BrandsEnum.LONGINES,
       series: "La Grande Classique",
-      catalogueReference: "-",
+      catalogueReference: "L4.636.2",
       productionYear: "1995",
       movementType: MovementWatchTypeEnum.QUARTZ,
       style: WatchStyleEnum.DRESS,
@@ -43,13 +86,13 @@ const details: WatchDetails = {
 
     case: {
       diameter: CaseDiameterEnum.D_33,
-      thickness: "- mm",
+      thickness: CaseThicknessEnum.T_6,
       material: CaseMaterialEnum.GOLD_18K_ELECTROPLATED,
       waterResistance: WaterResistanceEnum.WATER_RESISTANT,
       finishingDetails: CaseFinishingEnum.POLISHED,
       bezel: BezelTypeEnum.WITHOUT,
       crownType: CrownWatchTypeEnum.PUSH_PULL,
-      crystal: CrystalMaterialEnum.ACRYLIC,
+      crystal: CrystalMaterialEnum.SAPPHIRE,
       caseback: CaseBackDetailsEnum.WITHOUT_DECORATION,
     },
 

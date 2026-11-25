@@ -26,7 +26,12 @@
     "ledger:snapshot": "tsx scripts/ledger/snapshot.ts",
     "ledger:import": "tsx scripts/ledger/import.ts",
     "ledger:verify": "tsx scripts/ledger/verify.ts",
-    "ledger:sources": "tsx scripts/ledger/sources.ts"
+    "ledger:sources": "tsx scripts/ledger/sources.ts",
+    "chrono24:bookmarklet": "tsx scripts/chrono24/bookmarklet.ts",
+    "chrono24:import": "tsx scripts/chrono24/3_import.ts",
+    "chrono24:apply": "tsx scripts/chrono24/4_apply.ts",
+    "chrono24:sync": "npm run chrono24:import && npm run chrono24:apply && npm run valuation:report",
+    "valuation:report": "tsx scripts/chrono24/5_report.tsx"
   },
   "dependencies": {
     "@radix-ui/react-slot": "^1.2.3",

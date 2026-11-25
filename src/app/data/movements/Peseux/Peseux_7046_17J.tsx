@@ -28,7 +28,10 @@ const PESEUX_7046: Caliber = {
     "CaliberCorner Peseux 7040": "https://calibercorner.com/peseux-caliber-7040/",
   },
   // sliderImages
-  sliderImages: [],
+  sliderImages: [
+    "public/assets/Images/Movements/Peseux/Peseux_7046/Peseux_7046_1.JPG",
+    "public/assets/Images/Movements/Peseux/Peseux_7046/Peseux_7046_2.JPG",
+  ],
   // Details
   details: {
     // Manufacturer

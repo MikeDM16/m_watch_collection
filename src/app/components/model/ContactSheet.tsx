@@ -36,9 +36,12 @@ export default function ContactSheet({ images }: { images: string[] }) {
 
   return (
     <section className="mt-14 border-t border-border pt-8">
-      <div className="mb-4 flex flex-wrap items-baseline gap-3">
-        <h2 className="font-display text-title">Photographs</h2>
-        <span className="num ml-auto text-sm text-muted-foreground">{images.length}</span>
+      <div className="mb-4">
+        <div className="flex flex-wrap items-baseline gap-3">
+          <h2 className="font-display text-title">Photographs</h2>
+          <span className="num ml-auto text-sm text-muted-foreground">{images.length}</span>
+        </div>
+        <p className="mt-1 text-[0.7rem] text-muted-foreground">Click on any image to expand.</p>
       </div>
 
       <div className="grid grid-cols-[repeat(auto-fill,minmax(84px,1fr))] gap-px border border-border bg-border">
@@ -73,10 +76,6 @@ export default function ContactSheet({ images }: { images: string[] }) {
           Show all {images.length} photographs
         </button>
       )}
-
-      <p className="mt-3 text-[0.7rem] text-muted-foreground">
-        Shown in the order they were catalogued.
-      </p>
 
       {/* The lightbox always receives the full set, so it pages through every
           photograph whether or not the sheet is expanded. */}
