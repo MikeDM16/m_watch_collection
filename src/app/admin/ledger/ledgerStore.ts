@@ -7,6 +7,7 @@ import path from "path";
 import type { SalesFinancials } from "../sales-report/salesData.types";
 import { buildFinancials } from "./buildFinancials";
 import type { CatalogueSaleRef, LedgerStore, WorkbookSnapshot } from "./ledger.types";
+import type { MarketStore } from "./market.types";
 
 /**
  * The back-office ledger on disk (`.ledger/`, gitignored, local only), for the
@@ -75,6 +76,21 @@ export function loadStore(): LoadedStore | null {
       version: crypto.createHash("sha256").update(raw).digest("hex"),
       mtime: fs.statSync(STORE_JSON).mtime.toISOString(),
     };
+  } catch {
+    return null;
+  }
+}
+
+/**
+ * What Chrono24 says the watches are worth (`.ledger/market.json`, written by
+ * `npm run chrono24:sync`); null before the first run. Read-only here.
+ */
+export function loadMarket(): MarketStore | null {
+  try {
+    const m = JSON.parse(
+      fs.readFileSync(path.join(LEDGER_DIR, "market.json"), "utf-8"),
+    ) as MarketStore;
+    return m.version === 1 ? m : null;
   } catch {
     return null;
   }

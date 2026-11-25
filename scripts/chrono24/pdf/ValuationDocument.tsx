@@ -6,6 +6,7 @@
 
 import {
   Document,
+  Font,
   Page,
   Path,
   Image as PdfImage,
@@ -57,6 +58,9 @@ export interface ValuationDocumentProps {
   generatedAt: string;
   owner?: string;
 }
+
+// Whole words only: react-pdf hyphenates by default ("Edi-tion", "da-dos").
+Font.registerHyphenationCallback((word) => [word]);
 
 const INK = "#1a1a1a";
 const MUTED = "#6b6b6b";

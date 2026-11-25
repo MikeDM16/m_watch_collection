@@ -42,6 +42,7 @@
 
 import fs from "fs";
 
+import { watchSummaries } from "../../src/app/admin/ledger/buildFinancials";
 import type { LedgerStore, LedgerWatch } from "../../src/app/admin/ledger/ledger.types";
 import type {
   HistoryPoint,
@@ -65,7 +66,14 @@ const MARGIN = 0.12;
 const BRAND_PENALTY = 0.5;
 const CANDIDATES = 3;
 
-type Decision = string | null | { to: string | null; by?: "user" | "claude"; reason?: string };
+type Decision =
+  | string
+  | null
+  | {
+      to: string | null;
+      by?: "user" | "claude";
+      reason?: string;
+    };
 
 interface LinksFile {
   by?: "user" | "claude";
@@ -79,6 +87,11 @@ interface Candidate {
   tokens: string[];
   brandTokens: string[];
   purchase: number | null;
+  /**
+   * Every figure the price typed on Chrono24 may be: the purchase, the cost with
+   * extras (service, strap…), and a noted price (a lot watch's "350").
+   */
+  prices: number[];
   name: string;
 }
 
@@ -123,6 +136,12 @@ function monthsApart(a?: string | null, b?: string | null): number | null {
   return Math.abs(monthIndex(a) - monthIndex(b));
 }
 
+/** The gap from Chrono24's price to the closest of the ledger's figures. */
+const bestGap = (a: number | undefined, prices: number[]): number | null => {
+  const gaps = prices.map((p) => priceGap(a, p)).filter((g): g is number => g !== null);
+  return gaps.length ? Math.min(...gaps) : null;
+};
+
 const priceGap = (a?: number | null, b?: number | null): number | null =>
   a && b ? Math.abs(a - b) / Math.max(a, b) : null;
 
@@ -145,7 +164,7 @@ function score(item: ScrapedItem, c: Candidate, idf: (t: string) => number): Sco
     parts.push([W_DATE, months === 0 ? 1 : months === 1 ? 0.5 : months === 2 ? 0.2 : 0]);
     notes.push(months === 0 ? "same month" : `${months} months apart`);
   }
-  const gap = priceGap(item.purchasePrice, c.purchase);
+  const gap = bestGap(item.purchasePrice, c.prices);
   if (gap !== null) {
     parts.push([W_PRICE, gap <= 0.05 ? 1 : gap <= 0.15 ? 0.7 : gap <= 0.3 ? 0.4 : 0]);
     notes.push(`price ${Math.round(gap * 100)}% apart`);
@@ -160,18 +179,24 @@ function score(item: ScrapedItem, c: Candidate, idf: (t: string) => number): Sco
   return { cand: c, score: Math.round(s * 1000) / 1000, note: notes.join(" · ") };
 }
 
-/** Problems worth a look on a linked pair, even a decided one. */
-function flags(item: ScrapedItem, c: Candidate): string[] {
+/**
+ * Problems worth a look on a linked pair, even a decided one. A reference you
+ * confirmed (a user link) is not one any more.
+ */
+function flags(item: ScrapedItem, c: Candidate, link?: MarketLink): string[] {
   const out: string[] = [];
-  if (refConflict(item, c)) out.push(`Chrono24 reference ${item.reference} is not the catalogue's`);
+  if (refConflict(item, c) && link?.by !== "user")
+    out.push(`Chrono24 reference ${item.reference} is not the catalogue's`);
   const months = monthsApart(item.purchaseDate, c.watch.acquired);
   if (months !== null && months >= 2)
     out.push(
       `purchase ${item.purchaseDate?.slice(0, 7)} on Chrono24, ${c.watch.acquired} in the ledger`,
     );
-  const gap = priceGap(item.purchasePrice, c.purchase);
+  const gap = bestGap(item.purchasePrice, c.prices);
   if (gap !== null && gap > 0.05)
-    out.push(`purchase price ${item.purchasePrice} € on Chrono24, ${c.purchase} € in the ledger`);
+    out.push(
+      `purchase price ${item.purchasePrice} € on Chrono24; the ledger has ${c.prices.map((p) => `${p} €`).join(" / ")}`,
+    );
   return out;
 }
 
@@ -197,6 +222,7 @@ function main() {
   const { owned, allTokens } = loadOwned();
   const ownedByFile = new Map(owned.map((m) => [m.modelFile, m]));
   const idf = buildIdf(allTokens);
+  const money = watchSummaries(store);
   const cands: Candidate[] = store.watches
     .filter((w) => w.status === "kept" || w.status === "for-sale")
     .map((w) => {
@@ -206,6 +232,9 @@ function main() {
         tokens: m ? m.tokens : tokenize(w.label),
         brandTokens: m ? m.brandTokens : tokenize(w.label).slice(0, 1),
         purchase: purchaseOf(store, w.id),
+        prices: [purchaseOf(store, w.id), money[w.id]?.cost, w.paidNote].filter(
+          (x): x is number => typeof x === "number" && x > 0,
+        ),
         name: (m ? m.legend : w.label) + (w.status === "for-sale" ? " (for sale)" : ""),
       };
     });
@@ -353,7 +382,7 @@ function main() {
     const l = linkOf(it);
     const c = byId.get(l.watchId!)!;
     md.push(
-      `| ${it.itemId} ${it.title}${it.reference ? ` (${it.reference})` : ""} | ${it.value} € | ${c.name} — \`${c.watch.id}\` | ${l.by}${l.reason ? `: ${l.reason}` : ""} | ${flags(it, c).join("; ") || "ok"} |`,
+      `| ${it.itemId} ${it.title}${it.reference ? ` (${it.reference})` : ""} | ${it.value} € | ${c.name} — \`${c.watch.id}\` | ${l.by}${l.reason ? `: ${l.reason}` : ""} | ${flags(it, c, l).join("; ") || "ok"} |`,
     );
   }
   if (open.length) {
@@ -409,7 +438,9 @@ function main() {
   console.log(
     `${items.length} Chrono24 watches (${before ? `${before} before` : "first run"}): ${linkedRows.length} linked, ${nulls.length} none, ${open.length} to decide.`,
   );
-  const flagged = linkedRows.filter((it) => flags(it, byId.get(linkOf(it).watchId!)!).length);
+  const flagged = linkedRows.filter(
+    (it) => flags(it, byId.get(linkOf(it).watchId!)!, linkOf(it)).length,
+  );
   if (flagged.length) console.log(`${flagged.length} linked with something to check.`);
   console.log(`Snapshot ${day}: ${scrape.total} €. Report: ${MATCH_REPORT}`);
 

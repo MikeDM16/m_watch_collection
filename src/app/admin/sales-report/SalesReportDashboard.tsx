@@ -7,6 +7,8 @@ import Link from "next/link";
 import { useCallback, useMemo, useState } from "react";
 
 import type { SourceReport } from "../ledger/ledgerSources";
+import type { MarketView } from "../ledger/valuation";
+import { MarketSection } from "./components/MarketSection";
 import { MoneySection } from "./components/MoneySection";
 import { AdminTable, SectionHeader, StatTile, Th, WatchLink } from "./components/primitives";
 import { ProfitabilitySection } from "./components/ProfitabilitySection";
@@ -49,6 +51,7 @@ export default function SalesReportDashboard({
   ledgerIssues = [],
   sources = null,
   sourceModels = {},
+  market = null,
 }: {
   sold: CollectionIndexEntry[];
   /** The P&L from the active source, or null until it exists. */
@@ -65,6 +68,8 @@ export default function SalesReportDashboard({
   sources?: SourceReport | null;
   /** Catalogue brand and legend of the watches under each source, by modelFile. */
   sourceModels?: SourceModels;
+  /** What the kept watches are worth on Chrono24; null before `npm run chrono24:sync`. */
+  market?: MarketView | null;
 }) {
   const keptLink = (k: KeptWatchFinancials) => {
     const m = k.modelFile ? keptModels[k.modelFile] : undefined;
@@ -227,6 +232,9 @@ export default function SalesReportDashboard({
           source={source}
         />
       )}
+
+      {/* ───── Market value (Chrono24, as of its last export; not windowed) ───── */}
+      {market && <MarketSection data={market} />}
 
       {!isEmpty && (
         <>

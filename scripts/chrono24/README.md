@@ -69,6 +69,10 @@ Decisions go in a JSON file passed with `--links`:
 ```
 
 A value is a ledger watch id or a linked modelFile; `null` means "none of my watches".
+The match report flags only what is still worth a look. A reference you confirmed (a
+`user` link) is not re-flagged. Chrono24's purchase price is checked against the
+purchase, the cost with extras, and a noted price; matching any of them is enough, since
+the price typed on Chrono24 is usually the cost with extras.
 
 ```bash
 npm run chrono24:apply -- --links .chrono24/decisions-2026-11-24.json --dry   # report only

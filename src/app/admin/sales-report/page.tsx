@@ -2,7 +2,8 @@ import collectionService from "@/app/services/collectionService";
 
 import DevOnly from "../DevOnly";
 import { sourceReport } from "../ledger/ledgerSources";
-import { ledgerExists, ledgerFinancials, loadStore } from "../ledger/ledgerStore";
+import { ledgerExists, ledgerFinancials, loadMarket, loadStore } from "../ledger/ledgerStore";
+import { marketView } from "../ledger/valuation";
 import { loadFinancials } from "./loadSalesData";
 import SalesReportDashboard, { type ReportSource } from "./SalesReportDashboard";
 
@@ -76,6 +77,19 @@ export default async function SalesReportPage({
       .map((e) => [e.modelFile, { brand: e.brand, legend: e.legend }]),
   );
 
+  // What the kept watches are worth on Chrono24: always from the ledger and the
+  // market store (`npm run chrono24:sync`), whichever figures the report shows.
+  const marketStore = store ? loadMarket() : null;
+  const market =
+    store && marketStore
+      ? marketView(
+          store,
+          marketStore,
+          Object.values(collectionService.getAllCollectionItems()),
+          new Date().toISOString().slice(0, 10),
+        )
+      : null;
+
   return (
     <SalesReportDashboard
       sold={sold}
@@ -87,6 +101,7 @@ export default async function SalesReportPage({
       ledgerIssues={ledger?.issues ?? []}
       sources={sources}
       sourceModels={sourceModels}
+      market={market}
     />
   );
 }
